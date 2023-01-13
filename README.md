@@ -1,4 +1,4 @@
-# Programming-in-progress
+# Programming
 
 <p align="center"> 
  <a href="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=BhJaipal&layout=compact&langs_count=16&theme=dark&background=black"> 
