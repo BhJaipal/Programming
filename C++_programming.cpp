@@ -1,6 +1,5 @@
 # include <iostream>
 # include <string>
-# include <Calculator.h>
 using namespace std;
 
 void Pattern(int limit) {
@@ -46,12 +45,5 @@ int main() {
     cout << "Limit is " << num << endl;
     Pattern(num);
     cout << endl;
-    Calculator calcul;
-    double x, y;
-    string opera;
-    while(true) {
-    cin >> x >> opera >> y;
-    c.calculate(x, opera, y);
-    }
     return 0;
 }
