@@ -1,7 +1,10 @@
 #include <iostream>
 using namespace std;
-
-void Calculate(double num1,string operat,double num2) {
+# include <string>
+class calculator;
+calculator{
+    public:
+void Calculate(int num1,string operat,int num2) {
     if (operat == "+") 
     {std::cout << num1 + num2 << std::endl;}
     
@@ -70,9 +73,9 @@ void Calculate(double num1,string operat,double num2) {
     else if (operat == "<=") 
     {std::cout << (num1 <= num2) << std::endl;}
     else {"Please check your input";}
-}
+}}
 int main() {
-    Calculate Cal;
-    Cal(7, "+=", 8);
+    calculator Cal;
+    Cal.Calculate(7, "+=", 8);
     return 0;
 }
