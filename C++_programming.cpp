@@ -8,11 +8,11 @@ void Pattern(int limit) {
         while (i<=limit) {
             int num = 1;
             while (num<=i) {
-                cout << num;
+                std::cout << num;
                 num++;
             }
             while (num>i) {
-                cout << endl;
+                std::cout << std::endl;
                 i++;
             }
         }
@@ -23,27 +23,27 @@ void Pattern(int limit) {
         while (limit<=num) {
             int i = limit;
             while (i<=num) {
-                cout << i;
+                std::cout << i;
                 i++;
             }
-            cout << space;
+            std::cout << space;
             space = space + " ";
             limit++;
         }
     }
     else {
-        cout << "Please enter an integer except 0";
+        std::cout << "Please enter an integer except 0";
     }
 }
 
 int main() {
     int num;
-    cout << "Hello World" << endl << "I am Jaipal" << endl;
-    cout << endl;
-    cout << "Enter limit" << endl;
+    std::cout << "Hello World" << std::endl << "I am Jaipal" << std::endl;
+    std::cout << std::endl;
+    std::cout << "Enter limit" << std::endl;
     cin >> num;
-    cout << "Limit is " << num << endl;
+    std::cout << "Limit is " << num << std::endl;
     Pattern(num);
-    cout << endl;
+    std::cout << std::endl;
     return 0;
 }

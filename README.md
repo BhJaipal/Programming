@@ -16,7 +16,7 @@ using namespace std;
 
 void function_name(// parameter if you want) {
     // code here like
-    std::cout << "Hello World" << endl << "I am Jaipal" << endl;
+    std::std::cout << "Hello World" << std::endl << "I am Jaipal" << std::endl;
 }
 int main() {
     function_name();
