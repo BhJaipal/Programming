@@ -9,8 +9,13 @@
 		"vscode": {
 			"extensions": [
 				"DavidAnson.vscode-markdownlint",
-				"Microsoft.vscode-C/C++",
-				"Microsoft.vscode-C/C++-Themes"
+				"ms-vscode.cpptools",
+				"ms-vscode.cpptools-extension-pack",
+				"ms-vscode.cpptools-themes",
+				"twxs.cmake",
+				"eamodio.gitlens",
+				"ms-azuretools.vscode-docker",
+				"ms-vscode.cmake-tools"
 			]
 		}
 	}
