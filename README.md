@@ -7,8 +7,8 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/github/last-commit/BhJaipal?tab=repository/Programming">
-        <img src="https://img.shields.io/github/contributors/BhJaipal?tab=repository/Programming">
+    <img src="https://img.shields.io/github/last-commit/BhJaipal/Programming">
+        <img src="https://img.shields.io/github/contributors/BhJaipal/Programming">
         </p>
 
 ## Learning C++
