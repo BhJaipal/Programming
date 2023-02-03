@@ -10,6 +10,8 @@
     <img src="https://img.shields.io/github/last-commit/BhJaipal/Programming?color=purple&style=plastic">
     <img src="https://img.shields.io/github/contributors/BhJaipal/Programming?color=blue&style=plastic">
 </p>
+Languages and tool
+<img src="https://skillicons.dev/icons?i=github,html,css,js,cpp,py,vscode" alt="skills logos" /><br>
 
 ## Learning C++
 
@@ -21,7 +23,7 @@ using namespace std;
 
 void function_name() {
     // code here like
-    std::std::cout << "Hello World" << std::endl << "I am Jaipal" << std::endl;
+    std::cout << "Hello World" << std::endl << "I am Jaipal" << std::endl;
 }
 int main() {
     function_name();
