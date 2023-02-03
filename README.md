@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/github/contributors/BhJaipal/Programming?color=blue&style=plastic">
 </p>
 Languages and tool
-<img src="https://skillicons.dev/icons?i=github,html,css,js,cpp,py,vscode" alt="skills logos" /><br>
+<img src="https://skillicons.dev/icons?i=github,html,css,js,cpp,py,vscode"/><br>
 
 ## Learning C++
 
