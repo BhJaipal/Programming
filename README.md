@@ -2,7 +2,7 @@
 
 <p align="center"> 
  <a href="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=BhJaipal&layout=compact&langs_count=16&theme=dark&background=black"> 
-    <img src="http://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=BhJaipal&layout=compact&langs_count=16&background=black&theme=dark" style="margin-left:10px"/> 
+    <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=BhJaipal&layout=compact&langs_count=16&background=black&theme=dark" style="margin-left:10px"/> 
   </a> 
 </p>
 
