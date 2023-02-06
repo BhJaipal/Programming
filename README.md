@@ -6,6 +6,9 @@
   </a> 
 </p>
 
+[![Visual Studio Code](https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code&logoColor=ffffff)](https://code.visualstudio.com)
+[![JavaScript](https://img.shields.io/badge/--fff?logo=cplusplus&logoColor=05f)](https://cplusplus.com/) 
+[![GitHub](https://badgen.net/badge/icon/github?icon=github&label&color=black)](https://github.com) [![GitHub stars](https://img.shields.io/github/stars/BhJaipal/Programming.svg?style=social&label=Star&maxAge=2592000)](https://github.com/BhJaipal/Programming) 
 <p align="center">
     <img src="https://img.shields.io/github/last-commit/BhJaipal/Programming?color=purple&style=plastic">
     <img src="https://img.shields.io/github/contributors/BhJaipal/Programming?color=blue&style=plastic">
