@@ -11,13 +11,12 @@
 [![GitHub](https://badgen.net/badge/icon/github?icon=github&label&color=black)](https://github.com) 
 [![GitHub stars](https://img.shields.io/github/stars/BhJaipal/Programming.svg?style=social&label=Star&maxAge=2592000)](https://github.com/BhJaipal/Programming)
 [![C++](https://img.shields.io/badge/--fff?logo=jupyter)](https://cplusplus.com/)
-[![made-with-python](https://img.shields.io/badge/Made%20with-cpp-1f425f.svg)](https://www.cpluslus.com)
+
 <p align="center">
     <img src="https://img.shields.io/github/last-commit/BhJaipal/Programming?color=purple&style=plastic">
     <img src="https://img.shields.io/github/contributors/BhJaipal/Programming?color=blue&style=plastic">
+    <img src="https://img.shields.io/badge/Made%20with-cpp-1f425f.svg">
 </p>
-Languages and tool
-<img src="https://skillicons.dev/icons?i=github,html,css,js,cpp,py,vscode"/><br>
 
 ## Learning C++
 
