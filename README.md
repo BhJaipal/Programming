@@ -6,17 +6,17 @@
   </a> 
 </p>
 
-[![Visual Studio Code](https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code&logoColor=ffffff)](https://code.visualstudio.com)
-[![C++](https://img.shields.io/badge/C++-ff9?logo=cplusplus&logoColor=05f)](https://cplusplus.com/) 
+[![Visual Studio Code](https://img.shields.io/badge/VS_Code-007ACC?logo=visual%20studio%20code&logoColor=3f3f8f)](https://code.visualstudio.com)
+[![C++](https://img.shields.io/badge/Cpp-ff9?logo=cplusplus&logoColor=05f)](https://cplusplus.com/) 
 [![GitHub](https://badgen.net/badge/icon/github?icon=github&label&color=black)](https://github.com) 
-[![GitHub stars](https://img.shields.io/github/stars/BhJaipal/Programming.svg?style=social&label=Star&maxAge=2592000)](https://github.com/BhJaipal/Programming)
+[![GitHub stars](https://img.shields.io/github/stars/BhJaipal/Programming.svg?style=plastic&label=Star&maxAge=2592000)](https://github.com/BhJaipal/Programming)
 [![C++](https://img.shields.io/badge/--fff?logo=jupyter)](https://cplusplus.com/)
 
 <p align="center">
     <img src="https://img.shields.io/github/last-commit/BhJaipal/Programming?color=purple&style=plastic">
     <img src="https://img.shields.io/github/contributors/BhJaipal/Programming?color=blue&style=plastic">
-    <img src="https://img.shields.io/badge/Made%20with-cpp-1f425f.svg">
-    <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white&style=plastic">
+    <img src="https://img.shields.io/badge/Made%20with-C++-1f425f.svg">
+    <img src="https://img.shields.io/badge/C++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white&style=plastic">
 </p>
 
 ## Learning C++
