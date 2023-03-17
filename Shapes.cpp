@@ -8,10 +8,10 @@ namespace ThreeD_Shapes {
         int len;
         int brea;
         int hei;
-        Cuboid(int len, int brea, int hei) {
-            this->len = len;
-            this->brea = brea;
-            this->hei = hei;
+        Cuboid(int *len, int *brea, int *hei) {
+            this->len = *len;
+            this->brea = *brea;
+            this->hei = *hei;
         }
         double cubo_tsa() {
             return 2* (this->len*this->brea + this->brea*this->hei + this->hei*this->len);
@@ -40,8 +40,8 @@ namespace ThreeD_Shapes {
     class Cube {
         public:
         int side;
-        Cube(int side) {
-            this->side = side;
+        Cube(int *side) {
+            this->side = *side;
         }
         double cube_tsa() {
             return 6*this->side*this->side;
@@ -70,8 +70,8 @@ namespace ThreeD_Shapes {
     class Sphere {
         public:
         int rad;
-        Sphere(int rad) {
-            this->rad = rad;
+        Sphere(int *rad) {
+            this->rad = *rad;
         }
         double sphere_sa() {
             return 4*22/7* this->rad*this->rad;
@@ -91,9 +91,9 @@ namespace ThreeD_Shapes {
         public:
         int radi;
         int heig;
-        Cylinder(int radi, int heig) {
-            this->radi = radi;
-            this->heig = heig;
+        Cylinder(int *radi, int *heig) {
+            this->radi = *radi;
+            this->heig = *heig;
         }
         double cyl_tsa() {
             return 2*22/7* this->radi* (this->heig + this->radi);
@@ -126,7 +126,7 @@ void main_execution() {
             int radius;
             cout << "Enter radius: ";
             cin >> radius;
-            ThreeD_Shapes::Sphere mySphere(radius);
+            ThreeD_Shapes::Sphere mySphere(&radius);
             mySphere.execute();
         }
 
@@ -134,7 +134,7 @@ void main_execution() {
             int sides;
             cout << "Enter side: ";
             cin >> sides;
-            ThreeD_Shapes::Cube mycube(sides);
+            ThreeD_Shapes::Cube mycube(&sides);
             mycube.execute();
         }
 
@@ -142,14 +142,14 @@ void main_execution() {
             int length; cout << "Enter length: "; cin >> length;
             int breadth; cout << "Enter breadth: "; cin >> breadth;
             int height; cout << "Enter height: "; cin >> height;
-            ThreeD_Shapes::Cuboid mycuboid(length, breadth, height);
+            ThreeD_Shapes::Cuboid mycuboid(&length, &breadth, &height);
             mycuboid.execute();
         }
 
         else if (choice == 4) {
             int radii; cout << "Enter radius: "; cin >> radii;
             int heigh; cout << "Enter height: "; cin >> heigh;
-            ThreeD_Shapes::Cylinder mycylinder(radii, heigh);
+            ThreeD_Shapes::Cylinder mycylinder(&radii, &heigh);
             mycylinder.execute();
         }
 
