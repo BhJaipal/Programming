@@ -6,7 +6,7 @@ const double pi= 22/7;
 
 class Sphere {
     public:
-    double radius;
+    double* radius;
     double sphere_volume(double radius) {
         return 4/3 * pi * radius*radius*radius;}
         /* Volume of sphere= 4/3 * pi * (radius)^3
@@ -18,15 +18,15 @@ class Sphere {
         */
     void exec() {
     cout << "********* Sphere **********" << endl;
-    cout << "Surface area: " << sphere_area(radius) << endl;
-    cout << "Volume: " << sphere_volume(radius) << endl;
+    cout << "Surface area: " << sphere_area(*radius) << endl;
+    cout << "Volume: " << sphere_volume(*radius) << endl;
     cout << "**************************" << endl;
     }
 };
 
 class Cube {
     public:
-    double side;
+    double* side;
     double cube_volume(double side) {
         return pow(side, 3);}
         /* Volume of Cube = a ^ 3
@@ -50,17 +50,17 @@ class Cube {
         */
     void exec() {
     cout << "********* Cube *********" << endl;
-    cout << "Total Surface area: " << cube_tsa(side) << endl;
-    cout << "Lateral Surface area: " <<  cube_lsa(side) << endl;
-    cout << "Volume: " << cube_volume(side) << endl;
-    cout << "Length of Diagonal: " <<  cube_diagonal(side) << endl;
+    cout << "Total Surface area: " << cube_tsa(*side) << endl;
+    cout << "Lateral Surface area: " <<  cube_lsa(*side) << endl;
+    cout << "Volume: " << cube_volume(*side) << endl;
+    cout << "Length of Diagonal: " <<  cube_diagonal(*side) << endl;
     cout << "************************" <<endl;
     }
 };
 
 class Cuboid {
     public:
-    double len; double breadth; double height;
+    double* len; double* breadth; double* height;
     double cuboid_volume(double len, double breadth, double height){
         return len*breadth*height;}
         /* Volume of Cuboid = l*b*h
@@ -85,17 +85,17 @@ class Cuboid {
         */
     void exec() {
     cout << "********* Cuboid *********" << endl;
-    cout << "Total Surface area: " << cuboid_tsa(len, breadth, height) << endl;
-    cout << "Lateral Surface area: " << cuboid_lsa(len, breadth, height) << endl;
-    cout << "Volume: " << cuboid_volume(len, breadth, height) << endl;
-    cout << "Length of Diagonal: " << cuboid_diagonal(len, breadth, height) << endl;
+    cout << "Total Surface area: " << cuboid_tsa(*len, *breadth, *height) << endl;
+    cout << "Lateral Surface area: " << cuboid_lsa(*len, *breadth, *height) << endl;
+    cout << "Volume: " << cuboid_volume(*len, *breadth, *height) << endl;
+    cout << "Length of Diagonal: " << cuboid_diagonal(*len, *breadth, *height) << endl;
     cout << "**************************" << endl;
     }
 };
 
 class Cylinder {
     public:
-    double radius; double height;
+    double* radius; double* height;
     float cylinder_tsa(double radius, double height) {
         return 2*pi*radius*(height + radius);}
         /* Total Surface area of Cylinder = 
@@ -115,9 +115,9 @@ class Cylinder {
         */
     void exec() {
     cout << "********* Cylinder **********" << endl;
-    cout << "Total Surface area: " << cylinder_tsa(radius, height) << endl;
-    cout << "Curved Surface area: " << cylinder_csa(radius, height) << endl;
-    cout << "Volume: " << cylinder_volume(radius, height) << endl;
+    cout << "Total Surface area: " << cylinder_tsa(*radius, *height) << endl;
+    cout << "Curved Surface area: " << cylinder_csa(*radius, *height) << endl;
+    cout << "Volume: " << cylinder_volume(*radius, *height) << endl;
     cout << "****************************" << endl;
     }
 };
@@ -132,7 +132,7 @@ void three_d_shapes() {
             cout << "Enter radius: ";
             cin >> rad;
             Sphere mySphere;
-            mySphere.radius= rad;
+            mySphere.radius= &rad;
             cout << endl;
             mySphere.exec();
         }
@@ -142,7 +142,7 @@ void three_d_shapes() {
             cout << "Enter side: ";
             cin >> side;
             Cube mycube;
-            mycube.side= side;
+            mycube.side= &side;
             cout << endl;
             mycube.exec();
         }
@@ -156,9 +156,9 @@ void three_d_shapes() {
             cout << "Enter height: ";
             cin >> hei;
             Cuboid myCuboid;
-            myCuboid.len= length;
-            myCuboid.breadth= bre;
-            myCuboid.height= hei;
+            myCuboid.len= &length;
+            myCuboid.breadth= &bre;
+            myCuboid.height= &hei;
             cout << endl;
             myCuboid.exec();
         }
@@ -170,8 +170,8 @@ void three_d_shapes() {
             cout << "Enter height: ";
             cin >> heig;
             Cylinder myCylinder;
-            myCylinder.radius= radi;
-            myCylinder.height= heig;
+            myCylinder.radius= &radi;
+            myCylinder.height= &heig;
             cout << endl;
             myCylinder.exec();
         }
