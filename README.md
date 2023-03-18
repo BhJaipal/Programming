@@ -10,7 +10,7 @@
 [![C++](https://img.shields.io/badge/Cpp-ff9?logo=cplusplus&logoColor=05f)](https://cplusplus.com/) 
 [![GitHub](https://badgen.net/badge/icon/github?icon=github&label&color=black)](https://github.com) 
 [![GitHub stars](https://img.shields.io/github/stars/BhJaipal/Programming.svg?style=plastic&label=Star&maxAge=2592000)](https://github.com/BhJaipal/Programming)
-[![C++](https://img.shields.io/badge/--fff?logo=jupyter)](https://cplusplus.com/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-fff?logo=jupyter)](https://cplusplus.com/)
 
 <p align="center">
     <img src="https://img.shields.io/github/last-commit/BhJaipal/Programming?color=purple&style=plastic">
