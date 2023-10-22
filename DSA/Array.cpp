@@ -17,7 +17,7 @@ private:
 	int _length;
 public:
 	/**
-	 * @description Initializes the array
+	 * @brief Initializes the array
 	 */
 	Array() {
 		this->_list= {};
@@ -123,7 +123,7 @@ public:
 		this->_list[this->indexOf(oldElem)]= newElem;
 	}
 	/**
-	 * @description reverses the Array 
+	 * @brief reverses the Array 
 	 */
 	void reverse() {
 		this->_list.reverse();
@@ -202,7 +202,7 @@ public:
 		return arr;
 	}
 	/**
-	 * @description extends given Array to current Array 
+	 * @brief extends given Array to current Array 
 	 */
 	void extends(Array<T> arr) {
 		for(T var : arr) {
@@ -210,14 +210,14 @@ public:
 		}
 	}
 	/**
-	 * @description Adds an element at the end of Array 
+	 * @brief Adds an element at the end of Array 
 	 */
 	void append(T elem) {
 		this->_list.push_back(elem);
 		this->_length++;
 	}
 	/**
-	 * @description Adds element at the start of Array 
+	 * @brief Adds element at the start of Array 
 	 */
 	void prepend(T elem) {
 		this->_list.push_front(elem);
@@ -226,7 +226,7 @@ public:
 	/**
 	 * @param elem Element to be added 
 	 * @param index position where element has to be added
-	 * @description inserts element at a given position 
+	 * @brief inserts element at a given position 
 	 */
 	void insert(T elem, int index) {
 		this->_list.insert(index, elem);
@@ -237,7 +237,7 @@ public:
 	T last() { return this->_list.back(); }
 
 	/**
-	* @desxription For using Array in foreach loop 
+	* @brief For using Array in foreach loop 
 	*/
 	class Iterator {
 	private:
