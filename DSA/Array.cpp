@@ -38,7 +38,7 @@ public:
 		} else {}
 	}
 	/**
-	 * @param elem Element whose value you want to find 
+	 * @param { T } elem Element whose value you want to find 
 	 * @return { int } position of element in array, if not present, returns -1
 	 */
 	int indexOf(T elem) {
@@ -51,8 +51,8 @@ public:
 		return index;
 	}
 	/**
-	 * @param callback function runs on calling reducer 
-	 * @param initialVai initial Value if accumulator
+	 * @param { function<T(T, T)> } callback function runs on calling reducer 
+	 * @param { T } initialVal initial Value if accumulator
 	 */
 	T reduce(function<T(T, T)> callback, T initialVal) {
 		T accumulator= initialVal;
@@ -62,7 +62,7 @@ public:
 		return accumulator;
 	}
 	/**
-	 * @return checks if Element is present or not
+	 * @return { bool } checks if Element is present or not
 	 */
 	bool includes(T elem) {
 		return ((this->indexOf(elem) != -1 ) ? true : false);
