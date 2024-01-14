@@ -49,6 +49,9 @@ void enque(Queue *arr, int elem) {
 int deque(Queue *que) {
   Queue arr2 = *que;
   int last = arr2.arr[0];
+  for (int i = 0; i < que->length - 2; i++) {
+    que->arr[i]= que->arr[i + 1];
+  }
   que->length--;
   que->arr = realloc(que->arr, sizeof(int) * (que->length));
   return last;
