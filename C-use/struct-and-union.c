@@ -14,6 +14,21 @@ union Person {
   char address[40];
 };
 
+/*
+ On creating a variable, memory of variable will be sum of size of all members
+  size of class = it is int, so 4 bytes
+  size of name = it is Array of 20 characters, so 20 * 1 byte = 20 bytes
+  size of rollNo = it is Array of 10 characters, 10 * 1 byte = 10 bytes
+
+  So, size of variable = size of class + size of name + size of rollNo = 4 + 20 + 10 = 34 bytes
+  Struct takes more memory than union because all members have their own memory
+  means you can access all members at the same time
+*/
+struct Student {
+  int class;
+  char name[20];
+  char rollNo[10];
+};
 int main() {
   char name[] = "Jaipal";
   char address[] = "Borunda, Jodhpur, Rajasthan";
