@@ -3,33 +3,33 @@
 using namespace std;
 
 /** 
- *  as nothing method is pure virtual method, 
- *  this class is now an abstract class 
- *  means creating an object of this class will cause error 
- *  to utilize this class, create a child class of this class 
- * *This is Abstraction
- *  @example 
+ * as nothing method is pure virtual method, 
+ * this class is now an abstract class 
+ * means creating an object of this class will cause error 
+ * to utilize this class, create a child class of this class 
+ * * This is Abstraction
+ * @example 
  *```cpp
  *   Person person1("Jaipal", 18); 
  *```
- *  this throws an error as an abstract class
- *  object is cannot be created
+ * this throws an error as an abstract class
+ * object is cannot be created
  */
 class Person{
-  /**
-   *  as private keyword is used, 
-   *  every method and variable until 
-   *  public or protected keyword will become 
-   *  a private member of class until end of class 
-   * * This is Encapsulation
-   * @example
-   *```cpp
-   *    cout << person1.name << endl;
-   *    person1.age= 19;
-   * ```
-   * both throws error as private members of class are cannot be accessed outside class directly 
-   * use getters and setters instead 
-   */
+/**
+ *  as private keyword is used, 
+ *  every method and variable until 
+ *  public or protected keyword will become 
+ *  a private member of class until end of class 
+ * * This is Encapsulation
+ * @example
+ * ```cpp
+ *    cout << person1.name << endl;
+ *    person1.age= 19;
+ * ```
+ * both throws error as private members of class are cannot be accessed outside class directly 
+ * use getters and setters instead 
+ */
 private:
   string name;
   float age;
