@@ -2,25 +2,29 @@
 #include <string>
 using namespace std;
 
-// as nothing method is pure virtual method, 
-// this class is now an abstract class 
-// means creating an object of this class will cause error 
-// to utilize this class, create a child class of this class 
-// // //  This is Abstraction  // // //
-// Example: 
-// Person person1("Jaipal", 18); 
-// this throws an error as an abstract class object is cannot be created
+/** 
+ *  as nothing method is pure virtual method, 
+ *  this class is now an abstract class 
+ *  means creating an object of this class will cause error 
+ *  to utilize this class, create a child class of this class 
+ * * This is Abstraction
+ *  @example 
+ *  Person person1("Jaipal", 18); 
+ *  this throws an error as an abstract class
+ */ object is cannot be created
 class Person{
-  // as private keyword is used, 
-  // every method and variable until 
-  // public or protected keyword will become 
-  // a private member of class until end of class 
-  // // //  This is Encapsulation  // // //
-  // Example:
-  // cout << person1.name << endl;
-  // person1.age= 19;
-  // both throws error as private members of class are cannot be accessed outside class directly 
-  // use getters and setters instead 
+  /**
+   *  as private keyword is used, 
+   *  every method and variable until 
+   *  public or protected keyword will become 
+   *  a private member of class until end of class 
+   * * This is Encapsulation  // // //
+   * @example
+   * cout << person1.name << endl;
+   * person1.age= 19;
+   * both throws error as private members of class are cannot be accessed outside class directly 
+   * use getters and setters instead 
+   */
 private:
   string name;
   float age;
@@ -74,22 +78,25 @@ public:
     } else {}
     this->isAlive= aliveStatus;
   }
-  // To make Person class an abstract class, 
-  // we have to create atleast 1 pure virtual method
-  // so I create 1 pure virtual method named nothing which actually does nothing 
-                                                          // and is just used to make Person class an abstract class 
+  /**
+   * To make Person class an abstract class, 
+   * we have to create atleast 1 pure virtual method
+   * so I create 1 pure virtual method named nothing which actually does nothing 
+   * and is just used to make Person class an abstract class 
   virtual void nothing() =0;
 };
-// When a class inherites other class, 
-// it get all default features of parent class 
-// you can even customize the methods and 
-// add your own new variables and method and  constructor parameter 
-// // //  This is Inheritance  // // // 
-// Example: 
-// Programmer jai("Jai", 21, 50000);
-//
-// If you are inheriting an abstract class, 
-// don't forget to do function defination of virtual methods, which were set =0; in abstract class 
+   /**
+    * When a class inherites other class, 
+    * it get all default features of parent class 
+    * you can even customize the methods and 
+    * add your own new variables and method and  constructor parameter 
+    * * This is Inheritance  
+    * @example: 
+    * Programmer jai("Jai", 21, 50000);
+    *
+    * If you are inheriting an abstract class, 
+    * don't forget to do function defination of virtual methods, which were set =0; in abstract class 
+   */
 class Programmer: public Person{
 private:
   int salary;
@@ -119,19 +126,21 @@ public:
   }
   void nothing() {}
 };
-// Multiple classes can inherit a single class 
-// Programmer and Manager both inherits a single Person class 
-// it can be used by creating a Person pointer or
-// initiaing a variable with Person type
-// // //  This is Polymorphism  // // //
-//
-// Example: 
-// With person pointer:
-// Person* person1;
-// person = new Programmer("Jaipal", 50000);
-// person::getName();
-//
-// I will use another method of polymorphism in below method 
+/**
+ * Multiple classes can inherit a single class 
+ * Programmer and Manager both inherits a single Person class 
+ * it can be used by creating a Person pointer or
+ * initiaing a variable with Person type
+ * * This is Polymorphism  // // //
+ *
+ * @example: 
+ * With person pointer:
+ * Person* person1;
+ * person = new Programmer("Jaipal", 50000);
+ * person::getName();
+ *
+ * I will use another method of polymorphism in below method 
+ */
 void OOPPillarUse() {
   string name;
   cout << "Hello, enter your name: ";
