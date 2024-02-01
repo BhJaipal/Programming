@@ -7,6 +7,7 @@
   There is code snippet below
   You can only see it highlighted with a code editor with Doc comments extension
   or plugin
+  @example
   ```c
     int main() {
       int var = 5;

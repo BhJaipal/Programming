@@ -7,11 +7,14 @@ using namespace std;
  *  this class is now an abstract class 
  *  means creating an object of this class will cause error 
  *  to utilize this class, create a child class of this class 
- * * This is Abstraction
+ * *This is Abstraction
  *  @example 
- *  Person person1("Jaipal", 18); 
+ *```cpp
+ *   Person person1("Jaipal", 18); 
+ *```
  *  this throws an error as an abstract class
- */ object is cannot be created
+ *  object is cannot be created
+ */
 class Person{
   /**
    *  as private keyword is used, 
@@ -20,7 +23,7 @@ class Person{
    *  a private member of class until end of class 
    * * This is Encapsulation
    * @example
-   * ```cpp
+   *```cpp
    *    cout << person1.name << endl;
    *    person1.age= 19;
    * ```
@@ -85,7 +88,8 @@ public:
    * we have to create atleast 1 pure virtual method
    * so I create 1 pure virtual method named nothing which actually does nothing 
    * and is just used to make Person class an abstract class 
-  virtual void nothing() =0;
+   * `virtual void nothing() =0;`
+   */
 };
    /**
     * When a class inherites other class, 

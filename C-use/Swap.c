@@ -4,7 +4,7 @@ int main() {
   int a= 3;
   int b= 2;
   printf("Before swapping\n");
-  printf("a: %d    b: %d\n", a, b");
+  printf("a: %d    b: %d\n", a, b);
   /*
     prints
     Before Swapping 
