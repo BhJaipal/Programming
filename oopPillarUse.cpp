@@ -18,10 +18,12 @@ class Person{
    *  every method and variable until 
    *  public or protected keyword will become 
    *  a private member of class until end of class 
-   * * This is Encapsulation  // // //
+   * * This is Encapsulation
    * @example
-   * cout << person1.name << endl;
-   * person1.age= 19;
+   * ```cpp
+   *    cout << person1.name << endl;
+   *    person1.age= 19;
+   * ```
    * both throws error as private members of class are cannot be accessed outside class directly 
    * use getters and setters instead 
    */
@@ -91,9 +93,10 @@ public:
     * you can even customize the methods and 
     * add your own new variables and method and  constructor parameter 
     * * This is Inheritance  
-    * @example: 
-    * Programmer jai("Jai", 21, 50000);
-    *
+    * @example:
+    * ```cpp 
+    *    Programmer jai("Jai", 21, 50000);
+    * ```
     * If you are inheriting an abstract class, 
     * don't forget to do function defination of virtual methods, which were set =0; in abstract class 
    */
@@ -131,14 +134,15 @@ public:
  * Programmer and Manager both inherits a single Person class 
  * it can be used by creating a Person pointer or
  * initiaing a variable with Person type
- * * This is Polymorphism  // // //
+ * * This is Polymorphism 
  *
  * @example: 
- * With person pointer:
- * Person* person1;
- * person = new Programmer("Jaipal", 50000);
- * person::getName();
- *
+ * ```cpp
+ *    // With person pointer:
+ *    Person* person1;
+ *    person = new Programmer("Jaipal", 50000);
+ *    person::getName();
+ * ```
  * I will use another method of polymorphism in below method 
  */
 void OOPPillarUse() {
@@ -232,8 +236,9 @@ void OOPPillarUse() {
   } else {
   cout << "Invalid input, please do it again" << endl << endl;
   OOPPillarUse();
-  // Use recursion on wrong input
-  // Polymorphism on 1 or 2 
+  /* Use recursion on wrong input
+   * Polymorphism on 1 or 2 
+   */
   }
 }
 
