@@ -1,175 +1,171 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Python C++ Debugger",
-      "type": "pythoncpp",
-      "request": "launch",
-      "pythonConfig": "default",
-      "cppConfig": "!!pick 'default (win) Attach' or 'default (gdb) Attach'"
-    },
-    {
-      "name": "Python C++ Debugger",
-      "type": "pythoncpp",
-      "request": "launch",
-      "pythonLaunchName": "Python: Current File",
-      "cppAttachName": "'(Windows) Attach' or '(gdb) Attach'"
-    },
-    {
-      "name": "(gdb) Launch",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "enter program name, for example ${workspaceFolder}/a.out",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        },
-        {
-          "description": "Set Disassembly Flavor to Intel",
-          "text": "-gdb-set disassembly-flavor intel",
-          "ignoreFailures": true
-        }
-      ]
-    },
-    {
-      "name": "(gdb) Pipe Attach",
-      "type": "cppdbg",
-      "request": "attach",
-      "program": "enter program name, for example ${workspaceFolder}/a.out",
-      "processId": "${command:pickRemoteProcess}",
-      "pipeTransport": {
-        "debuggerPath": "/usr/bin/gdb",
-        "pipeProgram": "/usr/bin/ssh",
-        "pipeArgs": [],
-        "pipeCwd": ""
-      },
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        },
-        {
-          "description": "Set Disassembly Flavor to Intel",
-          "text": "-gdb-set disassembly-flavor intel",
-          "ignoreFailures": true
-        }
-      ]
-    },
-    {
-      "name": "(gdb) Pipe Launch",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "enter program name, for example ${workspaceFolder}/a.out",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": false,
-      "pipeTransport": {
-        "debuggerPath": "/usr/bin/gdb",
-        "pipeProgram": "/usr/bin/ssh",
-        "pipeArgs": [],
-        "pipeCwd": ""
-      },
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        },
-        {
-          "description": "Set Disassembly Flavor to Intel",
-          "text": "-gdb-set disassembly-flavor intel",
-          "ignoreFailures": true
-        }
-      ]
-    },
-    {
-      "args": [
-        "--extensionDevelopmentPath=${workspaceFolder}"
-      ],
-      "name": "Launch Extension",
-      "outFiles": [
-        "${workspaceFolder}/out/**/*.js"
-      ],
-      "preLaunchTask": "npm",
-      "request": "launch",
-      "type": "extensionHost"
-    },
-    {
-      "name": "(gdb) Pipe Attach",
-      "type": "cppdbg",
-      "request": "attach",
-      "program": "enter program name, for example ${workspaceFolder}/a.out",
-      "processId": "${command:pickRemoteProcess}",
-      "pipeTransport": {
-        "debuggerPath": "/usr/bin/gdb",
-        "pipeProgram": "/usr/bin/ssh",
-        "pipeArgs": [],
-        "pipeCwd": ""
-      },
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        },
-        {
-          "description": "Set Disassembly Flavor to Intel",
-          "text": "-gdb-set disassembly-flavor intel",
-          "ignoreFailures": true
-        }
-      ]
-    },
-    {
-      "name": "(gdb) Attach",
-      "type": "cppdbg",
-      "request": "attach",
-      "program": "enter program name, for example ${workspaceFolder}/a.out",
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        },
-        {
-          "description": "Set Disassembly Flavor to Intel",
-          "text": "-gdb-set disassembly-flavor intel",
-          "ignoreFailures": true
-        }
-      ]
-    },
-    {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
-      "request": "launch",
-      "args": [],
-      "stopAtEntry": false,
-      "externalConsole": false,
-      "cwd": "/workspaces/Programming",
-      "program": "/workspaces/Programming/build/Debug/outDebug",
-      "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
-    }
-  ]
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Python C++ Debugger",
+			"type": "pythoncpp",
+			"request": "launch",
+			"pythonConfig": "default",
+			"cppConfig": "!!pick 'default (win) Attach' or 'default (gdb) Attach'"
+		},
+		{
+			"name": "Python C++ Debugger",
+			"type": "pythoncpp",
+			"request": "launch",
+			"pythonLaunchName": "Python: Current File",
+			"cppAttachName": "'(Windows) Attach' or '(gdb) Attach'"
+		},
+		{
+			"name": "(gdb) Launch",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "enter program name, for example ${workspaceFolder}/a.out",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${fileDirname}",
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				},
+				{
+					"description": "Set Disassembly Flavor to Intel",
+					"text": "-gdb-set disassembly-flavor intel",
+					"ignoreFailures": true
+				}
+			]
+		},
+		{
+			"name": "(gdb) Pipe Attach",
+			"type": "cppdbg",
+			"request": "attach",
+			"program": "enter program name, for example ${workspaceFolder}/a.out",
+			"processId": "${command:pickRemoteProcess}",
+			"pipeTransport": {
+				"debuggerPath": "/usr/bin/gdb",
+				"pipeProgram": "/usr/bin/ssh",
+				"pipeArgs": [],
+				"pipeCwd": ""
+			},
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				},
+				{
+					"description": "Set Disassembly Flavor to Intel",
+					"text": "-gdb-set disassembly-flavor intel",
+					"ignoreFailures": true
+				}
+			]
+		},
+		{
+			"name": "(gdb) Pipe Launch",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "enter program name, for example ${workspaceFolder}/a.out",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${fileDirname}",
+			"environment": [],
+			"externalConsole": false,
+			"pipeTransport": {
+				"debuggerPath": "/usr/bin/gdb",
+				"pipeProgram": "/usr/bin/ssh",
+				"pipeArgs": [],
+				"pipeCwd": ""
+			},
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				},
+				{
+					"description": "Set Disassembly Flavor to Intel",
+					"text": "-gdb-set disassembly-flavor intel",
+					"ignoreFailures": true
+				}
+			]
+		},
+		{
+			"args": ["--extensionDevelopmentPath=${workspaceFolder}"],
+			"name": "Launch Extension",
+			"outFiles": ["${workspaceFolder}/out/**/*.js"],
+			"preLaunchTask": "npm",
+			"request": "launch",
+			"type": "extensionHost"
+		},
+		{
+			"name": "(gdb) Pipe Attach",
+			"type": "cppdbg",
+			"request": "attach",
+			"program": "enter program name, for example ${workspaceFolder}/a.out",
+			"processId": "${command:pickRemoteProcess}",
+			"pipeTransport": {
+				"debuggerPath": "/usr/bin/gdb",
+				"pipeProgram": "/usr/bin/ssh",
+				"pipeArgs": [],
+				"pipeCwd": ""
+			},
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				},
+				{
+					"description": "Set Disassembly Flavor to Intel",
+					"text": "-gdb-set disassembly-flavor intel",
+					"ignoreFailures": true
+				}
+			]
+		},
+		{
+			"name": "(gdb) Attach",
+			"type": "cppdbg",
+			"request": "attach",
+			"program": "enter program name, for example ${workspaceFolder}/a.out",
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				},
+				{
+					"description": "Set Disassembly Flavor to Intel",
+					"text": "-gdb-set disassembly-flavor intel",
+					"ignoreFailures": true
+				}
+			]
+		},
+		{
+			"name": "C/C++ Runner: Debug Session",
+			"type": "cppdbg",
+			"request": "launch",
+			"args": [],
+			"stopAtEntry": false,
+			"externalConsole": false,
+			"cwd": "/workspaces/Programming",
+			"program": "/workspaces/Programming/build/Debug/outDebug",
+			"MIMode": "gdb",
+			"miDebuggerPath": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			]
+		}
+	]
 }
