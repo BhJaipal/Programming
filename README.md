@@ -8,6 +8,7 @@
 
 [![Visual Studio Code](https://img.shields.io/badge/VS_Code-007ACC?logo=visual%20studio%20code&logoColor=3f3f8f)](https://code.visualstudio.com)
 [![C++](https://img.shields.io/badge/C++-ff9?logo=cplusplus&logoColor=05f)](https://cplusplus.com/)
+![C](https://img.shields.io/badge/C-ff9?logo=c&logoColor=05f)
 [![GitHub](https://badgen.net/badge/icon/github?icon=github&label&color=black)](https://github.com)
 [![GitHub stars](https://img.shields.io/github/stars/BhJaipal/Programming.svg?style=plastic&label=Star&maxAge=2592000)](https://github.com/BhJaipal/Programming)
 [![Jupyter](https://img.shields.io/badge/Jupyter-fff?logo=jupyter)](https://cplusplus.com/)
