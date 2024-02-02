@@ -18,6 +18,7 @@
     <img src="https://img.shields.io/github/contributors/BhJaipal/Programming?color=blue&style=plastic">
     <img src="https://img.shields.io/badge/Made%20with-C++-1f425f.svg">
     <img src="https://img.shields.io/badge/C++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white&style=plastic">
+   <img src="https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white&style=plastic">
 </p>
 
 ## Learning C++
