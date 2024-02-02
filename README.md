@@ -32,10 +32,10 @@
 /**
  * @param name your name
  * @example 
- *```c
- * std::cout << "Hello" << std::endl;
- * function_name("Jaipal");
- *```
+ * ```c
+ *   std::cout << "Hello" << std::endl;
+ *   function_name("Jaipal");
+ * ```
  */
 void function_name(std::string name) {
     // code here like
