@@ -26,13 +26,20 @@
 ### Syntax
 
 ```cpp
-# include <iostream>
-# include <string>
-using namespace std;
+#include <iostream>
+#include <string>
 
-void function_name() {
+/**
+ * @param name your name
+ * @example 
+ * ```c
+ * std::cout << "Hello" << std::endl;
+ * function_name("Jaipal");
+ * ```
+ */
+void function_name(std::string name) {
     // code here like
-    std::cout << "Hello World" << std::endl << "I am Jaipal" << std::endl;
+    std::cout << "Hello World" << std::endl << "I am " << name << std::endl;
 }
 int main() {
     function_name();
