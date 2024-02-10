@@ -1,9 +1,7 @@
 # Programming
 
-<p align="center"> 
- <a href="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=BhJaipal&layout=compact&langs_count=16&theme=dark&background=black"> 
-    <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=BhJaipal&layout=compact&langs_count=16&background=black&theme=dark" style="margin-left:10px"/> 
-  </a> 
+<p align="center">
+    <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=BhJaipal&layout=compact&langs_count=16&background=black&theme=dark" style="margin-left:10px" alt=" " />
 </p>
 
 [![Visual Studio Code](https://img.shields.io/badge/VS_Code-007ACC?logo=visual%20studio%20code&logoColor=3f3f8f)](https://code.visualstudio.com)
@@ -25,13 +23,13 @@
 
 ### Syntax
 
-```cpp
+````cpp
 #include <iostream>
 #include <string>
 
 /**
  * @param name your name
- * @example 
+ * @example
  * ```c
  *   std::cout << "Hello" << std::endl;
  *   function_name("Jaipal");
@@ -44,6 +42,19 @@ void function_name(std::string name) {
 int main() {
     function_name();
 }
+````
+
+### CMake Use
+
+```cmake
+cmake_minimum_required(VERSION 3.28.3)
+project(CMakeLearning)
+add_executable(${PROJECT_NAME} Student.cpp)
+```
+
+```bash
+cmake CMakesLists.txt
+make all
 ```
 
 Hello World

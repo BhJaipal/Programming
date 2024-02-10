@@ -6,7 +6,7 @@
 			"type": "pythoncpp",
 			"request": "launch",
 			"pythonConfig": "default",
-			"cppConfig": "!!pick 'default (win) Attach' or 'default (gdb) Attach'"
+			"cppConfig": "default (gdb) Attach"
 		},
 		{
 			"name": "Python C++ Debugger",

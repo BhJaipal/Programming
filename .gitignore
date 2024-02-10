@@ -1,0 +1,6 @@
+*.exe
+*.out
+build/
+debug/
+out/
+CMakeFiles/

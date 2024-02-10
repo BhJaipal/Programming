@@ -34,7 +34,7 @@ Person person("Jaipal", 18);
 #endif
 
 /**
- * @brief A Student class
+ * @brief A Student class { @link #Person }
  */
 class Student : public Person
 {
@@ -60,6 +60,13 @@ public:
         this->setLife(false);
         std::cout << "Student died" << std::endl;
     }
+    void display()
+    {
+        std::cout << "Name: " << this->_name << std::endl;
+        std::cout << "Age: " << this->_age << std::endl;
+        std::cout << "Department: " << this->dept << std::endl;
+        std::cout << "Roll No: " << this->rollNo << std::endl;
+    }
     void eat()
     {
         std::cout << "Student is eating" << std::endl;
@@ -69,5 +76,7 @@ public:
 int main(int argc, char const *argv[])
 {
     Student stud("Jaipal", 18, "CSE", 1);
+    stud.display();
+    stud.eat();
     return 0;
 }
