@@ -55,6 +55,7 @@ add_executable(${PROJECT_NAME} Student.cpp)
 ```bash
 cmake CMakesLists.txt
 make all
+./CMakeLearning
 ```
 
 Hello World
