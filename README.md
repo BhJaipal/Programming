@@ -23,17 +23,13 @@
 
 ### Syntax
 
-````cpp
+```cpp
 #include <iostream>
 #include <string>
 
 /**
  * @param name your name
  * @example
- * ```c
- *   std::cout << "Hello" << std::endl;
- *   function_name("Jaipal");
- * ```
  */
 void function_name(std::string name) {
     // code here like
@@ -42,6 +38,7 @@ void function_name(std::string name) {
 int main() {
     function_name();
 }
+```
 ````
 
 ### CMake Use
