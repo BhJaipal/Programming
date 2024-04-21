@@ -44,7 +44,7 @@ public:
 class TeamLead : private Engineer, private Manager
 {
 public:
-	TeamLead(std::string name, int id, long int salary) : Engineer(name, id, salary, "Software dev"), Manager(name, id, salary, "Project manager") {}
+	TeamLead(std::string name, int id, long int salary) : Engineer(name, id, salary, "Team Lead"), Manager(name, id, salary, "Project manager") {}
 	void display()
 	{
 		Engineer::display();
