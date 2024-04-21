@@ -18,6 +18,11 @@ public:
 			_str[i] = val[i];
 		}
 	}
+	String()
+	{
+		_str = new char[1];
+		_str[0] = '\0';
+	}
 	String(String &str)
 	{
 		strcpy(str._str);
