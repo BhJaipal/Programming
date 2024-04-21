@@ -18,6 +18,10 @@ public:
 			_str[i] = val[i];
 		}
 	}
+	String(String &str)
+	{
+		strcpy(str._str);
+	}
 	~String()
 	{
 		delete _str;
