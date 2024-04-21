@@ -13,8 +13,6 @@ private:
 
 public:
 	static Logger &getInstance();
-
-public:
 	void SetLogMessage(const std::string &message)
 	{
 		log_message_ = message;
