@@ -91,11 +91,10 @@ public:
 int main()
 {
 	std::unique_ptr<Array<int>> arr(new Array<int>(10));
-	std::cout << "Adding elements: ";
+	std::cout << "Adding elements\n";
 	arr->add(4);
 	arr->add(7);
 	arr->add(18);
-	arr.get()[5];
 	arr->add(9);
 	arr->add(1);
 	arr->print();
@@ -108,5 +107,6 @@ int main()
 	}
 	std::cout << '\n';
 	arr->remove();
+	arr.get()->operator[](5);
 	return 0;
 }
