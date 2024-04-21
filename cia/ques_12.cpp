@@ -5,7 +5,6 @@ class Shape
 public:
 	virtual float area() = 0;
 	virtual float perimeter() = 0;
-	virtual ~Shape() {}
 };
 class Circle : public Shape
 {
@@ -23,10 +22,6 @@ public:
 	float area()
 	{
 		return radius * radius * 3.1415;
-	}
-	~Circle()
-	{
-		std::cout << "Circle Destructor called" << std::endl;
 	}
 };
 class Rectangle : public Shape
@@ -46,10 +41,6 @@ public:
 	float area()
 	{
 		return length * breadth;
-	}
-	~Rectangle()
-	{
-		std::cout << "Rectangle Destructor called" << std::endl;
 	}
 };
 int main(int argc, char const *argv[])
