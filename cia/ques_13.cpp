@@ -9,7 +9,7 @@ class Employee
 
 public:
 	Employee(std::string name, int id, long int salary) : _name(name), _e_id(id), _salary(salary) {}
-	void __display()
+	void display()
 	{
 		std::cout << "Name: " << _name << "\nEmployee ID:" << _e_id << "\nSalary: " << _salary << "\n";
 	}
@@ -23,7 +23,7 @@ public:
 	Manager(std::string name, int id, long int salary, std::string manager_type) : type(manager_type), Employee(name, id, salary)
 	{
 	}
-	void _display1()
+	void display()
 	{
 		std::cout << "Manager type: " << type << "\n";
 	}
@@ -35,9 +35,9 @@ protected:
 
 public:
 	Engineer(std::string name, int id, long int salary, std::string _degree) : degree(_degree), Employee(name, id, salary) {}
-	void _display2()
+	void display()
 	{
-		__display();
+		Employee::display();
 		std::cout << "Profession: " << degree << "\n";
 	}
 };
@@ -47,12 +47,12 @@ public:
 	TeamLead(std::string name, int id, long int salary) : Engineer(name, id, salary, "Software dev"), Manager(name, id, salary, "Project manager") {}
 	void display()
 	{
-		_display2();
-		_display1();
+		Engineer::display();
+		Manager::display();
 	}
 };
 
-int main(int argc, char const *argv[])
+int main()
 {
 	TeamLead lead("jaipal", 1, 10000);
 	lead.display();
