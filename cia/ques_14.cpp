@@ -43,6 +43,7 @@ int main()
 {
 	String str = "Hello";
 	str.strcpy("World");
-	cout << str.c_str() << endl;
+	String str2 = str;
+	cout << str2.c_str() << endl;
 	return 0;
 }
