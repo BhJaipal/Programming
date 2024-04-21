@@ -60,8 +60,6 @@ int main()
 	sensor.addObserver(&display2);
 
 	sensor.setTemperature(25.0);
-	sensor.setTemperature(30.5);
-	sensor.setTemperature(27.8);
 
 	sensor.removeObserver(&display1);
 
