@@ -35,6 +35,7 @@ public:
 			_len++;
 		}
 	}
+	int length() { return _len; }
 	int remove()
 	{
 		if (_len == 0)
