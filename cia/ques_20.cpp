@@ -1,105 +1,55 @@
 #include <iostream>
-#include <string>
-#include <thread>
+#include <mutex> // For thread safety
 
-/**
- * The Singleton class defines the `GetInstance` method that serves as an
- * alternative to constructor and lets clients access the same instance of this
- * class over and over.
- */
-class Singleton
+class Logger
 {
+private:
+	Logger() = default; // Private constructor to prevent external instantiation
+	~Logger() = default;
+	Logger(const Logger &) = delete;			// Disallow copy constructor
+	Logger &operator=(const Logger &) = delete; // Disallow copy assignment
 
-	/**
-	 * The Singleton's constructor should always be private to prevent direct
-	 * construction calls with the `new` operator.
-	 */
-
-protected:
-	Singleton(const std::string value) : value_(value)
-	{
-	}
-
-	static Singleton *singleton_;
-
-	std::string value_;
+	std::string log_message_;
 
 public:
-	/**
-	 * Singletons should not be cloneable.
-	 */
-	Singleton(Singleton &other) = delete;
-	/**
-	 * Singletons should not be assignable.
-	 */
-	void operator=(const Singleton &) = delete;
-	/**
-	 * This is the static method that controls the access to the singleton
-	 * instance. On the first run, it creates a singleton object and places it
-	 * into the static field. On subsequent runs, it returns the client existing
-	 * object stored in the static field.
-	 */
+	static Logger &getInstance();
 
-	static Singleton *GetInstance(const std::string &value);
-	/**
-	 * Finally, any singleton should define some business logic, which can be
-	 * executed on its instance.
-	 */
-	void SomeBusinessLogic()
+public:
+	void SetLogMessage(const std::string &message)
 	{
-		// ...
+		log_message_ = message;
 	}
 
-	std::string value() const
-	{
-		return value_;
-	}
+	// You can add other logging functionalities here
+
+	void WriteLog();
+
+	static std::mutex mutex_; // Mutex for thread safety
 };
 
-Singleton *Singleton::singleton_ = nullptr;
-;
-
-/**
- * Static methods should be defined outside the class.
- */
-Singleton *Singleton::GetInstance(const std::string &value)
+// Static member initialization (avoids global object problems)
+std::mutex Logger::mutex_;
+Logger &Logger::getInstance()
 {
-	/**
-	 * This is a safer way to create an instance. instance = new Singleton is
-	 * dangeruous in case two instance threads wants to access at the same time
-	 */
-	if (singleton_ == nullptr)
-	{
-		singleton_ = new Singleton(value);
-	}
-	return singleton_;
+	static Logger instance; // Create the single instance on first call
+	return instance;
 }
 
-void ThreadFoo()
+void Logger::WriteLog()
 {
-	// Following code emulates slow initialization.
-	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-	Singleton *singleton = Singleton::GetInstance("FOO");
-	std::cout << singleton->value() << "\n";
-}
-
-void ThreadBar()
-{
-	// Following code emulates slow initialization.
-	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-	Singleton *singleton = Singleton::GetInstance("BAR");
-	std::cout << singleton->value() << "\n";
+	std::cout << log_message_ << std::endl;
+	// You can implement more sophisticated logging mechanisms here (e.g., writing to files)
 }
 
 int main()
 {
-	std::cout << "If you see the same value, then singleton was reused (yay!\n"
-			  << "If you see different values, then 2 singletons were created (booo!!)\n\n"
-			  << "RESULT:\n";
-	std::thread t1(ThreadFoo);
-	std::thread t2(ThreadBar);
-	t1.join();
-	t2.join();
+	Logger &logger = Logger::getInstance();
+	logger.SetLogMessage("This is a log message.");
+	logger.WriteLog(); // Output: This is a log message.
+
+	// Since getInstance() returns the same reference, any subsequent calls will modify the same logger object
+	logger.SetLogMessage("Another log message.");
+	logger.WriteLog(); // Output: Another log message.
 
 	return 0;
 }
