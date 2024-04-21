@@ -28,6 +28,7 @@ public:
 	}
 	String operator=(const char *val)
 	{
+		strcpy(val);
 		return *this;
 	}
 	void strcpy(const char *val)
@@ -44,6 +45,8 @@ int main()
 	String str = "Hello";
 	str.strcpy("World");
 	String str2 = str;
+	cout << str2.c_str() << endl;
+	str2 = "Hello";
 	cout << str2.c_str() << endl;
 	return 0;
 }
