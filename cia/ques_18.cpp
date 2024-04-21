@@ -4,9 +4,6 @@ class Shape
 {
 public:
 	virtual void draw() = 0;
-	virtual ~Shape()
-	{
-	}
 };
 class Circle : public Shape
 {
@@ -29,9 +26,6 @@ class ShapeFactory
 {
 public:
 	virtual Shape *createShape() = 0;
-	virtual ~ShapeFactory()
-	{
-	}
 };
 class CircleFactory : public ShapeFactory
 {
