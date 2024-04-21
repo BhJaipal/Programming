@@ -31,14 +31,14 @@ public:
 class Engineer : public Employee
 {
 protected:
-	std::string degree;
+	std::string prof;
 
 public:
-	Engineer(std::string name, int id, long int salary, std::string _degree) : degree(_degree), Employee(name, id, salary) {}
+	Engineer(std::string name, int id, long int salary, std::string _profession) : prof(_profession), Employee(name, id, salary) {}
 	void display()
 	{
 		Employee::display();
-		std::cout << "Profession: " << degree << "\n";
+		std::cout << "Profession: " << prof << "\n";
 	}
 };
 class TeamLead : private Engineer, private Manager
@@ -54,7 +54,7 @@ public:
 
 int main()
 {
-	TeamLead lead("jaipal", 1, 10000);
+	TeamLead lead("Jaipal", 1, 10000);
 	lead.display();
 	return 0;
 }
