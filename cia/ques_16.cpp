@@ -91,7 +91,7 @@ public:
 int main()
 {
 	std::unique_ptr<Array<int>> arr(new Array<int>(10));
-	std::cout << "Adding elements";
+	std::cout << "Adding elements: ";
 	arr->add(4);
 	arr->add(7);
 	arr->add(18);
