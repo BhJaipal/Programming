@@ -23,7 +23,7 @@ public:
 		std::cout << "drawing circle\nEnter radius: ";
 		int r;
 		std::cin >> r;
-		float area = 3.14 * r * r;
+		float area = 3.1415 * r * r;
 		std::cout << "circle drawn of area: " << area << std::endl;
 	}
 };
