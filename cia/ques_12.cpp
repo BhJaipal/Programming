@@ -45,12 +45,12 @@ public:
 int main(int argc, char const *argv[])
 {
 	Shape *s = new Circle(7);
-	std::cout << s->area() << std::endl;
-	std::cout << s->perimeter() << std::endl;
+	std::cout << "Circle area: " << s->area() << '\n';
+	std::cout << "Circle perimeter: " << s->perimeter() << "\n\n";
 	delete s;
 	s = new Rectangle(2, 3);
-	std::cout << s->area() << std::endl;
-	std::cout << s->perimeter() << std::endl;
+	std::cout << "Rectangle area: " << s->area() << '\n';
+	std::cout << "Rectangle perimeter: " << s->perimeter() << '\n';
 	delete s;
 	return 0;
 }
