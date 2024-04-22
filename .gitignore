@@ -5,3 +5,6 @@ debug/
 out/
 CMakeFiles/
 .cmake/
+MakeFile
+CMakeCache.txt
+cmake_install.cmake
