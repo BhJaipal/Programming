@@ -1,34 +1,27 @@
 #include <iostream>
 using namespace std;
 
-class Shape
-{
+class Shape {
 public:
 	virtual void draw() = 0;
 };
-class Circle : public Shape
-{
+class Circle : public Shape {
 public:
 	void draw() { cout << "Drawing Circle\n"; }
 };
-class Rectangle : public Shape
-{
+class Rectangle : public Shape {
 public:
 	void draw() { cout << "Drawing Rectangle\n"; }
 };
 
-int main()
-{
+int main() {
 	cout << "Choose 1 for Circle and 2 for Rectangle: ";
 	int choice;
 	cin >> choice;
 	Shape *shape;
-	if (choice == 1)
-	{
+	if (choice == 1) {
 		shape = new Circle();
-	}
-	else
-	{
+	} else {
 		shape = new Rectangle();
 	}
 	shape->draw();
