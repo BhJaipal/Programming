@@ -13,8 +13,13 @@ public:
 };
 int Student::_count = 0;
 
-int main() {
+int main()
+{
 	Student s1(4), s2(5), s3(2);
 	cout << "No. of students: " << Student::count() << endl;
 	return 0;
 }
+/*
+Output:
+No. of students: 3
+*/
