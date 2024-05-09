@@ -16,3 +16,7 @@ int main(int argc, char const *argv[])
 	b.show();
 	return 0;
 }
+/**
+Output:
+Base class
+ */

@@ -29,6 +29,7 @@ int main()
 	for (int i = 0; i < 10; i++)
 	{
 		stud[i].scan();
+		cout << "\n";
 	}
 	for (int i = 0; i < 10; i++)
 	{
@@ -37,3 +38,50 @@ int main()
 
 	return 0;
 }
+/*
+Output:
+(I won't share names, roll and fees)
+Name:
+Roll:
+Fees:
+
+Name:
+Roll:
+Fees:
+
+Name:
+Roll:
+Fees:
+
+Name:
+Roll:
+Fees:
+
+Name:
+Roll:
+Fees:
+
+Name:
+Roll:
+Fees:
+
+Name:
+Roll:
+Fees:
+
+Name:
+Roll:
+Fees:
+
+Name:
+Roll:
+Fees:
+
+Name:
+Roll:
+Fees:
+
+104, Jaipal, 900
+...
+
+*/
