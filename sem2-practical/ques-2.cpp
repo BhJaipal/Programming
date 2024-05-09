@@ -82,6 +82,6 @@ Roll:
 Fees:
 
 104, Jaipal, 900
-...
+...(all 9 others)
 
 */
