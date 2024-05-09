@@ -14,7 +14,7 @@ int linearSearch(T *arr, int size, T elem)
 	return -1;
 }
 
-template <class T>
+template <typename T>
 int binarySearch(T arr[], int s, T elem)
 {
 	int index = -1;
