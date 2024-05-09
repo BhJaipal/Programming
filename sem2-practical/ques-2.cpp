@@ -25,8 +25,15 @@ public:
 };
 int main()
 {
-	Student stud;
-	stud.scan();
-	stud.display();
+	Student stud[10];
+	for (int i = 0; i < 10; i++)
+	{
+		stud[i].scan();
+	}
+	for (int i = 0; i < 10; i++)
+	{
+		stud[i].display();
+	}
+
 	return 0;
 }
