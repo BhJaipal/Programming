@@ -8,8 +8,7 @@ class Copy {
 public:
 	Copy(string _name, int _age) : name(_name), age(_age) {}
 	void display() {
-		cout << "Name: " << name << endl;
-		cout << "Age: " << age << endl;
+		cout << "Name: " << name << "\nAge: " << age << endl;
 	}
 };
 int main() {
