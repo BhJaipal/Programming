@@ -8,7 +8,6 @@ class Account {
 	string accNo;
 
 public:
-	Account() {}
 	void initialize() {
 		cout << "Enter Name: "; cin >> name;
 		cout << "Enter Account Number: "; cin >> accNo;
