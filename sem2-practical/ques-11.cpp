@@ -3,10 +3,8 @@
 using namespace std;
 
 class Account {
-	string name, accType;
+	string name, accType, accNo;
 	double balance;
-	string accNo;
-
 public:
 	void initialize() {
 		cout << "Enter Name: "; cin >> name;
