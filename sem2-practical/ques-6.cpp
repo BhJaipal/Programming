@@ -2,7 +2,6 @@
 
 class Time {
 	int hour, min, sec;
-
 public:
 	Time(int h = 0, int m = 0, int s = 0) {
 		hour = h;
