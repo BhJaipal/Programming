@@ -11,10 +11,8 @@ public:
 	}
 	int operator[](int i) {
 		if (i >= 0 && i < 10) { return arr[i]; }
-		else {
-			cout << "Index out of bounds\t";
-			return -1;
-		}
+		else { cout << "Index out of bounds\t";
+			return -1; }
 	}
 };
 int main() {
