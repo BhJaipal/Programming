@@ -3,7 +3,6 @@ using namespace std;
 
 class Time {
 	int hr, min;
-
 public:
 	Time(int mins) : hr(mins / 60), min(mins % 60) {}
 	void display() { cout << (hr > 9 ? "" : "0") << hr << ":" << (min > 9 ? "" : "0") << min << endl; }
