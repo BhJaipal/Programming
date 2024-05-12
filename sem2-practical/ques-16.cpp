@@ -5,7 +5,6 @@ using namespace std;
 class BinOperator {
 	int x;
 	unsigned int y;
-
 public:
 	BinOperator(unsigned int _y, int _x) : y(_y), x(_x) {}
 	void print() { cout << bitset<4>{y} << endl; }
