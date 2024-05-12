@@ -3,7 +3,6 @@ using namespace std;
 
 class draw {
 	void shape() { cout << "Drawing Shape\n"; }
-
 public:
 	friend void drawShape(draw &);
 };
