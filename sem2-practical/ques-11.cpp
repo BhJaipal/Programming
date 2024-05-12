@@ -10,22 +10,17 @@ class Account {
 public:
 	Account() {}
 	void initialize() {
-		cout << "Enter Name: ";
-		cin >> name;
-		cout << "Enter Account Number: ";
-		cin >> accNo;
-		cout << "Enter Account Type: ";
-		cin >> accType;
-		cout << "Enter Initial Balance: ";
-		cin >> balance;
+		cout << "Enter Name: "; cin >> name;
+		cout << "Enter Account Number: "; cin >> accNo;
+		cout << "Enter Account Type: "; cin >> accType;
+		cout << "Enter Initial Balance: "; cin >> balance;
 	}
 	void deposit(int amount) {
 		balance += amount;
 		cout << "Amount Deposited: " << amount << '\n';
 	}
-	void withdraw(int amount)
-	{
-		if (amount > balance) { cout << "Insufficient Balance" << '\n'; }
+	void withdraw(int amount) {
+		if (amount > balance) { cout << "Insufficient Balance\n"; }
 		else {
 			cout << "Amount withdrawn: " << amount << '\n';
 			balance -= amount;
