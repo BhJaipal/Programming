@@ -3,7 +3,6 @@ using namespace std;
 
 class Array {
 	int arr[10];
-
 public:
 	Array() {
 		cout << "Enter 10 elements: ";
@@ -11,9 +10,8 @@ public:
 		cout << "\n";
 	}
 	int operator[](int i) {
-		if (i >= 0 && i < 10) {
-			return arr[i];
-		} else {
+		if (i >= 0 && i < 10) { return arr[i]; } 
+   else {
 			cout << "Index out of bounds\t";
 			return -1;
 		}
