@@ -4,7 +4,6 @@ using namespace std;
 class Shape {
 protected:
 	Shape() = default;
-
 public:
 	friend Shape createShape();
 	virtual float area() { return 0; };
@@ -14,7 +13,6 @@ public:
 
 class Rectangle : public Shape {
 	float l, b;
-
 public:
 	Rectangle(float _l, float _b) : l(_l), b(_b) {}
 	float area() { return l * b; }
@@ -23,7 +21,6 @@ public:
 };
 class Circle : public Shape {
 	float r;
-
 public:
 	Circle(float _r) : r(_r) {}
 	float area() { return 3.14 * r * r; }
