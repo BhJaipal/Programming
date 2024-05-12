@@ -5,7 +5,6 @@ class Complex {
 	int real, imag;
 public:
 	Complex(int r, int i) : real(r), imag(i) {}
-
 	Complex operator+(Complex &obj) { return Complex(real + obj.real, imag + obj.imag); }
 	void display() { cout << real << (imag < 0 ? "" : "+") << imag << "i" << endl; }
 };
