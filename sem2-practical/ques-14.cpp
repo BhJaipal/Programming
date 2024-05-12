@@ -5,7 +5,6 @@ using namespace std;
 class Copy {
 	string name;
 	int age;
-
 public:
 	Copy(string name, int age) : name(name), age(age) {}
 	void display() {
