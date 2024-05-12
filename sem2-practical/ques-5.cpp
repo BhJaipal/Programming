@@ -4,7 +4,6 @@ using namespace std;
 class Student {
 	int roll;
 	static int _count;
-
 public:
 	Student(int _roll) : roll(_roll) { _count++; }
 	~Student() { _count--; }
