@@ -3,7 +3,6 @@ using namespace std;
 
 class Complex {
 	int real, imag;
-
 public:
 	Complex(int r, int i) : real(r), imag(i) {}
 
