@@ -4,8 +4,7 @@ using namespace std;
 
 class Person {
 protected:
-	int age;
-	string name;
+	int age; string name;
 	void input() {
 		cout << "Name: "; cin >> name;
 		cout << "Age: "; cin >> age;
@@ -18,8 +17,7 @@ protected:
 
 class Student : virtual public Person {
 protected:
-	int roll;
-	int standard;
+	int roll, standard;
 	void input() {
 		cout << "Class: "; cin >> standard;
 		cout << "Roll No.: "; cin >> roll;
@@ -59,8 +57,7 @@ public:
 int main() {
 	Manager manager;
 	manager.input();
-	cout << "\nDetails: \n";
-	manager.display();
+	cout << "\nDetails: \n"; manager.display();
 	return 0;
 }
 /*
