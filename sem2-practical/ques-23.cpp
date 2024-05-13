@@ -32,13 +32,11 @@ int main() {
 		e[i].input();
 		cout << "\n";
 	}
-
 	cout << "\nEmployee Details:\n";
 	for (int i = 0; i < 3; i++) {
 		e[i].calculate();
 		cout << "\n";
 	}
-
 	return 0;
 }
 /*
