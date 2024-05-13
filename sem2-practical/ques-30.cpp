@@ -27,7 +27,8 @@ int binarySearch(T arr[], int s, T elem) {
 		T arr2[s - middleIndex];
 		for (int i = 0; i < s - middleIndex; i++) { arr2[i] = arr[i + middleIndex]; }
 
-		return middleIndex + binarySearch(arr2, s - middleIndex, elem);
+		int bin = binarySearch(arr2, s - middleIndex, elem);
+		return (bin == -1 ? -1 : (middleIndex + bin));
 	}
 }
 int main() {
