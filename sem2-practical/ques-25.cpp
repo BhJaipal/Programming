@@ -7,10 +7,8 @@ protected:
 	int age;
 	string name;
 	void input() {
-		cout << "Name: ";
-		cin >> name;
-		cout << "Age: ";
-		cin >> age;
+		cout << "Name: "; cin >> name;
+		cout << "Age: "; cin >> age;
 	}
 	void display() {
 		cout << "Name: " << name << endl;
@@ -23,10 +21,8 @@ protected:
 	int roll;
 	int standard;
 	void input() {
-		cout << "Class: ";
-		cin >> standard;
-		cout << "Roll No.: ";
-		cin >> roll;
+		cout << "Class: "; cin >> standard;
+		cout << "Roll No.: "; cin >> roll;
 	}
 	void display() {
 		cout << "Roll: " << roll << endl;
@@ -36,12 +32,10 @@ protected:
 
 class Employee : virtual public Person {
 protected:
-	int salary;
-	string designation;
+	int salary; string designation;
 	void input() {
 		Person::input();
-		cout << "Salary: ";
-		cin >> salary;
+		cout << "Salary: "; cin >> salary;
 	}
 	void display() {
 		Person::display();
@@ -50,18 +44,14 @@ protected:
 };
 class Manager : protected Employee, protected Student {
 	int bonus;
-
 public:
 	void input() {
-		Employee::input();
-		Student::input();
-		cout << "Enter bonus: ";
-		cin >> bonus;
+		Employee::input(); Student::input();
+		cout << "Enter bonus: "; cin >> bonus;
 		designation = "Manager";
 	}
 	void display() {
-		Employee::display();
-		Student::display();
+		Employee::display(); Student::display();
 		cout << "Total salary: " << salary + bonus << endl;
 	}
 };
