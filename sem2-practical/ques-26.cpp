@@ -6,8 +6,8 @@ protected:
 	Shape() = default;
 public:
 	friend Shape createShape();
-	virtual float area() { return 0; };
-	virtual ~Shape() { cout << "Shape Destructor\n"; };
+	virtual float area() { return 0; }
+	virtual ~Shape() { cout << "Shape Destructor\n"; }
 	virtual void findArea(int sides);
 };
 
