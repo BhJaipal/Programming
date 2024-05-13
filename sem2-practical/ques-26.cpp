@@ -34,8 +34,7 @@ void Shape::findArea(int sides) {
 		cout << "Rectangle\nEnter length and breadth: ";
 		int l, b; cin >> l >> b;
 		shape = new Rectangle(l, b);
-	}
-	else if (sides == 1) {
+	} else if (sides == 1) {
 		cout << "Circle\nEnter Radius: ";
 		int r; cin >> r;
 		shape = new Circle(r);
