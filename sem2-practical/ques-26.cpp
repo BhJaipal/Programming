@@ -31,17 +31,13 @@ public:
 void Shape::findArea(int sides) {
 	Shape *shape;
 	if (sides == 4) {
-		cout << "Rectangle\n";
-		cout << "Enter length and breadth: ";
-		int l, b;
-		cin >> l >> b;
+		cout << "Rectangle\nEnter length and breadth: ";
+		int l, b; cin >> l >> b;
 		shape = new Rectangle(l, b);
 	}
 	else if (sides == 1) {
-		cout << "Circle\n";
-		cout << "Enter Radius: ";
-		int r;
-		cin >> r;
+		cout << "Circle\nEnter Radius: ";
+		int r; cin >> r;
 		shape = new Circle(r);
 	}
 	if (sides != 4 && sides != 1) { cout << "Invalid Input\n"; }
