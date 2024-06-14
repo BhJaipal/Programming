@@ -6,7 +6,6 @@ class Student {
 protected:
 	string name, profession;
 	int age;
-
 public:
 	virtual void input() = 0;
 	virtual void display() = 0;
@@ -14,10 +13,8 @@ public:
 class Engineering : public Student {
 public:
 	void input() {
-		cout << "Enter name: ";
-		cin >> name;
-		cout << "Enter age: ";
-		cin >> age;
+		cout << "Enter name: "; cin >> name;
+		cout << "Enter age: "; cin >> age;
 		cout << "Enter profession(Mechanical, Civil, Electrical): ";
 		cin >> profession;
 	}
@@ -30,10 +27,8 @@ public:
 class Medical : public Student {
 public:
 	void input() {
-		cout << "Enter name: ";
-		cin >> name;
-		cout << "Enter age: ";
-		cin >> age;
+		cout << "Enter name: "; cin >> name;
+		cout << "Enter age: "; cin >> age;
 		cout << "Enter profession(Nurse, Doctor, Dentist): ";
 		cin >> profession;
 	}
@@ -47,10 +42,8 @@ public:
 class Science : public Student {
 public:
 	void input() {
-		cout << "Enter name: ";
-		cin >> name;
-		cout << "Enter age: ";
-		cin >> age;
+		cout << "Enter name: "; cin >> name;
+		cout << "Enter age: "; cin >> age;
 		cout << "Enter profession(Biologist, Chemist, Physician): ";
 		cin >> profession;
 	}
@@ -63,14 +56,11 @@ public:
 int main() {
 	Student *s[3];
 	s[0] = new Engineering;
-	s[0]->input();
-	cout << "\n";
+	s[0]->input(); cout << "\n";
 	s[1] = new Medical;
-	s[1]->input();
-	cout << "\n";
+	s[1]->input(); cout << "\n";
 	s[2] = new Science;
-	s[2]->input();
-	cout << "\n\n";
+	s[2]->input(); cout << "\n\n";
 	for (int i = 0; i < 3; i++) {
 		s[i]->display();
 		cout << "\n";

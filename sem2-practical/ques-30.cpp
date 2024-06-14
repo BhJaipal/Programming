@@ -18,16 +18,16 @@ int binarySearch(T arr[], int s, T elem) {
 
 	if (elem == arr[middleIndex]) { return middleIndex; }
 	else if (elem < arr[middleIndex]) {
-		int arr2[middleIndex];
+		T arr2[middleIndex];
 		for (int i = 0; i < middleIndex; i++) {
 			arr2[i] = arr[i];
 		}
 		return binarySearch(arr2, middleIndex, elem);
 	} else {
-		int arr2[s - middleIndex];
+		T arr2[s - middleIndex];
 		for (int i = 0; i < s - middleIndex; i++) { arr2[i] = arr[i + middleIndex]; }
-
-		return middleIndex + binarySearch(arr2, s - middleIndex, elem);
+		int bin = binarySearch(arr2, s - middleIndex, elem);
+		return (bin == -1 ? -1 : (middleIndex + bin));
 	}
 }
 int main() {

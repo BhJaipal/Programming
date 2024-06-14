@@ -3,7 +3,6 @@ using namespace std;
 
 class OpOverload {
 	int num;
-
 public:
 	OpOverload(int _num) : num(_num) {}
 	friend void operator-(OpOverload &);

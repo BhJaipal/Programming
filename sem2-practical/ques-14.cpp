@@ -5,12 +5,10 @@ using namespace std;
 class Copy {
 	string name;
 	int age;
-
 public:
-	Copy(string name, int age) : name(name), age(age) {}
+	Copy(string _name, int _age) : name(_name), age(_age) {}
 	void display() {
-		cout << "Name: " << name << endl;
-		cout << "Age: " << age << endl;
+		cout << "Name: " << name << "\nAge: " << age << endl;
 	}
 };
 int main() {

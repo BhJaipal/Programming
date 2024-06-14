@@ -17,12 +17,12 @@ int main() {
 	int arr[] = {4, 2, 11, 5, 9};
 	sort(arr, 5);
 	for (int i = 0; i < 5; i++) {
-		cout << arr[i] << "\t";
+		cout << arr[i] << "  ";
 	}
 	cout << "\n";
 	return 0;
 }
 /*
 Output:
-[2, 4, 5, 9, 11]
+2  4  5  9  11
 */

@@ -19,11 +19,8 @@ int main() {
 	int choice;
 	cin >> choice;
 	Shape *shape;
-	if (choice == 1) {
-		shape = new Circle();
-	} else {
-		shape = new Rectangle();
-	}
+	if (choice == 1) { shape = new Circle(); } 
+ else { shape = new Rectangle(); }
 	shape->draw();
 	delete shape;
 	return 0;

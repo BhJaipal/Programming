@@ -4,17 +4,15 @@ using namespace std;
 class Shape {
 protected:
 	Shape() = default;
-
 public:
 	friend Shape createShape();
-	virtual float area() { return 0; };
-	virtual ~Shape() { cout << "Shape Destructor\n"; };
+	virtual float area() { return 0; }
+	virtual ~Shape() { cout << "Shape Destructor\n"; }
 	virtual void findArea(int sides);
 };
 
 class Rectangle : public Shape {
 	float l, b;
-
 public:
 	Rectangle(float _l, float _b) : l(_l), b(_b) {}
 	float area() { return l * b; }
@@ -23,7 +21,6 @@ public:
 };
 class Circle : public Shape {
 	float r;
-
 public:
 	Circle(float _r) : r(_r) {}
 	float area() { return 3.14 * r * r; }
@@ -34,17 +31,12 @@ public:
 void Shape::findArea(int sides) {
 	Shape *shape;
 	if (sides == 4) {
-		cout << "Rectangle\n";
-		cout << "Enter length and breadth: ";
-		int l, b;
-		cin >> l >> b;
+		cout << "Rectangle\nEnter length and breadth: ";
+		int l, b; cin >> l >> b;
 		shape = new Rectangle(l, b);
-	}
-	else if (sides == 1) {
-		cout << "Circle\n";
-		cout << "Enter Radius: ";
-		int r;
-		cin >> r;
+	} else if (sides == 1) {
+		cout << "Circle\nEnter Radius: ";
+		int r; cin >> r;
 		shape = new Circle(r);
 	}
 	if (sides != 4 && sides != 1) { cout << "Invalid Input\n"; }

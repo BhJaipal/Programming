@@ -39,7 +39,6 @@ int main() {
     function_name();
 }
 ```
-````
 
 ### CMake Use
 

@@ -5,7 +5,6 @@ using namespace std;
 class Emp {
 	string name, designation;
 	int E_id;
-
 protected:
 	void input() {
 		cout << "Enter E_id: "; cin >> E_id;
@@ -16,7 +15,6 @@ protected:
 };
 class Employee : public Emp {
 	int basic, da, hra, pf;
-
 public:
 	void input() {
 		Emp::input();
@@ -34,13 +32,11 @@ int main() {
 		e[i].input();
 		cout << "\n";
 	}
-
 	cout << "\nEmployee Details:\n";
 	for (int i = 0; i < 3; i++) {
 		e[i].calculate();
 		cout << "\n";
 	}
-
 	return 0;
 }
 /*
