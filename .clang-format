@@ -1,6 +1,5 @@
 ---
 BasedOnStyle: LLVM
-UseTab: Never
 TabWidth: 4
 AlignAfterOpenBracket: Align
 AllowShortBlocksOnASingleLine: Always
