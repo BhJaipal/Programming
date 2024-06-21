@@ -12,13 +12,13 @@ int main() {
 	toStringPrintStack(s);
 	printf("\n");
 
-	linkedlist l = createLinkedlist(9);
-	add(&l, 5, l.len);
-	add(&l, 7, l.len);
-	printf("\nRemoved node: %d\n\n", removeNode(&l, 1));
+	doubleLinkedlist l = createDoubleLinkedlist(9);
+	addDoubleNode(&l, 5, l.len);
+	addDoubleNode(&l, 7, l.len);
+	// printf("\nRemoved node: %d\n\n", removeDoubleNode(&l, 1));
 
 	printf("Linked List: \n");
-	toStringLinkedlist(l);
+	toStringDoubleLinkedlist(l);
 	printf("\n");
 	return 0;
 }
