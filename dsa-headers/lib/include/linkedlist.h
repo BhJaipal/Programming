@@ -20,14 +20,14 @@ typedef struct _doubleLinkedlist {
 	int len;
 } doubleLinkedlist;
 
-int removeNode(linkedlist *, int);
+int removeNode(linkedlist *, unsigned int);
 linkedlist createLinkedlist(int);
-void add(linkedlist *, int, int);
+void add(linkedlist *, int, unsigned int);
 void toStringLinkedlist(linkedlist);
 
-int removeDoubleNode(doubleLinkedlist *, int);
+int removeDoubleNode(doubleLinkedlist *, unsigned int);
 doubleLinkedlist createDoubleLinkedlist(int);
-void addDoubleNode(doubleLinkedlist *, int, int);
+void addDoubleNode(doubleLinkedlist *, int, unsigned int);
 void toStringDoubleLinkedlist(doubleLinkedlist);
 
 #endif

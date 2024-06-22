@@ -13,7 +13,7 @@ linkedlist createLinkedlist(int first) {
 	l.len = 1;
 	return l;
 }
-void add(linkedlist *l, int data, int index) {
+void add(linkedlist *l, int data, unsigned int index) {
 	if (l->len <= index) {
 		l->arr = realloc(l->arr, sizeof(l->arr[0]) * (++l->len));
 		singlyNode node;
@@ -31,7 +31,7 @@ void add(linkedlist *l, int data, int index) {
 	}
 }
 
-int removeNode(linkedlist *l, int index) {
+int removeNode(linkedlist *l, unsigned int index) {
 	if (l->len > 0) {
 		if (l->len > index) {
 			if (l->len - 1 == index) {
@@ -82,7 +82,7 @@ void toStringLinkedlist(linkedlist l) {
 	}
 }
 // Double linked list
-void addDoubleNode(doubleLinkedlist *l, int data, int index) {
+void addDoubleNode(doubleLinkedlist *l, int data, unsigned int index) {
 	if (l->len <= index) {
 		l->arr = realloc(l->arr, sizeof(l->arr[0]) * (++l->len));
 		doubleNode node;
@@ -108,7 +108,7 @@ void addDoubleNode(doubleLinkedlist *l, int data, int index) {
 		   *l->arr[l->len - 1].prev);
 }
 
-int removeDoubleNode(doubleLinkedlist *l, int index) {
+int removeDoubleNode(doubleLinkedlist *l, unsigned int index) {
 	if (l->len > 0) {
 		if (l->len > index) {
 			if (l->len - 1 == index) {
