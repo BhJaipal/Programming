@@ -1,6 +1,7 @@
 #include "lib/include/hashmap.h"
-#include "lib/include/linkedlist.h"
-#include "lib/include/stack.h"
+#include "lib/include/hashset.h"
+// #include "lib/include/linkedlist.h"
+// #include "lib/include/stack.h"
 #include <stdio.h>
 
 int main() {
@@ -30,6 +31,13 @@ int main() {
 	pushPair(&h, 9, "Vikram");
 	removePair(&h, 5);
 	toStringHashmap(h);
+	printf("\n");
+
+	hashset set = createHashset();
+	pushHashset(&set, 7);
+	pushHashset(&set, 9);
+	pushHashset(&set, 7);
+	toStringHashset(set);
 	printf("\n");
 	return 0;
 }

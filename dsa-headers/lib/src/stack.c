@@ -20,7 +20,7 @@ int pop(stack *s) {
 		s->arr = realloc(s->arr, sizeof(int) * (s->len));
 		return last;
 	} else {
-		printf("STack is empty\n");
+		printf("Stack is empty\n");
 		return -1;
 	}
 }
