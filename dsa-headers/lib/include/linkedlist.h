@@ -1,21 +1,21 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
-typedef struct _singleNode {
+typedef struct {
 	int data;
 	int *next;
 } singlyNode;
-typedef struct _doubleNode {
+typedef struct {
 	int data;
 	int *prev;
 	int *next;
 } doubleNode;
 
-typedef struct _linkedlist {
+typedef struct {
 	singlyNode *arr;
 	int len;
 } linkedlist;
-typedef struct _doubleLinkedlist {
+typedef struct {
 	doubleNode *arr;
 	int len;
 } doubleLinkedlist;

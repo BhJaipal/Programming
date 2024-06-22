@@ -2,7 +2,7 @@
 #define STACK_H
 #include <malloc.h>
 
-typedef struct _stack {
+typedef struct {
 	int len;
 	int *arr;
 } stack;

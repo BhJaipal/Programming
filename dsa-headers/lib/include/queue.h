@@ -1,7 +1,7 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
-typedef struct _queue {
+typedef struct {
 	int len;
 	int *arr;
 } queue;

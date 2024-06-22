@@ -27,6 +27,8 @@ int main() {
 	// hashmap
 	hashmap h = createHashmap(7, "Jaipal");
 	pushPair(&h, 5, "Hema");
+	pushPair(&h, 9, "Vikram");
+	removePair(&h, 5);
 	toStringHashmap(h);
 	printf("\n");
 	return 0;
