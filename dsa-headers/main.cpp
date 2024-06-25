@@ -32,6 +32,9 @@ int main() {
 
 	MyDSA::SinglyLinkedList<int> ll(7);
 	ll.push(5);
+	ll.push(1, 1);
+	ll.pop(1);
 	ll.toString();
+	std::cout << "\n\n";
 	return 0;
 }
