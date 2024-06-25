@@ -30,11 +30,23 @@ int main() {
 	// q.toString();
 	// std::cout << "\n\n";
 
-	MyDSA::SinglyLinkedList<int> ll(7);
-	ll.push(5);
-	ll.push(1, 1);
-	ll.pop(1);
-	ll.toString();
+	// Singly linked list
+	// MyDSA::SinglyLinkedList<int> ll(7);
+	// ll.push(5);
+	// ll.push(1, 1);
+	// ll.pop(1);
+	// ll.toString();
+	// std::cout << "\n\n";
+
+	// Double linked list
+	MyDSA::DoubleLinkedList<int> l2(9);
+	l2.push(5);
+	l2.push(18, -2);
+	l2.push(7);
+	l2.toString();
+	std::cout << "\n";
+	l2.circular();
+	l2.toString();
 	std::cout << "\n\n";
 	return 0;
 }

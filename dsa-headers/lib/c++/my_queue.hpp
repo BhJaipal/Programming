@@ -5,7 +5,7 @@
 #include <iostream>
 
 /**
- * @tparam T type of elements in stack
+ * @tparam T type of elements in queue
  */
 namespace MyDSA {
 template <typename T> class Queue : MyDSA::Model<T> {
@@ -13,6 +13,9 @@ template <typename T> class Queue : MyDSA::Model<T> {
 	int len;
 
   public:
+	/**
+	 * @brief Construct a new Queue object
+	 */
 	Queue() {
 		arr = new T[0];
 		len = 0;
@@ -36,7 +39,7 @@ template <typename T> class Queue : MyDSA::Model<T> {
 	}
 	/**
 	 * @brief Removes first element of queue
-	 * @return T first element of queue
+	 * @return first element of queue
 	 */
 	T pop() {
 		if (isEmpty()) return 0;
