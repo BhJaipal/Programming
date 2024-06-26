@@ -55,11 +55,16 @@ int main() {
 	map.put(5, "Hema");
 	map.toString();
 	std::cout << '\n';
-	// map.putIfAbsent(5, "Vikram");
-	// map.put(9, "Vikram");
-	// map.put(10, "ok");
-	// map.replace(10, "Saurabh");
-	// map.toString();
+	map.putIfAbsent(5, "Vikram");
+	map.put(9, "Vikram");
+	map.put(10, "ok");
+	std::cout << map.remove(5) << "\n";
+	map.replace(10, "Saurabh");
+	map.toString();
+	std::cout << '\n';
+	map.forEach([](int k, std::string val, int i) {
+		std::cout << i + 1 << ". " << k << "=> " << val << '\n';
+	});
 	// std::cout << "\n\n";
 	return 0;
 }

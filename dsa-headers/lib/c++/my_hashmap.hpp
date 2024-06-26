@@ -10,12 +10,9 @@ namespace MyDSA {
  * @tparam _Key Key type
  * @tparam _Value Value type
  */
-template <typename _Key = int, typename _Value = int> class Pair {
-  public:
+template <typename _Key = int, typename _Value = std::string> struct Pair {
 	_Key key;
 	_Value value;
-	Pair() : value(0), key(0) {}
-	Pair(_Key k, _Value v) : key(k), value(v) {}
 };
 
 /**
@@ -23,15 +20,17 @@ template <typename _Key = int, typename _Value = int> class Pair {
  * @tparam _Key key type
  * @tparam _Value value type
  */
-template <typename _Key = int, typename _Value = int> class Hashmap {
+template <typename _Key = int, typename _Value = std::string> class Hashmap {
 	Pair<_Key, _Value> *arr;
 	int len;
 
   public:
 	Hashmap(_Key first_key, _Value first_val) {
-		arr = new Pair<_Key, _Value>[1] {
-			Pair<_Key, _Value>(first_key, first_val)
-		};
+		arr = new Pair<_Key, _Value>;
+		struct Pair<_Key, _Value> p;
+		p.key = first_key;
+		p.value = first_val;
+		arr[0] = p;
 		len = 1;
 	}
 	void put(_Key k, _Value v) {
@@ -41,10 +40,10 @@ template <typename _Key = int, typename _Value = int> class Hashmap {
 				return;
 			}
 		}
-		Pair<_Key, _Value> p(k, v);
-		std::cout << "not\n";
+		struct Pair<_Key, _Value> p;
+		p.key = k;
+		p.value = v;
 		arr = (Pair<_Key, _Value> *)std::realloc(arr, sizeof(arr[0]) * (++len));
-		std::cout << "yes\n";
 		arr[len - 1] = p;
 	}
 	void putIfAbsent(_Key k, _Value v) {
@@ -52,7 +51,9 @@ template <typename _Key = int, typename _Value = int> class Hashmap {
 			if (arr[i].key == k) { return; }
 		}
 		arr = (Pair<_Key, _Value> *)std::realloc(arr, sizeof(arr[0]) * (++len));
-		Pair<_Key, _Value> p(k, v);
+		struct Pair<_Key, _Value> p;
+		p.key = k;
+		p.value = v;
 		arr[len - 1] = p;
 	}
 	_Value get(_Key k) {
@@ -72,6 +73,18 @@ template <typename _Key = int, typename _Value = int> class Hashmap {
 			if (arr[i].key == k) {
 				arr[i].value = v;
 				return 1;
+			}
+		}
+		return 0;
+	}
+	_Value remove(_Key k) {
+		for (int i = 0; i < len; i++) {
+			if (arr[i].key == k) {
+				_Value val = arr[i].value;
+				for (int j = i; j < len - 1; j++) { arr[j] = arr[j + 1]; }
+				arr = (Pair<_Key, _Value> *)std::realloc(arr, sizeof(arr[0]) *
+																  (--len));
+				return val;
 			}
 		}
 		return 0;
@@ -99,7 +112,6 @@ template <typename _Key = int, typename _Value = int> class Hashmap {
 	void forEach(std::function<void(_Key, _Value, int)> callback) {
 		for (int i = 0; i < len; i++) { callback(arr[i].key, arr[i].value, i); }
 	}
-	~Hashmap() { delete[] arr; }
 };
 } // namespace MyDSA
 
