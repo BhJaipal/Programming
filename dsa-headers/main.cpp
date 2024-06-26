@@ -52,12 +52,14 @@ int main() {
 	// std::cout << "\n\n";
 
 	MyDSA::Hashmap<int, std::string> map(7, "Jaipal");
-	map.toString();
 	map.put(5, "Hema");
-	map.putIfAbsent(5, "Vikram");
-	map.put(9, "Vikram");
-	map.put(10, "ok");
-	map.replace(10, "Saurabh");
-	std::cout << "\n\n";
+	map.toString();
+	std::cout << '\n';
+	// map.putIfAbsent(5, "Vikram");
+	// map.put(9, "Vikram");
+	// map.put(10, "ok");
+	// map.replace(10, "Saurabh");
+	// map.toString();
+	// std::cout << "\n\n";
 	return 0;
 }
