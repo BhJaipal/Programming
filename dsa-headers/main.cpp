@@ -1,6 +1,8 @@
-#include "lib/c++/my_linkedlist.hpp"
-#include "lib/c++/my_queue.hpp"
-#include "lib/c++/my_stack.hpp"
+// #include "lib/c++/my_linkedlist.hpp"
+// #include "lib/c++/my_queue.hpp"
+// #include "lib/c++/my_stack.hpp"
+#include "lib/c++/my_hashmap.hpp"
+#include <string>
 
 int main() {
 	// Stack
@@ -39,14 +41,23 @@ int main() {
 	// std::cout << "\n\n";
 
 	// Double linked list
-	MyDSA::DoubleLinkedList<int> l2(9);
-	l2.push(5);
-	l2.push(18, -2);
-	l2.push(7);
-	l2.toString();
-	std::cout << "\n";
-	l2.circular();
-	l2.toString();
+	// MyDSA::DoubleLinkedList<int> l2(9);
+	// l2.push(5);
+	// l2.push(18, -2);
+	// l2.push(7);
+	// l2.toString();
+	// std::cout << "\n";
+	// l2.circular();
+	// l2.toString();
+	// std::cout << "\n\n";
+
+	MyDSA::Hashmap<int, std::string> map(7, "Jaipal");
+	map.toString();
+	map.put(5, "Hema");
+	map.putIfAbsent(5, "Vikram");
+	map.put(9, "Vikram");
+	map.put(10, "ok");
+	map.replace(10, "Saurabh");
 	std::cout << "\n\n";
 	return 0;
 }
