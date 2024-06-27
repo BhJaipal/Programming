@@ -68,6 +68,28 @@ template <typename _Key = int, typename _Value = std::string> class Hashmap {
 		}
 		return defaultVal;
 	}
+	bool containsKey(_Key k) {
+		for (int i = 0; i < len; i++) {
+			if (arr[i].key == k) return true;
+		}
+		return false;
+	}
+	_Key *keys() {
+		_Key kys[len];
+		for (int i = 0; i < len; i++) { kys[i] = arr[i].key; }
+		return kys;
+	}
+	_Value *values() {
+		_Value vals[len];
+		for (int i = 0; i < len; i++) { vals[i] = arr[i].value; }
+		return vals;
+	}
+	bool containsValue(_Value v) {
+		for (int i = 0; i < len; i++) {
+			if (arr[i].value == v) return true;
+		}
+		return false;
+	}
 	int replace(_Key k, _Value v) {
 		for (int i = 0; i < len; i++) {
 			if (arr[i].key == k) {
@@ -82,8 +104,8 @@ template <typename _Key = int, typename _Value = std::string> class Hashmap {
 			if (arr[i].key == k) {
 				_Value val = arr[i].value;
 				for (int j = i; j < len - 1; j++) { arr[j] = arr[j + 1]; }
-				arr = (Pair<_Key, _Value> *)std::realloc(arr, sizeof(arr[0]) *
-																  (--len));
+				arr = (Pair<_Key, _Value> *)std::realloc(
+					arr, sizeof(Pair<_Key, _Value>) * (--len));
 				return val;
 			}
 		}
@@ -111,6 +133,23 @@ template <typename _Key = int, typename _Value = std::string> class Hashmap {
 	}
 	void forEach(std::function<void(_Key, _Value, int)> callback) {
 		for (int i = 0; i < len; i++) { callback(arr[i].key, arr[i].value, i); }
+	}
+	void forEach(std::function<void(_Key, _Value)> callback) {
+		for (int i = 0; i < len; i++) { callback(arr[i].key, arr[i].value); }
+	}
+	template <typename T> T *map(std::function<T(_Key, _Value, int)> callback) {
+		T out[len];
+		for (int i = 0; i < len; i++) {
+			out[i] = callback(arr[i].key, arr[i].value, i);
+		}
+		return out;
+	}
+	T *map(std::function<T(_Key, _Value)> callback) {
+		T out[len];
+		for (int i = 0; i < len; i++) {
+			out[i] = callback(arr[i].key, arr[i].value);
+		}
+		return out;
 	}
 };
 } // namespace MyDSA
