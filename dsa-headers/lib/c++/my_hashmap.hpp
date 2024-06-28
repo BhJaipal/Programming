@@ -68,6 +68,7 @@ template <typename _Key = int, typename _Value = std::string> class Hashmap {
 		}
 		return defaultVal;
 	}
+	_Value operator[](_Key k) { return get(k); }
 	bool containsKey(_Key k) {
 		for (int i = 0; i < len; i++) {
 			if (arr[i].key == k) return true;
