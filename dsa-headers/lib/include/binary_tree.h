@@ -11,7 +11,9 @@ typedef struct _Node {
 typedef struct Tree {
 	Node root;
 	int leftDepth;
+	int leftNodeCount;
 	int rightDepth;
+	int rightNodeCount;
 	int len;
 } Tree;
 
@@ -19,5 +21,5 @@ enum whereNow { ROOT, LEFT, RIGHT };
 
 Tree createTree(int rootData);
 void addNode(int data, Tree *tree);
-void addNodeHelper(int data, Node *n);
+void addNodeHelper(int data, Node *n, Tree *t);
 #endif
