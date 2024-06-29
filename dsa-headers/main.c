@@ -1,6 +1,6 @@
 // #include "lib/include/hashmap.h"
-#include "lib/include/hashset.h"
-#include "lib/include/my_string.h"
+// #include "lib/include/hashset.h"
+// #include "lib/include/my_string.h"
 // #include "lib/include/linkedlist.h"
 // #include "lib/include/stack.h"
 #include <malloc.h>
@@ -43,8 +43,10 @@ int main() {
 	// toStringHashset(set);
 	// printf("\n");
 
-	string s = initString("Hema", sizeof("Hema"));
-	appendStr(&s, "Ok");
-	printf("%s\n", s.str);
+	// string
+	// string s = initString("Hema", sizeof("Hema"));
+	// appendStr(&s, "Ok");
+	// printf("%s\n", s.str);
+	printf("\n");
 	return 0;
 }
