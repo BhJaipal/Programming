@@ -128,6 +128,7 @@ template <typename T> class Array : Model<T> {
 		*this = rev;
 	}
 	void sort(bool _reverse = false) {
+		*this = mergeSort(*this);
 		if (_reverse) { reverse(); }
 	}
 	int count(T val) {
@@ -137,5 +138,28 @@ template <typename T> class Array : Model<T> {
 		}
 		return _count;
 	}
+	bool operator>(Array<T> arr2) { return length() > arr2.length(); }
+	bool operator<(Array<T> arr2) { return length() < arr2.length(); }
+	bool operator==(Array<T> arr2) { return length() == arr2.length(); }
+	bool operator!=(Array<T> arr2) { return length() != arr2.length(); }
 };
+template <typename T> Array<T> mergeSort(Array<T> arr) {
+	int mid = length() / 2;
+	if (length() < 2) return arr;
+	Array<T> left = slice(0, mid);
+	return merge(mergeSort(left), mergeSort(arr));
+}
+template <typename T> Array<T> merge(Array<T> left, Array<T> right) {
+	Array<T> out;
+	while (left.length() && right.length()) {
+		if (left[0] < right[0]) {
+			out.push(left.shift());
+		} else {
+			out.push(right.shift());
+		}
+	}
+	while (left.length()) { out.push(left.shift()); }
+	while (right.length()) { out.push(right.shift()); }
+	return out;
+}
 } // namespace MyDSA
