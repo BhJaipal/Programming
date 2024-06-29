@@ -1,23 +1,22 @@
 #pragma once
 #include "data_models.hpp"
 #include <exception>
-#include <functional>
 #include <iostream>
 
 namespace MyDSA {
-template <typename T> class Array : Model<T> {
+template <typename T> class Set : Model<T> {
 	int _len;
 	T *arr;
 
   public:
-	Array() : _len(0) { arr = new T[0]; }
-	Array(T *arr) {
+	Set() : _len(0) { arr = new T[0]; }
+	Set(T *arr) {
 		_len = sizeof(arr) / sizeof(T);
 		this->arr = new T[_len];
 		for (int i = 0; i < _len; i++) { this->arr[i] = arr[i]; }
 	}
 	int length() { return _len; }
-	T &operator[](int index) {
+	T operator[](int index) {
 		try {
 			if (index > length()) {
 				throw std::range_error("Index out of range\n");
@@ -29,6 +28,7 @@ template <typename T> class Array : Model<T> {
 		}
 	}
 	void push(T val) {
+		if (includes(val)) return;
 		arr = (T *)std::realloc(arr, sizeof(T) * (++_len));
 		arr[_len - 1] = val;
 	}
@@ -52,6 +52,7 @@ template <typename T> class Array : Model<T> {
 		}
 	}
 	void push(int index, T val) {
+		if (includes(val)) return;
 		arr = std::realloc(arr, sizeof(T) * (++len));
 		for (int i = index; i < _len - 1; i++) { arr[i + 1] = arr[i]; }
 		arr[index] = val;
@@ -76,7 +77,7 @@ template <typename T> class Array : Model<T> {
 		}
 	}
 	T shift() { return pop(0); }
-	void extends(Array<T> arr2) {
+	void extends(Set<T> arr2) {
 		for (int i = 0; i < arr2.length(); i++) { push(arr2[i]); }
 	}
 	bool includes(T val) { return indexOf(val) != -1; }
@@ -90,10 +91,10 @@ template <typename T> class Array : Model<T> {
 		int i = indexOf(val);
 		if (i != -1) { pop(i); }
 	}
-	Array<T> slice(int start) { return slice(start, _len, 1); }
-	Array<T> slice(int start, int end) { return slice(start, end, 1); }
-	Array<T> slice(int start, int end, int jump) {
-		Array<T> out;
+	Set<T> slice(int start) { return slice(start, _len, 1); }
+	Set<T> slice(int start, int end) { return slice(start, end, 1); }
+	Set<T> slice(int start, int end, int jump) {
+		Set<T> out;
 		for (int i = start; i < end; i += jump) { out.push(arr[i]); }
 		return out;
 	}
@@ -101,41 +102,28 @@ template <typename T> class Array : Model<T> {
 		for (int i = 0; i < _len; i++) { callback(arr[i], i); }
 	}
 	template <typename outType>
-	Array<outType> map(std::function<outType(T, int)> callback) {
-		Array<outType> outs;
+	Set<outType> map(std::function<outType(T, int)> callback) {
+		Set<outType> outs;
 		for (int i = 0; i < _len; i++) { outs.push(callback(arr[i], i)); }
 	}
 	template <typename outType>
-	Array<outType> map(std::function<outType(T)> callback) {
-		Array<outType> outs;
+	Set<outType> map(std::function<outType(T)> callback) {
+		Set<outType> outs;
 		for (int i = 0; i < _len; i++) { outs.push(callback(arr[i])); }
 	}
 	void forEach(std::function<void(T)> callback) {
 		for (int i = 0; i < _len; i++) { callback(arr[i]); }
 	}
 	void setValue(int index, T val) {
-		if (index >= _len - 1) {
+		if (includes(val)) {
+			std::cout << "Similar value already exists, cannot change it\n";
+		} else if (index >= _len - 1) {
 			arr[_len - 1] = val;
 		} else if (index < 0) {
 			set(_len + 1 + index, val);
 		} else {
 			arr[index] = val;
 		}
-	}
-	void reverse() {
-		Array<T> rev;
-		for (int i = 0; i < _len; i++) { rev.push(0, arr[i]); }
-		*this = rev;
-	}
-	void sort(bool _reverse = false) {
-		if (_reverse) { reverse(); }
-	}
-	int count(T val) {
-		int _count = 0;
-		for (int i = 0; i < _len; i++) {
-			if (arr[i] == val) _count++;
-		}
-		return _count;
 	}
 };
 } // namespace MyDSA
