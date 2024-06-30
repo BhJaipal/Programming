@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-char outArr[3000];
+char outArr[30720];
 __U32_TYPE pointer_pos = 0;
 __U32_TYPE loop_arr_pos = 0;
 __U32_TYPE loop_start_pos = 0;
@@ -58,7 +58,7 @@ int main(int args, char **options) {
 		printf("File not found");
 		return 1;
 	}
-	char content[10240] = "";
+	char content[1024 * 20] = "";
 	char lines[500];
 	for (int i = 0; i < 3000; i++) { outArr[i] = 0; }
 	while (fgets(lines, 500, fptr)) { strcat(content, lines); }
