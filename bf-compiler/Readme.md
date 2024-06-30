@@ -7,5 +7,5 @@
 ```bash
 cmake CMakeLists.txt
 make
-./bf.exe file.bf
+./bf.exe hello.bf
 ```
