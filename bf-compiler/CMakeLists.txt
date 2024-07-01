@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.28)
 project("BrainFuck compiler in C" LANGUAGES C)
-add_executable(bf.exe src/main.c)
+message("Building ${CMAKE_PROJECT_NAME} in ${CMAKE_SYSTEM_NAME} system")
+add_executable(bf.exe src/main.c src/repl.c)
 set(COMPILER "gcc")

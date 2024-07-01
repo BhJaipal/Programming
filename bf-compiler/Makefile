@@ -153,6 +153,30 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bf.exe.dir/build.make CMakeFiles/bf.exe.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/repl.o: src/repl.c.o
+.PHONY : src/repl.o
+
+# target to build an object file
+src/repl.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bf.exe.dir/build.make CMakeFiles/bf.exe.dir/src/repl.c.o
+.PHONY : src/repl.c.o
+
+src/repl.i: src/repl.c.i
+.PHONY : src/repl.i
+
+# target to preprocess a source file
+src/repl.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bf.exe.dir/build.make CMakeFiles/bf.exe.dir/src/repl.c.i
+.PHONY : src/repl.c.i
+
+src/repl.s: src/repl.c.s
+.PHONY : src/repl.s
+
+# target to generate assembly for a file
+src/repl.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bf.exe.dir/build.make CMakeFiles/bf.exe.dir/src/repl.c.s
+.PHONY : src/repl.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/repl.o"
+	@echo "... src/repl.i"
+	@echo "... src/repl.s"
 .PHONY : help
 
 

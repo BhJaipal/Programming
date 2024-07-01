@@ -1,3 +1,4 @@
+#include "repl.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -55,8 +56,8 @@ int main(int args, char **options) {
 	FILE *fptr;
 	fptr = fopen(options[1], "r");
 	if (fptr == 0) {
-		printf("File not found");
-		return 1;
+		bfRepl();
+		return 0;
 	}
 	char content[1024 * 20] = "";
 	char lines[500];
