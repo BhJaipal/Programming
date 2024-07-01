@@ -129,6 +129,30 @@ bf.exe/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bf.exe.dir/build.make CMakeFiles/bf.exe.dir/build
 .PHONY : bf.exe/fast
 
+src/interpreter.o: src/interpreter.c.o
+.PHONY : src/interpreter.o
+
+# target to build an object file
+src/interpreter.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bf.exe.dir/build.make CMakeFiles/bf.exe.dir/src/interpreter.c.o
+.PHONY : src/interpreter.c.o
+
+src/interpreter.i: src/interpreter.c.i
+.PHONY : src/interpreter.i
+
+# target to preprocess a source file
+src/interpreter.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bf.exe.dir/build.make CMakeFiles/bf.exe.dir/src/interpreter.c.i
+.PHONY : src/interpreter.c.i
+
+src/interpreter.s: src/interpreter.c.s
+.PHONY : src/interpreter.s
+
+# target to generate assembly for a file
+src/interpreter.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bf.exe.dir/build.make CMakeFiles/bf.exe.dir/src/interpreter.c.s
+.PHONY : src/interpreter.c.s
+
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bf.exe"
+	@echo "... src/interpreter.o"
+	@echo "... src/interpreter.i"
+	@echo "... src/interpreter.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
