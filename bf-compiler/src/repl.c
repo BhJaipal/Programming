@@ -6,6 +6,7 @@ char REPL_outArr[30720];
 __U32_TYPE REPL_pointer_pos = 0;
 __U32_TYPE REPL_loop_start_pos = 0;
 __U32_TYPE REPL_loop_end_pos = 0;
+int REPL_printing = 0;
 int REPL_isLoop = 0;
 
 void bfReplInterpret(char c) {
@@ -20,6 +21,7 @@ void bfReplInterpret(char c) {
 	}
 	case 46: {
 		printf("%c", REPL_outArr[REPL_pointer_pos]);
+		REPL_printing = 1;
 		break;
 	}
 	case 44: {
@@ -50,11 +52,11 @@ void bfReplInterpret(char c) {
 	}
 }
 void bfRepl() {
+	char loopContent[10000];
+	int loopContentLen = 0;
 	while (1) {
 		printf(">> ");
 		char lines[100];
-		char loopContent[10000];
-		int loopContentLen = 0;
 		scanf("%s", lines);
 		if (!strcmp(lines, "exit")) {
 			printf("Quitting process\n");
@@ -72,8 +74,8 @@ void bfRepl() {
 				loopContentLen++;
 			}
 			if (REPL_isLoop && REPL_loop_end_pos) {
-				int i = 0;
 				while (REPL_outArr[REPL_loop_start_pos] != 0) {
+					int i = 0;
 					while (i < loopContentLen) {
 						bfReplInterpret(loopContent[i]);
 						i++;
@@ -85,6 +87,10 @@ void bfRepl() {
 				loopContentLen = 0;
 				strcpy(loopContent, "");
 			}
+		}
+		if (REPL_printing) {
+			printf("\n");
+			REPL_printing = 0;
 		}
 	}
 }
