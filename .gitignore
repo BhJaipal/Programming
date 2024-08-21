@@ -6,3 +6,4 @@ debug/
 out/
 CMakeFiles/
 .cmake/
+bin/
