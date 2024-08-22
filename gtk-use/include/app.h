@@ -1,33 +1,35 @@
 #include <gtk/gtk.h>
 
-struct My_GAppAndStatus {
+struct myGAppAndStatus {
 	GtkApplication *app;
 	int status;
 };
-struct My_GAppOptions {
+struct myGAppOptions {
 	GApplicationFlags GAppFlags;
 	int argc;
 	char **argv;
 };
 
-struct My_GAppAndStatus
-CreateApp(char *appName, struct My_GAppOptions gAppOptions,
+struct myGAppAndStatus
+CreateApp(char *appName, struct myGAppOptions gAppOptions,
 		  void activateFn(GtkApplication *app, gpointer user_data));
 
-GtkWidget *My_HorizontalAlign(GtkWidget *widget, GtkAlign alignment);
-GtkWidget *My_VerticalAlign(GtkWidget *widget, GtkAlign alignment);
+GtkWidget *myHorizontalAlign(GtkWidget *widget, GtkAlign alignment);
+GtkWidget *myVerticalAlign(GtkWidget *widget, GtkAlign alignment);
 
-GtkWidget *My_AddEventListener(GtkWidget *widget_instance, char *event_name,
-							   GCallback CallbackFn, gpointer data);
+GtkWidget *myAddEventListener(GtkWidget *widget_instance, char *event_name,
+							  GCallback CallbackFn, gpointer data);
 
-GtkWidget *My_SetWindowChild(GtkWidget *window, GtkWidget *child);
+GtkWidget *mySetWindowChild(GtkWidget *window, GtkWidget *child);
 
-GtkWidget *My_PresentWindow(GtkWidget *window);
+GtkWidget *myPresentWindow(GtkWidget *window);
 
-GtkWidget *My_AddNewButtonLabel(const char *label);
+GtkWidget *myAddNewButtonLabel(const char *label);
 
-GtkWidget *My_ApplicationNewWindow(GtkApplication *app);
+GtkWidget *myApplicationNewWindow(GtkApplication *app);
 
-GtkWidget *My_SetWindowTitle(GtkWidget *window, const char *title);
+GtkWidget *mySetWindowTitle(GtkWidget *window, const char *title);
 
-GtkWidget *My_WindowSetSize(GtkWidget *window, int width, int height);
+GtkWidget *myWindowSetSize(GtkWidget *window, int width, int height);
+
+GObject *myGetBuilderObject(GtkBuilder *builder, const char *name);

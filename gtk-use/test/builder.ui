@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-	<object id="window" class="GtkWindow">
+	<object id="gtk-window" class="GtkWindow">
 		<property name="title">Hello World</property>
 		<child>
 			<object id="box" class="GtkBox">
@@ -8,6 +8,7 @@
 					<object id="grid" class="GtkGrid">
 						<child>
 							<object id="add" class="GtkButton">
+								<property name="name">add</property>
 								<property name="label">Add Label</property>
 								<layout>
 									<property name="column-span">2</property>
@@ -18,6 +19,7 @@
 						</child>
 						<child>
 							<object id="remove" class="GtkButton">
+								<property name="name">remove</property>
 								<property name="label">Remove Label</property>
 								<layout>
 									<property name="column-span">2</property>
