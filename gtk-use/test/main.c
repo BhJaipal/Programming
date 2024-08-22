@@ -76,8 +76,6 @@ static void activate(GtkApplication *app, gpointer user_data) {
 	GtkWidget *grid = GTK_WIDGET(myGetBuilderObject(builder, "grid"));
 
 	GtkWidget *navbar = GTK_WIDGET(myGetBuilderObject(builder, "navbar"));
-	myHorizontalAlign(myVerticalAlign(labelGrid, GTK_ALIGN_START),
-					  GTK_ALIGN_START);
 
 	gtk_orientable_set_orientation(GTK_ORIENTABLE(box),
 								   GTK_ORIENTATION_VERTICAL);
