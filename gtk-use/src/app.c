@@ -8,7 +8,8 @@ CreateApp(char *appName, struct myGAppOptions gAppOptions,
 
 	gtkApp = gtk_application_new(appName, gAppOptions.GAppFlags);
 	g_signal_connect(gtkApp, "activate", G_CALLBACK(activateFn), NULL);
-	status = g_application_run(gtkApp, gAppOptions.argc, gAppOptions.argv);
+	status = g_application_run(G_APPLICATION(gtkApp), gAppOptions.argc,
+							   gAppOptions.argv);
 	g_object_unref(gtkApp);
 	struct myGAppAndStatus out = {gtkApp, status};
 	return out;

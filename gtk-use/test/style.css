@@ -1,4 +1,59 @@
 #add {
-	color: lightgreen;
+	color: green;
 	padding: 10px;
+}
+#add:hover {
+	font-weight: bold;
+}
+#remove {
+	color: green;
+	padding: 10px;
+}
+#remove:hover {
+	font-weight: bold;
+}
+#button-grid {
+	padding-top: 50px;
+}
+#label-grid {
+	margin-top: 50px;
+}
+#label {
+	color: lightseagreen;
+	font-weight: bold;
+	font-size: 12px;
+	border-radius: 8px;
+	padding: 10px;
+	background: rgb(202, 228, 250);
+	border: 2px solid rgb(187, 223, 252);
+}
+#no-label {
+	background-color: rgb(252, 190, 190);
+	color: red;
+	font-weight: bold;
+	font-size: 12px;
+	border-radius: 8px;
+	padding: 10px;
+}
+
+#menu-label {
+	margin-left: 20px;
+	font-size: 30px;
+	font-weight: bold;
+}
+#navbar {
+	background-color: rgb(231, 230, 230);
+}
+#menu-bar {
+	margin: 10px;
+	color: white;
+	background: rgb(111, 211, 245);
+	font-weight: bold;
+	font-size: 35px;
+}
+#menu-bar:hover {
+	background: rgb(59, 200, 247);
+}
+#box {
+	margin-top: 30px;
 }
