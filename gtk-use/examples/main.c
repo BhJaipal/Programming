@@ -3,12 +3,29 @@
 #include <gtk/gtk.h>
 
 GtkWidget *labelGrid;
+GtkWidget *navbar;
+GtkWidget *navMenu;
 GtkWidget *nothingLabel = 0;
 int isNothing = 1;
 struct _labelList {
 	GtkWidget *labels[10];
 	int len;
 } labelList;
+
+static void toggleNav() {
+	const char **classes = (const char **)gtk_widget_get_css_classes(navbar);
+
+	if (!strcmp(classes[0], "vertical")) {
+		gtk_widget_remove_css_class(navMenu, "nav-menu-show");
+		gtk_widget_add_css_class(navMenu, "nav-menu-hidden");
+		classes[0] = "horizontal";
+	} else {
+		gtk_widget_remove_css_class(navMenu, "nav-menu-hidden");
+		gtk_widget_add_css_class(navMenu, "nav-menu-show");
+		classes[0] = "vertical";
+	}
+	gtk_widget_set_css_classes(navbar, classes);
+}
 
 void nothingHappened(GtkWidget *data);
 
@@ -67,15 +84,15 @@ static void activate(GtkApplication *app, gpointer user_data) {
 	labelList.len = 0;
 
 	GtkBuilder *builder = gtk_builder_new();
-	gtk_builder_add_from_file(builder, "test/builder.ui", NULL);
+	gtk_builder_add_from_file(builder, "examples/builder.ui", NULL);
 	GtkWidget *appBody = GTK_WIDGET(myGetBuilderObject(builder, "app"));
 	GtkWidget *box = GTK_WIDGET(myGetBuilderObject(builder, "box"));
 	GtkWidget *window = GTK_WIDGET(myGetBuilderObject(builder, "gtk-window"));
 	GObject *button = myGetBuilderObject(builder, "add");
 	GObject *rmLabel = myGetBuilderObject(builder, "remove");
 	GtkWidget *grid = GTK_WIDGET(myGetBuilderObject(builder, "grid"));
-
-	GtkWidget *navbar = GTK_WIDGET(myGetBuilderObject(builder, "navbar"));
+	navbar = GTK_WIDGET(myGetBuilderObject(builder, "navbar"));
+	GtkWidget *menuBar = GTK_WIDGET(myGetBuilderObject(builder, "menu-bar"));
 
 	gtk_orientable_set_orientation(GTK_ORIENTABLE(box),
 								   GTK_ORIENTATION_VERTICAL);
@@ -102,7 +119,7 @@ static void activate(GtkApplication *app, gpointer user_data) {
 	myVerticalAlign(myHorizontalAlign(grid, GTK_ALIGN_CENTER), GTK_ALIGN_START);
 
 	GtkCssProvider *cssProvider = gtk_css_provider_new();
-	gtk_css_provider_load_from_path(cssProvider, "test/style.css");
+	gtk_css_provider_load_from_path(cssProvider, "examples/style.css");
 	gtk_style_context_add_provider_for_display(
 		gdk_display_get_default(), GTK_STYLE_PROVIDER(cssProvider),
 		GTK_STYLE_PROVIDER_PRIORITY_USER);
@@ -111,7 +128,27 @@ static void activate(GtkApplication *app, gpointer user_data) {
 	gtk_grid_set_row_spacing(GTK_GRID(labelGrid), 5);
 	gtk_grid_set_column_spacing(GTK_GRID(labelGrid), 5);
 
+	myAddEventListener(menuBar, "clicked", toggleNav, NULL);
+
+	navMenu = gtk_grid_new();
+	gtk_widget_set_name(navMenu, "nav-menu");
+	const char *menus[] = {"File", "Edit", "Save"};
+	for (int i = 0; i < 3; i++) {
+		GtkWidget *label = gtk_button_new();
+		gtk_button_set_label(GTK_BUTTON(label), menus[i]);
+		gtk_widget_set_name(label, "menu-opt");
+		gtk_grid_attach(GTK_GRID(navMenu), label, 0, i, 1, 1);
+	}
+	char **classes = gtk_widget_get_css_classes(navMenu);
+	for (int i = 0; i < sizeof(classes) / sizeof(classes[0]); i++) {
+		printf("%s\n", classes[i]);
+	}
+
+	gtk_grid_attach(GTK_GRID(navbar), navMenu, 0, 1, 3, 1);
+
 	gtk_widget_show(window);
+	gtk_widget_set_size_request(
+		GTK_WIDGET(myGetBuilderObject(builder, "nav-show")), 1200, 70);
 	g_object_unref(builder);
 
 	// Without builder

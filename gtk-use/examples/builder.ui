@@ -9,25 +9,45 @@
 					<object id="navbar" class="GtkGrid">
 						<property name="name">navbar</property>
 						<child>
-							<object id="menu-bar" class="GtkButton">
-								<property name="name">menu-bar</property>
-								<property name="label">≡</property>
+							<object id="nav-show" class="GtkGrid">
+								<property name="name">nav-show</property>
 								<layout>
-									<property name="column-span">1</property>
+									<property name="column-span">5</property>
 									<property name="column">0</property>
 									<property name="row">0</property>
 								</layout>
-							</object>
-						</child>
-						<child>
-							<object id="menu-label" class="GtkLabel">
-								<property name="name">menu-label</property>
-								<property name="label">Gtk App</property>
-								<layout>
-									<property name="column-span">2</property>
-									<property name="column">1</property>
-									<property name="row">0</property>
-								</layout>
+								<child>
+									<object id="menu-bar" class="GtkButton">
+										<property name="name"
+											>menu-bar</property
+										>
+										<property name="label">≡</property>
+										<layout>
+											<property name="column-span"
+												>1</property
+											>
+											<property name="column">0</property>
+											<property name="row">0</property>
+										</layout>
+									</object>
+								</child>
+								<child>
+									<object id="menu-label" class="GtkLabel">
+										<property name="name"
+											>menu-label</property
+										>
+										<property name="label"
+											>Gtk App</property
+										>
+										<layout>
+											<property name="column-span"
+												>2</property
+											>
+											<property name="column">1</property>
+											<property name="row">0</property>
+										</layout>
+									</object>
+								</child>
 							</object>
 						</child>
 					</object>
@@ -41,9 +61,13 @@
 								<child>
 									<object id="add" class="GtkButton">
 										<property name="name">add</property>
-										<property name="label">Add Label</property>
+										<property name="label"
+											>Add Label</property
+										>
 										<layout>
-											<property name="column-span">2</property>
+											<property name="column-span"
+												>2</property
+											>
 											<property name="column">0</property>
 											<property name="row">0</property>
 										</layout>
@@ -52,9 +76,13 @@
 								<child>
 									<object id="remove" class="GtkButton">
 										<property name="name">remove</property>
-										<property name="label">Remove Label</property>
+										<property name="label"
+											>Remove Label</property
+										>
 										<layout>
-											<property name="column-span">2</property>
+											<property name="column-span"
+												>2</property
+											>
 											<property name="column">2</property>
 											<property name="row">0</property>
 										</layout>
