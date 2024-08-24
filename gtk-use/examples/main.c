@@ -88,11 +88,12 @@ static void activate(GtkApplication *app, gpointer user_data) {
 	GtkWidget *appBody = GTK_WIDGET(myGetBuilderObject(builder, "app"));
 	GtkWidget *box = GTK_WIDGET(myGetBuilderObject(builder, "box"));
 	GtkWidget *window = GTK_WIDGET(myGetBuilderObject(builder, "gtk-window"));
-	GObject *button = myGetBuilderObject(builder, "add");
+	GObject *addButton = myGetBuilderObject(builder, "add");
 	GObject *rmLabel = myGetBuilderObject(builder, "remove");
 	GtkWidget *grid = GTK_WIDGET(myGetBuilderObject(builder, "grid"));
 	navbar = GTK_WIDGET(myGetBuilderObject(builder, "navbar"));
 	GtkWidget *menuBar = GTK_WIDGET(myGetBuilderObject(builder, "menu-bar"));
+	GtkWidget *boxBody = GTK_WIDGET(myGetBuilderObject(builder, "box-body"));
 
 	gtk_orientable_set_orientation(GTK_ORIENTABLE(box),
 								   GTK_ORIENTATION_VERTICAL);
@@ -100,8 +101,12 @@ static void activate(GtkApplication *app, gpointer user_data) {
 								   GTK_ORIENTATION_VERTICAL);
 	gtk_orientable_set_orientation(GTK_ORIENTABLE(appBody),
 								   GTK_ORIENTATION_VERTICAL);
-	GtkWidget *buttonWidget = GTK_WIDGET(button);
+	gtk_orientable_set_orientation(GTK_ORIENTABLE(boxBody),
+								   GTK_ORIENTATION_HORIZONTAL);
+	GtkWidget *buttonWidget = GTK_WIDGET(addButton);
 	GtkWidget *rmLabelWidget = GTK_WIDGET(rmLabel);
+	gtk_widget_set_size_request(buttonWidget, 100, 50);
+	gtk_widget_set_size_request(rmLabelWidget, 125, 50);
 
 	// gtk_widget_set_visible(GTK_WINDOW(window), TRUE);
 	// gtk_window_fullscreen(GTK_WINDOW(window));
@@ -114,6 +119,7 @@ static void activate(GtkApplication *app, gpointer user_data) {
 	gtk_widget_set_name(labelGrid, "label-grid");
 	myHorizontalAlign(myVerticalAlign(labelGrid, GTK_ALIGN_CENTER),
 					  GTK_ALIGN_CENTER);
+	myHorizontalAlign(myVerticalAlign(box, GTK_ALIGN_CENTER), GTK_ALIGN_CENTER);
 	gtk_box_append(GTK_BOX(GTK_WIDGET(box)), labelGrid);
 
 	myVerticalAlign(myHorizontalAlign(grid, GTK_ALIGN_CENTER), GTK_ALIGN_START);
@@ -137,18 +143,22 @@ static void activate(GtkApplication *app, gpointer user_data) {
 		GtkWidget *label = gtk_button_new();
 		gtk_button_set_label(GTK_BUTTON(label), menus[i]);
 		gtk_widget_set_name(label, "menu-opt");
+		gtk_widget_set_size_request(GTK_WIDGET(label), 100, 20);
 		gtk_grid_attach(GTK_GRID(navMenu), label, 0, i, 1, 1);
 	}
+	gtk_widget_set_size_request(GTK_WIDGET(box), 1100, 600);
+	gtk_widget_set_size_request(GTK_WIDGET(navMenu), 100, 600);
+	gtk_widget_add_css_class(navMenu, "nav-menu-show");
+	gtk_widget_set_size_request(
+		GTK_WIDGET(myGetBuilderObject(builder, "nav-show")), 1200, 70);
 	char **classes = gtk_widget_get_css_classes(navMenu);
 	for (int i = 0; i < sizeof(classes) / sizeof(classes[0]); i++) {
 		printf("%s\n", classes[i]);
 	}
 
-	gtk_grid_attach(GTK_GRID(navbar), navMenu, 0, 1, 3, 1);
+	gtk_box_prepend(GTK_BOX(boxBody), navMenu);
 
 	gtk_widget_show(window);
-	gtk_widget_set_size_request(
-		GTK_WIDGET(myGetBuilderObject(builder, "nav-show")), 1200, 70);
 	g_object_unref(builder);
 
 	// Without builder
