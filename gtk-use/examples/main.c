@@ -1,4 +1,4 @@
-#include "../include/app.h"
+#include "../include/aloo.h"
 #include <gdk/gdk.h>
 #include <gtk/gtk.h>
 
