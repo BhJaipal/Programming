@@ -1,35 +1,43 @@
 #include <gtk/gtk.h>
 
-struct myGAppAndStatus {
+struct alluAppAndStatus {
 	GtkApplication *app;
 	int status;
 };
-struct myGAppOptions {
+struct alluAppOptions {
 	GApplicationFlags GAppFlags;
 	int argc;
 	char **argv;
 };
 
-struct myGAppAndStatus
-CreateApp(char *appName, struct myGAppOptions gAppOptions,
+/**
+ * @brief Create a App object
+ * @param app_id App Id are like com.google.Chrome, dev.zed.Zed
+ * @param gAppOptions It takes GApplicationFlags, argc and argv
+ * @param activateFn static void function which will be called when app is
+ * started
+ * @return It returns GtkApplication and status
+ */
+struct alluAppAndStatus
+CreateApp(char *app_id, struct alluAppOptions gAppOptions,
 		  void activateFn(GtkApplication *app, gpointer user_data));
 
-GtkWidget *myHorizontalAlign(GtkWidget *widget, GtkAlign alignment);
-GtkWidget *myVerticalAlign(GtkWidget *widget, GtkAlign alignment);
+GtkWidget *alluHorizontalAlign(GtkWidget *widget, GtkAlign alignment);
+GtkWidget *alluVerticalAlign(GtkWidget *widget, GtkAlign alignment);
 
-GtkWidget *myAddEventListener(GtkWidget *widget_instance, char *event_name,
-							  GCallback CallbackFn, gpointer data);
+GtkWidget *alluAddEventListener(GtkWidget *widget_instance, char *event_name,
+								GCallback CallbackFn, gpointer data);
 
-GtkWidget *mySetWindowChild(GtkWidget *window, GtkWidget *child);
+GtkWidget *alluSetWindowChild(GtkWidget *window, GtkWidget *child);
 
-GtkWidget *myPresentWindow(GtkWidget *window);
+GtkWidget *alluPresentWindow(GtkWidget *window);
 
-GtkWidget *myAddNewButtonLabel(const char *label);
+GtkWidget *alluAddNewButtonLabel(const char *label);
 
-GtkWidget *myApplicationNewWindow(GtkApplication *app);
+GtkWidget *alluApplicationNewWindow(GtkApplication *app);
 
-GtkWidget *mySetWindowTitle(GtkWidget *window, const char *title);
+GtkWidget *alluSetWindowTitle(GtkWidget *window, const char *title);
 
-GtkWidget *myWindowSetSize(GtkWidget *window, int width, int height);
+GtkWidget *alluWindowSetSize(GtkWidget *window, int width, int height);
 
-GObject *myGetBuilderObject(GtkBuilder *builder, const char *name);
+GObject *alluGetBuilderObject(GtkBuilder *builder, const char *name);
