@@ -1,3 +1,5 @@
+#ifndef ALOO_TYPES_H
+#define ALOO_TYPES_H
 #include <gtk/gtk.h>
 
 typedef enum {
@@ -37,3 +39,4 @@ typedef struct {
 } alooWidget;
 
 #define ALOO_WIDGET_TO_GTK(x) x->child
+#endif // ALOO_TYPES_H

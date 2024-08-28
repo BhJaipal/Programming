@@ -1,3 +1,4 @@
 #include "app.h"
 #include "box.h"
-#include "types.h"
+#include "style.h"
+#include "widget.h"

@@ -3,7 +3,7 @@
 #include <gtk/gtk.h>
 
 GtkWidget *labelGrid;
-GtkWidget *navbar;
+alooWidget *navbar;
 GtkWidget *navMenu;
 GtkWidget *nothingLabel = 0;
 int isNothing = 1;
@@ -13,7 +13,8 @@ struct _labelList {
 } labelList;
 
 static void toggleNav() {
-	const char **classes = (const char **)gtk_widget_get_css_classes(navbar);
+	const char **classes =
+		(const char **)gtk_widget_get_css_classes(navbar->child);
 
 	if (!strcmp(classes[0], "vertical")) {
 		gtk_widget_remove_css_class(navMenu, "nav-menu-show");
@@ -24,7 +25,7 @@ static void toggleNav() {
 		gtk_widget_add_css_class(navMenu, "nav-menu-show");
 		classes[0] = "vertical";
 	}
-	gtk_widget_set_css_classes(navbar, classes);
+	gtk_widget_set_css_classes(navbar->child, classes);
 }
 
 void nothingHappened(GtkWidget *data);
@@ -85,45 +86,42 @@ static void activate(GtkApplication *app, gpointer user_data) {
 
 	GtkBuilder *builder = gtk_builder_new();
 	gtk_builder_add_from_file(builder, "examples/builder.ui", NULL);
-	GtkWidget *appBody = GTK_WIDGET(alluGetBuilderObject(builder, "app"));
-	GtkWidget *box = GTK_WIDGET(alluGetBuilderObject(builder, "box"));
-	GtkWidget *window = GTK_WIDGET(alluGetBuilderObject(builder, "gtk-window"));
-	GObject *addButton = alluGetBuilderObject(builder, "add");
-	GObject *rmLabel = alluGetBuilderObject(builder, "remove");
-	GtkWidget *grid = GTK_WIDGET(alluGetBuilderObject(builder, "grid"));
-	navbar = GTK_WIDGET(alluGetBuilderObject(builder, "navbar"));
-	GtkWidget *menuBar = GTK_WIDGET(alluGetBuilderObject(builder, "menu-bar"));
-	GtkWidget *boxBody = GTK_WIDGET(alluGetBuilderObject(builder, "box-body"));
+	alooWidget *appBody = alooWidgetFromBuilder(builder, "app");
+	alooWidget *box = alooWidgetFromBuilder(builder, "box");
+	alooWidget *window = alooWidgetFromBuilder(builder, "gtk-window");
+	GObject *addButton = alooGetBuilderObject(builder, "add");
+	GObject *rmLabel = alooGetBuilderObject(builder, "remove");
+	GtkWidget *grid = OBJECT_TO_GTK_WIDGET(builder, "grid");
+	navbar = alooWidgetFromBuilder(builder, "navbar");
+	alooWidget *menuBar = alooWidgetFromBuilder(builder, "menu-bar");
+	alooWidget *boxBody = alooWidgetFromBuilder(builder, "box-body");
 
-	gtk_orientable_set_orientation(GTK_ORIENTABLE(box),
-								   GTK_ORIENTATION_VERTICAL);
-	gtk_orientable_set_orientation(GTK_ORIENTABLE(navbar),
-								   GTK_ORIENTATION_VERTICAL);
-	gtk_orientable_set_orientation(GTK_ORIENTABLE(appBody),
-								   GTK_ORIENTATION_VERTICAL);
-	gtk_orientable_set_orientation(GTK_ORIENTABLE(boxBody),
-								   GTK_ORIENTATION_HORIZONTAL);
-	GtkWidget *buttonWidget = GTK_WIDGET(addButton);
-	GtkWidget *rmLabelWidget = GTK_WIDGET(rmLabel);
-	gtk_widget_set_size_request(buttonWidget, 100, 50);
-	gtk_widget_set_size_request(rmLabelWidget, 125, 50);
+	alooSetOrientation(box, GTK_ORIENTATION_VERTICAL);
+	alooSetOrientation(navbar, GTK_ORIENTATION_VERTICAL);
+	alooSetOrientation(appBody, GTK_ORIENTATION_VERTICAL);
+	alooSetOrientation(boxBody, GTK_ORIENTATION_HORIZONTAL);
+	alooWidget *buttonWidget = OBJECT_TO_ALOO(addButton);
+	alooWidget *rmLabelWidget = OBJECT_TO_ALOO(rmLabel);
+	setSize(buttonWidget, 100, 50);
+	setSize(rmLabelWidget, 125, 50);
 
 	// gtk_widget_set_visible(GTK_WINDOW(window), TRUE);
 	// gtk_window_fullscreen(GTK_WINDOW(window));
-	gtk_window_set_default_size(GTK_WINDOW(window), 1200, 600);
-	gtk_window_set_application(GTK_WINDOW(window), app);
-	alluAddEventListener(buttonWidget, "clicked", print_hello, NULL);
-	alluAddEventListener(rmLabelWidget, "clicked", removeLabel, NULL);
+	gtk_window_set_default_size(GTK_WINDOW(window->child), 1200, 600);
+	gtk_window_set_application(GTK_WINDOW(window->child), app);
+	alooAddEventListener(buttonWidget, "clicked", print_hello, NULL);
+	alooAddEventListener(rmLabelWidget, "clicked", removeLabel, NULL);
 
 	labelGrid = gtk_grid_new();
 	gtk_widget_set_name(labelGrid, "label-grid");
-	alluHorizontalAlign(alluVerticalAlign(labelGrid, GTK_ALIGN_CENTER),
-						GTK_ALIGN_CENTER);
-	alluHorizontalAlign(alluVerticalAlign(box, GTK_ALIGN_CENTER),
+	alooHorizontalAlign(
+		alooVerticalAlign(GTK_TO_ALOO(labelGrid), GTK_ALIGN_CENTER),
+		GTK_ALIGN_CENTER);
+	alooHorizontalAlign(alooVerticalAlign(box, GTK_ALIGN_CENTER),
 						GTK_ALIGN_CENTER);
 	gtk_box_append(GTK_BOX(GTK_WIDGET(box)), labelGrid);
 
-	alluVerticalAlign(alluHorizontalAlign(grid, GTK_ALIGN_CENTER),
+	alooVerticalAlign(alooHorizontalAlign(GTK_TO_ALOO(grid), GTK_ALIGN_CENTER),
 					  GTK_ALIGN_START);
 
 	GtkCssProvider *cssProvider = gtk_css_provider_new();
@@ -136,7 +134,7 @@ static void activate(GtkApplication *app, gpointer user_data) {
 	gtk_grid_set_row_spacing(GTK_GRID(labelGrid), 5);
 	gtk_grid_set_column_spacing(GTK_GRID(labelGrid), 5);
 
-	alluAddEventListener(menuBar, "clicked", toggleNav, NULL);
+	alooAddEventListener(menuBar, "clicked", toggleNav, NULL);
 
 	navMenu = gtk_grid_new();
 	gtk_widget_set_name(navMenu, "nav-menu");
@@ -148,44 +146,25 @@ static void activate(GtkApplication *app, gpointer user_data) {
 		gtk_widget_set_size_request(GTK_WIDGET(label), 100, 20);
 		gtk_grid_attach(GTK_GRID(navMenu), label, 0, i, 1, 1);
 	}
-	gtk_widget_set_size_request(GTK_WIDGET(box), 1100, 600);
+	setSize(box, 1100, 600);
 	gtk_widget_set_size_request(GTK_WIDGET(navMenu), 100, 600);
 	gtk_widget_add_css_class(navMenu, "nav-menu-show");
 	gtk_widget_set_size_request(
-		GTK_WIDGET(alluGetBuilderObject(builder, "nav-show")), 1200, 70);
+		GTK_WIDGET(alooGetBuilderObject(builder, "nav-show")), 1200, 70);
 	char **classes = gtk_widget_get_css_classes(navMenu);
 	for (int i = 0; i < sizeof(classes) / sizeof(classes[0]); i++) {
 		printf("%s\n", classes[i]);
 	}
 
-	gtk_box_prepend(GTK_BOX(boxBody), navMenu);
+	gtk_box_prepend(GTK_BOX(boxBody->child), navMenu);
 
-	gtk_widget_show(window);
+	gtk_widget_show(window->child);
 	g_object_unref(builder);
-
-	// Without builder
-	// GObject *grid = gtk_grid_new();
-	// GtkWidget *button, *rmLabel, *window;
-	// window = alluApplicationNewWindow(app);
-	// alluWindowSetSize(alluSetWindowTitle(window, "Hello Window"), 400, 400);
-	// button = alluAddNewButtonLabel("Hello World");
-	// rmLabel = alluAddNewButtonLabel("Remove a label");
-	// box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
-	// GtkWidget *box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
-	// alluHorizontalAlign(alluVerticalAlign(box, GTK_ALIGN_CENTER),
-	// 				   GTK_ALIGN_CENTER);
-	// alluAddEventListener(button, "clicked", G_CALLBACK(print_hello), box);
-	// alluAddEventListener(rmLabel, "clicked", G_CALLBACK(removeLabel), box);
-	// gtk_grid_attach(GTK_GRID(grid), button, 0, 0, 2, 1);
-	// gtk_grid_attach(GTK_GRID(grid), rmLabel, 2, 0, 2, 1);
-	// gtk_box_append(GTK_BOX(box), grid);
-	// alluSetWindowChild(window, box);
-	// alluPresentWindow(window);
 }
 
 int main(int argc, char **argv) {
-	struct alluAppOptions opts = {G_APPLICATION_FLAGS_NONE, argc, argv};
-	struct alluAppAndStatus appOut =
+	struct alooAppOptions opts = {G_APPLICATION_FLAGS_NONE, argc, argv};
+	struct alooAppAndStatus appOut =
 		CreateApp("com.test.hello", opts, activate);
 	return 0;
 }

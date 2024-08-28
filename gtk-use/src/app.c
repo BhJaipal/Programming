@@ -1,7 +1,7 @@
 #include "../include/app.h"
 
-struct alluAppAndStatus
-CreateApp(char *appName, struct alluAppOptions gAppOptions,
+struct alooAppAndStatus
+CreateApp(char *appName, struct alooAppOptions gAppOptions,
 		  void activateFn(GtkApplication *app, gpointer user_data)) {
 	GtkApplication *gtkApp;
 	int status;
@@ -11,48 +11,49 @@ CreateApp(char *appName, struct alluAppOptions gAppOptions,
 	status = g_application_run(G_APPLICATION(gtkApp), gAppOptions.argc,
 							   gAppOptions.argv);
 	g_object_unref(gtkApp);
-	struct alluAppAndStatus out = {gtkApp, status};
+	struct alooAppAndStatus out = {gtkApp, status};
 	return out;
 }
 
-GtkWidget *alluHorizontalAlign(GtkWidget *widget, GtkAlign alignment) {
-	gtk_widget_set_halign(widget, alignment);
+alooWidget *alooHorizontalAlign(alooWidget *widget, GtkAlign alignment) {
+	gtk_widget_set_halign(widget->child, alignment);
 	return widget;
 }
-GtkWidget *alluVerticalAlign(GtkWidget *widget, GtkAlign alignment) {
-	gtk_widget_set_valign(widget, alignment);
+alooWidget *alooVerticalAlign(alooWidget *widget, GtkAlign alignment) {
+	gtk_widget_set_valign(widget->child, alignment);
 	return widget;
 }
-GtkWidget *alluAddEventListener(GtkWidget *widget_instance, char *event_name,
-								GCallback CallbackFn, gpointer data) {
-	g_signal_connect(widget_instance, event_name, G_CALLBACK(CallbackFn), data);
+alooWidget *alooAddEventListener(alooWidget *widget_instance, char *event_name,
+								 GCallback CallbackFn, gpointer data) {
+	g_signal_connect(widget_instance->child, event_name, G_CALLBACK(CallbackFn),
+					 data);
 	return widget_instance;
 }
 
-GtkWidget *alluSetWindowChild(GtkWidget *window, GtkWidget *child) {
+GtkWidget *alooSetWindowChild(GtkWidget *window, GtkWidget *child) {
 	gtk_window_set_child(GTK_WINDOW(window), child);
 	return window;
 }
-GtkWidget *alluPresentWindow(GtkWidget *window) {
+GtkWidget *alooPresentWindow(GtkWidget *window) {
 	gtk_window_present(GTK_WINDOW(window));
 	return window;
 }
 
-GtkWidget *alluAddNewButtonLabel(const char *label) {
+GtkWidget *alooAddNewButtonLabel(const char *label) {
 	return gtk_button_new_with_label(label);
 }
-GtkWidget *alluApplicationNewWindow(GtkApplication *app) {
+GtkWidget *alooApplicationNewWindow(GtkApplication *app) {
 	return gtk_application_window_new(app);
 }
-GtkWidget *alluSetWindowTitle(GtkWidget *window, const char *title) {
+GtkWidget *alooSetWindowTitle(GtkWidget *window, const char *title) {
 	gtk_window_set_title(GTK_WINDOW(window), title);
 	return window;
 }
-GtkWidget *alluWindowSetSize(GtkWidget *window, int width, int height) {
+GtkWidget *alooWindowSetSize(GtkWidget *window, int width, int height) {
 	gtk_window_set_default_size(GTK_WINDOW(window), width, height);
 	return window;
 }
 
-GObject *alluGetBuilderObject(GtkBuilder *builder, const char *name) {
+GObject *alooGetBuilderObject(GtkBuilder *builder, const char *name) {
 	return gtk_builder_get_object(builder, name);
 }

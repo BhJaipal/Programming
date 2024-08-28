@@ -1,10 +1,13 @@
+#ifndef ALOO_APP_H
+#define ALOO_APP_H
+#include "types.h"
 #include <gtk/gtk.h>
 
-struct alluAppAndStatus {
+struct alooAppAndStatus {
 	GtkApplication *app;
 	int status;
 };
-struct alluAppOptions {
+struct alooAppOptions {
 	GApplicationFlags GAppFlags;
 	int argc;
 	char **argv;
@@ -18,26 +21,28 @@ struct alluAppOptions {
  * started
  * @return It returns GtkApplication and status
  */
-struct alluAppAndStatus
-CreateApp(char *app_id, struct alluAppOptions gAppOptions,
+struct alooAppAndStatus
+CreateApp(char *app_id, struct alooAppOptions gAppOptions,
 		  void activateFn(GtkApplication *app, gpointer user_data));
 
-GtkWidget *alluHorizontalAlign(GtkWidget *widget, GtkAlign alignment);
-GtkWidget *alluVerticalAlign(GtkWidget *widget, GtkAlign alignment);
+alooWidget *alooHorizontalAlign(alooWidget *widget, GtkAlign alignment);
+alooWidget *alooVerticalAlign(alooWidget *widget, GtkAlign alignment);
 
-GtkWidget *alluAddEventListener(GtkWidget *widget_instance, char *event_name,
-								GCallback CallbackFn, gpointer data);
+alooWidget *alooAddEventListener(alooWidget *widget_instance, char *event_name,
+								 GCallback CallbackFn, gpointer data);
 
-GtkWidget *alluSetWindowChild(GtkWidget *window, GtkWidget *child);
+GtkWidget *alooSetWindowChild(GtkWidget *window, GtkWidget *child);
 
-GtkWidget *alluPresentWindow(GtkWidget *window);
+GtkWidget *alooPresentWindow(GtkWidget *window);
 
-GtkWidget *alluAddNewButtonLabel(const char *label);
+GtkWidget *alooAddNewButtonLabel(const char *label);
 
-GtkWidget *alluApplicationNewWindow(GtkApplication *app);
+GtkWidget *alooApplicationNewWindow(GtkApplication *app);
 
-GtkWidget *alluSetWindowTitle(GtkWidget *window, const char *title);
+GtkWidget *alooSetWindowTitle(GtkWidget *window, const char *title);
 
-GtkWidget *alluWindowSetSize(GtkWidget *window, int width, int height);
+GtkWidget *alooWindowSetSize(GtkWidget *window, int width, int height);
 
-GObject *alluGetBuilderObject(GtkBuilder *builder, const char *name);
+GObject *alooGetBuilderObject(GtkBuilder *builder, const char *name);
+
+#endif // ALOO_APP_H

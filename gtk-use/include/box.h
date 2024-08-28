@@ -1,8 +1,10 @@
+#ifndef ALOO_BOX_H
+#define ALOO_BOX_H
 #include "types.h"
 #include <gtk/gtk.h>
 
-GtkWidget **ALOO_BOX_WIDGET(alooWidget *x) { return x->child; }
-#define ALOO_BOX_TO_GTK(x) GTK_BOX(ALOO_BOX_WIDGET(x))
+GtkWidget *ALOO_BOX_WIDGET(alooWidget *x) { return x->child; }
+#define ALOO_BOX_TO_GTK_BOX(x) GTK_BOX(ALOO_BOX_WIDGET(x))
 
 gboolean ALOO_IS_BOX(alooWidget *x) {
 	return x->type == ALOO_BOX || ALOO_NEW_WIDGET && GTK_IS_BOX(x->child);
@@ -29,3 +31,5 @@ alooWidget *setBoxBaselinePosition(alooWidget *box,
 
 alooWidget *boxInsertChildAfter(alooWidget *box, alooWidget *child,
 								alooWidget *after);
+
+#endif // ALOO_BOX_H
