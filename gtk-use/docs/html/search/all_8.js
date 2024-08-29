@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['type_74',['type',['../struct__alooWidget.html#a2c50a2b59d07abc497094126481df382',1,'_alooWidget']]],
-  ['types_2eh_75',['types.h',['../types_8h.html',1,'']]]
+  ['type_81',['type',['../structalooWidget.html#a6db0456b6604492033507fcaeda3fe46',1,'alooWidget']]],
+  ['types_2eh_82',['types.h',['../types_8h.html',1,'']]]
 ];

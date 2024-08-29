@@ -1,0 +1,106 @@
+.TH "include/widget.h" 3 "Thu Aug 29 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/widget.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'types\&.h'\fP
+.br
+\fC#include <gtk/gtk\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBalooWidget\fP * \fBGTK_TO_ALOO\fP (GtkWidget *widget)"
+.br
+.RI "Creates \fBalooWidget\fP from GtkWidget\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBOBJECT_TO_ALOO\fP (GObject *obj)"
+.br
+.RI "Create \fBalooWidget\fP from GObject\&. "
+.ti -1c
+.RI "GtkWidget * \fBOBJECT_TO_GTK_WIDGET\fP (GtkBuilder *builder, const char *name)"
+.br
+.RI "Creates GtkWidget from builder\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBalooWidgetFromBuilder\fP (GtkBuilder *builder, const char *name)"
+.br
+.RI "Creates \fBalooWidget\fP from builder\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBalooSetOrientation\fP (\fBalooWidget\fP *widget, GtkOrientation orien)"
+.br
+.RI "Sets orientation of \fBalooWidget\fP\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBNewWidget\fP (\fBWidgetType\fP type, GtkWidget *child)"
+.br
+.RI "Create a widget\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBsetWidgetName\fP (\fBalooWidget\fP *widget, const char *name)"
+.br
+.RI "Set the Name of widget\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBalooWidget\fP* alooSetOrientation (\fBalooWidget\fP * widget, GtkOrientation orien)"
+
+.PP
+Sets orientation of \fBalooWidget\fP\&. 
+.SS "\fBalooWidget\fP* alooWidgetFromBuilder (GtkBuilder * builder, const char * name)"
+
+.PP
+Creates \fBalooWidget\fP from builder\&. 
+.SS "\fBalooWidget\fP* GTK_TO_ALOO (GtkWidget * widget)"
+
+.PP
+Creates \fBalooWidget\fP from GtkWidget\&. 
+.SS "\fBalooWidget\fP* NewWidget (\fBWidgetType\fP type, GtkWidget * child)"
+
+.PP
+Create a widget\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP type of widget 
+.br
+\fIchild\fP actual GtkWidget 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+alooWidget* 
+.RE
+.PP
+
+.SS "\fBalooWidget\fP* OBJECT_TO_ALOO (GObject * obj)"
+
+.PP
+Create \fBalooWidget\fP from GObject\&. 
+.SS "GtkWidget* OBJECT_TO_GTK_WIDGET (GtkBuilder * builder, const char * name)"
+
+.PP
+Creates GtkWidget from builder\&. 
+.SS "\fBalooWidget\fP* setWidgetName (\fBalooWidget\fP * widget, const char * name)"
+
+.PP
+Set the Name of widget\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidget\fP \fBalooWidget\fP 
+.br
+\fIname\fP string for name of widget 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+returns the widget 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Aloo from the source code\&.

@@ -1,7 +1,6 @@
 PROJECT_NAME           = Aloo
 PROJECT_NUMBER         = 1.0
 PROJECT_BRIEF          = Aloo Widgets
-PROJECT_DESCRIPTION    = A gtk based custom library called aloo Widgets
 
 INPUT                  = include
 OUTPUT_DIRECTORY       = docs
@@ -11,10 +10,13 @@ EXTRACT_ALL = YES
 # EXCLUDE_PATTERNS        = *.cpp *.h
 
 RECURSIVE              = YES
-GENERATE_HTML           = YES
+GENERATE_HTML           = NO
 HTML_FILE_EXTENSION    = .html
-HTML_EXTRA_PATH       = docs-html
 
-GENERATE_LATEX          = NO
-GENERATE_RTF            = NO
-GENERATE_XML            = NO
+MARKDOWN_SUPPORT		= YES
+MARKDOWN_ID_STYLE		= YES
+GENERATE_LATEX          = YES
+GENERATE_RTF            = YES
+GENERATE_XML            = YES
+GENERATE_MAN            = YES
+MANPATH= docs/man

@@ -1,0 +1,235 @@
+\hypertarget{box_8h}{}\doxysection{include/box.h File Reference}
+\label{box_8h}\index{include/box.h@{include/box.h}}
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$gtk/gtk.\+h$>$}\newline
+Include dependency graph for box.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{box_8h_a49c4948751bb9e2dd96cfa505b4b568c}{ALOO\+\_\+\+BOX\+\_\+\+TO\+\_\+\+GTK\+\_\+\+BOX}}(x)~GTK\+\_\+\+BOX(\mbox{\hyperlink{box_8h_a4a34a65a129d5c53b914ac34c3057d12}{ALOO\+\_\+\+BOX\+\_\+\+WIDGET}}(x))
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Gtk\+Widget $\ast$ \mbox{\hyperlink{box_8h_a4a34a65a129d5c53b914ac34c3057d12}{ALOO\+\_\+\+BOX\+\_\+\+WIDGET}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$x)
+\item 
+gboolean \mbox{\hyperlink{box_8h_a8a6129175fffef1805056b1ab25526ab}{ALOO\+\_\+\+IS\+\_\+\+BOX}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$x)
+\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{box_8h_ade9c3d0a5b82172f2a2041811d9ae201}{new\+\_\+aloo\+Box}} (Gtk\+Orientation orientation, int spacing)
+\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{box_8h_a68f215aee06f176862750ee188c554b7}{set\+Box\+Orientation}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$box, Gtk\+Orientation orientation)
+\begin{DoxyCompactList}\small\item\em Sets Box Orientation. \end{DoxyCompactList}\item 
+Gtk\+Orientation \mbox{\hyperlink{box_8h_afff8456a34365d3bef35e87790387761}{get\+Box\+Orientation}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$box)
+\begin{DoxyCompactList}\small\item\em Gets Box Orientation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{box_8h_a31523d1f2b3ffe3d96838b6bf73cf480}{box\+Append\+Gtk}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$box, Gtk\+Widget $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Appends {\ttfamily Gtk\+Widget} child to box. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{box_8h_aa110e6957ddf389f0c6633dda8fa3ce9}{box\+Prepend\+Gtk}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$box, Gtk\+Widget $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Prepends {\ttfamily Gtk\+Widget} child to box. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{box_8h_a211967d647e887244da40a34376f0260}{box\+Remove\+Gtk}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$box, Gtk\+Widget $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Removes {\ttfamily Gtk\+Widget} child from box. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{box_8h_a2a788bd1fc20caa041d1cf6e3ce66b9b}{box\+Append}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$box, \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Appends {\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}} child to box. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{box_8h_acb90d5cfd95509ab12d7d03f27587a40}{box\+Prepend}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$box, \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Prepends {\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}} child to box. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{box_8h_a269fe19de804eca2b0b62a39a7627084}{box\+Remove}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$box, \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Removes {\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}} child from box. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{box_8h_a99fa2f7a6368ebf9b125d538c32e2511}{box\+Insert\+Child\+After}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$box, \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$child, \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$after)
+\begin{DoxyCompactList}\small\item\em Adds child after a certain widget of box. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{box_8h_aa95cc7daa607b085429fe669696c8b95}{set\+Box\+Spacing}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$box, int spacing)
+\begin{DoxyCompactList}\small\item\em Set Box Spacing. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{box_8h_aafb8d1d96e235cd0aa0fc5efbab2b435}{get\+Box\+Spacing}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$box)
+\begin{DoxyCompactList}\small\item\em Gets box spacing. \end{DoxyCompactList}\item 
+gboolean \mbox{\hyperlink{box_8h_a5b03d8c43b572937353a35fd14706a64}{get\+Box\+Homogeneous}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$box)
+\begin{DoxyCompactList}\small\item\em Gets box homogeneous. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{box_8h_a53dafacfaf24fb36d402158bb1957f09}{set\+Box\+Homogeneous}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$box, gboolean homogeneous)
+\begin{DoxyCompactList}\small\item\em Sets box homogeneous. \end{DoxyCompactList}\item 
+Gtk\+Baseline\+Position \mbox{\hyperlink{box_8h_ae19afcb9a216631276a7946619de890f}{get\+Box\+Baseline\+Position}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$box)
+\begin{DoxyCompactList}\small\item\em Gets Box baseline position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{box_8h_a7ca1f19ef934de0c3d9392f1c9d9a3f5}{set\+Box\+Baseline\+Position}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$box, Gtk\+Baseline\+Position position)
+\begin{DoxyCompactList}\small\item\em Sets Box baseline position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{box_8h_a49c4948751bb9e2dd96cfa505b4b568c}\label{box_8h_a49c4948751bb9e2dd96cfa505b4b568c}} 
+\index{box.h@{box.h}!ALOO\_BOX\_TO\_GTK\_BOX@{ALOO\_BOX\_TO\_GTK\_BOX}}
+\index{ALOO\_BOX\_TO\_GTK\_BOX@{ALOO\_BOX\_TO\_GTK\_BOX}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{ALOO\_BOX\_TO\_GTK\_BOX}{ALOO\_BOX\_TO\_GTK\_BOX}}
+{\footnotesize\ttfamily \#define ALOO\+\_\+\+BOX\+\_\+\+TO\+\_\+\+GTK\+\_\+\+BOX(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~GTK\+\_\+\+BOX(\mbox{\hyperlink{box_8h_a4a34a65a129d5c53b914ac34c3057d12}{ALOO\+\_\+\+BOX\+\_\+\+WIDGET}}(x))}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{box_8h_a4a34a65a129d5c53b914ac34c3057d12}\label{box_8h_a4a34a65a129d5c53b914ac34c3057d12}} 
+\index{box.h@{box.h}!ALOO\_BOX\_WIDGET@{ALOO\_BOX\_WIDGET}}
+\index{ALOO\_BOX\_WIDGET@{ALOO\_BOX\_WIDGET}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{ALOO\_BOX\_WIDGET()}{ALOO\_BOX\_WIDGET()}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ ALOO\+\_\+\+BOX\+\_\+\+WIDGET (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{box_8h_a8a6129175fffef1805056b1ab25526ab}\label{box_8h_a8a6129175fffef1805056b1ab25526ab}} 
+\index{box.h@{box.h}!ALOO\_IS\_BOX@{ALOO\_IS\_BOX}}
+\index{ALOO\_IS\_BOX@{ALOO\_IS\_BOX}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{ALOO\_IS\_BOX()}{ALOO\_IS\_BOX()}}
+{\footnotesize\ttfamily gboolean ALOO\+\_\+\+IS\+\_\+\+BOX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{box_8h_a2a788bd1fc20caa041d1cf6e3ce66b9b}\label{box_8h_a2a788bd1fc20caa041d1cf6e3ce66b9b}} 
+\index{box.h@{box.h}!boxAppend@{boxAppend}}
+\index{boxAppend@{boxAppend}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{boxAppend()}{boxAppend()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ box\+Append (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{box,  }\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{widget }\end{DoxyParamCaption})}
+
+
+
+Appends {\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}} child to box. 
+
+\mbox{\Hypertarget{box_8h_a31523d1f2b3ffe3d96838b6bf73cf480}\label{box_8h_a31523d1f2b3ffe3d96838b6bf73cf480}} 
+\index{box.h@{box.h}!boxAppendGtk@{boxAppendGtk}}
+\index{boxAppendGtk@{boxAppendGtk}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{boxAppendGtk()}{boxAppendGtk()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ box\+Append\+Gtk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{box,  }\item[{Gtk\+Widget $\ast$}]{widget }\end{DoxyParamCaption})}
+
+
+
+Appends {\ttfamily Gtk\+Widget} child to box. 
+
+\mbox{\Hypertarget{box_8h_a99fa2f7a6368ebf9b125d538c32e2511}\label{box_8h_a99fa2f7a6368ebf9b125d538c32e2511}} 
+\index{box.h@{box.h}!boxInsertChildAfter@{boxInsertChildAfter}}
+\index{boxInsertChildAfter@{boxInsertChildAfter}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{boxInsertChildAfter()}{boxInsertChildAfter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ box\+Insert\+Child\+After (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{box,  }\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{child,  }\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{after }\end{DoxyParamCaption})}
+
+
+
+Adds child after a certain widget of box. 
+
+\begin{DoxyReturn}{Returns}
+returns box 
+\end{DoxyReturn}
+\mbox{\Hypertarget{box_8h_acb90d5cfd95509ab12d7d03f27587a40}\label{box_8h_acb90d5cfd95509ab12d7d03f27587a40}} 
+\index{box.h@{box.h}!boxPrepend@{boxPrepend}}
+\index{boxPrepend@{boxPrepend}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{boxPrepend()}{boxPrepend()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ box\+Prepend (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{box,  }\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{widget }\end{DoxyParamCaption})}
+
+
+
+Prepends {\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}} child to box. 
+
+\mbox{\Hypertarget{box_8h_aa110e6957ddf389f0c6633dda8fa3ce9}\label{box_8h_aa110e6957ddf389f0c6633dda8fa3ce9}} 
+\index{box.h@{box.h}!boxPrependGtk@{boxPrependGtk}}
+\index{boxPrependGtk@{boxPrependGtk}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{boxPrependGtk()}{boxPrependGtk()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ box\+Prepend\+Gtk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{box,  }\item[{Gtk\+Widget $\ast$}]{widget }\end{DoxyParamCaption})}
+
+
+
+Prepends {\ttfamily Gtk\+Widget} child to box. 
+
+\mbox{\Hypertarget{box_8h_a269fe19de804eca2b0b62a39a7627084}\label{box_8h_a269fe19de804eca2b0b62a39a7627084}} 
+\index{box.h@{box.h}!boxRemove@{boxRemove}}
+\index{boxRemove@{boxRemove}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{boxRemove()}{boxRemove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ box\+Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{box,  }\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{widget }\end{DoxyParamCaption})}
+
+
+
+Removes {\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}} child from box. 
+
+\mbox{\Hypertarget{box_8h_a211967d647e887244da40a34376f0260}\label{box_8h_a211967d647e887244da40a34376f0260}} 
+\index{box.h@{box.h}!boxRemoveGtk@{boxRemoveGtk}}
+\index{boxRemoveGtk@{boxRemoveGtk}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{boxRemoveGtk()}{boxRemoveGtk()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ box\+Remove\+Gtk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{box,  }\item[{Gtk\+Widget $\ast$}]{widget }\end{DoxyParamCaption})}
+
+
+
+Removes {\ttfamily Gtk\+Widget} child from box. 
+
+\mbox{\Hypertarget{box_8h_ae19afcb9a216631276a7946619de890f}\label{box_8h_ae19afcb9a216631276a7946619de890f}} 
+\index{box.h@{box.h}!getBoxBaselinePosition@{getBoxBaselinePosition}}
+\index{getBoxBaselinePosition@{getBoxBaselinePosition}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{getBoxBaselinePosition()}{getBoxBaselinePosition()}}
+{\footnotesize\ttfamily Gtk\+Baseline\+Position get\+Box\+Baseline\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{box }\end{DoxyParamCaption})}
+
+
+
+Gets Box baseline position. 
+
+\mbox{\Hypertarget{box_8h_a5b03d8c43b572937353a35fd14706a64}\label{box_8h_a5b03d8c43b572937353a35fd14706a64}} 
+\index{box.h@{box.h}!getBoxHomogeneous@{getBoxHomogeneous}}
+\index{getBoxHomogeneous@{getBoxHomogeneous}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{getBoxHomogeneous()}{getBoxHomogeneous()}}
+{\footnotesize\ttfamily gboolean get\+Box\+Homogeneous (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{box }\end{DoxyParamCaption})}
+
+
+
+Gets box homogeneous. 
+
+\mbox{\Hypertarget{box_8h_afff8456a34365d3bef35e87790387761}\label{box_8h_afff8456a34365d3bef35e87790387761}} 
+\index{box.h@{box.h}!getBoxOrientation@{getBoxOrientation}}
+\index{getBoxOrientation@{getBoxOrientation}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{getBoxOrientation()}{getBoxOrientation()}}
+{\footnotesize\ttfamily Gtk\+Orientation get\+Box\+Orientation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{box }\end{DoxyParamCaption})}
+
+
+
+Gets Box Orientation. 
+
+\mbox{\Hypertarget{box_8h_aafb8d1d96e235cd0aa0fc5efbab2b435}\label{box_8h_aafb8d1d96e235cd0aa0fc5efbab2b435}} 
+\index{box.h@{box.h}!getBoxSpacing@{getBoxSpacing}}
+\index{getBoxSpacing@{getBoxSpacing}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{getBoxSpacing()}{getBoxSpacing()}}
+{\footnotesize\ttfamily int get\+Box\+Spacing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{box }\end{DoxyParamCaption})}
+
+
+
+Gets box spacing. 
+
+\mbox{\Hypertarget{box_8h_ade9c3d0a5b82172f2a2041811d9ae201}\label{box_8h_ade9c3d0a5b82172f2a2041811d9ae201}} 
+\index{box.h@{box.h}!new\_alooBox@{new\_alooBox}}
+\index{new\_alooBox@{new\_alooBox}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{new\_alooBox()}{new\_alooBox()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ new\+\_\+aloo\+Box (\begin{DoxyParamCaption}\item[{Gtk\+Orientation}]{orientation,  }\item[{int}]{spacing }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{box_8h_a7ca1f19ef934de0c3d9392f1c9d9a3f5}\label{box_8h_a7ca1f19ef934de0c3d9392f1c9d9a3f5}} 
+\index{box.h@{box.h}!setBoxBaselinePosition@{setBoxBaselinePosition}}
+\index{setBoxBaselinePosition@{setBoxBaselinePosition}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{setBoxBaselinePosition()}{setBoxBaselinePosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ set\+Box\+Baseline\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{box,  }\item[{Gtk\+Baseline\+Position}]{position }\end{DoxyParamCaption})}
+
+
+
+Sets Box baseline position. 
+
+\mbox{\Hypertarget{box_8h_a53dafacfaf24fb36d402158bb1957f09}\label{box_8h_a53dafacfaf24fb36d402158bb1957f09}} 
+\index{box.h@{box.h}!setBoxHomogeneous@{setBoxHomogeneous}}
+\index{setBoxHomogeneous@{setBoxHomogeneous}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{setBoxHomogeneous()}{setBoxHomogeneous()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ set\+Box\+Homogeneous (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{box,  }\item[{gboolean}]{homogeneous }\end{DoxyParamCaption})}
+
+
+
+Sets box homogeneous. 
+
+\mbox{\Hypertarget{box_8h_a68f215aee06f176862750ee188c554b7}\label{box_8h_a68f215aee06f176862750ee188c554b7}} 
+\index{box.h@{box.h}!setBoxOrientation@{setBoxOrientation}}
+\index{setBoxOrientation@{setBoxOrientation}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{setBoxOrientation()}{setBoxOrientation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ set\+Box\+Orientation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{box,  }\item[{Gtk\+Orientation}]{orientation }\end{DoxyParamCaption})}
+
+
+
+Sets Box Orientation. 
+
+\mbox{\Hypertarget{box_8h_aa95cc7daa607b085429fe669696c8b95}\label{box_8h_aa95cc7daa607b085429fe669696c8b95}} 
+\index{box.h@{box.h}!setBoxSpacing@{setBoxSpacing}}
+\index{setBoxSpacing@{setBoxSpacing}!box.h@{box.h}}
+\doxysubsubsection{\texorpdfstring{setBoxSpacing()}{setBoxSpacing()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ set\+Box\+Spacing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{box,  }\item[{int}]{spacing }\end{DoxyParamCaption})}
+
+
+
+Set Box Spacing. 
+

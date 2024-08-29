@@ -1,0 +1,41 @@
+.TH "include/button.h" 3 "Thu Aug 29 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/button.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'types\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBALOO_BTN_TO_GTK\fP(x)   GTK_BUTTON(x\->child)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBalooWidget\fP * \fBnewButton\fP ()"
+.br
+.ti -1c
+.RI "\fBalooWidget\fP * \fBnewButtonWithLabel\fP (const char *label)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ALOO_BTN_TO_GTK(x)   GTK_BUTTON(x\->child)"
+
+.SH "Function Documentation"
+.PP 
+.SS "\fBalooWidget\fP* newButton ()"
+
+.SS "\fBalooWidget\fP* newButtonWithLabel (const char * label)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Aloo from the source code\&.

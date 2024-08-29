@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['aloowidget_145',['alooWidget',['../types_8h.html#ab99c585ae5babbb4d7dcc97c81551dcc',1,'types.h']]]
+  ['aloowidget_161',['alooWidget',['../types_8h.html#a740317088cd233e81015b298babff7be',1,'types.h']]]
 ];

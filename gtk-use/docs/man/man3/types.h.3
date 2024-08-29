@@ -1,0 +1,87 @@
+.TH "include/types.h" 3 "Thu Aug 29 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/types.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <gtk/gtk\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBalooWidget\fP"
+.br
+.RI "widget for my aloo library "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBALOO_WIDGET_TO_GTK\fP(x)   x\->child"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum \fBWidgetType\fP \fBWidgetType\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBalooWidget\fP \fBalooWidget\fP"
+.br
+.RI "widget for my aloo library "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBWidgetType\fP { \fBALOO_BOX\fP, \fBALOO_GRID\fP, \fBALOO_ROW\fP, \fBALOO_COLUMN\fP, \fBALOO_BUTTON\fP, \fBALOO_LABEL\fP, \fBALOO_NEW_WIDGET\fP }"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ALOO_WIDGET_TO_GTK(x)   x\->child"
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBalooWidget\fP \fBalooWidget\fP"
+
+.PP
+widget for my aloo library 
+.SS "typedef enum \fBWidgetType\fP \fBWidgetType\fP"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBWidgetType\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIALOO_BOX \fP\fP
+Used for Gtk Box\&. 
+.TP
+\fB\fIALOO_GRID \fP\fP
+Used for Gtk Grid\&. 
+.TP
+\fB\fIALOO_ROW \fP\fP
+Used for Gtk Row\&. 
+.TP
+\fB\fIALOO_COLUMN \fP\fP
+Used for Gtk Column\&. 
+.TP
+\fB\fIALOO_BUTTON \fP\fP
+Used for Gtk Button\&. 
+.TP
+\fB\fIALOO_LABEL \fP\fP
+Used for Gtk Label\&. 
+.TP
+\fB\fIALOO_NEW_WIDGET \fP\fP
+Can be used to create new custom widget and used with all\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Aloo from the source code\&.

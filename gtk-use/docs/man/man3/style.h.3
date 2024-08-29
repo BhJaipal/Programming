@@ -1,0 +1,76 @@
+.TH "include/style.h" 3 "Thu Aug 29 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/style.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'types\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBalooWidget\fP * \fBsetWidth\fP (\fBalooWidget\fP *wid, int width)"
+.br
+.RI "Set the Width of widget\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBsetHeight\fP (\fBalooWidget\fP *wid, int height)"
+.br
+.RI "Set the Height of widget\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBsetSize\fP (\fBalooWidget\fP *wid, int width, int height)"
+.br
+.RI "Set the Width and Height of widget\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBwidgetAddClass\fP (\fBalooWidget\fP *widget, char *class)"
+.br
+.RI "Adds class to widget\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBwidgetRemoveClass\fP (\fBalooWidget\fP *widget, char *class)"
+.br
+.RI "Removes class from widget\&. "
+.ti -1c
+.RI "char ** \fBgetWidgetClasses\fP (\fBalooWidget\fP *widget)"
+.br
+.RI "Gets classes of widget\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBsetWidgetClasses\fP (\fBalooWidget\fP *widget, char **classes)"
+.br
+.RI "Sets classes of widget\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "char** getWidgetClasses (\fBalooWidget\fP * widget)"
+
+.PP
+Gets classes of widget\&. 
+.SS "\fBalooWidget\fP* setHeight (\fBalooWidget\fP * wid, int height)"
+
+.PP
+Set the Height of widget\&. 
+.SS "\fBalooWidget\fP* setSize (\fBalooWidget\fP * wid, int width, int height)"
+
+.PP
+Set the Width and Height of widget\&. 
+.SS "\fBalooWidget\fP* setWidgetClasses (\fBalooWidget\fP * widget, char ** classes)"
+
+.PP
+Sets classes of widget\&. 
+.SS "\fBalooWidget\fP* setWidth (\fBalooWidget\fP * wid, int width)"
+
+.PP
+Set the Width of widget\&. 
+.SS "\fBalooWidget\fP* widgetAddClass (\fBalooWidget\fP * widget, char * class)"
+
+.PP
+Adds class to widget\&. 
+.SS "\fBalooWidget\fP* widgetRemoveClass (\fBalooWidget\fP * widget, char * class)"
+
+.PP
+Removes class from widget\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Aloo from the source code\&.

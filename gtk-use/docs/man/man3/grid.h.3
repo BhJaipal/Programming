@@ -1,0 +1,164 @@
+.TH "include/grid.h" 3 "Thu Aug 29 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/grid.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'types\&.h'\fP
+.br
+\fC#include <gtk/gtk\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBALOO_GRID_TO_GTK\fP(x)   GTK_GRID(x\->child)"
+.br
+.RI "Returns GTK_GRID of \fBalooWidget\fP\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBalooWidget\fP * \fBgridAttach\fP (\fBalooWidget\fP *grid, \fBalooWidget\fP *child, int column, int row, int width, int height)"
+.br
+.RI "Adds widget to aloo grid\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBgridAttachGtk\fP (\fBalooWidget\fP *grid, GtkWidget *child, int column, int row, int width, int height)"
+.br
+.RI "Adds widget to aloo grid\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBgridRemove\fP (\fBalooWidget\fP *grid, \fBalooWidget\fP *child)"
+.br
+.RI "Removes child from grid\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBgridRemoveGtk\fP (\fBalooWidget\fP *grid, GtkWidget *child)"
+.br
+.RI "Removes child from grid\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBalooGridNew\fP ()"
+.br
+.RI "Creates new Aloo Grid Widget\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBsetGridColumnSpacing\fP (\fBalooWidget\fP *grid, int space)"
+.br
+.RI "Set the Grid Column Spacing\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBsetGridRowSpacing\fP (\fBalooWidget\fP *grid, int space)"
+.br
+.RI "Set the Grid Row Spacing\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ALOO_GRID_TO_GTK(x)   GTK_GRID(x\->child)"
+
+.PP
+Returns GTK_GRID of \fBalooWidget\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP \fBalooWidget\fP with ALOO_GRID type 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "\fBalooWidget\fP* alooGridNew ()"
+
+.PP
+Creates new Aloo Grid Widget\&. 
+.PP
+\fBReturns\fP
+.RS 4
+returns grid 
+.RE
+.PP
+
+.SS "\fBalooWidget\fP* gridAttach (\fBalooWidget\fP * grid, \fBalooWidget\fP * child, int column, int row, int width, int height)"
+
+.PP
+Adds widget to aloo grid\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgrid\fP grid in which child should be added 
+.br
+\fIchild\fP child to be added 
+.br
+\fIcolumn\fP column in which it should be added 
+.br
+\fIrow\fP row in which it should be added 
+.br
+\fIwidth\fP column span of widget or how many column it takes 
+.br
+\fIheight\fP row span of widget or how many row it takes 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+returns grid back 
+.RE
+.PP
+
+.SS "\fBalooWidget\fP* gridAttachGtk (\fBalooWidget\fP * grid, GtkWidget * child, int column, int row, int width, int height)"
+
+.PP
+Adds widget to aloo grid\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgrid\fP grid in which child should be added 
+.br
+\fIchild\fP child to be added 
+.br
+\fIcolumn\fP column in which it should be added 
+.br
+\fIrow\fP row in which it should be added 
+.br
+\fIwidth\fP column span of widget or how many column it takes 
+.br
+\fIheight\fP row span of widget or how many row it takes 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+returns grid back 
+.RE
+.PP
+
+.SS "\fBalooWidget\fP* gridRemove (\fBalooWidget\fP * grid, \fBalooWidget\fP * child)"
+
+.PP
+Removes child from grid\&. 
+.PP
+\fBReturns\fP
+.RS 4
+returns grid back 
+.RE
+.PP
+
+.SS "\fBalooWidget\fP* gridRemoveGtk (\fBalooWidget\fP * grid, GtkWidget * child)"
+
+.PP
+Removes child from grid\&. 
+.PP
+\fBReturns\fP
+.RS 4
+returns grid back 
+.RE
+.PP
+
+.SS "\fBalooWidget\fP* setGridColumnSpacing (\fBalooWidget\fP * grid, int space)"
+
+.PP
+Set the Grid Column Spacing\&. 
+.SS "\fBalooWidget\fP* setGridRowSpacing (\fBalooWidget\fP * grid, int space)"
+
+.PP
+Set the Grid Row Spacing\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Aloo from the source code\&.

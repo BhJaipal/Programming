@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['widgettype_146',['WidgetType',['../types_8h.html#ad0bcf9fa83a5f6ae591473cfaaeecac8',1,'types.h']]]
+  ['widgettype_162',['WidgetType',['../types_8h.html#a00a0e3c1177c07bd0a01d42dfc37ed86',1,'types.h']]]
 ];

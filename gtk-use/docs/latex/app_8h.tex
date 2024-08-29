@@ -1,0 +1,228 @@
+\hypertarget{app_8h}{}\doxysection{include/app.h File Reference}
+\label{app_8h}\index{include/app.h@{include/app.h}}
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$gtk/gtk.\+h$>$}\newline
+Include dependency graph for app.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structalooAppAndStatus}{aloo\+App\+And\+Status}}
+\begin{DoxyCompactList}\small\item\em Returns Gtk\+Application and status. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structalooAppOptions}{aloo\+App\+Options}}
+\begin{DoxyCompactList}\small\item\em Takes GApplication\+Flags, argc and argv. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{app_8h_af8678607ed9bc1b700af2948ecc54eab}{ALOO\+\_\+\+IS\+\_\+\+WINDOW}}(X)~GTK\+\_\+\+IS\+\_\+\+WINDOW(X-\/$>$child)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structalooAppAndStatus}{aloo\+App\+And\+Status}} \mbox{\hyperlink{app_8h_a65d50f50a660970474fab5e355370da9}{Create\+App}} (char $\ast$app\+\_\+id, struct \mbox{\hyperlink{structalooAppOptions}{aloo\+App\+Options}} g\+App\+Options, void activate\+Fn(Gtk\+Application $\ast$app, gpointer user\+\_\+data))
+\begin{DoxyCompactList}\small\item\em Create a App object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{app_8h_a0afb7ad04f1aadda78c408cb89632a98}{aloo\+Horizontal\+Align}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, Gtk\+Align alignment)
+\begin{DoxyCompactList}\small\item\em Sets horizontal alignment of \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{app_8h_a6b6446b41469f699c7ce1601bf213ffd}{aloo\+Vertical\+Align}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, Gtk\+Align alignment)
+\begin{DoxyCompactList}\small\item\em Sets vertical alignment of \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{app_8h_ac7abab6e5fb131a4efc49d2b34cfd2fd}{aloo\+Add\+Event\+Listener}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget\+\_\+instance, char $\ast$event\+\_\+name, GCallback Callback\+Fn, gpointer data)
+\begin{DoxyCompactList}\small\item\em Adds event listener to a widget. \end{DoxyCompactList}\item 
+Gtk\+Widget $\ast$ \mbox{\hyperlink{app_8h_a6e6108adacb0408e9b9b010183d609c7}{aloo\+Set\+Window\+Child}} (Gtk\+Widget $\ast$window, Gtk\+Widget $\ast$child)
+\begin{DoxyCompactList}\small\item\em Sets Window child. \end{DoxyCompactList}\item 
+Gtk\+Widget $\ast$ \mbox{\hyperlink{app_8h_aa991a64e8ef46ccbb328a3a27cf256d8}{aloo\+Present\+Window}} (Gtk\+Widget $\ast$window)
+\begin{DoxyCompactList}\small\item\em Presents Gtk\+Window. \end{DoxyCompactList}\item 
+Gtk\+Widget $\ast$ \mbox{\hyperlink{app_8h_a634c75f1d0c5eb0f96bdbae33f521a8d}{aloo\+Add\+New\+Button\+Label}} (const char $\ast$label)
+\begin{DoxyCompactList}\small\item\em Create new Gtk\+Button. \end{DoxyCompactList}\item 
+Gtk\+Widget $\ast$ \mbox{\hyperlink{app_8h_a085d71076852c990130591ff13a5d513}{aloo\+Application\+New\+Window}} (Gtk\+Application $\ast$app)
+\begin{DoxyCompactList}\small\item\em Create a Gtk\+Window. \end{DoxyCompactList}\item 
+Gtk\+Widget $\ast$ \mbox{\hyperlink{app_8h_ac46dc2c7069e7755ec43eb8cab9972c4}{aloo\+Set\+Window\+Title}} (Gtk\+Widget $\ast$window, const char $\ast$title)
+\begin{DoxyCompactList}\small\item\em Sets Gtk\+Window title. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{app_8h_a64b7d24a9ac0ffcbdf783b7a4e5f7f49}{set\+Window\+Size}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window, int width, int height)
+\begin{DoxyCompactList}\small\item\em Sets aloo Window size. \end{DoxyCompactList}\item 
+GObject $\ast$ \mbox{\hyperlink{app_8h_a1768f18b204bebc0570b0d61d028bb5a}{aloo\+Get\+Builder\+Object}} (Gtk\+Builder $\ast$builder, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Gets GObject from builder. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{app_8h_a92fede26107ad6969917aafe93de0644}{set\+Window\+Application}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window, Gtk\+Application $\ast$app)
+\begin{DoxyCompactList}\small\item\em Set the Window for Application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{app_8h_ac36f38589d0afa325b5fa36f37d8dc00}{show\+Window}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Shows Window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{app_8h_af8678607ed9bc1b700af2948ecc54eab}\label{app_8h_af8678607ed9bc1b700af2948ecc54eab}} 
+\index{app.h@{app.h}!ALOO\_IS\_WINDOW@{ALOO\_IS\_WINDOW}}
+\index{ALOO\_IS\_WINDOW@{ALOO\_IS\_WINDOW}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{ALOO\_IS\_WINDOW}{ALOO\_IS\_WINDOW}}
+{\footnotesize\ttfamily \#define ALOO\+\_\+\+IS\+\_\+\+WINDOW(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~GTK\+\_\+\+IS\+\_\+\+WINDOW(X-\/$>$child)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{app_8h_ac7abab6e5fb131a4efc49d2b34cfd2fd}\label{app_8h_ac7abab6e5fb131a4efc49d2b34cfd2fd}} 
+\index{app.h@{app.h}!alooAddEventListener@{alooAddEventListener}}
+\index{alooAddEventListener@{alooAddEventListener}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{alooAddEventListener()}{alooAddEventListener()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ aloo\+Add\+Event\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{widget\+\_\+instance,  }\item[{char $\ast$}]{event\+\_\+name,  }\item[{GCallback}]{Callback\+Fn,  }\item[{gpointer}]{data }\end{DoxyParamCaption})}
+
+
+
+Adds event listener to a widget. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget\+\_\+instance} & \\
+\hline
+{\em data} & parameters for event listener \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{app_8h_a634c75f1d0c5eb0f96bdbae33f521a8d}\label{app_8h_a634c75f1d0c5eb0f96bdbae33f521a8d}} 
+\index{app.h@{app.h}!alooAddNewButtonLabel@{alooAddNewButtonLabel}}
+\index{alooAddNewButtonLabel@{alooAddNewButtonLabel}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{alooAddNewButtonLabel()}{alooAddNewButtonLabel()}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ aloo\+Add\+New\+Button\+Label (\begin{DoxyParamCaption}\item[{const char $\ast$}]{label }\end{DoxyParamCaption})}
+
+
+
+Create new Gtk\+Button. 
+
+\mbox{\Hypertarget{app_8h_a085d71076852c990130591ff13a5d513}\label{app_8h_a085d71076852c990130591ff13a5d513}} 
+\index{app.h@{app.h}!alooApplicationNewWindow@{alooApplicationNewWindow}}
+\index{alooApplicationNewWindow@{alooApplicationNewWindow}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{alooApplicationNewWindow()}{alooApplicationNewWindow()}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ aloo\+Application\+New\+Window (\begin{DoxyParamCaption}\item[{Gtk\+Application $\ast$}]{app }\end{DoxyParamCaption})}
+
+
+
+Create a Gtk\+Window. 
+
+\mbox{\Hypertarget{app_8h_a1768f18b204bebc0570b0d61d028bb5a}\label{app_8h_a1768f18b204bebc0570b0d61d028bb5a}} 
+\index{app.h@{app.h}!alooGetBuilderObject@{alooGetBuilderObject}}
+\index{alooGetBuilderObject@{alooGetBuilderObject}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{alooGetBuilderObject()}{alooGetBuilderObject()}}
+{\footnotesize\ttfamily GObject$\ast$ aloo\+Get\+Builder\+Object (\begin{DoxyParamCaption}\item[{Gtk\+Builder $\ast$}]{builder,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Gets GObject from builder. 
+
+\mbox{\Hypertarget{app_8h_a0afb7ad04f1aadda78c408cb89632a98}\label{app_8h_a0afb7ad04f1aadda78c408cb89632a98}} 
+\index{app.h@{app.h}!alooHorizontalAlign@{alooHorizontalAlign}}
+\index{alooHorizontalAlign@{alooHorizontalAlign}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{alooHorizontalAlign()}{alooHorizontalAlign()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ aloo\+Horizontal\+Align (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{widget,  }\item[{Gtk\+Align}]{alignment }\end{DoxyParamCaption})}
+
+
+
+Sets horizontal alignment of \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}. 
+
+\mbox{\Hypertarget{app_8h_aa991a64e8ef46ccbb328a3a27cf256d8}\label{app_8h_aa991a64e8ef46ccbb328a3a27cf256d8}} 
+\index{app.h@{app.h}!alooPresentWindow@{alooPresentWindow}}
+\index{alooPresentWindow@{alooPresentWindow}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{alooPresentWindow()}{alooPresentWindow()}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ aloo\+Present\+Window (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Presents Gtk\+Window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Gtk\+Widget$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{app_8h_a6e6108adacb0408e9b9b010183d609c7}\label{app_8h_a6e6108adacb0408e9b9b010183d609c7}} 
+\index{app.h@{app.h}!alooSetWindowChild@{alooSetWindowChild}}
+\index{alooSetWindowChild@{alooSetWindowChild}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{alooSetWindowChild()}{alooSetWindowChild()}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ aloo\+Set\+Window\+Child (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{window,  }\item[{Gtk\+Widget $\ast$}]{child }\end{DoxyParamCaption})}
+
+
+
+Sets Window child. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+{\em child} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Gtk\+Widget$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{app_8h_ac46dc2c7069e7755ec43eb8cab9972c4}\label{app_8h_ac46dc2c7069e7755ec43eb8cab9972c4}} 
+\index{app.h@{app.h}!alooSetWindowTitle@{alooSetWindowTitle}}
+\index{alooSetWindowTitle@{alooSetWindowTitle}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{alooSetWindowTitle()}{alooSetWindowTitle()}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ aloo\+Set\+Window\+Title (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{window,  }\item[{const char $\ast$}]{title }\end{DoxyParamCaption})}
+
+
+
+Sets Gtk\+Window title. 
+
+\mbox{\Hypertarget{app_8h_a6b6446b41469f699c7ce1601bf213ffd}\label{app_8h_a6b6446b41469f699c7ce1601bf213ffd}} 
+\index{app.h@{app.h}!alooVerticalAlign@{alooVerticalAlign}}
+\index{alooVerticalAlign@{alooVerticalAlign}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{alooVerticalAlign()}{alooVerticalAlign()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ aloo\+Vertical\+Align (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{widget,  }\item[{Gtk\+Align}]{alignment }\end{DoxyParamCaption})}
+
+
+
+Sets vertical alignment of \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}. 
+
+\mbox{\Hypertarget{app_8h_a65d50f50a660970474fab5e355370da9}\label{app_8h_a65d50f50a660970474fab5e355370da9}} 
+\index{app.h@{app.h}!CreateApp@{CreateApp}}
+\index{CreateApp@{CreateApp}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{CreateApp()}{CreateApp()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structalooAppAndStatus}{aloo\+App\+And\+Status}} Create\+App (\begin{DoxyParamCaption}\item[{char $\ast$}]{app\+\_\+id,  }\item[{struct \mbox{\hyperlink{structalooAppOptions}{aloo\+App\+Options}}}]{g\+App\+Options,  }\item[{void }]{activate\+FnGtk\+Application $\ast$app, gpointer user\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Create a App object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app\+\_\+id} & App Id are like com.\+google.\+Chrome, dev.\+zed.\+Zed \\
+\hline
+{\em g\+App\+Options} & It takes GApplication\+Flags, argc and argv \\
+\hline
+{\em activate\+Fn} & static void function which will be called when app is started \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns Gtk\+Application and status 
+\end{DoxyReturn}
+\mbox{\Hypertarget{app_8h_a92fede26107ad6969917aafe93de0644}\label{app_8h_a92fede26107ad6969917aafe93de0644}} 
+\index{app.h@{app.h}!setWindowApplication@{setWindowApplication}}
+\index{setWindowApplication@{setWindowApplication}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{setWindowApplication()}{setWindowApplication()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ set\+Window\+Application (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{window,  }\item[{Gtk\+Application $\ast$}]{app }\end{DoxyParamCaption})}
+
+
+
+Set the Window for Application. 
+
+\mbox{\Hypertarget{app_8h_a64b7d24a9ac0ffcbdf783b7a4e5f7f49}\label{app_8h_a64b7d24a9ac0ffcbdf783b7a4e5f7f49}} 
+\index{app.h@{app.h}!setWindowSize@{setWindowSize}}
+\index{setWindowSize@{setWindowSize}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{setWindowSize()}{setWindowSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ set\+Window\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{window,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Sets aloo Window size. 
+
+\mbox{\Hypertarget{app_8h_ac36f38589d0afa325b5fa36f37d8dc00}\label{app_8h_ac36f38589d0afa325b5fa36f37d8dc00}} 
+\index{app.h@{app.h}!showWindow@{showWindow}}
+\index{showWindow@{showWindow}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{showWindow()}{showWindow()}}
+{\footnotesize\ttfamily void show\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Shows Window. 
+

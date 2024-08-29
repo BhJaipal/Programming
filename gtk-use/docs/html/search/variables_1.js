@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['child_141',['child',['../struct__alooWidget.html#a0938c2b81eb9176a1ad0ca381dccb5bd',1,'_alooWidget']]]
+  ['child_157',['child',['../structalooWidget.html#af58424f1e35b4a10fa560c90dd656feb',1,'alooWidget']]]
 ];

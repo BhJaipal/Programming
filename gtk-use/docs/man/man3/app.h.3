@@ -1,0 +1,200 @@
+.TH "include/app.h" 3 "Thu Aug 29 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/app.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'types\&.h'\fP
+.br
+\fC#include <gtk/gtk\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBalooAppAndStatus\fP"
+.br
+.RI "Returns GtkApplication and status\&. "
+.ti -1c
+.RI "struct \fBalooAppOptions\fP"
+.br
+.RI "Takes GApplicationFlags, argc and argv\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBALOO_IS_WINDOW\fP(X)   GTK_IS_WINDOW(X\->child)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "struct \fBalooAppAndStatus\fP \fBCreateApp\fP (char *app_id, struct \fBalooAppOptions\fP gAppOptions, void activateFn(GtkApplication *app, gpointer user_data))"
+.br
+.RI "Create a App object\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBalooHorizontalAlign\fP (\fBalooWidget\fP *widget, GtkAlign alignment)"
+.br
+.RI "Sets horizontal alignment of \fBalooWidget\fP\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBalooVerticalAlign\fP (\fBalooWidget\fP *widget, GtkAlign alignment)"
+.br
+.RI "Sets vertical alignment of \fBalooWidget\fP\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBalooAddEventListener\fP (\fBalooWidget\fP *widget_instance, char *event_name, GCallback CallbackFn, gpointer data)"
+.br
+.RI "Adds event listener to a widget\&. "
+.ti -1c
+.RI "GtkWidget * \fBalooSetWindowChild\fP (GtkWidget *window, GtkWidget *child)"
+.br
+.RI "Sets Window child\&. "
+.ti -1c
+.RI "GtkWidget * \fBalooPresentWindow\fP (GtkWidget *window)"
+.br
+.RI "Presents GtkWindow\&. "
+.ti -1c
+.RI "GtkWidget * \fBalooAddNewButtonLabel\fP (const char *label)"
+.br
+.RI "Create new GtkButton\&. "
+.ti -1c
+.RI "GtkWidget * \fBalooApplicationNewWindow\fP (GtkApplication *app)"
+.br
+.RI "Create a GtkWindow\&. "
+.ti -1c
+.RI "GtkWidget * \fBalooSetWindowTitle\fP (GtkWidget *window, const char *title)"
+.br
+.RI "Sets GtkWindow title\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBsetWindowSize\fP (\fBalooWidget\fP *window, int width, int height)"
+.br
+.RI "Sets aloo Window size\&. "
+.ti -1c
+.RI "GObject * \fBalooGetBuilderObject\fP (GtkBuilder *builder, const char *name)"
+.br
+.RI "Gets GObject from builder\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fBsetWindowApplication\fP (\fBalooWidget\fP *window, GtkApplication *app)"
+.br
+.RI "Set the Window for Application\&. "
+.ti -1c
+.RI "void \fBshowWindow\fP (\fBalooWidget\fP *window)"
+.br
+.RI "Shows Window\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ALOO_IS_WINDOW(X)   GTK_IS_WINDOW(X\->child)"
+
+.SH "Function Documentation"
+.PP 
+.SS "\fBalooWidget\fP* alooAddEventListener (\fBalooWidget\fP * widget_instance, char * event_name, GCallback CallbackFn, gpointer data)"
+
+.PP
+Adds event listener to a widget\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidget_instance\fP 
+.br
+\fIdata\fP parameters for event listener 
+.RE
+.PP
+
+.SS "GtkWidget* alooAddNewButtonLabel (const char * label)"
+
+.PP
+Create new GtkButton\&. 
+.SS "GtkWidget* alooApplicationNewWindow (GtkApplication * app)"
+
+.PP
+Create a GtkWindow\&. 
+.SS "GObject* alooGetBuilderObject (GtkBuilder * builder, const char * name)"
+
+.PP
+Gets GObject from builder\&. 
+.SS "\fBalooWidget\fP* alooHorizontalAlign (\fBalooWidget\fP * widget, GtkAlign alignment)"
+
+.PP
+Sets horizontal alignment of \fBalooWidget\fP\&. 
+.SS "GtkWidget* alooPresentWindow (GtkWidget * window)"
+
+.PP
+Presents GtkWindow\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+GtkWidget* 
+.RE
+.PP
+
+.SS "GtkWidget* alooSetWindowChild (GtkWidget * window, GtkWidget * child)"
+
+.PP
+Sets Window child\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP 
+.br
+\fIchild\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+GtkWidget* 
+.RE
+.PP
+
+.SS "GtkWidget* alooSetWindowTitle (GtkWidget * window, const char * title)"
+
+.PP
+Sets GtkWindow title\&. 
+.SS "\fBalooWidget\fP* alooVerticalAlign (\fBalooWidget\fP * widget, GtkAlign alignment)"
+
+.PP
+Sets vertical alignment of \fBalooWidget\fP\&. 
+.SS "struct \fBalooAppAndStatus\fP CreateApp (char * app_id, struct \fBalooAppOptions\fP gAppOptions, void  activateFnGtkApplication *app, gpointer user_data)"
+
+.PP
+Create a App object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIapp_id\fP App Id are like com\&.google\&.Chrome, dev\&.zed\&.Zed 
+.br
+\fIgAppOptions\fP It takes GApplicationFlags, argc and argv 
+.br
+\fIactivateFn\fP static void function which will be called when app is started 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+It returns GtkApplication and status 
+.RE
+.PP
+
+.SS "\fBalooWidget\fP* setWindowApplication (\fBalooWidget\fP * window, GtkApplication * app)"
+
+.PP
+Set the Window for Application\&. 
+.SS "\fBalooWidget\fP* setWindowSize (\fBalooWidget\fP * window, int width, int height)"
+
+.PP
+Sets aloo Window size\&. 
+.SS "void showWindow (\fBalooWidget\fP * window)"
+
+.PP
+Shows Window\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Aloo from the source code\&.
