@@ -2,7 +2,7 @@
 #define ALOO_TYPES_H
 #include <gtk/gtk.h>
 
-typedef enum {
+typedef enum WidgetType {
 	/**
 	 * @brief Used for Gtk Box
 	 */
@@ -33,8 +33,17 @@ typedef enum {
 	ALOO_NEW_WIDGET
 } WidgetType;
 
-typedef struct {
+/**
+ * @brief widget for my aloo library
+ */
+typedef struct alooWidget {
+	/**
+	 * @brief actual GtkWidget
+	 */
 	GtkWidget *child;
+	/**
+	 * @brief Type of widget
+	 */
 	WidgetType type;
 } alooWidget;
 

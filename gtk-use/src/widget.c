@@ -1,5 +1,12 @@
 #include "../include/widget.h"
 
+alooWidget *NewWidget(WidgetType type, GtkWidget *child) {
+	alooWidget *widget = malloc(sizeof(alooWidget));
+	widget->child = child;
+	widget->type = type;
+	return widget;
+}
+
 alooWidget *OBJECT_TO_ALOO(GObject *obj) {
 	WidgetType type;
 	GtkWidget *widget = GTK_WIDGET(obj);
@@ -49,5 +56,10 @@ alooWidget *alooWidgetFromBuilder(GtkBuilder *builder, const char *name) {
 
 alooWidget *alooSetOrientation(alooWidget *widget, GtkOrientation orien) {
 	gtk_orientable_set_orientation(GTK_ORIENTABLE(widget->child), orien);
+	return widget;
+}
+
+alooWidget *setWidgetName(alooWidget *widget, const char *name) {
+	gtk_widget_set_name(ALOO_WIDGET_TO_GTK(widget), name);
 	return widget;
 }

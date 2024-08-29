@@ -49,11 +49,15 @@ GtkWidget *alooSetWindowTitle(GtkWidget *window, const char *title) {
 	gtk_window_set_title(GTK_WINDOW(window), title);
 	return window;
 }
-GtkWidget *alooWindowSetSize(GtkWidget *window, int width, int height) {
-	gtk_window_set_default_size(GTK_WINDOW(window), width, height);
+alooWidget *setWindowSize(alooWidget *window, int width, int height) {
+	gtk_window_set_default_size(GTK_WINDOW(window->child), width, height);
 	return window;
 }
 
 GObject *alooGetBuilderObject(GtkBuilder *builder, const char *name) {
 	return gtk_builder_get_object(builder, name);
+}
+
+alooWidget *setWindowApplication(alooWidget *window, GtkApplication *app) {
+	gtk_window_set_application(GTK_WINDOW(window->child), app);
 }

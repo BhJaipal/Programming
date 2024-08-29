@@ -1,6 +1,12 @@
 #include "../include/box.h"
 #include <gtk/gtk.h>
 
+GtkWidget *ALOO_BOX_WIDGET(alooWidget *x) { return x->child; }
+
+gboolean ALOO_IS_BOX(alooWidget *x) {
+	return x->type == ALOO_BOX || ALOO_NEW_WIDGET && GTK_IS_BOX(x->child);
+}
+
 alooWidget *new_alooBox(GtkOrientation orientation, int spacing) {
 	alooWidget *box = malloc(sizeof(alooWidget));
 	box->type = ALOO_BOX;
@@ -25,7 +31,7 @@ GtkOrientation getBoxOrientation(alooWidget *box) {
 		GTK_ORIENTABLE(ALOO_BOX_TO_GTK_BOX(box)));
 }
 
-alooWidget *boxAppend(alooWidget *box, GtkWidget *widget) {
+alooWidget *boxAppendGtk(alooWidget *box, GtkWidget *widget) {
 	if (!ALOO_IS_BOX(box)) {
 		fprintf(stderr, "Invalid box");
 		return box;
@@ -33,7 +39,7 @@ alooWidget *boxAppend(alooWidget *box, GtkWidget *widget) {
 	gtk_box_append(ALOO_BOX_TO_GTK_BOX(box), widget);
 	return box;
 }
-alooWidget *boxPrepend(alooWidget *box, GtkWidget *widget) {
+alooWidget *boxPrependGtk(alooWidget *box, GtkWidget *widget) {
 	if (!ALOO_IS_BOX(box)) {
 		fprintf(stderr, "Invalid box");
 		return box;
@@ -41,12 +47,37 @@ alooWidget *boxPrepend(alooWidget *box, GtkWidget *widget) {
 	gtk_box_prepend(ALOO_BOX_TO_GTK_BOX(box), widget);
 	return box;
 }
-alooWidget *boxRemove(alooWidget *box, GtkWidget *widget) {
+alooWidget *boxRemoveGtk(alooWidget *box, GtkWidget *widget) {
 	if (!ALOO_IS_BOX(box)) {
 		fprintf(stderr, "Invalid box");
 		return box;
 	}
 	gtk_box_remove(ALOO_BOX_TO_GTK_BOX(box), widget);
+	return box;
+}
+
+alooWidget *boxAppend(alooWidget *box, alooWidget *widget) {
+	if (!ALOO_IS_BOX(box)) {
+		fprintf(stderr, "Invalid box");
+		return box;
+	}
+	gtk_box_append(ALOO_BOX_TO_GTK_BOX(box), ALOO_WIDGET_TO_GTK(widget));
+	return box;
+}
+alooWidget *boxPrepend(alooWidget *box, alooWidget *widget) {
+	if (!ALOO_IS_BOX(box)) {
+		fprintf(stderr, "Invalid box");
+		return box;
+	}
+	gtk_box_prepend(ALOO_BOX_TO_GTK_BOX(box), ALOO_WIDGET_TO_GTK(widget));
+	return box;
+}
+alooWidget *boxRemove(alooWidget *box, alooWidget *widget) {
+	if (!ALOO_IS_BOX(box)) {
+		fprintf(stderr, "Invalid box");
+		return box;
+	}
+	gtk_box_remove(ALOO_BOX_TO_GTK_BOX(box), ALOO_WIDGET_TO_GTK(widget));
 	return box;
 }
 
