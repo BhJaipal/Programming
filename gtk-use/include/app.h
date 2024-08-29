@@ -20,6 +20,8 @@ struct alooAppOptions {
 	char **argv;
 };
 
+#define ALOO_IS_WINDOW(X) GTK_IS_WINDOW(X->child)
+
 /**
  * @brief Create a App object
  * @param app_id App Id are like com.google.Chrome, dev.zed.Zed
@@ -91,6 +93,14 @@ alooWidget *setWindowSize(alooWidget *window, int width, int height);
  */
 GObject *alooGetBuilderObject(GtkBuilder *builder, const char *name);
 
+/**
+ * @brief Set the Window for Application
+ */
 alooWidget *setWindowApplication(alooWidget *window, GtkApplication *app);
+
+/**
+ * @brief Shows Window
+ */
+void showWindow(alooWidget *window);
 
 #endif // ALOO_APP_H

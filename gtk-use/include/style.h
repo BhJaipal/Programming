@@ -20,8 +20,16 @@ alooWidget *setSize(alooWidget *wid, int width, int height);
  */
 alooWidget *widgetAddClass(alooWidget *widget, char *class);
 /**
+ * @brief Removes class from widget
+ */
+alooWidget *widgetRemoveClass(alooWidget *widget, char *class);
+/**
  * @brief Gets classes of widget
  */
 char **getWidgetClasses(alooWidget *widget);
+/**
+ * @brief Sets classes of widget
+ */
+alooWidget *setWidgetClasses(alooWidget *widget, char **classes);
 
 #endif // ALOO_STYLE_H

@@ -61,3 +61,11 @@ GObject *alooGetBuilderObject(GtkBuilder *builder, const char *name) {
 alooWidget *setWindowApplication(alooWidget *window, GtkApplication *app) {
 	gtk_window_set_application(GTK_WINDOW(window->child), app);
 }
+
+void showWindow(alooWidget *window) {
+	if (!ALOO_IS_WINDOW(window)) {
+		fprintf(stderr, "Widget is not a window\n");
+	} else {
+		gtk_widget_show(window->child);
+	}
+}

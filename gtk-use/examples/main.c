@@ -4,84 +4,79 @@
 
 alooWidget *labelGrid;
 alooWidget *navbar;
-GtkWidget *navMenu;
-GtkWidget *nothingLabel = 0;
+alooWidget *navMenu;
+alooWidget *nothingLabel = 0;
 int isNothing = 1;
+
 struct _labelList {
-	GtkWidget *labels[10];
+	alooWidget *labels[10];
 	int len;
 } labelList;
 
 static void toggleNav() {
-	const char **classes =
-		(const char **)gtk_widget_get_css_classes(navbar->child);
+	char **classes = getWidgetClasses(navbar);
 
 	if (!strcmp(classes[0], "vertical")) {
-		gtk_widget_remove_css_class(navMenu, "nav-menu-show");
-		gtk_widget_add_css_class(navMenu, "nav-menu-hidden");
+		widgetRemoveClass(navMenu, "nav-menu-show");
+		widgetAddClass(navMenu, "nav-menu-hidden");
 		classes[0] = "horizontal";
 	} else {
-		gtk_widget_remove_css_class(navMenu, "nav-menu-hidden");
-		gtk_widget_add_css_class(navMenu, "nav-menu-show");
+		widgetRemoveClass(navMenu, "nav-menu-hidden");
+		widgetAddClass(navMenu, "nav-menu-show");
 		classes[0] = "vertical";
 	}
-	gtk_widget_set_css_classes(navbar->child, classes);
+	setWidgetClasses(navbar, classes);
 }
 
-void nothingHappened(GtkWidget *data);
+void nothingHappened(alooWidget *data);
 
 void print_hello() {
 	if (labelList.len == 9) {
-		nothingLabel = gtk_label_new("Maximum number of labels reached");
-		gtk_widget_set_name(nothingLabel, "no-label");
+		nothingLabel = newLabel("Maximum number of labels reached");
+		setWidgetName(nothingLabel, "no-label");
 		isNothing = 1;
-		gridAttachGtk(labelGrid, nothingLabel, 1, 4, 3, 1);
+		gridAttach(labelGrid, nothingLabel, 1, 4, 3, 1);
 		return;
 	}
 
-	if (isNothing && nothingLabel != 0) nothingHappened(labelGrid->child);
-	GtkWidget *label = gtk_label_new("Hello World");
-	gtk_widget_set_name(label, "label");
-	// gtk_box_append(GTK_BOX(box), label);
-	gridAttachGtk(labelGrid, label, (labelList.len / 3) + 1,
-				  (labelList.len % 3) + 1, 1, 1);
-	// labelList.labels =
-	// realloc(labelList.labels, sizeof(GtkWidget *) + (labelList.len + 1));
+	if (isNothing && nothingLabel != 0) nothingHappened(labelGrid);
+	alooWidget *label = newLabel("Hello World");
+	setWidgetName(label, "label");
+	gridAttach(labelGrid, label, (labelList.len / 3) + 1,
+			   (labelList.len % 3) + 1, 1, 1);
 	labelList.labels[labelList.len] = label;
 	labelList.len++;
 }
 void removeLabel() {
 	if (labelList.len == 9) {
-		gridRemoveGtk(labelGrid, nothingLabel);
+		gridRemove(labelGrid, nothingLabel);
 		nothingLabel = 0;
 		isNothing = 0;
 	}
 	if (isNothing && nothingLabel != 0) return;
 	if (labelList.len == 0) {
 		isNothing = 0;
-		nothingHappened(labelGrid->child);
+		nothingHappened(labelGrid);
 		return;
 	}
-	gridRemoveGtk(labelGrid, labelList.labels[labelList.len - 1]);
-	GtkWidget *label = labelList.labels[labelList.len - 1];
-	// gtk_box_remove(GTK_BOX(box), label);
+	gridRemove(labelGrid, labelList.labels[labelList.len - 1]);
+	alooWidget *label = labelList.labels[labelList.len - 1];
 	labelList.len--;
 }
-void nothingHappened(GtkWidget *data) {
+void nothingHappened(alooWidget *data) {
 	if (isNothing) {
-		gtk_grid_remove(GTK_GRID(data), nothingLabel);
+		gridRemove(data, nothingLabel);
 		nothingLabel = 0;
 		isNothing = 0;
 	} else {
-		nothingLabel = gtk_label_new("Nothing Happened");
-		gtk_widget_set_name(nothingLabel, "no-label");
-		gtk_grid_attach(GTK_GRID(data), nothingLabel, 1, 1, 2, 1);
+		nothingLabel = newLabel("Nothing Happened");
+		setWidgetName(nothingLabel, "no-label");
+		gridAttach(data, nothingLabel, 1, 1, 2, 1);
 		isNothing = 1;
 	}
 }
 
 static void activate(GtkApplication *app, gpointer user_data) {
-	// labelList.labels = malloc(sizeof(GtkWidget *) * 0);
 	labelList.len = 0;
 
 	GtkBuilder *builder = gtk_builder_new();
@@ -131,33 +126,31 @@ static void activate(GtkApplication *app, gpointer user_data) {
 
 	setGridColumnSpacing(grid, 20);
 	setGridRowSpacing(labelGrid, 5);
-	setGridRowSpacing(labelGrid, 5);
+	setGridColumnSpacing(labelGrid, 5);
 
 	alooAddEventListener(menuBar, "clicked", toggleNav, NULL);
 
-	navMenu = gtk_grid_new();
-	gtk_widget_set_name(navMenu, "nav-menu");
+	navMenu = alooGridNew();
+	setWidgetName(navMenu, "nav-menu");
 	const char *menus[] = {"File", "Edit", "Save"};
 	for (int i = 0; i < 3; i++) {
-		GtkWidget *label = gtk_button_new();
-		gtk_button_set_label(GTK_BUTTON(label), menus[i]);
-		gtk_widget_set_name(label, "menu-opt");
-		gtk_widget_set_size_request(label, 100, 20);
-		gtk_grid_attach(GTK_GRID(navMenu), label, 0, i, 1, 1);
+		alooWidget *label = newButtonWithLabel(menus[i]);
+		setWidgetName(label, "menu-opt");
+		setSize(label, 100, 20);
+		gridAttach(navMenu, label, 0, i, 1, 1);
 	}
 	setSize(box, 1100, 600);
-	gtk_widget_set_size_request(navMenu, 100, 600);
-	gtk_widget_add_css_class(navMenu, "nav-menu-show");
-	gtk_widget_set_size_request(
-		GTK_WIDGET(alooGetBuilderObject(builder, "nav-show")), 1200, 70);
-	char **classes = gtk_widget_get_css_classes(navMenu);
+	setSize(navMenu, 100, 600);
+	widgetAddClass(navMenu, "nav-menu-show");
+	setSize(alooWidgetFromBuilder(builder, "nav-show"), 1200, 70);
+	char **classes = getWidgetClasses(navMenu);
 	for (int i = 0; i < sizeof(classes) / sizeof(classes[0]); i++) {
 		printf("%s\n", classes[i]);
 	}
 
-	boxPrependGtk(boxBody, navMenu);
+	boxPrepend(boxBody, navMenu);
 
-	gtk_widget_show(window->child);
+	showWindow(window);
 	g_object_unref(builder);
 }
 

@@ -17,6 +17,15 @@ alooWidget *widgetAddClass(alooWidget *widget, char *class) {
 	gtk_widget_add_css_class(ALOO_WIDGET_TO_GTK(widget), class);
 	return widget;
 }
+
+alooWidget *widgetRemoveClass(alooWidget *widget, char *class) {
+	gtk_widget_remove_css_class(ALOO_WIDGET_TO_GTK(widget), class);
+	return widget;
+}
 char **getWidgetClasses(alooWidget *widget) {
 	return gtk_widget_get_css_classes(ALOO_WIDGET_TO_GTK(widget));
+}
+alooWidget *setWidgetClasses(alooWidget *widget, char **classes) {
+	gtk_widget_set_css_classes(ALOO_WIDGET_TO_GTK(widget),
+							   (const char **)classes);
 }
