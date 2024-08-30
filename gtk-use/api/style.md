@@ -2,6 +2,28 @@
 
 ## Functions
 
+### importCssFromPath
+
+- **Returns**: `void`
+- **Description**: Import CSS file from path
+- **Parameters**:
+- - `const char *name`: name path of css file
+
+### importCssFromData
+
+- **Returns**: `void`
+- **Description**: content css content
+- **Parameters**:
+- - `const char *content`: content
+- - `gssize length`: content length
+
+### importCssFromFile
+
+- **Returns**: `void`
+- **Description**: Import CSS file from content
+- **Parameters**:
+- - `GFile *file`: file CSS GFile
+
 ### `setWidth`
 
 - **Returns**: alooWidget *

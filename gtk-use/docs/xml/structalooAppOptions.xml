@@ -4,18 +4,18 @@
     <compoundname>alooAppOptions</compoundname>
     <includes refid="app_8h" local="no">app.h</includes>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="structalooAppOptions_1ac002947c09ab2e5b27ae639e1f72adad" prot="public" static="no" mutable="no">
-        <type>GApplicationFlags</type>
-        <definition>GApplicationFlags alooAppOptions::GAppFlags</definition>
+      <memberdef kind="variable" id="structalooAppOptions_1aec4e5d6b42a4aabe6bfaff78f201c724" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="app_8h_1a3c3f24e41c05c726eae5ba69a4c0974c" kindref="member">alooAppFlags</ref></type>
+        <definition>enum alooAppFlags alooAppOptions::appFlags</definition>
         <argsstring></argsstring>
-        <name>GAppFlags</name>
+        <name>appFlags</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/app.h" line="18" column="19" bodyfile="include/app.h" bodystart="18" bodyend="-1"/>
+        <location file="include/app.h" line="11" column="5" bodyfile="include/app.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structalooAppOptions_1a94687eee81ac104698db994c2d9245ba" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/app.h" line="19" column="5" bodyfile="include/app.h" bodystart="19" bodyend="-1"/>
+        <location file="include/app.h" line="37" column="5" bodyfile="include/app.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structalooAppOptions_1afbca287e969fd39e0227550171ee427d" prot="public" static="no" mutable="no">
         <type>char **</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/app.h" line="20" column="6" bodyfile="include/app.h" bodystart="20" bodyend="-1"/>
+        <location file="include/app.h" line="38" column="6" bodyfile="include/app.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -49,11 +49,11 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/app.h" line="17" column="1" bodyfile="include/app.h" bodystart="17" bodyend="21"/>
+    <location file="include/app.h" line="35" column="1" bodyfile="include/app.h" bodystart="35" bodyend="39"/>
     <listofallmembers>
+      <member refid="structalooAppOptions_1aec4e5d6b42a4aabe6bfaff78f201c724" prot="public" virt="non-virtual"><scope>alooAppOptions</scope><name>appFlags</name></member>
       <member refid="structalooAppOptions_1a94687eee81ac104698db994c2d9245ba" prot="public" virt="non-virtual"><scope>alooAppOptions</scope><name>argc</name></member>
       <member refid="structalooAppOptions_1afbca287e969fd39e0227550171ee427d" prot="public" virt="non-virtual"><scope>alooAppOptions</scope><name>argv</name></member>
-      <member refid="structalooAppOptions_1ac002947c09ab2e5b27ae639e1f72adad" prot="public" virt="non-virtual"><scope>alooAppOptions</scope><name>GAppFlags</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

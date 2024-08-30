@@ -1,13 +1,16 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
-  <compound refid="structalooAppAndStatus" kind="struct"><name>alooAppAndStatus</name>
-    <member refid="structalooAppAndStatus_1afc170dcd48b746aa96bfef7aa01753f5" kind="variable"><name>app</name></member>
-    <member refid="structalooAppAndStatus_1a56d74bc7e1f7a1d5390c97432dca5eea" kind="variable"><name>status</name></member>
+  <compound refid="structalooApp__Status" kind="struct"><name>alooApp_Status</name>
+    <member refid="structalooApp__Status_1a3eb578eacf93fea1f52147663d3d7359" kind="variable"><name>app</name></member>
+    <member refid="structalooApp__Status_1a5acd3502c8236365d599e6ca498b95ad" kind="variable"><name>status</name></member>
   </compound>
   <compound refid="structalooAppOptions" kind="struct"><name>alooAppOptions</name>
-    <member refid="structalooAppOptions_1ac002947c09ab2e5b27ae639e1f72adad" kind="variable"><name>GAppFlags</name></member>
+    <member refid="structalooAppOptions_1aec4e5d6b42a4aabe6bfaff78f201c724" kind="variable"><name>appFlags</name></member>
     <member refid="structalooAppOptions_1a94687eee81ac104698db994c2d9245ba" kind="variable"><name>argc</name></member>
     <member refid="structalooAppOptions_1afbca287e969fd39e0227550171ee427d" kind="variable"><name>argv</name></member>
+  </compound>
+  <compound refid="structAlooBuilder" kind="struct"><name>AlooBuilder</name>
+    <member refid="structAlooBuilder_1a598a671ad4e908039cbdbf778f71772f" kind="variable"><name>builder</name></member>
   </compound>
   <compound refid="structalooWidget" kind="struct"><name>alooWidget</name>
     <member refid="structalooWidget_1af58424f1e35b4a10fa560c90dd656feb" kind="variable"><name>child</name></member>
@@ -16,8 +19,15 @@
   <compound refid="aloo_8h" kind="file"><name>aloo.h</name>
   </compound>
   <compound refid="app_8h" kind="file"><name>app.h</name>
+    <member refid="app_8h_1ac9137a5bae01fa8f8d81942f8ea98c93" kind="define"><name>NONE_FLAGS_OPTIONS</name></member>
+    <member refid="app_8h_1a7e8face0ef0eb9ad79f944cadb88b9a9" kind="define"><name>LAUNCHER_FLAGS_OPTIONS</name></member>
+    <member refid="app_8h_1a6008f3d8d9740cf975902f6e7cbc2afc" kind="define"><name>SERVICE_FLAGS_OPTIONS</name></member>
     <member refid="app_8h_1af8678607ed9bc1b700af2948ecc54eab" kind="define"><name>ALOO_IS_WINDOW</name></member>
-    <member refid="app_8h_1a65d50f50a660970474fab5e355370da9" kind="function"><name>CreateApp</name></member>
+    <member refid="app_8h_1a3c3f24e41c05c726eae5ba69a4c0974c" kind="enum"><name>alooAppFlags</name></member>
+    <member refid="app_8h_1a3c3f24e41c05c726eae5ba69a4c0974ca0ea9c2e3ff643aa13b9e4e3a3d6a689a" kind="enumvalue"><name>APP_FLAGS_NONE</name></member>
+    <member refid="app_8h_1a3c3f24e41c05c726eae5ba69a4c0974ca210dad3de3ceb82c0ae1e18bbcd7c575" kind="enumvalue"><name>APP_FLAGS_IS_LAUNCHER</name></member>
+    <member refid="app_8h_1a3c3f24e41c05c726eae5ba69a4c0974cab47f6b942f04f046f352ac0d73da72e3" kind="enumvalue"><name>APP_FLAGS_IS_SERVICE</name></member>
+    <member refid="app_8h_1afd2b2ad2dc96320df448c0835aee1bb4" kind="function"><name>CreateApp</name></member>
     <member refid="app_8h_1a0afb7ad04f1aadda78c408cb89632a98" kind="function"><name>alooHorizontalAlign</name></member>
     <member refid="app_8h_1a6b6446b41469f699c7ce1601bf213ffd" kind="function"><name>alooVerticalAlign</name></member>
     <member refid="app_8h_1ac7abab6e5fb131a4efc49d2b34cfd2fd" kind="function"><name>alooAddEventListener</name></member>
@@ -27,10 +37,14 @@
     <member refid="app_8h_1a085d71076852c990130591ff13a5d513" kind="function"><name>alooApplicationNewWindow</name></member>
     <member refid="app_8h_1ac46dc2c7069e7755ec43eb8cab9972c4" kind="function"><name>alooSetWindowTitle</name></member>
     <member refid="app_8h_1a64b7d24a9ac0ffcbdf783b7a4e5f7f49" kind="function"><name>setWindowSize</name></member>
-    <member refid="app_8h_1a1768f18b204bebc0570b0d61d028bb5a" kind="function"><name>alooGetBuilderObject</name></member>
+    <member refid="app_8h_1a294e832dd251cf1344b51aada122beb7" kind="function"><name>alooGetBuilderObject</name></member>
     <member refid="app_8h_1a92fede26107ad6969917aafe93de0644" kind="function"><name>setWindowApplication</name></member>
     <member refid="app_8h_1ac36f38589d0afa325b5fa36f37d8dc00" kind="function"><name>showWindow</name></member>
-    <member refid="app_8h_1a869ae1b4d57340dbfeaaae16722020de" kind="function"><name>unrefObject</name></member>
+    <member refid="app_8h_1a7c4375b759893ed87966847c44cb8852" kind="function"><name>unrefBuilder</name></member>
+    <member refid="app_8h_1a304bd6b95029bdd9a525beee6979bf2c" kind="function"><name>createBuilder</name></member>
+    <member refid="app_8h_1a07593dbb7188b21360ce9f5a567eaba3" kind="function"><name>builderAddFile</name></member>
+    <member refid="app_8h_1a4ebb10d482977502640f10a80effd08d" kind="function"><name>builderAddContent</name></member>
+    <member refid="app_8h_1ae07a87c38ce1013d04016f848fb770c5" kind="function"><name>builderAddResource</name></member>
   </compound>
   <compound refid="box_8h" kind="file"><name>box.h</name>
     <member refid="box_8h_1a49c4948751bb9e2dd96cfa505b4b568c" kind="define"><name>ALOO_BOX_TO_GTK_BOX</name></member>
@@ -72,6 +86,9 @@
     <member refid="label_8h_1a091c380bedc6ae06c4b51281179eaf6a" kind="function"><name>newLabel</name></member>
   </compound>
   <compound refid="style_8h" kind="file"><name>style.h</name>
+    <member refid="style_8h_1a0bcc85b2cb03ec6bee88142e29c42e57" kind="function"><name>importCssFromPath</name></member>
+    <member refid="style_8h_1af5b4d6f7ea6b8b061193544aaf8f9be2" kind="function"><name>importCssFromData</name></member>
+    <member refid="style_8h_1a2021fd798c801903539ed696efa2b8cf" kind="function"><name>importCssFromFile</name></member>
     <member refid="style_8h_1a63eb6e780503e6108a3311a57bf4738a" kind="function"><name>setWidth</name></member>
     <member refid="style_8h_1a7c770a3c3f4921eaae08fa6e12c4a8aa" kind="function"><name>setHeight</name></member>
     <member refid="style_8h_1ab40dc82bdb6610257e6f29fcb843cab3" kind="function"><name>setSize</name></member>
@@ -96,8 +113,8 @@
   <compound refid="widget_8h" kind="file"><name>widget.h</name>
     <member refid="widget_8h_1a7f163845105d934fe9270c4f27deea06" kind="function"><name>GTK_TO_ALOO</name></member>
     <member refid="widget_8h_1a3c4124ba611f4967a0f00feddc1e3efd" kind="function"><name>OBJECT_TO_ALOO</name></member>
-    <member refid="widget_8h_1ae89f81e79316509bd3ab0ec8ee65d206" kind="function"><name>OBJECT_TO_GTK_WIDGET</name></member>
-    <member refid="widget_8h_1a7e68157e7fba45466a36cba6f79fe971" kind="function"><name>alooWidgetFromBuilder</name></member>
+    <member refid="widget_8h_1a64d12e6dae8dfac76d2231f411cba885" kind="function"><name>OBJECT_TO_GTK_WIDGET</name></member>
+    <member refid="widget_8h_1ab357e941224d0aa29fdd240b86f670cd" kind="function"><name>alooWidgetFromBuilder</name></member>
     <member refid="widget_8h_1a5524d050f5e28511da11303085ab90a0" kind="function"><name>alooSetOrientation</name></member>
     <member refid="widget_8h_1a1f5dbc41a627d435767b5a0dcc850562" kind="function"><name>NewWidget</name></member>
     <member refid="widget_8h_1a4e21ea1424626c054cdb8613e18f7636" kind="function"><name>setWidgetName</name></member>

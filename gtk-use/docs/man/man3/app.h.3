@@ -1,4 +1,4 @@
-.TH "include/app.h" 3 "Fri Aug 30 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "include/app.h" 3 "Sat Aug 31 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,7 +15,7 @@ include/app.h
 
 .in +1c
 .ti -1c
-.RI "struct \fBalooAppAndStatus\fP"
+.RI "struct \fBalooApp_Status\fP"
 .br
 .RI "Returns GtkApplication and status\&. "
 .ti -1c
@@ -27,14 +27,34 @@ include/app.h
 
 .in +1c
 .ti -1c
+.RI "#define \fBNONE_FLAGS_OPTIONS\fP(argc,  argv)   	{ \fBAPP_FLAGS_NONE\fP, argc, argv }"
+.br
+.RI "generates app options with APP_FLAGS_NONE "
+.ti -1c
+.RI "#define \fBLAUNCHER_FLAGS_OPTIONS\fP(argc,  argv)   	{ \fBAPP_FLAGS_IS_LAUNCHER\fP, argc, argv }"
+.br
+.RI "generates app options with APP_FLAGS_IS_LAUNCHER "
+.ti -1c
+.RI "#define \fBSERVICE_FLAGS_OPTIONS\fP(argc,  argv)   	{ \fBAPP_FLAGS_IS_SERVICE\fP, argc, argv }"
+.br
+.RI "generates app options with APP_FLAGS_IS_SERVICE "
+.ti -1c
 .RI "#define \fBALOO_IS_WINDOW\fP(X)   GTK_IS_WINDOW(X\->child)"
 .br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBalooAppFlags\fP { \fBAPP_FLAGS_NONE\fP = 0, \fBAPP_FLAGS_IS_LAUNCHER\fP, \fBAPP_FLAGS_IS_SERVICE\fP }"
+.br
+.RI "G Application Flags\&. "
 .in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "struct \fBalooAppAndStatus\fP \fBCreateApp\fP (char *app_id, struct \fBalooAppOptions\fP gAppOptions, void activateFn(GtkApplication *app, gpointer user_data))"
+.RI "struct \fBalooApp_Status\fP \fBCreateApp\fP (char *app_id, struct \fBalooAppOptions\fP gAppOptions, void activateFn(GtkApplication *app, gpointer user_data))"
 .br
 .RI "Create a App object\&. "
 .ti -1c
@@ -74,7 +94,7 @@ include/app.h
 .br
 .RI "Sets aloo Window size\&. "
 .ti -1c
-.RI "GObject * \fBalooGetBuilderObject\fP (GtkBuilder *builder, const char *name)"
+.RI "GObject * \fBalooGetBuilderObject\fP (\fBAlooBuilder\fP *builder, const char *name)"
 .br
 .RI "Gets GObject from builder\&. "
 .ti -1c
@@ -86,14 +106,60 @@ include/app.h
 .br
 .RI "Shows Window\&. "
 .ti -1c
-.RI "void \fBunrefObject\fP (gpointer data)"
+.RI "void \fBunrefBuilder\fP (\fBAlooBuilder\fP *data)"
 .br
-.RI "Unrefs object\&. "
+.RI "Unrefs aloo builder\&. "
+.ti -1c
+.RI "\fBAlooBuilder\fP * \fBcreateBuilder\fP ()"
+.br
+.RI "Create a Builder object\&. "
+.ti -1c
+.RI "int \fBbuilderAddFile\fP (\fBAlooBuilder\fP *build, const char *filename, GError **err)"
+.br
+.RI "Adds a file with builder\&. "
+.ti -1c
+.RI "int \fBbuilderAddContent\fP (\fBAlooBuilder\fP *build, const char *content, gssize length, GError **err)"
+.br
+.RI "Adds a file with builder\&. "
+.ti -1c
+.RI "int \fBbuilderAddResource\fP (\fBAlooBuilder\fP *build, const char *resource_path, GError **err)"
+.br
+.RI "Adds a file with builder\&. "
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
 .SS "#define ALOO_IS_WINDOW(X)   GTK_IS_WINDOW(X\->child)"
 
+.SS "#define LAUNCHER_FLAGS_OPTIONS(argc, argv)   	{ \fBAPP_FLAGS_IS_LAUNCHER\fP, argc, argv }"
+
+.PP
+generates app options with APP_FLAGS_IS_LAUNCHER 
+.SS "#define NONE_FLAGS_OPTIONS(argc, argv)   	{ \fBAPP_FLAGS_NONE\fP, argc, argv }"
+
+.PP
+generates app options with APP_FLAGS_NONE 
+.SS "#define SERVICE_FLAGS_OPTIONS(argc, argv)   	{ \fBAPP_FLAGS_IS_SERVICE\fP, argc, argv }"
+
+.PP
+generates app options with APP_FLAGS_IS_SERVICE 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBalooAppFlags\fP"
+
+.PP
+G Application Flags\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIAPP_FLAGS_NONE \fP\fP
+G_APPLICATION_FLAGS_NONE\&. 
+.TP
+\fB\fIAPP_FLAGS_IS_LAUNCHER \fP\fP
+G_APPLICATION_FLAGS_IS_LAUNCHER\&. 
+.TP
+\fB\fIAPP_FLAGS_IS_SERVICE \fP\fP
+G_APPLICATION_FLAGS_IS_SERVICE\&. 
 .SH "Function Documentation"
 .PP 
 .SS "\fBalooWidget\fP* alooAddEventListener (\fBalooWidget\fP * widget_instance, char * event_name, GCallback CallbackFn, gpointer data)"
@@ -117,7 +183,7 @@ Create new GtkButton\&.
 
 .PP
 Create a GtkWindow\&. 
-.SS "GObject* alooGetBuilderObject (GtkBuilder * builder, const char * name)"
+.SS "GObject* alooGetBuilderObject (\fBAlooBuilder\fP * builder, const char * name)"
 
 .PP
 Gets GObject from builder\&. 
@@ -167,7 +233,54 @@ Sets GtkWindow title\&.
 
 .PP
 Sets vertical alignment of \fBalooWidget\fP\&. 
-.SS "struct \fBalooAppAndStatus\fP CreateApp (char * app_id, struct \fBalooAppOptions\fP gAppOptions, void  activateFnGtkApplication *app, gpointer user_data)"
+.SS "int builderAddContent (\fBAlooBuilder\fP * build, const char * content, gssize length, GError ** err)"
+
+.PP
+Adds a file with builder\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbuild\fP \fBAlooBuilder\fP object 
+.br
+\fIcontent\fP UI data 
+.br
+\fIlength\fP UI data length 
+.br
+\fIerr\fP Error handler, Default \fCNULL\fP 
+.RE
+.PP
+
+.SS "int builderAddFile (\fBAlooBuilder\fP * build, const char * filename, GError ** err)"
+
+.PP
+Adds a file with builder\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbuild\fP \fBAlooBuilder\fP object 
+.br
+\fIfilename\fP UI file path with name 
+.br
+\fIerr\fP Error handler, Default \fCNULL\fP 
+.RE
+.PP
+
+.SS "int builderAddResource (\fBAlooBuilder\fP * build, const char * resource_path, GError ** err)"
+
+.PP
+Adds a file with builder\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbuild\fP \fBAlooBuilder\fP object 
+.br
+\fIresource_path\fP UI resource path 
+.br
+\fIerr\fP Error handler, Default \fCNULL\fP 
+.RE
+.PP
+
+.SS "struct \fBalooApp_Status\fP CreateApp (char * app_id, struct \fBalooAppOptions\fP gAppOptions, void  activateFnGtkApplication *app, gpointer user_data)"
 
 .PP
 Create a App object\&. 
@@ -176,7 +289,7 @@ Create a App object\&.
 .RS 4
 \fIapp_id\fP App Id are like com\&.google\&.Chrome, dev\&.zed\&.Zed 
 .br
-\fIgAppOptions\fP It takes GApplicationFlags, argc and argv 
+\fIappOptions\fP It takes GApplicationFlags, argc and argv 
 .br
 \fIactivateFn\fP static void function which will be called when app is started 
 .RE
@@ -184,6 +297,17 @@ Create a App object\&.
 \fBReturns\fP
 .RS 4
 It returns GtkApplication and status 
+.RE
+.PP
+
+.SS "\fBAlooBuilder\fP* createBuilder ()"
+
+.PP
+Create a Builder object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+AlooBuilder* 
 .RE
 .PP
 
@@ -199,10 +323,10 @@ Sets aloo Window size\&.
 
 .PP
 Shows Window\&. 
-.SS "void unrefObject (gpointer data)"
+.SS "void unrefBuilder (\fBAlooBuilder\fP * data)"
 
 .PP
-Unrefs object\&. 
+Unrefs aloo builder\&. 
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Aloo from the source code\&.

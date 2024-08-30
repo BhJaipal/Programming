@@ -17,7 +17,6 @@ include_directories(
 	"/usr/include/gdk-pixbuf-2.0"
 	"/usr/lib/x86_64-linux-gnu/glib-2.0/include"
 	"/usr/include/gtk-4.0/gdk"
-	"/usr/include/gtk-4.0"
 	"/usr/include/cairo"
 	"/usr/lib/x86_64-linux-gnu/graphene-1.0/include"
 	"/usr/include/pango-1.0"

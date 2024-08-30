@@ -46,12 +46,12 @@ alooWidget *GTK_TO_ALOO(GtkWidget *widget) {
 	return wid;
 }
 
-GtkWidget *OBJECT_TO_GTK_WIDGET(GtkBuilder *builder, const char *name) {
-	return GTK_WIDGET(gtk_builder_get_object(builder, name));
+GtkWidget *OBJECT_TO_GTK_WIDGET(AlooBuilder *builder, const char *name) {
+	return GTK_WIDGET(gtk_builder_get_object(builder->builder, name));
 }
 
-alooWidget *alooWidgetFromBuilder(GtkBuilder *builder, const char *name) {
-	return OBJECT_TO_ALOO(gtk_builder_get_object(builder, name));
+alooWidget *alooWidgetFromBuilder(AlooBuilder *builder, const char *name) {
+	return OBJECT_TO_ALOO(gtk_builder_get_object(builder->builder, name));
 }
 
 alooWidget *alooSetOrientation(alooWidget *widget, GtkOrientation orien) {

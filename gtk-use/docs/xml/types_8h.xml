@@ -88,6 +88,7 @@
       </node>
     </invincdepgraph>
     <innerclass refid="structalooWidget" prot="public">alooWidget</innerclass>
+    <innerclass refid="structAlooBuilder" prot="public">AlooBuilder</innerclass>
       <sectiondef kind="define">
       <memberdef kind="define" id="types_8h_1a67f574a286eb62d2279853cb32e61d02" prot="public" static="no">
         <name>ALOO_WIDGET_TO_GTK</name>
@@ -99,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/types.h" line="53" column="9" bodyfile="include/types.h" bodystart="53" bodyend="-1"/>
+        <location file="include/types.h" line="57" column="9" bodyfile="include/types.h" bodystart="57" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -226,8 +227,12 @@
 <codeline lineno="50" refid="structalooWidget_1a6db0456b6604492033507fcaeda3fe46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452" kindref="member">WidgetType</ref><sp/><ref refid="structalooWidget_1a6db0456b6604492033507fcaeda3fe46" kindref="member">type</ref>;</highlight></codeline>
 <codeline lineno="51" refid="types_8h_1a740317088cd233e81015b298babff7be" refkind="member"><highlight class="normal">}<sp/><ref refid="types_8h_1a740317088cd233e81015b298babff7be" kindref="member">alooWidget</ref>;</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53" refid="types_8h_1a67f574a286eb62d2279853cb32e61d02" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_WIDGET_TO_GTK(x)<sp/>x-&gt;child</highlight></codeline>
-<codeline lineno="54"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_TYPES_H</highlight></codeline>
+<codeline lineno="53" refid="structAlooBuilder" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54" refid="structAlooBuilder_1a598a671ad4e908039cbdbf778f71772f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GtkBuilder<sp/>*<ref refid="structAlooBuilder_1a598a671ad4e908039cbdbf778f71772f" kindref="member">builder</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}<sp/><ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="types_8h_1a67f574a286eb62d2279853cb32e61d02" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_WIDGET_TO_GTK(x)<sp/>x-&gt;child</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_TYPES_H</highlight></codeline>
     </programlisting>
     <location file="include/types.h"/>
   </compounddef>

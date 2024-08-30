@@ -21,7 +21,7 @@
 - **Resturns**: `GtkWidget *`
 - **Description**: Creates GtkWidget from builder.
 - **Parameters**:
-- - `GtkBuilder *builder`
+- - `AlooBuilder *builder`
 - - `const char *name`
 
 ### `alooWidgetFromBuilder`
@@ -29,7 +29,7 @@
 - **Resturns**: `alooWidget *`
 - **Description**: Creates alooWidget from builder.
 - **Parameters**:
-- - `GtkBuilder *builder`
+- - `AlooBuilder *builder`
 - - `const char *name`
 
 ### `alooSetOrientation`

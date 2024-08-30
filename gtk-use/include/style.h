@@ -3,6 +3,23 @@
 #include "types.h"
 
 /**
+ * @brief Import CSS file from path
+ * @param name path of css file
+ */
+void importCssFromPath(const char *name);
+/**
+ * @brief Import CSS file from content
+ * @param content css content
+ * @param length content length
+ */
+void importCssFromData(const char *content, gssize length);
+/**
+ * @brief Import CSS file from content
+ * @param file CSS GFile
+ */
+void importCssFromFile(GFile *file);
+
+/**
  * @brief Set the Width of widget
  */
 alooWidget *setWidth(alooWidget *wid, int width);

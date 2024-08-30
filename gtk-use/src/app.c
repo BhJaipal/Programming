@@ -1,17 +1,25 @@
 #include "../include/app.h"
 
-struct alooAppAndStatus
+struct alooApp_Status
 CreateApp(char *appName, struct alooAppOptions gAppOptions,
 		  void activateFn(GtkApplication *app, gpointer user_data)) {
 	GtkApplication *gtkApp;
 	int status;
 
-	gtkApp = gtk_application_new(appName, gAppOptions.GAppFlags);
+	GApplicationFlags flags;
+	switch (gAppOptions.appFlags) {
+	case APP_FLAGS_NONE: flags = G_APPLICATION_FLAGS_NONE; break;
+	case APP_FLAGS_IS_SERVICE: flags = G_APPLICATION_IS_SERVICE; break;
+	case APP_FLAGS_IS_LAUNCHER: flags = G_APPLICATION_IS_LAUNCHER; break;
+	default: flags = G_APPLICATION_FLAGS_NONE; break;
+	}
+	gtkApp = gtk_application_new(appName, flags);
 	g_signal_connect(gtkApp, "activate", G_CALLBACK(activateFn), NULL);
 	status = g_application_run(G_APPLICATION(gtkApp), gAppOptions.argc,
 							   gAppOptions.argv);
+	struct alooApp_Status out = {gtkApp, status};
+
 	g_object_unref(gtkApp);
-	struct alooAppAndStatus out = {gtkApp, status};
 	return out;
 }
 
@@ -54,8 +62,8 @@ alooWidget *setWindowSize(alooWidget *window, int width, int height) {
 	return window;
 }
 
-GObject *alooGetBuilderObject(GtkBuilder *builder, const char *name) {
-	return gtk_builder_get_object(builder, name);
+GObject *alooGetBuilderObject(AlooBuilder *builder, const char *name) {
+	return gtk_builder_get_object(builder->builder, name);
 }
 
 alooWidget *setWindowApplication(alooWidget *window, GtkApplication *app) {
@@ -69,4 +77,22 @@ void showWindow(alooWidget *window) {
 		gtk_widget_show(window->child);
 	}
 }
-void unrefObject(gpointer data) { g_object_unref(data); }
+void unrefBuilder(AlooBuilder *data) { g_object_unref(data->builder); }
+
+AlooBuilder *createBuilder() {
+	AlooBuilder *out = malloc(sizeof(AlooBuilder));
+	out->builder = gtk_builder_new();
+	return out;
+}
+
+int builderAddFile(AlooBuilder *build, const char *filename, GError **err) {
+	return gtk_builder_add_from_file(build->builder, filename, err);
+}
+int builderAddContent(AlooBuilder *build, const char *content, gssize length,
+					  GError **err) {
+	return gtk_builder_add_from_string(build->builder, content, length, err);
+}
+int builderAddResource(AlooBuilder *build, const char *resource_path,
+					   GError **err) {
+	return gtk_builder_add_from_resource(build->builder, resource_path, err);
+}

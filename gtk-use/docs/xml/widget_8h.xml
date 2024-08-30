@@ -73,13 +73,13 @@
         </inbodydescription>
         <location file="include/widget.h" line="14" column="12" declfile="include/widget.h" declline="14" declcolumn="12"/>
       </memberdef>
-      <memberdef kind="function" id="widget_8h_1ae89f81e79316509bd3ab0ec8ee65d206" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="widget_8h_1a64d12e6dae8dfac76d2231f411cba885" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>GtkWidget *</type>
         <definition>GtkWidget* OBJECT_TO_GTK_WIDGET</definition>
-        <argsstring>(GtkBuilder *builder, const char *name)</argsstring>
+        <argsstring>(AlooBuilder *builder, const char *name)</argsstring>
         <name>OBJECT_TO_GTK_WIDGET</name>
         <param>
-          <type>GtkBuilder *</type>
+          <type><ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref> *</type>
           <declname>builder</declname>
         </param>
         <param>
@@ -95,13 +95,13 @@
         </inbodydescription>
         <location file="include/widget.h" line="19" column="11" declfile="include/widget.h" declline="19" declcolumn="11"/>
       </memberdef>
-      <memberdef kind="function" id="widget_8h_1a7e68157e7fba45466a36cba6f79fe971" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="widget_8h_1ab357e941224d0aa29fdd240b86f670cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
         <definition>alooWidget* alooWidgetFromBuilder</definition>
-        <argsstring>(GtkBuilder *builder, const char *name)</argsstring>
+        <argsstring>(AlooBuilder *builder, const char *name)</argsstring>
         <name>alooWidgetFromBuilder</name>
         <param>
-          <type>GtkBuilder *</type>
+          <type><ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref> *</type>
           <declname>builder</declname>
         </param>
         <param>
@@ -238,9 +238,9 @@
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14" refid="widget_8h_1a3c4124ba611f4967a0f00feddc1e3efd" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="widget_8h_1a3c4124ba611f4967a0f00feddc1e3efd" kindref="member">OBJECT_TO_ALOO</ref>(GObject<sp/>*obj);</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19" refid="widget_8h_1ae89f81e79316509bd3ab0ec8ee65d206" refkind="member"><highlight class="normal">GtkWidget<sp/>*<ref refid="widget_8h_1ae89f81e79316509bd3ab0ec8ee65d206" kindref="member">OBJECT_TO_GTK_WIDGET</ref>(GtkBuilder<sp/>*builder,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="19" refid="widget_8h_1a64d12e6dae8dfac76d2231f411cba885" refkind="member"><highlight class="normal">GtkWidget<sp/>*<ref refid="widget_8h_1a64d12e6dae8dfac76d2231f411cba885" kindref="member">OBJECT_TO_GTK_WIDGET</ref>(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*builder,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24" refid="widget_8h_1a7e68157e7fba45466a36cba6f79fe971" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="widget_8h_1a7e68157e7fba45466a36cba6f79fe971" kindref="member">alooWidgetFromBuilder</ref>(GtkBuilder<sp/>*builder,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="24" refid="widget_8h_1ab357e941224d0aa29fdd240b86f670cd" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="widget_8h_1ab357e941224d0aa29fdd240b86f670cd" kindref="member">alooWidgetFromBuilder</ref>(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*builder,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29" refid="widget_8h_1a5524d050f5e28511da11303085ab90a0" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="widget_8h_1a5524d050f5e28511da11303085ab90a0" kindref="member">alooSetOrientation</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/>GtkOrientation<sp/>orien);</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>

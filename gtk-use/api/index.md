@@ -8,10 +8,12 @@
 > Listing all functions is hard so I only added function tag
 
 - [**Structures**](app.md#struct)
-- - [`alooAppAndStatus`](app.md#alooappandstatus)
+- - [`alooApp_Status`](app.md#alooApp_Status)
 - - [`alooAppOptions`](app.md#alooappoptions)
 - [**Macros**](app.md#macros)
 - - [`ALOO_IS_WINDOW`](app.md#aloo_is_windowx)
+- [**Enums**](app.md#enumerations)
+- - [`alooAppFlags`](app.md#alooappflags)
 - [**Functions**](app.md#functions)
 
 ### [`box.h`](box.md)

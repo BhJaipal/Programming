@@ -6,33 +6,67 @@
 /**
  * @brief Returns GtkApplication and status
  */
-struct alooAppAndStatus {
+struct alooApp_Status {
 	GtkApplication *app;
 	int status;
 };
+
+/**
+ * @brief G Application Flags
+ */
+enum alooAppFlags {
+	/**
+	 * @brief G_APPLICATION_FLAGS_NONE
+	 */
+	APP_FLAGS_NONE = 0,
+	/**
+	 * @brief G_APPLICATION_FLAGS_IS_LAUNCHER
+	 */
+	APP_FLAGS_IS_LAUNCHER,
+	/**
+	 * @brief G_APPLICATION_FLAGS_IS_SERVICE
+	 */
+	APP_FLAGS_IS_SERVICE
+};
+
 /**
  * @brief Takes GApplicationFlags, argc and argv
- *
  */
 struct alooAppOptions {
-	GApplicationFlags GAppFlags;
+	enum alooAppFlags appFlags;
 	int argc;
 	char **argv;
 };
+
+/**
+ * @brief generates app options with APP_FLAGS_NONE
+ */
+#define NONE_FLAGS_OPTIONS(argc, argv)                                         \
+	{ APP_FLAGS_NONE, argc, argv }
+/**
+ * @brief generates app options with APP_FLAGS_IS_LAUNCHER
+ */
+#define LAUNCHER_FLAGS_OPTIONS(argc, argv)                                     \
+	{ APP_FLAGS_IS_LAUNCHER, argc, argv }
+/**
+ * @brief generates app options with APP_FLAGS_IS_SERVICE
+ */
+#define SERVICE_FLAGS_OPTIONS(argc, argv)                                      \
+	{ APP_FLAGS_IS_SERVICE, argc, argv }
 
 #define ALOO_IS_WINDOW(X) GTK_IS_WINDOW(X->child)
 
 /**
  * @brief Create a App object
  * @param app_id App Id are like com.google.Chrome, dev.zed.Zed
- * @param gAppOptions It takes GApplicationFlags, argc and argv
+ * @param appOptions It takes GApplicationFlags, argc and argv
  * @param activateFn static void function which will be called when app is
  * started
  * @return It returns GtkApplication and status
  */
-struct alooAppAndStatus
-CreateApp(char *app_id, struct alooAppOptions gAppOptions,
-		  void activateFn(GtkApplication *app, gpointer user_data));
+struct alooApp_Status CreateApp(char *app_id, struct alooAppOptions gAppOptions,
+								void activateFn(GtkApplication *app,
+												gpointer user_data));
 
 /**
  * @brief Sets horizontal alignment of alooWidget
@@ -91,7 +125,7 @@ alooWidget *setWindowSize(alooWidget *window, int width, int height);
 /**
  * @brief Gets GObject from builder
  */
-GObject *alooGetBuilderObject(GtkBuilder *builder, const char *name);
+GObject *alooGetBuilderObject(AlooBuilder *builder, const char *name);
 
 /**
  * @brief Set the Window for Application
@@ -104,8 +138,41 @@ alooWidget *setWindowApplication(alooWidget *window, GtkApplication *app);
 void showWindow(alooWidget *window);
 
 /**
- * @brief Unrefs object
+ * @brief Unrefs aloo builder
  */
-void unrefObject(gpointer data);
+void unrefBuilder(AlooBuilder *data);
+
+/**
+ * @brief Create a Builder object
+ * @return AlooBuilder*
+ */
+AlooBuilder *createBuilder();
+
+/**
+ * @brief Adds a file with builder
+ * @param build AlooBuilder object
+ * @param filename UI file path with name
+ * @param err Error handler, Default `NULL`
+ */
+int builderAddFile(AlooBuilder *build, const char *filename, GError **err);
+
+/**
+ * @brief Adds a file with builder
+ * @param build AlooBuilder object
+ * @param content UI data
+ * @param length UI data length
+ * @param err Error handler, Default `NULL`
+ */
+int builderAddContent(AlooBuilder *build, const char *content, gssize length,
+					  GError **err);
+
+/**
+ * @brief Adds a file with builder
+ * @param build AlooBuilder object
+ * @param resource_path UI resource path
+ * @param err Error handler, Default `NULL`
+ */
+int builderAddResource(AlooBuilder *build, const char *resource_path,
+					   GError **err);
 
 #endif // ALOO_APP_H

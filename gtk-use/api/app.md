@@ -1,8 +1,18 @@
 # app.h
 
+## Enumrations
+
+### `alooAppFlags`
+
+- **Description**: G Application Flags
+- **Values**:
+- - `APP_FLAGS_NONE`: G_APPLICATION_FLAGS_NONE
+- - `APP_FLAGS_IS_LAUNCHER`: G_APPLICATION_FLAGS_IS_LAUNCHER
+- - `APP_FLAGS_IS_SERVICE`: G_APPLICATION_FLAGS_IS_SERVICE
+
 ## Struct
 
-### alooAppAndStatus
+### alooApp_Status
 
 - **Description**: Returns GtkApplication and status.
 - **Members**:
@@ -13,7 +23,7 @@
 
 - **Description**: Takes GApplicationFlags, argc and argv.
 - **Members**:
-- - `GApplicationFlags GAppFlags`
+- - `enum alooAppFlags appFlags`
 - - `int argc`
 - - `char **argv`
 
@@ -26,11 +36,35 @@
 - - `GTK_IS_WINDOW(X->child)`
 - **Returns**: 0 or 1
 
+### NONE_FLAGS_OPTIONS
+
+- **Description**: generates app options with APP_FLAGS_NONE
+- **body**: `{ APP_FLAGS_NONE, argc, argv }`
+- **Parameters**:
+- - `int argc`
+- - `char **argv`
+
+### LAUNCHER_FLAGS_OPTIONS
+
+- **Description**: generates app options with APP_FLAGS_IS_LAUNCHER
+- **body**: `{ APP_FLAGS_IS_LAUNCHER, argc, argv }`
+- **Parameters**:
+- - `int argc`
+- - `char **argv`
+
+### SERVICE_FLAGS_OPTIONS
+
+- **Description**: generates app options with APP_FLAGS_IS_SERVICE
+- **body**: `{ APP_FLAGS_IS_SERVICE, argc, argv }`
+- **Parameters**:
+- - `int argc`
+- - `char **argv`
+
 ## Functions
 
 ### CreateApp
 
-- **Returns**: `struct alooAppAndStatus`
+- **Returns**: `struct alooApp_Status`
 -
 - **Description**: Create a App object.
 -
@@ -134,9 +168,44 @@
 - **Parameters**:
 - - `alooWidget *window`
 
-### `unrefObject`
+### `unrefBuilder`
 
 - **Returns**: `void`
-- **Description**: Unrefs object
+- **Description**: Unrefs aloo builder
+-
+- **Parameters**:**Parameters**:
+- - `AlooBuilder *object`
+
+### createBuilder
+
+- **Description**: Create a Builder object
+- **Return**: `AlooBuilder*`
+- **No Parameters**
+
+### builderAddFile
+
+- **Description**: Adds a file with builder
+- **Returms**: int
 - **Parameters**:
-- - `gpointer object`
+- - `AlooBuilder*build`: build AlooBuilder object
+- - `const char *filename`: filename UI file path with name
+- - `GError **err`: err Error handler, Default `NULL`
+
+### builderAddContent
+
+- **Description**: Adds a file with builder
+- **Returms**: int
+- **Parameters**:
+- - `AlooBuilder*build`: build AlooBuilder object
+- - `const char *content`: content UI data
+- - `gssize length`: length UI data length
+- - `GError **err`: err Error handler, Default `NULL`
+
+### builderAddResource
+
+- **Description**: Adds a file with builder
+- **Returms**: int
+- **Parameters**:
+- - `AlooBuilder*build`: build AlooBuilder object
+- - `const char *resource_path`: resource_path UI resource path
+- - `GError **err`: err Error handler, Default `NULL`

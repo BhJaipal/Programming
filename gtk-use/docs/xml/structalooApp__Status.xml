@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
-  <compounddef id="structalooApp_Status" kind="struct" language="C++" prot="public">
+  <compounddef id="structalooApp__Status" kind="struct" language="C++" prot="public">
     <compoundname>alooApp_Status</compoundname>
     <includes refid="app_8h" local="no">app.h</includes>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="structalooApp_Status_1afc170dcd48b746aa96bfef7aa01753f5" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structalooApp__Status_1a3eb578eacf93fea1f52147663d3d7359" prot="public" static="no" mutable="no">
         <type>GtkApplication *</type>
         <definition>GtkApplication* alooApp_Status::app</definition>
         <argsstring></argsstring>
@@ -17,7 +17,7 @@
         </inbodydescription>
         <location file="include/app.h" line="10" column="16" bodyfile="include/app.h" bodystart="10" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="structalooApp_Status_1a56d74bc7e1f7a1d5390c97432dca5eea" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structalooApp__Status_1a5acd3502c8236365d599e6ca498b95ad" prot="public" static="no" mutable="no">
         <type>int</type>
         <definition>int alooApp_Status::status</definition>
         <argsstring></argsstring>
@@ -38,8 +38,8 @@
     </detaileddescription>
     <location file="include/app.h" line="9" column="1" bodyfile="include/app.h" bodystart="9" bodyend="12"/>
     <listofallmembers>
-      <member refid="structalooApp_Status_1afc170dcd48b746aa96bfef7aa01753f5" prot="public" virt="non-virtual"><scope>alooApp_Status</scope><name>app</name></member>
-      <member refid="structalooApp_Status_1a56d74bc7e1f7a1d5390c97432dca5eea" prot="public" virt="non-virtual"><scope>alooApp_Status</scope><name>status</name></member>
+      <member refid="structalooApp__Status_1a3eb578eacf93fea1f52147663d3d7359" prot="public" virt="non-virtual"><scope>alooApp_Status</scope><name>app</name></member>
+      <member refid="structalooApp__Status_1a5acd3502c8236365d599e6ca498b95ad" prot="public" virt="non-virtual"><scope>alooApp_Status</scope><name>status</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

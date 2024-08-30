@@ -1,4 +1,4 @@
-.TH "alooAppOptions" 3 "Fri Aug 30 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "alooAppOptions" 3 "Sat Aug 31 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,7 +13,7 @@ alooAppOptions \- Takes GApplicationFlags, argc and argv\&.
 
 .in +1c
 .ti -1c
-.RI "GApplicationFlags \fBGAppFlags\fP"
+.RI "enum \fBalooAppFlags\fP \fBappFlags\fP"
 .br
 .ti -1c
 .RI "int \fBargc\fP"
@@ -27,11 +27,11 @@ alooAppOptions \- Takes GApplicationFlags, argc and argv\&.
 Takes GApplicationFlags, argc and argv\&. 
 .SH "Member Data Documentation"
 .PP 
+.SS "enum \fBalooAppFlags\fP alooAppOptions::appFlags"
+
 .SS "int alooAppOptions::argc"
 
 .SS "char** alooAppOptions::argv"
-
-.SS "GApplicationFlags alooAppOptions::GAppFlags"
 
 
 .SH "Author"

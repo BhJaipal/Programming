@@ -16,12 +16,12 @@ alooWidget *OBJECT_TO_ALOO(GObject *obj);
 /**
  * @brief Creates GtkWidget from builder
  */
-GtkWidget *OBJECT_TO_GTK_WIDGET(GtkBuilder *builder, const char *name);
+GtkWidget *OBJECT_TO_GTK_WIDGET(AlooBuilder *builder, const char *name);
 
 /**
  * @brief Creates alooWidget from builder
  */
-alooWidget *alooWidgetFromBuilder(GtkBuilder *builder, const char *name);
+alooWidget *alooWidgetFromBuilder(AlooBuilder *builder, const char *name);
 
 /**
  * @brief Sets orientation of alooWidget

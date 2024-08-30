@@ -1,4 +1,4 @@
-.TH "include/widget.h" 3 "Fri Aug 30 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "include/widget.h" 3 "Sat Aug 31 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,11 +23,11 @@ include/widget.h
 .br
 .RI "Create \fBalooWidget\fP from GObject\&. "
 .ti -1c
-.RI "GtkWidget * \fBOBJECT_TO_GTK_WIDGET\fP (GtkBuilder *builder, const char *name)"
+.RI "GtkWidget * \fBOBJECT_TO_GTK_WIDGET\fP (\fBAlooBuilder\fP *builder, const char *name)"
 .br
 .RI "Creates GtkWidget from builder\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBalooWidgetFromBuilder\fP (GtkBuilder *builder, const char *name)"
+.RI "\fBalooWidget\fP * \fBalooWidgetFromBuilder\fP (\fBAlooBuilder\fP *builder, const char *name)"
 .br
 .RI "Creates \fBalooWidget\fP from builder\&. "
 .ti -1c
@@ -49,7 +49,7 @@ include/widget.h
 
 .PP
 Sets orientation of \fBalooWidget\fP\&. 
-.SS "\fBalooWidget\fP* alooWidgetFromBuilder (GtkBuilder * builder, const char * name)"
+.SS "\fBalooWidget\fP* alooWidgetFromBuilder (\fBAlooBuilder\fP * builder, const char * name)"
 
 .PP
 Creates \fBalooWidget\fP from builder\&. 
@@ -79,7 +79,7 @@ alooWidget*
 
 .PP
 Create \fBalooWidget\fP from GObject\&. 
-.SS "GtkWidget* OBJECT_TO_GTK_WIDGET (GtkBuilder * builder, const char * name)"
+.SS "GtkWidget* OBJECT_TO_GTK_WIDGET (\fBAlooBuilder\fP * builder, const char * name)"
 
 .PP
 Creates GtkWidget from builder\&. 

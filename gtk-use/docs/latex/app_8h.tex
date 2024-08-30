@@ -9,19 +9,33 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structalooAppAndStatus}{aloo\+App\+And\+Status}}
+struct \mbox{\hyperlink{structalooApp__Status}{aloo\+App\+\_\+\+Status}}
 \begin{DoxyCompactList}\small\item\em Returns Gtk\+Application and status. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structalooAppOptions}{aloo\+App\+Options}}
 \begin{DoxyCompactList}\small\item\em Takes GApplication\+Flags, argc and argv. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
+\#define \mbox{\hyperlink{app_8h_ac9137a5bae01fa8f8d81942f8ea98c93}{NONE\+\_\+\+FLAGS\+\_\+\+OPTIONS}}(argc,  argv)~ \{ \mbox{\hyperlink{app_8h_a3c3f24e41c05c726eae5ba69a4c0974ca0ea9c2e3ff643aa13b9e4e3a3d6a689a}{APP\+\_\+\+FLAGS\+\_\+\+NONE}}, argc, argv \}
+\begin{DoxyCompactList}\small\item\em generates app options with APP\+\_\+\+FLAGS\+\_\+\+NONE \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{app_8h_a7e8face0ef0eb9ad79f944cadb88b9a9}{LAUNCHER\+\_\+\+FLAGS\+\_\+\+OPTIONS}}(argc,  argv)~ \{ \mbox{\hyperlink{app_8h_a3c3f24e41c05c726eae5ba69a4c0974ca210dad3de3ceb82c0ae1e18bbcd7c575}{APP\+\_\+\+FLAGS\+\_\+\+IS\+\_\+\+LAUNCHER}}, argc, argv \}
+\begin{DoxyCompactList}\small\item\em generates app options with APP\+\_\+\+FLAGS\+\_\+\+IS\+\_\+\+LAUNCHER \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{app_8h_a6008f3d8d9740cf975902f6e7cbc2afc}{SERVICE\+\_\+\+FLAGS\+\_\+\+OPTIONS}}(argc,  argv)~ \{ \mbox{\hyperlink{app_8h_a3c3f24e41c05c726eae5ba69a4c0974cab47f6b942f04f046f352ac0d73da72e3}{APP\+\_\+\+FLAGS\+\_\+\+IS\+\_\+\+SERVICE}}, argc, argv \}
+\begin{DoxyCompactList}\small\item\em generates app options with APP\+\_\+\+FLAGS\+\_\+\+IS\+\_\+\+SERVICE \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{app_8h_af8678607ed9bc1b700af2948ecc54eab}{ALOO\+\_\+\+IS\+\_\+\+WINDOW}}(X)~GTK\+\_\+\+IS\+\_\+\+WINDOW(X-\/$>$child)
 \end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{app_8h_a3c3f24e41c05c726eae5ba69a4c0974c}{aloo\+App\+Flags}} \{ \mbox{\hyperlink{app_8h_a3c3f24e41c05c726eae5ba69a4c0974ca0ea9c2e3ff643aa13b9e4e3a3d6a689a}{APP\+\_\+\+FLAGS\+\_\+\+NONE}} = 0
+, \mbox{\hyperlink{app_8h_a3c3f24e41c05c726eae5ba69a4c0974ca210dad3de3ceb82c0ae1e18bbcd7c575}{APP\+\_\+\+FLAGS\+\_\+\+IS\+\_\+\+LAUNCHER}}
+, \mbox{\hyperlink{app_8h_a3c3f24e41c05c726eae5ba69a4c0974cab47f6b942f04f046f352ac0d73da72e3}{APP\+\_\+\+FLAGS\+\_\+\+IS\+\_\+\+SERVICE}}
+ \}
+\begin{DoxyCompactList}\small\item\em G Application Flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structalooAppAndStatus}{aloo\+App\+And\+Status}} \mbox{\hyperlink{app_8h_a65d50f50a660970474fab5e355370da9}{Create\+App}} (char $\ast$app\+\_\+id, struct \mbox{\hyperlink{structalooAppOptions}{aloo\+App\+Options}} g\+App\+Options, void activate\+Fn(Gtk\+Application $\ast$app, gpointer user\+\_\+data))
+struct \mbox{\hyperlink{structalooApp__Status}{aloo\+App\+\_\+\+Status}} \mbox{\hyperlink{app_8h_afd2b2ad2dc96320df448c0835aee1bb4}{Create\+App}} (char $\ast$app\+\_\+id, struct \mbox{\hyperlink{structalooAppOptions}{aloo\+App\+Options}} g\+App\+Options, void activate\+Fn(Gtk\+Application $\ast$app, gpointer user\+\_\+data))
 \begin{DoxyCompactList}\small\item\em Create a App object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{app_8h_a0afb7ad04f1aadda78c408cb89632a98}{aloo\+Horizontal\+Align}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, Gtk\+Align alignment)
 \begin{DoxyCompactList}\small\item\em Sets horizontal alignment of \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}. \end{DoxyCompactList}\item 
@@ -41,14 +55,22 @@ Gtk\+Widget $\ast$ \mbox{\hyperlink{app_8h_ac46dc2c7069e7755ec43eb8cab9972c4}{al
 \begin{DoxyCompactList}\small\item\em Sets Gtk\+Window title. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{app_8h_a64b7d24a9ac0ffcbdf783b7a4e5f7f49}{set\+Window\+Size}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window, int width, int height)
 \begin{DoxyCompactList}\small\item\em Sets aloo Window size. \end{DoxyCompactList}\item 
-GObject $\ast$ \mbox{\hyperlink{app_8h_a1768f18b204bebc0570b0d61d028bb5a}{aloo\+Get\+Builder\+Object}} (Gtk\+Builder $\ast$builder, const char $\ast$name)
+GObject $\ast$ \mbox{\hyperlink{app_8h_a294e832dd251cf1344b51aada122beb7}{aloo\+Get\+Builder\+Object}} (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$builder, const char $\ast$name)
 \begin{DoxyCompactList}\small\item\em Gets GObject from builder. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{app_8h_a92fede26107ad6969917aafe93de0644}{set\+Window\+Application}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window, Gtk\+Application $\ast$app)
 \begin{DoxyCompactList}\small\item\em Set the Window for Application. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{app_8h_ac36f38589d0afa325b5fa36f37d8dc00}{show\+Window}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window)
 \begin{DoxyCompactList}\small\item\em Shows Window. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{app_8h_a869ae1b4d57340dbfeaaae16722020de}{unref\+Object}} (gpointer data)
-\begin{DoxyCompactList}\small\item\em Unrefs object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{app_8h_a7c4375b759893ed87966847c44cb8852}{unref\+Builder}} (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Unrefs aloo builder. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$ \mbox{\hyperlink{app_8h_a304bd6b95029bdd9a525beee6979bf2c}{create\+Builder}} ()
+\begin{DoxyCompactList}\small\item\em Create a Builder object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{app_8h_a07593dbb7188b21360ce9f5a567eaba3}{builder\+Add\+File}} (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$build, const char $\ast$filename, GError $\ast$$\ast$err)
+\begin{DoxyCompactList}\small\item\em Adds a file with builder. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{app_8h_a4ebb10d482977502640f10a80effd08d}{builder\+Add\+Content}} (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$build, const char $\ast$content, gssize length, GError $\ast$$\ast$err)
+\begin{DoxyCompactList}\small\item\em Adds a file with builder. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{app_8h_ae07a87c38ce1013d04016f848fb770c5}{builder\+Add\+Resource}} (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$build, const char $\ast$resource\+\_\+path, GError $\ast$$\ast$err)
+\begin{DoxyCompactList}\small\item\em Adds a file with builder. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -58,6 +80,63 @@ void \mbox{\hyperlink{app_8h_a869ae1b4d57340dbfeaaae16722020de}{unref\+Object}} 
 \doxysubsubsection{\texorpdfstring{ALOO\_IS\_WINDOW}{ALOO\_IS\_WINDOW}}
 {\footnotesize\ttfamily \#define ALOO\+\_\+\+IS\+\_\+\+WINDOW(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~GTK\+\_\+\+IS\+\_\+\+WINDOW(X-\/$>$child)}
 
+\mbox{\Hypertarget{app_8h_a7e8face0ef0eb9ad79f944cadb88b9a9}\label{app_8h_a7e8face0ef0eb9ad79f944cadb88b9a9}} 
+\index{app.h@{app.h}!LAUNCHER\_FLAGS\_OPTIONS@{LAUNCHER\_FLAGS\_OPTIONS}}
+\index{LAUNCHER\_FLAGS\_OPTIONS@{LAUNCHER\_FLAGS\_OPTIONS}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{LAUNCHER\_FLAGS\_OPTIONS}{LAUNCHER\_FLAGS\_OPTIONS}}
+{\footnotesize\ttfamily \#define LAUNCHER\+\_\+\+FLAGS\+\_\+\+OPTIONS(\begin{DoxyParamCaption}\item[{}]{argc,  }\item[{}]{argv }\end{DoxyParamCaption})~ \{ \mbox{\hyperlink{app_8h_a3c3f24e41c05c726eae5ba69a4c0974ca210dad3de3ceb82c0ae1e18bbcd7c575}{APP\+\_\+\+FLAGS\+\_\+\+IS\+\_\+\+LAUNCHER}}, argc, argv \}}
+
+
+
+generates app options with APP\+\_\+\+FLAGS\+\_\+\+IS\+\_\+\+LAUNCHER 
+
+\mbox{\Hypertarget{app_8h_ac9137a5bae01fa8f8d81942f8ea98c93}\label{app_8h_ac9137a5bae01fa8f8d81942f8ea98c93}} 
+\index{app.h@{app.h}!NONE\_FLAGS\_OPTIONS@{NONE\_FLAGS\_OPTIONS}}
+\index{NONE\_FLAGS\_OPTIONS@{NONE\_FLAGS\_OPTIONS}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{NONE\_FLAGS\_OPTIONS}{NONE\_FLAGS\_OPTIONS}}
+{\footnotesize\ttfamily \#define NONE\+\_\+\+FLAGS\+\_\+\+OPTIONS(\begin{DoxyParamCaption}\item[{}]{argc,  }\item[{}]{argv }\end{DoxyParamCaption})~ \{ \mbox{\hyperlink{app_8h_a3c3f24e41c05c726eae5ba69a4c0974ca0ea9c2e3ff643aa13b9e4e3a3d6a689a}{APP\+\_\+\+FLAGS\+\_\+\+NONE}}, argc, argv \}}
+
+
+
+generates app options with APP\+\_\+\+FLAGS\+\_\+\+NONE 
+
+\mbox{\Hypertarget{app_8h_a6008f3d8d9740cf975902f6e7cbc2afc}\label{app_8h_a6008f3d8d9740cf975902f6e7cbc2afc}} 
+\index{app.h@{app.h}!SERVICE\_FLAGS\_OPTIONS@{SERVICE\_FLAGS\_OPTIONS}}
+\index{SERVICE\_FLAGS\_OPTIONS@{SERVICE\_FLAGS\_OPTIONS}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{SERVICE\_FLAGS\_OPTIONS}{SERVICE\_FLAGS\_OPTIONS}}
+{\footnotesize\ttfamily \#define SERVICE\+\_\+\+FLAGS\+\_\+\+OPTIONS(\begin{DoxyParamCaption}\item[{}]{argc,  }\item[{}]{argv }\end{DoxyParamCaption})~ \{ \mbox{\hyperlink{app_8h_a3c3f24e41c05c726eae5ba69a4c0974cab47f6b942f04f046f352ac0d73da72e3}{APP\+\_\+\+FLAGS\+\_\+\+IS\+\_\+\+SERVICE}}, argc, argv \}}
+
+
+
+generates app options with APP\+\_\+\+FLAGS\+\_\+\+IS\+\_\+\+SERVICE 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{app_8h_a3c3f24e41c05c726eae5ba69a4c0974c}\label{app_8h_a3c3f24e41c05c726eae5ba69a4c0974c}} 
+\index{app.h@{app.h}!alooAppFlags@{alooAppFlags}}
+\index{alooAppFlags@{alooAppFlags}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{alooAppFlags}{alooAppFlags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{app_8h_a3c3f24e41c05c726eae5ba69a4c0974c}{aloo\+App\+Flags}}}
+
+
+
+G Application Flags. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{APP\_FLAGS\_NONE@{APP\_FLAGS\_NONE}!app.h@{app.h}}\index{app.h@{app.h}!APP\_FLAGS\_NONE@{APP\_FLAGS\_NONE}}}\mbox{\Hypertarget{app_8h_a3c3f24e41c05c726eae5ba69a4c0974ca0ea9c2e3ff643aa13b9e4e3a3d6a689a}\label{app_8h_a3c3f24e41c05c726eae5ba69a4c0974ca0ea9c2e3ff643aa13b9e4e3a3d6a689a}} 
+APP\+\_\+\+FLAGS\+\_\+\+NONE&G\+\_\+\+APPLICATION\+\_\+\+FLAGS\+\_\+\+NONE. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{APP\_FLAGS\_IS\_LAUNCHER@{APP\_FLAGS\_IS\_LAUNCHER}!app.h@{app.h}}\index{app.h@{app.h}!APP\_FLAGS\_IS\_LAUNCHER@{APP\_FLAGS\_IS\_LAUNCHER}}}\mbox{\Hypertarget{app_8h_a3c3f24e41c05c726eae5ba69a4c0974ca210dad3de3ceb82c0ae1e18bbcd7c575}\label{app_8h_a3c3f24e41c05c726eae5ba69a4c0974ca210dad3de3ceb82c0ae1e18bbcd7c575}} 
+APP\+\_\+\+FLAGS\+\_\+\+IS\+\_\+\+LAUNCHER&G\+\_\+\+APPLICATION\+\_\+\+FLAGS\+\_\+\+IS\+\_\+\+LAUNCHER. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{APP\_FLAGS\_IS\_SERVICE@{APP\_FLAGS\_IS\_SERVICE}!app.h@{app.h}}\index{app.h@{app.h}!APP\_FLAGS\_IS\_SERVICE@{APP\_FLAGS\_IS\_SERVICE}}}\mbox{\Hypertarget{app_8h_a3c3f24e41c05c726eae5ba69a4c0974cab47f6b942f04f046f352ac0d73da72e3}\label{app_8h_a3c3f24e41c05c726eae5ba69a4c0974cab47f6b942f04f046f352ac0d73da72e3}} 
+APP\+\_\+\+FLAGS\+\_\+\+IS\+\_\+\+SERVICE&G\+\_\+\+APPLICATION\+\_\+\+FLAGS\+\_\+\+IS\+\_\+\+SERVICE. \\
+\hline
+
+\end{DoxyEnumFields}
 
 
 \doxysubsection{Function Documentation}
@@ -98,11 +177,11 @@ Create new Gtk\+Button.
 
 Create a Gtk\+Window. 
 
-\mbox{\Hypertarget{app_8h_a1768f18b204bebc0570b0d61d028bb5a}\label{app_8h_a1768f18b204bebc0570b0d61d028bb5a}} 
+\mbox{\Hypertarget{app_8h_a294e832dd251cf1344b51aada122beb7}\label{app_8h_a294e832dd251cf1344b51aada122beb7}} 
 \index{app.h@{app.h}!alooGetBuilderObject@{alooGetBuilderObject}}
 \index{alooGetBuilderObject@{alooGetBuilderObject}!app.h@{app.h}}
 \doxysubsubsection{\texorpdfstring{alooGetBuilderObject()}{alooGetBuilderObject()}}
-{\footnotesize\ttfamily GObject$\ast$ aloo\+Get\+Builder\+Object (\begin{DoxyParamCaption}\item[{Gtk\+Builder $\ast$}]{builder,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily GObject$\ast$ aloo\+Get\+Builder\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$}]{builder,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
 
 
 
@@ -176,11 +255,70 @@ Sets Gtk\+Window title.
 
 Sets vertical alignment of \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}. 
 
-\mbox{\Hypertarget{app_8h_a65d50f50a660970474fab5e355370da9}\label{app_8h_a65d50f50a660970474fab5e355370da9}} 
+\mbox{\Hypertarget{app_8h_a4ebb10d482977502640f10a80effd08d}\label{app_8h_a4ebb10d482977502640f10a80effd08d}} 
+\index{app.h@{app.h}!builderAddContent@{builderAddContent}}
+\index{builderAddContent@{builderAddContent}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{builderAddContent()}{builderAddContent()}}
+{\footnotesize\ttfamily int builder\+Add\+Content (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$}]{build,  }\item[{const char $\ast$}]{content,  }\item[{gssize}]{length,  }\item[{GError $\ast$$\ast$}]{err }\end{DoxyParamCaption})}
+
+
+
+Adds a file with builder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em build} & \mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} object \\
+\hline
+{\em content} & UI data \\
+\hline
+{\em length} & UI data length \\
+\hline
+{\em err} & Error handler, Default {\ttfamily NULL} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{app_8h_a07593dbb7188b21360ce9f5a567eaba3}\label{app_8h_a07593dbb7188b21360ce9f5a567eaba3}} 
+\index{app.h@{app.h}!builderAddFile@{builderAddFile}}
+\index{builderAddFile@{builderAddFile}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{builderAddFile()}{builderAddFile()}}
+{\footnotesize\ttfamily int builder\+Add\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$}]{build,  }\item[{const char $\ast$}]{filename,  }\item[{GError $\ast$$\ast$}]{err }\end{DoxyParamCaption})}
+
+
+
+Adds a file with builder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em build} & \mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} object \\
+\hline
+{\em filename} & UI file path with name \\
+\hline
+{\em err} & Error handler, Default {\ttfamily NULL} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{app_8h_ae07a87c38ce1013d04016f848fb770c5}\label{app_8h_ae07a87c38ce1013d04016f848fb770c5}} 
+\index{app.h@{app.h}!builderAddResource@{builderAddResource}}
+\index{builderAddResource@{builderAddResource}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{builderAddResource()}{builderAddResource()}}
+{\footnotesize\ttfamily int builder\+Add\+Resource (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$}]{build,  }\item[{const char $\ast$}]{resource\+\_\+path,  }\item[{GError $\ast$$\ast$}]{err }\end{DoxyParamCaption})}
+
+
+
+Adds a file with builder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em build} & \mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} object \\
+\hline
+{\em resource\+\_\+path} & UI resource path \\
+\hline
+{\em err} & Error handler, Default {\ttfamily NULL} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{app_8h_afd2b2ad2dc96320df448c0835aee1bb4}\label{app_8h_afd2b2ad2dc96320df448c0835aee1bb4}} 
 \index{app.h@{app.h}!CreateApp@{CreateApp}}
 \index{CreateApp@{CreateApp}!app.h@{app.h}}
 \doxysubsubsection{\texorpdfstring{CreateApp()}{CreateApp()}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structalooAppAndStatus}{aloo\+App\+And\+Status}} Create\+App (\begin{DoxyParamCaption}\item[{char $\ast$}]{app\+\_\+id,  }\item[{struct \mbox{\hyperlink{structalooAppOptions}{aloo\+App\+Options}}}]{g\+App\+Options,  }\item[{void }]{activate\+FnGtk\+Application $\ast$app, gpointer user\+\_\+data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structalooApp__Status}{aloo\+App\+\_\+\+Status}} Create\+App (\begin{DoxyParamCaption}\item[{char $\ast$}]{app\+\_\+id,  }\item[{struct \mbox{\hyperlink{structalooAppOptions}{aloo\+App\+Options}}}]{g\+App\+Options,  }\item[{void }]{activate\+FnGtk\+Application $\ast$app, gpointer user\+\_\+data }\end{DoxyParamCaption})}
 
 
 
@@ -190,13 +328,26 @@ Create a App object.
 \begin{DoxyParams}{Parameters}
 {\em app\+\_\+id} & App Id are like com.\+google.\+Chrome, dev.\+zed.\+Zed \\
 \hline
-{\em g\+App\+Options} & It takes GApplication\+Flags, argc and argv \\
+{\em app\+Options} & It takes GApplication\+Flags, argc and argv \\
 \hline
 {\em activate\+Fn} & static void function which will be called when app is started \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 It returns Gtk\+Application and status 
+\end{DoxyReturn}
+\mbox{\Hypertarget{app_8h_a304bd6b95029bdd9a525beee6979bf2c}\label{app_8h_a304bd6b95029bdd9a525beee6979bf2c}} 
+\index{app.h@{app.h}!createBuilder@{createBuilder}}
+\index{createBuilder@{createBuilder}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{createBuilder()}{createBuilder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}}$\ast$ create\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a Builder object. 
+
+\begin{DoxyReturn}{Returns}
+Aloo\+Builder$\ast$ 
 \end{DoxyReturn}
 \mbox{\Hypertarget{app_8h_a92fede26107ad6969917aafe93de0644}\label{app_8h_a92fede26107ad6969917aafe93de0644}} 
 \index{app.h@{app.h}!setWindowApplication@{setWindowApplication}}
@@ -228,13 +379,13 @@ Sets aloo Window size.
 
 Shows Window. 
 
-\mbox{\Hypertarget{app_8h_a869ae1b4d57340dbfeaaae16722020de}\label{app_8h_a869ae1b4d57340dbfeaaae16722020de}} 
-\index{app.h@{app.h}!unrefObject@{unrefObject}}
-\index{unrefObject@{unrefObject}!app.h@{app.h}}
-\doxysubsubsection{\texorpdfstring{unrefObject()}{unrefObject()}}
-{\footnotesize\ttfamily void unref\+Object (\begin{DoxyParamCaption}\item[{gpointer}]{data }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{app_8h_a7c4375b759893ed87966847c44cb8852}\label{app_8h_a7c4375b759893ed87966847c44cb8852}} 
+\index{app.h@{app.h}!unrefBuilder@{unrefBuilder}}
+\index{unrefBuilder@{unrefBuilder}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{unrefBuilder()}{unrefBuilder()}}
+{\footnotesize\ttfamily void unref\+Builder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$}]{data }\end{DoxyParamCaption})}
 
 
 
-Unrefs object. 
+Unrefs aloo builder. 
 

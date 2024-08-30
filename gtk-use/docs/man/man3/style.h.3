@@ -1,4 +1,4 @@
-.TH "include/style.h" 3 "Fri Aug 30 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "include/style.h" 3 "Sat Aug 31 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,6 +12,18 @@ include/style.h
 .SS "Functions"
 
 .in +1c
+.ti -1c
+.RI "void \fBimportCssFromPath\fP (const char *name)"
+.br
+.RI "Import CSS file from path\&. "
+.ti -1c
+.RI "void \fBimportCssFromData\fP (const char *content, gssize length)"
+.br
+.RI "Import CSS file from content\&. "
+.ti -1c
+.RI "void \fBimportCssFromFile\fP (GFile *file)"
+.br
+.RI "Import CSS file from content\&. "
 .ti -1c
 .RI "\fBalooWidget\fP * \fBsetWidth\fP (\fBalooWidget\fP *wid, int width)"
 .br
@@ -47,6 +59,41 @@ include/style.h
 
 .PP
 Gets classes of widget\&. 
+.SS "void importCssFromData (const char * content, gssize length)"
+
+.PP
+Import CSS file from content\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontent\fP css content 
+.br
+\fIlength\fP content length 
+.RE
+.PP
+
+.SS "void importCssFromFile (GFile * file)"
+
+.PP
+Import CSS file from content\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP CSS GFile 
+.RE
+.PP
+
+.SS "void importCssFromPath (const char * name)"
+
+.PP
+Import CSS file from path\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP path of css file 
+.RE
+.PP
+
 .SS "\fBalooWidget\fP* setHeight (\fBalooWidget\fP * wid, int height)"
 
 .PP

@@ -1,5 +1,4 @@
 #include "../include/aloo.h"
-#include <gdk/gdk.h>
 #include <gtk/gtk.h>
 
 alooWidget *labelGrid;
@@ -78,14 +77,13 @@ void nothingHappened(alooWidget *data) {
 
 static void activate(GtkApplication *app, gpointer user_data) {
 	labelList.len = 0;
-
-	GtkBuilder *builder = gtk_builder_new();
-	gtk_builder_add_from_file(builder, "builder.ui", NULL);
+	AlooBuilder *builder = createBuilder();
+	builderAddFile(builder, "builder.ui", NULL);
 	alooWidget *appBody = alooWidgetFromBuilder(builder, "app");
 	alooWidget *box = alooWidgetFromBuilder(builder, "box");
 	alooWidget *window = alooWidgetFromBuilder(builder, "gtk-window");
-	GObject *buttonWidget = alooWidgetFromBuilder(builder, "add");
-	GObject *rmLabelWidget = alooWidgetFromBuilder(builder, "remove");
+	alooWidget *buttonWidget = alooWidgetFromBuilder(builder, "add");
+	alooWidget *rmLabelWidget = alooWidgetFromBuilder(builder, "remove");
 	alooWidget *grid = alooWidgetFromBuilder(builder, "grid");
 	navbar = alooWidgetFromBuilder(builder, "navbar");
 	alooWidget *menuBar = alooWidgetFromBuilder(builder, "menu-bar");
@@ -116,11 +114,7 @@ static void activate(GtkApplication *app, gpointer user_data) {
 	alooVerticalAlign(alooHorizontalAlign(grid, GTK_ALIGN_CENTER),
 					  GTK_ALIGN_START);
 
-	GtkCssProvider *cssProvider = gtk_css_provider_new();
-	gtk_css_provider_load_from_path(cssProvider, "style.css");
-	gtk_style_context_add_provider_for_display(
-		gdk_display_get_default(), GTK_STYLE_PROVIDER(cssProvider),
-		GTK_STYLE_PROVIDER_PRIORITY_USER);
+	importCssFromPath("style.css");
 
 	setGridColumnSpacing(grid, 20);
 	setGridRowSpacing(labelGrid, 5);
@@ -149,12 +143,11 @@ static void activate(GtkApplication *app, gpointer user_data) {
 	boxPrepend(boxBody, navMenu);
 
 	showWindow(window);
-	g_object_unref(builder);
+	unrefBuilder(builder);
 }
 
 int main(int argc, char **argv) {
-	struct alooAppOptions opts = {G_APPLICATION_FLAGS_NONE, argc, argv};
-	struct alooAppAndStatus appOut =
-		CreateApp("com.test.hello", opts, activate);
-	return 0;
+	struct alooAppOptions opts = NONE_FLAGS_OPTIONS(argc, argv);
+	struct alooApp_Status appOut = CreateApp("com.test.hello", opts, activate);
+	return appOut.status;
 }

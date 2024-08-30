@@ -50,5 +50,9 @@ typedef struct alooWidget {
 	WidgetType type;
 } alooWidget;
 
+typedef struct {
+	GtkBuilder *builder;
+} AlooBuilder;
+
 #define ALOO_WIDGET_TO_GTK(x) x->child
 #endif // ALOO_TYPES_H
