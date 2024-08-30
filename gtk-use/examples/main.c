@@ -80,7 +80,7 @@ static void activate(GtkApplication *app, gpointer user_data) {
 	labelList.len = 0;
 
 	GtkBuilder *builder = gtk_builder_new();
-	gtk_builder_add_from_file(builder, "examples/builder.ui", NULL);
+	gtk_builder_add_from_file(builder, "builder.ui", NULL);
 	alooWidget *appBody = alooWidgetFromBuilder(builder, "app");
 	alooWidget *box = alooWidgetFromBuilder(builder, "box");
 	alooWidget *window = alooWidgetFromBuilder(builder, "gtk-window");
@@ -119,7 +119,7 @@ static void activate(GtkApplication *app, gpointer user_data) {
 					  GTK_ALIGN_START);
 
 	GtkCssProvider *cssProvider = gtk_css_provider_new();
-	gtk_css_provider_load_from_path(cssProvider, "examples/style.css");
+	gtk_css_provider_load_from_path(cssProvider, "style.css");
 	gtk_style_context_add_provider_for_display(
 		gdk_display_get_default(), GTK_STYLE_PROVIDER(cssProvider),
 		GTK_STYLE_PROVIDER_PRIORITY_USER);
