@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="types_8h" kind="file" language="C++">
+    <compoundname>types.h</compoundname>
+    <includes local="no">gtk/gtk.h</includes>
+    <includedby refid="app_8h" local="yes">include/app.h</includedby>
+    <includedby refid="box_8h" local="yes">include/box.h</includedby>
+    <includedby refid="button_8h" local="yes">include/button.h</includedby>
+    <includedby refid="grid_8h" local="yes">include/grid.h</includedby>
+    <includedby refid="label_8h" local="yes">include/label.h</includedby>
+    <includedby refid="style_8h" local="yes">include/style.h</includedby>
+    <includedby refid="widget_8h" local="yes">include/widget.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>gtk/gtk.h</label>
+      </node>
+      <node id="1">
+        <label>include/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8">
+        <label>include/style.h</label>
+        <link refid="style_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>include/button.h</label>
+        <link refid="button_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/aloo.h</label>
+        <link refid="aloo_8h"/>
+      </node>
+      <node id="6">
+        <label>include/grid.h</label>
+        <link refid="grid_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>include/label.h</label>
+        <link refid="label_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/box.h</label>
+        <link refid="box_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>include/widget.h</label>
+        <link refid="widget_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/app.h</label>
+        <link refid="app_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structalooWidget" prot="public">alooWidget</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="types_8h_1a67f574a286eb62d2279853cb32e61d02" prot="public" static="no">
+        <name>ALOO_WIDGET_TO_GTK</name>
+        <param><defname>x</defname></param>
+        <initializer>x-&gt;child</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/types.h" line="53" column="9" bodyfile="include/types.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="types_8h_1a7b98518122eb2e94554d2b99d29d1452" prot="public" static="no" strong="no">
+        <type></type>
+        <name>WidgetType</name>
+        <enumvalue id="types_8h_1a7b98518122eb2e94554d2b99d29d1452a004cba47f0945b28929e400153b253eb" prot="public">
+          <name>ALOO_BOX</name>
+          <briefdescription>
+<para>Used for Gtk Box. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1a7b98518122eb2e94554d2b99d29d1452ad02eeb4ba7544b107bd085fa1eb480db" prot="public">
+          <name>ALOO_GRID</name>
+          <briefdescription>
+<para>Used for Gtk Grid. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1a7b98518122eb2e94554d2b99d29d1452a3b0443429d57df8ac67888b5e0f1a363" prot="public">
+          <name>ALOO_ROW</name>
+          <briefdescription>
+<para>Used for Gtk Row. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1a7b98518122eb2e94554d2b99d29d1452a50f04c4702e68dab2bdac551b419ddeb" prot="public">
+          <name>ALOO_COLUMN</name>
+          <briefdescription>
+<para>Used for Gtk Column. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1a7b98518122eb2e94554d2b99d29d1452a00f836e2487ce6577a4d6aea17d76fcf" prot="public">
+          <name>ALOO_BUTTON</name>
+          <briefdescription>
+<para>Used for Gtk Button. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1a7b98518122eb2e94554d2b99d29d1452a57d5914b4968e9bd7705c58fddbb868e" prot="public">
+          <name>ALOO_LABEL</name>
+          <briefdescription>
+<para>Used for Gtk Label. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="types_8h_1a7b98518122eb2e94554d2b99d29d1452a6efdb808d59913a49baf1bed971ff1a0" prot="public">
+          <name>ALOO_NEW_WIDGET</name>
+          <briefdescription>
+<para>Can be used to create new custom widget and used with all. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Type of <ref refid="structalooWidget" kindref="compound">alooWidget</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/types.h" line="8" column="1" bodyfile="include/types.h" bodystart="8" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="types_8h_1a00a0e3c1177c07bd0a01d42dfc37ed86" prot="public" static="no">
+        <type>enum <ref refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452" kindref="member">WidgetType</ref></type>
+        <definition>typedef enum WidgetType WidgetType</definition>
+        <argsstring></argsstring>
+        <name>WidgetType</name>
+        <briefdescription>
+<para>Type of <ref refid="structalooWidget" kindref="compound">alooWidget</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/types.h" line="37" column="12"/>
+      </memberdef>
+      <memberdef kind="typedef" id="types_8h_1a740317088cd233e81015b298babff7be" prot="public" static="no">
+        <type>struct <ref refid="structalooWidget" kindref="compound">alooWidget</ref></type>
+        <definition>typedef struct alooWidget alooWidget</definition>
+        <argsstring></argsstring>
+        <name>alooWidget</name>
+        <briefdescription>
+<para>widget for my aloo library </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/types.h" line="51" column="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ALOO_TYPES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_TYPES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtk/gtk.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452" kindref="member">WidgetType</ref><sp/>{</highlight></codeline>
+<codeline lineno="12" refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a004cba47f0945b28929e400153b253eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a004cba47f0945b28929e400153b253eb" kindref="member">ALOO_BOX</ref>,</highlight></codeline>
+<codeline lineno="16" refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452ad02eeb4ba7544b107bd085fa1eb480db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452ad02eeb4ba7544b107bd085fa1eb480db" kindref="member">ALOO_GRID</ref>,</highlight></codeline>
+<codeline lineno="20" refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a3b0443429d57df8ac67888b5e0f1a363" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a3b0443429d57df8ac67888b5e0f1a363" kindref="member">ALOO_ROW</ref>,</highlight></codeline>
+<codeline lineno="24" refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a50f04c4702e68dab2bdac551b419ddeb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a50f04c4702e68dab2bdac551b419ddeb" kindref="member">ALOO_COLUMN</ref>,</highlight></codeline>
+<codeline lineno="28" refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a00f836e2487ce6577a4d6aea17d76fcf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a00f836e2487ce6577a4d6aea17d76fcf" kindref="member">ALOO_BUTTON</ref>,</highlight></codeline>
+<codeline lineno="32" refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a57d5914b4968e9bd7705c58fddbb868e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a57d5914b4968e9bd7705c58fddbb868e" kindref="member">ALOO_LABEL</ref>,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a6efdb808d59913a49baf1bed971ff1a0" kindref="member">ALOO_NEW_WIDGET</ref></highlight></codeline>
+<codeline lineno="37" refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a6efdb808d59913a49baf1bed971ff1a0" refkind="member"><highlight class="normal">}<sp/><ref refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452" kindref="member">WidgetType</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="structalooWidget" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>{</highlight></codeline>
+<codeline lineno="46" refid="structalooWidget_1af58424f1e35b4a10fa560c90dd656feb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GtkWidget<sp/>*<ref refid="structalooWidget_1af58424f1e35b4a10fa560c90dd656feb" kindref="member">child</ref>;</highlight></codeline>
+<codeline lineno="50" refid="structalooWidget_1a6db0456b6604492033507fcaeda3fe46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452" kindref="member">WidgetType</ref><sp/><ref refid="structalooWidget_1a6db0456b6604492033507fcaeda3fe46" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="51" refid="types_8h_1a740317088cd233e81015b298babff7be" refkind="member"><highlight class="normal">}<sp/><ref refid="types_8h_1a740317088cd233e81015b298babff7be" kindref="member">alooWidget</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="types_8h_1a67f574a286eb62d2279853cb32e61d02" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_WIDGET_TO_GTK(x)<sp/>x-&gt;child</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_TYPES_H</highlight></codeline>
+    </programlisting>
+    <location file="include/types.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structalooWidget" kind="struct" language="C++" prot="public">
+    <compoundname>alooWidget</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structalooWidget_1af58424f1e35b4a10fa560c90dd656feb" prot="public" static="no" mutable="no">
+        <type>GtkWidget *</type>
+        <definition>GtkWidget* alooWidget::child</definition>
+        <argsstring></argsstring>
+        <name>child</name>
+        <briefdescription>
+<para>actual GtkWidget </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/types.h" line="46" column="11" bodyfile="include/types.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structalooWidget_1a6db0456b6604492033507fcaeda3fe46" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452" kindref="member">WidgetType</ref></type>
+        <definition>WidgetType alooWidget::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+<para>Type of widget. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/types.h" line="50" column="12" bodyfile="include/types.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>widget for my aloo library </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/types.h" line="42" column="1" bodyfile="include/types.h" bodystart="42" bodyend="51"/>
+    <listofallmembers>
+      <member refid="structalooWidget_1af58424f1e35b4a10fa560c90dd656feb" prot="public" virt="non-virtual"><scope>alooWidget</scope><name>child</name></member>
+      <member refid="structalooWidget_1a6db0456b6604492033507fcaeda3fe46" prot="public" virt="non-virtual"><scope>alooWidget</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

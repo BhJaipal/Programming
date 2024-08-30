@@ -2,6 +2,9 @@
 #define ALOO_TYPES_H
 #include <gtk/gtk.h>
 
+/**
+ * @brief Type of alooWidget
+ */
 typedef enum WidgetType {
 	/**
 	 * @brief Used for Gtk Box

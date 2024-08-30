@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="widget_8h" kind="file" language="C++">
+    <compoundname>widget.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includes local="no">gtk/gtk.h</includes>
+    <includedby refid="aloo_8h" local="yes">include/aloo.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>gtk/gtk.h</label>
+      </node>
+      <node id="2">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/widget.h</label>
+        <link refid="widget_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/aloo.h</label>
+        <link refid="aloo_8h"/>
+      </node>
+      <node id="1">
+        <label>include/widget.h</label>
+        <link refid="widget_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="widget_8h_1a7f163845105d934fe9270c4f27deea06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* GTK_TO_ALOO</definition>
+        <argsstring>(GtkWidget *widget)</argsstring>
+        <name>GTK_TO_ALOO</name>
+        <param>
+          <type>GtkWidget *</type>
+          <declname>widget</declname>
+        </param>
+        <briefdescription>
+<para>Creates <ref refid="structalooWidget" kindref="compound">alooWidget</ref> from GtkWidget. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/widget.h" line="9" column="12" declfile="include/widget.h" declline="9" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="widget_8h_1a3c4124ba611f4967a0f00feddc1e3efd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* OBJECT_TO_ALOO</definition>
+        <argsstring>(GObject *obj)</argsstring>
+        <name>OBJECT_TO_ALOO</name>
+        <param>
+          <type>GObject *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+<para>Create <ref refid="structalooWidget" kindref="compound">alooWidget</ref> from GObject. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/widget.h" line="14" column="12" declfile="include/widget.h" declline="14" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="widget_8h_1ae89f81e79316509bd3ab0ec8ee65d206" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GtkWidget *</type>
+        <definition>GtkWidget* OBJECT_TO_GTK_WIDGET</definition>
+        <argsstring>(GtkBuilder *builder, const char *name)</argsstring>
+        <name>OBJECT_TO_GTK_WIDGET</name>
+        <param>
+          <type>GtkBuilder *</type>
+          <declname>builder</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Creates GtkWidget from builder. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/widget.h" line="19" column="11" declfile="include/widget.h" declline="19" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="widget_8h_1a7e68157e7fba45466a36cba6f79fe971" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* alooWidgetFromBuilder</definition>
+        <argsstring>(GtkBuilder *builder, const char *name)</argsstring>
+        <name>alooWidgetFromBuilder</name>
+        <param>
+          <type>GtkBuilder *</type>
+          <declname>builder</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Creates <ref refid="structalooWidget" kindref="compound">alooWidget</ref> from builder. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/widget.h" line="24" column="12" declfile="include/widget.h" declline="24" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="widget_8h_1a5524d050f5e28511da11303085ab90a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* alooSetOrientation</definition>
+        <argsstring>(alooWidget *widget, GtkOrientation orien)</argsstring>
+        <name>alooSetOrientation</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>widget</declname>
+        </param>
+        <param>
+          <type>GtkOrientation</type>
+          <declname>orien</declname>
+        </param>
+        <briefdescription>
+<para>Sets orientation of <ref refid="structalooWidget" kindref="compound">alooWidget</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/widget.h" line="29" column="12" declfile="include/widget.h" declline="29" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="widget_8h_1a1f5dbc41a627d435767b5a0dcc850562" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* NewWidget</definition>
+        <argsstring>(WidgetType type, GtkWidget *child)</argsstring>
+        <name>NewWidget</name>
+        <param>
+          <type><ref refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452" kindref="member">WidgetType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>GtkWidget *</type>
+          <declname>child</declname>
+        </param>
+        <briefdescription>
+<para>Create a widget. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type of widget </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>child</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>actual GtkWidget </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>alooWidget* </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/widget.h" line="37" column="12" declfile="include/widget.h" declline="37" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="widget_8h_1a4e21ea1424626c054cdb8613e18f7636" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* setWidgetName</definition>
+        <argsstring>(alooWidget *widget, const char *name)</argsstring>
+        <name>setWidgetName</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>widget</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Set the Name of widget. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>widget</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structalooWidget" kindref="compound">alooWidget</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string for name of widget </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the widget </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/widget.h" line="45" column="12" declfile="include/widget.h" declline="45" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ALOO_WIDGET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_WIDGET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtk/gtk.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="widget_8h_1a7f163845105d934fe9270c4f27deea06" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="widget_8h_1a7f163845105d934fe9270c4f27deea06" kindref="member">GTK_TO_ALOO</ref>(GtkWidget<sp/>*widget);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="widget_8h_1a3c4124ba611f4967a0f00feddc1e3efd" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="widget_8h_1a3c4124ba611f4967a0f00feddc1e3efd" kindref="member">OBJECT_TO_ALOO</ref>(GObject<sp/>*obj);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="widget_8h_1ae89f81e79316509bd3ab0ec8ee65d206" refkind="member"><highlight class="normal">GtkWidget<sp/>*<ref refid="widget_8h_1ae89f81e79316509bd3ab0ec8ee65d206" kindref="member">OBJECT_TO_GTK_WIDGET</ref>(GtkBuilder<sp/>*builder,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="widget_8h_1a7e68157e7fba45466a36cba6f79fe971" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="widget_8h_1a7e68157e7fba45466a36cba6f79fe971" kindref="member">alooWidgetFromBuilder</ref>(GtkBuilder<sp/>*builder,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="widget_8h_1a5524d050f5e28511da11303085ab90a0" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="widget_8h_1a5524d050f5e28511da11303085ab90a0" kindref="member">alooSetOrientation</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/>GtkOrientation<sp/>orien);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="widget_8h_1a1f5dbc41a627d435767b5a0dcc850562" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="widget_8h_1a1f5dbc41a627d435767b5a0dcc850562" kindref="member">NewWidget</ref>(<ref refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452" kindref="member">WidgetType</ref><sp/>type,<sp/>GtkWidget<sp/>*child);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="widget_8h_1a4e21ea1424626c054cdb8613e18f7636" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="widget_8h_1a4e21ea1424626c054cdb8613e18f7636" kindref="member">setWidgetName</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_WIDGET_H</highlight></codeline>
+    </programlisting>
+    <location file="include/widget.h"/>
+  </compounddef>
+</doxygen>

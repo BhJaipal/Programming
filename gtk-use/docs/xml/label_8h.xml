@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="label_8h" kind="file" language="C++">
+    <compoundname>label.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includedby refid="aloo_8h" local="yes">include/aloo.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>gtk/gtk.h</label>
+      </node>
+      <node id="1">
+        <label>include/label.h</label>
+        <link refid="label_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/aloo.h</label>
+        <link refid="aloo_8h"/>
+      </node>
+      <node id="1">
+        <label>include/label.h</label>
+        <link refid="label_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="label_8h_1a091c380bedc6ae06c4b51281179eaf6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* newLabel</definition>
+        <argsstring>(const char *val)</argsstring>
+        <name>newLabel</name>
+        <param>
+          <type>const char *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/label.h" line="5" column="12" declfile="include/label.h" declline="5" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ALOO_LABEL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_LABEL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="label_8h_1a091c380bedc6ae06c4b51281179eaf6a" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="label_8h_1a091c380bedc6ae06c4b51281179eaf6a" kindref="member">newLabel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*val);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_LABEL_H</highlight></codeline>
+    </programlisting>
+    <location file="include/label.h"/>
+  </compounddef>
+</doxygen>

@@ -103,4 +103,9 @@ alooWidget *setWindowApplication(alooWidget *window, GtkApplication *app);
  */
 void showWindow(alooWidget *window);
 
+/**
+ * @brief Unrefs object
+ */
+void unrefObject(gpointer data);
+
 #endif // ALOO_APP_H

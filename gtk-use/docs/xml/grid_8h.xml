@@ -1,0 +1,389 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="grid_8h" kind="file" language="C++">
+    <compoundname>grid.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includes local="no">gtk/gtk.h</includes>
+    <includedby refid="aloo_8h" local="yes">include/aloo.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>gtk/gtk.h</label>
+      </node>
+      <node id="1">
+        <label>include/grid.h</label>
+        <link refid="grid_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/aloo.h</label>
+        <link refid="aloo_8h"/>
+      </node>
+      <node id="1">
+        <label>include/grid.h</label>
+        <link refid="grid_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="grid_8h_1abf08dd722dd5d05a2513522a8c1d9800" prot="public" static="no">
+        <name>ALOO_GRID_TO_GTK</name>
+        <param><defname>x</defname></param>
+        <initializer>GTK_GRID(x-&gt;child)</initializer>
+        <briefdescription>
+<para>Returns GTK_GRID of <ref refid="structalooWidget" kindref="compound">alooWidget</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structalooWidget" kindref="compound">alooWidget</ref> with ALOO_GRID type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/grid.h" line="11" column="9" bodyfile="include/grid.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="grid_8h_1a63d120e21e61dd6c60b73817c05a0a65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* gridAttach</definition>
+        <argsstring>(alooWidget *grid, alooWidget *child, int column, int row, int width, int height)</argsstring>
+        <name>gridAttach</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>child</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Adds widget to aloo grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>grid in which child should be added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>child</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>child to be added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>column in which it should be added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>row in which it should be added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>column span of widget or how many column it takes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>row span of widget or how many row it takes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns grid back </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/grid.h" line="24" column="12" declfile="include/grid.h" declline="24" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="grid_8h_1af73f05491a5e1ff7c5ba7c8a425cb04c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* gridAttachGtk</definition>
+        <argsstring>(alooWidget *grid, GtkWidget *child, int column, int row, int width, int height)</argsstring>
+        <name>gridAttachGtk</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>GtkWidget *</type>
+          <declname>child</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Adds widget to aloo grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>grid in which child should be added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>child</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>child to be added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>column in which it should be added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>row in which it should be added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>column span of widget or how many column it takes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>row span of widget or how many row it takes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns grid back </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/grid.h" line="38" column="12" declfile="include/grid.h" declline="38" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="grid_8h_1a7a87945698bb503625c7926ab6717187" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* gridRemove</definition>
+        <argsstring>(alooWidget *grid, alooWidget *child)</argsstring>
+        <name>gridRemove</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>child</declname>
+        </param>
+        <briefdescription>
+<para>Removes child from grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns grid back </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/grid.h" line="45" column="12" declfile="include/grid.h" declline="45" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="grid_8h_1a6d34934989b423f380da0b3eac2a2bfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* gridRemoveGtk</definition>
+        <argsstring>(alooWidget *grid, GtkWidget *child)</argsstring>
+        <name>gridRemoveGtk</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>GtkWidget *</type>
+          <declname>child</declname>
+        </param>
+        <briefdescription>
+<para>Removes child from grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns grid back </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/grid.h" line="51" column="12" declfile="include/grid.h" declline="51" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="grid_8h_1a48e1d5f03b179b82ebe0e7dc3eec17da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* alooGridNew</definition>
+        <argsstring>()</argsstring>
+        <name>alooGridNew</name>
+        <briefdescription>
+<para>Creates new Aloo Grid Widget. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns grid </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/grid.h" line="57" column="12" declfile="include/grid.h" declline="57" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="grid_8h_1a186013459d8639377da1abf0dc370f5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* setGridColumnSpacing</definition>
+        <argsstring>(alooWidget *grid, int space)</argsstring>
+        <name>setGridColumnSpacing</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>space</declname>
+        </param>
+        <briefdescription>
+<para>Set the Grid Column Spacing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/grid.h" line="62" column="12" declfile="include/grid.h" declline="62" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="grid_8h_1a7b4a1902ba701ecd6406795da6b9314c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* setGridRowSpacing</definition>
+        <argsstring>(alooWidget *grid, int space)</argsstring>
+        <name>setGridRowSpacing</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>space</declname>
+        </param>
+        <briefdescription>
+<para>Set the Grid Row Spacing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/grid.h" line="66" column="12" declfile="include/grid.h" declline="66" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ALOO_GRID_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_GRID_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtk/gtk.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="grid_8h_1abf08dd722dd5d05a2513522a8c1d9800" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_GRID_TO_GTK(x)<sp/>GTK_GRID(x-&gt;child)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="grid_8h_1a63d120e21e61dd6c60b73817c05a0a65" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="grid_8h_1a63d120e21e61dd6c60b73817c05a0a65" kindref="member">gridAttach</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*grid,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*child,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>column,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="grid_8h_1af73f05491a5e1ff7c5ba7c8a425cb04c" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="grid_8h_1af73f05491a5e1ff7c5ba7c8a425cb04c" kindref="member">gridAttachGtk</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*grid,<sp/>GtkWidget<sp/>*child,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>column,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="grid_8h_1a7a87945698bb503625c7926ab6717187" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="grid_8h_1a7a87945698bb503625c7926ab6717187" kindref="member">gridRemove</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*grid,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*child);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="grid_8h_1a6d34934989b423f380da0b3eac2a2bfb" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="grid_8h_1a6d34934989b423f380da0b3eac2a2bfb" kindref="member">gridRemoveGtk</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*grid,<sp/>GtkWidget<sp/>*child);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="grid_8h_1a48e1d5f03b179b82ebe0e7dc3eec17da" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="grid_8h_1a48e1d5f03b179b82ebe0e7dc3eec17da" kindref="member">alooGridNew</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="grid_8h_1a186013459d8639377da1abf0dc370f5b" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="grid_8h_1a186013459d8639377da1abf0dc370f5b" kindref="member">setGridColumnSpacing</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*grid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>space);</highlight></codeline>
+<codeline lineno="66" refid="grid_8h_1a7b4a1902ba701ecd6406795da6b9314c" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="grid_8h_1a7b4a1902ba701ecd6406795da6b9314c" kindref="member">setGridRowSpacing</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*grid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>space);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_GRID_H</highlight></codeline>
+    </programlisting>
+    <location file="include/grid.h"/>
+  </compounddef>
+</doxygen>

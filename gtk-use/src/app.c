@@ -69,3 +69,4 @@ void showWindow(alooWidget *window) {
 		gtk_widget_show(window->child);
 	}
 }
+void unrefObject(gpointer data) { g_object_unref(data); }

@@ -1,0 +1,496 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="app_8h" kind="file" language="C++">
+    <compoundname>app.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includes local="no">gtk/gtk.h</includes>
+    <includedby refid="aloo_8h" local="yes">include/aloo.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>gtk/gtk.h</label>
+      </node>
+      <node id="2">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/app.h</label>
+        <link refid="app_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/aloo.h</label>
+        <link refid="aloo_8h"/>
+      </node>
+      <node id="1">
+        <label>include/app.h</label>
+        <link refid="app_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structalooAppAndStatus" prot="public">alooAppAndStatus</innerclass>
+    <innerclass refid="structalooAppOptions" prot="public">alooAppOptions</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="app_8h_1af8678607ed9bc1b700af2948ecc54eab" prot="public" static="no">
+        <name>ALOO_IS_WINDOW</name>
+        <param><defname>X</defname></param>
+        <initializer>GTK_IS_WINDOW(X-&gt;child)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="23" column="9" bodyfile="include/app.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="app_8h_1a65d50f50a660970474fab5e355370da9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structalooAppAndStatus" kindref="compound">alooAppAndStatus</ref></type>
+        <definition>struct alooAppAndStatus CreateApp</definition>
+        <argsstring>(char *app_id, struct alooAppOptions gAppOptions, void activateFn(GtkApplication *app, gpointer user_data))</argsstring>
+        <name>CreateApp</name>
+        <param>
+          <type>char *</type>
+          <declname>app_id</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structalooAppOptions" kindref="compound">alooAppOptions</ref></type>
+          <declname>gAppOptions</declname>
+        </param>
+        <param>
+          <type>void </type>
+          <declname>activateFn</declname>
+          <array>GtkApplication *app, gpointer user_data</array>
+        </param>
+        <briefdescription>
+<para>Create a App object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>app_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>App Id are like com.google.Chrome, dev.zed.Zed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gAppOptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>It takes GApplicationFlags, argc and argv </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>activateFn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>static void function which will be called when app is started </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>It returns GtkApplication and status </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="1" column="0" declfile="include/app.h" declline="1" declcolumn="0"/>
+      </memberdef>
+      <memberdef kind="function" id="app_8h_1a0afb7ad04f1aadda78c408cb89632a98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* alooHorizontalAlign</definition>
+        <argsstring>(alooWidget *widget, GtkAlign alignment)</argsstring>
+        <name>alooHorizontalAlign</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>widget</declname>
+        </param>
+        <param>
+          <type>GtkAlign</type>
+          <declname>alignment</declname>
+        </param>
+        <briefdescription>
+<para>Sets horizontal alignment of <ref refid="structalooWidget" kindref="compound">alooWidget</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="40" column="12" declfile="include/app.h" declline="40" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="app_8h_1a6b6446b41469f699c7ce1601bf213ffd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* alooVerticalAlign</definition>
+        <argsstring>(alooWidget *widget, GtkAlign alignment)</argsstring>
+        <name>alooVerticalAlign</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>widget</declname>
+        </param>
+        <param>
+          <type>GtkAlign</type>
+          <declname>alignment</declname>
+        </param>
+        <briefdescription>
+<para>Sets vertical alignment of <ref refid="structalooWidget" kindref="compound">alooWidget</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="44" column="12" declfile="include/app.h" declline="44" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="app_8h_1ac7abab6e5fb131a4efc49d2b34cfd2fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* alooAddEventListener</definition>
+        <argsstring>(alooWidget *widget_instance, char *event_name, GCallback CallbackFn, gpointer data)</argsstring>
+        <name>alooAddEventListener</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>widget_instance</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>event_name</declname>
+        </param>
+        <param>
+          <type>GCallback</type>
+          <declname>CallbackFn</declname>
+        </param>
+        <param>
+          <type>gpointer</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Adds event listener to a widget. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>widget_instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parameters for event listener </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="51" column="12" declfile="include/app.h" declline="51" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="app_8h_1a6e6108adacb0408e9b9b010183d609c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GtkWidget *</type>
+        <definition>GtkWidget* alooSetWindowChild</definition>
+        <argsstring>(GtkWidget *window, GtkWidget *child)</argsstring>
+        <name>alooSetWindowChild</name>
+        <param>
+          <type>GtkWidget *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>GtkWidget *</type>
+          <declname>child</declname>
+        </param>
+        <briefdescription>
+<para>Sets Window child. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>child</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>GtkWidget* </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="61" column="11" declfile="include/app.h" declline="61" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="app_8h_1aa991a64e8ef46ccbb328a3a27cf256d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GtkWidget *</type>
+        <definition>GtkWidget* alooPresentWindow</definition>
+        <argsstring>(GtkWidget *window)</argsstring>
+        <name>alooPresentWindow</name>
+        <param>
+          <type>GtkWidget *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Presents GtkWindow. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>GtkWidget* </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="69" column="11" declfile="include/app.h" declline="69" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="app_8h_1a634c75f1d0c5eb0f96bdbae33f521a8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GtkWidget *</type>
+        <definition>GtkWidget* alooAddNewButtonLabel</definition>
+        <argsstring>(const char *label)</argsstring>
+        <name>alooAddNewButtonLabel</name>
+        <param>
+          <type>const char *</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+<para>Create new GtkButton. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="74" column="11" declfile="include/app.h" declline="74" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="app_8h_1a085d71076852c990130591ff13a5d513" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GtkWidget *</type>
+        <definition>GtkWidget* alooApplicationNewWindow</definition>
+        <argsstring>(GtkApplication *app)</argsstring>
+        <name>alooApplicationNewWindow</name>
+        <param>
+          <type>GtkApplication *</type>
+          <declname>app</declname>
+        </param>
+        <briefdescription>
+<para>Create a GtkWindow. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="79" column="11" declfile="include/app.h" declline="79" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="app_8h_1ac46dc2c7069e7755ec43eb8cab9972c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GtkWidget *</type>
+        <definition>GtkWidget* alooSetWindowTitle</definition>
+        <argsstring>(GtkWidget *window, const char *title)</argsstring>
+        <name>alooSetWindowTitle</name>
+        <param>
+          <type>GtkWidget *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+<para>Sets GtkWindow title. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="84" column="11" declfile="include/app.h" declline="84" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="app_8h_1a64b7d24a9ac0ffcbdf783b7a4e5f7f49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* setWindowSize</definition>
+        <argsstring>(alooWidget *window, int width, int height)</argsstring>
+        <name>setWindowSize</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Sets aloo Window size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="89" column="12" declfile="include/app.h" declline="89" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="app_8h_1a1768f18b204bebc0570b0d61d028bb5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GObject *</type>
+        <definition>GObject* alooGetBuilderObject</definition>
+        <argsstring>(GtkBuilder *builder, const char *name)</argsstring>
+        <name>alooGetBuilderObject</name>
+        <param>
+          <type>GtkBuilder *</type>
+          <declname>builder</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Gets GObject from builder. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="94" column="9" declfile="include/app.h" declline="94" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="app_8h_1a92fede26107ad6969917aafe93de0644" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* setWindowApplication</definition>
+        <argsstring>(alooWidget *window, GtkApplication *app)</argsstring>
+        <name>setWindowApplication</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>GtkApplication *</type>
+          <declname>app</declname>
+        </param>
+        <briefdescription>
+<para>Set the Window for Application. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="99" column="12" declfile="include/app.h" declline="99" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="app_8h_1ac36f38589d0afa325b5fa36f37d8dc00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void showWindow</definition>
+        <argsstring>(alooWidget *window)</argsstring>
+        <name>showWindow</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Shows Window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="104" column="6" declfile="include/app.h" declline="104" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="app_8h_1a869ae1b4d57340dbfeaaae16722020de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void unrefObject</definition>
+        <argsstring>(gpointer data)</argsstring>
+        <name>unrefObject</name>
+        <param>
+          <type>gpointer</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Unrefs object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="109" column="6" declfile="include/app.h" declline="109" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="app_8h_1a65d50f50a660970474fab5e355370da9" refkind="member"><highlight class="preprocessor">#ifndef<sp/>ALOO_APP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_APP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtk/gtk.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="structalooAppAndStatus" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structalooAppAndStatus" kindref="compound">alooAppAndStatus</ref><sp/>{</highlight></codeline>
+<codeline lineno="10" refid="structalooAppAndStatus_1afc170dcd48b746aa96bfef7aa01753f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GtkApplication<sp/>*<ref refid="structalooAppAndStatus_1afc170dcd48b746aa96bfef7aa01753f5" kindref="member">app</ref>;</highlight></codeline>
+<codeline lineno="11" refid="structalooAppAndStatus_1a56d74bc7e1f7a1d5390c97432dca5eea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structalooAppAndStatus_1a56d74bc7e1f7a1d5390c97432dca5eea" kindref="member">status</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="17" refid="structalooAppOptions" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structalooAppOptions" kindref="compound">alooAppOptions</ref><sp/>{</highlight></codeline>
+<codeline lineno="18" refid="structalooAppOptions_1ac002947c09ab2e5b27ae639e1f72adad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GApplicationFlags<sp/><ref refid="structalooAppOptions_1ac002947c09ab2e5b27ae639e1f72adad" kindref="member">GAppFlags</ref>;</highlight></codeline>
+<codeline lineno="19" refid="structalooAppOptions_1a94687eee81ac104698db994c2d9245ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structalooAppOptions_1a94687eee81ac104698db994c2d9245ba" kindref="member">argc</ref>;</highlight></codeline>
+<codeline lineno="20" refid="structalooAppOptions_1afbca287e969fd39e0227550171ee427d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="structalooAppOptions_1afbca287e969fd39e0227550171ee427d" kindref="member">argv</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="app_8h_1af8678607ed9bc1b700af2948ecc54eab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_IS_WINDOW(X)<sp/>GTK_IS_WINDOW(X-&gt;child)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structalooAppAndStatus" kindref="compound">alooAppAndStatus</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="app_8h_1a65d50f50a660970474fab5e355370da9" kindref="member">CreateApp</ref>(char<sp/>*app_id,<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structalooAppOptions" kindref="compound">alooAppOptions</ref><sp/>gAppOptions,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>activateFn(GtkApplication<sp/>*app,<sp/>gpointer<sp/>user_data));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="app_8h_1a0afb7ad04f1aadda78c408cb89632a98" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="app_8h_1a0afb7ad04f1aadda78c408cb89632a98" kindref="member">alooHorizontalAlign</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/>GtkAlign<sp/>alignment);</highlight></codeline>
+<codeline lineno="44" refid="app_8h_1a6b6446b41469f699c7ce1601bf213ffd" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="app_8h_1a6b6446b41469f699c7ce1601bf213ffd" kindref="member">alooVerticalAlign</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/>GtkAlign<sp/>alignment);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="app_8h_1ac7abab6e5fb131a4efc49d2b34cfd2fd" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="app_8h_1ac7abab6e5fb131a4efc49d2b34cfd2fd" kindref="member">alooAddEventListener</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget_instance,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*event_name,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GCallback<sp/>CallbackFn,<sp/>gpointer<sp/>data);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="app_8h_1a6e6108adacb0408e9b9b010183d609c7" refkind="member"><highlight class="normal">GtkWidget<sp/>*<ref refid="app_8h_1a6e6108adacb0408e9b9b010183d609c7" kindref="member">alooSetWindowChild</ref>(GtkWidget<sp/>*window,<sp/>GtkWidget<sp/>*child);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="app_8h_1aa991a64e8ef46ccbb328a3a27cf256d8" refkind="member"><highlight class="normal">GtkWidget<sp/>*<ref refid="app_8h_1aa991a64e8ef46ccbb328a3a27cf256d8" kindref="member">alooPresentWindow</ref>(GtkWidget<sp/>*window);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="app_8h_1a634c75f1d0c5eb0f96bdbae33f521a8d" refkind="member"><highlight class="normal">GtkWidget<sp/>*<ref refid="app_8h_1a634c75f1d0c5eb0f96bdbae33f521a8d" kindref="member">alooAddNewButtonLabel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*label);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="app_8h_1a085d71076852c990130591ff13a5d513" refkind="member"><highlight class="normal">GtkWidget<sp/>*<ref refid="app_8h_1a085d71076852c990130591ff13a5d513" kindref="member">alooApplicationNewWindow</ref>(GtkApplication<sp/>*app);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="app_8h_1ac46dc2c7069e7755ec43eb8cab9972c4" refkind="member"><highlight class="normal">GtkWidget<sp/>*<ref refid="app_8h_1ac46dc2c7069e7755ec43eb8cab9972c4" kindref="member">alooSetWindowTitle</ref>(GtkWidget<sp/>*window,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*title);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="app_8h_1a64b7d24a9ac0ffcbdf783b7a4e5f7f49" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="app_8h_1a64b7d24a9ac0ffcbdf783b7a4e5f7f49" kindref="member">setWindowSize</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="app_8h_1a1768f18b204bebc0570b0d61d028bb5a" refkind="member"><highlight class="normal">GObject<sp/>*<ref refid="app_8h_1a1768f18b204bebc0570b0d61d028bb5a" kindref="member">alooGetBuilderObject</ref>(GtkBuilder<sp/>*builder,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="app_8h_1a92fede26107ad6969917aafe93de0644" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="app_8h_1a92fede26107ad6969917aafe93de0644" kindref="member">setWindowApplication</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*window,<sp/>GtkApplication<sp/>*app);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="app_8h_1ac36f38589d0afa325b5fa36f37d8dc00" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="app_8h_1ac36f38589d0afa325b5fa36f37d8dc00" kindref="member">showWindow</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*window);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="app_8h_1a869ae1b4d57340dbfeaaae16722020de" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="app_8h_1a869ae1b4d57340dbfeaaae16722020de" kindref="member">unrefObject</ref>(gpointer<sp/>data);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_APP_H</highlight></codeline>
+    </programlisting>
+    <location file="include/app.h"/>
+  </compounddef>
+</doxygen>

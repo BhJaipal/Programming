@@ -1,4 +1,4 @@
-.TH "include/app.h" 3 "Thu Aug 29 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "include/app.h" 3 "Fri Aug 30 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -85,6 +85,10 @@ include/app.h
 .RI "void \fBshowWindow\fP (\fBalooWidget\fP *window)"
 .br
 .RI "Shows Window\&. "
+.ti -1c
+.RI "void \fBunrefObject\fP (gpointer data)"
+.br
+.RI "Unrefs object\&. "
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
@@ -195,6 +199,10 @@ Sets aloo Window size\&.
 
 .PP
 Shows Window\&. 
+.SS "void unrefObject (gpointer data)"
+
+.PP
+Unrefs object\&. 
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Aloo from the source code\&.

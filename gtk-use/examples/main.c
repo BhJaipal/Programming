@@ -84,8 +84,8 @@ static void activate(GtkApplication *app, gpointer user_data) {
 	alooWidget *appBody = alooWidgetFromBuilder(builder, "app");
 	alooWidget *box = alooWidgetFromBuilder(builder, "box");
 	alooWidget *window = alooWidgetFromBuilder(builder, "gtk-window");
-	GObject *addButton = alooGetBuilderObject(builder, "add");
-	GObject *rmLabel = alooGetBuilderObject(builder, "remove");
+	GObject *buttonWidget = alooWidgetFromBuilder(builder, "add");
+	GObject *rmLabelWidget = alooWidgetFromBuilder(builder, "remove");
 	alooWidget *grid = alooWidgetFromBuilder(builder, "grid");
 	navbar = alooWidgetFromBuilder(builder, "navbar");
 	alooWidget *menuBar = alooWidgetFromBuilder(builder, "menu-bar");
@@ -95,8 +95,6 @@ static void activate(GtkApplication *app, gpointer user_data) {
 	alooSetOrientation(navbar, GTK_ORIENTATION_VERTICAL);
 	alooSetOrientation(appBody, GTK_ORIENTATION_VERTICAL);
 	alooSetOrientation(boxBody, GTK_ORIENTATION_HORIZONTAL);
-	alooWidget *buttonWidget = OBJECT_TO_ALOO(addButton);
-	alooWidget *rmLabelWidget = OBJECT_TO_ALOO(rmLabel);
 	setSize(buttonWidget, 100, 50);
 	setSize(rmLabelWidget, 125, 50);
 
