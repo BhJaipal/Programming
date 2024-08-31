@@ -54,7 +54,7 @@
 							<object id="box" class="GtkBox">
 								<property name="name">box</property>
 								<child>
-									<object id="grid" class="GtkGrid">
+									<object id="button-grid" class="GtkGrid">
 										<property name="name">button-grid</property>
 										<child>
 											<object id="add" class="GtkButton">

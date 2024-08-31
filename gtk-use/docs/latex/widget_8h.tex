@@ -1,66 +1,198 @@
 \hypertarget{widget_8h}{}\doxysection{include/widget.h File Reference}
 \label{widget_8h}\index{include/widget.h@{include/widget.h}}
+
+
+Aloo Widget related functions.  
+
+
 {\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$gtk/gtk.\+h$>$}\newline
 Include dependency graph for widget.\+h\+:
 % FIG 0
 This graph shows which files directly or indirectly include this file\+:
 % FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__aloo__widget}{\+\_\+aloo\+\_\+widget}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{widget_8h_ab3fcd2a829accf7c2d1f00c982c005b1}{GTK\+\_\+\+TO\+\_\+\+ALOO\+\_\+\+Type}}) (Gtk\+Widget $\ast$widget)
+\item 
+typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{widget_8h_a0c54804ca5131c7ed63911e0585108a1}{OBJECT\+\_\+\+TO\+\_\+\+ALOO\+\_\+\+Type}}) (GObject $\ast$obj)
+\item 
+typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{widget_8h_a05bed2b8e3cd6198c19410b686470a48}{aloo\+Set\+Orientation\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, Gtk\+Orientation orien)
+\item 
+typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{widget_8h_a64fc216b85a2827f1ac602a67b7b9a2e}{New\+Widget\+\_\+\+Type}}) (\mbox{\hyperlink{types_8h_a7b98518122eb2e94554d2b99d29d1452}{Widget\+Type}} type, Gtk\+Widget $\ast$child)
+\item 
+typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{widget_8h_a1430a1a0897570a0423713394faf07b9}{set\+Widget\+Name\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, const char $\ast$name)
+\item 
+typedef Gtk\+Widget $\ast$($\ast$ \mbox{\hyperlink{widget_8h_a98348bd3f871c91b864e4b21dc5006f0}{\+\_\+\+\_\+\+OBJECT\+\_\+\+TO\+\_\+\+GTK\+\_\+\+WIDGET\+\_\+\+Type}}) (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$builder, const char $\ast$name)
+\item 
+typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{widget_8h_ab36e712123f8c845e940d19707948667}{\+\_\+\+\_\+aloo\+Vertical\+Align\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, Gtk\+Align alignment)
+\item 
+typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{widget_8h_a20b21653e7905d3077558c8780b8cf2b}{\+\_\+\+\_\+aloo\+Horizontal\+Align\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, Gtk\+Align alignment)
+\item 
+typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{widget_8h_ad74f1c9fcd1452513f60a4dd08afaf45}{\+\_\+\+\_\+aloo\+Add\+Event\+Listener\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget\+\_\+instance, char $\ast$event\+\_\+name, GCallback Callback\+Fn, gpointer data)
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{widget_8h_a7f163845105d934fe9270c4f27deea06}{GTK\+\_\+\+TO\+\_\+\+ALOO}} (Gtk\+Widget $\ast$widget)
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{widget_8h_a890a69c8a7ff1134e5e7811e7ff2183c}{\+\_\+\+\_\+\+GTK\+\_\+\+TO\+\_\+\+ALOO}} (Gtk\+Widget $\ast$widget)
 \begin{DoxyCompactList}\small\item\em Creates \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} from Gtk\+Widget. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{widget_8h_a3c4124ba611f4967a0f00feddc1e3efd}{OBJECT\+\_\+\+TO\+\_\+\+ALOO}} (GObject $\ast$obj)
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{widget_8h_a9080baf6af2398b65aa4a7280eb80c05}{\+\_\+\+\_\+\+OBJECT\+\_\+\+TO\+\_\+\+ALOO}} (GObject $\ast$obj)
 \begin{DoxyCompactList}\small\item\em Create \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} from GObject. \end{DoxyCompactList}\item 
-Gtk\+Widget $\ast$ \mbox{\hyperlink{widget_8h_a64d12e6dae8dfac76d2231f411cba885}{OBJECT\+\_\+\+TO\+\_\+\+GTK\+\_\+\+WIDGET}} (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$builder, const char $\ast$name)
-\begin{DoxyCompactList}\small\item\em Creates Gtk\+Widget from builder. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{widget_8h_ab357e941224d0aa29fdd240b86f670cd}{aloo\+Widget\+From\+Builder}} (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$builder, const char $\ast$name)
-\begin{DoxyCompactList}\small\item\em Creates \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} from builder. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{widget_8h_a5524d050f5e28511da11303085ab90a0}{aloo\+Set\+Orientation}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, Gtk\+Orientation orien)
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{widget_8h_adea5eac957f93ec801152cfa8868978a}{\+\_\+\+\_\+aloo\+Set\+Orientation}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, Gtk\+Orientation orien)
 \begin{DoxyCompactList}\small\item\em Sets orientation of \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{widget_8h_a1f5dbc41a627d435767b5a0dcc850562}{New\+Widget}} (\mbox{\hyperlink{types_8h_a7b98518122eb2e94554d2b99d29d1452}{Widget\+Type}} type, Gtk\+Widget $\ast$child)
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{widget_8h_ace7e17033235b5a9fec8ceee1068fc4b}{\+\_\+\+\_\+\+New\+Widget}} (\mbox{\hyperlink{types_8h_a7b98518122eb2e94554d2b99d29d1452}{Widget\+Type}} type, Gtk\+Widget $\ast$child)
 \begin{DoxyCompactList}\small\item\em Create a widget. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{widget_8h_a4e21ea1424626c054cdb8613e18f7636}{set\+Widget\+Name}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, const char $\ast$name)
-\begin{DoxyCompactList}\small\item\em Set the Name of widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{widget_8h_aa9e589aef695d4d9c061c02cfbb47bb3}{\+\_\+\+\_\+set\+Widget\+Name}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Set the Name of widget. \end{DoxyCompactList}\item 
+Gtk\+Widget $\ast$ \mbox{\hyperlink{widget_8h_abb126fbe246404cc032f3bc2cabb6c3a}{\+\_\+\+\_\+\+OBJECT\+\_\+\+TO\+\_\+\+GTK\+\_\+\+WIDGET}} (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$builder, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Creates Gtk\+Widget from builder. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{widget_8h_a723480206252f9c49a96016e525c80bb}{\+\_\+\+\_\+aloo\+Horizontal\+Align}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, Gtk\+Align alignment)
+\begin{DoxyCompactList}\small\item\em Sets horizontal alignment of \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{widget_8h_a5949823315aa75ff5c04f791f75d301c}{\+\_\+\+\_\+aloo\+Vertical\+Align}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, Gtk\+Align alignment)
+\begin{DoxyCompactList}\small\item\em Sets vertical alignment of \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{widget_8h_a0cf5af29b9d23e3e483d0870f0a52ff2}{\+\_\+\+\_\+aloo\+Add\+Event\+Listener}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget\+\_\+instance, char $\ast$event\+\_\+name, GCallback Callback\+Fn, gpointer data)
+\begin{DoxyCompactList}\small\item\em Adds event listener to a widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__aloo__widget}{\+\_\+aloo\+\_\+widget}} \mbox{\hyperlink{widget_8h_a4f8497ae7e1b8daedfcdfa72d643a125}{Widget}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Aloo Widget related functions. 
+
+\begin{DoxyAuthor}{Author}
+Jaipal001 (@\+Bh\+Jaipal) 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{widget_8h_ad74f1c9fcd1452513f60a4dd08afaf45}\label{widget_8h_ad74f1c9fcd1452513f60a4dd08afaf45}} 
+\index{widget.h@{widget.h}!\_\_alooAddEventListener\_Type@{\_\_alooAddEventListener\_Type}}
+\index{\_\_alooAddEventListener\_Type@{\_\_alooAddEventListener\_Type}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_alooAddEventListener\_Type}{\_\_alooAddEventListener\_Type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+\+\_\+aloo\+Add\+Event\+Listener\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget\+\_\+instance, char $\ast$event\+\_\+name, GCallback Callback\+Fn, gpointer data)}
+
+\mbox{\Hypertarget{widget_8h_a20b21653e7905d3077558c8780b8cf2b}\label{widget_8h_a20b21653e7905d3077558c8780b8cf2b}} 
+\index{widget.h@{widget.h}!\_\_alooHorizontalAlign\_Type@{\_\_alooHorizontalAlign\_Type}}
+\index{\_\_alooHorizontalAlign\_Type@{\_\_alooHorizontalAlign\_Type}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_alooHorizontalAlign\_Type}{\_\_alooHorizontalAlign\_Type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+\+\_\+aloo\+Horizontal\+Align\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, Gtk\+Align alignment)}
+
+\mbox{\Hypertarget{widget_8h_ab36e712123f8c845e940d19707948667}\label{widget_8h_ab36e712123f8c845e940d19707948667}} 
+\index{widget.h@{widget.h}!\_\_alooVerticalAlign\_Type@{\_\_alooVerticalAlign\_Type}}
+\index{\_\_alooVerticalAlign\_Type@{\_\_alooVerticalAlign\_Type}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_alooVerticalAlign\_Type}{\_\_alooVerticalAlign\_Type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+\+\_\+aloo\+Vertical\+Align\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, Gtk\+Align alignment)}
+
+\mbox{\Hypertarget{widget_8h_a98348bd3f871c91b864e4b21dc5006f0}\label{widget_8h_a98348bd3f871c91b864e4b21dc5006f0}} 
+\index{widget.h@{widget.h}!\_\_OBJECT\_TO\_GTK\_WIDGET\_Type@{\_\_OBJECT\_TO\_GTK\_WIDGET\_Type}}
+\index{\_\_OBJECT\_TO\_GTK\_WIDGET\_Type@{\_\_OBJECT\_TO\_GTK\_WIDGET\_Type}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_OBJECT\_TO\_GTK\_WIDGET\_Type}{\_\_OBJECT\_TO\_GTK\_WIDGET\_Type}}
+{\footnotesize\ttfamily typedef Gtk\+Widget$\ast$($\ast$ \+\_\+\+\_\+\+OBJECT\+\_\+\+TO\+\_\+\+GTK\+\_\+\+WIDGET\+\_\+\+Type) (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$builder, const char $\ast$name)}
+
+\mbox{\Hypertarget{widget_8h_a05bed2b8e3cd6198c19410b686470a48}\label{widget_8h_a05bed2b8e3cd6198c19410b686470a48}} 
+\index{widget.h@{widget.h}!alooSetOrientation\_Type@{alooSetOrientation\_Type}}
+\index{alooSetOrientation\_Type@{alooSetOrientation\_Type}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{alooSetOrientation\_Type}{alooSetOrientation\_Type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ aloo\+Set\+Orientation\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, Gtk\+Orientation orien)}
+
+\mbox{\Hypertarget{widget_8h_ab3fcd2a829accf7c2d1f00c982c005b1}\label{widget_8h_ab3fcd2a829accf7c2d1f00c982c005b1}} 
+\index{widget.h@{widget.h}!GTK\_TO\_ALOO\_Type@{GTK\_TO\_ALOO\_Type}}
+\index{GTK\_TO\_ALOO\_Type@{GTK\_TO\_ALOO\_Type}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{GTK\_TO\_ALOO\_Type}{GTK\_TO\_ALOO\_Type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ GTK\+\_\+\+TO\+\_\+\+ALOO\+\_\+\+Type) (Gtk\+Widget $\ast$widget)}
+
+\mbox{\Hypertarget{widget_8h_a64fc216b85a2827f1ac602a67b7b9a2e}\label{widget_8h_a64fc216b85a2827f1ac602a67b7b9a2e}} 
+\index{widget.h@{widget.h}!NewWidget\_Type@{NewWidget\_Type}}
+\index{NewWidget\_Type@{NewWidget\_Type}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{NewWidget\_Type}{NewWidget\_Type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ New\+Widget\+\_\+\+Type) (\mbox{\hyperlink{types_8h_a7b98518122eb2e94554d2b99d29d1452}{Widget\+Type}} type, Gtk\+Widget $\ast$child)}
+
+\mbox{\Hypertarget{widget_8h_a0c54804ca5131c7ed63911e0585108a1}\label{widget_8h_a0c54804ca5131c7ed63911e0585108a1}} 
+\index{widget.h@{widget.h}!OBJECT\_TO\_ALOO\_Type@{OBJECT\_TO\_ALOO\_Type}}
+\index{OBJECT\_TO\_ALOO\_Type@{OBJECT\_TO\_ALOO\_Type}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{OBJECT\_TO\_ALOO\_Type}{OBJECT\_TO\_ALOO\_Type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ OBJECT\+\_\+\+TO\+\_\+\+ALOO\+\_\+\+Type) (GObject $\ast$obj)}
+
+\mbox{\Hypertarget{widget_8h_a1430a1a0897570a0423713394faf07b9}\label{widget_8h_a1430a1a0897570a0423713394faf07b9}} 
+\index{widget.h@{widget.h}!setWidgetName\_Type@{setWidgetName\_Type}}
+\index{setWidgetName\_Type@{setWidgetName\_Type}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{setWidgetName\_Type}{setWidgetName\_Type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ set\+Widget\+Name\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, const char $\ast$name)}
+
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{widget_8h_a5524d050f5e28511da11303085ab90a0}\label{widget_8h_a5524d050f5e28511da11303085ab90a0}} 
-\index{widget.h@{widget.h}!alooSetOrientation@{alooSetOrientation}}
-\index{alooSetOrientation@{alooSetOrientation}!widget.h@{widget.h}}
-\doxysubsubsection{\texorpdfstring{alooSetOrientation()}{alooSetOrientation()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ aloo\+Set\+Orientation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{widget,  }\item[{Gtk\+Orientation}]{orien }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{widget_8h_a0cf5af29b9d23e3e483d0870f0a52ff2}\label{widget_8h_a0cf5af29b9d23e3e483d0870f0a52ff2}} 
+\index{widget.h@{widget.h}!\_\_alooAddEventListener@{\_\_alooAddEventListener}}
+\index{\_\_alooAddEventListener@{\_\_alooAddEventListener}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_alooAddEventListener()}{\_\_alooAddEventListener()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ \+\_\+\+\_\+aloo\+Add\+Event\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{widget\+\_\+instance,  }\item[{char $\ast$}]{event\+\_\+name,  }\item[{GCallback}]{Callback\+Fn,  }\item[{gpointer}]{data }\end{DoxyParamCaption})}
+
+
+
+Adds event listener to a widget. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget\+\_\+instance} & \\
+\hline
+{\em data} & parameters for event listener \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{widget_8h_a723480206252f9c49a96016e525c80bb}\label{widget_8h_a723480206252f9c49a96016e525c80bb}} 
+\index{widget.h@{widget.h}!\_\_alooHorizontalAlign@{\_\_alooHorizontalAlign}}
+\index{\_\_alooHorizontalAlign@{\_\_alooHorizontalAlign}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_alooHorizontalAlign()}{\_\_alooHorizontalAlign()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ \+\_\+\+\_\+aloo\+Horizontal\+Align (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{widget,  }\item[{Gtk\+Align}]{alignment }\end{DoxyParamCaption})}
+
+
+
+Sets horizontal alignment of \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}. 
+
+\mbox{\Hypertarget{widget_8h_adea5eac957f93ec801152cfa8868978a}\label{widget_8h_adea5eac957f93ec801152cfa8868978a}} 
+\index{widget.h@{widget.h}!\_\_alooSetOrientation@{\_\_alooSetOrientation}}
+\index{\_\_alooSetOrientation@{\_\_alooSetOrientation}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_alooSetOrientation()}{\_\_alooSetOrientation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ \+\_\+\+\_\+aloo\+Set\+Orientation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{widget,  }\item[{Gtk\+Orientation}]{orien }\end{DoxyParamCaption})}
 
 
 
 Sets orientation of \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}. 
 
-\mbox{\Hypertarget{widget_8h_ab357e941224d0aa29fdd240b86f670cd}\label{widget_8h_ab357e941224d0aa29fdd240b86f670cd}} 
-\index{widget.h@{widget.h}!alooWidgetFromBuilder@{alooWidgetFromBuilder}}
-\index{alooWidgetFromBuilder@{alooWidgetFromBuilder}!widget.h@{widget.h}}
-\doxysubsubsection{\texorpdfstring{alooWidgetFromBuilder()}{alooWidgetFromBuilder()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ aloo\+Widget\+From\+Builder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$}]{builder,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{widget_8h_a5949823315aa75ff5c04f791f75d301c}\label{widget_8h_a5949823315aa75ff5c04f791f75d301c}} 
+\index{widget.h@{widget.h}!\_\_alooVerticalAlign@{\_\_alooVerticalAlign}}
+\index{\_\_alooVerticalAlign@{\_\_alooVerticalAlign}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_alooVerticalAlign()}{\_\_alooVerticalAlign()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ \+\_\+\+\_\+aloo\+Vertical\+Align (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{widget,  }\item[{Gtk\+Align}]{alignment }\end{DoxyParamCaption})}
 
 
 
-Creates \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} from builder. 
+Sets vertical alignment of \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}. 
 
-\mbox{\Hypertarget{widget_8h_a7f163845105d934fe9270c4f27deea06}\label{widget_8h_a7f163845105d934fe9270c4f27deea06}} 
-\index{widget.h@{widget.h}!GTK\_TO\_ALOO@{GTK\_TO\_ALOO}}
-\index{GTK\_TO\_ALOO@{GTK\_TO\_ALOO}!widget.h@{widget.h}}
-\doxysubsubsection{\texorpdfstring{GTK\_TO\_ALOO()}{GTK\_TO\_ALOO()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ GTK\+\_\+\+TO\+\_\+\+ALOO (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{widget }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{widget_8h_a890a69c8a7ff1134e5e7811e7ff2183c}\label{widget_8h_a890a69c8a7ff1134e5e7811e7ff2183c}} 
+\index{widget.h@{widget.h}!\_\_GTK\_TO\_ALOO@{\_\_GTK\_TO\_ALOO}}
+\index{\_\_GTK\_TO\_ALOO@{\_\_GTK\_TO\_ALOO}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_GTK\_TO\_ALOO()}{\_\_GTK\_TO\_ALOO()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ \+\_\+\+\_\+\+GTK\+\_\+\+TO\+\_\+\+ALOO (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{widget }\end{DoxyParamCaption})}
 
 
 
 Creates \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} from Gtk\+Widget. 
 
-\mbox{\Hypertarget{widget_8h_a1f5dbc41a627d435767b5a0dcc850562}\label{widget_8h_a1f5dbc41a627d435767b5a0dcc850562}} 
-\index{widget.h@{widget.h}!NewWidget@{NewWidget}}
-\index{NewWidget@{NewWidget}!widget.h@{widget.h}}
-\doxysubsubsection{\texorpdfstring{NewWidget()}{NewWidget()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ New\+Widget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8h_a7b98518122eb2e94554d2b99d29d1452}{Widget\+Type}}}]{type,  }\item[{Gtk\+Widget $\ast$}]{child }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{widget_8h_ace7e17033235b5a9fec8ceee1068fc4b}\label{widget_8h_ace7e17033235b5a9fec8ceee1068fc4b}} 
+\index{widget.h@{widget.h}!\_\_NewWidget@{\_\_NewWidget}}
+\index{\_\_NewWidget@{\_\_NewWidget}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_NewWidget()}{\_\_NewWidget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ \+\_\+\+\_\+\+New\+Widget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8h_a7b98518122eb2e94554d2b99d29d1452}{Widget\+Type}}}]{type,  }\item[{Gtk\+Widget $\ast$}]{child }\end{DoxyParamCaption})}
 
 
 
@@ -76,31 +208,31 @@ Create a widget.
 \begin{DoxyReturn}{Returns}
 aloo\+Widget$\ast$ 
 \end{DoxyReturn}
-\mbox{\Hypertarget{widget_8h_a3c4124ba611f4967a0f00feddc1e3efd}\label{widget_8h_a3c4124ba611f4967a0f00feddc1e3efd}} 
-\index{widget.h@{widget.h}!OBJECT\_TO\_ALOO@{OBJECT\_TO\_ALOO}}
-\index{OBJECT\_TO\_ALOO@{OBJECT\_TO\_ALOO}!widget.h@{widget.h}}
-\doxysubsubsection{\texorpdfstring{OBJECT\_TO\_ALOO()}{OBJECT\_TO\_ALOO()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ OBJECT\+\_\+\+TO\+\_\+\+ALOO (\begin{DoxyParamCaption}\item[{GObject $\ast$}]{obj }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{widget_8h_a9080baf6af2398b65aa4a7280eb80c05}\label{widget_8h_a9080baf6af2398b65aa4a7280eb80c05}} 
+\index{widget.h@{widget.h}!\_\_OBJECT\_TO\_ALOO@{\_\_OBJECT\_TO\_ALOO}}
+\index{\_\_OBJECT\_TO\_ALOO@{\_\_OBJECT\_TO\_ALOO}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_OBJECT\_TO\_ALOO()}{\_\_OBJECT\_TO\_ALOO()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ \+\_\+\+\_\+\+OBJECT\+\_\+\+TO\+\_\+\+ALOO (\begin{DoxyParamCaption}\item[{GObject $\ast$}]{obj }\end{DoxyParamCaption})}
 
 
 
 Create \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} from GObject. 
 
-\mbox{\Hypertarget{widget_8h_a64d12e6dae8dfac76d2231f411cba885}\label{widget_8h_a64d12e6dae8dfac76d2231f411cba885}} 
-\index{widget.h@{widget.h}!OBJECT\_TO\_GTK\_WIDGET@{OBJECT\_TO\_GTK\_WIDGET}}
-\index{OBJECT\_TO\_GTK\_WIDGET@{OBJECT\_TO\_GTK\_WIDGET}!widget.h@{widget.h}}
-\doxysubsubsection{\texorpdfstring{OBJECT\_TO\_GTK\_WIDGET()}{OBJECT\_TO\_GTK\_WIDGET()}}
-{\footnotesize\ttfamily Gtk\+Widget$\ast$ OBJECT\+\_\+\+TO\+\_\+\+GTK\+\_\+\+WIDGET (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$}]{builder,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{widget_8h_abb126fbe246404cc032f3bc2cabb6c3a}\label{widget_8h_abb126fbe246404cc032f3bc2cabb6c3a}} 
+\index{widget.h@{widget.h}!\_\_OBJECT\_TO\_GTK\_WIDGET@{\_\_OBJECT\_TO\_GTK\_WIDGET}}
+\index{\_\_OBJECT\_TO\_GTK\_WIDGET@{\_\_OBJECT\_TO\_GTK\_WIDGET}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_OBJECT\_TO\_GTK\_WIDGET()}{\_\_OBJECT\_TO\_GTK\_WIDGET()}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ \+\_\+\+\_\+\+OBJECT\+\_\+\+TO\+\_\+\+GTK\+\_\+\+WIDGET (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$}]{builder,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
 
 
 
 Creates Gtk\+Widget from builder. 
 
-\mbox{\Hypertarget{widget_8h_a4e21ea1424626c054cdb8613e18f7636}\label{widget_8h_a4e21ea1424626c054cdb8613e18f7636}} 
-\index{widget.h@{widget.h}!setWidgetName@{setWidgetName}}
-\index{setWidgetName@{setWidgetName}!widget.h@{widget.h}}
-\doxysubsubsection{\texorpdfstring{setWidgetName()}{setWidgetName()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ set\+Widget\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{widget,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{widget_8h_aa9e589aef695d4d9c061c02cfbb47bb3}\label{widget_8h_aa9e589aef695d4d9c061c02cfbb47bb3}} 
+\index{widget.h@{widget.h}!\_\_setWidgetName@{\_\_setWidgetName}}
+\index{\_\_setWidgetName@{\_\_setWidgetName}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_setWidgetName()}{\_\_setWidgetName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ \+\_\+\+\_\+set\+Widget\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{widget,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
 
 
 
@@ -116,3 +248,12 @@ Set the Name of widget.
 \begin{DoxyReturn}{Returns}
 returns the widget 
 \end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{widget_8h_a4f8497ae7e1b8daedfcdfa72d643a125}\label{widget_8h_a4f8497ae7e1b8daedfcdfa72d643a125}} 
+\index{widget.h@{widget.h}!Widget@{Widget}}
+\index{Widget@{Widget}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{Widget}{Widget}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct__aloo__widget}{\+\_\+aloo\+\_\+widget}} Widget\hspace{0.3cm}{\ttfamily [extern]}}
+

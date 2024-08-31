@@ -1,4 +1,5 @@
-#include "../include/style.h"
+#include "style.h"
+#include "macros.h"
 
 void importCssFromPath(const char *path) {
 	GtkCssProvider *cssProvider = gtk_css_provider_new();

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/app.h" line="10" column="16" bodyfile="include/app.h" bodystart="10" bodyend="-1"/>
+        <location file="include/app.h" line="15" column="16" bodyfile="include/app.h" bodystart="15" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structalooApp__Status_1a5acd3502c8236365d599e6ca498b95ad" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/app.h" line="11" column="5" bodyfile="include/app.h" bodystart="11" bodyend="-1"/>
+        <location file="include/app.h" line="16" column="5" bodyfile="include/app.h" bodystart="16" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -36,7 +36,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/app.h" line="9" column="1" bodyfile="include/app.h" bodystart="9" bodyend="12"/>
+    <location file="include/app.h" line="14" column="1" bodyfile="include/app.h" bodystart="14" bodyend="17"/>
     <listofallmembers>
       <member refid="structalooApp__Status_1a3eb578eacf93fea1f52147663d3d7359" prot="public" virt="non-virtual"><scope>alooApp_Status</scope><name>app</name></member>
       <member refid="structalooApp__Status_1a5acd3502c8236365d599e6ca498b95ad" prot="public" virt="non-virtual"><scope>alooApp_Status</scope><name>status</name></member>

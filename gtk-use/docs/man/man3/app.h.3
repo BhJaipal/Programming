@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-include/app.h
+include/app.h \- Aloo Application related functions\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -23,25 +24,6 @@ include/app.h
 .br
 .RI "Takes GApplicationFlags, argc and argv\&. "
 .in -1c
-.SS "Macros"
-
-.in +1c
-.ti -1c
-.RI "#define \fBNONE_FLAGS_OPTIONS\fP(argc,  argv)   	{ \fBAPP_FLAGS_NONE\fP, argc, argv }"
-.br
-.RI "generates app options with APP_FLAGS_NONE "
-.ti -1c
-.RI "#define \fBLAUNCHER_FLAGS_OPTIONS\fP(argc,  argv)   	{ \fBAPP_FLAGS_IS_LAUNCHER\fP, argc, argv }"
-.br
-.RI "generates app options with APP_FLAGS_IS_LAUNCHER "
-.ti -1c
-.RI "#define \fBSERVICE_FLAGS_OPTIONS\fP(argc,  argv)   	{ \fBAPP_FLAGS_IS_SERVICE\fP, argc, argv }"
-.br
-.RI "generates app options with APP_FLAGS_IS_SERVICE "
-.ti -1c
-.RI "#define \fBALOO_IS_WINDOW\fP(X)   GTK_IS_WINDOW(X\->child)"
-.br
-.in -1c
 .SS "Enumerations"
 
 .in +1c
@@ -57,18 +39,6 @@ include/app.h
 .RI "struct \fBalooApp_Status\fP \fBCreateApp\fP (char *app_id, struct \fBalooAppOptions\fP gAppOptions, void activateFn(GtkApplication *app, gpointer user_data))"
 .br
 .RI "Create a App object\&. "
-.ti -1c
-.RI "\fBalooWidget\fP * \fBalooHorizontalAlign\fP (\fBalooWidget\fP *widget, GtkAlign alignment)"
-.br
-.RI "Sets horizontal alignment of \fBalooWidget\fP\&. "
-.ti -1c
-.RI "\fBalooWidget\fP * \fBalooVerticalAlign\fP (\fBalooWidget\fP *widget, GtkAlign alignment)"
-.br
-.RI "Sets vertical alignment of \fBalooWidget\fP\&. "
-.ti -1c
-.RI "\fBalooWidget\fP * \fBalooAddEventListener\fP (\fBalooWidget\fP *widget_instance, char *event_name, GCallback CallbackFn, gpointer data)"
-.br
-.RI "Adds event listener to a widget\&. "
 .ti -1c
 .RI "GtkWidget * \fBalooSetWindowChild\fP (GtkWidget *window, GtkWidget *child)"
 .br
@@ -94,10 +64,6 @@ include/app.h
 .br
 .RI "Sets aloo Window size\&. "
 .ti -1c
-.RI "GObject * \fBalooGetBuilderObject\fP (\fBAlooBuilder\fP *builder, const char *name)"
-.br
-.RI "Gets GObject from builder\&. "
-.ti -1c
 .RI "\fBalooWidget\fP * \fBsetWindowApplication\fP (\fBalooWidget\fP *window, GtkApplication *app)"
 .br
 .RI "Set the Window for Application\&. "
@@ -105,43 +71,19 @@ include/app.h
 .RI "void \fBshowWindow\fP (\fBalooWidget\fP *window)"
 .br
 .RI "Shows Window\&. "
-.ti -1c
-.RI "void \fBunrefBuilder\fP (\fBAlooBuilder\fP *data)"
-.br
-.RI "Unrefs aloo builder\&. "
-.ti -1c
-.RI "\fBAlooBuilder\fP * \fBcreateBuilder\fP ()"
-.br
-.RI "Create a Builder object\&. "
-.ti -1c
-.RI "int \fBbuilderAddFile\fP (\fBAlooBuilder\fP *build, const char *filename, GError **err)"
-.br
-.RI "Adds a file with builder\&. "
-.ti -1c
-.RI "int \fBbuilderAddContent\fP (\fBAlooBuilder\fP *build, const char *content, gssize length, GError **err)"
-.br
-.RI "Adds a file with builder\&. "
-.ti -1c
-.RI "int \fBbuilderAddResource\fP (\fBAlooBuilder\fP *build, const char *resource_path, GError **err)"
-.br
-.RI "Adds a file with builder\&. "
 .in -1c
-.SH "Macro Definition Documentation"
+.SH "Detailed Description"
 .PP 
-.SS "#define ALOO_IS_WINDOW(X)   GTK_IS_WINDOW(X\->child)"
+Aloo Application related functions\&. 
 
-.SS "#define LAUNCHER_FLAGS_OPTIONS(argc, argv)   	{ \fBAPP_FLAGS_IS_LAUNCHER\fP, argc, argv }"
-
-.PP
-generates app options with APP_FLAGS_IS_LAUNCHER 
-.SS "#define NONE_FLAGS_OPTIONS(argc, argv)   	{ \fBAPP_FLAGS_NONE\fP, argc, argv }"
 
 .PP
-generates app options with APP_FLAGS_NONE 
-.SS "#define SERVICE_FLAGS_OPTIONS(argc, argv)   	{ \fBAPP_FLAGS_IS_SERVICE\fP, argc, argv }"
-
+\fBAuthor\fP
+.RS 4
+Jaipal001 (@BhJaipal) 
+.RE
 .PP
-generates app options with APP_FLAGS_IS_SERVICE 
+
 .SH "Enumeration Type Documentation"
 .PP 
 .SS "enum \fBalooAppFlags\fP"
@@ -162,19 +104,6 @@ G_APPLICATION_FLAGS_IS_LAUNCHER\&.
 G_APPLICATION_FLAGS_IS_SERVICE\&. 
 .SH "Function Documentation"
 .PP 
-.SS "\fBalooWidget\fP* alooAddEventListener (\fBalooWidget\fP * widget_instance, char * event_name, GCallback CallbackFn, gpointer data)"
-
-.PP
-Adds event listener to a widget\&. 
-.PP
-\fBParameters\fP
-.RS 4
-\fIwidget_instance\fP 
-.br
-\fIdata\fP parameters for event listener 
-.RE
-.PP
-
 .SS "GtkWidget* alooAddNewButtonLabel (const char * label)"
 
 .PP
@@ -183,14 +112,6 @@ Create new GtkButton\&.
 
 .PP
 Create a GtkWindow\&. 
-.SS "GObject* alooGetBuilderObject (\fBAlooBuilder\fP * builder, const char * name)"
-
-.PP
-Gets GObject from builder\&. 
-.SS "\fBalooWidget\fP* alooHorizontalAlign (\fBalooWidget\fP * widget, GtkAlign alignment)"
-
-.PP
-Sets horizontal alignment of \fBalooWidget\fP\&. 
 .SS "GtkWidget* alooPresentWindow (GtkWidget * window)"
 
 .PP
@@ -229,57 +150,6 @@ GtkWidget*
 
 .PP
 Sets GtkWindow title\&. 
-.SS "\fBalooWidget\fP* alooVerticalAlign (\fBalooWidget\fP * widget, GtkAlign alignment)"
-
-.PP
-Sets vertical alignment of \fBalooWidget\fP\&. 
-.SS "int builderAddContent (\fBAlooBuilder\fP * build, const char * content, gssize length, GError ** err)"
-
-.PP
-Adds a file with builder\&. 
-.PP
-\fBParameters\fP
-.RS 4
-\fIbuild\fP \fBAlooBuilder\fP object 
-.br
-\fIcontent\fP UI data 
-.br
-\fIlength\fP UI data length 
-.br
-\fIerr\fP Error handler, Default \fCNULL\fP 
-.RE
-.PP
-
-.SS "int builderAddFile (\fBAlooBuilder\fP * build, const char * filename, GError ** err)"
-
-.PP
-Adds a file with builder\&. 
-.PP
-\fBParameters\fP
-.RS 4
-\fIbuild\fP \fBAlooBuilder\fP object 
-.br
-\fIfilename\fP UI file path with name 
-.br
-\fIerr\fP Error handler, Default \fCNULL\fP 
-.RE
-.PP
-
-.SS "int builderAddResource (\fBAlooBuilder\fP * build, const char * resource_path, GError ** err)"
-
-.PP
-Adds a file with builder\&. 
-.PP
-\fBParameters\fP
-.RS 4
-\fIbuild\fP \fBAlooBuilder\fP object 
-.br
-\fIresource_path\fP UI resource path 
-.br
-\fIerr\fP Error handler, Default \fCNULL\fP 
-.RE
-.PP
-
 .SS "struct \fBalooApp_Status\fP CreateApp (char * app_id, struct \fBalooAppOptions\fP gAppOptions, void  activateFnGtkApplication *app, gpointer user_data)"
 
 .PP
@@ -300,17 +170,6 @@ It returns GtkApplication and status
 .RE
 .PP
 
-.SS "\fBAlooBuilder\fP* createBuilder ()"
-
-.PP
-Create a Builder object\&. 
-.PP
-\fBReturns\fP
-.RS 4
-AlooBuilder* 
-.RE
-.PP
-
 .SS "\fBalooWidget\fP* setWindowApplication (\fBalooWidget\fP * window, GtkApplication * app)"
 
 .PP
@@ -323,10 +182,6 @@ Sets aloo Window size\&.
 
 .PP
 Shows Window\&. 
-.SS "void unrefBuilder (\fBAlooBuilder\fP * data)"
-
-.PP
-Unrefs aloo builder\&. 
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Aloo from the source code\&.

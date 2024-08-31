@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct__alooButton" kind="struct" language="C++" prot="public">
+    <compoundname>_alooButton</compoundname>
+    <includes refid="button_8h" local="no">button.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__alooButton_1a6ad6efc8a7f49e54483628fe69d48f14" prot="public" static="no" mutable="no">
+        <type><ref refid="button_8h_1acfdf6bd8e4ada55520daa9148135f344" kindref="member">__newButton_Type</ref></type>
+        <definition>__newButton_Type _alooButton::new</definition>
+        <argsstring></argsstring>
+        <name>new</name>
+        <briefdescription>
+<para>Creates new Aloo Button without label. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/button.h" line="32" column="18" bodyfile="include/button.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooButton_1aa64a21c82cc3f7c0b60b5453abdf23b6" prot="public" static="no" mutable="no">
+        <type><ref refid="button_8h_1a9e055ce7442347717e5d577ea1b46edf" kindref="member">__newButtonWithLabel_Type</ref></type>
+        <definition>__newButtonWithLabel_Type _alooButton::newWithLabel</definition>
+        <argsstring></argsstring>
+        <name>newWithLabel</name>
+        <briefdescription>
+<para>Creates new Aloo Button with label. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/button.h" line="34" column="27" bodyfile="include/button.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooButton_1a83a26e78342fe8a2d2aea57eca142a30" prot="public" static="no" mutable="no">
+        <type><ref refid="button_8h_1a8ca713c33a2e217e22431d13f176b6a9" kindref="member">__setLabel_Type</ref></type>
+        <definition>__setLabel_Type _alooButton::label</definition>
+        <argsstring></argsstring>
+        <name>label</name>
+        <briefdescription>
+<para>Sets the label of the button. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/button.h" line="36" column="17" bodyfile="include/button.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooButton_1af86a181ac928520c0abefbe725e982e6" prot="public" static="no" mutable="no">
+        <type><ref refid="button_8h_1a438e9e37d7641106a3ad85147136fb2e" kindref="member">__setChild_Type</ref></type>
+        <definition>__setChild_Type _alooButton::child</definition>
+        <argsstring></argsstring>
+        <name>child</name>
+        <briefdescription>
+<para>Sets the child of the button. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/button.h" line="38" column="17" bodyfile="include/button.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooButton_1a1e2800c05e965873d176ab5b6e16f74c" prot="public" static="no" mutable="no">
+        <type><ref refid="button_8h_1a9060c0869560c143155a9d8cfed0f7f9" kindref="member">__setIcon_Type</ref></type>
+        <definition>__setIcon_Type _alooButton::icon</definition>
+        <argsstring></argsstring>
+        <name>icon</name>
+        <briefdescription>
+<para>Sets the icon of the button. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/button.h" line="40" column="16" bodyfile="include/button.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooButton_1a83dec1a0bd4b85ae790c715c4e03d1a1" prot="public" static="no" mutable="no">
+        <type><ref refid="button_8h_1acfac04019cd2983c4d4ee3d3c508985a" kindref="member">__setUseUnderline_Type</ref></type>
+        <definition>__setUseUnderline_Type _alooButton::useUnderline</definition>
+        <argsstring></argsstring>
+        <name>useUnderline</name>
+        <briefdescription>
+<para>Sets whether to use underline or not in the button. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/button.h" line="42" column="24" bodyfile="include/button.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>_alooButton</label>
+        <link refid="struct__alooButton"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>child</edgelabel>
+          <edgelabel>icon</edgelabel>
+          <edgelabel>label</edgelabel>
+          <edgelabel>new</edgelabel>
+          <edgelabel>newWithLabel</edgelabel>
+          <edgelabel>useUnderline</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>alooWidget</label>
+        <link refid="structalooWidget"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/button.h" line="30" column="1" bodyfile="include/button.h" bodystart="30" bodyend="43"/>
+    <listofallmembers>
+      <member refid="struct__alooButton_1af86a181ac928520c0abefbe725e982e6" prot="public" virt="non-virtual"><scope>_alooButton</scope><name>child</name></member>
+      <member refid="struct__alooButton_1a1e2800c05e965873d176ab5b6e16f74c" prot="public" virt="non-virtual"><scope>_alooButton</scope><name>icon</name></member>
+      <member refid="struct__alooButton_1a83a26e78342fe8a2d2aea57eca142a30" prot="public" virt="non-virtual"><scope>_alooButton</scope><name>label</name></member>
+      <member refid="struct__alooButton_1a6ad6efc8a7f49e54483628fe69d48f14" prot="public" virt="non-virtual"><scope>_alooButton</scope><name>new</name></member>
+      <member refid="struct__alooButton_1aa64a21c82cc3f7c0b60b5453abdf23b6" prot="public" virt="non-virtual"><scope>_alooButton</scope><name>newWithLabel</name></member>
+      <member refid="struct__alooButton_1a83dec1a0bd4b85ae790c715c4e03d1a1" prot="public" virt="non-virtual"><scope>_alooButton</scope><name>useUnderline</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

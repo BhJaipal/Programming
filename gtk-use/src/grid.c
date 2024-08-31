@@ -1,35 +1,40 @@
-#include "../include/grid.h"
-#include "../include/widget.h"
+#include "grid.h"
+#include "macros.h"
+#include "widget.h"
 
-alooWidget *gridAttach(alooWidget *grid, alooWidget *child, int column, int row,
-					   int width, int height) {
+alooWidget *__gridAttach(alooWidget *grid, alooWidget *child, int column,
+						 int row, int width, int height) {
 	gtk_grid_attach(ALOO_GRID_TO_GTK(grid), ALOO_WIDGET_TO_GTK(child), column,
 					row, width, height);
 	return grid;
 }
-alooWidget *gridAttachGtk(alooWidget *grid, GtkWidget *child, int column,
-						  int row, int width, int height) {
+alooWidget *__gridAttachGtk(alooWidget *grid, GtkWidget *child, int column,
+							int row, int width, int height) {
 	gtk_grid_attach(ALOO_GRID_TO_GTK(grid), child, column, row, width, height);
 	return grid;
 }
 
-alooWidget *gridRemove(alooWidget *grid, alooWidget *child) {
+alooWidget *__gridRemove(alooWidget *grid, alooWidget *child) {
 	gtk_grid_remove(ALOO_GRID_TO_GTK(grid), ALOO_WIDGET_TO_GTK(child));
 	return grid;
 }
-alooWidget *gridRemoveGtk(alooWidget *grid, GtkWidget *child) {
+alooWidget *__gridRemoveGtk(alooWidget *grid, GtkWidget *child) {
 	gtk_grid_remove(ALOO_GRID_TO_GTK(grid), child);
 	return grid;
 }
 
-alooWidget *alooGridNew() { return NewWidget(ALOO_GRID, gtk_grid_new()); }
+alooWidget *__alooGridNew() { return Widget.new(ALOO_GRID, gtk_grid_new()); }
 
-alooWidget *setGridColumnSpacing(alooWidget *grid, int space) {
+alooWidget *__setGridColumnSpacing(alooWidget *grid, int space) {
 	gtk_grid_set_column_spacing(ALOO_GRID_TO_GTK(grid), space);
 	return grid;
 }
 
-alooWidget *setGridRowSpacing(alooWidget *grid, int space) {
+alooWidget *__setGridRowSpacing(alooWidget *grid, int space) {
 	gtk_grid_set_row_spacing(ALOO_GRID_TO_GTK(grid), space);
 	return grid;
 }
+
+struct _alooGrid Grid = {
+	__gridAttach,  __gridAttachGtk,		   __gridRemove,	   __gridRemoveGtk,
+	__alooGridNew, __setGridColumnSpacing, __setGridRowSpacing};

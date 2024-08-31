@@ -1,0 +1,183 @@
+.TH "include/builder.h" 3 "Sat Aug 31 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/builder.h \- This file contains UI Builder related functions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'types\&.h'\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef void(* \fB__unrefBuilderType\fP) (\fBAlooBuilder\fP *data)"
+.br
+.ti -1c
+.RI "typedef \fBAlooBuilder\fP *(* \fB__createBuilderType\fP) ()"
+.br
+.ti -1c
+.RI "typedef int(* \fB__builderAddFileType\fP) (\fBAlooBuilder\fP *build, const char *filename, GError **err)"
+.br
+.ti -1c
+.RI "typedef int(* \fB__builderAddContentType\fP) (\fBAlooBuilder\fP *build, const char *content, gssize length, GError **err)"
+.br
+.ti -1c
+.RI "typedef int(* \fB__builderAddResourceType\fP) (\fBAlooBuilder\fP *build, const char *resource_path, GError **err)"
+.br
+.ti -1c
+.RI "typedef GObject *(* \fB__alooGetBuilderObjectType\fP) (\fBAlooBuilder\fP *builder, const char *name)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__alooWidgetFromBuilderType\fP) (\fBAlooBuilder\fP *builder, const char *name)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fB__unrefBuilder\fP (\fBAlooBuilder\fP *data)"
+.br
+.RI "Unrefs aloo builder\&. "
+.ti -1c
+.RI "\fBAlooBuilder\fP * \fB__createBuilder\fP ()"
+.br
+.RI "Create a Builder object\&. "
+.ti -1c
+.RI "int \fB__builderAddFile\fP (\fBAlooBuilder\fP *build, const char *filename, GError **err)"
+.br
+.RI "Adds a file with builder\&. "
+.ti -1c
+.RI "int \fB__builderAddContent\fP (\fBAlooBuilder\fP *build, const char *content, gssize length, GError **err)"
+.br
+.RI "Adds a file with builder\&. "
+.ti -1c
+.RI "int \fB__builderAddResource\fP (\fBAlooBuilder\fP *build, const char *resource_path, GError **err)"
+.br
+.RI "Adds a file with builder\&. "
+.ti -1c
+.RI "GObject * \fB__alooGetBuilderObject\fP (\fBAlooBuilder\fP *builder, const char *name)"
+.br
+.RI "Gets GObject from builder\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fB__alooWidgetFromBuilder\fP (\fBAlooBuilder\fP *builder, const char *name)"
+.br
+.RI "Creates \fBalooWidget\fP from builder\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "struct _AlooBuilder \fBBuilder\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This file contains UI Builder related functions\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Jaipal001 @BhJaipal 
+.RE
+.PP
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef GObject*(* __alooGetBuilderObjectType) (\fBAlooBuilder\fP *builder, const char *name)"
+
+.SS "typedef \fBalooWidget\fP*(* __alooWidgetFromBuilderType) (\fBAlooBuilder\fP *builder, const char *name)"
+
+.SS "typedef int(* __builderAddContentType) (\fBAlooBuilder\fP *build, const char *content, gssize length, GError **err)"
+
+.SS "typedef int(* __builderAddFileType) (\fBAlooBuilder\fP *build, const char *filename, GError **err)"
+
+.SS "typedef int(* __builderAddResourceType) (\fBAlooBuilder\fP *build, const char *resource_path, GError **err)"
+
+.SS "typedef \fBAlooBuilder\fP*(* __createBuilderType) ()"
+
+.SS "typedef void(* __unrefBuilderType) (\fBAlooBuilder\fP *data)"
+
+.SH "Function Documentation"
+.PP 
+.SS "GObject* __alooGetBuilderObject (\fBAlooBuilder\fP * builder, const char * name)"
+
+.PP
+Gets GObject from builder\&. 
+.SS "\fBalooWidget\fP* __alooWidgetFromBuilder (\fBAlooBuilder\fP * builder, const char * name)"
+
+.PP
+Creates \fBalooWidget\fP from builder\&. 
+.SS "int __builderAddContent (\fBAlooBuilder\fP * build, const char * content, gssize length, GError ** err)"
+
+.PP
+Adds a file with builder\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbuild\fP \fBAlooBuilder\fP object 
+.br
+\fIcontent\fP UI data 
+.br
+\fIlength\fP UI data length 
+.br
+\fIerr\fP Error handler, Default \fCNULL\fP 
+.RE
+.PP
+
+.SS "int __builderAddFile (\fBAlooBuilder\fP * build, const char * filename, GError ** err)"
+
+.PP
+Adds a file with builder\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbuild\fP \fBAlooBuilder\fP object 
+.br
+\fIfilename\fP UI file path with name 
+.br
+\fIerr\fP Error handler, Default \fCNULL\fP 
+.RE
+.PP
+
+.SS "int __builderAddResource (\fBAlooBuilder\fP * build, const char * resource_path, GError ** err)"
+
+.PP
+Adds a file with builder\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbuild\fP \fBAlooBuilder\fP object 
+.br
+\fIresource_path\fP UI resource path 
+.br
+\fIerr\fP Error handler, Default \fCNULL\fP 
+.RE
+.PP
+
+.SS "\fBAlooBuilder\fP* __createBuilder ()"
+
+.PP
+Create a Builder object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+AlooBuilder* 
+.RE
+.PP
+
+.SS "void __unrefBuilder (\fBAlooBuilder\fP * data)"
+
+.PP
+Unrefs aloo builder\&. 
+.SH "Variable Documentation"
+.PP 
+.SS "struct _AlooBuilder Builder\fC [extern]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Aloo from the source code\&.

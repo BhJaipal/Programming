@@ -1,59 +1,121 @@
 \hypertarget{grid_8h}{}\doxysection{include/grid.h File Reference}
 \label{grid_8h}\index{include/grid.h@{include/grid.h}}
+
+
+Aloo Grid related functions.  
+
+
 {\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$gtk/gtk.\+h$>$}\newline
 Include dependency graph for grid.\+h\+:
 % FIG 0
 This graph shows which files directly or indirectly include this file\+:
 % FIG 1
-\doxysubsection*{Macros}
+\doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{grid_8h_abf08dd722dd5d05a2513522a8c1d9800}{ALOO\+\_\+\+GRID\+\_\+\+TO\+\_\+\+GTK}}(x)~GTK\+\_\+\+GRID(x-\/$>$child)
-\begin{DoxyCompactList}\small\item\em Returns GTK\+\_\+\+GRID of \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+struct \mbox{\hyperlink{struct__alooGrid}{\+\_\+aloo\+Grid}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{grid_8h_a11b864d7aab2a361292985c490ddd57e}{\+\_\+\+\_\+grid\+Attach\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$child, int column, int row, int width, int height)
+\item 
+typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{grid_8h_a5eeeff181075e653b204e50072acd1f9}{\+\_\+\+\_\+grid\+Attach\+Gtk\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, Gtk\+Widget $\ast$child, int column, int row, int width, int height)
+\item 
+typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{grid_8h_af030d6ae524ceff4c1118a07fd773813}{\+\_\+\+\_\+grid\+Remove\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$child)
+\item 
+typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{grid_8h_aa22f580c625588aa1f3812bb7d115f9f}{\+\_\+\+\_\+grid\+Remove\+Gtk\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, Gtk\+Widget $\ast$child)
+\item 
+typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{grid_8h_a13778e15601890b4017f5de7555949ba}{\+\_\+\+\_\+aloo\+Grid\+New\+\_\+\+Type}}) ()
+\item 
+typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{grid_8h_a0979122e61c2f6b0c23b3290221a3260}{\+\_\+\+\_\+set\+Grid\+Column\+Spacing\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, int space)
+\item 
+typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{grid_8h_a0f9572d52e6fae032f9623fd082e543a}{\+\_\+\+\_\+set\+Grid\+Row\+Spacing\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, int space)
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{grid_8h_a63d120e21e61dd6c60b73817c05a0a65}{grid\+Attach}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$child, int column, int row, int width, int height)
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{grid_8h_ac8b597f92a5eb31e5c109cef0b2c3977}{\+\_\+\+\_\+grid\+Attach}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$child, int column, int row, int width, int height)
 \begin{DoxyCompactList}\small\item\em Adds widget to aloo grid. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{grid_8h_af73f05491a5e1ff7c5ba7c8a425cb04c}{grid\+Attach\+Gtk}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, Gtk\+Widget $\ast$child, int column, int row, int width, int height)
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{grid_8h_ab44960f97e620f1a08f3ac2d03331bf8}{\+\_\+\+\_\+grid\+Attach\+Gtk}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, Gtk\+Widget $\ast$child, int column, int row, int width, int height)
 \begin{DoxyCompactList}\small\item\em Adds widget to aloo grid. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{grid_8h_a7a87945698bb503625c7926ab6717187}{grid\+Remove}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$child)
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{grid_8h_a0668456bd15b6b4c57679c30b9b83af6}{\+\_\+\+\_\+grid\+Remove}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$child)
 \begin{DoxyCompactList}\small\item\em Removes child from grid. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{grid_8h_a6d34934989b423f380da0b3eac2a2bfb}{grid\+Remove\+Gtk}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, Gtk\+Widget $\ast$child)
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{grid_8h_a8c94b866f975c6c418012e8cc48bf82f}{\+\_\+\+\_\+grid\+Remove\+Gtk}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, Gtk\+Widget $\ast$child)
 \begin{DoxyCompactList}\small\item\em Removes child from grid. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{grid_8h_a48e1d5f03b179b82ebe0e7dc3eec17da}{aloo\+Grid\+New}} ()
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{grid_8h_a5d0f0263809bb4108eb2aaf65122538e}{\+\_\+\+\_\+aloo\+Grid\+New}} ()
 \begin{DoxyCompactList}\small\item\em Creates new Aloo Grid Widget. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{grid_8h_a186013459d8639377da1abf0dc370f5b}{set\+Grid\+Column\+Spacing}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, int space)
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{grid_8h_ab77339a80363969985cdc7b365bd2a17}{\+\_\+\+\_\+set\+Grid\+Column\+Spacing}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, int space)
 \begin{DoxyCompactList}\small\item\em Set the Grid Column Spacing. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{grid_8h_a7b4a1902ba701ecd6406795da6b9314c}{set\+Grid\+Row\+Spacing}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, int space)
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{grid_8h_a0595263d3d93593a2aff5c7c51a7139b}{\+\_\+\+\_\+set\+Grid\+Row\+Spacing}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, int space)
 \begin{DoxyCompactList}\small\item\em Set the Grid Row Spacing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__alooGrid}{\+\_\+aloo\+Grid}} \mbox{\hyperlink{grid_8h_aba04f3722c5bd2bb653281967a04555b}{Grid}}
+\end{DoxyCompactItemize}
 
 
-\doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{grid_8h_abf08dd722dd5d05a2513522a8c1d9800}\label{grid_8h_abf08dd722dd5d05a2513522a8c1d9800}} 
-\index{grid.h@{grid.h}!ALOO\_GRID\_TO\_GTK@{ALOO\_GRID\_TO\_GTK}}
-\index{ALOO\_GRID\_TO\_GTK@{ALOO\_GRID\_TO\_GTK}!grid.h@{grid.h}}
-\doxysubsubsection{\texorpdfstring{ALOO\_GRID\_TO\_GTK}{ALOO\_GRID\_TO\_GTK}}
-{\footnotesize\ttfamily \#define ALOO\+\_\+\+GRID\+\_\+\+TO\+\_\+\+GTK(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~GTK\+\_\+\+GRID(x-\/$>$child)}
+\doxysubsection{Detailed Description}
+Aloo Grid related functions. 
+
+\begin{DoxyAuthor}{Author}
+Jaipal001 (@\+Bh\+Jaipal) 
+\end{DoxyAuthor}
 
 
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{grid_8h_a13778e15601890b4017f5de7555949ba}\label{grid_8h_a13778e15601890b4017f5de7555949ba}} 
+\index{grid.h@{grid.h}!\_\_alooGridNew\_Type@{\_\_alooGridNew\_Type}}
+\index{\_\_alooGridNew\_Type@{\_\_alooGridNew\_Type}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{\_\_alooGridNew\_Type}{\_\_alooGridNew\_Type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+\+\_\+aloo\+Grid\+New\+\_\+\+Type) ()}
 
-Returns GTK\+\_\+\+GRID of \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}. 
+\mbox{\Hypertarget{grid_8h_a11b864d7aab2a361292985c490ddd57e}\label{grid_8h_a11b864d7aab2a361292985c490ddd57e}} 
+\index{grid.h@{grid.h}!\_\_gridAttach\_Type@{\_\_gridAttach\_Type}}
+\index{\_\_gridAttach\_Type@{\_\_gridAttach\_Type}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gridAttach\_Type}{\_\_gridAttach\_Type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+\+\_\+grid\+Attach\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$child, int column, int row, int width, int height)}
 
+\mbox{\Hypertarget{grid_8h_a5eeeff181075e653b204e50072acd1f9}\label{grid_8h_a5eeeff181075e653b204e50072acd1f9}} 
+\index{grid.h@{grid.h}!\_\_gridAttachGtk\_Type@{\_\_gridAttachGtk\_Type}}
+\index{\_\_gridAttachGtk\_Type@{\_\_gridAttachGtk\_Type}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gridAttachGtk\_Type}{\_\_gridAttachGtk\_Type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+\+\_\+grid\+Attach\+Gtk\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, Gtk\+Widget $\ast$child, int column, int row, int width, int height)}
 
-\begin{DoxyParams}{Parameters}
-{\em x} & \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} with ALOO\+\_\+\+GRID type \\
-\hline
-\end{DoxyParams}
+\mbox{\Hypertarget{grid_8h_af030d6ae524ceff4c1118a07fd773813}\label{grid_8h_af030d6ae524ceff4c1118a07fd773813}} 
+\index{grid.h@{grid.h}!\_\_gridRemove\_Type@{\_\_gridRemove\_Type}}
+\index{\_\_gridRemove\_Type@{\_\_gridRemove\_Type}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gridRemove\_Type}{\_\_gridRemove\_Type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+\+\_\+grid\+Remove\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$child)}
+
+\mbox{\Hypertarget{grid_8h_aa22f580c625588aa1f3812bb7d115f9f}\label{grid_8h_aa22f580c625588aa1f3812bb7d115f9f}} 
+\index{grid.h@{grid.h}!\_\_gridRemoveGtk\_Type@{\_\_gridRemoveGtk\_Type}}
+\index{\_\_gridRemoveGtk\_Type@{\_\_gridRemoveGtk\_Type}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gridRemoveGtk\_Type}{\_\_gridRemoveGtk\_Type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+\+\_\+grid\+Remove\+Gtk\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, Gtk\+Widget $\ast$child)}
+
+\mbox{\Hypertarget{grid_8h_a0979122e61c2f6b0c23b3290221a3260}\label{grid_8h_a0979122e61c2f6b0c23b3290221a3260}} 
+\index{grid.h@{grid.h}!\_\_setGridColumnSpacing\_Type@{\_\_setGridColumnSpacing\_Type}}
+\index{\_\_setGridColumnSpacing\_Type@{\_\_setGridColumnSpacing\_Type}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{\_\_setGridColumnSpacing\_Type}{\_\_setGridColumnSpacing\_Type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+\+\_\+set\+Grid\+Column\+Spacing\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, int space)}
+
+\mbox{\Hypertarget{grid_8h_a0f9572d52e6fae032f9623fd082e543a}\label{grid_8h_a0f9572d52e6fae032f9623fd082e543a}} 
+\index{grid.h@{grid.h}!\_\_setGridRowSpacing\_Type@{\_\_setGridRowSpacing\_Type}}
+\index{\_\_setGridRowSpacing\_Type@{\_\_setGridRowSpacing\_Type}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{\_\_setGridRowSpacing\_Type}{\_\_setGridRowSpacing\_Type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+\+\_\+set\+Grid\+Row\+Spacing\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$grid, int space)}
+
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{grid_8h_a48e1d5f03b179b82ebe0e7dc3eec17da}\label{grid_8h_a48e1d5f03b179b82ebe0e7dc3eec17da}} 
-\index{grid.h@{grid.h}!alooGridNew@{alooGridNew}}
-\index{alooGridNew@{alooGridNew}!grid.h@{grid.h}}
-\doxysubsubsection{\texorpdfstring{alooGridNew()}{alooGridNew()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ aloo\+Grid\+New (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{grid_8h_a5d0f0263809bb4108eb2aaf65122538e}\label{grid_8h_a5d0f0263809bb4108eb2aaf65122538e}} 
+\index{grid.h@{grid.h}!\_\_alooGridNew@{\_\_alooGridNew}}
+\index{\_\_alooGridNew@{\_\_alooGridNew}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{\_\_alooGridNew()}{\_\_alooGridNew()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ \+\_\+\+\_\+aloo\+Grid\+New (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -62,11 +124,11 @@ Creates new Aloo Grid Widget.
 \begin{DoxyReturn}{Returns}
 returns grid 
 \end{DoxyReturn}
-\mbox{\Hypertarget{grid_8h_a63d120e21e61dd6c60b73817c05a0a65}\label{grid_8h_a63d120e21e61dd6c60b73817c05a0a65}} 
-\index{grid.h@{grid.h}!gridAttach@{gridAttach}}
-\index{gridAttach@{gridAttach}!grid.h@{grid.h}}
-\doxysubsubsection{\texorpdfstring{gridAttach()}{gridAttach()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ grid\+Attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{grid,  }\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{child,  }\item[{int}]{column,  }\item[{int}]{row,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{grid_8h_ac8b597f92a5eb31e5c109cef0b2c3977}\label{grid_8h_ac8b597f92a5eb31e5c109cef0b2c3977}} 
+\index{grid.h@{grid.h}!\_\_gridAttach@{\_\_gridAttach}}
+\index{\_\_gridAttach@{\_\_gridAttach}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gridAttach()}{\_\_gridAttach()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ \+\_\+\+\_\+grid\+Attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{grid,  }\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{child,  }\item[{int}]{column,  }\item[{int}]{row,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
 
 
 
@@ -90,11 +152,11 @@ Adds widget to aloo grid.
 \begin{DoxyReturn}{Returns}
 returns grid back 
 \end{DoxyReturn}
-\mbox{\Hypertarget{grid_8h_af73f05491a5e1ff7c5ba7c8a425cb04c}\label{grid_8h_af73f05491a5e1ff7c5ba7c8a425cb04c}} 
-\index{grid.h@{grid.h}!gridAttachGtk@{gridAttachGtk}}
-\index{gridAttachGtk@{gridAttachGtk}!grid.h@{grid.h}}
-\doxysubsubsection{\texorpdfstring{gridAttachGtk()}{gridAttachGtk()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ grid\+Attach\+Gtk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{grid,  }\item[{Gtk\+Widget $\ast$}]{child,  }\item[{int}]{column,  }\item[{int}]{row,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{grid_8h_ab44960f97e620f1a08f3ac2d03331bf8}\label{grid_8h_ab44960f97e620f1a08f3ac2d03331bf8}} 
+\index{grid.h@{grid.h}!\_\_gridAttachGtk@{\_\_gridAttachGtk}}
+\index{\_\_gridAttachGtk@{\_\_gridAttachGtk}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gridAttachGtk()}{\_\_gridAttachGtk()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ \+\_\+\+\_\+grid\+Attach\+Gtk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{grid,  }\item[{Gtk\+Widget $\ast$}]{child,  }\item[{int}]{column,  }\item[{int}]{row,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
 
 
 
@@ -118,11 +180,11 @@ Adds widget to aloo grid.
 \begin{DoxyReturn}{Returns}
 returns grid back 
 \end{DoxyReturn}
-\mbox{\Hypertarget{grid_8h_a7a87945698bb503625c7926ab6717187}\label{grid_8h_a7a87945698bb503625c7926ab6717187}} 
-\index{grid.h@{grid.h}!gridRemove@{gridRemove}}
-\index{gridRemove@{gridRemove}!grid.h@{grid.h}}
-\doxysubsubsection{\texorpdfstring{gridRemove()}{gridRemove()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ grid\+Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{grid,  }\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{child }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{grid_8h_a0668456bd15b6b4c57679c30b9b83af6}\label{grid_8h_a0668456bd15b6b4c57679c30b9b83af6}} 
+\index{grid.h@{grid.h}!\_\_gridRemove@{\_\_gridRemove}}
+\index{\_\_gridRemove@{\_\_gridRemove}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gridRemove()}{\_\_gridRemove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ \+\_\+\+\_\+grid\+Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{grid,  }\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{child }\end{DoxyParamCaption})}
 
 
 
@@ -131,11 +193,11 @@ Removes child from grid.
 \begin{DoxyReturn}{Returns}
 returns grid back 
 \end{DoxyReturn}
-\mbox{\Hypertarget{grid_8h_a6d34934989b423f380da0b3eac2a2bfb}\label{grid_8h_a6d34934989b423f380da0b3eac2a2bfb}} 
-\index{grid.h@{grid.h}!gridRemoveGtk@{gridRemoveGtk}}
-\index{gridRemoveGtk@{gridRemoveGtk}!grid.h@{grid.h}}
-\doxysubsubsection{\texorpdfstring{gridRemoveGtk()}{gridRemoveGtk()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ grid\+Remove\+Gtk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{grid,  }\item[{Gtk\+Widget $\ast$}]{child }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{grid_8h_a8c94b866f975c6c418012e8cc48bf82f}\label{grid_8h_a8c94b866f975c6c418012e8cc48bf82f}} 
+\index{grid.h@{grid.h}!\_\_gridRemoveGtk@{\_\_gridRemoveGtk}}
+\index{\_\_gridRemoveGtk@{\_\_gridRemoveGtk}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gridRemoveGtk()}{\_\_gridRemoveGtk()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ \+\_\+\+\_\+grid\+Remove\+Gtk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{grid,  }\item[{Gtk\+Widget $\ast$}]{child }\end{DoxyParamCaption})}
 
 
 
@@ -144,23 +206,32 @@ Removes child from grid.
 \begin{DoxyReturn}{Returns}
 returns grid back 
 \end{DoxyReturn}
-\mbox{\Hypertarget{grid_8h_a186013459d8639377da1abf0dc370f5b}\label{grid_8h_a186013459d8639377da1abf0dc370f5b}} 
-\index{grid.h@{grid.h}!setGridColumnSpacing@{setGridColumnSpacing}}
-\index{setGridColumnSpacing@{setGridColumnSpacing}!grid.h@{grid.h}}
-\doxysubsubsection{\texorpdfstring{setGridColumnSpacing()}{setGridColumnSpacing()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ set\+Grid\+Column\+Spacing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{grid,  }\item[{int}]{space }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{grid_8h_ab77339a80363969985cdc7b365bd2a17}\label{grid_8h_ab77339a80363969985cdc7b365bd2a17}} 
+\index{grid.h@{grid.h}!\_\_setGridColumnSpacing@{\_\_setGridColumnSpacing}}
+\index{\_\_setGridColumnSpacing@{\_\_setGridColumnSpacing}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{\_\_setGridColumnSpacing()}{\_\_setGridColumnSpacing()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ \+\_\+\+\_\+set\+Grid\+Column\+Spacing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{grid,  }\item[{int}]{space }\end{DoxyParamCaption})}
 
 
 
 Set the Grid Column Spacing. 
 
-\mbox{\Hypertarget{grid_8h_a7b4a1902ba701ecd6406795da6b9314c}\label{grid_8h_a7b4a1902ba701ecd6406795da6b9314c}} 
-\index{grid.h@{grid.h}!setGridRowSpacing@{setGridRowSpacing}}
-\index{setGridRowSpacing@{setGridRowSpacing}!grid.h@{grid.h}}
-\doxysubsubsection{\texorpdfstring{setGridRowSpacing()}{setGridRowSpacing()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ set\+Grid\+Row\+Spacing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{grid,  }\item[{int}]{space }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{grid_8h_a0595263d3d93593a2aff5c7c51a7139b}\label{grid_8h_a0595263d3d93593a2aff5c7c51a7139b}} 
+\index{grid.h@{grid.h}!\_\_setGridRowSpacing@{\_\_setGridRowSpacing}}
+\index{\_\_setGridRowSpacing@{\_\_setGridRowSpacing}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{\_\_setGridRowSpacing()}{\_\_setGridRowSpacing()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ \+\_\+\+\_\+set\+Grid\+Row\+Spacing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{grid,  }\item[{int}]{space }\end{DoxyParamCaption})}
 
 
 
 Set the Grid Row Spacing. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{grid_8h_aba04f3722c5bd2bb653281967a04555b}\label{grid_8h_aba04f3722c5bd2bb653281967a04555b}} 
+\index{grid.h@{grid.h}!Grid@{Grid}}
+\index{Grid@{Grid}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{Grid}{Grid}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct__alooGrid}{\+\_\+aloo\+Grid}} Grid\hspace{0.3cm}{\ttfamily [extern]}}
 

@@ -4,13 +4,15 @@
     <compoundname>aloo.h</compoundname>
     <includes refid="app_8h" local="yes">app.h</includes>
     <includes refid="box_8h" local="yes">box.h</includes>
+    <includes refid="builder_8h" local="yes">builder.h</includes>
     <includes refid="button_8h" local="yes">button.h</includes>
     <includes refid="grid_8h" local="yes">grid.h</includes>
     <includes refid="label_8h" local="yes">label.h</includes>
+    <includes refid="macros_8h" local="yes">macros.h</includes>
     <includes refid="style_8h" local="yes">style.h</includes>
     <includes refid="widget_8h" local="yes">widget.h</includes>
     <incdepgraph>
-      <node id="9">
+      <node id="11">
         <label>style.h</label>
         <link refid="style_8h"/>
         <childnode refid="3" relation="include">
@@ -19,7 +21,7 @@
       <node id="4">
         <label>gtk/gtk.h</label>
       </node>
-      <node id="6">
+      <node id="7">
         <label>button.h</label>
         <link refid="button_8h"/>
         <childnode refid="3" relation="include">
@@ -42,8 +44,12 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
       </node>
-      <node id="7">
+      <node id="8">
         <label>grid.h</label>
         <link refid="grid_8h"/>
         <childnode refid="3" relation="include">
@@ -51,7 +57,19 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="10">
+        <label>macros.h</label>
+        <link refid="macros_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>builder.h</label>
+        <link refid="builder_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
         <label>label.h</label>
         <link refid="label_8h"/>
         <childnode refid="3" relation="include">
@@ -71,7 +89,7 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="12">
         <label>widget.h</label>
         <link refid="widget_8h"/>
         <childnode refid="3" relation="include">
@@ -89,17 +107,24 @@
       </node>
     </incdepgraph>
     <briefdescription>
+<para>Aloo Project Main file It conatins all the header files. </para>
     </briefdescription>
     <detaileddescription>
+<para><simplesect kind="author"><para>Jaipal001 (@BhJaipal) </para>
+</simplesect>
+</para>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="app_8h" kindref="compound">app.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="box_8h" kindref="compound">box.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="button_8h" kindref="compound">button.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="grid_8h" kindref="compound">grid.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="label_8h" kindref="compound">label.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="style_8h" kindref="compound">style.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="widget_8h" kindref="compound">widget.h</ref>&quot;</highlight></codeline>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="app_8h" kindref="compound">app.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="box_8h" kindref="compound">box.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="builder_8h" kindref="compound">builder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="button_8h" kindref="compound">button.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="grid_8h" kindref="compound">grid.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="label_8h" kindref="compound">label.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="macros_8h" kindref="compound">macros.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="style_8h" kindref="compound">style.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="widget_8h" kindref="compound">widget.h</ref>&quot;</highlight></codeline>
     </programlisting>
     <location file="include/aloo.h"/>
   </compounddef>

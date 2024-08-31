@@ -2,23 +2,65 @@
 .ad l
 .nh
 .SH NAME
-include/label.h
+include/label.h \- Aloo Label related functions\&.  
+
 .SH SYNOPSIS
 .br
 .PP
 \fC#include 'types\&.h'\fP
 .br
 
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fB__alooLabel\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB_newLabelType\fP) (const char *val)"
+.br
+.in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBalooWidget\fP * \fBnewLabel\fP (const char *val)"
+.RI "\fBalooWidget\fP * \fB__newLabel\fP (const char *val)"
 .br
 .in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "struct \fB__alooLabel\fP \fBLabel\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Aloo Label related functions\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Jaipal001 (@BhJaipal) 
+.RE
+.PP
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBalooWidget\fP*(* _newLabelType) (const char *val)"
+
 .SH "Function Documentation"
 .PP 
-.SS "\fBalooWidget\fP* newLabel (const char * val)"
+.SS "\fBalooWidget\fP* __newLabel (const char * val)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "struct \fB__alooLabel\fP Label\fC [extern]\fP"
 
 .SH "Author"
 .PP 

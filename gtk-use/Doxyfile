@@ -5,7 +5,10 @@ PROJECT_BRIEF          = Aloo Widgets
 INPUT                  = include
 OUTPUT_DIRECTORY       = docs
 FILE_PATTERNS          = *.h
-EXTRACT_ALL = YES
+EXTRACT_ALL 			= YES
+
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION       = YES
 
 # EXCLUDE_PATTERNS        = *.cpp *.h
 

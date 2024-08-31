@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct____alooLabel" kind="struct" language="C++" prot="public">
+    <compoundname>__alooLabel</compoundname>
+    <includes refid="label_8h" local="no">label.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct____alooLabel_1aadc8450b0dded9eade27d3355e864f07" prot="public" static="no" mutable="no">
+        <type><ref refid="label_8h_1a213636152f4dc1ee94cd8e02c9e31b28" kindref="member">_newLabelType</ref></type>
+        <definition>_newLabelType __alooLabel::new</definition>
+        <argsstring></argsstring>
+        <name>new</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/label.h" line="19" column="15" bodyfile="include/label.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>alooWidget</label>
+        <link refid="structalooWidget"/>
+      </node>
+      <node id="1">
+        <label>__alooLabel</label>
+        <link refid="struct____alooLabel"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>new</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/label.h" line="18" column="1" bodyfile="include/label.h" bodystart="18" bodyend="20"/>
+    <listofallmembers>
+      <member refid="struct____alooLabel_1aadc8450b0dded9eade27d3355e864f07" prot="public" virt="non-virtual"><scope>__alooLabel</scope><name>new</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct__AlooBuilder" kind="struct" language="C++" prot="private">
+    <compoundname>_AlooBuilder</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__AlooBuilder_1a50a2cf042c5528bed8131896dbd1240e" prot="public" static="no" mutable="no">
+        <type><ref refid="builder_8h_1aed886ff43cad9234d0ba1884e40b1f04" kindref="member">__unrefBuilderType</ref></type>
+        <definition>__unrefBuilderType _AlooBuilder::unref</definition>
+        <argsstring></argsstring>
+        <name>unref</name>
+        <briefdescription>
+<para>Unrefs aloo builder. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/builder.h" line="85" column="20" bodyfile="include/builder.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__AlooBuilder_1aae35b1fa86d76d300e1f455437de62e7" prot="public" static="no" mutable="no">
+        <type><ref refid="builder_8h_1ac1f8811e29e91ac91928f564335bc34d" kindref="member">__createBuilderType</ref></type>
+        <definition>__createBuilderType _AlooBuilder::create</definition>
+        <argsstring></argsstring>
+        <name>create</name>
+        <briefdescription>
+<para>Create a Builder object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>AlooBuilder*</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/builder.h" line="88" column="21" bodyfile="include/builder.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__AlooBuilder_1a6cd4f067ee3f6ca48b7e3dda8eaaded6" prot="public" static="no" mutable="no">
+        <type><ref refid="builder_8h_1a6abf1c95f46c23b366142547e03ab720" kindref="member">__builderAddFileType</ref></type>
+        <definition>__builderAddFileType _AlooBuilder::addFile</definition>
+        <argsstring></argsstring>
+        <name>addFile</name>
+        <briefdescription>
+<para>Adds a file with builder. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>build</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref> object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UI file path with name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Error handler, Default <computeroutput>NULL</computeroutput> __builderAddFileType addFile; </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/builder.h" line="93" column="22" bodyfile="include/builder.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__AlooBuilder_1a00bd73d6054373fd271bd9542718f90f" prot="public" static="no" mutable="no">
+        <type><ref refid="builder_8h_1a102a4cc7ecf139e10b4077e062fa75e6" kindref="member">__builderAddContentType</ref></type>
+        <definition>__builderAddContentType _AlooBuilder::addContent</definition>
+        <argsstring></argsstring>
+        <name>addContent</name>
+        <briefdescription>
+<para>Adds a file with builder. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>build</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref> object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UI data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UI data length </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Error handler, Default <computeroutput>NULL</computeroutput> __builderAddContentType addContent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/builder.h" line="100" column="25" bodyfile="include/builder.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__AlooBuilder_1a918e7cd6adf361efaabe5f795c22ae3b" prot="public" static="no" mutable="no">
+        <type><ref refid="builder_8h_1a8fc1d84ef30667a5ee42581a66896c50" kindref="member">__builderAddResourceType</ref></type>
+        <definition>__builderAddResourceType _AlooBuilder::addResource</definition>
+        <argsstring></argsstring>
+        <name>addResource</name>
+        <briefdescription>
+<para>Adds a file with builder. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>build</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref> object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>resource_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UI resource path </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Error handler, Default <computeroutput>NULL</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/builder.h" line="105" column="26" bodyfile="include/builder.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__AlooBuilder_1a95a9113a554438ce4dc55389f7a0f827" prot="public" static="no" mutable="no">
+        <type><ref refid="builder_8h_1aa6bb8611e2c60c6b189ad1d700b68c3c" kindref="member">__alooGetBuilderObjectType</ref></type>
+        <definition>__alooGetBuilderObjectType _AlooBuilder::getBuilderObject</definition>
+        <argsstring></argsstring>
+        <name>getBuilderObject</name>
+        <briefdescription>
+<para>Gets GObject from builder. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/builder.h" line="107" column="28" bodyfile="include/builder.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__AlooBuilder_1ad123ea63d3c92990a6692335a794c0b2" prot="public" static="no" mutable="no">
+        <type><ref refid="builder_8h_1a250cc87a97f7eb4fdff9e07434a7a565" kindref="member">__alooWidgetFromBuilderType</ref></type>
+        <definition>__alooWidgetFromBuilderType _AlooBuilder::alooFromBuilder</definition>
+        <argsstring></argsstring>
+        <name>alooFromBuilder</name>
+        <briefdescription>
+<para>Creates <ref refid="structalooWidget" kindref="compound">alooWidget</ref> from builder. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/builder.h" line="109" column="29" bodyfile="include/builder.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>_AlooBuilder</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>addContent</edgelabel>
+          <edgelabel>addFile</edgelabel>
+          <edgelabel>addResource</edgelabel>
+          <edgelabel>create</edgelabel>
+          <edgelabel>getBuilderObject</edgelabel>
+          <edgelabel>unref</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>alooFromBuilder</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AlooBuilder</label>
+        <link refid="structAlooBuilder"/>
+      </node>
+      <node id="3">
+        <label>alooWidget</label>
+        <link refid="structalooWidget"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/builder.h" line="83" column="1" bodyfile="include/builder.h" bodystart="83" bodyend="110"/>
+    <listofallmembers>
+      <member refid="struct__AlooBuilder_1a00bd73d6054373fd271bd9542718f90f" prot="public" virt="non-virtual"><scope>_AlooBuilder</scope><name>addContent</name></member>
+      <member refid="struct__AlooBuilder_1a6cd4f067ee3f6ca48b7e3dda8eaaded6" prot="public" virt="non-virtual"><scope>_AlooBuilder</scope><name>addFile</name></member>
+      <member refid="struct__AlooBuilder_1a918e7cd6adf361efaabe5f795c22ae3b" prot="public" virt="non-virtual"><scope>_AlooBuilder</scope><name>addResource</name></member>
+      <member refid="struct__AlooBuilder_1ad123ea63d3c92990a6692335a794c0b2" prot="public" virt="non-virtual"><scope>_AlooBuilder</scope><name>alooFromBuilder</name></member>
+      <member refid="struct__AlooBuilder_1aae35b1fa86d76d300e1f455437de62e7" prot="public" virt="non-virtual"><scope>_AlooBuilder</scope><name>create</name></member>
+      <member refid="struct__AlooBuilder_1a95a9113a554438ce4dc55389f7a0f827" prot="public" virt="non-virtual"><scope>_AlooBuilder</scope><name>getBuilderObject</name></member>
+      <member refid="struct__AlooBuilder_1a50a2cf042c5528bed8131896dbd1240e" prot="public" virt="non-virtual"><scope>_AlooBuilder</scope><name>unref</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

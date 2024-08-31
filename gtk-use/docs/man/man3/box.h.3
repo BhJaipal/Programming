@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-include/box.h
+include/box.h \- Aloo Box functions\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -11,105 +12,197 @@ include/box.h
 \fC#include <gtk/gtk\&.h>\fP
 .br
 
-.SS "Macros"
+.SS "Classes"
 
 .in +1c
 .ti -1c
-.RI "#define \fBALOO_BOX_TO_GTK_BOX\fP(x)   GTK_BOX(\fBALOO_BOX_WIDGET\fP(x))"
+.RI "struct \fB_alooBox\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__new_alooBox_Type\fP) (GtkOrientation orientation, int spacing)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__setBoxOrientation_Type\fP) (\fBalooWidget\fP *box, GtkOrientation orientation)"
+.br
+.ti -1c
+.RI "typedef GtkOrientation(* \fB__getBoxOrientation_Type\fP) (\fBalooWidget\fP *box)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__boxAppendGtk_Type\fP) (\fBalooWidget\fP *box, GtkWidget *widget)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__boxPrependGtk_Type\fP) (\fBalooWidget\fP *box, GtkWidget *widget)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__boxRemoveGtk_Type\fP) (\fBalooWidget\fP *box, GtkWidget *widget)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__boxAppend_Type\fP) (\fBalooWidget\fP *box, \fBalooWidget\fP *widget)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__boxPrepend_Type\fP) (\fBalooWidget\fP *box, \fBalooWidget\fP *widget)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__boxRemove_Type\fP) (\fBalooWidget\fP *box, \fBalooWidget\fP *widget)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__boxInsertChildAfter_Type\fP) (\fBalooWidget\fP *box, \fBalooWidget\fP *child, \fBalooWidget\fP *after)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__setBoxSpacing_Type\fP) (\fBalooWidget\fP *box, int spacing)"
+.br
+.ti -1c
+.RI "typedef int(* \fB__getBoxSpacing_Type\fP) (\fBalooWidget\fP *box)"
+.br
+.ti -1c
+.RI "typedef gboolean(* \fB__getBoxHomogeneous_Type\fP) (\fBalooWidget\fP *box)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__setBoxHomogeneous_Type\fP) (\fBalooWidget\fP *box, gboolean homogeneous)"
+.br
+.ti -1c
+.RI "typedef GtkBaselinePosition(* \fB__getBoxBaselinePosition_Type\fP) (\fBalooWidget\fP *box)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__setBoxBaselinePosition_Type\fP) (\fBalooWidget\fP *box, GtkBaselinePosition position)"
 .br
 .in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "GtkWidget * \fBALOO_BOX_WIDGET\fP (\fBalooWidget\fP *x)"
+.RI "\fBalooWidget\fP * \fB__new_alooBox\fP (GtkOrientation orientation, int spacing)"
 .br
+.RI "Creates new aloo box\&. "
 .ti -1c
-.RI "gboolean \fBALOO_IS_BOX\fP (\fBalooWidget\fP *x)"
-.br
-.ti -1c
-.RI "\fBalooWidget\fP * \fBnew_alooBox\fP (GtkOrientation orientation, int spacing)"
-.br
-.ti -1c
-.RI "\fBalooWidget\fP * \fBsetBoxOrientation\fP (\fBalooWidget\fP *box, GtkOrientation orientation)"
+.RI "\fBalooWidget\fP * \fB__setBoxOrientation\fP (\fBalooWidget\fP *box, GtkOrientation orientation)"
 .br
 .RI "Sets Box Orientation\&. "
 .ti -1c
-.RI "GtkOrientation \fBgetBoxOrientation\fP (\fBalooWidget\fP *box)"
+.RI "GtkOrientation \fB__getBoxOrientation\fP (\fBalooWidget\fP *box)"
 .br
 .RI "Gets Box Orientation\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBboxAppendGtk\fP (\fBalooWidget\fP *box, GtkWidget *widget)"
+.RI "\fBalooWidget\fP * \fB__boxAppendGtk\fP (\fBalooWidget\fP *box, GtkWidget *widget)"
 .br
 .RI "Appends \fCGtkWidget\fP child to box\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBboxPrependGtk\fP (\fBalooWidget\fP *box, GtkWidget *widget)"
+.RI "\fBalooWidget\fP * \fB__boxPrependGtk\fP (\fBalooWidget\fP *box, GtkWidget *widget)"
 .br
 .RI "Prepends \fCGtkWidget\fP child to box\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBboxRemoveGtk\fP (\fBalooWidget\fP *box, GtkWidget *widget)"
+.RI "\fBalooWidget\fP * \fB__boxRemoveGtk\fP (\fBalooWidget\fP *box, GtkWidget *widget)"
 .br
 .RI "Removes \fCGtkWidget\fP child from box\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBboxAppend\fP (\fBalooWidget\fP *box, \fBalooWidget\fP *widget)"
+.RI "\fBalooWidget\fP * \fB__boxAppend\fP (\fBalooWidget\fP *box, \fBalooWidget\fP *widget)"
 .br
 .RI "Appends \fC\fBalooWidget\fP\fP child to box\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBboxPrepend\fP (\fBalooWidget\fP *box, \fBalooWidget\fP *widget)"
+.RI "\fBalooWidget\fP * \fB__boxPrepend\fP (\fBalooWidget\fP *box, \fBalooWidget\fP *widget)"
 .br
 .RI "Prepends \fC\fBalooWidget\fP\fP child to box\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBboxRemove\fP (\fBalooWidget\fP *box, \fBalooWidget\fP *widget)"
+.RI "\fBalooWidget\fP * \fB__boxRemove\fP (\fBalooWidget\fP *box, \fBalooWidget\fP *widget)"
 .br
 .RI "Removes \fC\fBalooWidget\fP\fP child from box\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBboxInsertChildAfter\fP (\fBalooWidget\fP *box, \fBalooWidget\fP *child, \fBalooWidget\fP *after)"
+.RI "\fBalooWidget\fP * \fB__boxInsertChildAfter\fP (\fBalooWidget\fP *box, \fBalooWidget\fP *child, \fBalooWidget\fP *after)"
 .br
 .RI "Adds child after a certain widget of box\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBsetBoxSpacing\fP (\fBalooWidget\fP *box, int spacing)"
+.RI "\fBalooWidget\fP * \fB__setBoxSpacing\fP (\fBalooWidget\fP *box, int spacing)"
 .br
 .RI "Set Box Spacing\&. "
 .ti -1c
-.RI "int \fBgetBoxSpacing\fP (\fBalooWidget\fP *box)"
+.RI "int \fB__getBoxSpacing\fP (\fBalooWidget\fP *box)"
 .br
 .RI "Gets box spacing\&. "
 .ti -1c
-.RI "gboolean \fBgetBoxHomogeneous\fP (\fBalooWidget\fP *box)"
+.RI "gboolean \fB__getBoxHomogeneous\fP (\fBalooWidget\fP *box)"
 .br
 .RI "Gets box homogeneous\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBsetBoxHomogeneous\fP (\fBalooWidget\fP *box, gboolean homogeneous)"
+.RI "\fBalooWidget\fP * \fB__setBoxHomogeneous\fP (\fBalooWidget\fP *box, gboolean homogeneous)"
 .br
 .RI "Sets box homogeneous\&. "
 .ti -1c
-.RI "GtkBaselinePosition \fBgetBoxBaselinePosition\fP (\fBalooWidget\fP *box)"
+.RI "GtkBaselinePosition \fB__getBoxBaselinePosition\fP (\fBalooWidget\fP *box)"
 .br
 .RI "Gets Box baseline position\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBsetBoxBaselinePosition\fP (\fBalooWidget\fP *box, GtkBaselinePosition position)"
+.RI "\fBalooWidget\fP * \fB__setBoxBaselinePosition\fP (\fBalooWidget\fP *box, GtkBaselinePosition position)"
 .br
 .RI "Sets Box baseline position\&. "
 .in -1c
-.SH "Macro Definition Documentation"
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_alooBox\fP \fBBox\fP"
+.br
+.in -1c
+.SH "Detailed Description"
 .PP 
-.SS "#define ALOO_BOX_TO_GTK_BOX(x)   GTK_BOX(\fBALOO_BOX_WIDGET\fP(x))"
+Aloo Box functions\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Jaipal001 (@BhJaipal) 
+.RE
+.PP
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBalooWidget\fP*(* __boxAppend_Type) (\fBalooWidget\fP *box, \fBalooWidget\fP *widget)"
+
+.SS "typedef \fBalooWidget\fP*(* __boxAppendGtk_Type) (\fBalooWidget\fP *box, GtkWidget *widget)"
+
+.SS "typedef \fBalooWidget\fP*(* __boxInsertChildAfter_Type) (\fBalooWidget\fP *box, \fBalooWidget\fP *child, \fBalooWidget\fP *after)"
+
+.SS "typedef \fBalooWidget\fP*(* __boxPrepend_Type) (\fBalooWidget\fP *box, \fBalooWidget\fP *widget)"
+
+.SS "typedef \fBalooWidget\fP*(* __boxPrependGtk_Type) (\fBalooWidget\fP *box, GtkWidget *widget)"
+
+.SS "typedef \fBalooWidget\fP*(* __boxRemove_Type) (\fBalooWidget\fP *box, \fBalooWidget\fP *widget)"
+
+.SS "typedef \fBalooWidget\fP*(* __boxRemoveGtk_Type) (\fBalooWidget\fP *box, GtkWidget *widget)"
+
+.SS "typedef GtkBaselinePosition(* __getBoxBaselinePosition_Type) (\fBalooWidget\fP *box)"
+
+.SS "typedef gboolean(* __getBoxHomogeneous_Type) (\fBalooWidget\fP *box)"
+
+.SS "typedef GtkOrientation(* __getBoxOrientation_Type) (\fBalooWidget\fP *box)"
+
+.SS "typedef int(* __getBoxSpacing_Type) (\fBalooWidget\fP *box)"
+
+.SS "typedef \fBalooWidget\fP*(* __new_alooBox_Type) (GtkOrientation orientation, int spacing)"
+
+.SS "typedef \fBalooWidget\fP*(* __setBoxBaselinePosition_Type) (\fBalooWidget\fP *box, GtkBaselinePosition position)"
+
+.SS "typedef \fBalooWidget\fP*(* __setBoxHomogeneous_Type) (\fBalooWidget\fP *box, gboolean homogeneous)"
+
+.SS "typedef \fBalooWidget\fP*(* __setBoxOrientation_Type) (\fBalooWidget\fP *box, GtkOrientation orientation)"
+
+.SS "typedef \fBalooWidget\fP*(* __setBoxSpacing_Type) (\fBalooWidget\fP *box, int spacing)"
 
 .SH "Function Documentation"
 .PP 
-.SS "GtkWidget* ALOO_BOX_WIDGET (\fBalooWidget\fP * x)"
-
-.SS "gboolean ALOO_IS_BOX (\fBalooWidget\fP * x)"
-
-.SS "\fBalooWidget\fP* boxAppend (\fBalooWidget\fP * box, \fBalooWidget\fP * widget)"
+.SS "\fBalooWidget\fP* __boxAppend (\fBalooWidget\fP * box, \fBalooWidget\fP * widget)"
 
 .PP
 Appends \fC\fBalooWidget\fP\fP child to box\&. 
-.SS "\fBalooWidget\fP* boxAppendGtk (\fBalooWidget\fP * box, GtkWidget * widget)"
+.SS "\fBalooWidget\fP* __boxAppendGtk (\fBalooWidget\fP * box, GtkWidget * widget)"
 
 .PP
 Appends \fCGtkWidget\fP child to box\&. 
-.SS "\fBalooWidget\fP* boxInsertChildAfter (\fBalooWidget\fP * box, \fBalooWidget\fP * child, \fBalooWidget\fP * after)"
+.SS "\fBalooWidget\fP* __boxInsertChildAfter (\fBalooWidget\fP * box, \fBalooWidget\fP * child, \fBalooWidget\fP * after)"
 
 .PP
 Adds child after a certain widget of box\&. 
@@ -120,56 +213,71 @@ returns box
 .RE
 .PP
 
-.SS "\fBalooWidget\fP* boxPrepend (\fBalooWidget\fP * box, \fBalooWidget\fP * widget)"
+.SS "\fBalooWidget\fP* __boxPrepend (\fBalooWidget\fP * box, \fBalooWidget\fP * widget)"
 
 .PP
 Prepends \fC\fBalooWidget\fP\fP child to box\&. 
-.SS "\fBalooWidget\fP* boxPrependGtk (\fBalooWidget\fP * box, GtkWidget * widget)"
+.SS "\fBalooWidget\fP* __boxPrependGtk (\fBalooWidget\fP * box, GtkWidget * widget)"
 
 .PP
 Prepends \fCGtkWidget\fP child to box\&. 
-.SS "\fBalooWidget\fP* boxRemove (\fBalooWidget\fP * box, \fBalooWidget\fP * widget)"
+.SS "\fBalooWidget\fP* __boxRemove (\fBalooWidget\fP * box, \fBalooWidget\fP * widget)"
 
 .PP
 Removes \fC\fBalooWidget\fP\fP child from box\&. 
-.SS "\fBalooWidget\fP* boxRemoveGtk (\fBalooWidget\fP * box, GtkWidget * widget)"
+.SS "\fBalooWidget\fP* __boxRemoveGtk (\fBalooWidget\fP * box, GtkWidget * widget)"
 
 .PP
 Removes \fCGtkWidget\fP child from box\&. 
-.SS "GtkBaselinePosition getBoxBaselinePosition (\fBalooWidget\fP * box)"
+.SS "GtkBaselinePosition __getBoxBaselinePosition (\fBalooWidget\fP * box)"
 
 .PP
 Gets Box baseline position\&. 
-.SS "gboolean getBoxHomogeneous (\fBalooWidget\fP * box)"
+.SS "gboolean __getBoxHomogeneous (\fBalooWidget\fP * box)"
 
 .PP
 Gets box homogeneous\&. 
-.SS "GtkOrientation getBoxOrientation (\fBalooWidget\fP * box)"
+.SS "GtkOrientation __getBoxOrientation (\fBalooWidget\fP * box)"
 
 .PP
 Gets Box Orientation\&. 
-.SS "int getBoxSpacing (\fBalooWidget\fP * box)"
+.SS "int __getBoxSpacing (\fBalooWidget\fP * box)"
 
 .PP
 Gets box spacing\&. 
-.SS "\fBalooWidget\fP* new_alooBox (GtkOrientation orientation, int spacing)"
+.SS "\fBalooWidget\fP* __new_alooBox (GtkOrientation orientation, int spacing)"
 
-.SS "\fBalooWidget\fP* setBoxBaselinePosition (\fBalooWidget\fP * box, GtkBaselinePosition position)"
+.PP
+Creates new aloo box\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIorientation\fP Box orientation 
+.br
+\fIspacing\fP space in child 
+.RE
+.PP
+
+.SS "\fBalooWidget\fP* __setBoxBaselinePosition (\fBalooWidget\fP * box, GtkBaselinePosition position)"
 
 .PP
 Sets Box baseline position\&. 
-.SS "\fBalooWidget\fP* setBoxHomogeneous (\fBalooWidget\fP * box, gboolean homogeneous)"
+.SS "\fBalooWidget\fP* __setBoxHomogeneous (\fBalooWidget\fP * box, gboolean homogeneous)"
 
 .PP
 Sets box homogeneous\&. 
-.SS "\fBalooWidget\fP* setBoxOrientation (\fBalooWidget\fP * box, GtkOrientation orientation)"
+.SS "\fBalooWidget\fP* __setBoxOrientation (\fBalooWidget\fP * box, GtkOrientation orientation)"
 
 .PP
 Sets Box Orientation\&. 
-.SS "\fBalooWidget\fP* setBoxSpacing (\fBalooWidget\fP * box, int spacing)"
+.SS "\fBalooWidget\fP* __setBoxSpacing (\fBalooWidget\fP * box, int spacing)"
 
 .PP
 Set Box Spacing\&. 
+.SH "Variable Documentation"
+.PP 
+.SS "struct \fB_alooBox\fP Box\fC [extern]\fP"
+
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Aloo from the source code\&.

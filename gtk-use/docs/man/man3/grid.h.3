@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-include/grid.h
+include/grid.h \- Aloo Grid related functions\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -11,62 +12,108 @@ include/grid.h
 \fC#include <gtk/gtk\&.h>\fP
 .br
 
-.SS "Macros"
+.SS "Classes"
 
 .in +1c
 .ti -1c
-.RI "#define \fBALOO_GRID_TO_GTK\fP(x)   GTK_GRID(x\->child)"
+.RI "struct \fB_alooGrid\fP"
 .br
-.RI "Returns GTK_GRID of \fBalooWidget\fP\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__gridAttach_Type\fP) (\fBalooWidget\fP *grid, \fBalooWidget\fP *child, int column, int row, int width, int height)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__gridAttachGtk_Type\fP) (\fBalooWidget\fP *grid, GtkWidget *child, int column, int row, int width, int height)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__gridRemove_Type\fP) (\fBalooWidget\fP *grid, \fBalooWidget\fP *child)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__gridRemoveGtk_Type\fP) (\fBalooWidget\fP *grid, GtkWidget *child)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__alooGridNew_Type\fP) ()"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__setGridColumnSpacing_Type\fP) (\fBalooWidget\fP *grid, int space)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__setGridRowSpacing_Type\fP) (\fBalooWidget\fP *grid, int space)"
+.br
 .in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBalooWidget\fP * \fBgridAttach\fP (\fBalooWidget\fP *grid, \fBalooWidget\fP *child, int column, int row, int width, int height)"
+.RI "\fBalooWidget\fP * \fB__gridAttach\fP (\fBalooWidget\fP *grid, \fBalooWidget\fP *child, int column, int row, int width, int height)"
 .br
 .RI "Adds widget to aloo grid\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBgridAttachGtk\fP (\fBalooWidget\fP *grid, GtkWidget *child, int column, int row, int width, int height)"
+.RI "\fBalooWidget\fP * \fB__gridAttachGtk\fP (\fBalooWidget\fP *grid, GtkWidget *child, int column, int row, int width, int height)"
 .br
 .RI "Adds widget to aloo grid\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBgridRemove\fP (\fBalooWidget\fP *grid, \fBalooWidget\fP *child)"
+.RI "\fBalooWidget\fP * \fB__gridRemove\fP (\fBalooWidget\fP *grid, \fBalooWidget\fP *child)"
 .br
 .RI "Removes child from grid\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBgridRemoveGtk\fP (\fBalooWidget\fP *grid, GtkWidget *child)"
+.RI "\fBalooWidget\fP * \fB__gridRemoveGtk\fP (\fBalooWidget\fP *grid, GtkWidget *child)"
 .br
 .RI "Removes child from grid\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBalooGridNew\fP ()"
+.RI "\fBalooWidget\fP * \fB__alooGridNew\fP ()"
 .br
 .RI "Creates new Aloo Grid Widget\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBsetGridColumnSpacing\fP (\fBalooWidget\fP *grid, int space)"
+.RI "\fBalooWidget\fP * \fB__setGridColumnSpacing\fP (\fBalooWidget\fP *grid, int space)"
 .br
 .RI "Set the Grid Column Spacing\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBsetGridRowSpacing\fP (\fBalooWidget\fP *grid, int space)"
+.RI "\fBalooWidget\fP * \fB__setGridRowSpacing\fP (\fBalooWidget\fP *grid, int space)"
 .br
 .RI "Set the Grid Row Spacing\&. "
 .in -1c
-.SH "Macro Definition Documentation"
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_alooGrid\fP \fBGrid\fP"
+.br
+.in -1c
+.SH "Detailed Description"
 .PP 
-.SS "#define ALOO_GRID_TO_GTK(x)   GTK_GRID(x\->child)"
+Aloo Grid related functions\&. 
+
 
 .PP
-Returns GTK_GRID of \fBalooWidget\fP\&. 
-.PP
-\fBParameters\fP
+\fBAuthor\fP
 .RS 4
-\fIx\fP \fBalooWidget\fP with ALOO_GRID type 
+Jaipal001 (@BhJaipal) 
 .RE
 .PP
 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBalooWidget\fP*(* __alooGridNew_Type) ()"
+
+.SS "typedef \fBalooWidget\fP*(* __gridAttach_Type) (\fBalooWidget\fP *grid, \fBalooWidget\fP *child, int column, int row, int width, int height)"
+
+.SS "typedef \fBalooWidget\fP*(* __gridAttachGtk_Type) (\fBalooWidget\fP *grid, GtkWidget *child, int column, int row, int width, int height)"
+
+.SS "typedef \fBalooWidget\fP*(* __gridRemove_Type) (\fBalooWidget\fP *grid, \fBalooWidget\fP *child)"
+
+.SS "typedef \fBalooWidget\fP*(* __gridRemoveGtk_Type) (\fBalooWidget\fP *grid, GtkWidget *child)"
+
+.SS "typedef \fBalooWidget\fP*(* __setGridColumnSpacing_Type) (\fBalooWidget\fP *grid, int space)"
+
+.SS "typedef \fBalooWidget\fP*(* __setGridRowSpacing_Type) (\fBalooWidget\fP *grid, int space)"
+
 .SH "Function Documentation"
 .PP 
-.SS "\fBalooWidget\fP* alooGridNew ()"
+.SS "\fBalooWidget\fP* __alooGridNew ()"
 
 .PP
 Creates new Aloo Grid Widget\&. 
@@ -77,7 +124,7 @@ returns grid
 .RE
 .PP
 
-.SS "\fBalooWidget\fP* gridAttach (\fBalooWidget\fP * grid, \fBalooWidget\fP * child, int column, int row, int width, int height)"
+.SS "\fBalooWidget\fP* __gridAttach (\fBalooWidget\fP * grid, \fBalooWidget\fP * child, int column, int row, int width, int height)"
 
 .PP
 Adds widget to aloo grid\&. 
@@ -103,7 +150,7 @@ returns grid back
 .RE
 .PP
 
-.SS "\fBalooWidget\fP* gridAttachGtk (\fBalooWidget\fP * grid, GtkWidget * child, int column, int row, int width, int height)"
+.SS "\fBalooWidget\fP* __gridAttachGtk (\fBalooWidget\fP * grid, GtkWidget * child, int column, int row, int width, int height)"
 
 .PP
 Adds widget to aloo grid\&. 
@@ -129,7 +176,7 @@ returns grid back
 .RE
 .PP
 
-.SS "\fBalooWidget\fP* gridRemove (\fBalooWidget\fP * grid, \fBalooWidget\fP * child)"
+.SS "\fBalooWidget\fP* __gridRemove (\fBalooWidget\fP * grid, \fBalooWidget\fP * child)"
 
 .PP
 Removes child from grid\&. 
@@ -140,7 +187,7 @@ returns grid back
 .RE
 .PP
 
-.SS "\fBalooWidget\fP* gridRemoveGtk (\fBalooWidget\fP * grid, GtkWidget * child)"
+.SS "\fBalooWidget\fP* __gridRemoveGtk (\fBalooWidget\fP * grid, GtkWidget * child)"
 
 .PP
 Removes child from grid\&. 
@@ -151,14 +198,18 @@ returns grid back
 .RE
 .PP
 
-.SS "\fBalooWidget\fP* setGridColumnSpacing (\fBalooWidget\fP * grid, int space)"
+.SS "\fBalooWidget\fP* __setGridColumnSpacing (\fBalooWidget\fP * grid, int space)"
 
 .PP
 Set the Grid Column Spacing\&. 
-.SS "\fBalooWidget\fP* setGridRowSpacing (\fBalooWidget\fP * grid, int space)"
+.SS "\fBalooWidget\fP* __setGridRowSpacing (\fBalooWidget\fP * grid, int space)"
 
 .PP
 Set the Grid Row Spacing\&. 
+.SH "Variable Documentation"
+.PP 
+.SS "struct \fB_alooGrid\fP Grid\fC [extern]\fP"
+
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Aloo from the source code\&.

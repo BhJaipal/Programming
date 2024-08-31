@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-include/widget.h
+include/widget.h \- Aloo Widget related functions\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -11,53 +12,155 @@ include/widget.h
 \fC#include <gtk/gtk\&.h>\fP
 .br
 
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_aloo_widget\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fBGTK_TO_ALOO_Type\fP) (GtkWidget *widget)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fBOBJECT_TO_ALOO_Type\fP) (GObject *obj)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fBalooSetOrientation_Type\fP) (\fBalooWidget\fP *widget, GtkOrientation orien)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fBNewWidget_Type\fP) (\fBWidgetType\fP type, GtkWidget *child)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fBsetWidgetName_Type\fP) (\fBalooWidget\fP *widget, const char *name)"
+.br
+.ti -1c
+.RI "typedef GtkWidget *(* \fB__OBJECT_TO_GTK_WIDGET_Type\fP) (\fBAlooBuilder\fP *builder, const char *name)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__alooVerticalAlign_Type\fP) (\fBalooWidget\fP *widget, GtkAlign alignment)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__alooHorizontalAlign_Type\fP) (\fBalooWidget\fP *widget, GtkAlign alignment)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__alooAddEventListener_Type\fP) (\fBalooWidget\fP *widget_instance, char *event_name, GCallback CallbackFn, gpointer data)"
+.br
+.in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBalooWidget\fP * \fBGTK_TO_ALOO\fP (GtkWidget *widget)"
+.RI "\fBalooWidget\fP * \fB__GTK_TO_ALOO\fP (GtkWidget *widget)"
 .br
 .RI "Creates \fBalooWidget\fP from GtkWidget\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBOBJECT_TO_ALOO\fP (GObject *obj)"
+.RI "\fBalooWidget\fP * \fB__OBJECT_TO_ALOO\fP (GObject *obj)"
 .br
 .RI "Create \fBalooWidget\fP from GObject\&. "
 .ti -1c
-.RI "GtkWidget * \fBOBJECT_TO_GTK_WIDGET\fP (\fBAlooBuilder\fP *builder, const char *name)"
-.br
-.RI "Creates GtkWidget from builder\&. "
-.ti -1c
-.RI "\fBalooWidget\fP * \fBalooWidgetFromBuilder\fP (\fBAlooBuilder\fP *builder, const char *name)"
-.br
-.RI "Creates \fBalooWidget\fP from builder\&. "
-.ti -1c
-.RI "\fBalooWidget\fP * \fBalooSetOrientation\fP (\fBalooWidget\fP *widget, GtkOrientation orien)"
+.RI "\fBalooWidget\fP * \fB__alooSetOrientation\fP (\fBalooWidget\fP *widget, GtkOrientation orien)"
 .br
 .RI "Sets orientation of \fBalooWidget\fP\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBNewWidget\fP (\fBWidgetType\fP type, GtkWidget *child)"
+.RI "\fBalooWidget\fP * \fB__NewWidget\fP (\fBWidgetType\fP type, GtkWidget *child)"
 .br
 .RI "Create a widget\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBsetWidgetName\fP (\fBalooWidget\fP *widget, const char *name)"
+.RI "\fBalooWidget\fP * \fB__setWidgetName\fP (\fBalooWidget\fP *widget, const char *name)"
 .br
 .RI "Set the Name of widget\&. "
+.ti -1c
+.RI "GtkWidget * \fB__OBJECT_TO_GTK_WIDGET\fP (\fBAlooBuilder\fP *builder, const char *name)"
+.br
+.RI "Creates GtkWidget from builder\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fB__alooHorizontalAlign\fP (\fBalooWidget\fP *widget, GtkAlign alignment)"
+.br
+.RI "Sets horizontal alignment of \fBalooWidget\fP\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fB__alooVerticalAlign\fP (\fBalooWidget\fP *widget, GtkAlign alignment)"
+.br
+.RI "Sets vertical alignment of \fBalooWidget\fP\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fB__alooAddEventListener\fP (\fBalooWidget\fP *widget_instance, char *event_name, GCallback CallbackFn, gpointer data)"
+.br
+.RI "Adds event listener to a widget\&. "
 .in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_aloo_widget\fP \fBWidget\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Aloo Widget related functions\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Jaipal001 (@BhJaipal) 
+.RE
+.PP
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBalooWidget\fP*(* __alooAddEventListener_Type) (\fBalooWidget\fP *widget_instance, char *event_name, GCallback CallbackFn, gpointer data)"
+
+.SS "typedef \fBalooWidget\fP*(* __alooHorizontalAlign_Type) (\fBalooWidget\fP *widget, GtkAlign alignment)"
+
+.SS "typedef \fBalooWidget\fP*(* __alooVerticalAlign_Type) (\fBalooWidget\fP *widget, GtkAlign alignment)"
+
+.SS "typedef GtkWidget*(* __OBJECT_TO_GTK_WIDGET_Type) (\fBAlooBuilder\fP *builder, const char *name)"
+
+.SS "typedef \fBalooWidget\fP*(* alooSetOrientation_Type) (\fBalooWidget\fP *widget, GtkOrientation orien)"
+
+.SS "typedef \fBalooWidget\fP*(* GTK_TO_ALOO_Type) (GtkWidget *widget)"
+
+.SS "typedef \fBalooWidget\fP*(* NewWidget_Type) (\fBWidgetType\fP type, GtkWidget *child)"
+
+.SS "typedef \fBalooWidget\fP*(* OBJECT_TO_ALOO_Type) (GObject *obj)"
+
+.SS "typedef \fBalooWidget\fP*(* setWidgetName_Type) (\fBalooWidget\fP *widget, const char *name)"
+
 .SH "Function Documentation"
 .PP 
-.SS "\fBalooWidget\fP* alooSetOrientation (\fBalooWidget\fP * widget, GtkOrientation orien)"
+.SS "\fBalooWidget\fP* __alooAddEventListener (\fBalooWidget\fP * widget_instance, char * event_name, GCallback CallbackFn, gpointer data)"
+
+.PP
+Adds event listener to a widget\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidget_instance\fP 
+.br
+\fIdata\fP parameters for event listener 
+.RE
+.PP
+
+.SS "\fBalooWidget\fP* __alooHorizontalAlign (\fBalooWidget\fP * widget, GtkAlign alignment)"
+
+.PP
+Sets horizontal alignment of \fBalooWidget\fP\&. 
+.SS "\fBalooWidget\fP* __alooSetOrientation (\fBalooWidget\fP * widget, GtkOrientation orien)"
 
 .PP
 Sets orientation of \fBalooWidget\fP\&. 
-.SS "\fBalooWidget\fP* alooWidgetFromBuilder (\fBAlooBuilder\fP * builder, const char * name)"
+.SS "\fBalooWidget\fP* __alooVerticalAlign (\fBalooWidget\fP * widget, GtkAlign alignment)"
 
 .PP
-Creates \fBalooWidget\fP from builder\&. 
-.SS "\fBalooWidget\fP* GTK_TO_ALOO (GtkWidget * widget)"
+Sets vertical alignment of \fBalooWidget\fP\&. 
+.SS "\fBalooWidget\fP* __GTK_TO_ALOO (GtkWidget * widget)"
 
 .PP
 Creates \fBalooWidget\fP from GtkWidget\&. 
-.SS "\fBalooWidget\fP* NewWidget (\fBWidgetType\fP type, GtkWidget * child)"
+.SS "\fBalooWidget\fP* __NewWidget (\fBWidgetType\fP type, GtkWidget * child)"
 
 .PP
 Create a widget\&. 
@@ -75,15 +178,15 @@ alooWidget*
 .RE
 .PP
 
-.SS "\fBalooWidget\fP* OBJECT_TO_ALOO (GObject * obj)"
+.SS "\fBalooWidget\fP* __OBJECT_TO_ALOO (GObject * obj)"
 
 .PP
 Create \fBalooWidget\fP from GObject\&. 
-.SS "GtkWidget* OBJECT_TO_GTK_WIDGET (\fBAlooBuilder\fP * builder, const char * name)"
+.SS "GtkWidget* __OBJECT_TO_GTK_WIDGET (\fBAlooBuilder\fP * builder, const char * name)"
 
 .PP
 Creates GtkWidget from builder\&. 
-.SS "\fBalooWidget\fP* setWidgetName (\fBalooWidget\fP * widget, const char * name)"
+.SS "\fBalooWidget\fP* __setWidgetName (\fBalooWidget\fP * widget, const char * name)"
 
 .PP
 Set the Name of widget\&. 
@@ -100,6 +203,10 @@ Set the Name of widget\&.
 returns the widget 
 .RE
 .PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "struct \fB_aloo_widget\fP Widget\fC [extern]\fP"
 
 .SH "Author"
 .PP 

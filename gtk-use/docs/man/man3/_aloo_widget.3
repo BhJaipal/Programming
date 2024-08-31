@@ -1,0 +1,129 @@
+.TH "_aloo_widget" 3 "Sat Aug 31 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+_aloo_widget
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <widget\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB__OBJECT_TO_GTK_WIDGET_Type\fP \fBobj_to_gtk\fP"
+.br
+.RI "Creates GtkWidget from builder\&. "
+.ti -1c
+.RI "\fBOBJECT_TO_ALOO_Type\fP \fBobj_to_aloo\fP"
+.br
+.RI "Create \fBalooWidget\fP from GObject\&. "
+.ti -1c
+.RI "\fBGTK_TO_ALOO_Type\fP \fBgtk_to_aloo\fP"
+.br
+.RI "Creates \fBalooWidget\fP from GtkWidget\&. "
+.ti -1c
+.RI "\fBalooSetOrientation_Type\fP \fBsetOrientation\fP"
+.br
+.RI "Sets orientation of \fBalooWidget\fP\&. "
+.ti -1c
+.RI "\fBNewWidget_Type\fP \fBnew\fP"
+.br
+.RI "Create a widget\&. "
+.ti -1c
+.RI "\fBsetWidgetName_Type\fP \fBsetName\fP"
+.br
+.RI "Set the Name of widget\&. "
+.ti -1c
+.RI "\fB__alooHorizontalAlign_Type\fP \fBhorizontalAlign\fP"
+.br
+.RI "Sets horizontal alignment of \fBalooWidget\fP\&. "
+.ti -1c
+.RI "\fB__alooVerticalAlign_Type\fP \fBverticalAlign\fP"
+.br
+.RI "Sets vertical alignment of \fBalooWidget\fP\&. "
+.ti -1c
+.RI "\fB__alooAddEventListener_Type\fP \fBaddEventListener\fP"
+.br
+.RI "Adds event listener to a widget\&. "
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "\fB__alooAddEventListener_Type\fP _aloo_widget::addEventListener"
+
+.PP
+Adds event listener to a widget\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidget_instance\fP 
+.br
+\fIdata\fP parameters for event listener 
+.RE
+.PP
+
+.SS "\fBGTK_TO_ALOO_Type\fP _aloo_widget::gtk_to_aloo"
+
+.PP
+Creates \fBalooWidget\fP from GtkWidget\&. 
+.SS "\fB__alooHorizontalAlign_Type\fP _aloo_widget::horizontalAlign"
+
+.PP
+Sets horizontal alignment of \fBalooWidget\fP\&. 
+.SS "\fBNewWidget_Type\fP _aloo_widget::new"
+
+.PP
+Create a widget\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP type of widget 
+.br
+\fIchild\fP actual GtkWidget 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+alooWidget* 
+.RE
+.PP
+
+.SS "\fBOBJECT_TO_ALOO_Type\fP _aloo_widget::obj_to_aloo"
+
+.PP
+Create \fBalooWidget\fP from GObject\&. 
+.SS "\fB__OBJECT_TO_GTK_WIDGET_Type\fP _aloo_widget::obj_to_gtk"
+
+.PP
+Creates GtkWidget from builder\&. 
+.SS "\fBsetWidgetName_Type\fP _aloo_widget::setName"
+
+.PP
+Set the Name of widget\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidget\fP \fBalooWidget\fP 
+.br
+\fIname\fP string for name of widget 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+returns the widget 
+.RE
+.PP
+
+.SS "\fBalooSetOrientation_Type\fP _aloo_widget::setOrientation"
+
+.PP
+Sets orientation of \fBalooWidget\fP\&. 
+.SS "\fB__alooVerticalAlign_Type\fP _aloo_widget::verticalAlign"
+
+.PP
+Sets vertical alignment of \fBalooWidget\fP\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Aloo from the source code\&.

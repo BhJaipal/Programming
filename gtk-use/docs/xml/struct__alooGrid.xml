@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct__alooGrid" kind="struct" language="C++" prot="public">
+    <compoundname>_alooGrid</compoundname>
+    <includes refid="grid_8h" local="no">grid.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__alooGrid_1a4ee419cf14790436508dfbbfa3a9581d" prot="public" static="no" mutable="no">
+        <type><ref refid="grid_8h_1a11b864d7aab2a361292985c490ddd57e" kindref="member">__gridAttach_Type</ref></type>
+        <definition>__gridAttach_Type _alooGrid::attach</definition>
+        <argsstring></argsstring>
+        <name>attach</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/grid.h" line="92" column="19" bodyfile="include/grid.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooGrid_1af0ae3ab940a7de9181a62a7d353569b7" prot="public" static="no" mutable="no">
+        <type><ref refid="grid_8h_1a5eeeff181075e653b204e50072acd1f9" kindref="member">__gridAttachGtk_Type</ref></type>
+        <definition>__gridAttachGtk_Type _alooGrid::attachGtk</definition>
+        <argsstring></argsstring>
+        <name>attachGtk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/grid.h" line="93" column="22" bodyfile="include/grid.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooGrid_1ada5c74c8c31d675ce7f594ff4faf2f12" prot="public" static="no" mutable="no">
+        <type><ref refid="grid_8h_1af030d6ae524ceff4c1118a07fd773813" kindref="member">__gridRemove_Type</ref></type>
+        <definition>__gridRemove_Type _alooGrid::remove</definition>
+        <argsstring></argsstring>
+        <name>remove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/grid.h" line="94" column="19" bodyfile="include/grid.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooGrid_1a045fc0498c35ce37ec92188229e725da" prot="public" static="no" mutable="no">
+        <type><ref refid="grid_8h_1aa22f580c625588aa1f3812bb7d115f9f" kindref="member">__gridRemoveGtk_Type</ref></type>
+        <definition>__gridRemoveGtk_Type _alooGrid::removeGtk</definition>
+        <argsstring></argsstring>
+        <name>removeGtk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/grid.h" line="95" column="22" bodyfile="include/grid.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooGrid_1a11b083d6e01cdafa387de1614e228307" prot="public" static="no" mutable="no">
+        <type><ref refid="grid_8h_1a13778e15601890b4017f5de7555949ba" kindref="member">__alooGridNew_Type</ref></type>
+        <definition>__alooGridNew_Type _alooGrid::new</definition>
+        <argsstring></argsstring>
+        <name>new</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/grid.h" line="96" column="20" bodyfile="include/grid.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooGrid_1a7c64f463f5e9b652ac925fda1b1da88a" prot="public" static="no" mutable="no">
+        <type><ref refid="grid_8h_1a0979122e61c2f6b0c23b3290221a3260" kindref="member">__setGridColumnSpacing_Type</ref></type>
+        <definition>__setGridColumnSpacing_Type _alooGrid::column_spacing</definition>
+        <argsstring></argsstring>
+        <name>column_spacing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/grid.h" line="97" column="29" bodyfile="include/grid.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooGrid_1a868ce31bdd351c36f09da5ca4b8f5774" prot="public" static="no" mutable="no">
+        <type><ref refid="grid_8h_1a0f9572d52e6fae032f9623fd082e543a" kindref="member">__setGridRowSpacing_Type</ref></type>
+        <definition>__setGridRowSpacing_Type _alooGrid::row_spacing</definition>
+        <argsstring></argsstring>
+        <name>row_spacing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/grid.h" line="98" column="26" bodyfile="include/grid.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>alooWidget</label>
+        <link refid="structalooWidget"/>
+      </node>
+      <node id="1">
+        <label>_alooGrid</label>
+        <link refid="struct__alooGrid"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>attach</edgelabel>
+          <edgelabel>attachGtk</edgelabel>
+          <edgelabel>column_spacing</edgelabel>
+          <edgelabel>new</edgelabel>
+          <edgelabel>remove</edgelabel>
+          <edgelabel>removeGtk</edgelabel>
+          <edgelabel>row_spacing</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/grid.h" line="91" column="1" bodyfile="include/grid.h" bodystart="91" bodyend="99"/>
+    <listofallmembers>
+      <member refid="struct__alooGrid_1a4ee419cf14790436508dfbbfa3a9581d" prot="public" virt="non-virtual"><scope>_alooGrid</scope><name>attach</name></member>
+      <member refid="struct__alooGrid_1af0ae3ab940a7de9181a62a7d353569b7" prot="public" virt="non-virtual"><scope>_alooGrid</scope><name>attachGtk</name></member>
+      <member refid="struct__alooGrid_1a7c64f463f5e9b652ac925fda1b1da88a" prot="public" virt="non-virtual"><scope>_alooGrid</scope><name>column_spacing</name></member>
+      <member refid="struct__alooGrid_1a11b083d6e01cdafa387de1614e228307" prot="public" virt="non-virtual"><scope>_alooGrid</scope><name>new</name></member>
+      <member refid="struct__alooGrid_1ada5c74c8c31d675ce7f594ff4faf2f12" prot="public" virt="non-virtual"><scope>_alooGrid</scope><name>remove</name></member>
+      <member refid="struct__alooGrid_1a045fc0498c35ce37ec92188229e725da" prot="public" virt="non-virtual"><scope>_alooGrid</scope><name>removeGtk</name></member>
+      <member refid="struct__alooGrid_1a868ce31bdd351c36f09da5ca4b8f5774" prot="public" virt="non-virtual"><scope>_alooGrid</scope><name>row_spacing</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

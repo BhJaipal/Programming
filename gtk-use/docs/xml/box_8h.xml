@@ -36,60 +36,238 @@
         </childnode>
       </node>
     </invincdepgraph>
-      <sectiondef kind="define">
-      <memberdef kind="define" id="box_8h_1a49c4948751bb9e2dd96cfa505b4b568c" prot="public" static="no">
-        <name>ALOO_BOX_TO_GTK_BOX</name>
-        <param><defname>x</defname></param>
-        <initializer>GTK_BOX(<ref refid="box_8h_1a4a34a65a129d5c53b914ac34c3057d12" kindref="member">ALOO_BOX_WIDGET</ref>(x))</initializer>
+    <innerclass refid="struct__alooBox" prot="public">_alooBox</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="box_8h_1a9dd89e7d1df8d65f247b945d5a3d861a" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __new_alooBox_Type) (GtkOrientation orientation, int spacing)</definition>
+        <argsstring>)(GtkOrientation orientation, int spacing)</argsstring>
+        <name>__new_alooBox_Type</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="7" column="9" bodyfile="include/box.h" bodystart="7" bodyend="-1"/>
+        <location file="include/box.h" line="87" column="9" bodyfile="include/box.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="box_8h_1a375e194da5961d07e659b31d596d3254" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __setBoxOrientation_Type) (alooWidget *box, GtkOrientation orientation)</definition>
+        <argsstring>)(alooWidget *box, GtkOrientation orientation)</argsstring>
+        <name>__setBoxOrientation_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/box.h" line="89" column="9" bodyfile="include/box.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="box_8h_1a9eacf50fda9d1689ffe2c6d7e5d9ee88" prot="public" static="no">
+        <type>GtkOrientation(*</type>
+        <definition>typedef GtkOrientation(* __getBoxOrientation_Type) (alooWidget *box)</definition>
+        <argsstring>)(alooWidget *box)</argsstring>
+        <name>__getBoxOrientation_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/box.h" line="91" column="9" bodyfile="include/box.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="box_8h_1a1ef179d86c3b9ba81d2564e9a14e23fc" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __boxAppendGtk_Type) (alooWidget *box, GtkWidget *widget)</definition>
+        <argsstring>)(alooWidget *box, GtkWidget *widget)</argsstring>
+        <name>__boxAppendGtk_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/box.h" line="92" column="9" bodyfile="include/box.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="box_8h_1a62c964b5e1942f3ceaee4675a77f24fc" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __boxPrependGtk_Type) (alooWidget *box, GtkWidget *widget)</definition>
+        <argsstring>)(alooWidget *box, GtkWidget *widget)</argsstring>
+        <name>__boxPrependGtk_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/box.h" line="93" column="9" bodyfile="include/box.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="box_8h_1a25216f6f5b7151db8ece75666051e524" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __boxRemoveGtk_Type) (alooWidget *box, GtkWidget *widget)</definition>
+        <argsstring>)(alooWidget *box, GtkWidget *widget)</argsstring>
+        <name>__boxRemoveGtk_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/box.h" line="94" column="9" bodyfile="include/box.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="box_8h_1a6cdd971a2258525cb630d1cb1f18c904" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __boxAppend_Type) (alooWidget *box, alooWidget *widget)</definition>
+        <argsstring>)(alooWidget *box, alooWidget *widget)</argsstring>
+        <name>__boxAppend_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/box.h" line="95" column="9" bodyfile="include/box.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="box_8h_1a13e17b3f8a66d906424560c91f8e1b2b" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __boxPrepend_Type) (alooWidget *box, alooWidget *widget)</definition>
+        <argsstring>)(alooWidget *box, alooWidget *widget)</argsstring>
+        <name>__boxPrepend_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/box.h" line="96" column="9" bodyfile="include/box.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="box_8h_1a84c2207a9e9e061cf3cf2e20f33141ef" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __boxRemove_Type) (alooWidget *box, alooWidget *widget)</definition>
+        <argsstring>)(alooWidget *box, alooWidget *widget)</argsstring>
+        <name>__boxRemove_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/box.h" line="97" column="9" bodyfile="include/box.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="box_8h_1a486f6f5ad9d191317c37a2404fb88b0f" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __boxInsertChildAfter_Type) (alooWidget *box, alooWidget *child, alooWidget *after)</definition>
+        <argsstring>)(alooWidget *box, alooWidget *child, alooWidget *after)</argsstring>
+        <name>__boxInsertChildAfter_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/box.h" line="98" column="9" bodyfile="include/box.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="box_8h_1afe2e6d8f44fd904811995c26c6508e23" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __setBoxSpacing_Type) (alooWidget *box, int spacing)</definition>
+        <argsstring>)(alooWidget *box, int spacing)</argsstring>
+        <name>__setBoxSpacing_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/box.h" line="101" column="9" bodyfile="include/box.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="box_8h_1a8212b8c9244f75af63296d9995a4ba12" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* __getBoxSpacing_Type) (alooWidget *box)</definition>
+        <argsstring>)(alooWidget *box)</argsstring>
+        <name>__getBoxSpacing_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/box.h" line="102" column="9" bodyfile="include/box.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="box_8h_1a02305e8045b4df28eb49b0f46076110e" prot="public" static="no">
+        <type>gboolean(*</type>
+        <definition>typedef gboolean(* __getBoxHomogeneous_Type) (alooWidget *box)</definition>
+        <argsstring>)(alooWidget *box)</argsstring>
+        <name>__getBoxHomogeneous_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/box.h" line="103" column="9" bodyfile="include/box.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="box_8h_1ac8eedc9450c37cc7277deccb6f5a6428" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __setBoxHomogeneous_Type) (alooWidget *box, gboolean homogeneous)</definition>
+        <argsstring>)(alooWidget *box, gboolean homogeneous)</argsstring>
+        <name>__setBoxHomogeneous_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/box.h" line="104" column="9" bodyfile="include/box.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="box_8h_1a0120cf6c35b9e14907e558c6ba0d9c3d" prot="public" static="no">
+        <type>GtkBaselinePosition(*</type>
+        <definition>typedef GtkBaselinePosition(* __getBoxBaselinePosition_Type) (alooWidget *box)</definition>
+        <argsstring>)(alooWidget *box)</argsstring>
+        <name>__getBoxBaselinePosition_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/box.h" line="107" column="9" bodyfile="include/box.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="box_8h_1a2808ef9c82512f47c93a3c5573bdbd78" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __setBoxBaselinePosition_Type) (alooWidget *box, GtkBaselinePosition position)</definition>
+        <argsstring>)(alooWidget *box, GtkBaselinePosition position)</argsstring>
+        <name>__setBoxBaselinePosition_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/box.h" line="108" column="9" bodyfile="include/box.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="box_8h_1ab67c7a9a4623c54b09d1e7f51019f0cf" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct__alooBox" kindref="compound">_alooBox</ref></type>
+        <definition>struct _alooBox Box</definition>
+        <argsstring></argsstring>
+        <name>Box</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/box.h" line="108" column="9" declfile="include/box.h" declline="108" declcolumn="9"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="box_8h_1a4a34a65a129d5c53b914ac34c3057d12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>GtkWidget *</type>
-        <definition>GtkWidget* ALOO_BOX_WIDGET</definition>
-        <argsstring>(alooWidget *x)</argsstring>
-        <name>ALOO_BOX_WIDGET</name>
-        <param>
-          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
-          <declname>x</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/box.h" line="6" column="11" declfile="include/box.h" declline="6" declcolumn="11"/>
-      </memberdef>
-      <memberdef kind="function" id="box_8h_1a8a6129175fffef1805056b1ab25526ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>gboolean</type>
-        <definition>gboolean ALOO_IS_BOX</definition>
-        <argsstring>(alooWidget *x)</argsstring>
-        <name>ALOO_IS_BOX</name>
-        <param>
-          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
-          <declname>x</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/box.h" line="9" column="10" declfile="include/box.h" declline="9" declcolumn="10"/>
-      </memberdef>
-      <memberdef kind="function" id="box_8h_1ade9c3d0a5b82172f2a2041811d9ae201" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="box_8h_1a143cb5bf4ea32883d936fa9c74ddc7d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
-        <definition>alooWidget* new_alooBox</definition>
+        <definition>alooWidget* __new_alooBox</definition>
         <argsstring>(GtkOrientation orientation, int spacing)</argsstring>
-        <name>new_alooBox</name>
+        <name>__new_alooBox</name>
         <param>
           <type>GtkOrientation</type>
           <declname>orientation</declname>
@@ -99,18 +277,37 @@
           <declname>spacing</declname>
         </param>
         <briefdescription>
+<para>Creates new aloo box. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>orientation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Box orientation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spacing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>space in child </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="11" column="12" declfile="include/box.h" declline="11" declcolumn="12"/>
+        <location file="include/box.h" line="18" column="12" declfile="include/box.h" declline="18" declcolumn="12"/>
       </memberdef>
-      <memberdef kind="function" id="box_8h_1a68f215aee06f176862750ee188c554b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="box_8h_1a613e1ac9436955c897d60bd459a312f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
-        <definition>alooWidget* setBoxOrientation</definition>
+        <definition>alooWidget* __setBoxOrientation</definition>
         <argsstring>(alooWidget *box, GtkOrientation orientation)</argsstring>
-        <name>setBoxOrientation</name>
+        <name>__setBoxOrientation</name>
         <param>
           <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
           <declname>box</declname>
@@ -126,13 +323,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="16" column="12" declfile="include/box.h" declline="16" declcolumn="12"/>
+        <location file="include/box.h" line="22" column="12" declfile="include/box.h" declline="22" declcolumn="12"/>
       </memberdef>
-      <memberdef kind="function" id="box_8h_1afff8456a34365d3bef35e87790387761" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="box_8h_1a6bef14af50ba6028d72d5268b3d61eb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>GtkOrientation</type>
-        <definition>GtkOrientation getBoxOrientation</definition>
+        <definition>GtkOrientation __getBoxOrientation</definition>
         <argsstring>(alooWidget *box)</argsstring>
-        <name>getBoxOrientation</name>
+        <name>__getBoxOrientation</name>
         <param>
           <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
           <declname>box</declname>
@@ -144,13 +341,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="20" column="16" declfile="include/box.h" declline="20" declcolumn="16"/>
+        <location file="include/box.h" line="26" column="16" declfile="include/box.h" declline="26" declcolumn="16"/>
       </memberdef>
-      <memberdef kind="function" id="box_8h_1a31523d1f2b3ffe3d96838b6bf73cf480" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="box_8h_1a888ab6e6f143fc388b9db6c613c9f2f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
-        <definition>alooWidget* boxAppendGtk</definition>
+        <definition>alooWidget* __boxAppendGtk</definition>
         <argsstring>(alooWidget *box, GtkWidget *widget)</argsstring>
-        <name>boxAppendGtk</name>
+        <name>__boxAppendGtk</name>
         <param>
           <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
           <declname>box</declname>
@@ -166,13 +363,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="26" column="12" declfile="include/box.h" declline="26" declcolumn="12"/>
+        <location file="include/box.h" line="30" column="12" declfile="include/box.h" declline="30" declcolumn="12"/>
       </memberdef>
-      <memberdef kind="function" id="box_8h_1aa110e6957ddf389f0c6633dda8fa3ce9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="box_8h_1a879c8cd2a74d46b9c0cad1e7420f6389" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
-        <definition>alooWidget* boxPrependGtk</definition>
+        <definition>alooWidget* __boxPrependGtk</definition>
         <argsstring>(alooWidget *box, GtkWidget *widget)</argsstring>
-        <name>boxPrependGtk</name>
+        <name>__boxPrependGtk</name>
         <param>
           <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
           <declname>box</declname>
@@ -188,13 +385,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="30" column="12" declfile="include/box.h" declline="30" declcolumn="12"/>
+        <location file="include/box.h" line="34" column="12" declfile="include/box.h" declline="34" declcolumn="12"/>
       </memberdef>
-      <memberdef kind="function" id="box_8h_1a211967d647e887244da40a34376f0260" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="box_8h_1a2e67e88bd569899d3aad45d287a8bb59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
-        <definition>alooWidget* boxRemoveGtk</definition>
+        <definition>alooWidget* __boxRemoveGtk</definition>
         <argsstring>(alooWidget *box, GtkWidget *widget)</argsstring>
-        <name>boxRemoveGtk</name>
+        <name>__boxRemoveGtk</name>
         <param>
           <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
           <declname>box</declname>
@@ -210,13 +407,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="34" column="12" declfile="include/box.h" declline="34" declcolumn="12"/>
+        <location file="include/box.h" line="38" column="12" declfile="include/box.h" declline="38" declcolumn="12"/>
       </memberdef>
-      <memberdef kind="function" id="box_8h_1a2a788bd1fc20caa041d1cf6e3ce66b9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="box_8h_1a4814e467fbb36dc572364823a2d0baf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
-        <definition>alooWidget* boxAppend</definition>
+        <definition>alooWidget* __boxAppend</definition>
         <argsstring>(alooWidget *box, alooWidget *widget)</argsstring>
-        <name>boxAppend</name>
+        <name>__boxAppend</name>
         <param>
           <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
           <declname>box</declname>
@@ -232,13 +429,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="39" column="12" declfile="include/box.h" declline="39" declcolumn="12"/>
+        <location file="include/box.h" line="42" column="12" declfile="include/box.h" declline="42" declcolumn="12"/>
       </memberdef>
-      <memberdef kind="function" id="box_8h_1acb90d5cfd95509ab12d7d03f27587a40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="box_8h_1a919fdabdbaf227881c3762fc774dafbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
-        <definition>alooWidget* boxPrepend</definition>
+        <definition>alooWidget* __boxPrepend</definition>
         <argsstring>(alooWidget *box, alooWidget *widget)</argsstring>
-        <name>boxPrepend</name>
+        <name>__boxPrepend</name>
         <param>
           <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
           <declname>box</declname>
@@ -254,13 +451,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="43" column="12" declfile="include/box.h" declline="43" declcolumn="12"/>
+        <location file="include/box.h" line="46" column="12" declfile="include/box.h" declline="46" declcolumn="12"/>
       </memberdef>
-      <memberdef kind="function" id="box_8h_1a269fe19de804eca2b0b62a39a7627084" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="box_8h_1afc8a53121c8422f11be3924de0d31787" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
-        <definition>alooWidget* boxRemove</definition>
+        <definition>alooWidget* __boxRemove</definition>
         <argsstring>(alooWidget *box, alooWidget *widget)</argsstring>
-        <name>boxRemove</name>
+        <name>__boxRemove</name>
         <param>
           <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
           <declname>box</declname>
@@ -276,13 +473,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="47" column="12" declfile="include/box.h" declline="47" declcolumn="12"/>
+        <location file="include/box.h" line="50" column="12" declfile="include/box.h" declline="50" declcolumn="12"/>
       </memberdef>
-      <memberdef kind="function" id="box_8h_1a99fa2f7a6368ebf9b125d538c32e2511" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="box_8h_1ac17cec66e29ef4f0b1b03b4dbde4669f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
-        <definition>alooWidget* boxInsertChildAfter</definition>
+        <definition>alooWidget* __boxInsertChildAfter</definition>
         <argsstring>(alooWidget *box, alooWidget *child, alooWidget *after)</argsstring>
-        <name>boxInsertChildAfter</name>
+        <name>__boxInsertChildAfter</name>
         <param>
           <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
           <declname>box</declname>
@@ -305,13 +502,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="53" column="12" declfile="include/box.h" declline="53" declcolumn="12"/>
+        <location file="include/box.h" line="55" column="12" declfile="include/box.h" declline="55" declcolumn="12"/>
       </memberdef>
-      <memberdef kind="function" id="box_8h_1aa95cc7daa607b085429fe669696c8b95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="box_8h_1a6e4f0796c133add66628b3b79beaf8e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
-        <definition>alooWidget* setBoxSpacing</definition>
+        <definition>alooWidget* __setBoxSpacing</definition>
         <argsstring>(alooWidget *box, int spacing)</argsstring>
-        <name>setBoxSpacing</name>
+        <name>__setBoxSpacing</name>
         <param>
           <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
           <declname>box</declname>
@@ -329,11 +526,11 @@
         </inbodydescription>
         <location file="include/box.h" line="60" column="12" declfile="include/box.h" declline="60" declcolumn="12"/>
       </memberdef>
-      <memberdef kind="function" id="box_8h_1aafb8d1d96e235cd0aa0fc5efbab2b435" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="box_8h_1a066622a364e492d922147b61b670e7df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
-        <definition>int getBoxSpacing</definition>
+        <definition>int __getBoxSpacing</definition>
         <argsstring>(alooWidget *box)</argsstring>
-        <name>getBoxSpacing</name>
+        <name>__getBoxSpacing</name>
         <param>
           <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
           <declname>box</declname>
@@ -347,11 +544,11 @@
         </inbodydescription>
         <location file="include/box.h" line="64" column="5" declfile="include/box.h" declline="64" declcolumn="5"/>
       </memberdef>
-      <memberdef kind="function" id="box_8h_1a5b03d8c43b572937353a35fd14706a64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="box_8h_1a13c1f3befb022ba8dde39c5b4228f3bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>gboolean</type>
-        <definition>gboolean getBoxHomogeneous</definition>
+        <definition>gboolean __getBoxHomogeneous</definition>
         <argsstring>(alooWidget *box)</argsstring>
-        <name>getBoxHomogeneous</name>
+        <name>__getBoxHomogeneous</name>
         <param>
           <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
           <declname>box</declname>
@@ -363,13 +560,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="70" column="10" declfile="include/box.h" declline="70" declcolumn="10"/>
+        <location file="include/box.h" line="68" column="10" declfile="include/box.h" declline="68" declcolumn="10"/>
       </memberdef>
-      <memberdef kind="function" id="box_8h_1a53dafacfaf24fb36d402158bb1957f09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="box_8h_1adbce718d97313ac4e88a0f05aea0198f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
-        <definition>alooWidget* setBoxHomogeneous</definition>
+        <definition>alooWidget* __setBoxHomogeneous</definition>
         <argsstring>(alooWidget *box, gboolean homogeneous)</argsstring>
-        <name>setBoxHomogeneous</name>
+        <name>__setBoxHomogeneous</name>
         <param>
           <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
           <declname>box</declname>
@@ -385,13 +582,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="74" column="12" declfile="include/box.h" declline="74" declcolumn="12"/>
+        <location file="include/box.h" line="72" column="12" declfile="include/box.h" declline="72" declcolumn="12"/>
       </memberdef>
-      <memberdef kind="function" id="box_8h_1ae19afcb9a216631276a7946619de890f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="box_8h_1a4b1e5354961907597591c79e65fa20f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>GtkBaselinePosition</type>
-        <definition>GtkBaselinePosition getBoxBaselinePosition</definition>
+        <definition>GtkBaselinePosition __getBoxBaselinePosition</definition>
         <argsstring>(alooWidget *box)</argsstring>
-        <name>getBoxBaselinePosition</name>
+        <name>__getBoxBaselinePosition</name>
         <param>
           <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
           <declname>box</declname>
@@ -403,13 +600,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="80" column="21" declfile="include/box.h" declline="80" declcolumn="21"/>
+        <location file="include/box.h" line="78" column="21" declfile="include/box.h" declline="78" declcolumn="21"/>
       </memberdef>
-      <memberdef kind="function" id="box_8h_1a7ca1f19ef934de0c3d9392f1c9d9a3f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="box_8h_1a3cbc9a9ce0474d8607139ac6140e7ede" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
-        <definition>alooWidget* setBoxBaselinePosition</definition>
+        <definition>alooWidget* __setBoxBaselinePosition</definition>
         <argsstring>(alooWidget *box, GtkBaselinePosition position)</argsstring>
-        <name>setBoxBaselinePosition</name>
+        <name>__setBoxBaselinePosition</name>
         <param>
           <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
           <declname>box</declname>
@@ -425,55 +622,97 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="84" column="12" declfile="include/box.h" declline="84" declcolumn="12"/>
+        <location file="include/box.h" line="82" column="12" declfile="include/box.h" declline="82" declcolumn="12"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Aloo Box functions. </para>
     </briefdescription>
     <detaileddescription>
+<para><simplesect kind="author"><para>Jaipal001 (@BhJaipal) </para>
+</simplesect>
+</para>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ALOO_BOX_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_BOX_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtk/gtk.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6" refid="box_8h_1a4a34a65a129d5c53b914ac34c3057d12" refkind="member"><highlight class="normal">GtkWidget<sp/>*<ref refid="box_8h_1a4a34a65a129d5c53b914ac34c3057d12" kindref="member">ALOO_BOX_WIDGET</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*x);</highlight></codeline>
-<codeline lineno="7" refid="box_8h_1a49c4948751bb9e2dd96cfa505b4b568c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_BOX_TO_GTK_BOX(x)<sp/>GTK_BOX(ALOO_BOX_WIDGET(x))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9" refid="box_8h_1a8a6129175fffef1805056b1ab25526ab" refkind="member"><highlight class="normal">gboolean<sp/><ref refid="box_8h_1a8a6129175fffef1805056b1ab25526ab" kindref="member">ALOO_IS_BOX</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*x);</highlight></codeline>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ALOO_BOX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_BOX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtk/gtk.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11" refid="box_8h_1ade9c3d0a5b82172f2a2041811d9ae201" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1ade9c3d0a5b82172f2a2041811d9ae201" kindref="member">new_alooBox</ref>(GtkOrientation<sp/>orientation,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>spacing);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Private<sp/>Funcs<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="box_8h_1a68f215aee06f176862750ee188c554b7" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1a68f215aee06f176862750ee188c554b7" kindref="member">setBoxOrientation</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/>GtkOrientation<sp/>orientation);</highlight></codeline>
-<codeline lineno="20" refid="box_8h_1afff8456a34365d3bef35e87790387761" refkind="member"><highlight class="normal">GtkOrientation<sp/><ref refid="box_8h_1afff8456a34365d3bef35e87790387761" kindref="member">getBoxOrientation</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box);</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Adding<sp/>and<sp/>removing<sp/>child</highlight></codeline>
-<codeline lineno="26" refid="box_8h_1a31523d1f2b3ffe3d96838b6bf73cf480" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1a31523d1f2b3ffe3d96838b6bf73cf480" kindref="member">boxAppendGtk</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/>GtkWidget<sp/>*widget);</highlight></codeline>
-<codeline lineno="30" refid="box_8h_1aa110e6957ddf389f0c6633dda8fa3ce9" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1aa110e6957ddf389f0c6633dda8fa3ce9" kindref="member">boxPrependGtk</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/>GtkWidget<sp/>*widget);</highlight></codeline>
-<codeline lineno="34" refid="box_8h_1a211967d647e887244da40a34376f0260" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1a211967d647e887244da40a34376f0260" kindref="member">boxRemoveGtk</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/>GtkWidget<sp/>*widget);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="box_8h_1a2a788bd1fc20caa041d1cf6e3ce66b9b" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1a2a788bd1fc20caa041d1cf6e3ce66b9b" kindref="member">boxAppend</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget);</highlight></codeline>
-<codeline lineno="43" refid="box_8h_1acb90d5cfd95509ab12d7d03f27587a40" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1acb90d5cfd95509ab12d7d03f27587a40" kindref="member">boxPrepend</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget);</highlight></codeline>
-<codeline lineno="47" refid="box_8h_1a269fe19de804eca2b0b62a39a7627084" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1a269fe19de804eca2b0b62a39a7627084" kindref="member">boxRemove</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget);</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53" refid="box_8h_1a99fa2f7a6368ebf9b125d538c32e2511" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1a99fa2f7a6368ebf9b125d538c32e2511" kindref="member">boxInsertChildAfter</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*child,</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*after);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Box<sp/>spacing</highlight></codeline>
-<codeline lineno="60" refid="box_8h_1aa95cc7daa607b085429fe669696c8b95" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1aa95cc7daa607b085429fe669696c8b95" kindref="member">setBoxSpacing</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>spacing);</highlight></codeline>
-<codeline lineno="64" refid="box_8h_1aafb8d1d96e235cd0aa0fc5efbab2b435" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="box_8h_1aafb8d1d96e235cd0aa0fc5efbab2b435" kindref="member">getBoxSpacing</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>box<sp/>homogeneous</highlight></codeline>
-<codeline lineno="70" refid="box_8h_1a5b03d8c43b572937353a35fd14706a64" refkind="member"><highlight class="comment"></highlight><highlight class="normal">gboolean<sp/><ref refid="box_8h_1a5b03d8c43b572937353a35fd14706a64" kindref="member">getBoxHomogeneous</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box);</highlight></codeline>
-<codeline lineno="74" refid="box_8h_1a53dafacfaf24fb36d402158bb1957f09" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1a53dafacfaf24fb36d402158bb1957f09" kindref="member">setBoxHomogeneous</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/>gboolean<sp/>homogeneous);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">//<sp/>box<sp/>baseline<sp/>position</highlight></codeline>
-<codeline lineno="80" refid="box_8h_1ae19afcb9a216631276a7946619de890f" refkind="member"><highlight class="comment"></highlight><highlight class="normal">GtkBaselinePosition<sp/><ref refid="box_8h_1ae19afcb9a216631276a7946619de890f" kindref="member">getBoxBaselinePosition</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box);</highlight></codeline>
-<codeline lineno="84" refid="box_8h_1a7ca1f19ef934de0c3d9392f1c9d9a3f5" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1a7ca1f19ef934de0c3d9392f1c9d9a3f5" kindref="member">setBoxBaselinePosition</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GtkBaselinePosition<sp/>position);</highlight></codeline>
+<codeline lineno="18" refid="box_8h_1a143cb5bf4ea32883d936fa9c74ddc7d9" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1a143cb5bf4ea32883d936fa9c74ddc7d9" kindref="member">__new_alooBox</ref>(GtkOrientation<sp/>orientation,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>spacing);</highlight></codeline>
+<codeline lineno="22" refid="box_8h_1a613e1ac9436955c897d60bd459a312f0" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1a613e1ac9436955c897d60bd459a312f0" kindref="member">__setBoxOrientation</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/>GtkOrientation<sp/>orientation);</highlight></codeline>
+<codeline lineno="26" refid="box_8h_1a6bef14af50ba6028d72d5268b3d61eb7" refkind="member"><highlight class="normal">GtkOrientation<sp/><ref refid="box_8h_1a6bef14af50ba6028d72d5268b3d61eb7" kindref="member">__getBoxOrientation</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box);</highlight></codeline>
+<codeline lineno="30" refid="box_8h_1a888ab6e6f143fc388b9db6c613c9f2f2" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1a888ab6e6f143fc388b9db6c613c9f2f2" kindref="member">__boxAppendGtk</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/>GtkWidget<sp/>*widget);</highlight></codeline>
+<codeline lineno="34" refid="box_8h_1a879c8cd2a74d46b9c0cad1e7420f6389" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1a879c8cd2a74d46b9c0cad1e7420f6389" kindref="member">__boxPrependGtk</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/>GtkWidget<sp/>*widget);</highlight></codeline>
+<codeline lineno="38" refid="box_8h_1a2e67e88bd569899d3aad45d287a8bb59" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1a2e67e88bd569899d3aad45d287a8bb59" kindref="member">__boxRemoveGtk</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/>GtkWidget<sp/>*widget);</highlight></codeline>
+<codeline lineno="42" refid="box_8h_1a4814e467fbb36dc572364823a2d0baf9" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1a4814e467fbb36dc572364823a2d0baf9" kindref="member">__boxAppend</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget);</highlight></codeline>
+<codeline lineno="46" refid="box_8h_1a919fdabdbaf227881c3762fc774dafbf" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1a919fdabdbaf227881c3762fc774dafbf" kindref="member">__boxPrepend</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget);</highlight></codeline>
+<codeline lineno="50" refid="box_8h_1afc8a53121c8422f11be3924de0d31787" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1afc8a53121c8422f11be3924de0d31787" kindref="member">__boxRemove</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget);</highlight></codeline>
+<codeline lineno="55" refid="box_8h_1ac17cec66e29ef4f0b1b03b4dbde4669f" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1ac17cec66e29ef4f0b1b03b4dbde4669f" kindref="member">__boxInsertChildAfter</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*child,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*after);</highlight></codeline>
+<codeline lineno="60" refid="box_8h_1a6e4f0796c133add66628b3b79beaf8e7" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1a6e4f0796c133add66628b3b79beaf8e7" kindref="member">__setBoxSpacing</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>spacing);</highlight></codeline>
+<codeline lineno="64" refid="box_8h_1a066622a364e492d922147b61b670e7df" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="box_8h_1a066622a364e492d922147b61b670e7df" kindref="member">__getBoxSpacing</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box);</highlight></codeline>
+<codeline lineno="68" refid="box_8h_1a13c1f3befb022ba8dde39c5b4228f3bb" refkind="member"><highlight class="normal">gboolean<sp/><ref refid="box_8h_1a13c1f3befb022ba8dde39c5b4228f3bb" kindref="member">__getBoxHomogeneous</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box);</highlight></codeline>
+<codeline lineno="72" refid="box_8h_1adbce718d97313ac4e88a0f05aea0198f" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1adbce718d97313ac4e88a0f05aea0198f" kindref="member">__setBoxHomogeneous</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/>gboolean<sp/>homogeneous);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//<sp/>box<sp/>baseline<sp/>position</highlight></codeline>
+<codeline lineno="78" refid="box_8h_1a4b1e5354961907597591c79e65fa20f5" refkind="member"><highlight class="comment"></highlight><highlight class="normal">GtkBaselinePosition<sp/><ref refid="box_8h_1a4b1e5354961907597591c79e65fa20f5" kindref="member">__getBoxBaselinePosition</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box);</highlight></codeline>
+<codeline lineno="82" refid="box_8h_1a3cbc9a9ce0474d8607139ac6140e7ede" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="box_8h_1a3cbc9a9ce0474d8607139ac6140e7ede" kindref="member">__setBoxBaselinePosition</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GtkBaselinePosition<sp/>position);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Private<sp/>Types<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_BOX_H</highlight></codeline>
+<codeline lineno="87" refid="box_8h_1a9dd89e7d1df8d65f247b945d5a3d861a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__new_alooBox_Type)(GtkOrientation<sp/>orientation,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>spacing);</highlight></codeline>
+<codeline lineno="89" refid="box_8h_1a375e194da5961d07e659b31d596d3254" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__setBoxOrientation_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GtkOrientation<sp/>orientation);</highlight></codeline>
+<codeline lineno="91" refid="box_8h_1a9eacf50fda9d1689ffe2c6d7e5d9ee88" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>GtkOrientation<sp/>(*<ref refid="box_8h_1a9eacf50fda9d1689ffe2c6d7e5d9ee88" kindref="member">__getBoxOrientation_Type</ref>)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box);</highlight></codeline>
+<codeline lineno="92" refid="box_8h_1a1ef179d86c3b9ba81d2564e9a14e23fc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__boxAppendGtk_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/>GtkWidget<sp/>*widget);</highlight></codeline>
+<codeline lineno="93" refid="box_8h_1a62c964b5e1942f3ceaee4675a77f24fc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__boxPrependGtk_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/>GtkWidget<sp/>*widget);</highlight></codeline>
+<codeline lineno="94" refid="box_8h_1a25216f6f5b7151db8ece75666051e524" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__boxRemoveGtk_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/>GtkWidget<sp/>*widget);</highlight></codeline>
+<codeline lineno="95" refid="box_8h_1a6cdd971a2258525cb630d1cb1f18c904" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__boxAppend_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget);</highlight></codeline>
+<codeline lineno="96" refid="box_8h_1a13e17b3f8a66d906424560c91f8e1b2b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__boxPrepend_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget);</highlight></codeline>
+<codeline lineno="97" refid="box_8h_1a84c2207a9e9e061cf3cf2e20f33141ef" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__boxRemove_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget);</highlight></codeline>
+<codeline lineno="98" refid="box_8h_1a486f6f5ad9d191317c37a2404fb88b0f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__boxInsertChildAfter_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*child,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*after);</highlight></codeline>
+<codeline lineno="101" refid="box_8h_1afe2e6d8f44fd904811995c26c6508e23" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__setBoxSpacing_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>spacing);</highlight></codeline>
+<codeline lineno="102" refid="box_8h_1a8212b8c9244f75af63296d9995a4ba12" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="box_8h_1a8212b8c9244f75af63296d9995a4ba12" kindref="member">__getBoxSpacing_Type</ref>)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box);</highlight></codeline>
+<codeline lineno="103" refid="box_8h_1a02305e8045b4df28eb49b0f46076110e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>gboolean<sp/>(*<ref refid="box_8h_1a02305e8045b4df28eb49b0f46076110e" kindref="member">__getBoxHomogeneous_Type</ref>)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box);</highlight></codeline>
+<codeline lineno="104" refid="box_8h_1ac8eedc9450c37cc7277deccb6f5a6428" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__setBoxHomogeneous_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gboolean<sp/>homogeneous);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="box_8h_1a0120cf6c35b9e14907e558c6ba0d9c3d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>GtkBaselinePosition<sp/>(*<ref refid="box_8h_1a0120cf6c35b9e14907e558c6ba0d9c3d" kindref="member">__getBoxBaselinePosition_Type</ref>)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box);</highlight></codeline>
+<codeline lineno="108" refid="box_8h_1a2808ef9c82512f47c93a3c5573bdbd78" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__setBoxBaselinePosition_Type)(</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*box,<sp/>GtkBaselinePosition<sp/>position);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Public<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="struct__alooBox" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__alooBox" kindref="compound">_alooBox</ref><sp/>{</highlight></codeline>
+<codeline lineno="114" refid="struct__alooBox_1a22a4676c8fc3201ab5ace1de11b7da67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="box_8h_1a9dd89e7d1df8d65f247b945d5a3d861a" kindref="member">__new_alooBox_Type</ref><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115" refid="struct__alooBox_1ac3851caa5ff1bed13ca8ad1e0c1e811e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="box_8h_1a375e194da5961d07e659b31d596d3254" kindref="member">__setBoxOrientation_Type</ref><sp/><ref refid="struct__alooBox_1ac3851caa5ff1bed13ca8ad1e0c1e811e" kindref="member">setOrientation</ref>;</highlight></codeline>
+<codeline lineno="116" refid="struct__alooBox_1a4593845b8c4b1d13aee6b7135de8a28a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="box_8h_1a9eacf50fda9d1689ffe2c6d7e5d9ee88" kindref="member">__getBoxOrientation_Type</ref><sp/><ref refid="struct__alooBox_1a4593845b8c4b1d13aee6b7135de8a28a" kindref="member">getOrientation</ref>;</highlight></codeline>
+<codeline lineno="117" refid="struct__alooBox_1a0d03f00f033a1b437bc7317328910ee1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="box_8h_1a1ef179d86c3b9ba81d2564e9a14e23fc" kindref="member">__boxAppendGtk_Type</ref><sp/><ref refid="struct__alooBox_1a0d03f00f033a1b437bc7317328910ee1" kindref="member">appendGtk</ref>;</highlight></codeline>
+<codeline lineno="118" refid="struct__alooBox_1a4143ca76ee88077134ea8dd31cf82205" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="box_8h_1a62c964b5e1942f3ceaee4675a77f24fc" kindref="member">__boxPrependGtk_Type</ref><sp/><ref refid="struct__alooBox_1a4143ca76ee88077134ea8dd31cf82205" kindref="member">prependGtk</ref>;</highlight></codeline>
+<codeline lineno="119" refid="struct__alooBox_1ad3913cdb51d5ff5c25ee09ad61becc57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="box_8h_1a25216f6f5b7151db8ece75666051e524" kindref="member">__boxRemoveGtk_Type</ref><sp/><ref refid="struct__alooBox_1ad3913cdb51d5ff5c25ee09ad61becc57" kindref="member">removeGtk</ref>;</highlight></codeline>
+<codeline lineno="120" refid="struct__alooBox_1aa5b0cececd1a41b048d3b29f915c88b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="box_8h_1a6cdd971a2258525cb630d1cb1f18c904" kindref="member">__boxAppend_Type</ref><sp/><ref refid="struct__alooBox_1aa5b0cececd1a41b048d3b29f915c88b5" kindref="member">append</ref>;</highlight></codeline>
+<codeline lineno="121" refid="struct__alooBox_1a0ead5685ee758f5a350b94aecaa377f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="box_8h_1a13e17b3f8a66d906424560c91f8e1b2b" kindref="member">__boxPrepend_Type</ref><sp/><ref refid="struct__alooBox_1a0ead5685ee758f5a350b94aecaa377f0" kindref="member">prepend</ref>;</highlight></codeline>
+<codeline lineno="122" refid="struct__alooBox_1a5e123a4420ead70a617b2a8dc4334c81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="box_8h_1a84c2207a9e9e061cf3cf2e20f33141ef" kindref="member">__boxRemove_Type</ref><sp/><ref refid="struct__alooBox_1a5e123a4420ead70a617b2a8dc4334c81" kindref="member">remove</ref>;</highlight></codeline>
+<codeline lineno="123" refid="struct__alooBox_1a162db740f9055818baa7917b8524e1d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="box_8h_1a486f6f5ad9d191317c37a2404fb88b0f" kindref="member">__boxInsertChildAfter_Type</ref><sp/><ref refid="struct__alooBox_1a162db740f9055818baa7917b8524e1d2" kindref="member">insertChildAfter</ref>;</highlight></codeline>
+<codeline lineno="124" refid="struct__alooBox_1ab7a99a8f5041f30006cefab2b85d9d33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="box_8h_1afe2e6d8f44fd904811995c26c6508e23" kindref="member">__setBoxSpacing_Type</ref><sp/><ref refid="struct__alooBox_1ab7a99a8f5041f30006cefab2b85d9d33" kindref="member">setSpacing</ref>;</highlight></codeline>
+<codeline lineno="125" refid="struct__alooBox_1aa0f256878ef3e65e7a8927488fc44570" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="box_8h_1a8212b8c9244f75af63296d9995a4ba12" kindref="member">__getBoxSpacing_Type</ref><sp/><ref refid="struct__alooBox_1aa0f256878ef3e65e7a8927488fc44570" kindref="member">getSpacing</ref>;</highlight></codeline>
+<codeline lineno="126" refid="struct__alooBox_1aa6e28da46e7b9f3e7cdb9dd709c65363" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="box_8h_1a02305e8045b4df28eb49b0f46076110e" kindref="member">__getBoxHomogeneous_Type</ref><sp/><ref refid="struct__alooBox_1aa6e28da46e7b9f3e7cdb9dd709c65363" kindref="member">getHomogeneous</ref>;</highlight></codeline>
+<codeline lineno="127" refid="struct__alooBox_1a8d94ab5ed824f17d5502054942637820" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="box_8h_1ac8eedc9450c37cc7277deccb6f5a6428" kindref="member">__setBoxHomogeneous_Type</ref><sp/><ref refid="struct__alooBox_1a8d94ab5ed824f17d5502054942637820" kindref="member">setHomogeneous</ref>;</highlight></codeline>
+<codeline lineno="128" refid="struct__alooBox_1a05c97deb37fc8146e6ba01e70a406eb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="box_8h_1a0120cf6c35b9e14907e558c6ba0d9c3d" kindref="member">__getBoxBaselinePosition_Type</ref><sp/><ref refid="struct__alooBox_1a05c97deb37fc8146e6ba01e70a406eb4" kindref="member">getBaselinePosition</ref>;</highlight></codeline>
+<codeline lineno="129" refid="struct__alooBox_1a3b08340b22d12886052177879f078cfd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="box_8h_1a2808ef9c82512f47c93a3c5573bdbd78" kindref="member">__setBoxBaselinePosition_Type</ref><sp/><ref refid="struct__alooBox_1a3b08340b22d12886052177879f078cfd" kindref="member">setBaselinePosition</ref>;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__alooBox" kindref="compound">_alooBox</ref><sp/><ref refid="box_8h_1ab67c7a9a4623c54b09d1e7f51019f0cf" kindref="member">Box</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_BOX_H</highlight></codeline>
     </programlisting>
     <location file="include/box.h"/>
   </compounddef>

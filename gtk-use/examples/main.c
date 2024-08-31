@@ -31,24 +31,24 @@ void nothingHappened(alooWidget *data);
 
 void print_hello() {
 	if (labelList.len == 9) {
-		nothingLabel = newLabel("Maximum number of labels reached");
-		setWidgetName(nothingLabel, "no-label");
+		nothingLabel = Label.new("Maximum number of labels reached");
+		Widget.setName(nothingLabel, "no-label");
 		isNothing = 1;
-		gridAttach(labelGrid, nothingLabel, 1, 4, 3, 1);
+		Grid.attach(labelGrid, nothingLabel, 1, 4, 3, 1);
 		return;
 	}
 
 	if (isNothing && nothingLabel != 0) nothingHappened(labelGrid);
-	alooWidget *label = newLabel("Hello World");
-	setWidgetName(label, "label");
-	gridAttach(labelGrid, label, (labelList.len / 3) + 1,
-			   (labelList.len % 3) + 1, 1, 1);
+	alooWidget *label = Label.new("Hello World");
+	Widget.setName(label, "label");
+	Grid.attach(labelGrid, label, (labelList.len / 3) + 1,
+				(labelList.len % 3) + 1, 1, 1);
 	labelList.labels[labelList.len] = label;
 	labelList.len++;
 }
 void removeLabel() {
 	if (labelList.len == 9) {
-		gridRemove(labelGrid, nothingLabel);
+		Grid.remove(labelGrid, nothingLabel);
 		nothingLabel = 0;
 		isNothing = 0;
 	}
@@ -58,41 +58,41 @@ void removeLabel() {
 		nothingHappened(labelGrid);
 		return;
 	}
-	gridRemove(labelGrid, labelList.labels[labelList.len - 1]);
+	Grid.remove(labelGrid, labelList.labels[labelList.len - 1]);
 	alooWidget *label = labelList.labels[labelList.len - 1];
 	labelList.len--;
 }
 void nothingHappened(alooWidget *data) {
 	if (isNothing) {
-		gridRemove(data, nothingLabel);
+		Grid.remove(data, nothingLabel);
 		nothingLabel = 0;
 		isNothing = 0;
 	} else {
-		nothingLabel = newLabel("Nothing Happened");
-		setWidgetName(nothingLabel, "no-label");
-		gridAttach(data, nothingLabel, 1, 1, 2, 1);
+		nothingLabel = Label.new("Nothing Happened");
+		Widget.setName(nothingLabel, "no-label");
+		Grid.attach(data, nothingLabel, 1, 1, 2, 1);
 		isNothing = 1;
 	}
 }
 
 static void activate(GtkApplication *app, gpointer user_data) {
 	labelList.len = 0;
-	AlooBuilder *builder = createBuilder();
-	builderAddFile(builder, "builder.ui", NULL);
-	alooWidget *appBody = alooWidgetFromBuilder(builder, "app");
-	alooWidget *box = alooWidgetFromBuilder(builder, "box");
-	alooWidget *window = alooWidgetFromBuilder(builder, "gtk-window");
-	alooWidget *buttonWidget = alooWidgetFromBuilder(builder, "add");
-	alooWidget *rmLabelWidget = alooWidgetFromBuilder(builder, "remove");
-	alooWidget *grid = alooWidgetFromBuilder(builder, "grid");
-	navbar = alooWidgetFromBuilder(builder, "navbar");
-	alooWidget *menuBar = alooWidgetFromBuilder(builder, "menu-bar");
-	alooWidget *boxBody = alooWidgetFromBuilder(builder, "box-body");
+	AlooBuilder *builder = Builder.create();
+	Builder.addFile(builder, "builder.ui", NULL);
+	alooWidget *appBody = Builder.alooFromBuilder(builder, "app");
+	alooWidget *box = Builder.alooFromBuilder(builder, "box");
+	alooWidget *window = Builder.alooFromBuilder(builder, "gtk-window");
+	alooWidget *buttonWidget = Builder.alooFromBuilder(builder, "add");
+	alooWidget *rmLabelWidget = Builder.alooFromBuilder(builder, "remove");
+	alooWidget *grid = Builder.alooFromBuilder(builder, "button-grid");
+	navbar = Builder.alooFromBuilder(builder, "navbar");
+	alooWidget *menuBar = Builder.alooFromBuilder(builder, "menu-bar");
+	alooWidget *boxBody = Builder.alooFromBuilder(builder, "box-body");
 
-	alooSetOrientation(box, GTK_ORIENTATION_VERTICAL);
-	alooSetOrientation(navbar, GTK_ORIENTATION_VERTICAL);
-	alooSetOrientation(appBody, GTK_ORIENTATION_VERTICAL);
-	alooSetOrientation(boxBody, GTK_ORIENTATION_HORIZONTAL);
+	Widget.setOrientation(box, GTK_ORIENTATION_VERTICAL);
+	Widget.setOrientation(navbar, GTK_ORIENTATION_VERTICAL);
+	Widget.setOrientation(appBody, GTK_ORIENTATION_VERTICAL);
+	Widget.setOrientation(boxBody, GTK_ORIENTATION_HORIZONTAL);
 	setSize(buttonWidget, 100, 50);
 	setSize(rmLabelWidget, 125, 50);
 
@@ -100,50 +100,50 @@ static void activate(GtkApplication *app, gpointer user_data) {
 	// gtk_window_fullscreen(GTK_WINDOW(window));
 	setWindowSize(window, 1200, 600);
 	setWindowApplication(window, app);
-	alooAddEventListener(buttonWidget, "clicked", print_hello, NULL);
-	alooAddEventListener(rmLabelWidget, "clicked", removeLabel, NULL);
+	Widget.addEventListener(buttonWidget, "clicked", print_hello, NULL);
+	Widget.addEventListener(rmLabelWidget, "clicked", removeLabel, NULL);
 
-	labelGrid = alooGridNew();
-	setWidgetName(labelGrid, "label-grid");
-	alooHorizontalAlign(alooVerticalAlign(labelGrid, GTK_ALIGN_CENTER),
-						GTK_ALIGN_CENTER);
-	alooHorizontalAlign(alooVerticalAlign(box, GTK_ALIGN_CENTER),
-						GTK_ALIGN_CENTER);
-	boxAppend(box, labelGrid);
+	labelGrid = Grid.new();
+	Widget.setName(labelGrid, "label-grid");
+	Widget.horizontalAlign(Widget.verticalAlign(labelGrid, GTK_ALIGN_CENTER),
+						   GTK_ALIGN_CENTER);
+	Widget.horizontalAlign(Widget.verticalAlign(box, GTK_ALIGN_CENTER),
+						   GTK_ALIGN_CENTER);
+	Box.append(box, labelGrid);
 
-	alooVerticalAlign(alooHorizontalAlign(grid, GTK_ALIGN_CENTER),
-					  GTK_ALIGN_START);
+	Widget.horizontalAlign(Widget.verticalAlign(grid, GTK_ALIGN_CENTER),
+						   GTK_ALIGN_CENTER);
 
 	importCssFromPath("style.css");
 
-	setGridColumnSpacing(grid, 20);
-	setGridRowSpacing(labelGrid, 5);
-	setGridColumnSpacing(labelGrid, 5);
+	Grid.column_spacing(grid, 20);
+	Grid.row_spacing(labelGrid, 5);
+	Grid.column_spacing(labelGrid, 5);
 
-	alooAddEventListener(menuBar, "clicked", toggleNav, NULL);
+	Widget.addEventListener(menuBar, "clicked", toggleNav, NULL);
 
-	navMenu = alooGridNew();
-	setWidgetName(navMenu, "nav-menu");
+	navMenu = Grid.new();
+	Widget.setName(navMenu, "nav-menu");
 	const char *menus[] = {"File", "Edit", "Save"};
 	for (int i = 0; i < 3; i++) {
-		alooWidget *label = newButtonWithLabel(menus[i]);
-		setWidgetName(label, "menu-opt");
+		alooWidget *label = Button.newWithLabel(menus[i]);
+		Widget.setName(label, "menu-opt");
 		setSize(label, 100, 20);
-		gridAttach(navMenu, label, 0, i, 1, 1);
+		Grid.attach(navMenu, label, 0, i, 1, 1);
 	}
 	setSize(box, 1100, 600);
 	setSize(navMenu, 100, 600);
 	widgetAddClass(navMenu, "nav-menu-show");
-	setSize(alooWidgetFromBuilder(builder, "nav-show"), 1200, 70);
+	setSize(Builder.alooFromBuilder(builder, "nav-show"), 1200, 70);
 	char **classes = getWidgetClasses(navMenu);
 	for (int i = 0; i < sizeof(classes) / sizeof(classes[0]); i++) {
 		printf("%s\n", classes[i]);
 	}
 
-	boxPrepend(boxBody, navMenu);
+	Box.prepend(boxBody, navMenu);
 
 	showWindow(window);
-	unrefBuilder(builder);
+	Builder.unref(builder);
 }
 
 int main(int argc, char **argv) {

@@ -1,0 +1,108 @@
+.TH "include/macros.h" 3 "Sat Aug 31 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/macros.h \- Aloo Project Macros related functions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'types\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBALOO_BTN_TO_GTK\fP(x)   GTK_BUTTON(x\->child)"
+.br
+.ti -1c
+.RI "#define \fBALOO_WIDGET_TO_GTK\fP(x)   x\->child"
+.br
+.ti -1c
+.RI "#define \fBALOO_GRID_TO_GTK\fP(x)   GTK_GRID(x\->child)"
+.br
+.RI "Returns GTK_GRID of \fBalooWidget\fP\&. "
+.ti -1c
+.RI "#define \fBALOO_BOX_TO_GTK_BOX\fP(x)   GTK_BOX(\fBALOO_BOX_WIDGET\fP(x))"
+.br
+.ti -1c
+.RI "#define \fBNONE_FLAGS_OPTIONS\fP(argc,  argv)   	{ \fBAPP_FLAGS_NONE\fP, argc, argv }"
+.br
+.RI "generates app options with APP_FLAGS_NONE "
+.ti -1c
+.RI "#define \fBLAUNCHER_FLAGS_OPTIONS\fP(argc,  argv)   	{ \fBAPP_FLAGS_IS_LAUNCHER\fP, argc, argv }"
+.br
+.RI "generates app options with APP_FLAGS_IS_LAUNCHER "
+.ti -1c
+.RI "#define \fBSERVICE_FLAGS_OPTIONS\fP(argc,  argv)   	{ \fBAPP_FLAGS_IS_SERVICE\fP, argc, argv }"
+.br
+.RI "generates app options with APP_FLAGS_IS_SERVICE "
+.ti -1c
+.RI "#define \fBALOO_IS_WINDOW\fP(X)   GTK_IS_WINDOW(X\->child)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "GtkWidget * \fBALOO_BOX_WIDGET\fP (\fBalooWidget\fP *x)"
+.br
+.ti -1c
+.RI "gboolean \fBALOO_IS_BOX\fP (\fBalooWidget\fP *x)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Aloo Project Macros related functions\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Jaipal001 (@BhJaipal) 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ALOO_BOX_TO_GTK_BOX(x)   GTK_BOX(\fBALOO_BOX_WIDGET\fP(x))"
+
+.SS "#define ALOO_BTN_TO_GTK(x)   GTK_BUTTON(x\->child)"
+
+.SS "#define ALOO_GRID_TO_GTK(x)   GTK_GRID(x\->child)"
+
+.PP
+Returns GTK_GRID of \fBalooWidget\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP \fBalooWidget\fP with ALOO_GRID type 
+.RE
+.PP
+
+.SS "#define ALOO_IS_WINDOW(X)   GTK_IS_WINDOW(X\->child)"
+
+.SS "#define ALOO_WIDGET_TO_GTK(x)   x\->child"
+
+.SS "#define LAUNCHER_FLAGS_OPTIONS(argc, argv)   	{ \fBAPP_FLAGS_IS_LAUNCHER\fP, argc, argv }"
+
+.PP
+generates app options with APP_FLAGS_IS_LAUNCHER 
+.SS "#define NONE_FLAGS_OPTIONS(argc, argv)   	{ \fBAPP_FLAGS_NONE\fP, argc, argv }"
+
+.PP
+generates app options with APP_FLAGS_NONE 
+.SS "#define SERVICE_FLAGS_OPTIONS(argc, argv)   	{ \fBAPP_FLAGS_IS_SERVICE\fP, argc, argv }"
+
+.PP
+generates app options with APP_FLAGS_IS_SERVICE 
+.SH "Function Documentation"
+.PP 
+.SS "GtkWidget* ALOO_BOX_WIDGET (\fBalooWidget\fP * x)"
+
+.SS "gboolean ALOO_IS_BOX (\fBalooWidget\fP * x)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Aloo from the source code\&.

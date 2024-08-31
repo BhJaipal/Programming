@@ -1,0 +1,218 @@
+\hypertarget{builder_8h}{}\doxysection{include/builder.h File Reference}
+\label{builder_8h}\index{include/builder.h@{include/builder.h}}
+
+
+This file contains UI Builder related functions.  
+
+
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+Include dependency graph for builder.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{builder_8h_aed886ff43cad9234d0ba1884e40b1f04}{\+\_\+\+\_\+unref\+Builder\+Type}}) (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$data)
+\item 
+typedef \mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$($\ast$ \mbox{\hyperlink{builder_8h_ac1f8811e29e91ac91928f564335bc34d}{\+\_\+\+\_\+create\+Builder\+Type}}) ()
+\item 
+typedef int($\ast$ \mbox{\hyperlink{builder_8h_a6abf1c95f46c23b366142547e03ab720}{\+\_\+\+\_\+builder\+Add\+File\+Type}}) (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$build, const char $\ast$filename, GError $\ast$$\ast$err)
+\item 
+typedef int($\ast$ \mbox{\hyperlink{builder_8h_a102a4cc7ecf139e10b4077e062fa75e6}{\+\_\+\+\_\+builder\+Add\+Content\+Type}}) (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$build, const char $\ast$content, gssize length, GError $\ast$$\ast$err)
+\item 
+typedef int($\ast$ \mbox{\hyperlink{builder_8h_a8fc1d84ef30667a5ee42581a66896c50}{\+\_\+\+\_\+builder\+Add\+Resource\+Type}}) (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$build, const char $\ast$resource\+\_\+path, GError $\ast$$\ast$err)
+\item 
+typedef GObject $\ast$($\ast$ \mbox{\hyperlink{builder_8h_aa6bb8611e2c60c6b189ad1d700b68c3c}{\+\_\+\+\_\+aloo\+Get\+Builder\+Object\+Type}}) (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$builder, const char $\ast$name)
+\item 
+typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{builder_8h_a250cc87a97f7eb4fdff9e07434a7a565}{\+\_\+\+\_\+aloo\+Widget\+From\+Builder\+Type}}) (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$builder, const char $\ast$name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{builder_8h_a7d20059f06c58c1283d569d1f41567aa}{\+\_\+\+\_\+unref\+Builder}} (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Unrefs aloo builder. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$ \mbox{\hyperlink{builder_8h_a9e4eb9134fe6167a6f76c3fd41095459}{\+\_\+\+\_\+create\+Builder}} ()
+\begin{DoxyCompactList}\small\item\em Create a Builder object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{builder_8h_a2f5c812b7da58820e99a4549fba53296}{\+\_\+\+\_\+builder\+Add\+File}} (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$build, const char $\ast$filename, GError $\ast$$\ast$err)
+\begin{DoxyCompactList}\small\item\em Adds a file with builder. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{builder_8h_ae5c9024bca28d756ab013d76a5e81f08}{\+\_\+\+\_\+builder\+Add\+Content}} (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$build, const char $\ast$content, gssize length, GError $\ast$$\ast$err)
+\begin{DoxyCompactList}\small\item\em Adds a file with builder. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{builder_8h_a59d165494af974bce30ca8626e78112e}{\+\_\+\+\_\+builder\+Add\+Resource}} (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$build, const char $\ast$resource\+\_\+path, GError $\ast$$\ast$err)
+\begin{DoxyCompactList}\small\item\em Adds a file with builder. \end{DoxyCompactList}\item 
+GObject $\ast$ \mbox{\hyperlink{builder_8h_a860c750ea04f2234cba20c76f10b82b4}{\+\_\+\+\_\+aloo\+Get\+Builder\+Object}} (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$builder, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Gets GObject from builder. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{builder_8h_acfc6a0451bdac59f29ebc6334d41188c}{\+\_\+\+\_\+aloo\+Widget\+From\+Builder}} (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$builder, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Creates \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} from builder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \+\_\+\+Aloo\+Builder \mbox{\hyperlink{builder_8h_a2b1d855975b698ca37554d3e4841fa04}{Builder}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains UI Builder related functions. 
+
+\begin{DoxyAuthor}{Author}
+Jaipal001 @\+Bh\+Jaipal 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{builder_8h_aa6bb8611e2c60c6b189ad1d700b68c3c}\label{builder_8h_aa6bb8611e2c60c6b189ad1d700b68c3c}} 
+\index{builder.h@{builder.h}!\_\_alooGetBuilderObjectType@{\_\_alooGetBuilderObjectType}}
+\index{\_\_alooGetBuilderObjectType@{\_\_alooGetBuilderObjectType}!builder.h@{builder.h}}
+\doxysubsubsection{\texorpdfstring{\_\_alooGetBuilderObjectType}{\_\_alooGetBuilderObjectType}}
+{\footnotesize\ttfamily typedef GObject$\ast$($\ast$ \+\_\+\+\_\+aloo\+Get\+Builder\+Object\+Type) (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$builder, const char $\ast$name)}
+
+\mbox{\Hypertarget{builder_8h_a250cc87a97f7eb4fdff9e07434a7a565}\label{builder_8h_a250cc87a97f7eb4fdff9e07434a7a565}} 
+\index{builder.h@{builder.h}!\_\_alooWidgetFromBuilderType@{\_\_alooWidgetFromBuilderType}}
+\index{\_\_alooWidgetFromBuilderType@{\_\_alooWidgetFromBuilderType}!builder.h@{builder.h}}
+\doxysubsubsection{\texorpdfstring{\_\_alooWidgetFromBuilderType}{\_\_alooWidgetFromBuilderType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+\+\_\+aloo\+Widget\+From\+Builder\+Type) (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$builder, const char $\ast$name)}
+
+\mbox{\Hypertarget{builder_8h_a102a4cc7ecf139e10b4077e062fa75e6}\label{builder_8h_a102a4cc7ecf139e10b4077e062fa75e6}} 
+\index{builder.h@{builder.h}!\_\_builderAddContentType@{\_\_builderAddContentType}}
+\index{\_\_builderAddContentType@{\_\_builderAddContentType}!builder.h@{builder.h}}
+\doxysubsubsection{\texorpdfstring{\_\_builderAddContentType}{\_\_builderAddContentType}}
+{\footnotesize\ttfamily typedef int($\ast$ \+\_\+\+\_\+builder\+Add\+Content\+Type) (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$build, const char $\ast$content, gssize length, GError $\ast$$\ast$err)}
+
+\mbox{\Hypertarget{builder_8h_a6abf1c95f46c23b366142547e03ab720}\label{builder_8h_a6abf1c95f46c23b366142547e03ab720}} 
+\index{builder.h@{builder.h}!\_\_builderAddFileType@{\_\_builderAddFileType}}
+\index{\_\_builderAddFileType@{\_\_builderAddFileType}!builder.h@{builder.h}}
+\doxysubsubsection{\texorpdfstring{\_\_builderAddFileType}{\_\_builderAddFileType}}
+{\footnotesize\ttfamily typedef int($\ast$ \+\_\+\+\_\+builder\+Add\+File\+Type) (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$build, const char $\ast$filename, GError $\ast$$\ast$err)}
+
+\mbox{\Hypertarget{builder_8h_a8fc1d84ef30667a5ee42581a66896c50}\label{builder_8h_a8fc1d84ef30667a5ee42581a66896c50}} 
+\index{builder.h@{builder.h}!\_\_builderAddResourceType@{\_\_builderAddResourceType}}
+\index{\_\_builderAddResourceType@{\_\_builderAddResourceType}!builder.h@{builder.h}}
+\doxysubsubsection{\texorpdfstring{\_\_builderAddResourceType}{\_\_builderAddResourceType}}
+{\footnotesize\ttfamily typedef int($\ast$ \+\_\+\+\_\+builder\+Add\+Resource\+Type) (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$build, const char $\ast$resource\+\_\+path, GError $\ast$$\ast$err)}
+
+\mbox{\Hypertarget{builder_8h_ac1f8811e29e91ac91928f564335bc34d}\label{builder_8h_ac1f8811e29e91ac91928f564335bc34d}} 
+\index{builder.h@{builder.h}!\_\_createBuilderType@{\_\_createBuilderType}}
+\index{\_\_createBuilderType@{\_\_createBuilderType}!builder.h@{builder.h}}
+\doxysubsubsection{\texorpdfstring{\_\_createBuilderType}{\_\_createBuilderType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}}$\ast$($\ast$ \+\_\+\+\_\+create\+Builder\+Type) ()}
+
+\mbox{\Hypertarget{builder_8h_aed886ff43cad9234d0ba1884e40b1f04}\label{builder_8h_aed886ff43cad9234d0ba1884e40b1f04}} 
+\index{builder.h@{builder.h}!\_\_unrefBuilderType@{\_\_unrefBuilderType}}
+\index{\_\_unrefBuilderType@{\_\_unrefBuilderType}!builder.h@{builder.h}}
+\doxysubsubsection{\texorpdfstring{\_\_unrefBuilderType}{\_\_unrefBuilderType}}
+{\footnotesize\ttfamily typedef void($\ast$ \+\_\+\+\_\+unref\+Builder\+Type) (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$data)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{builder_8h_a860c750ea04f2234cba20c76f10b82b4}\label{builder_8h_a860c750ea04f2234cba20c76f10b82b4}} 
+\index{builder.h@{builder.h}!\_\_alooGetBuilderObject@{\_\_alooGetBuilderObject}}
+\index{\_\_alooGetBuilderObject@{\_\_alooGetBuilderObject}!builder.h@{builder.h}}
+\doxysubsubsection{\texorpdfstring{\_\_alooGetBuilderObject()}{\_\_alooGetBuilderObject()}}
+{\footnotesize\ttfamily GObject$\ast$ \+\_\+\+\_\+aloo\+Get\+Builder\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$}]{builder,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Gets GObject from builder. 
+
+\mbox{\Hypertarget{builder_8h_acfc6a0451bdac59f29ebc6334d41188c}\label{builder_8h_acfc6a0451bdac59f29ebc6334d41188c}} 
+\index{builder.h@{builder.h}!\_\_alooWidgetFromBuilder@{\_\_alooWidgetFromBuilder}}
+\index{\_\_alooWidgetFromBuilder@{\_\_alooWidgetFromBuilder}!builder.h@{builder.h}}
+\doxysubsubsection{\texorpdfstring{\_\_alooWidgetFromBuilder()}{\_\_alooWidgetFromBuilder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ \+\_\+\+\_\+aloo\+Widget\+From\+Builder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$}]{builder,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Creates \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} from builder. 
+
+\mbox{\Hypertarget{builder_8h_ae5c9024bca28d756ab013d76a5e81f08}\label{builder_8h_ae5c9024bca28d756ab013d76a5e81f08}} 
+\index{builder.h@{builder.h}!\_\_builderAddContent@{\_\_builderAddContent}}
+\index{\_\_builderAddContent@{\_\_builderAddContent}!builder.h@{builder.h}}
+\doxysubsubsection{\texorpdfstring{\_\_builderAddContent()}{\_\_builderAddContent()}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+builder\+Add\+Content (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$}]{build,  }\item[{const char $\ast$}]{content,  }\item[{gssize}]{length,  }\item[{GError $\ast$$\ast$}]{err }\end{DoxyParamCaption})}
+
+
+
+Adds a file with builder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em build} & \mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} object \\
+\hline
+{\em content} & UI data \\
+\hline
+{\em length} & UI data length \\
+\hline
+{\em err} & Error handler, Default {\ttfamily NULL} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{builder_8h_a2f5c812b7da58820e99a4549fba53296}\label{builder_8h_a2f5c812b7da58820e99a4549fba53296}} 
+\index{builder.h@{builder.h}!\_\_builderAddFile@{\_\_builderAddFile}}
+\index{\_\_builderAddFile@{\_\_builderAddFile}!builder.h@{builder.h}}
+\doxysubsubsection{\texorpdfstring{\_\_builderAddFile()}{\_\_builderAddFile()}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+builder\+Add\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$}]{build,  }\item[{const char $\ast$}]{filename,  }\item[{GError $\ast$$\ast$}]{err }\end{DoxyParamCaption})}
+
+
+
+Adds a file with builder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em build} & \mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} object \\
+\hline
+{\em filename} & UI file path with name \\
+\hline
+{\em err} & Error handler, Default {\ttfamily NULL} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{builder_8h_a59d165494af974bce30ca8626e78112e}\label{builder_8h_a59d165494af974bce30ca8626e78112e}} 
+\index{builder.h@{builder.h}!\_\_builderAddResource@{\_\_builderAddResource}}
+\index{\_\_builderAddResource@{\_\_builderAddResource}!builder.h@{builder.h}}
+\doxysubsubsection{\texorpdfstring{\_\_builderAddResource()}{\_\_builderAddResource()}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+builder\+Add\+Resource (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$}]{build,  }\item[{const char $\ast$}]{resource\+\_\+path,  }\item[{GError $\ast$$\ast$}]{err }\end{DoxyParamCaption})}
+
+
+
+Adds a file with builder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em build} & \mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} object \\
+\hline
+{\em resource\+\_\+path} & UI resource path \\
+\hline
+{\em err} & Error handler, Default {\ttfamily NULL} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{builder_8h_a9e4eb9134fe6167a6f76c3fd41095459}\label{builder_8h_a9e4eb9134fe6167a6f76c3fd41095459}} 
+\index{builder.h@{builder.h}!\_\_createBuilder@{\_\_createBuilder}}
+\index{\_\_createBuilder@{\_\_createBuilder}!builder.h@{builder.h}}
+\doxysubsubsection{\texorpdfstring{\_\_createBuilder()}{\_\_createBuilder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}}$\ast$ \+\_\+\+\_\+create\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a Builder object. 
+
+\begin{DoxyReturn}{Returns}
+Aloo\+Builder$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{builder_8h_a7d20059f06c58c1283d569d1f41567aa}\label{builder_8h_a7d20059f06c58c1283d569d1f41567aa}} 
+\index{builder.h@{builder.h}!\_\_unrefBuilder@{\_\_unrefBuilder}}
+\index{\_\_unrefBuilder@{\_\_unrefBuilder}!builder.h@{builder.h}}
+\doxysubsubsection{\texorpdfstring{\_\_unrefBuilder()}{\_\_unrefBuilder()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+unref\+Builder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Unrefs aloo builder. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{builder_8h_a2b1d855975b698ca37554d3e4841fa04}\label{builder_8h_a2b1d855975b698ca37554d3e4841fa04}} 
+\index{builder.h@{builder.h}!Builder@{Builder}}
+\index{Builder@{Builder}!builder.h@{builder.h}}
+\doxysubsubsection{\texorpdfstring{Builder}{Builder}}
+{\footnotesize\ttfamily struct \+\_\+\+Aloo\+Builder Builder\hspace{0.3cm}{\ttfamily [extern]}}
+

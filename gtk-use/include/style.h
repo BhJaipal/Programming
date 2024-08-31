@@ -1,3 +1,8 @@
+/**
+ * @file style.h
+ * @author Jaipal001 (@BhJaipal)
+ * @brief Aloo CSS related functions
+ */
 #ifndef ALOO_STYLE_H
 #define ALOO_STYLE_H
 #include "types.h"

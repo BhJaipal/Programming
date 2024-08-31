@@ -1,4 +1,5 @@
-#include "../include/app.h"
+#include "app.h"
+#include "macros.h"
 
 struct alooApp_Status
 CreateApp(char *appName, struct alooAppOptions gAppOptions,
@@ -22,22 +23,6 @@ CreateApp(char *appName, struct alooAppOptions gAppOptions,
 	g_object_unref(gtkApp);
 	return out;
 }
-
-alooWidget *alooHorizontalAlign(alooWidget *widget, GtkAlign alignment) {
-	gtk_widget_set_halign(widget->child, alignment);
-	return widget;
-}
-alooWidget *alooVerticalAlign(alooWidget *widget, GtkAlign alignment) {
-	gtk_widget_set_valign(widget->child, alignment);
-	return widget;
-}
-alooWidget *alooAddEventListener(alooWidget *widget_instance, char *event_name,
-								 GCallback CallbackFn, gpointer data) {
-	g_signal_connect(widget_instance->child, event_name, G_CALLBACK(CallbackFn),
-					 data);
-	return widget_instance;
-}
-
 GtkWidget *alooSetWindowChild(GtkWidget *window, GtkWidget *child) {
 	gtk_window_set_child(GTK_WINDOW(window), child);
 	return window;
@@ -62,10 +47,6 @@ alooWidget *setWindowSize(alooWidget *window, int width, int height) {
 	return window;
 }
 
-GObject *alooGetBuilderObject(AlooBuilder *builder, const char *name) {
-	return gtk_builder_get_object(builder->builder, name);
-}
-
 alooWidget *setWindowApplication(alooWidget *window, GtkApplication *app) {
 	gtk_window_set_application(GTK_WINDOW(window->child), app);
 }
@@ -76,23 +57,4 @@ void showWindow(alooWidget *window) {
 	} else {
 		gtk_widget_show(window->child);
 	}
-}
-void unrefBuilder(AlooBuilder *data) { g_object_unref(data->builder); }
-
-AlooBuilder *createBuilder() {
-	AlooBuilder *out = malloc(sizeof(AlooBuilder));
-	out->builder = gtk_builder_new();
-	return out;
-}
-
-int builderAddFile(AlooBuilder *build, const char *filename, GError **err) {
-	return gtk_builder_add_from_file(build->builder, filename, err);
-}
-int builderAddContent(AlooBuilder *build, const char *content, gssize length,
-					  GError **err) {
-	return gtk_builder_add_from_string(build->builder, content, length, err);
-}
-int builderAddResource(AlooBuilder *build, const char *resource_path,
-					   GError **err) {
-	return gtk_builder_add_from_resource(build->builder, resource_path, err);
 }

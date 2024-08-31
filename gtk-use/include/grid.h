@@ -1,14 +1,15 @@
+/**
+ * @file grid.h
+ * @author Jaipal001 (@BhJaipal)
+ * @brief Aloo Grid related functions
+ */
 #ifndef ALOO_GRID_H
 #define ALOO_GRID_H
 
 #include "types.h"
 #include <gtk/gtk.h>
 
-/**
- * @brief Returns GTK_GRID of alooWidget
- * @param x alooWidget with ALOO_GRID type
- */
-#define ALOO_GRID_TO_GTK(x) GTK_GRID(x->child)
+/******************** Private Funcs ********************/
 
 /**
  * @brief Adds widget to aloo grid
@@ -21,8 +22,8 @@
  * @param height row span of widget or how many row it takes
  * @return returns grid back
  */
-alooWidget *gridAttach(alooWidget *grid, alooWidget *child, int column, int row,
-					   int width, int height);
+alooWidget *__gridAttach(alooWidget *grid, alooWidget *child, int column,
+						 int row, int width, int height);
 
 /**
  * @brief Adds widget to aloo grid
@@ -35,34 +36,68 @@ alooWidget *gridAttach(alooWidget *grid, alooWidget *child, int column, int row,
  * @param height row span of widget or how many row it takes
  * @return returns grid back
  */
-alooWidget *gridAttachGtk(alooWidget *grid, GtkWidget *child, int column,
-						  int row, int width, int height);
+alooWidget *__gridAttachGtk(alooWidget *grid, GtkWidget *child, int column,
+							int row, int width, int height);
 
 /**
  * @brief Removes child from grid
  * @return returns grid back
  */
-alooWidget *gridRemove(alooWidget *grid, alooWidget *child);
+alooWidget *__gridRemove(alooWidget *grid, alooWidget *child);
 
 /**
  * @brief Removes child from grid
  * @return returns grid back
  */
-alooWidget *gridRemoveGtk(alooWidget *grid, GtkWidget *child);
+alooWidget *__gridRemoveGtk(alooWidget *grid, GtkWidget *child);
 
 /**
  * @brief Creates new Aloo Grid Widget
  * @return returns grid
  */
-alooWidget *alooGridNew();
+alooWidget *__alooGridNew();
 
 /**
  * @brief Set the Grid Column Spacing
  */
-alooWidget *setGridColumnSpacing(alooWidget *grid, int space);
+alooWidget *__setGridColumnSpacing(alooWidget *grid, int space);
 /**
  * @brief Set the Grid Row Spacing
  */
-alooWidget *setGridRowSpacing(alooWidget *grid, int space);
+alooWidget *__setGridRowSpacing(alooWidget *grid, int space);
+
+/******************** Private Types ********************/
+
+typedef alooWidget *(*__gridAttach_Type)(alooWidget *grid, alooWidget *child,
+										 int column, int row, int width,
+										 int height);
+
+typedef alooWidget *(*__gridAttachGtk_Type)(alooWidget *grid, GtkWidget *child,
+											int column, int row, int width,
+											int height);
+
+typedef alooWidget *(*__gridRemove_Type)(alooWidget *grid, alooWidget *child);
+
+typedef alooWidget *(*__gridRemoveGtk_Type)(alooWidget *grid, GtkWidget *child);
+
+typedef alooWidget *(*__alooGridNew_Type)();
+
+typedef alooWidget *(*__setGridColumnSpacing_Type)(alooWidget *grid, int space);
+
+typedef alooWidget *(*__setGridRowSpacing_Type)(alooWidget *grid, int space);
+
+/******************** Public ********************/
+
+struct _alooGrid {
+	__gridAttach_Type attach;
+	__gridAttachGtk_Type attachGtk;
+	__gridRemove_Type remove;
+	__gridRemoveGtk_Type removeGtk;
+	__alooGridNew_Type new;
+	__setGridColumnSpacing_Type column_spacing;
+	__setGridRowSpacing_Type row_spacing;
+};
+
+extern struct _alooGrid Grid;
 
 #endif // ALOO_GRID_H

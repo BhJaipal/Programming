@@ -1,5 +1,63 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="struct____alooLabel" kind="struct"><name>__alooLabel</name>
+    <member refid="struct____alooLabel_1aadc8450b0dded9eade27d3355e864f07" kind="variable"><name>new</name></member>
+  </compound>
+  <compound refid="struct__aloo__widget" kind="struct"><name>_aloo_widget</name>
+    <member refid="struct__aloo__widget_1ab8d991aec12ae9b25d4b1b0620b85d5e" kind="variable"><name>obj_to_gtk</name></member>
+    <member refid="struct__aloo__widget_1a0140f49eba0a1aaf4b69b0409559e186" kind="variable"><name>obj_to_aloo</name></member>
+    <member refid="struct__aloo__widget_1ac0d8de1bfe827e06d7272d45e3259584" kind="variable"><name>gtk_to_aloo</name></member>
+    <member refid="struct__aloo__widget_1a667170ce6aabc213da3c861838dc62a3" kind="variable"><name>setOrientation</name></member>
+    <member refid="struct__aloo__widget_1a423702ebc0b53b5d91489295420fe2dd" kind="variable"><name>new</name></member>
+    <member refid="struct__aloo__widget_1afae9f81bcf3de82b1dfc7fc90cb2f83d" kind="variable"><name>setName</name></member>
+    <member refid="struct__aloo__widget_1a7a382505c7088c8a451a08ee066a10a9" kind="variable"><name>horizontalAlign</name></member>
+    <member refid="struct__aloo__widget_1adb6a4410b3917570c96ddb62fcc71997" kind="variable"><name>verticalAlign</name></member>
+    <member refid="struct__aloo__widget_1aca8d808db94a88af459a03c58d908b0f" kind="variable"><name>addEventListener</name></member>
+  </compound>
+  <compound refid="struct__alooBox" kind="struct"><name>_alooBox</name>
+    <member refid="struct__alooBox_1a22a4676c8fc3201ab5ace1de11b7da67" kind="variable"><name>new</name></member>
+    <member refid="struct__alooBox_1ac3851caa5ff1bed13ca8ad1e0c1e811e" kind="variable"><name>setOrientation</name></member>
+    <member refid="struct__alooBox_1a4593845b8c4b1d13aee6b7135de8a28a" kind="variable"><name>getOrientation</name></member>
+    <member refid="struct__alooBox_1a0d03f00f033a1b437bc7317328910ee1" kind="variable"><name>appendGtk</name></member>
+    <member refid="struct__alooBox_1a4143ca76ee88077134ea8dd31cf82205" kind="variable"><name>prependGtk</name></member>
+    <member refid="struct__alooBox_1ad3913cdb51d5ff5c25ee09ad61becc57" kind="variable"><name>removeGtk</name></member>
+    <member refid="struct__alooBox_1aa5b0cececd1a41b048d3b29f915c88b5" kind="variable"><name>append</name></member>
+    <member refid="struct__alooBox_1a0ead5685ee758f5a350b94aecaa377f0" kind="variable"><name>prepend</name></member>
+    <member refid="struct__alooBox_1a5e123a4420ead70a617b2a8dc4334c81" kind="variable"><name>remove</name></member>
+    <member refid="struct__alooBox_1a162db740f9055818baa7917b8524e1d2" kind="variable"><name>insertChildAfter</name></member>
+    <member refid="struct__alooBox_1ab7a99a8f5041f30006cefab2b85d9d33" kind="variable"><name>setSpacing</name></member>
+    <member refid="struct__alooBox_1aa0f256878ef3e65e7a8927488fc44570" kind="variable"><name>getSpacing</name></member>
+    <member refid="struct__alooBox_1aa6e28da46e7b9f3e7cdb9dd709c65363" kind="variable"><name>getHomogeneous</name></member>
+    <member refid="struct__alooBox_1a8d94ab5ed824f17d5502054942637820" kind="variable"><name>setHomogeneous</name></member>
+    <member refid="struct__alooBox_1a05c97deb37fc8146e6ba01e70a406eb4" kind="variable"><name>getBaselinePosition</name></member>
+    <member refid="struct__alooBox_1a3b08340b22d12886052177879f078cfd" kind="variable"><name>setBaselinePosition</name></member>
+  </compound>
+  <compound refid="struct__AlooBuilder" kind="struct"><name>_AlooBuilder</name>
+    <member refid="struct__AlooBuilder_1a50a2cf042c5528bed8131896dbd1240e" kind="variable"><name>unref</name></member>
+    <member refid="struct__AlooBuilder_1aae35b1fa86d76d300e1f455437de62e7" kind="variable"><name>create</name></member>
+    <member refid="struct__AlooBuilder_1a6cd4f067ee3f6ca48b7e3dda8eaaded6" kind="variable"><name>addFile</name></member>
+    <member refid="struct__AlooBuilder_1a00bd73d6054373fd271bd9542718f90f" kind="variable"><name>addContent</name></member>
+    <member refid="struct__AlooBuilder_1a918e7cd6adf361efaabe5f795c22ae3b" kind="variable"><name>addResource</name></member>
+    <member refid="struct__AlooBuilder_1a95a9113a554438ce4dc55389f7a0f827" kind="variable"><name>getBuilderObject</name></member>
+    <member refid="struct__AlooBuilder_1ad123ea63d3c92990a6692335a794c0b2" kind="variable"><name>alooFromBuilder</name></member>
+  </compound>
+  <compound refid="struct__alooButton" kind="struct"><name>_alooButton</name>
+    <member refid="struct__alooButton_1a6ad6efc8a7f49e54483628fe69d48f14" kind="variable"><name>new</name></member>
+    <member refid="struct__alooButton_1aa64a21c82cc3f7c0b60b5453abdf23b6" kind="variable"><name>newWithLabel</name></member>
+    <member refid="struct__alooButton_1a83a26e78342fe8a2d2aea57eca142a30" kind="variable"><name>label</name></member>
+    <member refid="struct__alooButton_1af86a181ac928520c0abefbe725e982e6" kind="variable"><name>child</name></member>
+    <member refid="struct__alooButton_1a1e2800c05e965873d176ab5b6e16f74c" kind="variable"><name>icon</name></member>
+    <member refid="struct__alooButton_1a83dec1a0bd4b85ae790c715c4e03d1a1" kind="variable"><name>useUnderline</name></member>
+  </compound>
+  <compound refid="struct__alooGrid" kind="struct"><name>_alooGrid</name>
+    <member refid="struct__alooGrid_1a4ee419cf14790436508dfbbfa3a9581d" kind="variable"><name>attach</name></member>
+    <member refid="struct__alooGrid_1af0ae3ab940a7de9181a62a7d353569b7" kind="variable"><name>attachGtk</name></member>
+    <member refid="struct__alooGrid_1ada5c74c8c31d675ce7f594ff4faf2f12" kind="variable"><name>remove</name></member>
+    <member refid="struct__alooGrid_1a045fc0498c35ce37ec92188229e725da" kind="variable"><name>removeGtk</name></member>
+    <member refid="struct__alooGrid_1a11b083d6e01cdafa387de1614e228307" kind="variable"><name>new</name></member>
+    <member refid="struct__alooGrid_1a7c64f463f5e9b652ac925fda1b1da88a" kind="variable"><name>column_spacing</name></member>
+    <member refid="struct__alooGrid_1a868ce31bdd351c36f09da5ca4b8f5774" kind="variable"><name>row_spacing</name></member>
+  </compound>
   <compound refid="structalooApp__Status" kind="struct"><name>alooApp_Status</name>
     <member refid="structalooApp__Status_1a3eb578eacf93fea1f52147663d3d7359" kind="variable"><name>app</name></member>
     <member refid="structalooApp__Status_1a5acd3502c8236365d599e6ca498b95ad" kind="variable"><name>status</name></member>
@@ -19,71 +77,120 @@
   <compound refid="aloo_8h" kind="file"><name>aloo.h</name>
   </compound>
   <compound refid="app_8h" kind="file"><name>app.h</name>
-    <member refid="app_8h_1ac9137a5bae01fa8f8d81942f8ea98c93" kind="define"><name>NONE_FLAGS_OPTIONS</name></member>
-    <member refid="app_8h_1a7e8face0ef0eb9ad79f944cadb88b9a9" kind="define"><name>LAUNCHER_FLAGS_OPTIONS</name></member>
-    <member refid="app_8h_1a6008f3d8d9740cf975902f6e7cbc2afc" kind="define"><name>SERVICE_FLAGS_OPTIONS</name></member>
-    <member refid="app_8h_1af8678607ed9bc1b700af2948ecc54eab" kind="define"><name>ALOO_IS_WINDOW</name></member>
     <member refid="app_8h_1a3c3f24e41c05c726eae5ba69a4c0974c" kind="enum"><name>alooAppFlags</name></member>
     <member refid="app_8h_1a3c3f24e41c05c726eae5ba69a4c0974ca0ea9c2e3ff643aa13b9e4e3a3d6a689a" kind="enumvalue"><name>APP_FLAGS_NONE</name></member>
     <member refid="app_8h_1a3c3f24e41c05c726eae5ba69a4c0974ca210dad3de3ceb82c0ae1e18bbcd7c575" kind="enumvalue"><name>APP_FLAGS_IS_LAUNCHER</name></member>
     <member refid="app_8h_1a3c3f24e41c05c726eae5ba69a4c0974cab47f6b942f04f046f352ac0d73da72e3" kind="enumvalue"><name>APP_FLAGS_IS_SERVICE</name></member>
     <member refid="app_8h_1afd2b2ad2dc96320df448c0835aee1bb4" kind="function"><name>CreateApp</name></member>
-    <member refid="app_8h_1a0afb7ad04f1aadda78c408cb89632a98" kind="function"><name>alooHorizontalAlign</name></member>
-    <member refid="app_8h_1a6b6446b41469f699c7ce1601bf213ffd" kind="function"><name>alooVerticalAlign</name></member>
-    <member refid="app_8h_1ac7abab6e5fb131a4efc49d2b34cfd2fd" kind="function"><name>alooAddEventListener</name></member>
     <member refid="app_8h_1a6e6108adacb0408e9b9b010183d609c7" kind="function"><name>alooSetWindowChild</name></member>
     <member refid="app_8h_1aa991a64e8ef46ccbb328a3a27cf256d8" kind="function"><name>alooPresentWindow</name></member>
     <member refid="app_8h_1a634c75f1d0c5eb0f96bdbae33f521a8d" kind="function"><name>alooAddNewButtonLabel</name></member>
     <member refid="app_8h_1a085d71076852c990130591ff13a5d513" kind="function"><name>alooApplicationNewWindow</name></member>
     <member refid="app_8h_1ac46dc2c7069e7755ec43eb8cab9972c4" kind="function"><name>alooSetWindowTitle</name></member>
     <member refid="app_8h_1a64b7d24a9ac0ffcbdf783b7a4e5f7f49" kind="function"><name>setWindowSize</name></member>
-    <member refid="app_8h_1a294e832dd251cf1344b51aada122beb7" kind="function"><name>alooGetBuilderObject</name></member>
     <member refid="app_8h_1a92fede26107ad6969917aafe93de0644" kind="function"><name>setWindowApplication</name></member>
     <member refid="app_8h_1ac36f38589d0afa325b5fa36f37d8dc00" kind="function"><name>showWindow</name></member>
-    <member refid="app_8h_1a7c4375b759893ed87966847c44cb8852" kind="function"><name>unrefBuilder</name></member>
-    <member refid="app_8h_1a304bd6b95029bdd9a525beee6979bf2c" kind="function"><name>createBuilder</name></member>
-    <member refid="app_8h_1a07593dbb7188b21360ce9f5a567eaba3" kind="function"><name>builderAddFile</name></member>
-    <member refid="app_8h_1a4ebb10d482977502640f10a80effd08d" kind="function"><name>builderAddContent</name></member>
-    <member refid="app_8h_1ae07a87c38ce1013d04016f848fb770c5" kind="function"><name>builderAddResource</name></member>
   </compound>
   <compound refid="box_8h" kind="file"><name>box.h</name>
-    <member refid="box_8h_1a49c4948751bb9e2dd96cfa505b4b568c" kind="define"><name>ALOO_BOX_TO_GTK_BOX</name></member>
-    <member refid="box_8h_1a4a34a65a129d5c53b914ac34c3057d12" kind="function"><name>ALOO_BOX_WIDGET</name></member>
-    <member refid="box_8h_1a8a6129175fffef1805056b1ab25526ab" kind="function"><name>ALOO_IS_BOX</name></member>
-    <member refid="box_8h_1ade9c3d0a5b82172f2a2041811d9ae201" kind="function"><name>new_alooBox</name></member>
-    <member refid="box_8h_1a68f215aee06f176862750ee188c554b7" kind="function"><name>setBoxOrientation</name></member>
-    <member refid="box_8h_1afff8456a34365d3bef35e87790387761" kind="function"><name>getBoxOrientation</name></member>
-    <member refid="box_8h_1a31523d1f2b3ffe3d96838b6bf73cf480" kind="function"><name>boxAppendGtk</name></member>
-    <member refid="box_8h_1aa110e6957ddf389f0c6633dda8fa3ce9" kind="function"><name>boxPrependGtk</name></member>
-    <member refid="box_8h_1a211967d647e887244da40a34376f0260" kind="function"><name>boxRemoveGtk</name></member>
-    <member refid="box_8h_1a2a788bd1fc20caa041d1cf6e3ce66b9b" kind="function"><name>boxAppend</name></member>
-    <member refid="box_8h_1acb90d5cfd95509ab12d7d03f27587a40" kind="function"><name>boxPrepend</name></member>
-    <member refid="box_8h_1a269fe19de804eca2b0b62a39a7627084" kind="function"><name>boxRemove</name></member>
-    <member refid="box_8h_1a99fa2f7a6368ebf9b125d538c32e2511" kind="function"><name>boxInsertChildAfter</name></member>
-    <member refid="box_8h_1aa95cc7daa607b085429fe669696c8b95" kind="function"><name>setBoxSpacing</name></member>
-    <member refid="box_8h_1aafb8d1d96e235cd0aa0fc5efbab2b435" kind="function"><name>getBoxSpacing</name></member>
-    <member refid="box_8h_1a5b03d8c43b572937353a35fd14706a64" kind="function"><name>getBoxHomogeneous</name></member>
-    <member refid="box_8h_1a53dafacfaf24fb36d402158bb1957f09" kind="function"><name>setBoxHomogeneous</name></member>
-    <member refid="box_8h_1ae19afcb9a216631276a7946619de890f" kind="function"><name>getBoxBaselinePosition</name></member>
-    <member refid="box_8h_1a7ca1f19ef934de0c3d9392f1c9d9a3f5" kind="function"><name>setBoxBaselinePosition</name></member>
+    <member refid="box_8h_1a9dd89e7d1df8d65f247b945d5a3d861a" kind="typedef"><name>__new_alooBox_Type</name></member>
+    <member refid="box_8h_1a375e194da5961d07e659b31d596d3254" kind="typedef"><name>__setBoxOrientation_Type</name></member>
+    <member refid="box_8h_1a9eacf50fda9d1689ffe2c6d7e5d9ee88" kind="typedef"><name>__getBoxOrientation_Type</name></member>
+    <member refid="box_8h_1a1ef179d86c3b9ba81d2564e9a14e23fc" kind="typedef"><name>__boxAppendGtk_Type</name></member>
+    <member refid="box_8h_1a62c964b5e1942f3ceaee4675a77f24fc" kind="typedef"><name>__boxPrependGtk_Type</name></member>
+    <member refid="box_8h_1a25216f6f5b7151db8ece75666051e524" kind="typedef"><name>__boxRemoveGtk_Type</name></member>
+    <member refid="box_8h_1a6cdd971a2258525cb630d1cb1f18c904" kind="typedef"><name>__boxAppend_Type</name></member>
+    <member refid="box_8h_1a13e17b3f8a66d906424560c91f8e1b2b" kind="typedef"><name>__boxPrepend_Type</name></member>
+    <member refid="box_8h_1a84c2207a9e9e061cf3cf2e20f33141ef" kind="typedef"><name>__boxRemove_Type</name></member>
+    <member refid="box_8h_1a486f6f5ad9d191317c37a2404fb88b0f" kind="typedef"><name>__boxInsertChildAfter_Type</name></member>
+    <member refid="box_8h_1afe2e6d8f44fd904811995c26c6508e23" kind="typedef"><name>__setBoxSpacing_Type</name></member>
+    <member refid="box_8h_1a8212b8c9244f75af63296d9995a4ba12" kind="typedef"><name>__getBoxSpacing_Type</name></member>
+    <member refid="box_8h_1a02305e8045b4df28eb49b0f46076110e" kind="typedef"><name>__getBoxHomogeneous_Type</name></member>
+    <member refid="box_8h_1ac8eedc9450c37cc7277deccb6f5a6428" kind="typedef"><name>__setBoxHomogeneous_Type</name></member>
+    <member refid="box_8h_1a0120cf6c35b9e14907e558c6ba0d9c3d" kind="typedef"><name>__getBoxBaselinePosition_Type</name></member>
+    <member refid="box_8h_1a2808ef9c82512f47c93a3c5573bdbd78" kind="typedef"><name>__setBoxBaselinePosition_Type</name></member>
+    <member refid="box_8h_1ab67c7a9a4623c54b09d1e7f51019f0cf" kind="variable"><name>Box</name></member>
+    <member refid="box_8h_1a143cb5bf4ea32883d936fa9c74ddc7d9" kind="function"><name>__new_alooBox</name></member>
+    <member refid="box_8h_1a613e1ac9436955c897d60bd459a312f0" kind="function"><name>__setBoxOrientation</name></member>
+    <member refid="box_8h_1a6bef14af50ba6028d72d5268b3d61eb7" kind="function"><name>__getBoxOrientation</name></member>
+    <member refid="box_8h_1a888ab6e6f143fc388b9db6c613c9f2f2" kind="function"><name>__boxAppendGtk</name></member>
+    <member refid="box_8h_1a879c8cd2a74d46b9c0cad1e7420f6389" kind="function"><name>__boxPrependGtk</name></member>
+    <member refid="box_8h_1a2e67e88bd569899d3aad45d287a8bb59" kind="function"><name>__boxRemoveGtk</name></member>
+    <member refid="box_8h_1a4814e467fbb36dc572364823a2d0baf9" kind="function"><name>__boxAppend</name></member>
+    <member refid="box_8h_1a919fdabdbaf227881c3762fc774dafbf" kind="function"><name>__boxPrepend</name></member>
+    <member refid="box_8h_1afc8a53121c8422f11be3924de0d31787" kind="function"><name>__boxRemove</name></member>
+    <member refid="box_8h_1ac17cec66e29ef4f0b1b03b4dbde4669f" kind="function"><name>__boxInsertChildAfter</name></member>
+    <member refid="box_8h_1a6e4f0796c133add66628b3b79beaf8e7" kind="function"><name>__setBoxSpacing</name></member>
+    <member refid="box_8h_1a066622a364e492d922147b61b670e7df" kind="function"><name>__getBoxSpacing</name></member>
+    <member refid="box_8h_1a13c1f3befb022ba8dde39c5b4228f3bb" kind="function"><name>__getBoxHomogeneous</name></member>
+    <member refid="box_8h_1adbce718d97313ac4e88a0f05aea0198f" kind="function"><name>__setBoxHomogeneous</name></member>
+    <member refid="box_8h_1a4b1e5354961907597591c79e65fa20f5" kind="function"><name>__getBoxBaselinePosition</name></member>
+    <member refid="box_8h_1a3cbc9a9ce0474d8607139ac6140e7ede" kind="function"><name>__setBoxBaselinePosition</name></member>
+  </compound>
+  <compound refid="builder_8h" kind="file"><name>builder.h</name>
+    <member refid="builder_8h_1aed886ff43cad9234d0ba1884e40b1f04" kind="typedef"><name>__unrefBuilderType</name></member>
+    <member refid="builder_8h_1ac1f8811e29e91ac91928f564335bc34d" kind="typedef"><name>__createBuilderType</name></member>
+    <member refid="builder_8h_1a6abf1c95f46c23b366142547e03ab720" kind="typedef"><name>__builderAddFileType</name></member>
+    <member refid="builder_8h_1a102a4cc7ecf139e10b4077e062fa75e6" kind="typedef"><name>__builderAddContentType</name></member>
+    <member refid="builder_8h_1a8fc1d84ef30667a5ee42581a66896c50" kind="typedef"><name>__builderAddResourceType</name></member>
+    <member refid="builder_8h_1aa6bb8611e2c60c6b189ad1d700b68c3c" kind="typedef"><name>__alooGetBuilderObjectType</name></member>
+    <member refid="builder_8h_1a250cc87a97f7eb4fdff9e07434a7a565" kind="typedef"><name>__alooWidgetFromBuilderType</name></member>
+    <member refid="builder_8h_1a2b1d855975b698ca37554d3e4841fa04" kind="variable"><name>Builder</name></member>
+    <member refid="builder_8h_1a7d20059f06c58c1283d569d1f41567aa" kind="function"><name>__unrefBuilder</name></member>
+    <member refid="builder_8h_1a9e4eb9134fe6167a6f76c3fd41095459" kind="function"><name>__createBuilder</name></member>
+    <member refid="builder_8h_1a2f5c812b7da58820e99a4549fba53296" kind="function"><name>__builderAddFile</name></member>
+    <member refid="builder_8h_1ae5c9024bca28d756ab013d76a5e81f08" kind="function"><name>__builderAddContent</name></member>
+    <member refid="builder_8h_1a59d165494af974bce30ca8626e78112e" kind="function"><name>__builderAddResource</name></member>
+    <member refid="builder_8h_1a860c750ea04f2234cba20c76f10b82b4" kind="function"><name>__alooGetBuilderObject</name></member>
+    <member refid="builder_8h_1acfc6a0451bdac59f29ebc6334d41188c" kind="function"><name>__alooWidgetFromBuilder</name></member>
   </compound>
   <compound refid="button_8h" kind="file"><name>button.h</name>
-    <member refid="button_8h_1a81e0597f581204647048e24bf92da4bf" kind="define"><name>ALOO_BTN_TO_GTK</name></member>
-    <member refid="button_8h_1a09956c339fe5cf5a7aaaa737e3eb3ef8" kind="function"><name>newButton</name></member>
-    <member refid="button_8h_1a40aa01ce52c8897b32099ee50ddb7bc3" kind="function"><name>newButtonWithLabel</name></member>
+    <member refid="button_8h_1acfdf6bd8e4ada55520daa9148135f344" kind="typedef"><name>__newButton_Type</name></member>
+    <member refid="button_8h_1a9e055ce7442347717e5d577ea1b46edf" kind="typedef"><name>__newButtonWithLabel_Type</name></member>
+    <member refid="button_8h_1a8ca713c33a2e217e22431d13f176b6a9" kind="typedef"><name>__setLabel_Type</name></member>
+    <member refid="button_8h_1a438e9e37d7641106a3ad85147136fb2e" kind="typedef"><name>__setChild_Type</name></member>
+    <member refid="button_8h_1a9060c0869560c143155a9d8cfed0f7f9" kind="typedef"><name>__setIcon_Type</name></member>
+    <member refid="button_8h_1acfac04019cd2983c4d4ee3d3c508985a" kind="typedef"><name>__setUseUnderline_Type</name></member>
+    <member refid="button_8h_1ac477dbe4d2e006ce73a75f77b0bc0969" kind="variable"><name>Button</name></member>
+    <member refid="button_8h_1a3b7bc981310d883887cdd9fca23f50f7" kind="function"><name>__newButton</name></member>
+    <member refid="button_8h_1a53ad740c5cad0891b6b9de27eda8ca55" kind="function"><name>__newButtonWithLabel</name></member>
+    <member refid="button_8h_1ae6add9e60841eb97c7a53c54dff5332c" kind="function"><name>__setLabel</name></member>
+    <member refid="button_8h_1a79aae593c92df050425534da8f9b675f" kind="function"><name>__setChild</name></member>
+    <member refid="button_8h_1a18cac438421a426c943b78f43dbe1a34" kind="function"><name>__setIcon</name></member>
+    <member refid="button_8h_1ae0e287be4a5a4798295be92d74b9fcb2" kind="function"><name>__setUseUnderline</name></member>
   </compound>
   <compound refid="grid_8h" kind="file"><name>grid.h</name>
-    <member refid="grid_8h_1abf08dd722dd5d05a2513522a8c1d9800" kind="define"><name>ALOO_GRID_TO_GTK</name></member>
-    <member refid="grid_8h_1a63d120e21e61dd6c60b73817c05a0a65" kind="function"><name>gridAttach</name></member>
-    <member refid="grid_8h_1af73f05491a5e1ff7c5ba7c8a425cb04c" kind="function"><name>gridAttachGtk</name></member>
-    <member refid="grid_8h_1a7a87945698bb503625c7926ab6717187" kind="function"><name>gridRemove</name></member>
-    <member refid="grid_8h_1a6d34934989b423f380da0b3eac2a2bfb" kind="function"><name>gridRemoveGtk</name></member>
-    <member refid="grid_8h_1a48e1d5f03b179b82ebe0e7dc3eec17da" kind="function"><name>alooGridNew</name></member>
-    <member refid="grid_8h_1a186013459d8639377da1abf0dc370f5b" kind="function"><name>setGridColumnSpacing</name></member>
-    <member refid="grid_8h_1a7b4a1902ba701ecd6406795da6b9314c" kind="function"><name>setGridRowSpacing</name></member>
+    <member refid="grid_8h_1a11b864d7aab2a361292985c490ddd57e" kind="typedef"><name>__gridAttach_Type</name></member>
+    <member refid="grid_8h_1a5eeeff181075e653b204e50072acd1f9" kind="typedef"><name>__gridAttachGtk_Type</name></member>
+    <member refid="grid_8h_1af030d6ae524ceff4c1118a07fd773813" kind="typedef"><name>__gridRemove_Type</name></member>
+    <member refid="grid_8h_1aa22f580c625588aa1f3812bb7d115f9f" kind="typedef"><name>__gridRemoveGtk_Type</name></member>
+    <member refid="grid_8h_1a13778e15601890b4017f5de7555949ba" kind="typedef"><name>__alooGridNew_Type</name></member>
+    <member refid="grid_8h_1a0979122e61c2f6b0c23b3290221a3260" kind="typedef"><name>__setGridColumnSpacing_Type</name></member>
+    <member refid="grid_8h_1a0f9572d52e6fae032f9623fd082e543a" kind="typedef"><name>__setGridRowSpacing_Type</name></member>
+    <member refid="grid_8h_1aba04f3722c5bd2bb653281967a04555b" kind="variable"><name>Grid</name></member>
+    <member refid="grid_8h_1ac8b597f92a5eb31e5c109cef0b2c3977" kind="function"><name>__gridAttach</name></member>
+    <member refid="grid_8h_1ab44960f97e620f1a08f3ac2d03331bf8" kind="function"><name>__gridAttachGtk</name></member>
+    <member refid="grid_8h_1a0668456bd15b6b4c57679c30b9b83af6" kind="function"><name>__gridRemove</name></member>
+    <member refid="grid_8h_1a8c94b866f975c6c418012e8cc48bf82f" kind="function"><name>__gridRemoveGtk</name></member>
+    <member refid="grid_8h_1a5d0f0263809bb4108eb2aaf65122538e" kind="function"><name>__alooGridNew</name></member>
+    <member refid="grid_8h_1ab77339a80363969985cdc7b365bd2a17" kind="function"><name>__setGridColumnSpacing</name></member>
+    <member refid="grid_8h_1a0595263d3d93593a2aff5c7c51a7139b" kind="function"><name>__setGridRowSpacing</name></member>
   </compound>
   <compound refid="label_8h" kind="file"><name>label.h</name>
-    <member refid="label_8h_1a091c380bedc6ae06c4b51281179eaf6a" kind="function"><name>newLabel</name></member>
+    <member refid="label_8h_1a213636152f4dc1ee94cd8e02c9e31b28" kind="typedef"><name>_newLabelType</name></member>
+    <member refid="label_8h_1a7bf2150721f7576df4178adce8b5885f" kind="variable"><name>Label</name></member>
+    <member refid="label_8h_1a2efdaa462af392ed6c6f7cae989f673f" kind="function"><name>__newLabel</name></member>
+  </compound>
+  <compound refid="macros_8h" kind="file"><name>macros.h</name>
+    <member refid="macros_8h_1a81e0597f581204647048e24bf92da4bf" kind="define"><name>ALOO_BTN_TO_GTK</name></member>
+    <member refid="macros_8h_1a67f574a286eb62d2279853cb32e61d02" kind="define"><name>ALOO_WIDGET_TO_GTK</name></member>
+    <member refid="macros_8h_1abf08dd722dd5d05a2513522a8c1d9800" kind="define"><name>ALOO_GRID_TO_GTK</name></member>
+    <member refid="macros_8h_1a49c4948751bb9e2dd96cfa505b4b568c" kind="define"><name>ALOO_BOX_TO_GTK_BOX</name></member>
+    <member refid="macros_8h_1ac9137a5bae01fa8f8d81942f8ea98c93" kind="define"><name>NONE_FLAGS_OPTIONS</name></member>
+    <member refid="macros_8h_1a7e8face0ef0eb9ad79f944cadb88b9a9" kind="define"><name>LAUNCHER_FLAGS_OPTIONS</name></member>
+    <member refid="macros_8h_1a6008f3d8d9740cf975902f6e7cbc2afc" kind="define"><name>SERVICE_FLAGS_OPTIONS</name></member>
+    <member refid="macros_8h_1af8678607ed9bc1b700af2948ecc54eab" kind="define"><name>ALOO_IS_WINDOW</name></member>
+    <member refid="macros_8h_1a4a34a65a129d5c53b914ac34c3057d12" kind="function"><name>ALOO_BOX_WIDGET</name></member>
+    <member refid="macros_8h_1a8a6129175fffef1805056b1ab25526ab" kind="function"><name>ALOO_IS_BOX</name></member>
   </compound>
   <compound refid="style_8h" kind="file"><name>style.h</name>
     <member refid="style_8h_1a0bcc85b2cb03ec6bee88142e29c42e57" kind="function"><name>importCssFromPath</name></member>
@@ -98,7 +205,6 @@
     <member refid="style_8h_1aacd84293dbcb41d87b2e865e13fbe6da" kind="function"><name>setWidgetClasses</name></member>
   </compound>
   <compound refid="types_8h" kind="file"><name>types.h</name>
-    <member refid="types_8h_1a67f574a286eb62d2279853cb32e61d02" kind="define"><name>ALOO_WIDGET_TO_GTK</name></member>
     <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452" kind="enum"><name>WidgetType</name></member>
     <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a004cba47f0945b28929e400153b253eb" kind="enumvalue"><name>ALOO_BOX</name></member>
     <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452ad02eeb4ba7544b107bd085fa1eb480db" kind="enumvalue"><name>ALOO_GRID</name></member>
@@ -111,13 +217,25 @@
     <member refid="types_8h_1a740317088cd233e81015b298babff7be" kind="typedef"><name>alooWidget</name></member>
   </compound>
   <compound refid="widget_8h" kind="file"><name>widget.h</name>
-    <member refid="widget_8h_1a7f163845105d934fe9270c4f27deea06" kind="function"><name>GTK_TO_ALOO</name></member>
-    <member refid="widget_8h_1a3c4124ba611f4967a0f00feddc1e3efd" kind="function"><name>OBJECT_TO_ALOO</name></member>
-    <member refid="widget_8h_1a64d12e6dae8dfac76d2231f411cba885" kind="function"><name>OBJECT_TO_GTK_WIDGET</name></member>
-    <member refid="widget_8h_1ab357e941224d0aa29fdd240b86f670cd" kind="function"><name>alooWidgetFromBuilder</name></member>
-    <member refid="widget_8h_1a5524d050f5e28511da11303085ab90a0" kind="function"><name>alooSetOrientation</name></member>
-    <member refid="widget_8h_1a1f5dbc41a627d435767b5a0dcc850562" kind="function"><name>NewWidget</name></member>
-    <member refid="widget_8h_1a4e21ea1424626c054cdb8613e18f7636" kind="function"><name>setWidgetName</name></member>
+    <member refid="widget_8h_1ab3fcd2a829accf7c2d1f00c982c005b1" kind="typedef"><name>GTK_TO_ALOO_Type</name></member>
+    <member refid="widget_8h_1a0c54804ca5131c7ed63911e0585108a1" kind="typedef"><name>OBJECT_TO_ALOO_Type</name></member>
+    <member refid="widget_8h_1a05bed2b8e3cd6198c19410b686470a48" kind="typedef"><name>alooSetOrientation_Type</name></member>
+    <member refid="widget_8h_1a64fc216b85a2827f1ac602a67b7b9a2e" kind="typedef"><name>NewWidget_Type</name></member>
+    <member refid="widget_8h_1a1430a1a0897570a0423713394faf07b9" kind="typedef"><name>setWidgetName_Type</name></member>
+    <member refid="widget_8h_1a98348bd3f871c91b864e4b21dc5006f0" kind="typedef"><name>__OBJECT_TO_GTK_WIDGET_Type</name></member>
+    <member refid="widget_8h_1ab36e712123f8c845e940d19707948667" kind="typedef"><name>__alooVerticalAlign_Type</name></member>
+    <member refid="widget_8h_1a20b21653e7905d3077558c8780b8cf2b" kind="typedef"><name>__alooHorizontalAlign_Type</name></member>
+    <member refid="widget_8h_1ad74f1c9fcd1452513f60a4dd08afaf45" kind="typedef"><name>__alooAddEventListener_Type</name></member>
+    <member refid="widget_8h_1a4f8497ae7e1b8daedfcdfa72d643a125" kind="variable"><name>Widget</name></member>
+    <member refid="widget_8h_1a890a69c8a7ff1134e5e7811e7ff2183c" kind="function"><name>__GTK_TO_ALOO</name></member>
+    <member refid="widget_8h_1a9080baf6af2398b65aa4a7280eb80c05" kind="function"><name>__OBJECT_TO_ALOO</name></member>
+    <member refid="widget_8h_1adea5eac957f93ec801152cfa8868978a" kind="function"><name>__alooSetOrientation</name></member>
+    <member refid="widget_8h_1ace7e17033235b5a9fec8ceee1068fc4b" kind="function"><name>__NewWidget</name></member>
+    <member refid="widget_8h_1aa9e589aef695d4d9c061c02cfbb47bb3" kind="function"><name>__setWidgetName</name></member>
+    <member refid="widget_8h_1abb126fbe246404cc032f3bc2cabb6c3a" kind="function"><name>__OBJECT_TO_GTK_WIDGET</name></member>
+    <member refid="widget_8h_1a723480206252f9c49a96016e525c80bb" kind="function"><name>__alooHorizontalAlign</name></member>
+    <member refid="widget_8h_1a5949823315aa75ff5c04f791f75d301c" kind="function"><name>__alooVerticalAlign</name></member>
+    <member refid="widget_8h_1a0cf5af29b9d23e3e483d0870f0a52ff2" kind="function"><name>__alooAddEventListener</name></member>
   </compound>
   <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
   </compound>

@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="macros_8h" kind="file" language="C++">
+    <compoundname>macros.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includedby refid="aloo_8h" local="yes">include/aloo.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>gtk/gtk.h</label>
+      </node>
+      <node id="1">
+        <label>include/macros.h</label>
+        <link refid="macros_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/aloo.h</label>
+        <link refid="aloo_8h"/>
+      </node>
+      <node id="1">
+        <label>include/macros.h</label>
+        <link refid="macros_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="macros_8h_1a81e0597f581204647048e24bf92da4bf" prot="public" static="no">
+        <name>ALOO_BTN_TO_GTK</name>
+        <param><defname>x</defname></param>
+        <initializer>GTK_BUTTON(x-&gt;child)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/macros.h" line="10" column="9" bodyfile="include/macros.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="macros_8h_1a67f574a286eb62d2279853cb32e61d02" prot="public" static="no">
+        <name>ALOO_WIDGET_TO_GTK</name>
+        <param><defname>x</defname></param>
+        <initializer>x-&gt;child</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/macros.h" line="11" column="9" bodyfile="include/macros.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="macros_8h_1abf08dd722dd5d05a2513522a8c1d9800" prot="public" static="no">
+        <name>ALOO_GRID_TO_GTK</name>
+        <param><defname>x</defname></param>
+        <initializer>GTK_GRID(x-&gt;child)</initializer>
+        <briefdescription>
+<para>Returns GTK_GRID of <ref refid="structalooWidget" kindref="compound">alooWidget</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structalooWidget" kindref="compound">alooWidget</ref> with ALOO_GRID type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/macros.h" line="17" column="9" bodyfile="include/macros.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="macros_8h_1a49c4948751bb9e2dd96cfa505b4b568c" prot="public" static="no">
+        <name>ALOO_BOX_TO_GTK_BOX</name>
+        <param><defname>x</defname></param>
+        <initializer>GTK_BOX(<ref refid="macros_8h_1a4a34a65a129d5c53b914ac34c3057d12" kindref="member">ALOO_BOX_WIDGET</ref>(x))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/macros.h" line="19" column="9" bodyfile="include/macros.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="macros_8h_1ac9137a5bae01fa8f8d81942f8ea98c93" prot="public" static="no">
+        <name>NONE_FLAGS_OPTIONS</name>
+        <param><defname>argc</defname></param>
+        <param><defname>argv</defname></param>
+        <initializer>	{ <ref refid="app_8h_1a3c3f24e41c05c726eae5ba69a4c0974ca0ea9c2e3ff643aa13b9e4e3a3d6a689a" kindref="member">APP_FLAGS_NONE</ref>, argc, argv }</initializer>
+        <briefdescription>
+<para>generates app options with APP_FLAGS_NONE </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/macros.h" line="25" column="9" bodyfile="include/macros.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="macros_8h_1a7e8face0ef0eb9ad79f944cadb88b9a9" prot="public" static="no">
+        <name>LAUNCHER_FLAGS_OPTIONS</name>
+        <param><defname>argc</defname></param>
+        <param><defname>argv</defname></param>
+        <initializer>	{ <ref refid="app_8h_1a3c3f24e41c05c726eae5ba69a4c0974ca210dad3de3ceb82c0ae1e18bbcd7c575" kindref="member">APP_FLAGS_IS_LAUNCHER</ref>, argc, argv }</initializer>
+        <briefdescription>
+<para>generates app options with APP_FLAGS_IS_LAUNCHER </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/macros.h" line="30" column="9" bodyfile="include/macros.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="macros_8h_1a6008f3d8d9740cf975902f6e7cbc2afc" prot="public" static="no">
+        <name>SERVICE_FLAGS_OPTIONS</name>
+        <param><defname>argc</defname></param>
+        <param><defname>argv</defname></param>
+        <initializer>	{ <ref refid="app_8h_1a3c3f24e41c05c726eae5ba69a4c0974cab47f6b942f04f046f352ac0d73da72e3" kindref="member">APP_FLAGS_IS_SERVICE</ref>, argc, argv }</initializer>
+        <briefdescription>
+<para>generates app options with APP_FLAGS_IS_SERVICE </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/macros.h" line="35" column="9" bodyfile="include/macros.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="macros_8h_1af8678607ed9bc1b700af2948ecc54eab" prot="public" static="no">
+        <name>ALOO_IS_WINDOW</name>
+        <param><defname>X</defname></param>
+        <initializer>GTK_IS_WINDOW(X-&gt;child)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/macros.h" line="38" column="9" bodyfile="include/macros.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="macros_8h_1a4a34a65a129d5c53b914ac34c3057d12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GtkWidget *</type>
+        <definition>GtkWidget* ALOO_BOX_WIDGET</definition>
+        <argsstring>(alooWidget *x)</argsstring>
+        <name>ALOO_BOX_WIDGET</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/macros.h" line="18" column="11" declfile="include/macros.h" declline="18" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="macros_8h_1a8a6129175fffef1805056b1ab25526ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gboolean</type>
+        <definition>gboolean ALOO_IS_BOX</definition>
+        <argsstring>(alooWidget *x)</argsstring>
+        <name>ALOO_IS_BOX</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/macros.h" line="20" column="10" declfile="include/macros.h" declline="20" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Aloo Project Macros related functions. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Jaipal001 (@BhJaipal) </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ALOO_MACROS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_MACROS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="macros_8h_1a81e0597f581204647048e24bf92da4bf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_BTN_TO_GTK(x)<sp/>GTK_BUTTON(x-&gt;child)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="macros_8h_1a67f574a286eb62d2279853cb32e61d02" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_WIDGET_TO_GTK(x)<sp/>x-&gt;child</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="macros_8h_1abf08dd722dd5d05a2513522a8c1d9800" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_GRID_TO_GTK(x)<sp/>GTK_GRID(x-&gt;child)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="macros_8h_1a4a34a65a129d5c53b914ac34c3057d12" refkind="member"><highlight class="normal">GtkWidget<sp/>*<ref refid="macros_8h_1a4a34a65a129d5c53b914ac34c3057d12" kindref="member">ALOO_BOX_WIDGET</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*x);</highlight></codeline>
+<codeline lineno="19" refid="macros_8h_1a49c4948751bb9e2dd96cfa505b4b568c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_BOX_TO_GTK_BOX(x)<sp/>GTK_BOX(ALOO_BOX_WIDGET(x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="macros_8h_1a8a6129175fffef1805056b1ab25526ab" refkind="member"><highlight class="normal">gboolean<sp/><ref refid="macros_8h_1a8a6129175fffef1805056b1ab25526ab" kindref="member">ALOO_IS_BOX</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*x);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="macros_8h_1ac9137a5bae01fa8f8d81942f8ea98c93" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NONE_FLAGS_OPTIONS(argc,<sp/>argv)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/>APP_FLAGS_NONE,<sp/>argc,<sp/>argv<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="macros_8h_1a7e8face0ef0eb9ad79f944cadb88b9a9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LAUNCHER_FLAGS_OPTIONS(argc,<sp/>argv)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/>APP_FLAGS_IS_LAUNCHER,<sp/>argc,<sp/>argv<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="macros_8h_1a6008f3d8d9740cf975902f6e7cbc2afc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVICE_FLAGS_OPTIONS(argc,<sp/>argv)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/>APP_FLAGS_IS_SERVICE,<sp/>argc,<sp/>argv<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="macros_8h_1af8678607ed9bc1b700af2948ecc54eab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_IS_WINDOW(X)<sp/>GTK_IS_WINDOW(X-&gt;child)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_MACROS_H</highlight></codeline>
+    </programlisting>
+    <location file="include/macros.h"/>
+  </compounddef>
+</doxygen>
