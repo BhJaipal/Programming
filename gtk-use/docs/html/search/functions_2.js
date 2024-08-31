@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['createapp_271',['CreateApp',['../app_8h.html#afd2b2ad2dc96320df448c0835aee1bb4',1,'app.h']]]
+  ['getwidgetclasses_316',['getWidgetClasses',['../style_8h.html#a9e0a300474506487a3ff0b9449ec2018',1,'style.h']]]
 ];

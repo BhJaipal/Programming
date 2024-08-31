@@ -19,6 +19,8 @@ alooWidget *__OBJECT_TO_ALOO(GObject *obj) {
 		type = ALOO_BUTTON;
 	} else if (GTK_IS_LABEL(widget)) {
 		type = ALOO_LABEL;
+	} else if (GTK_IS_WINDOW(widget)) {
+		type = ALOO_WINDOW;
 	} else {
 		type = ALOO_NEW_WIDGET;
 	}

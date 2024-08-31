@@ -5,6 +5,7 @@ alooWidget *labelGrid;
 alooWidget *navbar;
 alooWidget *navMenu;
 alooWidget *nothingLabel = 0;
+AlooApplication *app;
 int isNothing = 1;
 
 struct _labelList {
@@ -75,7 +76,7 @@ void nothingHappened(alooWidget *data) {
 	}
 }
 
-static void activate(GtkApplication *app, gpointer user_data) {
+static void activate(AlooApplication *app) {
 	labelList.len = 0;
 	AlooBuilder *builder = Builder.create();
 	Builder.addFile(builder, "builder.ui", NULL);
@@ -98,8 +99,8 @@ static void activate(GtkApplication *app, gpointer user_data) {
 
 	// gtk_widget_set_visible(GTK_WINDOW(window), TRUE);
 	// gtk_window_fullscreen(GTK_WINDOW(window));
-	setWindowSize(window, 1200, 600);
-	setWindowApplication(window, app);
+	Window.setSize(window, 1200, 600);
+	Window.set_app_window(window, app);
 	Widget.addEventListener(buttonWidget, "clicked", print_hello, NULL);
 	Widget.addEventListener(rmLabelWidget, "clicked", removeLabel, NULL);
 
@@ -142,12 +143,15 @@ static void activate(GtkApplication *app, gpointer user_data) {
 
 	Box.prepend(boxBody, navMenu);
 
-	showWindow(window);
+	Window.show(window);
 	Builder.unref(builder);
 }
 
 int main(int argc, char **argv) {
 	struct alooAppOptions opts = NONE_FLAGS_OPTIONS(argc, argv);
-	struct alooApp_Status appOut = CreateApp("com.test.hello", opts, activate);
-	return appOut.status;
+	app = Application.create("com.test.hello", opts);
+	Application.add_event_listener(app, "activate", activate);
+	int status = Application.run(app);
+	Application.unref(app);
+	return status;
 }

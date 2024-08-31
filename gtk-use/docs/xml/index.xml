@@ -14,6 +14,13 @@
     <member refid="struct__aloo__widget_1adb6a4410b3917570c96ddb62fcc71997" kind="variable"><name>verticalAlign</name></member>
     <member refid="struct__aloo__widget_1aca8d808db94a88af459a03c58d908b0f" kind="variable"><name>addEventListener</name></member>
   </compound>
+  <compound refid="struct__alooApp" kind="struct"><name>_alooApp</name>
+    <member refid="struct__alooApp_1a56deab4d12053731d9996b32c90d8136" kind="variable"><name>create</name></member>
+    <member refid="struct__alooApp_1ac6bccfd4736ccb7e1bd219705b7cd523" kind="variable"><name>run</name></member>
+    <member refid="struct__alooApp_1a04c38d2cfd6cb59d1d8e2dc1736538c0" kind="variable"><name>run_and_unref</name></member>
+    <member refid="struct__alooApp_1ad06aa81f5d44a39efeedf4651cd327ef" kind="variable"><name>unref</name></member>
+    <member refid="struct__alooApp_1a91e7375992904ad5b75fc3ecf2dfea99" kind="variable"><name>add_event_listener</name></member>
+  </compound>
   <compound refid="struct__alooBox" kind="struct"><name>_alooBox</name>
     <member refid="struct__alooBox_1a22a4676c8fc3201ab5ace1de11b7da67" kind="variable"><name>new</name></member>
     <member refid="struct__alooBox_1ac3851caa5ff1bed13ca8ad1e0c1e811e" kind="variable"><name>setOrientation</name></member>
@@ -58,9 +65,21 @@
     <member refid="struct__alooGrid_1a7c64f463f5e9b652ac925fda1b1da88a" kind="variable"><name>column_spacing</name></member>
     <member refid="struct__alooGrid_1a868ce31bdd351c36f09da5ca4b8f5774" kind="variable"><name>row_spacing</name></member>
   </compound>
-  <compound refid="structalooApp__Status" kind="struct"><name>alooApp_Status</name>
-    <member refid="structalooApp__Status_1a3eb578eacf93fea1f52147663d3d7359" kind="variable"><name>app</name></member>
-    <member refid="structalooApp__Status_1a5acd3502c8236365d599e6ca498b95ad" kind="variable"><name>status</name></member>
+  <compound refid="struct__alooWindow" kind="struct"><name>_alooWindow</name>
+    <member refid="struct__alooWindow_1a58b6fe2c1669b0a3115814742c34b967" kind="variable"><name>new</name></member>
+    <member refid="struct__alooWindow_1a69eb586c39bd205c3090052062603800" kind="variable"><name>present</name></member>
+    <member refid="struct__alooWindow_1a76819237feac7bff766987104b51aeab" kind="variable"><name>setChild</name></member>
+    <member refid="struct__alooWindow_1a958c501818bddcf9399bd3c2a731f3a5" kind="variable"><name>setTitle</name></member>
+    <member refid="struct__alooWindow_1af380e7305b03ac7d9bd88f424d771acb" kind="variable"><name>setSize</name></member>
+    <member refid="struct__alooWindow_1a4dd10bb0a31c1d5d24962027429a7ce7" kind="variable"><name>set_app_window</name></member>
+    <member refid="struct__alooWindow_1ab21c30a752473650b70b0ec15b69dfa2" kind="variable"><name>app_add_window</name></member>
+    <member refid="struct__alooWindow_1a2c45374a9db8020ae326a897010e53a0" kind="variable"><name>show</name></member>
+  </compound>
+  <compound refid="structAlooApplication" kind="struct"><name>AlooApplication</name>
+    <member refid="structAlooApplication_1ad98c802d8afeed723df8dbcf93fdf1e2" kind="variable"><name>app</name></member>
+    <member refid="structAlooApplication_1a1b52847b827b37c8eb858307f691f0a4" kind="variable"><name>status</name></member>
+    <member refid="structAlooApplication_1af8d33abeb063f90d374eb0ef586875c9" kind="variable"><name>argc</name></member>
+    <member refid="structAlooApplication_1acb09c1ab957182ff91f4930028b36543" kind="variable"><name>argv</name></member>
   </compound>
   <compound refid="structalooAppOptions" kind="struct"><name>alooAppOptions</name>
     <member refid="structalooAppOptions_1aec4e5d6b42a4aabe6bfaff78f201c724" kind="variable"><name>appFlags</name></member>
@@ -81,15 +100,18 @@
     <member refid="app_8h_1a3c3f24e41c05c726eae5ba69a4c0974ca0ea9c2e3ff643aa13b9e4e3a3d6a689a" kind="enumvalue"><name>APP_FLAGS_NONE</name></member>
     <member refid="app_8h_1a3c3f24e41c05c726eae5ba69a4c0974ca210dad3de3ceb82c0ae1e18bbcd7c575" kind="enumvalue"><name>APP_FLAGS_IS_LAUNCHER</name></member>
     <member refid="app_8h_1a3c3f24e41c05c726eae5ba69a4c0974cab47f6b942f04f046f352ac0d73da72e3" kind="enumvalue"><name>APP_FLAGS_IS_SERVICE</name></member>
-    <member refid="app_8h_1afd2b2ad2dc96320df448c0835aee1bb4" kind="function"><name>CreateApp</name></member>
-    <member refid="app_8h_1a6e6108adacb0408e9b9b010183d609c7" kind="function"><name>alooSetWindowChild</name></member>
-    <member refid="app_8h_1aa991a64e8ef46ccbb328a3a27cf256d8" kind="function"><name>alooPresentWindow</name></member>
-    <member refid="app_8h_1a634c75f1d0c5eb0f96bdbae33f521a8d" kind="function"><name>alooAddNewButtonLabel</name></member>
-    <member refid="app_8h_1a085d71076852c990130591ff13a5d513" kind="function"><name>alooApplicationNewWindow</name></member>
-    <member refid="app_8h_1ac46dc2c7069e7755ec43eb8cab9972c4" kind="function"><name>alooSetWindowTitle</name></member>
-    <member refid="app_8h_1a64b7d24a9ac0ffcbdf783b7a4e5f7f49" kind="function"><name>setWindowSize</name></member>
-    <member refid="app_8h_1a92fede26107ad6969917aafe93de0644" kind="function"><name>setWindowApplication</name></member>
-    <member refid="app_8h_1ac36f38589d0afa325b5fa36f37d8dc00" kind="function"><name>showWindow</name></member>
+    <member refid="app_8h_1a278b2f05488d5268c31ce89bbd7b1592" kind="typedef"><name>AlooApplication</name></member>
+    <member refid="app_8h_1a95133c0df92796e7b4df688293eedd7e" kind="typedef"><name>__CreateApp_Type</name></member>
+    <member refid="app_8h_1a9bba07399d9aa1e6b87f19598bd8a60d" kind="typedef"><name>__RunApp_Type</name></member>
+    <member refid="app_8h_1a9acebd98f9bfa6671da49f4186d713f3" kind="typedef"><name>__RunAppAndUnrefIt_Type</name></member>
+    <member refid="app_8h_1a4a87839afe5792be6e14631e4a9d611a" kind="typedef"><name>__unrefApp_Type</name></member>
+    <member refid="app_8h_1a5f490aa55bfa20ab8b3274621cc3baa2" kind="typedef"><name>__AppAddEvents_Type</name></member>
+    <member refid="app_8h_1a8d7278193da6d9cded52ce4217232979" kind="variable"><name>Application</name></member>
+    <member refid="app_8h_1a9b9430cf2d56ab44dcb668f861797334" kind="function"><name>__CreateApp</name></member>
+    <member refid="app_8h_1a46490337494d98b0418a81681f64ac00" kind="function"><name>__RunApp</name></member>
+    <member refid="app_8h_1a807ee39a59049927b9c337dcfa2eca4d" kind="function"><name>__RunAppAndUnrefIt</name></member>
+    <member refid="app_8h_1a2f508c5f0dce6eeb741c9f3006a31bc6" kind="function"><name>__unrefApp</name></member>
+    <member refid="app_8h_1a9c86fa6ee0b10cdbece4ba3c80123c00" kind="function"><name>__AppAddEvents</name></member>
   </compound>
   <compound refid="box_8h" kind="file"><name>box.h</name>
     <member refid="box_8h_1a9dd89e7d1df8d65f247b945d5a3d861a" kind="typedef"><name>__new_alooBox_Type</name></member>
@@ -212,6 +234,7 @@
     <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a50f04c4702e68dab2bdac551b419ddeb" kind="enumvalue"><name>ALOO_COLUMN</name></member>
     <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a00f836e2487ce6577a4d6aea17d76fcf" kind="enumvalue"><name>ALOO_BUTTON</name></member>
     <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a57d5914b4968e9bd7705c58fddbb868e" kind="enumvalue"><name>ALOO_LABEL</name></member>
+    <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a073cfecf1444e58b49fdee71aa787e1c" kind="enumvalue"><name>ALOO_WINDOW</name></member>
     <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a6efdb808d59913a49baf1bed971ff1a0" kind="enumvalue"><name>ALOO_NEW_WIDGET</name></member>
     <member refid="types_8h_1a00a0e3c1177c07bd0a01d42dfc37ed86" kind="typedef"><name>WidgetType</name></member>
     <member refid="types_8h_1a740317088cd233e81015b298babff7be" kind="typedef"><name>alooWidget</name></member>
@@ -236,6 +259,25 @@
     <member refid="widget_8h_1a723480206252f9c49a96016e525c80bb" kind="function"><name>__alooHorizontalAlign</name></member>
     <member refid="widget_8h_1a5949823315aa75ff5c04f791f75d301c" kind="function"><name>__alooVerticalAlign</name></member>
     <member refid="widget_8h_1a0cf5af29b9d23e3e483d0870f0a52ff2" kind="function"><name>__alooAddEventListener</name></member>
+  </compound>
+  <compound refid="window_8h" kind="file"><name>window.h</name>
+    <member refid="window_8h_1a838ef9ee7d949d041286b909899ef5dd" kind="typedef"><name>__alooSetWindowChild_Type</name></member>
+    <member refid="window_8h_1ab9fe52d585200e1af4b62247763983ee" kind="typedef"><name>__alooPresentWindow_Type</name></member>
+    <member refid="window_8h_1abec0f2604c9a30b72c72f3dbf6220cd2" kind="typedef"><name>__alooApplicationNewWindow_Type</name></member>
+    <member refid="window_8h_1a11a9f67b03d63f28252d4d55ab3f689a" kind="typedef"><name>__alooSetWindowTitle_Type</name></member>
+    <member refid="window_8h_1a79726c65ac6d0739867a2c9bc3d2624b" kind="typedef"><name>__setWindowSize_Type</name></member>
+    <member refid="window_8h_1a8fe109a7ae19d254c7ca918354d15dde" kind="typedef"><name>__setWindowApplication_Type</name></member>
+    <member refid="window_8h_1a2761337c8c639f7e4ba12fc0ea361471" kind="typedef"><name>__app_add_window_Type</name></member>
+    <member refid="window_8h_1a3c98359a51199241964e2fde72071e05" kind="typedef"><name>__showWindow_Type</name></member>
+    <member refid="window_8h_1a9e8d19541a39461f209ae43567d52db2" kind="variable"><name>Window</name></member>
+    <member refid="window_8h_1aaa7aa3b7d82f6b37f4543e66d99ccf9f" kind="function"><name>__alooSetWindowChild</name></member>
+    <member refid="window_8h_1aea2a4bc2c5a1825d715bd325fff8ff00" kind="function"><name>__alooPresentWindow</name></member>
+    <member refid="window_8h_1aa94d9af0fed232546d65914e28deb49f" kind="function"><name>__alooApplicationNewWindow</name></member>
+    <member refid="window_8h_1a6d59427a08caac58b6150c8488a15800" kind="function"><name>__alooSetWindowTitle</name></member>
+    <member refid="window_8h_1a43e4cbdb79f2030b1f0e78582c2ae641" kind="function"><name>__setWindowSize</name></member>
+    <member refid="window_8h_1ab2e5fd8855e33222a56eac2ac9bfb240" kind="function"><name>__setWindowApplication</name></member>
+    <member refid="window_8h_1ab502a5b1d6124e5e111fe70586041aab" kind="function"><name>__app_add_window</name></member>
+    <member refid="window_8h_1a39fd2992cacd3b32562cf06fd1ce6053" kind="function"><name>__showWindow</name></member>
   </compound>
   <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
   </compound>

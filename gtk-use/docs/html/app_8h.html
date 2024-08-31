@@ -69,8 +69,10 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">app.h File Reference</div>  </div>
 </div><!--header-->
@@ -96,7 +98,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="app_8h__dep__incl.png" border="0" usemap="#ainclude_2app_8hdep" alt=""/></div>
 <map name="ainclude_2app_8hdep" id="ainclude_2app_8hdep">
 <area shape="rect" title="Aloo Application related functions." alt="" coords="7,5,117,32"/>
-<area shape="rect" href="aloo_8h.html" title="Aloo Project Main file It conatins all the header files." alt="" coords="5,80,119,107"/>
+<area shape="rect" href="aloo_8h.html" title="Aloo Project Main file It conatins all the header files." alt="" coords="5,155,119,181"/>
+<area shape="rect" href="window_8h.html" title="Contains aloo Window related functions." alt="" coords="48,80,183,107"/>
 </map>
 </div>
 </div>
@@ -104,12 +107,28 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structalooApp__Status.html">alooApp_Status</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns GtkApplication and status.  <a href="structalooApp__Status.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAlooApplication.html">AlooApplication</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structalooAppOptions.html">alooAppOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes GApplicationFlags, argc and argv.  <a href="structalooAppOptions.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__alooApp.html">_alooApp</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a278b2f05488d5268c31ce89bbd7b1592"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structAlooApplication.html">AlooApplication</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a278b2f05488d5268c31ce89bbd7b1592">AlooApplication</a></td></tr>
+<tr class="separator:a278b2f05488d5268c31ce89bbd7b1592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95133c0df92796e7b4df688293eedd7e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structAlooApplication.html">AlooApplication</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a95133c0df92796e7b4df688293eedd7e">__CreateApp_Type</a>) (const char *app_id, struct <a class="el" href="structalooAppOptions.html">alooAppOptions</a> gAppOptions)</td></tr>
+<tr class="separator:a95133c0df92796e7b4df688293eedd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bba07399d9aa1e6b87f19598bd8a60d"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a9bba07399d9aa1e6b87f19598bd8a60d">__RunApp_Type</a>) (<a class="el" href="structAlooApplication.html">AlooApplication</a> *application)</td></tr>
+<tr class="separator:a9bba07399d9aa1e6b87f19598bd8a60d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9acebd98f9bfa6671da49f4186d713f3"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a9acebd98f9bfa6671da49f4186d713f3">__RunAppAndUnrefIt_Type</a>) (<a class="el" href="structAlooApplication.html">AlooApplication</a> *application)</td></tr>
+<tr class="separator:a9acebd98f9bfa6671da49f4186d713f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a87839afe5792be6e14631e4a9d611a"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a4a87839afe5792be6e14631e4a9d611a">__unrefApp_Type</a>) (<a class="el" href="structAlooApplication.html">AlooApplication</a> *application)</td></tr>
+<tr class="separator:a4a87839afe5792be6e14631e4a9d611a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f490aa55bfa20ab8b3274621cc3baa2"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a5f490aa55bfa20ab8b3274621cc3baa2">__AppAddEvents_Type</a>) (<a class="el" href="structAlooApplication.html">AlooApplication</a> *app, const char *event, void callbackFn())</td></tr>
+<tr class="separator:a5f490aa55bfa20ab8b3274621cc3baa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -122,38 +141,116 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:afd2b2ad2dc96320df448c0835aee1bb4"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structalooApp__Status.html">alooApp_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#afd2b2ad2dc96320df448c0835aee1bb4">CreateApp</a> (char *app_id, struct <a class="el" href="structalooAppOptions.html">alooAppOptions</a> gAppOptions, void activateFn(GtkApplication *app, gpointer user_data))</td></tr>
-<tr class="memdesc:afd2b2ad2dc96320df448c0835aee1bb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a App object.  <a href="app_8h.html#afd2b2ad2dc96320df448c0835aee1bb4">More...</a><br /></td></tr>
-<tr class="separator:afd2b2ad2dc96320df448c0835aee1bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e6108adacb0408e9b9b010183d609c7"><td class="memItemLeft" align="right" valign="top">GtkWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a6e6108adacb0408e9b9b010183d609c7">alooSetWindowChild</a> (GtkWidget *window, GtkWidget *child)</td></tr>
-<tr class="memdesc:a6e6108adacb0408e9b9b010183d609c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets Window child.  <a href="app_8h.html#a6e6108adacb0408e9b9b010183d609c7">More...</a><br /></td></tr>
-<tr class="separator:a6e6108adacb0408e9b9b010183d609c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa991a64e8ef46ccbb328a3a27cf256d8"><td class="memItemLeft" align="right" valign="top">GtkWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#aa991a64e8ef46ccbb328a3a27cf256d8">alooPresentWindow</a> (GtkWidget *window)</td></tr>
-<tr class="memdesc:aa991a64e8ef46ccbb328a3a27cf256d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Presents GtkWindow.  <a href="app_8h.html#aa991a64e8ef46ccbb328a3a27cf256d8">More...</a><br /></td></tr>
-<tr class="separator:aa991a64e8ef46ccbb328a3a27cf256d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a634c75f1d0c5eb0f96bdbae33f521a8d"><td class="memItemLeft" align="right" valign="top">GtkWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a634c75f1d0c5eb0f96bdbae33f521a8d">alooAddNewButtonLabel</a> (const char *label)</td></tr>
-<tr class="memdesc:a634c75f1d0c5eb0f96bdbae33f521a8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new GtkButton.  <a href="app_8h.html#a634c75f1d0c5eb0f96bdbae33f521a8d">More...</a><br /></td></tr>
-<tr class="separator:a634c75f1d0c5eb0f96bdbae33f521a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a085d71076852c990130591ff13a5d513"><td class="memItemLeft" align="right" valign="top">GtkWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a085d71076852c990130591ff13a5d513">alooApplicationNewWindow</a> (GtkApplication *app)</td></tr>
-<tr class="memdesc:a085d71076852c990130591ff13a5d513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a GtkWindow.  <a href="app_8h.html#a085d71076852c990130591ff13a5d513">More...</a><br /></td></tr>
-<tr class="separator:a085d71076852c990130591ff13a5d513"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac46dc2c7069e7755ec43eb8cab9972c4"><td class="memItemLeft" align="right" valign="top">GtkWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#ac46dc2c7069e7755ec43eb8cab9972c4">alooSetWindowTitle</a> (GtkWidget *window, const char *title)</td></tr>
-<tr class="memdesc:ac46dc2c7069e7755ec43eb8cab9972c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets GtkWindow title.  <a href="app_8h.html#ac46dc2c7069e7755ec43eb8cab9972c4">More...</a><br /></td></tr>
-<tr class="separator:ac46dc2c7069e7755ec43eb8cab9972c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64b7d24a9ac0ffcbdf783b7a4e5f7f49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structalooWidget.html">alooWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a64b7d24a9ac0ffcbdf783b7a4e5f7f49">setWindowSize</a> (<a class="el" href="structalooWidget.html">alooWidget</a> *window, int width, int height)</td></tr>
-<tr class="memdesc:a64b7d24a9ac0ffcbdf783b7a4e5f7f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets aloo Window size.  <a href="app_8h.html#a64b7d24a9ac0ffcbdf783b7a4e5f7f49">More...</a><br /></td></tr>
-<tr class="separator:a64b7d24a9ac0ffcbdf783b7a4e5f7f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92fede26107ad6969917aafe93de0644"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structalooWidget.html">alooWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a92fede26107ad6969917aafe93de0644">setWindowApplication</a> (<a class="el" href="structalooWidget.html">alooWidget</a> *window, GtkApplication *app)</td></tr>
-<tr class="memdesc:a92fede26107ad6969917aafe93de0644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Window for Application.  <a href="app_8h.html#a92fede26107ad6969917aafe93de0644">More...</a><br /></td></tr>
-<tr class="separator:a92fede26107ad6969917aafe93de0644"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac36f38589d0afa325b5fa36f37d8dc00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#ac36f38589d0afa325b5fa36f37d8dc00">showWindow</a> (<a class="el" href="structalooWidget.html">alooWidget</a> *window)</td></tr>
-<tr class="memdesc:ac36f38589d0afa325b5fa36f37d8dc00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows Window.  <a href="app_8h.html#ac36f38589d0afa325b5fa36f37d8dc00">More...</a><br /></td></tr>
-<tr class="separator:ac36f38589d0afa325b5fa36f37d8dc00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b9430cf2d56ab44dcb668f861797334"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structAlooApplication.html">AlooApplication</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a9b9430cf2d56ab44dcb668f861797334">__CreateApp</a> (const char *app_id, struct <a class="el" href="structalooAppOptions.html">alooAppOptions</a> gAppOptions)</td></tr>
+<tr class="memdesc:a9b9430cf2d56ab44dcb668f861797334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a App object.  <a href="app_8h.html#a9b9430cf2d56ab44dcb668f861797334">More...</a><br /></td></tr>
+<tr class="separator:a9b9430cf2d56ab44dcb668f861797334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46490337494d98b0418a81681f64ac00"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a46490337494d98b0418a81681f64ac00">__RunApp</a> (<a class="el" href="structAlooApplication.html">AlooApplication</a> *application)</td></tr>
+<tr class="memdesc:a46490337494d98b0418a81681f64ac00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs aloo App.  <a href="app_8h.html#a46490337494d98b0418a81681f64ac00">More...</a><br /></td></tr>
+<tr class="separator:a46490337494d98b0418a81681f64ac00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a807ee39a59049927b9c337dcfa2eca4d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a807ee39a59049927b9c337dcfa2eca4d">__RunAppAndUnrefIt</a> (<a class="el" href="structAlooApplication.html">AlooApplication</a> *application)</td></tr>
+<tr class="memdesc:a807ee39a59049927b9c337dcfa2eca4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs aloo App and unrefs after exiting it.  <a href="app_8h.html#a807ee39a59049927b9c337dcfa2eca4d">More...</a><br /></td></tr>
+<tr class="separator:a807ee39a59049927b9c337dcfa2eca4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f508c5f0dce6eeb741c9f3006a31bc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a2f508c5f0dce6eeb741c9f3006a31bc6">__unrefApp</a> (<a class="el" href="structAlooApplication.html">AlooApplication</a> *application)</td></tr>
+<tr class="memdesc:a2f508c5f0dce6eeb741c9f3006a31bc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">unrefs aloo App  <a href="app_8h.html#a2f508c5f0dce6eeb741c9f3006a31bc6">More...</a><br /></td></tr>
+<tr class="separator:a2f508c5f0dce6eeb741c9f3006a31bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c86fa6ee0b10cdbece4ba3c80123c00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a9c86fa6ee0b10cdbece4ba3c80123c00">__AppAddEvents</a> (<a class="el" href="structAlooApplication.html">AlooApplication</a> *app, const char *event, void callbackFn())</td></tr>
+<tr class="memdesc:a9c86fa6ee0b10cdbece4ba3c80123c00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds Event Listener to Aloo App.  <a href="app_8h.html#a9c86fa6ee0b10cdbece4ba3c80123c00">More...</a><br /></td></tr>
+<tr class="separator:a9c86fa6ee0b10cdbece4ba3c80123c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a8d7278193da6d9cded52ce4217232979"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct__alooApp.html">_alooApp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a8d7278193da6d9cded52ce4217232979">Application</a></td></tr>
+<tr class="separator:a8d7278193da6d9cded52ce4217232979"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Aloo Application related functions. </p>
 <dl class="section author"><dt>Author</dt><dd>Jaipal001 </dd></dl>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="a5f490aa55bfa20ab8b3274621cc3baa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f490aa55bfa20ab8b3274621cc3baa2">&#9670;&nbsp;</a></span>__AppAddEvents_Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* __AppAddEvents_Type) (<a class="el" href="structAlooApplication.html">AlooApplication</a> *app, const char *event, void callbackFn())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95133c0df92796e7b4df688293eedd7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95133c0df92796e7b4df688293eedd7e">&#9670;&nbsp;</a></span>__CreateApp_Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structAlooApplication.html">AlooApplication</a>*(* __CreateApp_Type) (const char *app_id, struct <a class="el" href="structalooAppOptions.html">alooAppOptions</a> gAppOptions)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9bba07399d9aa1e6b87f19598bd8a60d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bba07399d9aa1e6b87f19598bd8a60d">&#9670;&nbsp;</a></span>__RunApp_Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* __RunApp_Type) (<a class="el" href="structAlooApplication.html">AlooApplication</a> *application)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9acebd98f9bfa6671da49f4186d713f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9acebd98f9bfa6671da49f4186d713f3">&#9670;&nbsp;</a></span>__RunAppAndUnrefIt_Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* __RunAppAndUnrefIt_Type) (<a class="el" href="structAlooApplication.html">AlooApplication</a> *application)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a87839afe5792be6e14631e4a9d611a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a87839afe5792be6e14631e4a9d611a">&#9670;&nbsp;</a></span>__unrefApp_Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* __unrefApp_Type) (<a class="el" href="structAlooApplication.html">AlooApplication</a> *application)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a278b2f05488d5268c31ce89bbd7b1592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a278b2f05488d5268c31ce89bbd7b1592">&#9670;&nbsp;</a></span>AlooApplication</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structAlooApplication.html">AlooApplication</a> <a class="el" href="structAlooApplication.html">AlooApplication</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a3c3f24e41c05c726eae5ba69a4c0974c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c3f24e41c05c726eae5ba69a4c0974c">&#9670;&nbsp;</a></span>alooAppFlags</h2>
 
@@ -179,90 +276,29 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a634c75f1d0c5eb0f96bdbae33f521a8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a634c75f1d0c5eb0f96bdbae33f521a8d">&#9670;&nbsp;</a></span>alooAddNewButtonLabel()</h2>
+<a id="a9c86fa6ee0b10cdbece4ba3c80123c00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c86fa6ee0b10cdbece4ba3c80123c00">&#9670;&nbsp;</a></span>__AppAddEvents()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">GtkWidget* alooAddNewButtonLabel </td>
+          <td class="memname">void __AppAddEvents </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create new GtkButton. </p>
-
-</div>
-</div>
-<a id="a085d71076852c990130591ff13a5d513"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a085d71076852c990130591ff13a5d513">&#9670;&nbsp;</a></span>alooApplicationNewWindow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GtkWidget* alooApplicationNewWindow </td>
-          <td>(</td>
-          <td class="paramtype">GtkApplication *&#160;</td>
-          <td class="paramname"><em>app</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create a GtkWindow. </p>
-
-</div>
-</div>
-<a id="aa991a64e8ef46ccbb328a3a27cf256d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa991a64e8ef46ccbb328a3a27cf256d8">&#9670;&nbsp;</a></span>alooPresentWindow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GtkWidget* alooPresentWindow </td>
-          <td>(</td>
-          <td class="paramtype">GtkWidget *&#160;</td>
-          <td class="paramname"><em>window</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Presents GtkWindow. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">window</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>GtkWidget* </dd></dl>
-
-</div>
-</div>
-<a id="a6e6108adacb0408e9b9b010183d609c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e6108adacb0408e9b9b010183d609c7">&#9670;&nbsp;</a></span>alooSetWindowChild()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GtkWidget* alooSetWindowChild </td>
-          <td>(</td>
-          <td class="paramtype">GtkWidget *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
+          <td class="paramtype"><a class="el" href="structAlooApplication.html">AlooApplication</a> *&#160;</td>
+          <td class="paramname"><em>app</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GtkWidget *&#160;</td>
-          <td class="paramname"><em>child</em>&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void &#160;</td>
+          <td class="paramname"><em>callbackFn</em>()&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -272,71 +308,35 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets Window child. </p>
+<p>Adds Event Listener to Aloo App. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">window</td><td></td></tr>
-    <tr><td class="paramname">child</td><td></td></tr>
+    <tr><td class="paramname">app</td><td>Aloo Application </td></tr>
+    <tr><td class="paramname">event</td><td>Event name </td></tr>
+    <tr><td class="paramname">callbackFn</td><td>static void function which will be called when app is started </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>GtkWidget* </dd></dl>
 
 </div>
 </div>
-<a id="ac46dc2c7069e7755ec43eb8cab9972c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac46dc2c7069e7755ec43eb8cab9972c4">&#9670;&nbsp;</a></span>alooSetWindowTitle()</h2>
+<a id="a9b9430cf2d56ab44dcb668f861797334"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b9430cf2d56ab44dcb668f861797334">&#9670;&nbsp;</a></span>__CreateApp()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">GtkWidget* alooSetWindowTitle </td>
+          <td class="memname"><a class="el" href="structAlooApplication.html">AlooApplication</a>* __CreateApp </td>
           <td>(</td>
-          <td class="paramtype">GtkWidget *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>title</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets GtkWindow title. </p>
-
-</div>
-</div>
-<a id="afd2b2ad2dc96320df448c0835aee1bb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd2b2ad2dc96320df448c0835aee1bb4">&#9670;&nbsp;</a></span>CreateApp()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="structalooApp__Status.html">alooApp_Status</a> CreateApp </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>app_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">struct <a class="el" href="structalooAppOptions.html">alooAppOptions</a>&#160;</td>
-          <td class="paramname"><em>gAppOptions</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void &#160;</td>
-          <td class="paramname"><em>activateFn</em>GtkApplication *app, gpointer user_data&#160;</td>
+          <td class="paramname"><em>gAppOptions</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -351,97 +351,95 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">app_id</td><td>App Id are like com.google.Chrome, dev.zed.Zed </td></tr>
     <tr><td class="paramname">gAppOptions</td><td>It takes GApplicationFlags, argc and argv </td></tr>
-    <tr><td class="paramname">activateFn</td><td>static void function which will be called when app is started </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>It returns GtkApplication and status </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>It returns Aloo Application </dd></dl>
 
 </div>
 </div>
-<a id="a92fede26107ad6969917aafe93de0644"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92fede26107ad6969917aafe93de0644">&#9670;&nbsp;</a></span>setWindowApplication()</h2>
+<a id="a46490337494d98b0418a81681f64ac00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46490337494d98b0418a81681f64ac00">&#9670;&nbsp;</a></span>__RunApp()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structalooWidget.html">alooWidget</a>* setWindowApplication </td>
+          <td class="memname">int __RunApp </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structalooWidget.html">alooWidget</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="structAlooApplication.html">AlooApplication</a> *&#160;</td>
+          <td class="paramname"><em>application</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">GtkApplication *&#160;</td>
-          <td class="paramname"><em>app</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the Window for Application. </p>
+<p>Runs aloo App. </p>
+<dl class="section return"><dt>Returns</dt><dd>status on exiting app </dd></dl>
 
 </div>
 </div>
-<a id="a64b7d24a9ac0ffcbdf783b7a4e5f7f49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64b7d24a9ac0ffcbdf783b7a4e5f7f49">&#9670;&nbsp;</a></span>setWindowSize()</h2>
+<a id="a807ee39a59049927b9c337dcfa2eca4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a807ee39a59049927b9c337dcfa2eca4d">&#9670;&nbsp;</a></span>__RunAppAndUnrefIt()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structalooWidget.html">alooWidget</a>* setWindowSize </td>
+          <td class="memname">int __RunAppAndUnrefIt </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structalooWidget.html">alooWidget</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="structAlooApplication.html">AlooApplication</a> *&#160;</td>
+          <td class="paramname"><em>application</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>width</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>height</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets aloo Window size. </p>
+<p>Runs aloo App and unrefs after exiting it. </p>
+<dl class="section return"><dt>Returns</dt><dd>status on exiting app </dd></dl>
 
 </div>
 </div>
-<a id="ac36f38589d0afa325b5fa36f37d8dc00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac36f38589d0afa325b5fa36f37d8dc00">&#9670;&nbsp;</a></span>showWindow()</h2>
+<a id="a2f508c5f0dce6eeb741c9f3006a31bc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f508c5f0dce6eeb741c9f3006a31bc6">&#9670;&nbsp;</a></span>__unrefApp()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void showWindow </td>
+          <td class="memname">void __unrefApp </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structalooWidget.html">alooWidget</a> *&#160;</td>
-          <td class="paramname"><em>window</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structAlooApplication.html">AlooApplication</a> *&#160;</td>
+          <td class="paramname"><em>application</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Shows Window. </p>
+<p>unrefs aloo App </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a8d7278193da6d9cded52ce4217232979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d7278193da6d9cded52ce4217232979">&#9670;&nbsp;</a></span>Application</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct__alooApp.html">_alooApp</a> Application</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -15,14 +15,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/types.h" line="60" column="12" bodyfile="include/types.h" bodystart="60" bodyend="-1"/>
+        <location file="include/types.h" line="64" column="12" bodyfile="include/types.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/types.h" line="59" column="1" bodyfile="include/types.h" bodystart="59" bodyend="61"/>
+    <location file="include/types.h" line="63" column="1" bodyfile="include/types.h" bodystart="63" bodyend="65"/>
     <listofallmembers>
       <member refid="structAlooBuilder_1a598a671ad4e908039cbdbf778f71772f" prot="public" virt="non-virtual"><scope>AlooBuilder</scope><name>builder</name></member>
     </listofallmembers>

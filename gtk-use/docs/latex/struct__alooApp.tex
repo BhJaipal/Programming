@@ -1,0 +1,112 @@
+\hypertarget{struct__alooApp}{}\doxysection{\+\_\+aloo\+App Struct Reference}
+\label{struct__alooApp}\index{\_alooApp@{\_alooApp}}
+
+
+{\ttfamily \#include $<$app.\+h$>$}
+
+
+
+Collaboration diagram for \+\_\+aloo\+App\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{struct__alooApp__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{app_8h_a95133c0df92796e7b4df688293eedd7e}{\+\_\+\+\_\+\+Create\+App\+\_\+\+Type}} \mbox{\hyperlink{struct__alooApp_a56deab4d12053731d9996b32c90d8136}{create}}
+\begin{DoxyCompactList}\small\item\em Create a App object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{app_8h_a9bba07399d9aa1e6b87f19598bd8a60d}{\+\_\+\+\_\+\+Run\+App\+\_\+\+Type}} \mbox{\hyperlink{struct__alooApp_ac6bccfd4736ccb7e1bd219705b7cd523}{run}}
+\begin{DoxyCompactList}\small\item\em Runs aloo App. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{app_8h_a9acebd98f9bfa6671da49f4186d713f3}{\+\_\+\+\_\+\+Run\+App\+And\+Unref\+It\+\_\+\+Type}} \mbox{\hyperlink{struct__alooApp_a04c38d2cfd6cb59d1d8e2dc1736538c0}{run\+\_\+and\+\_\+unref}}
+\begin{DoxyCompactList}\small\item\em Runs aloo App and unrefs after exiting it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{app_8h_a4a87839afe5792be6e14631e4a9d611a}{\+\_\+\+\_\+unref\+App\+\_\+\+Type}} \mbox{\hyperlink{struct__alooApp_ad06aa81f5d44a39efeedf4651cd327ef}{unref}}
+\begin{DoxyCompactList}\small\item\em unrefs aloo App \end{DoxyCompactList}\item 
+\mbox{\hyperlink{app_8h_a5f490aa55bfa20ab8b3274621cc3baa2}{\+\_\+\+\_\+\+App\+Add\+Events\+\_\+\+Type}} \mbox{\hyperlink{struct__alooApp_a91e7375992904ad5b75fc3ecf2dfea99}{add\+\_\+event\+\_\+listener}}
+\begin{DoxyCompactList}\small\item\em Adds Event Listener to Aloo App. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct__alooApp_a91e7375992904ad5b75fc3ecf2dfea99}\label{struct__alooApp_a91e7375992904ad5b75fc3ecf2dfea99}} 
+\index{\_alooApp@{\_alooApp}!add\_event\_listener@{add\_event\_listener}}
+\index{add\_event\_listener@{add\_event\_listener}!\_alooApp@{\_alooApp}}
+\doxysubsubsection{\texorpdfstring{add\_event\_listener}{add\_event\_listener}}
+{\footnotesize\ttfamily \mbox{\hyperlink{app_8h_a5f490aa55bfa20ab8b3274621cc3baa2}{\+\_\+\+\_\+\+App\+Add\+Events\+\_\+\+Type}} \+\_\+aloo\+App\+::add\+\_\+event\+\_\+listener}
+
+
+
+Adds Event Listener to Aloo App. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & Aloo Application \\
+\hline
+{\em event} & Event name \\
+\hline
+{\em callback\+Fn} & static void function which will be called when app is started \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct__alooApp_a56deab4d12053731d9996b32c90d8136}\label{struct__alooApp_a56deab4d12053731d9996b32c90d8136}} 
+\index{\_alooApp@{\_alooApp}!create@{create}}
+\index{create@{create}!\_alooApp@{\_alooApp}}
+\doxysubsubsection{\texorpdfstring{create}{create}}
+{\footnotesize\ttfamily \mbox{\hyperlink{app_8h_a95133c0df92796e7b4df688293eedd7e}{\+\_\+\+\_\+\+Create\+App\+\_\+\+Type}} \+\_\+aloo\+App\+::create}
+
+
+
+Create a App object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app\+\_\+id} & App Id are like com.\+google.\+Chrome, dev.\+zed.\+Zed \\
+\hline
+{\em g\+App\+Options} & It takes GApplication\+Flags, argc and argv \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+It returns Aloo Application 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct__alooApp_ac6bccfd4736ccb7e1bd219705b7cd523}\label{struct__alooApp_ac6bccfd4736ccb7e1bd219705b7cd523}} 
+\index{\_alooApp@{\_alooApp}!run@{run}}
+\index{run@{run}!\_alooApp@{\_alooApp}}
+\doxysubsubsection{\texorpdfstring{run}{run}}
+{\footnotesize\ttfamily \mbox{\hyperlink{app_8h_a9bba07399d9aa1e6b87f19598bd8a60d}{\+\_\+\+\_\+\+Run\+App\+\_\+\+Type}} \+\_\+aloo\+App\+::run}
+
+
+
+Runs aloo App. 
+
+\begin{DoxyReturn}{Returns}
+status on exiting app 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct__alooApp_a04c38d2cfd6cb59d1d8e2dc1736538c0}\label{struct__alooApp_a04c38d2cfd6cb59d1d8e2dc1736538c0}} 
+\index{\_alooApp@{\_alooApp}!run\_and\_unref@{run\_and\_unref}}
+\index{run\_and\_unref@{run\_and\_unref}!\_alooApp@{\_alooApp}}
+\doxysubsubsection{\texorpdfstring{run\_and\_unref}{run\_and\_unref}}
+{\footnotesize\ttfamily \mbox{\hyperlink{app_8h_a9acebd98f9bfa6671da49f4186d713f3}{\+\_\+\+\_\+\+Run\+App\+And\+Unref\+It\+\_\+\+Type}} \+\_\+aloo\+App\+::run\+\_\+and\+\_\+unref}
+
+
+
+Runs aloo App and unrefs after exiting it. 
+
+\begin{DoxyReturn}{Returns}
+status on exiting app 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct__alooApp_ad06aa81f5d44a39efeedf4651cd327ef}\label{struct__alooApp_ad06aa81f5d44a39efeedf4651cd327ef}} 
+\index{\_alooApp@{\_alooApp}!unref@{unref}}
+\index{unref@{unref}!\_alooApp@{\_alooApp}}
+\doxysubsubsection{\texorpdfstring{unref}{unref}}
+{\footnotesize\ttfamily \mbox{\hyperlink{app_8h_a4a87839afe5792be6e14631e4a9d611a}{\+\_\+\+\_\+unref\+App\+\_\+\+Type}} \+\_\+aloo\+App\+::unref}
+
+
+
+unrefs aloo App 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{app_8h}{app.\+h}}\end{DoxyCompactItemize}

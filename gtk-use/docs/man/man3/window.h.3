@@ -1,0 +1,160 @@
+.TH "include/window.h" 3 "Sun Sep 1 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/window.h \- Contains aloo Window related functions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'app\&.h'\fP
+.br
+\fC#include 'types\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_alooWindow\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__alooSetWindowChild_Type\fP) (\fBalooWidget\fP *window, \fBalooWidget\fP *child)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__alooPresentWindow_Type\fP) (\fBalooWidget\fP *window)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__alooApplicationNewWindow_Type\fP) (\fBAlooApplication\fP *app)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__alooSetWindowTitle_Type\fP) (\fBalooWidget\fP *window, const char *title)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__setWindowSize_Type\fP) (\fBalooWidget\fP *window, int width, int height)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__setWindowApplication_Type\fP) (\fBalooWidget\fP *window, \fBAlooApplication\fP *app)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__app_add_window_Type\fP) (\fBAlooApplication\fP *app, \fBalooWidget\fP *window)"
+.br
+.ti -1c
+.RI "typedef void(* \fB__showWindow_Type\fP) (\fBalooWidget\fP *window)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBalooWidget\fP * \fB__alooSetWindowChild\fP (\fBalooWidget\fP *window, \fBalooWidget\fP *child)"
+.br
+.RI "Sets Window child\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fB__alooPresentWindow\fP (\fBalooWidget\fP *window)"
+.br
+.RI "Presents GtkWindow\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fB__alooApplicationNewWindow\fP (\fBAlooApplication\fP *app)"
+.br
+.RI "Create a GtkWindow\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fB__alooSetWindowTitle\fP (\fBalooWidget\fP *window, const char *title)"
+.br
+.RI "Sets GtkWindow title\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fB__setWindowSize\fP (\fBalooWidget\fP *window, int width, int height)"
+.br
+.RI "Sets aloo Window size\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fB__setWindowApplication\fP (\fBalooWidget\fP *window, \fBAlooApplication\fP *app)"
+.br
+.RI "Set the Window for Application\&. "
+.ti -1c
+.RI "\fBalooWidget\fP * \fB__app_add_window\fP (\fBAlooApplication\fP *app, \fBalooWidget\fP *window)"
+.br
+.ti -1c
+.RI "void \fB__showWindow\fP (\fBalooWidget\fP *window)"
+.br
+.RI "Shows Window\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_alooWindow\fP \fBWindow\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains aloo Window related functions\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Jaipal001 
+.RE
+.PP
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBalooWidget\fP*(* __alooApplicationNewWindow_Type) (\fBAlooApplication\fP *app)"
+
+.SS "typedef \fBalooWidget\fP*(* __alooPresentWindow_Type) (\fBalooWidget\fP *window)"
+
+.SS "typedef \fBalooWidget\fP*(* __alooSetWindowChild_Type) (\fBalooWidget\fP *window, \fBalooWidget\fP *child)"
+
+.SS "typedef \fBalooWidget\fP*(* __alooSetWindowTitle_Type) (\fBalooWidget\fP *window, const char *title)"
+
+.SS "typedef \fBalooWidget\fP*(* __app_add_window_Type) (\fBAlooApplication\fP *app, \fBalooWidget\fP *window)"
+
+.SS "typedef \fBalooWidget\fP*(* __setWindowApplication_Type) (\fBalooWidget\fP *window, \fBAlooApplication\fP *app)"
+
+.SS "typedef \fBalooWidget\fP*(* __setWindowSize_Type) (\fBalooWidget\fP *window, int width, int height)"
+
+.SS "typedef void(* __showWindow_Type) (\fBalooWidget\fP *window)"
+
+.SH "Function Documentation"
+.PP 
+.SS "\fBalooWidget\fP* __alooApplicationNewWindow (\fBAlooApplication\fP * app)"
+
+.PP
+Create a GtkWindow\&. 
+.SS "\fBalooWidget\fP* __alooPresentWindow (\fBalooWidget\fP * window)"
+
+.PP
+Presents GtkWindow\&. 
+.SS "\fBalooWidget\fP* __alooSetWindowChild (\fBalooWidget\fP * window, \fBalooWidget\fP * child)"
+
+.PP
+Sets Window child\&. 
+.SS "\fBalooWidget\fP* __alooSetWindowTitle (\fBalooWidget\fP * window, const char * title)"
+
+.PP
+Sets GtkWindow title\&. 
+.SS "\fBalooWidget\fP* __app_add_window (\fBAlooApplication\fP * app, \fBalooWidget\fP * window)"
+
+.SS "\fBalooWidget\fP* __setWindowApplication (\fBalooWidget\fP * window, \fBAlooApplication\fP * app)"
+
+.PP
+Set the Window for Application\&. 
+.SS "\fBalooWidget\fP* __setWindowSize (\fBalooWidget\fP * window, int width, int height)"
+
+.PP
+Sets aloo Window size\&. 
+.SS "void __showWindow (\fBalooWidget\fP * window)"
+
+.PP
+Shows Window\&. 
+.SH "Variable Documentation"
+.PP 
+.SS "struct \fB_alooWindow\fP Window\fC [extern]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Aloo from the source code\&.

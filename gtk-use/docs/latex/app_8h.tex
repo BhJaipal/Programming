@@ -7,8 +7,7 @@ Aloo Application related functions.
 
 {\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$gtk/gtk.\+h$>$}\newline
-Include dependency graph for app.\+h\+:
-\nopagebreak
+Include dependency graph for app.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,16 +19,33 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=165pt]{app_8h__dep__incl}
+\includegraphics[width=213pt]{app_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structalooApp__Status}{aloo\+App\+\_\+\+Status}}
-\begin{DoxyCompactList}\small\item\em Returns Gtk\+Application and status. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structAlooApplication}{Aloo\+Application}}
+\item 
 struct \mbox{\hyperlink{structalooAppOptions}{aloo\+App\+Options}}
-\begin{DoxyCompactList}\small\item\em Takes GApplication\+Flags, argc and argv. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Takes GApplication\+Flags, argc and argv. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__alooApp}{\+\_\+aloo\+App}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} \mbox{\hyperlink{app_8h_a278b2f05488d5268c31ce89bbd7b1592}{Aloo\+Application}}
+\item 
+typedef \mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$($\ast$ \mbox{\hyperlink{app_8h_a95133c0df92796e7b4df688293eedd7e}{\+\_\+\+\_\+\+Create\+App\+\_\+\+Type}}) (const char $\ast$app\+\_\+id, struct \mbox{\hyperlink{structalooAppOptions}{aloo\+App\+Options}} g\+App\+Options)
+\item 
+typedef int($\ast$ \mbox{\hyperlink{app_8h_a9bba07399d9aa1e6b87f19598bd8a60d}{\+\_\+\+\_\+\+Run\+App\+\_\+\+Type}}) (\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$application)
+\item 
+typedef int($\ast$ \mbox{\hyperlink{app_8h_a9acebd98f9bfa6671da49f4186d713f3}{\+\_\+\+\_\+\+Run\+App\+And\+Unref\+It\+\_\+\+Type}}) (\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$application)
+\item 
+typedef void($\ast$ \mbox{\hyperlink{app_8h_a4a87839afe5792be6e14631e4a9d611a}{\+\_\+\+\_\+unref\+App\+\_\+\+Type}}) (\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$application)
+\item 
+typedef void($\ast$ \mbox{\hyperlink{app_8h_a5f490aa55bfa20ab8b3274621cc3baa2}{\+\_\+\+\_\+\+App\+Add\+Events\+\_\+\+Type}}) (\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$app, const char $\ast$event, void callback\+Fn())
+\end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -41,24 +57,21 @@ enum \mbox{\hyperlink{app_8h_a3c3f24e41c05c726eae5ba69a4c0974c}{aloo\+App\+Flags
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structalooApp__Status}{aloo\+App\+\_\+\+Status}} \mbox{\hyperlink{app_8h_afd2b2ad2dc96320df448c0835aee1bb4}{Create\+App}} (char $\ast$app\+\_\+id, struct \mbox{\hyperlink{structalooAppOptions}{aloo\+App\+Options}} g\+App\+Options, void activate\+Fn(Gtk\+Application $\ast$app, gpointer user\+\_\+data))
+\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$ \mbox{\hyperlink{app_8h_a9b9430cf2d56ab44dcb668f861797334}{\+\_\+\+\_\+\+Create\+App}} (const char $\ast$app\+\_\+id, struct \mbox{\hyperlink{structalooAppOptions}{aloo\+App\+Options}} g\+App\+Options)
 \begin{DoxyCompactList}\small\item\em Create a App object. \end{DoxyCompactList}\item 
-Gtk\+Widget $\ast$ \mbox{\hyperlink{app_8h_a6e6108adacb0408e9b9b010183d609c7}{aloo\+Set\+Window\+Child}} (Gtk\+Widget $\ast$window, Gtk\+Widget $\ast$child)
-\begin{DoxyCompactList}\small\item\em Sets Window child. \end{DoxyCompactList}\item 
-Gtk\+Widget $\ast$ \mbox{\hyperlink{app_8h_aa991a64e8ef46ccbb328a3a27cf256d8}{aloo\+Present\+Window}} (Gtk\+Widget $\ast$window)
-\begin{DoxyCompactList}\small\item\em Presents Gtk\+Window. \end{DoxyCompactList}\item 
-Gtk\+Widget $\ast$ \mbox{\hyperlink{app_8h_a634c75f1d0c5eb0f96bdbae33f521a8d}{aloo\+Add\+New\+Button\+Label}} (const char $\ast$label)
-\begin{DoxyCompactList}\small\item\em Create new Gtk\+Button. \end{DoxyCompactList}\item 
-Gtk\+Widget $\ast$ \mbox{\hyperlink{app_8h_a085d71076852c990130591ff13a5d513}{aloo\+Application\+New\+Window}} (Gtk\+Application $\ast$app)
-\begin{DoxyCompactList}\small\item\em Create a Gtk\+Window. \end{DoxyCompactList}\item 
-Gtk\+Widget $\ast$ \mbox{\hyperlink{app_8h_ac46dc2c7069e7755ec43eb8cab9972c4}{aloo\+Set\+Window\+Title}} (Gtk\+Widget $\ast$window, const char $\ast$title)
-\begin{DoxyCompactList}\small\item\em Sets Gtk\+Window title. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{app_8h_a64b7d24a9ac0ffcbdf783b7a4e5f7f49}{set\+Window\+Size}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window, int width, int height)
-\begin{DoxyCompactList}\small\item\em Sets aloo Window size. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{app_8h_a92fede26107ad6969917aafe93de0644}{set\+Window\+Application}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window, Gtk\+Application $\ast$app)
-\begin{DoxyCompactList}\small\item\em Set the Window for Application. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{app_8h_ac36f38589d0afa325b5fa36f37d8dc00}{show\+Window}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window)
-\begin{DoxyCompactList}\small\item\em Shows Window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+int \mbox{\hyperlink{app_8h_a46490337494d98b0418a81681f64ac00}{\+\_\+\+\_\+\+Run\+App}} (\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$application)
+\begin{DoxyCompactList}\small\item\em Runs aloo App. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{app_8h_a807ee39a59049927b9c337dcfa2eca4d}{\+\_\+\+\_\+\+Run\+App\+And\+Unref\+It}} (\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$application)
+\begin{DoxyCompactList}\small\item\em Runs aloo App and unrefs after exiting it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{app_8h_a2f508c5f0dce6eeb741c9f3006a31bc6}{\+\_\+\+\_\+unref\+App}} (\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$application)
+\begin{DoxyCompactList}\small\item\em unrefs aloo App \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{app_8h_a9c86fa6ee0b10cdbece4ba3c80123c00}{\+\_\+\+\_\+\+App\+Add\+Events}} (\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$app, const char $\ast$event, void callback\+Fn())
+\begin{DoxyCompactList}\small\item\em Adds Event Listener to Aloo App. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__alooApp}{\+\_\+aloo\+App}} \mbox{\hyperlink{app_8h_a8d7278193da6d9cded52ce4217232979}{Application}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -67,6 +80,45 @@ Aloo Application related functions.
 \begin{DoxyAuthor}{Author}
 Jaipal001 
 \end{DoxyAuthor}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{app_8h_a5f490aa55bfa20ab8b3274621cc3baa2}\label{app_8h_a5f490aa55bfa20ab8b3274621cc3baa2}} 
+\index{app.h@{app.h}!\_\_AppAddEvents\_Type@{\_\_AppAddEvents\_Type}}
+\index{\_\_AppAddEvents\_Type@{\_\_AppAddEvents\_Type}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{\_\_AppAddEvents\_Type}{\_\_AppAddEvents\_Type}}
+{\footnotesize\ttfamily typedef void($\ast$ \+\_\+\+\_\+\+App\+Add\+Events\+\_\+\+Type) (\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$app, const char $\ast$event, void callback\+Fn())}
+
+\mbox{\Hypertarget{app_8h_a95133c0df92796e7b4df688293eedd7e}\label{app_8h_a95133c0df92796e7b4df688293eedd7e}} 
+\index{app.h@{app.h}!\_\_CreateApp\_Type@{\_\_CreateApp\_Type}}
+\index{\_\_CreateApp\_Type@{\_\_CreateApp\_Type}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{\_\_CreateApp\_Type}{\_\_CreateApp\_Type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structAlooApplication}{Aloo\+Application}}$\ast$($\ast$ \+\_\+\+\_\+\+Create\+App\+\_\+\+Type) (const char $\ast$app\+\_\+id, struct \mbox{\hyperlink{structalooAppOptions}{aloo\+App\+Options}} g\+App\+Options)}
+
+\mbox{\Hypertarget{app_8h_a9bba07399d9aa1e6b87f19598bd8a60d}\label{app_8h_a9bba07399d9aa1e6b87f19598bd8a60d}} 
+\index{app.h@{app.h}!\_\_RunApp\_Type@{\_\_RunApp\_Type}}
+\index{\_\_RunApp\_Type@{\_\_RunApp\_Type}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{\_\_RunApp\_Type}{\_\_RunApp\_Type}}
+{\footnotesize\ttfamily typedef int($\ast$ \+\_\+\+\_\+\+Run\+App\+\_\+\+Type) (\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$application)}
+
+\mbox{\Hypertarget{app_8h_a9acebd98f9bfa6671da49f4186d713f3}\label{app_8h_a9acebd98f9bfa6671da49f4186d713f3}} 
+\index{app.h@{app.h}!\_\_RunAppAndUnrefIt\_Type@{\_\_RunAppAndUnrefIt\_Type}}
+\index{\_\_RunAppAndUnrefIt\_Type@{\_\_RunAppAndUnrefIt\_Type}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{\_\_RunAppAndUnrefIt\_Type}{\_\_RunAppAndUnrefIt\_Type}}
+{\footnotesize\ttfamily typedef int($\ast$ \+\_\+\+\_\+\+Run\+App\+And\+Unref\+It\+\_\+\+Type) (\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$application)}
+
+\mbox{\Hypertarget{app_8h_a4a87839afe5792be6e14631e4a9d611a}\label{app_8h_a4a87839afe5792be6e14631e4a9d611a}} 
+\index{app.h@{app.h}!\_\_unrefApp\_Type@{\_\_unrefApp\_Type}}
+\index{\_\_unrefApp\_Type@{\_\_unrefApp\_Type}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{\_\_unrefApp\_Type}{\_\_unrefApp\_Type}}
+{\footnotesize\ttfamily typedef void($\ast$ \+\_\+\+\_\+unref\+App\+\_\+\+Type) (\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$application)}
+
+\mbox{\Hypertarget{app_8h_a278b2f05488d5268c31ce89bbd7b1592}\label{app_8h_a278b2f05488d5268c31ce89bbd7b1592}} 
+\index{app.h@{app.h}!AlooApplication@{AlooApplication}}
+\index{AlooApplication@{AlooApplication}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{AlooApplication}{AlooApplication}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} \mbox{\hyperlink{structAlooApplication}{Aloo\+Application}}}
+
 
 
 \doxysubsection{Enumeration Type Documentation}
@@ -97,79 +149,30 @@ APP\+\_\+\+FLAGS\+\_\+\+IS\+\_\+\+SERVICE&G\+\_\+\+APPLICATION\+\_\+\+FLAGS\+\_\
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{app_8h_a634c75f1d0c5eb0f96bdbae33f521a8d}\label{app_8h_a634c75f1d0c5eb0f96bdbae33f521a8d}} 
-\index{app.h@{app.h}!alooAddNewButtonLabel@{alooAddNewButtonLabel}}
-\index{alooAddNewButtonLabel@{alooAddNewButtonLabel}!app.h@{app.h}}
-\doxysubsubsection{\texorpdfstring{alooAddNewButtonLabel()}{alooAddNewButtonLabel()}}
-{\footnotesize\ttfamily Gtk\+Widget$\ast$ aloo\+Add\+New\+Button\+Label (\begin{DoxyParamCaption}\item[{const char $\ast$}]{label }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{app_8h_a9c86fa6ee0b10cdbece4ba3c80123c00}\label{app_8h_a9c86fa6ee0b10cdbece4ba3c80123c00}} 
+\index{app.h@{app.h}!\_\_AppAddEvents@{\_\_AppAddEvents}}
+\index{\_\_AppAddEvents@{\_\_AppAddEvents}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{\_\_AppAddEvents()}{\_\_AppAddEvents()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+\+App\+Add\+Events (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$}]{app,  }\item[{const char $\ast$}]{event,  }\item[{void }]{callback\+Fn() }\end{DoxyParamCaption})}
 
 
 
-Create new Gtk\+Button. 
-
-\mbox{\Hypertarget{app_8h_a085d71076852c990130591ff13a5d513}\label{app_8h_a085d71076852c990130591ff13a5d513}} 
-\index{app.h@{app.h}!alooApplicationNewWindow@{alooApplicationNewWindow}}
-\index{alooApplicationNewWindow@{alooApplicationNewWindow}!app.h@{app.h}}
-\doxysubsubsection{\texorpdfstring{alooApplicationNewWindow()}{alooApplicationNewWindow()}}
-{\footnotesize\ttfamily Gtk\+Widget$\ast$ aloo\+Application\+New\+Window (\begin{DoxyParamCaption}\item[{Gtk\+Application $\ast$}]{app }\end{DoxyParamCaption})}
-
-
-
-Create a Gtk\+Window. 
-
-\mbox{\Hypertarget{app_8h_aa991a64e8ef46ccbb328a3a27cf256d8}\label{app_8h_aa991a64e8ef46ccbb328a3a27cf256d8}} 
-\index{app.h@{app.h}!alooPresentWindow@{alooPresentWindow}}
-\index{alooPresentWindow@{alooPresentWindow}!app.h@{app.h}}
-\doxysubsubsection{\texorpdfstring{alooPresentWindow()}{alooPresentWindow()}}
-{\footnotesize\ttfamily Gtk\+Widget$\ast$ aloo\+Present\+Window (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{window }\end{DoxyParamCaption})}
-
-
-
-Presents Gtk\+Window. 
+Adds Event Listener to Aloo App. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em window} & \\
+{\em app} & Aloo Application \\
+\hline
+{\em event} & Event name \\
+\hline
+{\em callback\+Fn} & static void function which will be called when app is started \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Gtk\+Widget$\ast$ 
-\end{DoxyReturn}
-\mbox{\Hypertarget{app_8h_a6e6108adacb0408e9b9b010183d609c7}\label{app_8h_a6e6108adacb0408e9b9b010183d609c7}} 
-\index{app.h@{app.h}!alooSetWindowChild@{alooSetWindowChild}}
-\index{alooSetWindowChild@{alooSetWindowChild}!app.h@{app.h}}
-\doxysubsubsection{\texorpdfstring{alooSetWindowChild()}{alooSetWindowChild()}}
-{\footnotesize\ttfamily Gtk\+Widget$\ast$ aloo\+Set\+Window\+Child (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{window,  }\item[{Gtk\+Widget $\ast$}]{child }\end{DoxyParamCaption})}
-
-
-
-Sets Window child. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em window} & \\
-\hline
-{\em child} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Gtk\+Widget$\ast$ 
-\end{DoxyReturn}
-\mbox{\Hypertarget{app_8h_ac46dc2c7069e7755ec43eb8cab9972c4}\label{app_8h_ac46dc2c7069e7755ec43eb8cab9972c4}} 
-\index{app.h@{app.h}!alooSetWindowTitle@{alooSetWindowTitle}}
-\index{alooSetWindowTitle@{alooSetWindowTitle}!app.h@{app.h}}
-\doxysubsubsection{\texorpdfstring{alooSetWindowTitle()}{alooSetWindowTitle()}}
-{\footnotesize\ttfamily Gtk\+Widget$\ast$ aloo\+Set\+Window\+Title (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{window,  }\item[{const char $\ast$}]{title }\end{DoxyParamCaption})}
-
-
-
-Sets Gtk\+Window title. 
-
-\mbox{\Hypertarget{app_8h_afd2b2ad2dc96320df448c0835aee1bb4}\label{app_8h_afd2b2ad2dc96320df448c0835aee1bb4}} 
-\index{app.h@{app.h}!CreateApp@{CreateApp}}
-\index{CreateApp@{CreateApp}!app.h@{app.h}}
-\doxysubsubsection{\texorpdfstring{CreateApp()}{CreateApp()}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structalooApp__Status}{aloo\+App\+\_\+\+Status}} Create\+App (\begin{DoxyParamCaption}\item[{char $\ast$}]{app\+\_\+id,  }\item[{struct \mbox{\hyperlink{structalooAppOptions}{aloo\+App\+Options}}}]{g\+App\+Options,  }\item[{void }]{activate\+FnGtk\+Application $\ast$app, gpointer user\+\_\+data }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{app_8h_a9b9430cf2d56ab44dcb668f861797334}\label{app_8h_a9b9430cf2d56ab44dcb668f861797334}} 
+\index{app.h@{app.h}!\_\_CreateApp@{\_\_CreateApp}}
+\index{\_\_CreateApp@{\_\_CreateApp}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{\_\_CreateApp()}{\_\_CreateApp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structAlooApplication}{Aloo\+Application}}$\ast$ \+\_\+\+\_\+\+Create\+App (\begin{DoxyParamCaption}\item[{const char $\ast$}]{app\+\_\+id,  }\item[{struct \mbox{\hyperlink{structalooAppOptions}{aloo\+App\+Options}}}]{g\+App\+Options }\end{DoxyParamCaption})}
 
 
 
@@ -181,39 +184,52 @@ Create a App object.
 \hline
 {\em g\+App\+Options} & It takes GApplication\+Flags, argc and argv \\
 \hline
-{\em activate\+Fn} & static void function which will be called when app is started \\
-\hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-It returns Gtk\+Application and status 
+It returns Aloo Application 
 \end{DoxyReturn}
-\mbox{\Hypertarget{app_8h_a92fede26107ad6969917aafe93de0644}\label{app_8h_a92fede26107ad6969917aafe93de0644}} 
-\index{app.h@{app.h}!setWindowApplication@{setWindowApplication}}
-\index{setWindowApplication@{setWindowApplication}!app.h@{app.h}}
-\doxysubsubsection{\texorpdfstring{setWindowApplication()}{setWindowApplication()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ set\+Window\+Application (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{window,  }\item[{Gtk\+Application $\ast$}]{app }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{app_8h_a46490337494d98b0418a81681f64ac00}\label{app_8h_a46490337494d98b0418a81681f64ac00}} 
+\index{app.h@{app.h}!\_\_RunApp@{\_\_RunApp}}
+\index{\_\_RunApp@{\_\_RunApp}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{\_\_RunApp()}{\_\_RunApp()}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+\+Run\+App (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$}]{application }\end{DoxyParamCaption})}
 
 
 
-Set the Window for Application. 
+Runs aloo App. 
 
-\mbox{\Hypertarget{app_8h_a64b7d24a9ac0ffcbdf783b7a4e5f7f49}\label{app_8h_a64b7d24a9ac0ffcbdf783b7a4e5f7f49}} 
-\index{app.h@{app.h}!setWindowSize@{setWindowSize}}
-\index{setWindowSize@{setWindowSize}!app.h@{app.h}}
-\doxysubsubsection{\texorpdfstring{setWindowSize()}{setWindowSize()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$ set\+Window\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{window,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
-
-
-
-Sets aloo Window size. 
-
-\mbox{\Hypertarget{app_8h_ac36f38589d0afa325b5fa36f37d8dc00}\label{app_8h_ac36f38589d0afa325b5fa36f37d8dc00}} 
-\index{app.h@{app.h}!showWindow@{showWindow}}
-\index{showWindow@{showWindow}!app.h@{app.h}}
-\doxysubsubsection{\texorpdfstring{showWindow()}{showWindow()}}
-{\footnotesize\ttfamily void show\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{window }\end{DoxyParamCaption})}
+\begin{DoxyReturn}{Returns}
+status on exiting app 
+\end{DoxyReturn}
+\mbox{\Hypertarget{app_8h_a807ee39a59049927b9c337dcfa2eca4d}\label{app_8h_a807ee39a59049927b9c337dcfa2eca4d}} 
+\index{app.h@{app.h}!\_\_RunAppAndUnrefIt@{\_\_RunAppAndUnrefIt}}
+\index{\_\_RunAppAndUnrefIt@{\_\_RunAppAndUnrefIt}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{\_\_RunAppAndUnrefIt()}{\_\_RunAppAndUnrefIt()}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+\+Run\+App\+And\+Unref\+It (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$}]{application }\end{DoxyParamCaption})}
 
 
 
-Shows Window. 
+Runs aloo App and unrefs after exiting it. 
+
+\begin{DoxyReturn}{Returns}
+status on exiting app 
+\end{DoxyReturn}
+\mbox{\Hypertarget{app_8h_a2f508c5f0dce6eeb741c9f3006a31bc6}\label{app_8h_a2f508c5f0dce6eeb741c9f3006a31bc6}} 
+\index{app.h@{app.h}!\_\_unrefApp@{\_\_unrefApp}}
+\index{\_\_unrefApp@{\_\_unrefApp}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{\_\_unrefApp()}{\_\_unrefApp()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+unref\+App (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$}]{application }\end{DoxyParamCaption})}
+
+
+
+unrefs aloo App 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{app_8h_a8d7278193da6d9cded52ce4217232979}\label{app_8h_a8d7278193da6d9cded52ce4217232979}} 
+\index{app.h@{app.h}!Application@{Application}}
+\index{Application@{Application}!app.h@{app.h}}
+\doxysubsubsection{\texorpdfstring{Application}{Application}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct__alooApp}{\+\_\+aloo\+App}} Application\hspace{0.3cm}{\ttfamily [extern]}}
 

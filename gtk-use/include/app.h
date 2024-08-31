@@ -9,14 +9,6 @@
 #include <gtk/gtk.h>
 
 /**
- * @brief Returns GtkApplication and status
- */
-struct alooApp_Status {
-	GtkApplication *app;
-	int status;
-};
-
-/**
  * @brief G Application Flags
  */
 enum alooAppFlags {
@@ -34,6 +26,13 @@ enum alooAppFlags {
 	APP_FLAGS_IS_SERVICE
 };
 
+typedef struct AlooApplication {
+	GtkApplication *app;
+	int status;
+	int argc;
+	char **argv;
+} AlooApplication;
+
 /**
  * @brief Takes GApplicationFlags, argc and argv
  */
@@ -43,63 +42,68 @@ struct alooAppOptions {
 	char **argv;
 };
 
+/******************** Private Funcs ********************/
+
 /**
  * @brief Create a App object
  * @param app_id App Id are like com.google.Chrome, dev.zed.Zed
  * @param gAppOptions It takes GApplicationFlags, argc and argv
- * @param activateFn static void function which will be called when app is
+ * @return It returns Aloo Application
+ */
+AlooApplication *__CreateApp(const char *app_id,
+							 struct alooAppOptions gAppOptions);
+
+/// @brief Runs aloo App
+/// @return status on exiting app
+int __RunApp(AlooApplication *application);
+/// @brief Runs aloo App and unrefs after exiting it
+/// @return status on exiting app
+int __RunAppAndUnrefIt(AlooApplication *application);
+/** @brief unrefs aloo App */
+void __unrefApp(AlooApplication *application);
+/**
+ * @brief Adds Event Listener to Aloo App
+ * @param app Aloo Application
+ * @param event Event name
+ * @param callbackFn static void function which will be called when app is
  * started
- * @return It returns GtkApplication and status
  */
-struct alooApp_Status CreateApp(char *app_id, struct alooAppOptions gAppOptions,
-								void activateFn(GtkApplication *app,
-												gpointer user_data));
+void __AppAddEvents(AlooApplication *app, const char *event, void callbackFn());
 
-/**
- * @brief Sets Window child
- *
- * @param window
- * @param child
- * @return GtkWidget*
- */
-GtkWidget *alooSetWindowChild(GtkWidget *window, GtkWidget *child);
+/******************** Private Types ********************/
 
-/**
- * @brief Presents GtkWindow
- *
- * @param window
- * @return GtkWidget*
- */
-GtkWidget *alooPresentWindow(GtkWidget *window);
+typedef AlooApplication *(*__CreateApp_Type)(const char *app_id,
+											 struct alooAppOptions gAppOptions);
+typedef int (*__RunApp_Type)(AlooApplication *application);
+typedef int (*__RunAppAndUnrefIt_Type)(AlooApplication *application);
+typedef void (*__unrefApp_Type)(AlooApplication *application);
+typedef void (*__AppAddEvents_Type)(AlooApplication *app, const char *event,
+									void callbackFn());
 
-/**
- * @brief Create new GtkButton
- */
-GtkWidget *alooAddNewButtonLabel(const char *label);
+struct _alooApp {
+	/// @brief Create a App object
+	/// @param app_id App Id are like com.google.Chrome, dev.zed.Zed
+	/// @param gAppOptions It takes GApplicationFlags, argc and argv
+	/// @return It returns Aloo Application
+	__CreateApp_Type create;
+	/// @brief Runs aloo App
+	/// @return status on exiting app
+	__RunApp_Type run;
+	/// @brief Runs aloo App and unrefs after exiting it
+	/// @return status on exiting app
+	__RunAppAndUnrefIt_Type run_and_unref;
+	/** @brief unrefs aloo App */
+	__unrefApp_Type unref;
+	/// @brief Adds Event Listener to Aloo App
+	/// @param app Aloo Application
+	/// @param event Event name
+	/// @param callbackFn static void function which will be called when app is
+	/// started
+	__AppAddEvents_Type add_event_listener;
+};
 
-/**
- * @brief Create a GtkWindow
- */
-GtkWidget *alooApplicationNewWindow(GtkApplication *app);
+/******************** Public ********************/
 
-/**
- * @brief Sets GtkWindow title
- */
-GtkWidget *alooSetWindowTitle(GtkWidget *window, const char *title);
-
-/**
- * @brief Sets aloo Window size
- */
-alooWidget *setWindowSize(alooWidget *window, int width, int height);
-
-/**
- * @brief Set the Window for Application
- */
-alooWidget *setWindowApplication(alooWidget *window, GtkApplication *app);
-
-/**
- * @brief Shows Window
- */
-void showWindow(alooWidget *window);
+extern struct _alooApp Application;
 
 #endif // ALOO_APP_H

@@ -1,6 +1,6 @@
 # mkdir bin
 name="Aloo"
-# gcc $(pkg-config --cflags gtk4) -o bin/run.exe main.c ../build/libaloo.a $(pkg-config --libs gtk4)
+# gcc $(pkg-config --cflags gtk4) -o bin/run.exe main.c ../lib/libaloo.a $(pkg-config --libs gtk4)
 # ./bin/run.exe
 
 if [ -f "main.c" ]; then

@@ -13,3 +13,4 @@
 #include "macros.h"
 #include "style.h"
 #include "widget.h"
+#include "window.h"

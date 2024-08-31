@@ -1,4 +1,4 @@
-.TH "include/app.h" 3 "Sat Aug 31 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "include/app.h" 3 "Sun Sep 1 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -16,13 +16,37 @@ include/app.h \- Aloo Application related functions\&.
 
 .in +1c
 .ti -1c
-.RI "struct \fBalooApp_Status\fP"
+.RI "struct \fBAlooApplication\fP"
 .br
-.RI "Returns GtkApplication and status\&. "
 .ti -1c
 .RI "struct \fBalooAppOptions\fP"
 .br
 .RI "Takes GApplicationFlags, argc and argv\&. "
+.ti -1c
+.RI "struct \fB_alooApp\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBAlooApplication\fP \fBAlooApplication\fP"
+.br
+.ti -1c
+.RI "typedef \fBAlooApplication\fP *(* \fB__CreateApp_Type\fP) (const char *app_id, struct \fBalooAppOptions\fP gAppOptions)"
+.br
+.ti -1c
+.RI "typedef int(* \fB__RunApp_Type\fP) (\fBAlooApplication\fP *application)"
+.br
+.ti -1c
+.RI "typedef int(* \fB__RunAppAndUnrefIt_Type\fP) (\fBAlooApplication\fP *application)"
+.br
+.ti -1c
+.RI "typedef void(* \fB__unrefApp_Type\fP) (\fBAlooApplication\fP *application)"
+.br
+.ti -1c
+.RI "typedef void(* \fB__AppAddEvents_Type\fP) (\fBAlooApplication\fP *app, const char *event, void callbackFn())"
+.br
 .in -1c
 .SS "Enumerations"
 
@@ -36,41 +60,32 @@ include/app.h \- Aloo Application related functions\&.
 
 .in +1c
 .ti -1c
-.RI "struct \fBalooApp_Status\fP \fBCreateApp\fP (char *app_id, struct \fBalooAppOptions\fP gAppOptions, void activateFn(GtkApplication *app, gpointer user_data))"
+.RI "\fBAlooApplication\fP * \fB__CreateApp\fP (const char *app_id, struct \fBalooAppOptions\fP gAppOptions)"
 .br
 .RI "Create a App object\&. "
 .ti -1c
-.RI "GtkWidget * \fBalooSetWindowChild\fP (GtkWidget *window, GtkWidget *child)"
+.RI "int \fB__RunApp\fP (\fBAlooApplication\fP *application)"
 .br
-.RI "Sets Window child\&. "
+.RI "Runs aloo App\&. "
 .ti -1c
-.RI "GtkWidget * \fBalooPresentWindow\fP (GtkWidget *window)"
+.RI "int \fB__RunAppAndUnrefIt\fP (\fBAlooApplication\fP *application)"
 .br
-.RI "Presents GtkWindow\&. "
+.RI "Runs aloo App and unrefs after exiting it\&. "
 .ti -1c
-.RI "GtkWidget * \fBalooAddNewButtonLabel\fP (const char *label)"
+.RI "void \fB__unrefApp\fP (\fBAlooApplication\fP *application)"
 .br
-.RI "Create new GtkButton\&. "
+.RI "unrefs aloo App "
 .ti -1c
-.RI "GtkWidget * \fBalooApplicationNewWindow\fP (GtkApplication *app)"
+.RI "void \fB__AppAddEvents\fP (\fBAlooApplication\fP *app, const char *event, void callbackFn())"
 .br
-.RI "Create a GtkWindow\&. "
+.RI "Adds Event Listener to Aloo App\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
 .ti -1c
-.RI "GtkWidget * \fBalooSetWindowTitle\fP (GtkWidget *window, const char *title)"
+.RI "struct \fB_alooApp\fP \fBApplication\fP"
 .br
-.RI "Sets GtkWindow title\&. "
-.ti -1c
-.RI "\fBalooWidget\fP * \fBsetWindowSize\fP (\fBalooWidget\fP *window, int width, int height)"
-.br
-.RI "Sets aloo Window size\&. "
-.ti -1c
-.RI "\fBalooWidget\fP * \fBsetWindowApplication\fP (\fBalooWidget\fP *window, GtkApplication *app)"
-.br
-.RI "Set the Window for Application\&. "
-.ti -1c
-.RI "void \fBshowWindow\fP (\fBalooWidget\fP *window)"
-.br
-.RI "Shows Window\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -83,6 +98,20 @@ Aloo Application related functions\&.
 Jaipal001 
 .RE
 .PP
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef void(* __AppAddEvents_Type) (\fBAlooApplication\fP *app, const char *event, void callbackFn())"
+
+.SS "typedef \fBAlooApplication\fP*(* __CreateApp_Type) (const char *app_id, struct \fBalooAppOptions\fP gAppOptions)"
+
+.SS "typedef int(* __RunApp_Type) (\fBAlooApplication\fP *application)"
+
+.SS "typedef int(* __RunAppAndUnrefIt_Type) (\fBAlooApplication\fP *application)"
+
+.SS "typedef void(* __unrefApp_Type) (\fBAlooApplication\fP *application)"
+
+.SS "typedef struct \fBAlooApplication\fP \fBAlooApplication\fP"
 
 .SH "Enumeration Type Documentation"
 .PP 
@@ -104,53 +133,22 @@ G_APPLICATION_FLAGS_IS_LAUNCHER\&.
 G_APPLICATION_FLAGS_IS_SERVICE\&. 
 .SH "Function Documentation"
 .PP 
-.SS "GtkWidget* alooAddNewButtonLabel (const char * label)"
+.SS "void __AppAddEvents (\fBAlooApplication\fP * app, const char * event, void  callbackFn())"
 
 .PP
-Create new GtkButton\&. 
-.SS "GtkWidget* alooApplicationNewWindow (GtkApplication * app)"
-
-.PP
-Create a GtkWindow\&. 
-.SS "GtkWidget* alooPresentWindow (GtkWidget * window)"
-
-.PP
-Presents GtkWindow\&. 
+Adds Event Listener to Aloo App\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIwindow\fP 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-GtkWidget* 
-.RE
-.PP
-
-.SS "GtkWidget* alooSetWindowChild (GtkWidget * window, GtkWidget * child)"
-
-.PP
-Sets Window child\&. 
-.PP
-\fBParameters\fP
-.RS 4
-\fIwindow\fP 
+\fIapp\fP Aloo Application 
 .br
-\fIchild\fP 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-GtkWidget* 
+\fIevent\fP Event name 
+.br
+\fIcallbackFn\fP static void function which will be called when app is started 
 .RE
 .PP
 
-.SS "GtkWidget* alooSetWindowTitle (GtkWidget * window, const char * title)"
-
-.PP
-Sets GtkWindow title\&. 
-.SS "struct \fBalooApp_Status\fP CreateApp (char * app_id, struct \fBalooAppOptions\fP gAppOptions, void  activateFnGtkApplication *app, gpointer user_data)"
+.SS "\fBAlooApplication\fP* __CreateApp (const char * app_id, struct \fBalooAppOptions\fP gAppOptions)"
 
 .PP
 Create a App object\&. 
@@ -160,28 +158,44 @@ Create a App object\&.
 \fIapp_id\fP App Id are like com\&.google\&.Chrome, dev\&.zed\&.Zed 
 .br
 \fIgAppOptions\fP It takes GApplicationFlags, argc and argv 
-.br
-\fIactivateFn\fP static void function which will be called when app is started 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-It returns GtkApplication and status 
+It returns Aloo Application 
 .RE
 .PP
 
-.SS "\fBalooWidget\fP* setWindowApplication (\fBalooWidget\fP * window, GtkApplication * app)"
+.SS "int __RunApp (\fBAlooApplication\fP * application)"
 
 .PP
-Set the Window for Application\&. 
-.SS "\fBalooWidget\fP* setWindowSize (\fBalooWidget\fP * window, int width, int height)"
+Runs aloo App\&. 
+.PP
+\fBReturns\fP
+.RS 4
+status on exiting app 
+.RE
+.PP
+
+.SS "int __RunAppAndUnrefIt (\fBAlooApplication\fP * application)"
 
 .PP
-Sets aloo Window size\&. 
-.SS "void showWindow (\fBalooWidget\fP * window)"
+Runs aloo App and unrefs after exiting it\&. 
+.PP
+\fBReturns\fP
+.RS 4
+status on exiting app 
+.RE
+.PP
+
+.SS "void __unrefApp (\fBAlooApplication\fP * application)"
 
 .PP
-Shows Window\&. 
+unrefs aloo App 
+.SH "Variable Documentation"
+.PP 
+.SS "struct \fB_alooApp\fP Application\fC [extern]\fP"
+
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Aloo from the source code\&.

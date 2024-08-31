@@ -423,7 +423,7 @@
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
 <codeline lineno="58" refid="builder_8h_1acfc6a0451bdac59f29ebc6334d41188c" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="builder_8h_1acfc6a0451bdac59f29ebc6334d41188c" kindref="member">__alooWidgetFromBuilder</ref>(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*builder,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Types<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Private<sp/>Types<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
 <codeline lineno="62" refid="builder_8h_1aed886ff43cad9234d0ba1884e40b1f04" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="builder_8h_1aed886ff43cad9234d0ba1884e40b1f04" kindref="member">__unrefBuilderType</ref>)(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*data);</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"></highlight></codeline>

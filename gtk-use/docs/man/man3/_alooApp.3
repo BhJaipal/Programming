@@ -1,0 +1,99 @@
+.TH "_alooApp" 3 "Sun Sep 1 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+_alooApp
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <app\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB__CreateApp_Type\fP \fBcreate\fP"
+.br
+.RI "Create a App object\&. "
+.ti -1c
+.RI "\fB__RunApp_Type\fP \fBrun\fP"
+.br
+.RI "Runs aloo App\&. "
+.ti -1c
+.RI "\fB__RunAppAndUnrefIt_Type\fP \fBrun_and_unref\fP"
+.br
+.RI "Runs aloo App and unrefs after exiting it\&. "
+.ti -1c
+.RI "\fB__unrefApp_Type\fP \fBunref\fP"
+.br
+.RI "unrefs aloo App "
+.ti -1c
+.RI "\fB__AppAddEvents_Type\fP \fBadd_event_listener\fP"
+.br
+.RI "Adds Event Listener to Aloo App\&. "
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "\fB__AppAddEvents_Type\fP _alooApp::add_event_listener"
+
+.PP
+Adds Event Listener to Aloo App\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIapp\fP Aloo Application 
+.br
+\fIevent\fP Event name 
+.br
+\fIcallbackFn\fP static void function which will be called when app is started 
+.RE
+.PP
+
+.SS "\fB__CreateApp_Type\fP _alooApp::create"
+
+.PP
+Create a App object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIapp_id\fP App Id are like com\&.google\&.Chrome, dev\&.zed\&.Zed 
+.br
+\fIgAppOptions\fP It takes GApplicationFlags, argc and argv 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+It returns Aloo Application 
+.RE
+.PP
+
+.SS "\fB__RunApp_Type\fP _alooApp::run"
+
+.PP
+Runs aloo App\&. 
+.PP
+\fBReturns\fP
+.RS 4
+status on exiting app 
+.RE
+.PP
+
+.SS "\fB__RunAppAndUnrefIt_Type\fP _alooApp::run_and_unref"
+
+.PP
+Runs aloo App and unrefs after exiting it\&. 
+.PP
+\fBReturns\fP
+.RS 4
+status on exiting app 
+.RE
+.PP
+
+.SS "\fB__unrefApp_Type\fP _alooApp::unref"
+
+.PP
+unrefs aloo App 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Aloo from the source code\&.

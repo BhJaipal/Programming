@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['importcssfromdata_273',['importCssFromData',['../style_8h.html#af5b4d6f7ea6b8b061193544aaf8f9be2',1,'style.h']]],
-  ['importcssfromfile_274',['importCssFromFile',['../style_8h.html#a2021fd798c801903539ed696efa2b8cf',1,'style.h']]],
-  ['importcssfrompath_275',['importCssFromPath',['../style_8h.html#a0bcc85b2cb03ec6bee88142e29c42e57',1,'style.h']]]
+  ['setheight_320',['setHeight',['../style_8h.html#a7c770a3c3f4921eaae08fa6e12c4a8aa',1,'style.h']]],
+  ['setsize_321',['setSize',['../style_8h.html#ab40dc82bdb6610257e6f29fcb843cab3',1,'style.h']]],
+  ['setwidgetclasses_322',['setWidgetClasses',['../style_8h.html#aacd84293dbcb41d87b2e865e13fbe6da',1,'style.h']]],
+  ['setwidth_323',['setWidth',['../style_8h.html#a63eb6e780503e6108a3311a57bf4738a',1,'style.h']]]
 ];

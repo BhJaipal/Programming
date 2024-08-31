@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structAlooApplication" kind="struct" language="C++" prot="public">
+    <compoundname>AlooApplication</compoundname>
+    <includes refid="app_8h" local="no">app.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAlooApplication_1ad98c802d8afeed723df8dbcf93fdf1e2" prot="public" static="no" mutable="no">
+        <type>GtkApplication *</type>
+        <definition>GtkApplication* AlooApplication::app</definition>
+        <argsstring></argsstring>
+        <name>app</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="30" column="16" bodyfile="include/app.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAlooApplication_1a1b52847b827b37c8eb858307f691f0a4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AlooApplication::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="31" column="5" bodyfile="include/app.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAlooApplication_1af8d33abeb063f90d374eb0ef586875c9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AlooApplication::argc</definition>
+        <argsstring></argsstring>
+        <name>argc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="32" column="5" bodyfile="include/app.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAlooApplication_1acb09c1ab957182ff91f4930028b36543" prot="public" static="no" mutable="no">
+        <type>char **</type>
+        <definition>char** AlooApplication::argv</definition>
+        <argsstring></argsstring>
+        <name>argv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/app.h" line="33" column="6" bodyfile="include/app.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/app.h" line="29" column="1" bodyfile="include/app.h" bodystart="29" bodyend="34"/>
+    <listofallmembers>
+      <member refid="structAlooApplication_1ad98c802d8afeed723df8dbcf93fdf1e2" prot="public" virt="non-virtual"><scope>AlooApplication</scope><name>app</name></member>
+      <member refid="structAlooApplication_1af8d33abeb063f90d374eb0ef586875c9" prot="public" virt="non-virtual"><scope>AlooApplication</scope><name>argc</name></member>
+      <member refid="structAlooApplication_1acb09c1ab957182ff91f4930028b36543" prot="public" virt="non-virtual"><scope>AlooApplication</scope><name>argv</name></member>
+      <member refid="structAlooApplication_1a1b52847b827b37c8eb858307f691f0a4" prot="public" virt="non-virtual"><scope>AlooApplication</scope><name>status</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

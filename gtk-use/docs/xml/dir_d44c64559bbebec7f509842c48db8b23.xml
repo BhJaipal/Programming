@@ -13,6 +13,7 @@
     <innerfile refid="style_8h">style.h</innerfile>
     <innerfile refid="types_8h">types.h</innerfile>
     <innerfile refid="widget_8h">widget.h</innerfile>
+    <innerfile refid="window_8h">window.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

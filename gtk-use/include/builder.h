@@ -57,7 +57,7 @@ GObject *__alooGetBuilderObject(AlooBuilder *builder, const char *name);
  */
 alooWidget *__alooWidgetFromBuilder(AlooBuilder *builder, const char *name);
 
-/******************** Types ********************/
+/******************** Private Types ********************/
 
 typedef void (*__unrefBuilderType)(AlooBuilder *data);
 

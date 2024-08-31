@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="window_8h" kind="file" language="C++">
+    <compoundname>window.h</compoundname>
+    <includes refid="app_8h" local="yes">app.h</includes>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includedby refid="aloo_8h" local="yes">include/aloo.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/window.h</label>
+        <link refid="window_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>gtk/gtk.h</label>
+      </node>
+      <node id="3">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>app.h</label>
+        <link refid="app_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/window.h</label>
+        <link refid="window_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/aloo.h</label>
+        <link refid="aloo_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct__alooWindow" prot="public">_alooWindow</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="window_8h_1a838ef9ee7d949d041286b909899ef5dd" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __alooSetWindowChild_Type) (alooWidget *window, alooWidget *child)</definition>
+        <argsstring>)(alooWidget *window, alooWidget *child)</argsstring>
+        <name>__alooSetWindowChild_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/window.h" line="53" column="9" bodyfile="include/window.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="window_8h_1ab9fe52d585200e1af4b62247763983ee" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __alooPresentWindow_Type) (alooWidget *window)</definition>
+        <argsstring>)(alooWidget *window)</argsstring>
+        <name>__alooPresentWindow_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/window.h" line="56" column="9" bodyfile="include/window.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="window_8h_1abec0f2604c9a30b72c72f3dbf6220cd2" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __alooApplicationNewWindow_Type) (AlooApplication *app)</definition>
+        <argsstring>)(AlooApplication *app)</argsstring>
+        <name>__alooApplicationNewWindow_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/window.h" line="58" column="9" bodyfile="include/window.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="window_8h_1a11a9f67b03d63f28252d4d55ab3f689a" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __alooSetWindowTitle_Type) (alooWidget *window, const char *title)</definition>
+        <argsstring>)(alooWidget *window, const char *title)</argsstring>
+        <name>__alooSetWindowTitle_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/window.h" line="60" column="9" bodyfile="include/window.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="window_8h_1a79726c65ac6d0739867a2c9bc3d2624b" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __setWindowSize_Type) (alooWidget *window, int width, int height)</definition>
+        <argsstring>)(alooWidget *window, int width, int height)</argsstring>
+        <name>__setWindowSize_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/window.h" line="63" column="9" bodyfile="include/window.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="window_8h_1a8fe109a7ae19d254c7ca918354d15dde" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __setWindowApplication_Type) (alooWidget *window, AlooApplication *app)</definition>
+        <argsstring>)(alooWidget *window, AlooApplication *app)</argsstring>
+        <name>__setWindowApplication_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/window.h" line="66" column="9" bodyfile="include/window.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="window_8h_1a2761337c8c639f7e4ba12fc0ea361471" prot="public" static="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>typedef alooWidget*(* __app_add_window_Type) (AlooApplication *app, alooWidget *window)</definition>
+        <argsstring>)(AlooApplication *app, alooWidget *window)</argsstring>
+        <name>__app_add_window_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/window.h" line="68" column="9" bodyfile="include/window.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="window_8h_1a3c98359a51199241964e2fde72071e05" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* __showWindow_Type) (alooWidget *window)</definition>
+        <argsstring>)(alooWidget *window)</argsstring>
+        <name>__showWindow_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/window.h" line="70" column="9" bodyfile="include/window.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="window_8h_1a9e8d19541a39461f209ae43567d52db2" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct__alooWindow" kindref="compound">_alooWindow</ref></type>
+        <definition>struct _alooWindow Window</definition>
+        <argsstring></argsstring>
+        <name>Window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/window.h" line="70" column="9" declfile="include/window.h" declline="70" declcolumn="9"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="window_8h_1aaa7aa3b7d82f6b37f4543e66d99ccf9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* __alooSetWindowChild</definition>
+        <argsstring>(alooWidget *window, alooWidget *child)</argsstring>
+        <name>__alooSetWindowChild</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>child</declname>
+        </param>
+        <briefdescription>
+<para>Sets Window child. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/window.h" line="17" column="12" declfile="include/window.h" declline="17" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="window_8h_1aea2a4bc2c5a1825d715bd325fff8ff00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* __alooPresentWindow</definition>
+        <argsstring>(alooWidget *window)</argsstring>
+        <name>__alooPresentWindow</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Presents GtkWindow. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/window.h" line="22" column="12" declfile="include/window.h" declline="22" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="window_8h_1aa94d9af0fed232546d65914e28deb49f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* __alooApplicationNewWindow</definition>
+        <argsstring>(AlooApplication *app)</argsstring>
+        <name>__alooApplicationNewWindow</name>
+        <param>
+          <type><ref refid="structAlooApplication" kindref="compound">AlooApplication</ref> *</type>
+          <declname>app</declname>
+        </param>
+        <briefdescription>
+<para>Create a GtkWindow. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/window.h" line="27" column="12" declfile="include/window.h" declline="27" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="window_8h_1a6d59427a08caac58b6150c8488a15800" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* __alooSetWindowTitle</definition>
+        <argsstring>(alooWidget *window, const char *title)</argsstring>
+        <name>__alooSetWindowTitle</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+<para>Sets GtkWindow title. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/window.h" line="32" column="12" declfile="include/window.h" declline="32" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="window_8h_1a43e4cbdb79f2030b1f0e78582c2ae641" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* __setWindowSize</definition>
+        <argsstring>(alooWidget *window, int width, int height)</argsstring>
+        <name>__setWindowSize</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Sets aloo Window size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/window.h" line="37" column="12" declfile="include/window.h" declline="37" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="window_8h_1ab2e5fd8855e33222a56eac2ac9bfb240" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* __setWindowApplication</definition>
+        <argsstring>(alooWidget *window, AlooApplication *app)</argsstring>
+        <name>__setWindowApplication</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="structAlooApplication" kindref="compound">AlooApplication</ref> *</type>
+          <declname>app</declname>
+        </param>
+        <briefdescription>
+<para>Set the Window for Application. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/window.h" line="42" column="12" declfile="include/window.h" declline="42" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="window_8h_1ab502a5b1d6124e5e111fe70586041aab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+        <definition>alooWidget* __app_add_window</definition>
+        <argsstring>(AlooApplication *app, alooWidget *window)</argsstring>
+        <name>__app_add_window</name>
+        <param>
+          <type><ref refid="structAlooApplication" kindref="compound">AlooApplication</ref> *</type>
+          <declname>app</declname>
+        </param>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/window.h" line="44" column="12" declfile="include/window.h" declline="44" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="window_8h_1a39fd2992cacd3b32562cf06fd1ce6053" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void __showWindow</definition>
+        <argsstring>(alooWidget *window)</argsstring>
+        <name>__showWindow</name>
+        <param>
+          <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Shows Window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/window.h" line="49" column="6" declfile="include/window.h" declline="49" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains aloo Window related functions. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Jaipal001 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ALOO_WINDOW_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_WINDOW_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="app_8h" kindref="compound">app.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Private<sp/>Funcs<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="window_8h_1aaa7aa3b7d82f6b37f4543e66d99ccf9f" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="window_8h_1aaa7aa3b7d82f6b37f4543e66d99ccf9f" kindref="member">__alooSetWindowChild</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*window,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*child);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="window_8h_1aea2a4bc2c5a1825d715bd325fff8ff00" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="window_8h_1aea2a4bc2c5a1825d715bd325fff8ff00" kindref="member">__alooPresentWindow</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*window);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="window_8h_1aa94d9af0fed232546d65914e28deb49f" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="window_8h_1aa94d9af0fed232546d65914e28deb49f" kindref="member">__alooApplicationNewWindow</ref>(<ref refid="structAlooApplication" kindref="compound">AlooApplication</ref><sp/>*app);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="window_8h_1a6d59427a08caac58b6150c8488a15800" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="window_8h_1a6d59427a08caac58b6150c8488a15800" kindref="member">__alooSetWindowTitle</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*window,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*title);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="window_8h_1a43e4cbdb79f2030b1f0e78582c2ae641" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="window_8h_1a43e4cbdb79f2030b1f0e78582c2ae641" kindref="member">__setWindowSize</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="window_8h_1ab2e5fd8855e33222a56eac2ac9bfb240" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="window_8h_1ab2e5fd8855e33222a56eac2ac9bfb240" kindref="member">__setWindowApplication</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*window,<sp/><ref refid="structAlooApplication" kindref="compound">AlooApplication</ref><sp/>*app);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="window_8h_1ab502a5b1d6124e5e111fe70586041aab" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="window_8h_1ab502a5b1d6124e5e111fe70586041aab" kindref="member">__app_add_window</ref>(<ref refid="structAlooApplication" kindref="compound">AlooApplication</ref><sp/>*app,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*window);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="window_8h_1a39fd2992cacd3b32562cf06fd1ce6053" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="window_8h_1a39fd2992cacd3b32562cf06fd1ce6053" kindref="member">__showWindow</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*window);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Private<sp/>Types<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="window_8h_1a838ef9ee7d949d041286b909899ef5dd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__alooSetWindowChild_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*window,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*child);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="window_8h_1ab9fe52d585200e1af4b62247763983ee" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__alooPresentWindow_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*window);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="window_8h_1abec0f2604c9a30b72c72f3dbf6220cd2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__alooApplicationNewWindow_Type)(<ref refid="structAlooApplication" kindref="compound">AlooApplication</ref><sp/>*app);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="window_8h_1a11a9f67b03d63f28252d4d55ab3f689a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__alooSetWindowTitle_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*window,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*title);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="window_8h_1a79726c65ac6d0739867a2c9bc3d2624b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__setWindowSize_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="window_8h_1a8fe109a7ae19d254c7ca918354d15dde" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__setWindowApplication_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*window,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAlooApplication" kindref="compound">AlooApplication</ref><sp/>*app);</highlight></codeline>
+<codeline lineno="68" refid="window_8h_1a2761337c8c639f7e4ba12fc0ea361471" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__app_add_window_Type)(<ref refid="structAlooApplication" kindref="compound">AlooApplication</ref><sp/>*app,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*window);</highlight></codeline>
+<codeline lineno="70" refid="window_8h_1a3c98359a51199241964e2fde72071e05" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="window_8h_1a3c98359a51199241964e2fde72071e05" kindref="member">__showWindow_Type</ref>)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*window);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="struct__alooWindow" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__alooWindow" kindref="compound">_alooWindow</ref><sp/>{</highlight></codeline>
+<codeline lineno="73" refid="struct__alooWindow_1a58b6fe2c1669b0a3115814742c34b967" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="window_8h_1abec0f2604c9a30b72c72f3dbf6220cd2" kindref="member">__alooApplicationNewWindow_Type</ref><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74" refid="struct__alooWindow_1a69eb586c39bd205c3090052062603800" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="window_8h_1ab9fe52d585200e1af4b62247763983ee" kindref="member">__alooPresentWindow_Type</ref><sp/><ref refid="struct__alooWindow_1a69eb586c39bd205c3090052062603800" kindref="member">present</ref>;</highlight></codeline>
+<codeline lineno="75" refid="struct__alooWindow_1a76819237feac7bff766987104b51aeab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="window_8h_1a838ef9ee7d949d041286b909899ef5dd" kindref="member">__alooSetWindowChild_Type</ref><sp/><ref refid="struct__alooWindow_1a76819237feac7bff766987104b51aeab" kindref="member">setChild</ref>;</highlight></codeline>
+<codeline lineno="76" refid="struct__alooWindow_1a958c501818bddcf9399bd3c2a731f3a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="window_8h_1a11a9f67b03d63f28252d4d55ab3f689a" kindref="member">__alooSetWindowTitle_Type</ref><sp/><ref refid="struct__alooWindow_1a958c501818bddcf9399bd3c2a731f3a5" kindref="member">setTitle</ref>;</highlight></codeline>
+<codeline lineno="77" refid="struct__alooWindow_1af380e7305b03ac7d9bd88f424d771acb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="window_8h_1a79726c65ac6d0739867a2c9bc3d2624b" kindref="member">__setWindowSize_Type</ref><sp/><ref refid="struct__alooWindow_1af380e7305b03ac7d9bd88f424d771acb" kindref="member">setSize</ref>;</highlight></codeline>
+<codeline lineno="78" refid="struct__alooWindow_1a4dd10bb0a31c1d5d24962027429a7ce7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="window_8h_1a8fe109a7ae19d254c7ca918354d15dde" kindref="member">__setWindowApplication_Type</ref><sp/><ref refid="struct__alooWindow_1a4dd10bb0a31c1d5d24962027429a7ce7" kindref="member">set_app_window</ref>;</highlight></codeline>
+<codeline lineno="79" refid="struct__alooWindow_1ab21c30a752473650b70b0ec15b69dfa2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="window_8h_1a2761337c8c639f7e4ba12fc0ea361471" kindref="member">__app_add_window_Type</ref><sp/><ref refid="struct__alooWindow_1ab21c30a752473650b70b0ec15b69dfa2" kindref="member">app_add_window</ref>;</highlight></codeline>
+<codeline lineno="80" refid="struct__alooWindow_1a2c45374a9db8020ae326a897010e53a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="window_8h_1a3c98359a51199241964e2fde72071e05" kindref="member">__showWindow_Type</ref><sp/><ref refid="struct__alooWindow_1a2c45374a9db8020ae326a897010e53a0" kindref="member">show</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Public<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__alooWindow" kindref="compound">_alooWindow</ref><sp/><ref refid="window_8h_1a9e8d19541a39461f209ae43567d52db2" kindref="member">Window</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_WINDOW_H</highlight></codeline>
+    </programlisting>
+    <location file="include/window.h"/>
+  </compounddef>
+</doxygen>

@@ -1,4 +1,4 @@
-.TH "include/types.h" 3 "Sat Aug 31 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "include/types.h" 3 "Sun Sep 1 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -37,7 +37,7 @@ include/types.h \- Aloo Project Types related functions\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBWidgetType\fP { \fBALOO_BOX\fP, \fBALOO_GRID\fP, \fBALOO_ROW\fP, \fBALOO_COLUMN\fP, \fBALOO_BUTTON\fP, \fBALOO_LABEL\fP, \fBALOO_NEW_WIDGET\fP }"
+.RI "enum \fBWidgetType\fP { \fBALOO_BOX\fP, \fBALOO_GRID\fP, \fBALOO_ROW\fP, \fBALOO_COLUMN\fP, \fBALOO_BUTTON\fP, \fBALOO_LABEL\fP, \fBALOO_WINDOW\fP, \fBALOO_NEW_WIDGET\fP }"
 .br
 .RI "Type of \fBalooWidget\fP\&. "
 .in -1c
@@ -90,6 +90,9 @@ Used for Gtk Button\&.
 .TP
 \fB\fIALOO_LABEL \fP\fP
 Used for Gtk Label\&. 
+.TP
+\fB\fIALOO_WINDOW \fP\fP
+Used for Gtk Window\&. 
 .TP
 \fB\fIALOO_NEW_WIDGET \fP\fP
 Can be used to create new custom widget and used with all\&. 
