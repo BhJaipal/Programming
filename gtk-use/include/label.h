@@ -1,6 +1,6 @@
 /**
  * @file label.h
- * @author Jaipal001 (@BhJaipal)
+ * @author Jaipal001
  * @brief Aloo Label related functions
  */
 #ifndef ALOO_LABEL_H

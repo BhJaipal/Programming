@@ -1,6 +1,6 @@
 /**
  * @file types.h
- * @author Jaipal001 (@BhJaipal)
+ * @author Jaipal001
  * @brief Aloo Project Types related functions
  */
 #ifndef ALOO_TYPES_H

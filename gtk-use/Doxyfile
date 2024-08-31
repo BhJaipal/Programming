@@ -13,13 +13,10 @@ MACRO_EXPANSION       = YES
 # EXCLUDE_PATTERNS        = *.cpp *.h
 
 RECURSIVE              = YES
-GENERATE_HTML           = NO
+GENERATE_HTML           = YES
 HTML_FILE_EXTENSION    = .html
 
-MARKDOWN_SUPPORT		= YES
-MARKDOWN_ID_STYLE		= YES
 GENERATE_LATEX          = YES
 GENERATE_RTF            = YES
 GENERATE_XML            = YES
 GENERATE_MAN            = YES
-MANPATH= docs/man

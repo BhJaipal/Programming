@@ -1,6 +1,6 @@
 /**
  * @file app.h
- * @author Jaipal001 (@BhJaipal)
+ * @author Jaipal001
  * @brief Aloo Application related functions
  */
 #ifndef ALOO_APP_H
@@ -46,7 +46,7 @@ struct alooAppOptions {
 /**
  * @brief Create a App object
  * @param app_id App Id are like com.google.Chrome, dev.zed.Zed
- * @param appOptions It takes GApplicationFlags, argc and argv
+ * @param gAppOptions It takes GApplicationFlags, argc and argv
  * @param activateFn static void function which will be called when app is
  * started
  * @return It returns GtkApplication and status

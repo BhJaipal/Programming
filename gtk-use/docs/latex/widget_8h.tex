@@ -8,9 +8,21 @@ Aloo Widget related functions.
 {\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$gtk/gtk.\+h$>$}\newline
 Include dependency graph for widget.\+h\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{widget_8h__incl}
+\end{center}
+\end{figure}
 This graph shows which files directly or indirectly include this file\+:
-% FIG 1
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{widget_8h__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -69,7 +81,7 @@ struct \mbox{\hyperlink{struct__aloo__widget}{\+\_\+aloo\+\_\+widget}} \mbox{\hy
 Aloo Widget related functions. 
 
 \begin{DoxyAuthor}{Author}
-Jaipal001 (@\+Bh\+Jaipal) 
+Jaipal001 
 \end{DoxyAuthor}
 
 
@@ -144,6 +156,10 @@ Adds event listener to a widget.
 
 \begin{DoxyParams}{Parameters}
 {\em widget\+\_\+instance} & \\
+\hline
+{\em event\+\_\+name} & Event name \\
+\hline
+{\em Callback\+Fn} & Event Callback function \\
 \hline
 {\em data} & parameters for event listener \\
 \hline

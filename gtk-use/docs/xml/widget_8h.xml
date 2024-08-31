@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="69" column="9" bodyfile="include/widget.h" bodystart="69" bodyend="-1"/>
+        <location file="include/widget.h" line="71" column="9" bodyfile="include/widget.h" bodystart="71" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="widget_8h_1a0c54804ca5131c7ed63911e0585108a1" prot="public" static="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="71" column="9" bodyfile="include/widget.h" bodystart="71" bodyend="-1"/>
+        <location file="include/widget.h" line="73" column="9" bodyfile="include/widget.h" bodystart="73" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="widget_8h_1a05bed2b8e3cd6198c19410b686470a48" prot="public" static="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="73" column="9" bodyfile="include/widget.h" bodystart="73" bodyend="-1"/>
+        <location file="include/widget.h" line="75" column="9" bodyfile="include/widget.h" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="widget_8h_1a64fc216b85a2827f1ac602a67b7b9a2e" prot="public" static="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="76" column="9" bodyfile="include/widget.h" bodystart="76" bodyend="-1"/>
+        <location file="include/widget.h" line="78" column="9" bodyfile="include/widget.h" bodystart="78" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="widget_8h_1a1430a1a0897570a0423713394faf07b9" prot="public" static="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -101,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="78" column="9" bodyfile="include/widget.h" bodystart="78" bodyend="-1"/>
+        <location file="include/widget.h" line="80" column="9" bodyfile="include/widget.h" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="widget_8h_1a98348bd3f871c91b864e4b21dc5006f0" prot="public" static="no">
         <type>GtkWidget *(*</type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="80" column="9" bodyfile="include/widget.h" bodystart="80" bodyend="-1"/>
+        <location file="include/widget.h" line="82" column="9" bodyfile="include/widget.h" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="widget_8h_1ab36e712123f8c845e940d19707948667" prot="public" static="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="83" column="9" bodyfile="include/widget.h" bodystart="83" bodyend="-1"/>
+        <location file="include/widget.h" line="85" column="9" bodyfile="include/widget.h" bodystart="85" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="widget_8h_1a20b21653e7905d3077558c8780b8cf2b" prot="public" static="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -140,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="85" column="9" bodyfile="include/widget.h" bodystart="85" bodyend="-1"/>
+        <location file="include/widget.h" line="87" column="9" bodyfile="include/widget.h" bodystart="87" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="widget_8h_1ad74f1c9fcd1452513f60a4dd08afaf45" prot="public" static="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="88" column="9" bodyfile="include/widget.h" bodystart="88" bodyend="-1"/>
+        <location file="include/widget.h" line="90" column="9" bodyfile="include/widget.h" bodystart="90" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="88" column="9" declfile="include/widget.h" declline="88" declcolumn="9"/>
+        <location file="include/widget.h" line="90" column="9" declfile="include/widget.h" declline="90" declcolumn="9"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -415,6 +415,22 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
+<parametername>event_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Event name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>CallbackFn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Event Callback function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
 <parametername>data</parametername>
 </parameternamelist>
 <parameterdescription>
@@ -426,14 +442,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="63" column="12" declfile="include/widget.h" declline="63" declcolumn="12"/>
+        <location file="include/widget.h" line="65" column="12" declfile="include/widget.h" declline="65" declcolumn="12"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Aloo Widget related functions. </para>
     </briefdescription>
     <detaileddescription>
-<para><simplesect kind="author"><para>Jaipal001 (@BhJaipal) </para>
+<para><simplesect kind="author"><para>Jaipal001 </para>
 </simplesect>
 </para>
     </detaileddescription>
@@ -461,53 +477,53 @@
 <codeline lineno="52" refid="widget_8h_1a723480206252f9c49a96016e525c80bb" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="widget_8h_1a723480206252f9c49a96016e525c80bb" kindref="member">__alooHorizontalAlign</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/>GtkAlign<sp/>alignment);</highlight></codeline>
 <codeline lineno="56" refid="widget_8h_1a5949823315aa75ff5c04f791f75d301c" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="widget_8h_1a5949823315aa75ff5c04f791f75d301c" kindref="member">__alooVerticalAlign</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/>GtkAlign<sp/>alignment);</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63" refid="widget_8h_1a0cf5af29b9d23e3e483d0870f0a52ff2" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="widget_8h_1a0cf5af29b9d23e3e483d0870f0a52ff2" kindref="member">__alooAddEventListener</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget_instance,</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*event_name,<sp/>GCallback<sp/>CallbackFn,</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpointer<sp/>data);</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Private<sp/>Types<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="widget_8h_1a0cf5af29b9d23e3e483d0870f0a52ff2" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="widget_8h_1a0cf5af29b9d23e3e483d0870f0a52ff2" kindref="member">__alooAddEventListener</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget_instance,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*event_name,<sp/>GCallback<sp/>CallbackFn,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpointer<sp/>data);</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69" refid="widget_8h_1ab3fcd2a829accf7c2d1f00c982c005b1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*GTK_TO_ALOO_Type)(GtkWidget<sp/>*widget);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Private<sp/>Types<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71" refid="widget_8h_1a0c54804ca5131c7ed63911e0585108a1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*OBJECT_TO_ALOO_Type)(GObject<sp/>*obj);</highlight></codeline>
+<codeline lineno="71" refid="widget_8h_1ab3fcd2a829accf7c2d1f00c982c005b1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*GTK_TO_ALOO_Type)(GtkWidget<sp/>*widget);</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73" refid="widget_8h_1a05bed2b8e3cd6198c19410b686470a48" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*alooSetOrientation_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GtkOrientation<sp/>orien);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76" refid="widget_8h_1a64fc216b85a2827f1ac602a67b7b9a2e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*NewWidget_Type)(<ref refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452" kindref="member">WidgetType</ref><sp/>type,<sp/>GtkWidget<sp/>*child);</highlight></codeline>
+<codeline lineno="73" refid="widget_8h_1a0c54804ca5131c7ed63911e0585108a1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*OBJECT_TO_ALOO_Type)(GObject<sp/>*obj);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="widget_8h_1a05bed2b8e3cd6198c19410b686470a48" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*alooSetOrientation_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GtkOrientation<sp/>orien);</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78" refid="widget_8h_1a1430a1a0897570a0423713394faf07b9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*setWidgetName_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="78" refid="widget_8h_1a64fc216b85a2827f1ac602a67b7b9a2e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*NewWidget_Type)(<ref refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452" kindref="member">WidgetType</ref><sp/>type,<sp/>GtkWidget<sp/>*child);</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80" refid="widget_8h_1a98348bd3f871c91b864e4b21dc5006f0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>GtkWidget<sp/>*(*__OBJECT_TO_GTK_WIDGET_Type)(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*builder,</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83" refid="widget_8h_1ab36e712123f8c845e940d19707948667" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__alooVerticalAlign_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GtkAlign<sp/>alignment);</highlight></codeline>
-<codeline lineno="85" refid="widget_8h_1a20b21653e7905d3077558c8780b8cf2b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__alooHorizontalAlign_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GtkAlign<sp/>alignment);</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88" refid="widget_8h_1ad74f1c9fcd1452513f60a4dd08afaf45" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__alooAddEventListener_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget_instance,</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*event_name,</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GCallback<sp/>CallbackFn,</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpointer<sp/>data);</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Public<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="widget_8h_1a1430a1a0897570a0423713394faf07b9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*setWidgetName_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="widget_8h_1a98348bd3f871c91b864e4b21dc5006f0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>GtkWidget<sp/>*(*__OBJECT_TO_GTK_WIDGET_Type)(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*builder,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="widget_8h_1ab36e712123f8c845e940d19707948667" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__alooVerticalAlign_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GtkAlign<sp/>alignment);</highlight></codeline>
+<codeline lineno="87" refid="widget_8h_1a20b21653e7905d3077558c8780b8cf2b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__alooHorizontalAlign_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GtkAlign<sp/>alignment);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="widget_8h_1ad74f1c9fcd1452513f60a4dd08afaf45" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__alooAddEventListener_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget_instance,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*event_name,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GCallback<sp/>CallbackFn,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpointer<sp/>data);</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95" refid="struct__aloo__widget" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__aloo__widget" kindref="compound">_aloo_widget</ref><sp/>{</highlight></codeline>
-<codeline lineno="97" refid="struct__aloo__widget_1ab8d991aec12ae9b25d4b1b0620b85d5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1a98348bd3f871c91b864e4b21dc5006f0" kindref="member">__OBJECT_TO_GTK_WIDGET_Type</ref><sp/><ref refid="struct__aloo__widget_1ab8d991aec12ae9b25d4b1b0620b85d5e" kindref="member">obj_to_gtk</ref>;</highlight></codeline>
-<codeline lineno="99" refid="struct__aloo__widget_1a0140f49eba0a1aaf4b69b0409559e186" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1a0c54804ca5131c7ed63911e0585108a1" kindref="member">OBJECT_TO_ALOO_Type</ref><sp/><ref refid="struct__aloo__widget_1a0140f49eba0a1aaf4b69b0409559e186" kindref="member">obj_to_aloo</ref>;</highlight></codeline>
-<codeline lineno="101" refid="struct__aloo__widget_1ac0d8de1bfe827e06d7272d45e3259584" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1ab3fcd2a829accf7c2d1f00c982c005b1" kindref="member">GTK_TO_ALOO_Type</ref><sp/><ref refid="struct__aloo__widget_1ac0d8de1bfe827e06d7272d45e3259584" kindref="member">gtk_to_aloo</ref>;</highlight></codeline>
-<codeline lineno="103" refid="struct__aloo__widget_1a667170ce6aabc213da3c861838dc62a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1a05bed2b8e3cd6198c19410b686470a48" kindref="member">alooSetOrientation_Type</ref><sp/><ref refid="struct__aloo__widget_1a667170ce6aabc213da3c861838dc62a3" kindref="member">setOrientation</ref>;</highlight></codeline>
-<codeline lineno="108" refid="struct__aloo__widget_1a423702ebc0b53b5d91489295420fe2dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1a64fc216b85a2827f1ac602a67b7b9a2e" kindref="member">NewWidget_Type</ref><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="113" refid="struct__aloo__widget_1afae9f81bcf3de82b1dfc7fc90cb2f83d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1a1430a1a0897570a0423713394faf07b9" kindref="member">setWidgetName_Type</ref><sp/><ref refid="struct__aloo__widget_1afae9f81bcf3de82b1dfc7fc90cb2f83d" kindref="member">setName</ref>;</highlight></codeline>
-<codeline lineno="115" refid="struct__aloo__widget_1a7a382505c7088c8a451a08ee066a10a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1a20b21653e7905d3077558c8780b8cf2b" kindref="member">__alooHorizontalAlign_Type</ref><sp/><ref refid="struct__aloo__widget_1a7a382505c7088c8a451a08ee066a10a9" kindref="member">horizontalAlign</ref>;</highlight></codeline>
-<codeline lineno="117" refid="struct__aloo__widget_1adb6a4410b3917570c96ddb62fcc71997" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1ab36e712123f8c845e940d19707948667" kindref="member">__alooVerticalAlign_Type</ref><sp/><ref refid="struct__aloo__widget_1adb6a4410b3917570c96ddb62fcc71997" kindref="member">verticalAlign</ref>;</highlight></codeline>
-<codeline lineno="121" refid="struct__aloo__widget_1aca8d808db94a88af459a03c58d908b0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1ad74f1c9fcd1452513f60a4dd08afaf45" kindref="member">__alooAddEventListener_Type</ref><sp/><ref refid="struct__aloo__widget_1aca8d808db94a88af459a03c58d908b0f" kindref="member">addEventListener</ref>;</highlight></codeline>
-<codeline lineno="122"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__aloo__widget" kindref="compound">_aloo_widget</ref><sp/><ref refid="widget_8h_1a4f8497ae7e1b8daedfcdfa72d643a125" kindref="member">Widget</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Public<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="struct__aloo__widget" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__aloo__widget" kindref="compound">_aloo_widget</ref><sp/>{</highlight></codeline>
+<codeline lineno="99" refid="struct__aloo__widget_1ab8d991aec12ae9b25d4b1b0620b85d5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1a98348bd3f871c91b864e4b21dc5006f0" kindref="member">__OBJECT_TO_GTK_WIDGET_Type</ref><sp/><ref refid="struct__aloo__widget_1ab8d991aec12ae9b25d4b1b0620b85d5e" kindref="member">obj_to_gtk</ref>;</highlight></codeline>
+<codeline lineno="101" refid="struct__aloo__widget_1a0140f49eba0a1aaf4b69b0409559e186" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1a0c54804ca5131c7ed63911e0585108a1" kindref="member">OBJECT_TO_ALOO_Type</ref><sp/><ref refid="struct__aloo__widget_1a0140f49eba0a1aaf4b69b0409559e186" kindref="member">obj_to_aloo</ref>;</highlight></codeline>
+<codeline lineno="103" refid="struct__aloo__widget_1ac0d8de1bfe827e06d7272d45e3259584" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1ab3fcd2a829accf7c2d1f00c982c005b1" kindref="member">GTK_TO_ALOO_Type</ref><sp/><ref refid="struct__aloo__widget_1ac0d8de1bfe827e06d7272d45e3259584" kindref="member">gtk_to_aloo</ref>;</highlight></codeline>
+<codeline lineno="105" refid="struct__aloo__widget_1a667170ce6aabc213da3c861838dc62a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1a05bed2b8e3cd6198c19410b686470a48" kindref="member">alooSetOrientation_Type</ref><sp/><ref refid="struct__aloo__widget_1a667170ce6aabc213da3c861838dc62a3" kindref="member">setOrientation</ref>;</highlight></codeline>
+<codeline lineno="110" refid="struct__aloo__widget_1a423702ebc0b53b5d91489295420fe2dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1a64fc216b85a2827f1ac602a67b7b9a2e" kindref="member">NewWidget_Type</ref><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115" refid="struct__aloo__widget_1afae9f81bcf3de82b1dfc7fc90cb2f83d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1a1430a1a0897570a0423713394faf07b9" kindref="member">setWidgetName_Type</ref><sp/><ref refid="struct__aloo__widget_1afae9f81bcf3de82b1dfc7fc90cb2f83d" kindref="member">setName</ref>;</highlight></codeline>
+<codeline lineno="117" refid="struct__aloo__widget_1a7a382505c7088c8a451a08ee066a10a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1a20b21653e7905d3077558c8780b8cf2b" kindref="member">__alooHorizontalAlign_Type</ref><sp/><ref refid="struct__aloo__widget_1a7a382505c7088c8a451a08ee066a10a9" kindref="member">horizontalAlign</ref>;</highlight></codeline>
+<codeline lineno="119" refid="struct__aloo__widget_1adb6a4410b3917570c96ddb62fcc71997" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1ab36e712123f8c845e940d19707948667" kindref="member">__alooVerticalAlign_Type</ref><sp/><ref refid="struct__aloo__widget_1adb6a4410b3917570c96ddb62fcc71997" kindref="member">verticalAlign</ref>;</highlight></codeline>
+<codeline lineno="123" refid="struct__aloo__widget_1aca8d808db94a88af459a03c58d908b0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="widget_8h_1ad74f1c9fcd1452513f60a4dd08afaf45" kindref="member">__alooAddEventListener_Type</ref><sp/><ref refid="struct__aloo__widget_1aca8d808db94a88af459a03c58d908b0f" kindref="member">addEventListener</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_WIDGET_H</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__aloo__widget" kindref="compound">_aloo_widget</ref><sp/><ref refid="widget_8h_1a4f8497ae7e1b8daedfcdfa72d643a125" kindref="member">Widget</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_WIDGET_H</highlight></codeline>
     </programlisting>
     <location file="include/widget.h"/>
   </compounddef>

@@ -1,0 +1,1911 @@
+This is TeX, Version 3.141592653 (TeX Live 2022/dev/Debian) (preloaded format=tex 2024.8.31)  31 AUG 2024 13:39
+**label_8h.tex
+(./label_8h.tex
+! Undefined control sequence.
+l.1 \hypertarget
+                {label_8h}{}\doxysection{include/label.h File Reference}
+? q
+OK, entering \batchmode...
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.1 \hypertarget{label_
+                       8h}{}\doxysection{include/label.h File Reference}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.1 \hypertarget{label_8h}
+                          {}\doxysection{include/label.h File Reference}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+l.1 \hypertarget{label_8h}{}\doxysection
+                                        {include/label.h File Reference}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.2 \label
+          {label_8h}\index{include/label.h@{include/label.h}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.2 \label{label_8h}\index
+                          {include/label.h@{include/label.h}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.3 
+    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.8 {\ttfamily
+               \#include \char`\"{}types.\+h\char`\"{}}\newline
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.8 ...lude \char`\"{}types.\+h\char`\"{}}\newline
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Runaway definition?
+->\@crtrue \t@bb@x 
+! Forbidden control sequence found while scanning definition of \cr.
+<inserted text> 
+                }
+<to be read again> 
+                   \endtemplate 
+<template> \t@bb@x \endtemplate 
+                                
+\m@ketabbox ...one \null \def \cr {\@crtrue \crcr 
+                                                  \egroup \egroup \ifus@ \un...
+l.9 Include dependency graph for label.\+
+                                         h\+:
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+<to be read again> 
+                   \endtemplate 
+<template> \t@bb@x \endtemplate 
+                                
+\m@ketabbox ...one \null \def \cr {\@crtrue \crcr 
+                                                  \egroup \egroup \ifus@ \un...
+l.9 Include dependency graph for label.\+
+                                         h\+:
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Runaway definition?
+! Forbidden control sequence found while scanning definition of \t@bb@x.
+<inserted text> 
+                }
+<to be read again> 
+                   \endtemplate 
+<template> \t@bb@x \endtemplate 
+                                
+\m@ketabbox ...l \setbox \tabsdone \null \def \cr 
+                                                  {\@crtrue \crcr \egroup \e...
+l.9 Include dependency graph for label.\+h\+
+                                            :
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+! Missing { inserted.
+<inserted text> }
+                 
+<to be read again> 
+                   \endtemplate 
+<template> \t@bb@x \endtemplate 
+                                
+\m@ketabbox ...l \setbox \tabsdone \null \def \cr 
+                                                  {\@crtrue \crcr \egroup \e...
+l.9 Include dependency graph for label.\+h\+
+                                            :
+Where was the left brace? You said something like `\def\a}',
+which I'm going to interpret as `\def\a{}'.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+<to be read again> 
+                   \endtemplate 
+<template> \t@bb@x \endtemplate 
+                                
+\m@ketabbox ...l \setbox \tabsdone \null \def \cr 
+                                                  {\@crtrue \crcr \egroup \e...
+l.9 Include dependency graph for label.\+h\+
+                                            :
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \endtemplate 
+<template> \t@bb@x \endtemplate 
+                                
+\m@ketabbox ...l \setbox \tabsdone \null \def \cr 
+                                                  {\@crtrue \crcr \egroup \e...
+l.9 Include dependency graph for label.\+h\+
+                                            :
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \crcr 
+\m@ketabbox ...one \null \def \cr {\@crtrue \crcr 
+                                                  \egroup \egroup \ifus@ \un...
+l.9 Include dependency graph for label.\+h\+
+                                            :
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \endgroup 
+\m@ketabbox ...\unvbox \z@ \lastbox \fi \endgroup 
+                                                  \setbox \tabs \hbox {\unhb...
+l.9 Include dependency graph for label.\+h\+
+                                            :
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+\m@ketabbox ...\unvbox \z@ \lastbox \fi \endgroup 
+                                                  \setbox \tabs \hbox {\unhb...
+l.9 Include dependency graph for label.\+h\+
+                                            :
+Things are pretty mixed up, but I think the worst is over.
+
+! Too many }'s.
+\m@ketabbox ...nhbox \tabsyet \unhbox \tabsdone }}
+                                                  \setbox \z@ \vbox \bgroup ...
+l.9 Include dependency graph for label.\+h\+
+                                            :
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+Runaway definition?
+! Forbidden control sequence found while scanning definition of \t@bb@x.
+<inserted text> 
+                }
+<to be read again> 
+                   \endtemplate 
+<template> \t@bb@x \endtemplate 
+                                
+\m@ketabbox ...l \setbox \tabsdone \null \def \cr 
+                                                  {\@crtrue \crcr \egroup \e...
+l.11 ...directly or indirectly include this file\+
+                                                  :
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+! Missing { inserted.
+<inserted text> }
+                 
+<to be read again> 
+                   \endtemplate 
+<template> \t@bb@x \endtemplate 
+                                
+\m@ketabbox ...l \setbox \tabsdone \null \def \cr 
+                                                  {\@crtrue \crcr \egroup \e...
+l.11 ...directly or indirectly include this file\+
+                                                  :
+Where was the left brace? You said something like `\def\a}',
+which I'm going to interpret as `\def\a{}'.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+<to be read again> 
+                   \endtemplate 
+<template> \t@bb@x \endtemplate 
+                                
+\m@ketabbox ...l \setbox \tabsdone \null \def \cr 
+                                                  {\@crtrue \crcr \egroup \e...
+l.11 ...directly or indirectly include this file\+
+                                                  :
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \endtemplate 
+<template> \t@bb@x \endtemplate 
+                                
+\m@ketabbox ...l \setbox \tabsdone \null \def \cr 
+                                                  {\@crtrue \crcr \egroup \e...
+l.11 ...directly or indirectly include this file\+
+                                                  :
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \crcr 
+\m@ketabbox ...one \null \def \cr {\@crtrue \crcr 
+                                                  \egroup \egroup \ifus@ \un...
+l.11 ...directly or indirectly include this file\+
+                                                  :
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Extra \endgroup.
+\m@ketabbox ...\unvbox \z@ \lastbox \fi \endgroup 
+                                                  \setbox \tabs \hbox {\unhb...
+l.11 ...directly or indirectly include this file\+
+                                                  :
+Things are pretty mixed up, but I think the worst is over.
+
+! Too many }'s.
+\m@ketabbox ...nhbox \tabsyet \unhbox \tabsdone }}
+                                                  \setbox \z@ \vbox \bgroup ...
+l.11 ...directly or indirectly include this file\+
+                                                  :
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Undefined control sequence.
+l.13 \doxysubsection
+                    *{Classes}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.14 \begin
+           {DoxyCompactItemize}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.16 struct \mbox
+                 {\hyperlink{struct____alooLabel}{\+\_\+\+\_\+aloo\+Label}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.16 struct \mbox{\hyperlink
+                            {struct____alooLabel}{\+\_\+\+\_\+aloo\+Label}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.16 struct \mbox{\hyperlink{struct_
+                                    ___alooLabel}{\+\_\+\+\_\+aloo\+Label}}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing { inserted.
+<to be read again> 
+                   _
+l.16 struct \mbox{\hyperlink{struct__
+                                     __alooLabel}{\+\_\+\+\_\+aloo\+Label}}
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing { inserted.
+<to be read again> 
+                   _
+l.16 struct \mbox{\hyperlink{struct___
+                                      _alooLabel}{\+\_\+\+\_\+aloo\+Label}}
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing { inserted.
+<to be read again> 
+                   _
+l.16 struct \mbox{\hyperlink{struct____
+                                       alooLabel}{\+\_\+\+\_\+aloo\+Label}}
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+l.16 ...ct____alooLabel}{\+\_\+\+\_\+aloo\+Label}}
+                                                  
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+<to be read again> 
+                   \cr 
+<to be read again> 
+                   }
+l.16 ...ct____alooLabel}{\+\_\+\+\_\+aloo\+Label}}
+                                                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (24.30562pt too wide) detected at line 16
+\tenrm Label|
+
+\hbox(6.94444+0.0)x0.0
+.\tenrm L
+.\tenrm a
+.\tenrm b
+.\kern0.27779
+.\tenrm e
+.etc.
+
+! You can't use `\end' in internal vertical mode.
+l.17 \end
+         {DoxyCompactItemize}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.18 \doxysubsection
+                    *{Typedefs}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.19 \begin
+           {DoxyCompactItemize}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.21 typedef \mbox
+                  {\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.21 typedef \mbox{\hyperlink
+                             {structalooWidget}{aloo\+Widget}} $\ast$($\ast$...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+l.21 ...hyperlink{structalooWidget}{aloo\+Widget}}
+                                                   $\ast$($\ast$ \mbox{\hype...
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+<to be read again> 
+                   \cr 
+<to be read again> 
+                   }
+l.21 ...hyperlink{structalooWidget}{aloo\+Widget}}
+                                                   $\ast$($\ast$ \mbox{\hype...
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (31.94452pt too wide) detected at line 21
+\tenrm Widget|
+
+\hbox(6.94444+1.94444)x0.0
+.\tenrm W
+.\tenrm i
+.\tenrm d
+.\tenrm g
+.\tenrm e
+.etc.
+
+! Undefined control sequence.
+l.21 ...Widget}{aloo\+Widget}} $\ast$($\ast$ \mbox
+                                                  {\hyperlink{label_8h_a2136...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.21 ...o\+Widget}} $\ast$($\ast$ \mbox{\hyperlink
+                                                  {label_8h_a213636152f4dc1e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.21 ...et}} $\ast$($\ast$ \mbox{\hyperlink{label_
+                                                  8h_a213636152f4dc1ee94cd8e...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.21 ...abel_8h_a213636152f4dc1ee94cd8e02c9e31b28}
+                                                  {\+\_\+new\+Label\+Type}})...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+l.21 ...94cd8e02c9e31b28}{\+\_\+new\+Label\+Type}}
+                                                  ) (const char $\ast$val)
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+<to be read again> 
+                   \cr 
+<to be read again> 
+                   }
+l.21 ...94cd8e02c9e31b28}{\+\_\+new\+Label\+Type}}
+                                                  ) (const char $\ast$val)
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (22.50005pt too wide) detected at line 21
+\tenrm Type|
+
+\hbox(6.83331+1.94444)x0.0
+.\tenrm T
+.\kern-0.27779
+.\tenrm y
+.\tenrm p
+.\kern0.27779
+.etc.
+
+! You can't use `\end' in internal vertical mode.
+<recently read> \end 
+                     
+l.22 \end
+         {DoxyCompactItemize}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.23 \doxysubsection
+                    *{Functions}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.24 \begin
+           {DoxyCompactItemize}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \mbox 
+                 \enspace 
+\llap #1->\hbox to\z@ {\hss #1
+                              }
+\textindent #1->\indent \llap {#1\enspace }
+                                           \ignorespaces 
+l.26 \mbox
+          {\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperli...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.26 \mbox{\hyperlink
+                     {structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperli...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+l.26 ...hyperlink{structalooWidget}{aloo\+Widget}}
+                                                   $\ast$ \mbox{\hyperlink{l...
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+<to be read again> 
+                   \cr 
+<to be read again> 
+                   }
+l.26 ...hyperlink{structalooWidget}{aloo\+Widget}}
+                                                   $\ast$ \mbox{\hyperlink{l...
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (31.94452pt too wide) detected at line 26
+\tenrm Widget|
+
+\hbox(6.94444+1.94444)x0.0
+.\tenrm W
+.\tenrm i
+.\tenrm d
+.\tenrm g
+.\tenrm e
+.etc.
+
+! Undefined control sequence.
+l.26 ...uctalooWidget}{aloo\+Widget}} $\ast$ \mbox
+                                                  {\hyperlink{label_8h_a2efd...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.26 ...et}{aloo\+Widget}} $\ast$ \mbox{\hyperlink
+                                                  {label_8h_a2efdaa462af392e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.26 ...o\+Widget}} $\ast$ \mbox{\hyperlink{label_
+                                                  8h_a2efdaa462af392ed6c6f7c...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.26 ...abel_8h_a2efdaa462af392ed6c6f7cae989f673f}
+                                                  {\+\_\+\+\_\+new\+Label}} ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+l.26 ...6c6f7cae989f673f}{\+\_\+\+\_\+new\+Label}}
+                                                   (const char $\ast$val)
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+<to be read again> 
+                   \cr 
+<to be read again> 
+                   }
+l.26 ...6c6f7cae989f673f}{\+\_\+\+\_\+new\+Label}}
+                                                   (const char $\ast$val)
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (24.30562pt too wide) detected at line 26
+\tenrm Label|
+
+\hbox(6.94444+0.0)x0.0
+.\tenrm L
+.\tenrm a
+.\tenrm b
+.\kern0.27779
+.\tenrm e
+.etc.
+
+! You can't use `\end' in internal vertical mode.
+<recently read> \end 
+                     
+l.27 \end
+         {DoxyCompactItemize}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.28 \doxysubsection
+                    *{Variables}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.29 \begin
+           {DoxyCompactItemize}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.31 struct \mbox
+                 {\hyperlink{struct____alooLabel}{\+\_\+\+\_\+aloo\+Label}} ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.31 struct \mbox{\hyperlink
+                            {struct____alooLabel}{\+\_\+\+\_\+aloo\+Label}} ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.31 struct \mbox{\hyperlink{struct_
+                                    ___alooLabel}{\+\_\+\+\_\+aloo\+Label}} ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing { inserted.
+<to be read again> 
+                   _
+l.31 struct \mbox{\hyperlink{struct__
+                                     __alooLabel}{\+\_\+\+\_\+aloo\+Label}} ...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing { inserted.
+<to be read again> 
+                   _
+l.31 struct \mbox{\hyperlink{struct___
+                                      _alooLabel}{\+\_\+\+\_\+aloo\+Label}} ...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing { inserted.
+<to be read again> 
+                   _
+l.31 struct \mbox{\hyperlink{struct____
+                                       alooLabel}{\+\_\+\+\_\+aloo\+Label}} ...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+l.31 ...ct____alooLabel}{\+\_\+\+\_\+aloo\+Label}}
+                                                   \mbox{\hyperlink{label_8h...
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+<to be read again> 
+                   \cr 
+<to be read again> 
+                   }
+l.31 ...ct____alooLabel}{\+\_\+\+\_\+aloo\+Label}}
+                                                   \mbox{\hyperlink{label_8h...
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (24.30562pt too wide) detected at line 31
+\tenrm Label|
+
+\hbox(6.94444+0.0)x0.0
+.\tenrm L
+.\tenrm a
+.\tenrm b
+.\kern0.27779
+.\tenrm e
+.etc.
+
+! Undefined control sequence.
+l.31 ...alooLabel}{\+\_\+\+\_\+aloo\+Label}} \mbox
+                                                  {\hyperlink{label_8h_a7bf2...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.31 ...\+\_\+\+\_\+aloo\+Label}} \mbox{\hyperlink
+                                                  {label_8h_a7bf2150721f7576...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.31 ...+\_\+aloo\+Label}} \mbox{\hyperlink{label_
+                                                  8h_a7bf2150721f7576df4178a...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.31 ...abel_8h_a7bf2150721f7576df4178adce8b5885f}
+                                                  {Label}}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.31 ...a7bf2150721f7576df4178adce8b5885f}{Label}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \end 
+l.32 \end
+         {DoxyCompactItemize}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! You can't use `\end' in internal vertical mode.
+<recently read> \end 
+                     
+l.32 \end
+         {DoxyCompactItemize}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.35 \doxysubsection
+                    {Detailed Description}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.38 \begin
+           {DoxyAuthor}{Author}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \end 
+l.40 \end
+         {DoxyAuthor}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \end 
+l.40 \end
+         {DoxyAuthor}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<to be read again> 
+                   \end 
+l.40 \end
+         {DoxyAuthor}
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+<to be read again> 
+                   \cr 
+<to be read again> 
+                   }
+<to be read again> 
+                   \end 
+l.40 \end
+         {DoxyAuthor}
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (32.36119pt too wide) detected at line 40
+\tenrm Jaipal) |
+
+\hbox(7.5+2.5)x0.0, glue set - 1.0
+.\tenrm J
+.\tenrm a
+.\tenrm i
+.\tenrm p
+.\tenrm a
+.etc.
+
+! You can't use `\end' in internal vertical mode.
+<recently read> \end 
+                     
+l.40 \end
+         {DoxyAuthor}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.43 \doxysubsection
+                    {Typedef Documentation}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.44 \mbox
+          {\Hypertarget{label_8h_a213636152f4dc1ee94cd8e02c9e31b28}\label{la...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.44 \mbox{\Hypertarget
+                       {label_8h_a213636152f4dc1ee94cd8e02c9e31b28}\label{la...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.44 \mbox{\Hypertarget{label_
+                              8h_a213636152f4dc1ee94cd8e02c9e31b28}\label{la...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.44 ...abel_8h_a213636152f4dc1ee94cd8e02c9e31b28}
+                                                  \label{label_8h_a213636152...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+l.44 ...h_a213636152f4dc1ee94cd8e02c9e31b28}\label
+                                                  {label_8h_a213636152f4dc1e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra }, or forgotten $.
+l.44 ...bel_8h_a213636152f4dc1ee94cd8e02c9e31b28}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+l.45 \index
+           {label.h@{label.h}!\_newLabelType@{\_newLabelType}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.46 \index
+           {\_newLabelType@{\_newLabelType}!label.h@{label.h}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.47 \doxysubsubsection
+                       {\texorpdfstring{\_newLabelType}{\_newLabelType}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.47 \doxysubsubsection{\texorpdfstring
+                                       {\_newLabelType}{\_newLabelType}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.48 {\footnotesize
+                   \ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.48 {\footnotesize\ttfamily
+                             typedef \mbox{\hyperlink{structalooWidget}{aloo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.48 {\footnotesize\ttfamily typedef \mbox
+                                          {\hyperlink{structalooWidget}{aloo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.48 ...notesize\ttfamily typedef \mbox{\hyperlink
+                                                  {structalooWidget}{aloo\+W...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+l.48 ...hyperlink{structalooWidget}{aloo\+Widget}}
+                                                  $\ast$($\ast$ \+\_\+new\+L...
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+<to be read again> 
+                   \cr 
+<to be read again> 
+                   }
+l.48 ...hyperlink{structalooWidget}{aloo\+Widget}}
+                                                  $\ast$($\ast$ \+\_\+new\+L...
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (31.94452pt too wide) detected at line 48
+\tenrm Widget|
+
+\hbox(6.94444+1.94444)x0.0
+.\tenrm W
+.\tenrm i
+.\tenrm d
+.\tenrm g
+.\tenrm e
+.etc.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \par 
+l.49 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<to be read again> 
+                   \par 
+l.49 
+     
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+<to be read again> 
+                   \cr 
+<to be read again> 
+                   }
+<to be read again> 
+                   \par 
+l.49 
+     
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (99.80574pt too wide) detected at line 49
+\tenrm Type) (const char $\tensy ^^C$\tenrm val)|
+
+\hbox(7.5+2.5)x0.0, glue set - 1.0
+.\tenrm T
+.\kern-0.27779
+.\tenrm y
+.\tenrm p
+.\kern0.27779
+.etc.
+
+! Undefined control sequence.
+l.52 \doxysubsection
+                    {Function Documentation}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.53 \mbox
+          {\Hypertarget{label_8h_a2efdaa462af392ed6c6f7cae989f673f}\label{la...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.53 \mbox{\Hypertarget
+                       {label_8h_a2efdaa462af392ed6c6f7cae989f673f}\label{la...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.53 \mbox{\Hypertarget{label_
+                              8h_a2efdaa462af392ed6c6f7cae989f673f}\label{la...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.53 ...abel_8h_a2efdaa462af392ed6c6f7cae989f673f}
+                                                  \label{label_8h_a2efdaa462...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+l.53 ...h_a2efdaa462af392ed6c6f7cae989f673f}\label
+                                                  {label_8h_a2efdaa462af392e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra }, or forgotten $.
+l.53 ...bel_8h_a2efdaa462af392ed6c6f7cae989f673f}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+l.54 \index
+           {label.h@{label.h}!\_\_newLabel@{\_\_newLabel}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.55 \index
+           {\_\_newLabel@{\_\_newLabel}!label.h@{label.h}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.56 \doxysubsubsection
+                       {\texorpdfstring{\_\_newLabel()}{\_\_newLabel()}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.56 \doxysubsubsection{\texorpdfstring
+                                       {\_\_newLabel()}{\_\_newLabel()}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.57 {\footnotesize
+                   \ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.57 {\footnotesize\ttfamily
+                             \mbox{\hyperlink{structalooWidget}{aloo\+Widget...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.57 {\footnotesize\ttfamily \mbox
+                                  {\hyperlink{structalooWidget}{aloo\+Widget...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.57 {\footnotesize\ttfamily \mbox{\hyperlink
+                                             {structalooWidget}{aloo\+Widget...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+l.57 ...hyperlink{structalooWidget}{aloo\+Widget}}
+                                                  $\ast$ \+\_\+\+\_\+new\+La...
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+<to be read again> 
+                   \cr 
+<to be read again> 
+                   }
+l.57 ...hyperlink{structalooWidget}{aloo\+Widget}}
+                                                  $\ast$ \+\_\+\+\_\+new\+La...
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (31.94452pt too wide) detected at line 57
+\tenrm Widget|
+
+\hbox(6.94444+1.94444)x0.0
+.\tenrm W
+.\tenrm i
+.\tenrm d
+.\tenrm g
+.\tenrm e
+.etc.
+
+! Undefined control sequence.
+l.57 ...get}}$\ast$ \+\_\+\+\_\+new\+Label (\begin
+                                                  {DoxyParamCaption}\item[{c...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \end 
+l.57 ...ption}\item[{const char $\ast$}]{val }\end
+                                                  {DoxyParamCaption})}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \end 
+l.57 ...ption}\item[{const char $\ast$}]{val }\end
+                                                  {DoxyParamCaption})}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<to be read again> 
+                   \end 
+l.57 ...ption}\item[{const char $\ast$}]{val }\end
+                                                  {DoxyParamCaption})}
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+<to be read again> 
+                   \cr 
+<to be read again> 
+                   }
+<to be read again> 
+                   \end 
+l.57 ...ption}\item[{const char $\ast$}]{val }\end
+                                                  {DoxyParamCaption})}
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (205.52818pt too wide) detected at line 57
+\tenrm Label (DoxyParamCaption[][]const char $\tensy ^^C$\tenrm ]val |
+
+\hbox(7.5+2.5)x0.0, glue set - 1.0
+.\tenrm L
+.\tenrm a
+.\tenrm b
+.\kern0.27779
+.\tenrm e
+.etc.
+
+! You can't use `\end' in internal vertical mode.
+<recently read> \end 
+                     
+l.57 ...ption}\item[{const char $\ast$}]{val }\end
+                                                  {DoxyParamCaption})}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+<to be read again> 
+                   \par 
+l.58 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \par 
+l.58 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \par 
+l.58 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<to be read again> 
+                   \par 
+l.58 
+     
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+<to be read again> 
+                   \cr 
+<to be read again> 
+                   }
+<to be read again> 
+                   \par 
+l.58 
+     
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing { inserted.
+<inserted text> 
+                {
+<to be read again> 
+                   \cr 
+<to be read again> 
+                   }
+<to be read again> 
+                   \par 
+l.58 
+     
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \endtemplate 
+<template> \t@bb@x \endtemplate 
+                                
+<to be read again> 
+                   }
+<to be read again> 
+                   \par 
+l.58 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Undefined control sequence.
+l.61 \doxysubsection
+                    {Variable Documentation}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.62 \mbox
+          {\Hypertarget{label_8h_a7bf2150721f7576df4178adce8b5885f}\label{la...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.62 \mbox{\Hypertarget
+                       {label_8h_a7bf2150721f7576df4178adce8b5885f}\label{la...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.62 \mbox{\Hypertarget{label_
+                              8h_a7bf2150721f7576df4178adce8b5885f}\label{la...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.62 ...abel_8h_a7bf2150721f7576df4178adce8b5885f}
+                                                  \label{label_8h_a7bf215072...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+l.62 ...h_a7bf2150721f7576df4178adce8b5885f}\label
+                                                  {label_8h_a7bf2150721f7576...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra }, or forgotten $.
+l.62 ...bel_8h_a7bf2150721f7576df4178adce8b5885f}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+l.63 \index
+           {label.h@{label.h}!Label@{Label}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.64 \index
+           {Label@{Label}!label.h@{label.h}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.65 \doxysubsubsection
+                       {\texorpdfstring{Label}{Label}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.65 \doxysubsubsection{\texorpdfstring
+                                       {Label}{Label}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.66 {\footnotesize
+                   \ttfamily struct \mbox{\hyperlink{struct____alooLabel}{\+...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.66 {\footnotesize\ttfamily
+                             struct \mbox{\hyperlink{struct____alooLabel}{\+...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.66 {\footnotesize\ttfamily struct \mbox
+                                         {\hyperlink{struct____alooLabel}{\+...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.66 ...tnotesize\ttfamily struct \mbox{\hyperlink
+                                                  {struct____alooLabel}{\+\_...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing { inserted.
+<to be read again> 
+                   _
+l.66 ...\ttfamily struct \mbox{\hyperlink{struct__
+                                                  __alooLabel}{\+\_\+\+\_\+a...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing { inserted.
+<to be read again> 
+                   _
+l.66 ...ttfamily struct \mbox{\hyperlink{struct___
+                                                  _alooLabel}{\+\_\+\+\_\+al...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing { inserted.
+<to be read again> 
+                   _
+l.66 ...tfamily struct \mbox{\hyperlink{struct____
+                                                  alooLabel}{\+\_\+\+\_\+alo...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+l.66 ...ct____alooLabel}{\+\_\+\+\_\+aloo\+Label}}
+                                                   Label\hspace{0.3cm}{\ttfa...
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+<to be read again> 
+                   \cr 
+<to be read again> 
+                   }
+l.66 ...ct____alooLabel}{\+\_\+\+\_\+aloo\+Label}}
+                                                   Label\hspace{0.3cm}{\ttfa...
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (24.30562pt too wide) detected at line 66
+\tenrm Label|
+
+\hbox(6.94444+0.0)x0.0
+.\tenrm L
+.\tenrm a
+.\tenrm b
+.\kern0.27779
+.\tenrm e
+.etc.
+
+! Undefined control sequence.
+l.66 ...el}{\+\_\+\+\_\+aloo\+Label}} Label\hspace
+                                                  {0.3cm}{\ttfamily [extern]}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.66 ...loo\+Label}} Label\hspace{0.3cm}{\ttfamily
+                                                   [extern]}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+<to be read again> 
+                   \par 
+l.67 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \par 
+l.67 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \par 
+l.67 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<to be read again> 
+                   \par 
+l.67 
+     
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+<to be read again> 
+                   \cr 
+<to be read again> 
+                   }
+<to be read again> 
+                   \par 
+l.67 
+     
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing { inserted.
+<inserted text> 
+                {
+<to be read again> 
+                   \cr 
+<to be read again> 
+                   }
+<to be read again> 
+                   \par 
+l.67 
+     
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \endtemplate 
+<template> \t@bb@x \endtemplate 
+                                
+<to be read again> 
+                   }
+<to be read again> 
+                   \par 
+l.67 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+)
+! Emergency stop.
+<*> label_8h.tex
+                
+*** (job aborted, no legal \end found)
+
+No pages of output.

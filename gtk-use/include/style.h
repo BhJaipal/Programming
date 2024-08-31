@@ -1,6 +1,6 @@
 /**
  * @file style.h
- * @author Jaipal001 (@BhJaipal)
+ * @author Jaipal001
  * @brief Aloo CSS related functions
  */
 #ifndef ALOO_STYLE_H

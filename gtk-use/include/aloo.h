@@ -1,6 +1,6 @@
 /**
  * @file aloo.h
- * @author Jaipal001 (@BhJaipal)
+ * @author Jaipal001
  * @brief Aloo Project Main file
  * It conatins all the header files
  */

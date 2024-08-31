@@ -1,6 +1,6 @@
 /**
  * @file macros.h
- * @author Jaipal001 (@BhJaipal)
+ * @author Jaipal001
  * @brief Aloo Project Macros related functions
  */
 #ifndef ALOO_MACROS_H

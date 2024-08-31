@@ -1,6 +1,6 @@
 /**
  * @file button.h
- * @author Jaipal001 (@BhJaipal)
+ * @author Jaipal001
  * @brief Aloo Button related functions
  */
 #ifndef ALOO_BUTTON_H

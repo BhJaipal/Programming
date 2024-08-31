@@ -1,6 +1,6 @@
 /**
  * @file builder.h
- * @author Jaipal001 @BhJaipal
+ * @author Jaipal001
  * @brief This file contains UI Builder related functions
  */
 #ifndef ALOO_BUILDER_H

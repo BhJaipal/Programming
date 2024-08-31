@@ -1,6 +1,6 @@
 /**
  * @file widget.h
- * @author Jaipal001 (@BhJaipal)
+ * @author Jaipal001
  * @brief Aloo Widget related functions
  */
 #ifndef ALOO_WIDGET_H
@@ -58,6 +58,8 @@ alooWidget *__alooVerticalAlign(alooWidget *widget, GtkAlign alignment);
 /**
  * @brief Adds event listener to a widget
  * @param widget_instance
+ * @param event_name Event name
+ * @param CallbackFn Event Callback function
  * @param data parameters for event listener
  */
 alooWidget *__alooAddEventListener(alooWidget *widget_instance,

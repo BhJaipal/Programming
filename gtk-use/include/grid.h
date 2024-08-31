@@ -1,6 +1,6 @@
 /**
  * @file grid.h
- * @author Jaipal001 (@BhJaipal)
+ * @author Jaipal001
  * @brief Aloo Grid related functions
  */
 #ifndef ALOO_GRID_H

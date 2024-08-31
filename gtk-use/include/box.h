@@ -1,6 +1,6 @@
 /**
  * @file box.h
- * @author Jaipal001 (@BhJaipal)
+ * @author Jaipal001
  * @brief Aloo Box functions
  */
 #ifndef ALOO_BOX_H
