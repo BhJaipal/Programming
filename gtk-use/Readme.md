@@ -27,3 +27,32 @@ cd examples
 ```
 
 > and follow CMake configs from [examples CMake](examples/CMakeLists.txt)
+
+## CLI
+
+A CLI for creating aloo app is out but it works only with bun or compile it
+
+### Create App
+
+```bash
+# create app without project name on arguments
+$ path/aloo create-app
+Enter Project Name:  [aloo-project] aloo-app
+Enter App Name:  [Example App] Hello World
+
+# create app with project name on arguments
+$ path/aloo create-app aloo-project
+Enter App Name:  [Example App]
+```
+
+### Run app
+
+```bash
+path/aloo run
+```
+
+### Run test
+
+```bash
+path/aloo test
+```

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['throw_5ferror_394',['throw_error',['../error_8h.html#a31f07c06769ff35959ac6176f357b75f',1,'error.h']]]
+  ['throw_5ferror_326',['throw_error',['../error_8h.html#a31f07c06769ff35959ac6176f357b75f',1,'error.h']]]
 ];

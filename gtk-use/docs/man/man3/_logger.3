@@ -1,4 +1,4 @@
-.TH "_logger" 3 "Sun Sep 1 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "_logger" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,14 +15,29 @@ _logger
 .RI "int \fBlogCount\fP"
 .br
 .ti -1c
+.RI "void(* \fBerr\fP )(struct \fB_logger\fP *self, const char *message)"
+.br
+.ti -1c
 .RI "void(* \fBlog\fP )(struct \fB_logger\fP *self, const char *message)"
+.br
+.ti -1c
+.RI "void(* \fBwarn\fP )(struct \fB_logger\fP *self, const char *message)"
+.br
+.ti -1c
+.RI "void(* \fBinfo\fP )(struct \fB_logger\fP *self, const char *message)"
 .br
 .in -1c
 .SH "Member Data Documentation"
 .PP 
+.SS "void(* _logger::err) (struct \fB_logger\fP *self, const char *message)"
+
+.SS "void(* _logger::info) (struct \fB_logger\fP *self, const char *message)"
+
 .SS "void(* _logger::log) (struct \fB_logger\fP *self, const char *message)"
 
 .SS "int _logger::logCount"
+
+.SS "void(* _logger::warn) (struct \fB_logger\fP *self, const char *message)"
 
 
 .SH "Author"

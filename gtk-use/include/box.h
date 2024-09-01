@@ -71,7 +71,6 @@ gboolean __getBoxHomogeneous(alooWidget *box);
  */
 alooWidget *__setBoxHomogeneous(alooWidget *box, gboolean homogeneous);
 
-// box baseline position
 /**
  * @brief Gets Box baseline position
  */
@@ -81,58 +80,54 @@ GtkBaselinePosition __getBoxBaselinePosition(alooWidget *box);
  */
 alooWidget *__setBoxBaselinePosition(alooWidget *box,
 									 GtkBaselinePosition position);
-
+/**
+ * @brief Returns Gtk Box
+ */
 GtkBox *__toGtk(alooWidget *widget);
 
 /******************** Private Types ********************/
 
-typedef alooWidget *(*__new_alooBox_Type)(GtkOrientation orientation,
-										  int spacing);
-typedef alooWidget *(*__setBoxOrientation_Type)(alooWidget *box,
-												GtkOrientation orientation);
-typedef GtkOrientation (*__getBoxOrientation_Type)(alooWidget *box);
-typedef alooWidget *(*__boxAppendGtk_Type)(alooWidget *box, GtkWidget *widget);
-typedef alooWidget *(*__boxPrependGtk_Type)(alooWidget *box, GtkWidget *widget);
-typedef alooWidget *(*__boxRemoveGtk_Type)(alooWidget *box, GtkWidget *widget);
-typedef alooWidget *(*__boxAppend_Type)(alooWidget *box, alooWidget *widget);
-typedef alooWidget *(*__boxPrepend_Type)(alooWidget *box, alooWidget *widget);
-typedef alooWidget *(*__boxRemove_Type)(alooWidget *box, alooWidget *widget);
-typedef alooWidget *(*__boxInsertChildAfter_Type)(alooWidget *box,
-												  alooWidget *child,
-												  alooWidget *after);
-typedef alooWidget *(*__setBoxSpacing_Type)(alooWidget *box, int spacing);
-typedef int (*__getBoxSpacing_Type)(alooWidget *box);
-typedef gboolean (*__getBoxHomogeneous_Type)(alooWidget *box);
-typedef alooWidget *(*__setBoxHomogeneous_Type)(alooWidget *box,
-												gboolean homogeneous);
-
-typedef GtkBaselinePosition (*__getBoxBaselinePosition_Type)(alooWidget *box);
-typedef alooWidget *(*__setBoxBaselinePosition_Type)(
-	alooWidget *box, GtkBaselinePosition position);
-
-typedef GtkBox *(*__toGtk_Type)(alooWidget *widget);
+struct _alooBox {
+	alooWidget *(*new)(GtkOrientation orientation, int spacing);
+	alooWidget *(*setOrientation)(alooWidget *box, GtkOrientation orientation);
+	/// @brief Gets Box Orientation
+	GtkOrientation (*getOrientation)(alooWidget *box);
+	/// @brief Appends `GtkWidget` child to box
+	alooWidget *(*appendGtk)(alooWidget *box, GtkWidget *widget);
+	/// @brief Prepends `GtkWidget` child to box
+	alooWidget *(*prependGtk)(alooWidget *box, GtkWidget *widget);
+	/// @brief Removes `GtkWidget` child from box
+	alooWidget *(*removeGtk)(alooWidget *box, GtkWidget *widget);
+	/// @brief Appends `alooWidget` child to box
+	alooWidget *(*append)(alooWidget *box, alooWidget *widget);
+	/// @brief Prepends `alooWidget` child to box
+	alooWidget *(*prepend)(alooWidget *box, alooWidget *widget);
+	/// @brief Removes `alooWidget` child from box
+	alooWidget *(*remove)(alooWidget *box, alooWidget *widget);
+	/**
+	 * @brief Adds child after a certain widget of box
+	 * @return returns box
+	 */
+	alooWidget *(*insertChildAfter)(alooWidget *box, alooWidget *child,
+									alooWidget *after);
+	/// @brief Sets Box Spacing
+	alooWidget *(*setSpacing)(alooWidget *box, int spacing);
+	/// @brief Gets Box Spacing
+	int (*getSpacing)(alooWidget *box);
+	/// @brief Gets box homogeneous
+	gboolean (*getHomogeneous)(alooWidget *box);
+	/// @brief Sets box homogeneous
+	alooWidget *(*setHomogeneous)(alooWidget *box, gboolean homogeneous);
+	/// @brief Gets Box baseline position
+	GtkBaselinePosition (*getBaselinePosition)(alooWidget *box);
+	/// @brief Sets Box baseline position
+	alooWidget *(*setBaselinePosition)(alooWidget *box,
+									   GtkBaselinePosition position);
+	/// @brief Returns Gtk Box
+	GtkBox *(*toGtk)(alooWidget *widget);
+};
 
 /******************** Public ********************/
-
-struct _alooBox {
-	__new_alooBox_Type new;
-	__setBoxOrientation_Type setOrientation;
-	__getBoxOrientation_Type getOrientation;
-	__boxAppendGtk_Type appendGtk;
-	__boxPrependGtk_Type prependGtk;
-	__boxRemoveGtk_Type removeGtk;
-	__boxAppend_Type append;
-	__boxPrepend_Type prepend;
-	__boxRemove_Type remove;
-	__boxInsertChildAfter_Type insertChildAfter;
-	__setBoxSpacing_Type setSpacing;
-	__getBoxSpacing_Type getSpacing;
-	__getBoxHomogeneous_Type getHomogeneous;
-	__setBoxHomogeneous_Type setHomogeneous;
-	__getBoxBaselinePosition_Type getBaselinePosition;
-	__setBoxBaselinePosition_Type setBaselinePosition;
-	__toGtk_Type toGtk;
-};
 
 extern struct _alooBox Box;
 

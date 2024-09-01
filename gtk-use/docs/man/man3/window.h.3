@@ -1,4 +1,4 @@
-.TH "include/window.h" 3 "Sun Sep 1 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "include/window.h" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,34 +17,6 @@ include/window.h \- Contains aloo Window related functions\&.
 .in +1c
 .ti -1c
 .RI "struct \fB_alooWindow\fP"
-.br
-.in -1c
-.SS "Typedefs"
-
-.in +1c
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__alooSetWindowChild_Type\fP) (\fBalooWidget\fP *window, \fBalooWidget\fP *child)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__alooPresentWindow_Type\fP) (\fBalooWidget\fP *window)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__alooApplicationNewWindow_Type\fP) (\fBAlooApplication\fP *app)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__alooSetWindowTitle_Type\fP) (\fBalooWidget\fP *window, const char *title)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__setWindowSize_Type\fP) (\fBalooWidget\fP *window, int width, int height)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__setWindowApplication_Type\fP) (\fBalooWidget\fP *window, \fBAlooApplication\fP *app)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__app_add_window_Type\fP) (\fBAlooApplication\fP *app, \fBalooWidget\fP *window)"
-.br
-.ti -1c
-.RI "typedef void(* \fB__showWindow_Type\fP) (\fBalooWidget\fP *window)"
 .br
 .in -1c
 .SS "Functions"
@@ -101,24 +73,6 @@ Contains aloo Window related functions\&.
 Jaipal001 
 .RE
 .PP
-
-.SH "Typedef Documentation"
-.PP 
-.SS "typedef \fBalooWidget\fP*(* __alooApplicationNewWindow_Type) (\fBAlooApplication\fP *app)"
-
-.SS "typedef \fBalooWidget\fP*(* __alooPresentWindow_Type) (\fBalooWidget\fP *window)"
-
-.SS "typedef \fBalooWidget\fP*(* __alooSetWindowChild_Type) (\fBalooWidget\fP *window, \fBalooWidget\fP *child)"
-
-.SS "typedef \fBalooWidget\fP*(* __alooSetWindowTitle_Type) (\fBalooWidget\fP *window, const char *title)"
-
-.SS "typedef \fBalooWidget\fP*(* __app_add_window_Type) (\fBAlooApplication\fP *app, \fBalooWidget\fP *window)"
-
-.SS "typedef \fBalooWidget\fP*(* __setWindowApplication_Type) (\fBalooWidget\fP *window, \fBAlooApplication\fP *app)"
-
-.SS "typedef \fBalooWidget\fP*(* __setWindowSize_Type) (\fBalooWidget\fP *window, int width, int height)"
-
-.SS "typedef void(* __showWindow_Type) (\fBalooWidget\fP *window)"
 
 .SH "Function Documentation"
 .PP 

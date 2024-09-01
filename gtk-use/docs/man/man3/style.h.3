@@ -1,4 +1,4 @@
-.TH "include/style.h" 3 "Sun Sep 1 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "include/style.h" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,40 +15,6 @@ include/style.h \- Aloo CSS related functions\&.
 .in +1c
 .ti -1c
 .RI "struct \fB_alooCSS\fP"
-.br
-.in -1c
-.SS "Typedefs"
-
-.in +1c
-.ti -1c
-.RI "typedef void(* \fB__importCssFromPath_Type\fP) (const char *name)"
-.br
-.ti -1c
-.RI "typedef void(* \fB__importCssFromData_Type\fP) (const char *content, gssize length)"
-.br
-.ti -1c
-.RI "typedef void(* \fB__importCssFromFile_Type\fP) (GFile *file)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__setWidth_Type\fP) (\fBalooWidget\fP *wid, int width)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__setHeight_Type\fP) (\fBalooWidget\fP *wid, int height)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__setSize_Type\fP) (\fBalooWidget\fP *wid, int width, int height)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__widgetAddClass_Type\fP) (\fBalooWidget\fP *widget, char *class)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__widgetRemoveClass_Type\fP) (\fBalooWidget\fP *widget, char *class)"
-.br
-.ti -1c
-.RI "typedef char **(* \fB__getWidgetClasses_Type\fP) (\fBalooWidget\fP *widget)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__setWidgetClasses_Type\fP) (\fBalooWidget\fP *widget, char **classes)"
 .br
 .in -1c
 .SS "Functions"
@@ -113,28 +79,6 @@ Aloo CSS related functions\&.
 Jaipal001 
 .RE
 .PP
-
-.SH "Typedef Documentation"
-.PP 
-.SS "typedef char**(* __getWidgetClasses_Type) (\fBalooWidget\fP *widget)"
-
-.SS "typedef void(* __importCssFromData_Type) (const char *content, gssize length)"
-
-.SS "typedef void(* __importCssFromFile_Type) (GFile *file)"
-
-.SS "typedef void(* __importCssFromPath_Type) (const char *name)"
-
-.SS "typedef \fBalooWidget\fP*(* __setHeight_Type) (\fBalooWidget\fP *wid, int height)"
-
-.SS "typedef \fBalooWidget\fP*(* __setSize_Type) (\fBalooWidget\fP *wid, int width, int height)"
-
-.SS "typedef \fBalooWidget\fP*(* __setWidgetClasses_Type) (\fBalooWidget\fP *widget, char **classes)"
-
-.SS "typedef \fBalooWidget\fP*(* __setWidth_Type) (\fBalooWidget\fP *wid, int width)"
-
-.SS "typedef \fBalooWidget\fP*(* __widgetAddClass_Type) (\fBalooWidget\fP *widget, char *class)"
-
-.SS "typedef \fBalooWidget\fP*(* __widgetRemoveClass_Type) (\fBalooWidget\fP *widget, char *class)"
 
 .SH "Function Documentation"
 .PP 

@@ -13,10 +13,13 @@ alooWidget *__newLabel(const char *val);
 
 /******************** Private Types ********************/
 
-typedef alooWidget *(*_newLabelType)(const char *val);
-
 struct __alooLabel {
-	_newLabelType new;
+	/// @brief Creates new Aloo label
+	/// @param  val label text
+	/// @return Aloo Label
+	alooWidget *(*new)(const char *val);
+	/// @brief Converts Aloo label to Gtk label
+	GtkLabel *(*toGtk)(alooWidget *wid);
 };
 
 /******************** Public ********************/

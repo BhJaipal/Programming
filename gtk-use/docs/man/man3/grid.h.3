@@ -1,4 +1,4 @@
-.TH "include/grid.h" 3 "Sun Sep 1 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "include/grid.h" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,31 +17,6 @@ include/grid.h \- Aloo Grid related functions\&.
 .in +1c
 .ti -1c
 .RI "struct \fB_alooGrid\fP"
-.br
-.in -1c
-.SS "Typedefs"
-
-.in +1c
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__gridAttach_Type\fP) (\fBalooWidget\fP *grid, \fBalooWidget\fP *child, int column, int row, int width, int height)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__gridAttachGtk_Type\fP) (\fBalooWidget\fP *grid, GtkWidget *child, int column, int row, int width, int height)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__gridRemove_Type\fP) (\fBalooWidget\fP *grid, \fBalooWidget\fP *child)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__gridRemoveGtk_Type\fP) (\fBalooWidget\fP *grid, GtkWidget *child)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__alooGridNew_Type\fP) ()"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__setGridColumnSpacing_Type\fP) (\fBalooWidget\fP *grid, int space)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__setGridRowSpacing_Type\fP) (\fBalooWidget\fP *grid, int space)"
 .br
 .in -1c
 .SS "Functions"
@@ -94,22 +69,6 @@ Aloo Grid related functions\&.
 Jaipal001 
 .RE
 .PP
-
-.SH "Typedef Documentation"
-.PP 
-.SS "typedef \fBalooWidget\fP*(* __alooGridNew_Type) ()"
-
-.SS "typedef \fBalooWidget\fP*(* __gridAttach_Type) (\fBalooWidget\fP *grid, \fBalooWidget\fP *child, int column, int row, int width, int height)"
-
-.SS "typedef \fBalooWidget\fP*(* __gridAttachGtk_Type) (\fBalooWidget\fP *grid, GtkWidget *child, int column, int row, int width, int height)"
-
-.SS "typedef \fBalooWidget\fP*(* __gridRemove_Type) (\fBalooWidget\fP *grid, \fBalooWidget\fP *child)"
-
-.SS "typedef \fBalooWidget\fP*(* __gridRemoveGtk_Type) (\fBalooWidget\fP *grid, GtkWidget *child)"
-
-.SS "typedef \fBalooWidget\fP*(* __setGridColumnSpacing_Type) (\fBalooWidget\fP *grid, int space)"
-
-.SS "typedef \fBalooWidget\fP*(* __setGridRowSpacing_Type) (\fBalooWidget\fP *grid, int space)"
 
 .SH "Function Documentation"
 .PP 

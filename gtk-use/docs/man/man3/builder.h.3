@@ -1,4 +1,4 @@
-.TH "include/builder.h" 3 "Sun Sep 1 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "include/builder.h" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,29 +10,11 @@ include/builder.h \- This file contains UI Builder related functions\&.
 \fC#include 'types\&.h'\fP
 .br
 
-.SS "Typedefs"
+.SS "Classes"
 
 .in +1c
 .ti -1c
-.RI "typedef void(* \fB__unrefBuilderType\fP) (\fBAlooBuilder\fP *data)"
-.br
-.ti -1c
-.RI "typedef \fBAlooBuilder\fP *(* \fB__createBuilderType\fP) ()"
-.br
-.ti -1c
-.RI "typedef int(* \fB__builderAddFileType\fP) (\fBAlooBuilder\fP *build, const char *filename, GError **err)"
-.br
-.ti -1c
-.RI "typedef int(* \fB__builderAddContentType\fP) (\fBAlooBuilder\fP *build, const char *content, gssize length, GError **err)"
-.br
-.ti -1c
-.RI "typedef int(* \fB__builderAddResourceType\fP) (\fBAlooBuilder\fP *build, const char *resource_path, GError **err)"
-.br
-.ti -1c
-.RI "typedef GObject *(* \fB__alooGetBuilderObjectType\fP) (\fBAlooBuilder\fP *builder, const char *name)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__alooWidgetFromBuilderType\fP) (\fBAlooBuilder\fP *builder, const char *name)"
+.RI "struct \fB_AlooBuilder\fP"
 .br
 .in -1c
 .SS "Functions"
@@ -71,7 +53,7 @@ include/builder.h \- This file contains UI Builder related functions\&.
 
 .in +1c
 .ti -1c
-.RI "struct _AlooBuilder \fBBuilder\fP"
+.RI "struct \fB_AlooBuilder\fP \fBBuilder\fP"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -85,22 +67,6 @@ This file contains UI Builder related functions\&.
 Jaipal001 
 .RE
 .PP
-
-.SH "Typedef Documentation"
-.PP 
-.SS "typedef GObject*(* __alooGetBuilderObjectType) (\fBAlooBuilder\fP *builder, const char *name)"
-
-.SS "typedef \fBalooWidget\fP*(* __alooWidgetFromBuilderType) (\fBAlooBuilder\fP *builder, const char *name)"
-
-.SS "typedef int(* __builderAddContentType) (\fBAlooBuilder\fP *build, const char *content, gssize length, GError **err)"
-
-.SS "typedef int(* __builderAddFileType) (\fBAlooBuilder\fP *build, const char *filename, GError **err)"
-
-.SS "typedef int(* __builderAddResourceType) (\fBAlooBuilder\fP *build, const char *resource_path, GError **err)"
-
-.SS "typedef \fBAlooBuilder\fP*(* __createBuilderType) ()"
-
-.SS "typedef void(* __unrefBuilderType) (\fBAlooBuilder\fP *data)"
 
 .SH "Function Documentation"
 .PP 
@@ -176,7 +142,7 @@ AlooBuilder*
 Unrefs aloo builder\&. 
 .SH "Variable Documentation"
 .PP 
-.SS "struct _AlooBuilder Builder\fC [extern]\fP"
+.SS "struct \fB_AlooBuilder\fP Builder\fC [extern]\fP"
 
 .SH "Author"
 .PP 

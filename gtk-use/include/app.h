@@ -72,34 +72,28 @@ void __AppAddEvents(AlooApplication *app, const char *event, void callbackFn());
 
 /******************** Private Types ********************/
 
-typedef AlooApplication *(*__CreateApp_Type)(const char *app_id,
-											 struct alooAppOptions gAppOptions);
-typedef int (*__RunApp_Type)(AlooApplication *application);
-typedef int (*__RunAppAndUnrefIt_Type)(AlooApplication *application);
-typedef void (*__unrefApp_Type)(AlooApplication *application);
-typedef void (*__AppAddEvents_Type)(AlooApplication *app, const char *event,
-									void callbackFn());
-
 struct _alooApp {
 	/// @brief Create a App object
 	/// @param app_id App Id are like com.google.Chrome, dev.zed.Zed
 	/// @param gAppOptions It takes GApplicationFlags, argc and argv
 	/// @return It returns Aloo Application
-	__CreateApp_Type create;
+	AlooApplication *(*create)(const char *app_id,
+							   struct alooAppOptions gAppOptions);
 	/// @brief Runs aloo App
 	/// @return status on exiting app
-	__RunApp_Type run;
+	int (*run)(AlooApplication *application);
 	/// @brief Runs aloo App and unrefs after exiting it
 	/// @return status on exiting app
-	__RunAppAndUnrefIt_Type run_and_unref;
+	int (*run_and_unref)(AlooApplication *application);
 	/** @brief unrefs aloo App */
-	__unrefApp_Type unref;
+	void (*unref)(AlooApplication *application);
 	/// @brief Adds Event Listener to Aloo App
 	/// @param app Aloo Application
 	/// @param event Event name
 	/// @param callbackFn static void function which will be called when app is
 	/// started
-	__AppAddEvents_Type add_event_listener;
+	void (*add_event_listener)(AlooApplication *app, const char *event,
+							   void callbackFn());
 };
 
 /******************** Public ********************/

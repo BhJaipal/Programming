@@ -15,37 +15,28 @@ alooWidget *__setLabel(alooWidget *btn, char const *name);
 alooWidget *__setChild(alooWidget *btn, alooWidget *child);
 alooWidget *__setIcon(alooWidget *btn, const char *child);
 alooWidget *__setUseUnderline(alooWidget *btn, gboolean yes);
-
 GtkButton *__toButtonGtk(alooWidget *wid);
 
 /******************** Private Types ********************/
 
-typedef alooWidget *(*__newButton_Type)();
-typedef alooWidget *(*__newButtonWithLabel_Type)(const char *label);
-typedef alooWidget *(*__setLabel_Type)(alooWidget *btn, char const *name);
-typedef alooWidget *(*__setChild_Type)(alooWidget *btn, alooWidget *child);
-typedef alooWidget *(*__setIcon_Type)(alooWidget *btn, const char *child);
-typedef alooWidget *(*__setUseUnderline_Type)(alooWidget *btn, gboolean yes);
-typedef GtkButton *(*__toButtonGtk_Type)(alooWidget *wid);
-
-/******************** Public ********************/
-
 struct _alooButton {
 	/// @brief Creates new Aloo Button without label
-	__newButton_Type new;
+	alooWidget *(*new)();
 	/// @brief Creates new Aloo Button with label
-	__newButtonWithLabel_Type newWithLabel;
+	alooWidget *(*newWithLabel)(const char *label);
 	/// @brief Sets the label of the button
-	__setLabel_Type label;
+	alooWidget *(*label)(alooWidget *btn, char const *name);
 	/// @brief Sets the child of the button
-	__setChild_Type child;
+	alooWidget *(*child)(alooWidget *btn, alooWidget *child);
 	/// @brief Sets the icon of the button
-	__setIcon_Type icon;
+	alooWidget *(*icon)(alooWidget *btn, const char *child);
 	/// @brief Sets whether to use underline or not in the button
-	__setUseUnderline_Type useUnderline;
+	alooWidget *(*useUnderline)(alooWidget *btn, gboolean yes);
 	/// @brief Converts Aloo Button to Gtk Button
-	__toButtonGtk_Type toGtk;
+	GtkButton *(*toGtk)(alooWidget *wid);
 };
+
+/******************** Public ********************/
 
 extern struct _alooButton Button;
 

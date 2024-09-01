@@ -59,54 +59,36 @@ alooWidget *__alooWidgetFromBuilder(AlooBuilder *builder, const char *name);
 
 /******************** Private Types ********************/
 
-typedef void (*__unrefBuilderType)(AlooBuilder *data);
-
-typedef AlooBuilder *(*__createBuilderType)();
-
-typedef int (*__builderAddFileType)(AlooBuilder *build, const char *filename,
-									GError **err);
-
-typedef int (*__builderAddContentType)(AlooBuilder *build, const char *content,
-									   gssize length, GError **err);
-
-typedef int (*__builderAddResourceType)(AlooBuilder *build,
-										const char *resource_path,
-										GError **err);
-
-typedef GObject *(*__alooGetBuilderObjectType)(AlooBuilder *builder,
-											   const char *name);
-
-typedef alooWidget *(*__alooWidgetFromBuilderType)(AlooBuilder *builder,
-												   const char *name);
-
-/// @private
 struct _AlooBuilder {
 	/// @brief Unrefs aloo builder
-	__unrefBuilderType unref;
+	void (*unref)(AlooBuilder *data);
 	/// @brief Create a Builder object
 	/// @return `AlooBuilder*`
-	__createBuilderType create;
+	AlooBuilder *(*create)();
 	/// @brief Adds a file with builder
 	/// @param build AlooBuilder object
 	/// @param filename UI file path with name
-	/// @param err Error handler, Default `NULL` __builderAddFileType addFile;
-	__builderAddFileType addFile;
+	/// @param err Error handler, Default `NULL` __builderAddFileType
+	/// addFile;
+	int (*addFile)(AlooBuilder *build, const char *filename, GError **err);
 	/// @brief Adds a file with builder
 	/// @param build AlooBuilder object
 	/// @param content UI data
 	/// @param length UI data length
 	/// @param err Error handler, Default `NULL` __builderAddContentType
 	/// addContent
-	__builderAddContentType addContent;
+	int (*addContent)(AlooBuilder *build, const char *content, gssize length,
+					  GError **err);
 	/// @brief Adds a file with builder
 	/// @param build AlooBuilder object
 	/// @param resource_path UI resource path
 	/// @param err Error handler, Default `NULL`
-	__builderAddResourceType addResource;
+	int (*addResource)(AlooBuilder *build, const char *resource_path,
+					   GError **err);
 	/// @brief Gets GObject from builder
-	__alooGetBuilderObjectType getBuilderObject;
+	GObject *(*getBuilderObject)(AlooBuilder *builder, const char *name);
 	/// @brief Creates alooWidget from builder
-	__alooWidgetFromBuilderType alooFromBuilder;
+	alooWidget *(*alooFromBuilder)(AlooBuilder *builder, const char *name);
 };
 
 /******************** Public ********************/

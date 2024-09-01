@@ -3,8 +3,6 @@
 
 struct AlooApplication *__CreateApp(const char *appName,
 									struct alooAppOptions gAppOptions) {
-	int status;
-
 	GApplicationFlags flags;
 	switch (gAppOptions.appFlags) {
 	case APP_FLAGS_NONE: flags = G_APPLICATION_FLAGS_NONE; break;
@@ -41,5 +39,6 @@ void __AppAddEvents(AlooApplication *app, const char *event,
 					void callbackFn()) {
 	g_signal_connect(app->app, "activate", G_CALLBACK(callbackFn), NULL);
 }
-struct _alooApp Application = {__CreateApp, __RunApp, __RunAppAndUnrefIt,
-							   __unrefApp, __AppAddEvents};
+struct _alooApp Application = {
+	__CreateApp, __RunApp, __RunAppAndUnrefIt, __unrefApp, __AppAddEvents,
+};

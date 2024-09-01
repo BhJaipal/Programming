@@ -1,4 +1,4 @@
-.TH "include/widget.h" 3 "Sun Sep 1 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "include/widget.h" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,55 +17,6 @@ include/widget.h \- Aloo Widget related functions\&.
 .in +1c
 .ti -1c
 .RI "struct \fB_aloo_widget\fP"
-.br
-.in -1c
-.SS "Typedefs"
-
-.in +1c
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fBGTK_TO_ALOO_Type\fP) (GtkWidget *widget)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fBOBJECT_TO_ALOO_Type\fP) (GObject *obj)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fBalooSetOrientation_Type\fP) (\fBalooWidget\fP *widget, GtkOrientation orien)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fBNewWidget_Type\fP) (\fBWidgetType\fP type, GtkWidget *child)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fBsetWidgetName_Type\fP) (\fBalooWidget\fP *widget, const char *name)"
-.br
-.ti -1c
-.RI "typedef GtkWidget *(* \fB__OBJECT_TO_GTK_WIDGET_Type\fP) (\fBAlooBuilder\fP *builder, const char *name)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__alooVerticalAlign_Type\fP) (\fBalooWidget\fP *widget, GtkAlign alignment)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__alooHorizontalAlign_Type\fP) (\fBalooWidget\fP *widget, GtkAlign alignment)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__alooAddEventListener_Type\fP) (\fBalooWidget\fP *widget_instance, char *event_name, GCallback CallbackFn, gpointer data)"
-.br
-.ti -1c
-.RI "typedef int(* \fB__isBox_Type\fP) (\fBalooWidget\fP *wid)"
-.br
-.ti -1c
-.RI "typedef int(* \fB__isButton_Type\fP) (\fBalooWidget\fP *wid)"
-.br
-.ti -1c
-.RI "typedef int(* \fB__isGrid_Type\fP) (\fBalooWidget\fP *wid)"
-.br
-.ti -1c
-.RI "typedef int(* \fB__isLabel_Type\fP) (\fBalooWidget\fP *wid)"
-.br
-.ti -1c
-.RI "typedef int(* \fB__isWindow_Type\fP) (\fBalooWidget\fP *wid)"
-.br
-.ti -1c
-.RI "typedef GtkWidget *(* \fB__WidtoGtk_Type\fP) (\fBalooWidget\fP *wid)"
 .br
 .in -1c
 .SS "Functions"
@@ -147,38 +98,6 @@ Aloo Widget related functions\&.
 Jaipal001 
 .RE
 .PP
-
-.SH "Typedef Documentation"
-.PP 
-.SS "typedef \fBalooWidget\fP*(* __alooAddEventListener_Type) (\fBalooWidget\fP *widget_instance, char *event_name, GCallback CallbackFn, gpointer data)"
-
-.SS "typedef \fBalooWidget\fP*(* __alooHorizontalAlign_Type) (\fBalooWidget\fP *widget, GtkAlign alignment)"
-
-.SS "typedef \fBalooWidget\fP*(* __alooVerticalAlign_Type) (\fBalooWidget\fP *widget, GtkAlign alignment)"
-
-.SS "typedef int(* __isBox_Type) (\fBalooWidget\fP *wid)"
-
-.SS "typedef int(* __isButton_Type) (\fBalooWidget\fP *wid)"
-
-.SS "typedef int(* __isGrid_Type) (\fBalooWidget\fP *wid)"
-
-.SS "typedef int(* __isLabel_Type) (\fBalooWidget\fP *wid)"
-
-.SS "typedef int(* __isWindow_Type) (\fBalooWidget\fP *wid)"
-
-.SS "typedef GtkWidget*(* __OBJECT_TO_GTK_WIDGET_Type) (\fBAlooBuilder\fP *builder, const char *name)"
-
-.SS "typedef GtkWidget*(* __WidtoGtk_Type) (\fBalooWidget\fP *wid)"
-
-.SS "typedef \fBalooWidget\fP*(* alooSetOrientation_Type) (\fBalooWidget\fP *widget, GtkOrientation orien)"
-
-.SS "typedef \fBalooWidget\fP*(* GTK_TO_ALOO_Type) (GtkWidget *widget)"
-
-.SS "typedef \fBalooWidget\fP*(* NewWidget_Type) (\fBWidgetType\fP type, GtkWidget *child)"
-
-.SS "typedef \fBalooWidget\fP*(* OBJECT_TO_ALOO_Type) (GObject *obj)"
-
-.SS "typedef \fBalooWidget\fP*(* setWidgetName_Type) (\fBalooWidget\fP *widget, const char *name)"
 
 .SH "Function Documentation"
 .PP 

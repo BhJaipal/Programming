@@ -33,103 +33,10 @@
         </childnode>
       </node>
     </invincdepgraph>
-    <innerclass refid="struct__AlooBuilder" prot="private">_AlooBuilder</innerclass>
-      <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="builder_8h_1aed886ff43cad9234d0ba1884e40b1f04" prot="public" static="no">
-        <type>void(*</type>
-        <definition>typedef void(* __unrefBuilderType) (AlooBuilder *data)</definition>
-        <argsstring>)(AlooBuilder *data)</argsstring>
-        <name>__unrefBuilderType</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/builder.h" line="62" column="9" bodyfile="include/builder.h" bodystart="62" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="builder_8h_1ac1f8811e29e91ac91928f564335bc34d" prot="public" static="no">
-        <type><ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref> *(*</type>
-        <definition>typedef AlooBuilder*(* __createBuilderType) ()</definition>
-        <argsstring>)()</argsstring>
-        <name>__createBuilderType</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/builder.h" line="64" column="9" bodyfile="include/builder.h" bodystart="64" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="builder_8h_1a6abf1c95f46c23b366142547e03ab720" prot="public" static="no">
-        <type>int(*</type>
-        <definition>typedef int(* __builderAddFileType) (AlooBuilder *build, const char *filename, GError **err)</definition>
-        <argsstring>)(AlooBuilder *build, const char *filename, GError **err)</argsstring>
-        <name>__builderAddFileType</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/builder.h" line="66" column="9" bodyfile="include/builder.h" bodystart="66" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="builder_8h_1a102a4cc7ecf139e10b4077e062fa75e6" prot="public" static="no">
-        <type>int(*</type>
-        <definition>typedef int(* __builderAddContentType) (AlooBuilder *build, const char *content, gssize length, GError **err)</definition>
-        <argsstring>)(AlooBuilder *build, const char *content, gssize length, GError **err)</argsstring>
-        <name>__builderAddContentType</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/builder.h" line="69" column="9" bodyfile="include/builder.h" bodystart="69" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="builder_8h_1a8fc1d84ef30667a5ee42581a66896c50" prot="public" static="no">
-        <type>int(*</type>
-        <definition>typedef int(* __builderAddResourceType) (AlooBuilder *build, const char *resource_path, GError **err)</definition>
-        <argsstring>)(AlooBuilder *build, const char *resource_path, GError **err)</argsstring>
-        <name>__builderAddResourceType</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/builder.h" line="72" column="9" bodyfile="include/builder.h" bodystart="72" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="builder_8h_1aa6bb8611e2c60c6b189ad1d700b68c3c" prot="public" static="no">
-        <type>GObject *(*</type>
-        <definition>typedef GObject*(* __alooGetBuilderObjectType) (AlooBuilder *builder, const char *name)</definition>
-        <argsstring>)(AlooBuilder *builder, const char *name)</argsstring>
-        <name>__alooGetBuilderObjectType</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/builder.h" line="76" column="9" bodyfile="include/builder.h" bodystart="76" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="builder_8h_1a250cc87a97f7eb4fdff9e07434a7a565" prot="public" static="no">
-        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
-        <definition>typedef alooWidget*(* __alooWidgetFromBuilderType) (AlooBuilder *builder, const char *name)</definition>
-        <argsstring>)(AlooBuilder *builder, const char *name)</argsstring>
-        <name>__alooWidgetFromBuilderType</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/builder.h" line="79" column="9" bodyfile="include/builder.h" bodystart="79" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
+    <innerclass refid="struct__AlooBuilder" prot="public">_AlooBuilder</innerclass>
       <sectiondef kind="var">
       <memberdef kind="variable" id="builder_8h_1a2b1d855975b698ca37554d3e4841fa04" prot="public" static="no" mutable="no">
-        <type>struct _AlooBuilder</type>
+        <type>struct <ref refid="struct__AlooBuilder" kindref="compound">_AlooBuilder</ref></type>
         <definition>struct _AlooBuilder Builder</definition>
         <argsstring></argsstring>
         <name>Builder</name>
@@ -139,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/builder.h" line="79" column="9" declfile="include/builder.h" declline="79" declcolumn="9"/>
+        <location file="include/builder.h" line="58" column="12" declfile="include/builder.h" declline="58" declcolumn="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -425,41 +332,23 @@
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Private<sp/>Types<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62" refid="builder_8h_1aed886ff43cad9234d0ba1884e40b1f04" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="builder_8h_1aed886ff43cad9234d0ba1884e40b1f04" kindref="member">__unrefBuilderType</ref>)(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*data);</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64" refid="builder_8h_1ac1f8811e29e91ac91928f564335bc34d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*(*__createBuilderType)();</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66" refid="builder_8h_1a6abf1c95f46c23b366142547e03ab720" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="builder_8h_1a6abf1c95f46c23b366142547e03ab720" kindref="member">__builderAddFileType</ref>)(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*build,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename,</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GError<sp/>**err);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69" refid="builder_8h_1a102a4cc7ecf139e10b4077e062fa75e6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="builder_8h_1a102a4cc7ecf139e10b4077e062fa75e6" kindref="member">__builderAddContentType</ref>)(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*build,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*content,</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gssize<sp/>length,<sp/>GError<sp/>**err);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72" refid="builder_8h_1a8fc1d84ef30667a5ee42581a66896c50" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="builder_8h_1a8fc1d84ef30667a5ee42581a66896c50" kindref="member">__builderAddResourceType</ref>)(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*build,</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*resource_path,</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GError<sp/>**err);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76" refid="builder_8h_1aa6bb8611e2c60c6b189ad1d700b68c3c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>GObject<sp/>*(*__alooGetBuilderObjectType)(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*builder,</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79" refid="builder_8h_1a250cc87a97f7eb4fdff9e07434a7a565" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__alooWidgetFromBuilderType)(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*builder,</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_AlooBuilder<sp/>{</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="builder_8h_1aed886ff43cad9234d0ba1884e40b1f04" kindref="member">__unrefBuilderType</ref><sp/>unref;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="builder_8h_1ac1f8811e29e91ac91928f564335bc34d" kindref="member">__createBuilderType</ref><sp/>create;</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="builder_8h_1a6abf1c95f46c23b366142547e03ab720" kindref="member">__builderAddFileType</ref><sp/>addFile;</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="builder_8h_1a102a4cc7ecf139e10b4077e062fa75e6" kindref="member">__builderAddContentType</ref><sp/>addContent;</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="builder_8h_1a8fc1d84ef30667a5ee42581a66896c50" kindref="member">__builderAddResourceType</ref><sp/>addResource;</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="builder_8h_1aa6bb8611e2c60c6b189ad1d700b68c3c" kindref="member">__alooGetBuilderObjectType</ref><sp/>getBuilderObject;</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="builder_8h_1a250cc87a97f7eb4fdff9e07434a7a565" kindref="member">__alooWidgetFromBuilderType</ref><sp/>alooFromBuilder;</highlight></codeline>
-<codeline lineno="110"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Public<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_AlooBuilder<sp/><ref refid="builder_8h_1a2b1d855975b698ca37554d3e4841fa04" kindref="member">Builder</ref>;</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_BUILDER_H</highlight></codeline>
+<codeline lineno="62" refid="struct__AlooBuilder" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__AlooBuilder" kindref="compound">_AlooBuilder</ref><sp/>{</highlight></codeline>
+<codeline lineno="64" refid="struct__AlooBuilder_1a04ccae8f25f0362a80d2192e0d2248d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="struct__AlooBuilder_1a04ccae8f25f0362a80d2192e0d2248d1" kindref="member">unref</ref>)(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*data);</highlight></codeline>
+<codeline lineno="67" refid="struct__AlooBuilder_1a8821ccb608f6302de02cbb6f5cc45ed3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*(*create)();</highlight></codeline>
+<codeline lineno="73" refid="struct__AlooBuilder_1a71f69168acaab34068aae62aafcb40e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>(*<ref refid="struct__AlooBuilder_1a71f69168acaab34068aae62aafcb40e9" kindref="member">addFile</ref>)(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*build,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename,<sp/>GError<sp/>**err);</highlight></codeline>
+<codeline lineno="80" refid="struct__AlooBuilder_1ab581c993f97fc95bab250316287ae131" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>(*<ref refid="struct__AlooBuilder_1ab581c993f97fc95bab250316287ae131" kindref="member">addContent</ref>)(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*build,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*content,<sp/>gssize<sp/>length,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GError<sp/>**err);</highlight></codeline>
+<codeline lineno="86" refid="struct__AlooBuilder_1a632cabfaa8d945640ef9cff49d18fdca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>(*<ref refid="struct__AlooBuilder_1a632cabfaa8d945640ef9cff49d18fdca" kindref="member">addResource</ref>)(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*build,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*resource_path,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GError<sp/>**err);</highlight></codeline>
+<codeline lineno="89" refid="struct__AlooBuilder_1a8e14c8d9c86b5c55ceae67ebba4180d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GObject<sp/>*(*getBuilderObject)(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*builder,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="91" refid="struct__AlooBuilder_1af5deedc9690eb132f1ca091140beab7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*alooFromBuilder)(<ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref><sp/>*builder,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Public<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__AlooBuilder" kindref="compound">_AlooBuilder</ref><sp/><ref refid="builder_8h_1a2b1d855975b698ca37554d3e4841fa04" kindref="member">Builder</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_BUILDER_H</highlight></codeline>
     </programlisting>
     <location file="include/builder.h"/>
   </compounddef>

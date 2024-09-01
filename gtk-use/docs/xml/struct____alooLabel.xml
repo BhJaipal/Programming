@@ -4,18 +4,45 @@
     <compoundname>__alooLabel</compoundname>
     <includes refid="label_8h" local="no">label.h</includes>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="struct____alooLabel_1aadc8450b0dded9eade27d3355e864f07" prot="public" static="no" mutable="no">
-        <type><ref refid="label_8h_1a213636152f4dc1ee94cd8e02c9e31b28" kindref="member">_newLabelType</ref></type>
-        <definition>_newLabelType __alooLabel::new</definition>
-        <argsstring></argsstring>
+      <memberdef kind="variable" id="struct____alooLabel_1adf6d0ff07874ae1917e0665efb600042" prot="public" static="no" mutable="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>alooWidget*(* __alooLabel::new) (const char *val)</definition>
+        <argsstring>)(const char *val)</argsstring>
         <name>new</name>
         <briefdescription>
+<para>Creates new Aloo label. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>label text </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Aloo Label </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/label.h" line="20" column="1" bodyfile="include/label.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____alooLabel_1ad5fb05f426389c800a67a2440d76ea27" prot="public" static="no" mutable="no">
+        <type>GtkLabel *(*</type>
+        <definition>GtkLabel*(* __alooLabel::toGtk) (alooWidget *wid)</definition>
+        <argsstring>)(alooWidget *wid)</argsstring>
+        <name>toGtk</name>
+        <briefdescription>
+<para>Converts Aloo label to Gtk label. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/label.h" line="19" column="15" bodyfile="include/label.h" bodystart="19" bodyend="-1"/>
+        <location file="include/label.h" line="22" column="1" bodyfile="include/label.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -35,9 +62,10 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/label.h" line="18" column="1" bodyfile="include/label.h" bodystart="18" bodyend="20"/>
+    <location file="include/label.h" line="16" column="1" bodyfile="include/label.h" bodystart="16" bodyend="23"/>
     <listofallmembers>
-      <member refid="struct____alooLabel_1aadc8450b0dded9eade27d3355e864f07" prot="public" virt="non-virtual"><scope>__alooLabel</scope><name>new</name></member>
+      <member refid="struct____alooLabel_1adf6d0ff07874ae1917e0665efb600042" prot="public" virt="non-virtual"><scope>__alooLabel</scope><name>new</name></member>
+      <member refid="struct____alooLabel_1ad5fb05f426389c800a67a2440d76ea27" prot="public" virt="non-virtual"><scope>__alooLabel</scope><name>toGtk</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

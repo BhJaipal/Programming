@@ -17,6 +17,19 @@
         </inbodydescription>
         <location file="include/utils/logger.h" line="8" column="5" bodyfile="include/utils/logger.h" bodystart="8" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="struct__logger_1a56c53126d4c6eb3c00b0bd2557c82079" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* _logger::err) (struct _logger *self, const char *message)</definition>
+        <argsstring>)(struct _logger *self, const char *message)</argsstring>
+        <name>err</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/logger.h" line="9" column="1" bodyfile="include/utils/logger.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="struct__logger_1a4c34f8e06f85db9bf491f25d28b80b02" prot="public" static="no" mutable="no">
         <type>void(*</type>
         <definition>void(* _logger::log) (struct _logger *self, const char *message)</definition>
@@ -28,17 +41,46 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/utils/logger.h" line="9" column="1" bodyfile="include/utils/logger.h" bodystart="9" bodyend="-1"/>
+        <location file="include/utils/logger.h" line="10" column="1" bodyfile="include/utils/logger.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__logger_1a584fcf64548f3b986ac55d7a69c3dad6" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* _logger::warn) (struct _logger *self, const char *message)</definition>
+        <argsstring>)(struct _logger *self, const char *message)</argsstring>
+        <name>warn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/logger.h" line="11" column="1" bodyfile="include/utils/logger.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__logger_1ae2b060f696159cc33423ea24d6d7fba3" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* _logger::info) (struct _logger *self, const char *message)</definition>
+        <argsstring>)(struct _logger *self, const char *message)</argsstring>
+        <name>info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/logger.h" line="12" column="1" bodyfile="include/utils/logger.h" bodystart="12" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/utils/logger.h" line="7" column="1" bodyfile="include/utils/logger.h" bodystart="7" bodyend="10"/>
+    <location file="include/utils/logger.h" line="7" column="1" bodyfile="include/utils/logger.h" bodystart="7" bodyend="13"/>
     <listofallmembers>
+      <member refid="struct__logger_1a56c53126d4c6eb3c00b0bd2557c82079" prot="public" virt="non-virtual"><scope>_logger</scope><name>err</name></member>
+      <member refid="struct__logger_1ae2b060f696159cc33423ea24d6d7fba3" prot="public" virt="non-virtual"><scope>_logger</scope><name>info</name></member>
       <member refid="struct__logger_1a4c34f8e06f85db9bf491f25d28b80b02" prot="public" virt="non-virtual"><scope>_logger</scope><name>log</name></member>
       <member refid="struct__logger_1a28552845e9628e91b094c550f95b623e" prot="public" virt="non-virtual"><scope>_logger</scope><name>logCount</name></member>
+      <member refid="struct__logger_1a584fcf64548f3b986ac55d7a69c3dad6" prot="public" virt="non-virtual"><scope>_logger</scope><name>warn</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

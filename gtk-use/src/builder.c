@@ -30,9 +30,10 @@ alooWidget *__alooWidgetFromBuilder(AlooBuilder *builder, const char *name) {
 	return Widget.obj_to_aloo(gtk_builder_get_object(builder->builder, name));
 }
 
-struct _AlooBuilder Builder = {__unrefBuilder,		   __createBuilder,
-							   __builderAddFile,	   __builderAddContent,
-							   __builderAddResource,   __alooGetBuilderObject,
-							   __alooWidgetFromBuilder};
+struct _AlooBuilder Builder = {
+	__unrefBuilder,			 __createBuilder,	   __builderAddFile,
+	__builderAddContent,	 __builderAddResource, __alooGetBuilderObject,
+	__alooWidgetFromBuilder,
+};
 
 /******************** Private ********************/

@@ -1,4 +1,4 @@
-.TH "_alooCSS" 3 "Sun Sep 1 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "_alooCSS" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,58 +12,111 @@ _alooCSS
 
 .in +1c
 .ti -1c
-.RI "\fB__importCssFromPath_Type\fP \fBimportPath\fP"
+.RI "void(* \fBimportPath\fP )(const char *name)"
 .br
+.RI "Import CSS file from path\&. "
 .ti -1c
-.RI "\fB__importCssFromData_Type\fP \fBimportData\fP"
+.RI "void(* \fBimportData\fP )(const char *content, gssize length)"
 .br
+.RI "Import CSS file from content\&. "
 .ti -1c
-.RI "\fB__importCssFromFile_Type\fP \fBimportFile\fP"
+.RI "void(* \fBimportFile\fP )(GFile *file)"
 .br
+.RI "Import CSS file from content\&. "
 .ti -1c
-.RI "\fB__setWidth_Type\fP \fBsetWidth\fP"
+.RI "\fBalooWidget\fP *(* \fBsetWidth\fP )(\fBalooWidget\fP *wid, int width)"
 .br
+.RI "Set the Width of widget\&. "
 .ti -1c
-.RI "\fB__setHeight_Type\fP \fBsetHeight\fP"
+.RI "\fBalooWidget\fP *(* \fBsetHeight\fP )(\fBalooWidget\fP *wid, int height)"
 .br
+.RI "Set the Height of widget\&. "
 .ti -1c
-.RI "\fB__setSize_Type\fP \fBsetSize\fP"
+.RI "\fBalooWidget\fP *(* \fBsetSize\fP )(\fBalooWidget\fP *wid, int width, int height)"
 .br
+.RI "Set the Width and Height of widget\&. "
 .ti -1c
-.RI "\fB__widgetAddClass_Type\fP \fBaddClass\fP"
+.RI "\fBalooWidget\fP *(* \fBaddClass\fP )(\fBalooWidget\fP *widget, char *class)"
 .br
+.RI "Adds class to widget\&. "
 .ti -1c
-.RI "\fB__widgetRemoveClass_Type\fP \fBremoveClass\fP"
+.RI "\fBalooWidget\fP *(* \fBremoveClass\fP )(\fBalooWidget\fP *widget, char *class)"
 .br
+.RI "Removes class from widget\&. "
 .ti -1c
-.RI "\fB__getWidgetClasses_Type\fP \fBgetClasses\fP"
+.RI "char **(* \fBgetClasses\fP )(\fBalooWidget\fP *widget)"
 .br
+.RI "Gets classes of widget\&. "
 .ti -1c
-.RI "\fB__setWidgetClasses_Type\fP \fBsetClasses\fP"
+.RI "\fBalooWidget\fP *(* \fBsetClasses\fP )(\fBalooWidget\fP *widget, char **classes)"
 .br
+.RI "Sets classes of widget\&. "
 .in -1c
 .SH "Member Data Documentation"
 .PP 
-.SS "\fB__widgetAddClass_Type\fP _alooCSS::addClass"
+.SS "\fBalooWidget\fP*(* _alooCSS::addClass) (\fBalooWidget\fP *widget, char *class)"
 
-.SS "\fB__getWidgetClasses_Type\fP _alooCSS::getClasses"
+.PP
+Adds class to widget\&. 
+.SS "char**(* _alooCSS::getClasses) (\fBalooWidget\fP *widget)"
 
-.SS "\fB__importCssFromData_Type\fP _alooCSS::importData"
+.PP
+Gets classes of widget\&. 
+.SS "void(* _alooCSS::importData) (const char *content, gssize length)"
 
-.SS "\fB__importCssFromFile_Type\fP _alooCSS::importFile"
+.PP
+Import CSS file from content\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontent\fP css content 
+.br
+\fIlength\fP content length 
+.RE
+.PP
 
-.SS "\fB__importCssFromPath_Type\fP _alooCSS::importPath"
+.SS "void(* _alooCSS::importFile) (GFile *file)"
 
-.SS "\fB__widgetRemoveClass_Type\fP _alooCSS::removeClass"
+.PP
+Import CSS file from content\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP CSS GFile 
+.RE
+.PP
 
-.SS "\fB__setWidgetClasses_Type\fP _alooCSS::setClasses"
+.SS "void(* _alooCSS::importPath) (const char *name)"
 
-.SS "\fB__setHeight_Type\fP _alooCSS::setHeight"
+.PP
+Import CSS file from path\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP path of css file 
+.RE
+.PP
 
-.SS "\fB__setSize_Type\fP _alooCSS::setSize"
+.SS "\fBalooWidget\fP*(* _alooCSS::removeClass) (\fBalooWidget\fP *widget, char *class)"
 
-.SS "\fB__setWidth_Type\fP _alooCSS::setWidth"
+.PP
+Removes class from widget\&. 
+.SS "\fBalooWidget\fP*(* _alooCSS::setClasses) (\fBalooWidget\fP *widget, char **classes)"
 
+.PP
+Sets classes of widget\&. 
+.SS "\fBalooWidget\fP*(* _alooCSS::setHeight) (\fBalooWidget\fP *wid, int height)"
+
+.PP
+Set the Height of widget\&. 
+.SS "\fBalooWidget\fP*(* _alooCSS::setSize) (\fBalooWidget\fP *wid, int width, int height)"
+
+.PP
+Set the Width and Height of widget\&. 
+.SS "\fBalooWidget\fP*(* _alooCSS::setWidth) (\fBalooWidget\fP *wid, int width)"
+
+.PP
+Set the Width of widget\&. 
 
 .SH "Author"
 .PP 

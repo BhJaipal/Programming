@@ -1,4 +1,4 @@
-.TH "include/app.h" 3 "Sun Sep 1 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "include/app.h" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -31,21 +31,6 @@ include/app.h \- Aloo Application related functions\&.
 .in +1c
 .ti -1c
 .RI "typedef struct \fBAlooApplication\fP \fBAlooApplication\fP"
-.br
-.ti -1c
-.RI "typedef \fBAlooApplication\fP *(* \fB__CreateApp_Type\fP) (const char *app_id, struct \fBalooAppOptions\fP gAppOptions)"
-.br
-.ti -1c
-.RI "typedef int(* \fB__RunApp_Type\fP) (\fBAlooApplication\fP *application)"
-.br
-.ti -1c
-.RI "typedef int(* \fB__RunAppAndUnrefIt_Type\fP) (\fBAlooApplication\fP *application)"
-.br
-.ti -1c
-.RI "typedef void(* \fB__unrefApp_Type\fP) (\fBAlooApplication\fP *application)"
-.br
-.ti -1c
-.RI "typedef void(* \fB__AppAddEvents_Type\fP) (\fBAlooApplication\fP *app, const char *event, void callbackFn())"
 .br
 .in -1c
 .SS "Enumerations"
@@ -101,16 +86,6 @@ Jaipal001
 
 .SH "Typedef Documentation"
 .PP 
-.SS "typedef void(* __AppAddEvents_Type) (\fBAlooApplication\fP *app, const char *event, void callbackFn())"
-
-.SS "typedef \fBAlooApplication\fP*(* __CreateApp_Type) (const char *app_id, struct \fBalooAppOptions\fP gAppOptions)"
-
-.SS "typedef int(* __RunApp_Type) (\fBAlooApplication\fP *application)"
-
-.SS "typedef int(* __RunAppAndUnrefIt_Type) (\fBAlooApplication\fP *application)"
-
-.SS "typedef void(* __unrefApp_Type) (\fBAlooApplication\fP *application)"
-
 .SS "typedef struct \fBAlooApplication\fP \fBAlooApplication\fP"
 
 .SH "Enumeration Type Documentation"

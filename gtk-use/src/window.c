@@ -25,6 +25,7 @@ alooWidget *__setWindowSize(alooWidget *window, int width, int height) {
 
 alooWidget *__setWindowApplication(alooWidget *window, AlooApplication *app) {
 	gtk_window_set_application(GTK_WINDOW(window->child), app->app);
+	return window;
 }
 
 void __showWindow(alooWidget *window) {
@@ -37,6 +38,7 @@ void __showWindow(alooWidget *window) {
 
 alooWidget *__app_add_window(AlooApplication *app, alooWidget *window) {
 	gtk_application_add_window(app->app, GTK_WINDOW(window->child));
+	return window;
 }
 
 struct _alooWindow Window = {

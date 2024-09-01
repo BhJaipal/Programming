@@ -1,4 +1,4 @@
-.TH "__alooLabel" 3 "Sun Sep 1 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "__alooLabel" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,13 +12,36 @@ __alooLabel
 
 .in +1c
 .ti -1c
-.RI "\fB_newLabelType\fP \fBnew\fP"
+.RI "\fBalooWidget\fP *(* \fBnew\fP )(const char *val)"
 .br
+.RI "Creates new Aloo label\&. "
+.ti -1c
+.RI "GtkLabel *(* \fBtoGtk\fP )(\fBalooWidget\fP *wid)"
+.br
+.RI "Converts Aloo label to Gtk label\&. "
 .in -1c
 .SH "Member Data Documentation"
 .PP 
-.SS "\fB_newLabelType\fP __alooLabel::new"
+.SS "\fBalooWidget\fP*(* __alooLabel::new) (const char *val)"
 
+.PP
+Creates new Aloo label\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIval\fP label text 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Aloo Label 
+.RE
+.PP
+
+.SS "GtkLabel*(* __alooLabel::toGtk) (\fBalooWidget\fP *wid)"
+
+.PP
+Converts Aloo label to Gtk label\&. 
 
 .SH "Author"
 .PP 

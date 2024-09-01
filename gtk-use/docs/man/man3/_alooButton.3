@@ -1,4 +1,4 @@
-.TH "_alooButton" 3 "Sun Sep 1 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "_alooButton" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,61 +12,61 @@ _alooButton
 
 .in +1c
 .ti -1c
-.RI "\fB__newButton_Type\fP \fBnew\fP"
+.RI "\fBalooWidget\fP *(* \fBnew\fP )()"
 .br
 .RI "Creates new Aloo Button without label\&. "
 .ti -1c
-.RI "\fB__newButtonWithLabel_Type\fP \fBnewWithLabel\fP"
+.RI "\fBalooWidget\fP *(* \fBnewWithLabel\fP )(const char *\fBlabel\fP)"
 .br
 .RI "Creates new Aloo Button with label\&. "
 .ti -1c
-.RI "\fB__setLabel_Type\fP \fBlabel\fP"
+.RI "\fBalooWidget\fP *(* \fBlabel\fP )(\fBalooWidget\fP *btn, char const *name)"
 .br
 .RI "Sets the label of the button\&. "
 .ti -1c
-.RI "\fB__setChild_Type\fP \fBchild\fP"
+.RI "\fBalooWidget\fP *(* \fBchild\fP )(\fBalooWidget\fP *btn, \fBalooWidget\fP *child)"
 .br
 .RI "Sets the child of the button\&. "
 .ti -1c
-.RI "\fB__setIcon_Type\fP \fBicon\fP"
+.RI "\fBalooWidget\fP *(* \fBicon\fP )(\fBalooWidget\fP *btn, const char *\fBchild\fP)"
 .br
 .RI "Sets the icon of the button\&. "
 .ti -1c
-.RI "\fB__setUseUnderline_Type\fP \fBuseUnderline\fP"
+.RI "\fBalooWidget\fP *(* \fBuseUnderline\fP )(\fBalooWidget\fP *btn, gboolean yes)"
 .br
 .RI "Sets whether to use underline or not in the button\&. "
 .ti -1c
-.RI "\fB__toButtonGtk_Type\fP \fBtoGtk\fP"
+.RI "GtkButton *(* \fBtoGtk\fP )(\fBalooWidget\fP *wid)"
 .br
 .RI "Converts Aloo Button to Gtk Button\&. "
 .in -1c
 .SH "Member Data Documentation"
 .PP 
-.SS "\fB__setChild_Type\fP _alooButton::child"
+.SS "\fBalooWidget\fP*(* _alooButton::child) (\fBalooWidget\fP *btn, \fBalooWidget\fP *child)"
 
 .PP
 Sets the child of the button\&. 
-.SS "\fB__setIcon_Type\fP _alooButton::icon"
+.SS "\fBalooWidget\fP*(* _alooButton::icon) (\fBalooWidget\fP *btn, const char *\fBchild\fP)"
 
 .PP
 Sets the icon of the button\&. 
-.SS "\fB__setLabel_Type\fP _alooButton::label"
+.SS "\fBalooWidget\fP*(* _alooButton::label) (\fBalooWidget\fP *btn, char const *name)"
 
 .PP
 Sets the label of the button\&. 
-.SS "\fB__newButton_Type\fP _alooButton::new"
+.SS "\fBalooWidget\fP*(* _alooButton::new) ()"
 
 .PP
 Creates new Aloo Button without label\&. 
-.SS "\fB__newButtonWithLabel_Type\fP _alooButton::newWithLabel"
+.SS "\fBalooWidget\fP*(* _alooButton::newWithLabel) (const char *\fBlabel\fP)"
 
 .PP
 Creates new Aloo Button with label\&. 
-.SS "\fB__toButtonGtk_Type\fP _alooButton::toGtk"
+.SS "GtkButton*(* _alooButton::toGtk) (\fBalooWidget\fP *wid)"
 
 .PP
 Converts Aloo Button to Gtk Button\&. 
-.SS "\fB__setUseUnderline_Type\fP _alooButton::useUnderline"
+.SS "\fBalooWidget\fP*(* _alooButton::useUnderline) (\fBalooWidget\fP *btn, gboolean yes)"
 
 .PP
 Sets whether to use underline or not in the button\&. 

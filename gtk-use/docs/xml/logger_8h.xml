@@ -16,21 +16,6 @@
       </node>
     </invincdepgraph>
     <innerclass refid="struct__logger" prot="public">_logger</innerclass>
-      <sectiondef kind="var">
-      <memberdef kind="variable" id="logger_8h_1ae6eb4b8ce3e18440e403ef28f93dbb9a" prot="public" static="no" mutable="no">
-        <type>struct <ref refid="struct__logger" kindref="compound">_logger</ref></type>
-        <definition>struct _logger Logger</definition>
-        <argsstring></argsstring>
-        <name>Logger</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/utils/logger.h" line="5" column="6" declfile="include/utils/logger.h" declline="5" declcolumn="6"/>
-      </memberdef>
-      </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="logger_8h_1a1f9e3a48de6334909c55631267802824" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct <ref refid="struct__logger" kindref="compound">_logger</ref> *</type>
@@ -80,11 +65,12 @@
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7" refid="struct__logger" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__logger" kindref="compound">_logger</ref><sp/>{</highlight></codeline>
 <codeline lineno="8" refid="struct__logger_1a28552845e9628e91b094c550f95b623e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct__logger_1a28552845e9628e91b094c550f95b623e" kindref="member">logCount</ref>;</highlight></codeline>
-<codeline lineno="9" refid="struct__logger_1a4c34f8e06f85db9bf491f25d28b80b02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="struct__logger_1a4c34f8e06f85db9bf491f25d28b80b02" kindref="member">log</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__logger" kindref="compound">_logger</ref><sp/>*</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*message);</highlight></codeline>
-<codeline lineno="10"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__logger" kindref="compound">_logger</ref><sp/><ref refid="logger_8h_1ae6eb4b8ce3e18440e403ef28f93dbb9a" kindref="member">Logger</ref>;</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_LOGGER_H</highlight></codeline>
+<codeline lineno="9" refid="struct__logger_1a56c53126d4c6eb3c00b0bd2557c82079" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="struct__logger_1a56c53126d4c6eb3c00b0bd2557c82079" kindref="member">err</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__logger" kindref="compound">_logger</ref><sp/>*</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*message);</highlight></codeline>
+<codeline lineno="10" refid="struct__logger_1a4c34f8e06f85db9bf491f25d28b80b02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="struct__logger_1a4c34f8e06f85db9bf491f25d28b80b02" kindref="member">log</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__logger" kindref="compound">_logger</ref><sp/>*</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*message);</highlight></codeline>
+<codeline lineno="11" refid="struct__logger_1a584fcf64548f3b986ac55d7a69c3dad6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="struct__logger_1a584fcf64548f3b986ac55d7a69c3dad6" kindref="member">warn</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__logger" kindref="compound">_logger</ref><sp/>*</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*message);</highlight></codeline>
+<codeline lineno="12" refid="struct__logger_1ae2b060f696159cc33423ea24d6d7fba3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="struct__logger_1ae2b060f696159cc33423ea24d6d7fba3" kindref="member">info</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__logger" kindref="compound">_logger</ref><sp/>*</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*message);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_LOGGER_H</highlight></codeline>
     </programlisting>
     <location file="include/utils/logger.h"/>
   </compounddef>

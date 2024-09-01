@@ -4,10 +4,10 @@
     <compoundname>_alooWindow</compoundname>
     <includes refid="window_8h" local="no">window.h</includes>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="struct__alooWindow_1a58b6fe2c1669b0a3115814742c34b967" prot="public" static="no" mutable="no">
-        <type><ref refid="window_8h_1abec0f2604c9a30b72c72f3dbf6220cd2" kindref="member">__alooApplicationNewWindow_Type</ref></type>
-        <definition>__alooApplicationNewWindow_Type _alooWindow::new</definition>
-        <argsstring></argsstring>
+      <memberdef kind="variable" id="struct__alooWindow_1a78bd31852545559e9fe4c3c033027a03" prot="public" static="no" mutable="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>alooWidget*(* _alooWindow::new) (AlooApplication *app)</definition>
+        <argsstring>)(AlooApplication *app)</argsstring>
         <name>new</name>
         <briefdescription>
 <para>Create a GtkWindow. </para>
@@ -28,12 +28,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/window.h" line="79" column="33" bodyfile="include/window.h" bodystart="79" bodyend="-1"/>
+        <location file="include/window.h" line="60" column="1" bodyfile="include/window.h" bodystart="60" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct__alooWindow_1a69eb586c39bd205c3090052062603800" prot="public" static="no" mutable="no">
-        <type><ref refid="window_8h_1ab9fe52d585200e1af4b62247763983ee" kindref="member">__alooPresentWindow_Type</ref></type>
-        <definition>__alooPresentWindow_Type _alooWindow::present</definition>
-        <argsstring></argsstring>
+      <memberdef kind="variable" id="struct__alooWindow_1ae0ac2345055d140263283193d63e12b9" prot="public" static="no" mutable="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>alooWidget*(* _alooWindow::present) (alooWidget *window)</definition>
+        <argsstring>)(alooWidget *window)</argsstring>
         <name>present</name>
         <briefdescription>
 <para>Presents GtkWindow. </para>
@@ -54,12 +54,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/window.h" line="83" column="26" bodyfile="include/window.h" bodystart="83" bodyend="-1"/>
+        <location file="include/window.h" line="64" column="1" bodyfile="include/window.h" bodystart="64" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct__alooWindow_1a76819237feac7bff766987104b51aeab" prot="public" static="no" mutable="no">
-        <type><ref refid="window_8h_1a838ef9ee7d949d041286b909899ef5dd" kindref="member">__alooSetWindowChild_Type</ref></type>
-        <definition>__alooSetWindowChild_Type _alooWindow::setChild</definition>
-        <argsstring></argsstring>
+      <memberdef kind="variable" id="struct__alooWindow_1a89ae4f7b03da6d8b702cfed1878a9885" prot="public" static="no" mutable="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>alooWidget*(* _alooWindow::setChild) (alooWidget *window, alooWidget *child)</definition>
+        <argsstring>)(alooWidget *window, alooWidget *child)</argsstring>
         <name>setChild</name>
         <briefdescription>
 <para>Sets Window child. </para>
@@ -88,12 +88,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/window.h" line="88" column="27" bodyfile="include/window.h" bodystart="88" bodyend="-1"/>
+        <location file="include/window.h" line="69" column="1" bodyfile="include/window.h" bodystart="69" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct__alooWindow_1a958c501818bddcf9399bd3c2a731f3a5" prot="public" static="no" mutable="no">
-        <type><ref refid="window_8h_1a11a9f67b03d63f28252d4d55ab3f689a" kindref="member">__alooSetWindowTitle_Type</ref></type>
-        <definition>__alooSetWindowTitle_Type _alooWindow::setTitle</definition>
-        <argsstring></argsstring>
+      <memberdef kind="variable" id="struct__alooWindow_1afa4cabcec46bc162b3248c585a485d24" prot="public" static="no" mutable="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>alooWidget*(* _alooWindow::setTitle) (alooWidget *window, const char *title)</definition>
+        <argsstring>)(alooWidget *window, const char *title)</argsstring>
         <name>setTitle</name>
         <briefdescription>
 <para>Sets GtkWindow title. </para>
@@ -122,12 +122,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/window.h" line="93" column="27" bodyfile="include/window.h" bodystart="93" bodyend="-1"/>
+        <location file="include/window.h" line="74" column="1" bodyfile="include/window.h" bodystart="74" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct__alooWindow_1af380e7305b03ac7d9bd88f424d771acb" prot="public" static="no" mutable="no">
-        <type><ref refid="window_8h_1a79726c65ac6d0739867a2c9bc3d2624b" kindref="member">__setWindowSize_Type</ref></type>
-        <definition>__setWindowSize_Type _alooWindow::setSize</definition>
-        <argsstring></argsstring>
+      <memberdef kind="variable" id="struct__alooWindow_1aeccc58102d537099a2148c1441cb121e" prot="public" static="no" mutable="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>alooWidget*(* _alooWindow::setSize) (alooWidget *window, int width, int height)</definition>
+        <argsstring>)(alooWidget *window, int width, int height)</argsstring>
         <name>setSize</name>
         <briefdescription>
 <para>Sets aloo Window size. </para>
@@ -164,12 +164,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/window.h" line="99" column="22" bodyfile="include/window.h" bodystart="99" bodyend="-1"/>
+        <location file="include/window.h" line="80" column="1" bodyfile="include/window.h" bodystart="80" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct__alooWindow_1a4dd10bb0a31c1d5d24962027429a7ce7" prot="public" static="no" mutable="no">
-        <type><ref refid="window_8h_1a8fe109a7ae19d254c7ca918354d15dde" kindref="member">__setWindowApplication_Type</ref></type>
-        <definition>__setWindowApplication_Type _alooWindow::set_app_window</definition>
-        <argsstring></argsstring>
+      <memberdef kind="variable" id="struct__alooWindow_1a85e3f943840da73ad0f523afe111fea5" prot="public" static="no" mutable="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>alooWidget*(* _alooWindow::set_app_window) (alooWidget *window, AlooApplication *app)</definition>
+        <argsstring>)(alooWidget *window, AlooApplication *app)</argsstring>
         <name>set_app_window</name>
         <briefdescription>
 <para>Set the Window for Application. </para>
@@ -198,12 +198,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/window.h" line="104" column="29" bodyfile="include/window.h" bodystart="104" bodyend="-1"/>
+        <location file="include/window.h" line="85" column="1" bodyfile="include/window.h" bodystart="85" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct__alooWindow_1ab21c30a752473650b70b0ec15b69dfa2" prot="public" static="no" mutable="no">
-        <type><ref refid="window_8h_1a2761337c8c639f7e4ba12fc0ea361471" kindref="member">__app_add_window_Type</ref></type>
-        <definition>__app_add_window_Type _alooWindow::app_add_window</definition>
-        <argsstring></argsstring>
+      <memberdef kind="variable" id="struct__alooWindow_1afbb1b375b7b468e59c82c5ae5e95a794" prot="public" static="no" mutable="no">
+        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
+        <definition>alooWidget*(* _alooWindow::app_add_window) (AlooApplication *app, alooWidget *window)</definition>
+        <argsstring>)(AlooApplication *app, alooWidget *window)</argsstring>
         <name>app_add_window</name>
         <briefdescription>
 <para>Adds Window to Application. </para>
@@ -232,12 +232,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/window.h" line="109" column="23" bodyfile="include/window.h" bodystart="109" bodyend="-1"/>
+        <location file="include/window.h" line="90" column="1" bodyfile="include/window.h" bodystart="90" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct__alooWindow_1a2c45374a9db8020ae326a897010e53a0" prot="public" static="no" mutable="no">
-        <type><ref refid="window_8h_1a3c98359a51199241964e2fde72071e05" kindref="member">__showWindow_Type</ref></type>
-        <definition>__showWindow_Type _alooWindow::show</definition>
-        <argsstring></argsstring>
+      <memberdef kind="variable" id="struct__alooWindow_1aed2ce94649355d0dafe31fe876cd1e36" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* _alooWindow::show) (alooWidget *window)</definition>
+        <argsstring>)(alooWidget *window)</argsstring>
         <name>show</name>
         <briefdescription>
 <para>Shows Window. </para>
@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/window.h" line="113" column="19" bodyfile="include/window.h" bodystart="113" bodyend="-1"/>
+        <location file="include/window.h" line="94" column="1" bodyfile="include/window.h" bodystart="94" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -277,7 +277,6 @@
           <edgelabel>setSize</edgelabel>
           <edgelabel>setTitle</edgelabel>
           <edgelabel>set_app_window</edgelabel>
-          <edgelabel>show</edgelabel>
         </childnode>
       </node>
       <node id="2">
@@ -285,16 +284,16 @@
         <link refid="structalooWidget"/>
       </node>
     </collaborationgraph>
-    <location file="include/window.h" line="75" column="1" bodyfile="include/window.h" bodystart="75" bodyend="114"/>
+    <location file="include/window.h" line="56" column="1" bodyfile="include/window.h" bodystart="56" bodyend="95"/>
     <listofallmembers>
-      <member refid="struct__alooWindow_1ab21c30a752473650b70b0ec15b69dfa2" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>app_add_window</name></member>
-      <member refid="struct__alooWindow_1a58b6fe2c1669b0a3115814742c34b967" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>new</name></member>
-      <member refid="struct__alooWindow_1a69eb586c39bd205c3090052062603800" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>present</name></member>
-      <member refid="struct__alooWindow_1a4dd10bb0a31c1d5d24962027429a7ce7" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>set_app_window</name></member>
-      <member refid="struct__alooWindow_1a76819237feac7bff766987104b51aeab" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>setChild</name></member>
-      <member refid="struct__alooWindow_1af380e7305b03ac7d9bd88f424d771acb" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>setSize</name></member>
-      <member refid="struct__alooWindow_1a958c501818bddcf9399bd3c2a731f3a5" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>setTitle</name></member>
-      <member refid="struct__alooWindow_1a2c45374a9db8020ae326a897010e53a0" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>show</name></member>
+      <member refid="struct__alooWindow_1afbb1b375b7b468e59c82c5ae5e95a794" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>app_add_window</name></member>
+      <member refid="struct__alooWindow_1a78bd31852545559e9fe4c3c033027a03" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>new</name></member>
+      <member refid="struct__alooWindow_1ae0ac2345055d140263283193d63e12b9" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>present</name></member>
+      <member refid="struct__alooWindow_1a85e3f943840da73ad0f523afe111fea5" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>set_app_window</name></member>
+      <member refid="struct__alooWindow_1a89ae4f7b03da6d8b702cfed1878a9885" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>setChild</name></member>
+      <member refid="struct__alooWindow_1aeccc58102d537099a2148c1441cb121e" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>setSize</name></member>
+      <member refid="struct__alooWindow_1afa4cabcec46bc162b3248c585a485d24" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>setTitle</name></member>
+      <member refid="struct__alooWindow_1aed2ce94649355d0dafe31fe876cd1e36" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>show</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

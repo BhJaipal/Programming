@@ -1,6 +1,5 @@
 #include "../include/aloo.h"
 #include <fontconfig/fontconfig.h>
-#include <gtk/gtk.h>
 
 alooWidget *labelGrid;
 alooWidget *navbar;
@@ -102,12 +101,8 @@ static void activate() {
 	CSS.setSize(buttonWidget, 100, 50);
 	CSS.setSize(rmLabelWidget, 125, 50);
 
-	GtkIconTheme *iconTheme = gtk_icon_theme_new();
-	gtk_icon_theme_add_resource_path(
-		iconTheme, "/home/jaipal001/.icons/Colorful-Dark-Icons/index.theme");
-
-	Button.icon(buttonWidget, "add");
-	Button.icon(rmLabelWidget, "remove");
+	Button.label(buttonWidget, "add");
+	Button.label(rmLabelWidget, "remove");
 
 	// gtk_widget_set_visible(GTK_WINDOW(window), TRUE);
 	// gtk_window_fullscreen(GTK_WINDOW(window));

@@ -6,7 +6,8 @@
 
 
 
-Collaboration diagram for \+\_\+aloo\+CSS\+:\nopagebreak
+Collaboration diagram for \+\_\+aloo\+CSS\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,88 +17,145 @@ Collaboration diagram for \+\_\+aloo\+CSS\+:\nopagebreak
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{style_8h_ae0f34a36ac9b2990d10a3b48dc718371}{\+\_\+\+\_\+import\+Css\+From\+Path\+\_\+\+Type}} \mbox{\hyperlink{struct__alooCSS_a6ee605988bc52a3f4c50317c95c66a43}{import\+Path}}
-\item 
-\mbox{\hyperlink{style_8h_aae8bb2f31f06f33a889658817b1aca46}{\+\_\+\+\_\+import\+Css\+From\+Data\+\_\+\+Type}} \mbox{\hyperlink{struct__alooCSS_a8358c12411cdcd727f894445c47935ee}{import\+Data}}
-\item 
-\mbox{\hyperlink{style_8h_a3eee583412a2fa9b9825f1245e59ba45}{\+\_\+\+\_\+import\+Css\+From\+File\+\_\+\+Type}} \mbox{\hyperlink{struct__alooCSS_a8b3cb3329326ba47b6d2793b8128e2b3}{import\+File}}
-\item 
-\mbox{\hyperlink{style_8h_a55176b74c240ff89d096c4fd69536493}{\+\_\+\+\_\+set\+Width\+\_\+\+Type}} \mbox{\hyperlink{struct__alooCSS_a61a633fe25ff8bec5fa1107210a39247}{set\+Width}}
-\item 
-\mbox{\hyperlink{style_8h_ab3d6ef4fff6f333abbed9644ef7e80aa}{\+\_\+\+\_\+set\+Height\+\_\+\+Type}} \mbox{\hyperlink{struct__alooCSS_ac1aab2722d77ae170217197e8d85c7d6}{set\+Height}}
-\item 
-\mbox{\hyperlink{style_8h_ad74daa30ede1124a5975116c700b60f0}{\+\_\+\+\_\+set\+Size\+\_\+\+Type}} \mbox{\hyperlink{struct__alooCSS_ac5a09a64d4cbdb3386512875fe0501a6}{set\+Size}}
-\item 
-\mbox{\hyperlink{style_8h_a40fd06d9575ce9bf52bfdc0bfae4a88f}{\+\_\+\+\_\+widget\+Add\+Class\+\_\+\+Type}} \mbox{\hyperlink{struct__alooCSS_adf287aa708114930c77b146133e58f87}{add\+Class}}
-\item 
-\mbox{\hyperlink{style_8h_a90674b098469b5346a96a8293ea3919b}{\+\_\+\+\_\+widget\+Remove\+Class\+\_\+\+Type}} \mbox{\hyperlink{struct__alooCSS_a971def5117780de234b63544892882f4}{remove\+Class}}
-\item 
-\mbox{\hyperlink{style_8h_a29c846126936a01de97a4665202f5783}{\+\_\+\+\_\+get\+Widget\+Classes\+\_\+\+Type}} \mbox{\hyperlink{struct__alooCSS_a6bf3be66b2e8bdda4f5b046d456d6e96}{get\+Classes}}
-\item 
-\mbox{\hyperlink{style_8h_a8a998832f6237937f050ea99ad061530}{\+\_\+\+\_\+set\+Widget\+Classes\+\_\+\+Type}} \mbox{\hyperlink{struct__alooCSS_ab422451b3dacc2057561d8ac51209c7e}{set\+Classes}}
-\end{DoxyCompactItemize}
+void($\ast$ \mbox{\hyperlink{struct__alooCSS_a7ecf5733e77f656ce271511463559636}{import\+Path}} )(const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Import CSS file from path. \end{DoxyCompactList}\item 
+void($\ast$ \mbox{\hyperlink{struct__alooCSS_a96b9c02727a5207e4500d477058d9539}{import\+Data}} )(const char $\ast$content, gssize length)
+\begin{DoxyCompactList}\small\item\em Import CSS file from content. \end{DoxyCompactList}\item 
+void($\ast$ \mbox{\hyperlink{struct__alooCSS_a85d85917cfb004497f642fd5b82ad996}{import\+File}} )(GFile $\ast$file)
+\begin{DoxyCompactList}\small\item\em Import CSS file from content. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{struct__alooCSS_a70dab3304af5a4d743a501afac64c471}{set\+Width}} )(\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid, int width)
+\begin{DoxyCompactList}\small\item\em Set the Width of widget. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{struct__alooCSS_a1991160a4b6c11ed6673826cb3add5fe}{set\+Height}} )(\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid, int height)
+\begin{DoxyCompactList}\small\item\em Set the Height of widget. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{struct__alooCSS_aea265c46559d1ef2994f3b09b294a10d}{set\+Size}} )(\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid, int width, int height)
+\begin{DoxyCompactList}\small\item\em Set the Width and Height of widget. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{struct__alooCSS_a24fd938ee282fe315bd97b355cd598b7}{add\+Class}} )(\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, char $\ast$class)
+\begin{DoxyCompactList}\small\item\em Adds class to widget. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{struct__alooCSS_abc01c166ed5a2eabde408f4405bdd40d}{remove\+Class}} )(\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, char $\ast$class)
+\begin{DoxyCompactList}\small\item\em Removes class from widget. \end{DoxyCompactList}\item 
+char $\ast$$\ast$($\ast$ \mbox{\hyperlink{struct__alooCSS_ad1f623aea153448d39ac6e09510efc62}{get\+Classes}} )(\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Gets classes of widget. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{struct__alooCSS_a1b66d52043761c243521650d3a4cfc57}{set\+Classes}} )(\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, char $\ast$$\ast$classes)
+\begin{DoxyCompactList}\small\item\em Sets classes of widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{struct__alooCSS_adf287aa708114930c77b146133e58f87}\label{struct__alooCSS_adf287aa708114930c77b146133e58f87}} 
+\mbox{\Hypertarget{struct__alooCSS_a24fd938ee282fe315bd97b355cd598b7}\label{struct__alooCSS_a24fd938ee282fe315bd97b355cd598b7}} 
 \index{\_alooCSS@{\_alooCSS}!addClass@{addClass}}
 \index{addClass@{addClass}!\_alooCSS@{\_alooCSS}}
 \doxysubsubsection{\texorpdfstring{addClass}{addClass}}
-{\footnotesize\ttfamily \mbox{\hyperlink{style_8h_a40fd06d9575ce9bf52bfdc0bfae4a88f}{\+\_\+\+\_\+widget\+Add\+Class\+\_\+\+Type}} \+\_\+aloo\+CSS\+::add\+Class}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+aloo\+CSS\+::add\+Class) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, char $\ast$class)}
 
-\mbox{\Hypertarget{struct__alooCSS_a6bf3be66b2e8bdda4f5b046d456d6e96}\label{struct__alooCSS_a6bf3be66b2e8bdda4f5b046d456d6e96}} 
+
+
+Adds class to widget. 
+
+\mbox{\Hypertarget{struct__alooCSS_ad1f623aea153448d39ac6e09510efc62}\label{struct__alooCSS_ad1f623aea153448d39ac6e09510efc62}} 
 \index{\_alooCSS@{\_alooCSS}!getClasses@{getClasses}}
 \index{getClasses@{getClasses}!\_alooCSS@{\_alooCSS}}
 \doxysubsubsection{\texorpdfstring{getClasses}{getClasses}}
-{\footnotesize\ttfamily \mbox{\hyperlink{style_8h_a29c846126936a01de97a4665202f5783}{\+\_\+\+\_\+get\+Widget\+Classes\+\_\+\+Type}} \+\_\+aloo\+CSS\+::get\+Classes}
+{\footnotesize\ttfamily char$\ast$$\ast$($\ast$ \+\_\+aloo\+CSS\+::get\+Classes) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget)}
 
-\mbox{\Hypertarget{struct__alooCSS_a8358c12411cdcd727f894445c47935ee}\label{struct__alooCSS_a8358c12411cdcd727f894445c47935ee}} 
+
+
+Gets classes of widget. 
+
+\mbox{\Hypertarget{struct__alooCSS_a96b9c02727a5207e4500d477058d9539}\label{struct__alooCSS_a96b9c02727a5207e4500d477058d9539}} 
 \index{\_alooCSS@{\_alooCSS}!importData@{importData}}
 \index{importData@{importData}!\_alooCSS@{\_alooCSS}}
 \doxysubsubsection{\texorpdfstring{importData}{importData}}
-{\footnotesize\ttfamily \mbox{\hyperlink{style_8h_aae8bb2f31f06f33a889658817b1aca46}{\+\_\+\+\_\+import\+Css\+From\+Data\+\_\+\+Type}} \+\_\+aloo\+CSS\+::import\+Data}
+{\footnotesize\ttfamily void($\ast$ \+\_\+aloo\+CSS\+::import\+Data) (const char $\ast$content, gssize length)}
 
-\mbox{\Hypertarget{struct__alooCSS_a8b3cb3329326ba47b6d2793b8128e2b3}\label{struct__alooCSS_a8b3cb3329326ba47b6d2793b8128e2b3}} 
+
+
+Import CSS file from content. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em content} & css content \\
+\hline
+{\em length} & content length \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct__alooCSS_a85d85917cfb004497f642fd5b82ad996}\label{struct__alooCSS_a85d85917cfb004497f642fd5b82ad996}} 
 \index{\_alooCSS@{\_alooCSS}!importFile@{importFile}}
 \index{importFile@{importFile}!\_alooCSS@{\_alooCSS}}
 \doxysubsubsection{\texorpdfstring{importFile}{importFile}}
-{\footnotesize\ttfamily \mbox{\hyperlink{style_8h_a3eee583412a2fa9b9825f1245e59ba45}{\+\_\+\+\_\+import\+Css\+From\+File\+\_\+\+Type}} \+\_\+aloo\+CSS\+::import\+File}
+{\footnotesize\ttfamily void($\ast$ \+\_\+aloo\+CSS\+::import\+File) (GFile $\ast$file)}
 
-\mbox{\Hypertarget{struct__alooCSS_a6ee605988bc52a3f4c50317c95c66a43}\label{struct__alooCSS_a6ee605988bc52a3f4c50317c95c66a43}} 
+
+
+Import CSS file from content. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & CSS GFile \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct__alooCSS_a7ecf5733e77f656ce271511463559636}\label{struct__alooCSS_a7ecf5733e77f656ce271511463559636}} 
 \index{\_alooCSS@{\_alooCSS}!importPath@{importPath}}
 \index{importPath@{importPath}!\_alooCSS@{\_alooCSS}}
 \doxysubsubsection{\texorpdfstring{importPath}{importPath}}
-{\footnotesize\ttfamily \mbox{\hyperlink{style_8h_ae0f34a36ac9b2990d10a3b48dc718371}{\+\_\+\+\_\+import\+Css\+From\+Path\+\_\+\+Type}} \+\_\+aloo\+CSS\+::import\+Path}
+{\footnotesize\ttfamily void($\ast$ \+\_\+aloo\+CSS\+::import\+Path) (const char $\ast$name)}
 
-\mbox{\Hypertarget{struct__alooCSS_a971def5117780de234b63544892882f4}\label{struct__alooCSS_a971def5117780de234b63544892882f4}} 
+
+
+Import CSS file from path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & path of css file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct__alooCSS_abc01c166ed5a2eabde408f4405bdd40d}\label{struct__alooCSS_abc01c166ed5a2eabde408f4405bdd40d}} 
 \index{\_alooCSS@{\_alooCSS}!removeClass@{removeClass}}
 \index{removeClass@{removeClass}!\_alooCSS@{\_alooCSS}}
 \doxysubsubsection{\texorpdfstring{removeClass}{removeClass}}
-{\footnotesize\ttfamily \mbox{\hyperlink{style_8h_a90674b098469b5346a96a8293ea3919b}{\+\_\+\+\_\+widget\+Remove\+Class\+\_\+\+Type}} \+\_\+aloo\+CSS\+::remove\+Class}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+aloo\+CSS\+::remove\+Class) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, char $\ast$class)}
 
-\mbox{\Hypertarget{struct__alooCSS_ab422451b3dacc2057561d8ac51209c7e}\label{struct__alooCSS_ab422451b3dacc2057561d8ac51209c7e}} 
+
+
+Removes class from widget. 
+
+\mbox{\Hypertarget{struct__alooCSS_a1b66d52043761c243521650d3a4cfc57}\label{struct__alooCSS_a1b66d52043761c243521650d3a4cfc57}} 
 \index{\_alooCSS@{\_alooCSS}!setClasses@{setClasses}}
 \index{setClasses@{setClasses}!\_alooCSS@{\_alooCSS}}
 \doxysubsubsection{\texorpdfstring{setClasses}{setClasses}}
-{\footnotesize\ttfamily \mbox{\hyperlink{style_8h_a8a998832f6237937f050ea99ad061530}{\+\_\+\+\_\+set\+Widget\+Classes\+\_\+\+Type}} \+\_\+aloo\+CSS\+::set\+Classes}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+aloo\+CSS\+::set\+Classes) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, char $\ast$$\ast$classes)}
 
-\mbox{\Hypertarget{struct__alooCSS_ac1aab2722d77ae170217197e8d85c7d6}\label{struct__alooCSS_ac1aab2722d77ae170217197e8d85c7d6}} 
+
+
+Sets classes of widget. 
+
+\mbox{\Hypertarget{struct__alooCSS_a1991160a4b6c11ed6673826cb3add5fe}\label{struct__alooCSS_a1991160a4b6c11ed6673826cb3add5fe}} 
 \index{\_alooCSS@{\_alooCSS}!setHeight@{setHeight}}
 \index{setHeight@{setHeight}!\_alooCSS@{\_alooCSS}}
 \doxysubsubsection{\texorpdfstring{setHeight}{setHeight}}
-{\footnotesize\ttfamily \mbox{\hyperlink{style_8h_ab3d6ef4fff6f333abbed9644ef7e80aa}{\+\_\+\+\_\+set\+Height\+\_\+\+Type}} \+\_\+aloo\+CSS\+::set\+Height}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+aloo\+CSS\+::set\+Height) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid, int height)}
 
-\mbox{\Hypertarget{struct__alooCSS_ac5a09a64d4cbdb3386512875fe0501a6}\label{struct__alooCSS_ac5a09a64d4cbdb3386512875fe0501a6}} 
+
+
+Set the Height of widget. 
+
+\mbox{\Hypertarget{struct__alooCSS_aea265c46559d1ef2994f3b09b294a10d}\label{struct__alooCSS_aea265c46559d1ef2994f3b09b294a10d}} 
 \index{\_alooCSS@{\_alooCSS}!setSize@{setSize}}
 \index{setSize@{setSize}!\_alooCSS@{\_alooCSS}}
 \doxysubsubsection{\texorpdfstring{setSize}{setSize}}
-{\footnotesize\ttfamily \mbox{\hyperlink{style_8h_ad74daa30ede1124a5975116c700b60f0}{\+\_\+\+\_\+set\+Size\+\_\+\+Type}} \+\_\+aloo\+CSS\+::set\+Size}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+aloo\+CSS\+::set\+Size) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid, int width, int height)}
 
-\mbox{\Hypertarget{struct__alooCSS_a61a633fe25ff8bec5fa1107210a39247}\label{struct__alooCSS_a61a633fe25ff8bec5fa1107210a39247}} 
+
+
+Set the Width and Height of widget. 
+
+\mbox{\Hypertarget{struct__alooCSS_a70dab3304af5a4d743a501afac64c471}\label{struct__alooCSS_a70dab3304af5a4d743a501afac64c471}} 
 \index{\_alooCSS@{\_alooCSS}!setWidth@{setWidth}}
 \index{setWidth@{setWidth}!\_alooCSS@{\_alooCSS}}
 \doxysubsubsection{\texorpdfstring{setWidth}{setWidth}}
-{\footnotesize\ttfamily \mbox{\hyperlink{style_8h_a55176b74c240ff89d096c4fd69536493}{\+\_\+\+\_\+set\+Width\+\_\+\+Type}} \+\_\+aloo\+CSS\+::set\+Width}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+aloo\+CSS\+::set\+Width) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid, int width)}
+
+
+
+Set the Width of widget. 
 
 
 

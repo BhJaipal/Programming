@@ -69,7 +69,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -102,22 +101,10 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 <p><a href="builder_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:aed886ff43cad9234d0ba1884e40b1f04"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="builder_8h.html#aed886ff43cad9234d0ba1884e40b1f04">__unrefBuilderType</a>) (<a class="el" href="structAlooBuilder.html">AlooBuilder</a> *data)</td></tr>
-<tr class="separator:aed886ff43cad9234d0ba1884e40b1f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1f8811e29e91ac91928f564335bc34d"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structAlooBuilder.html">AlooBuilder</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="builder_8h.html#ac1f8811e29e91ac91928f564335bc34d">__createBuilderType</a>) ()</td></tr>
-<tr class="separator:ac1f8811e29e91ac91928f564335bc34d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6abf1c95f46c23b366142547e03ab720"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="builder_8h.html#a6abf1c95f46c23b366142547e03ab720">__builderAddFileType</a>) (<a class="el" href="structAlooBuilder.html">AlooBuilder</a> *build, const char *filename, GError **err)</td></tr>
-<tr class="separator:a6abf1c95f46c23b366142547e03ab720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a102a4cc7ecf139e10b4077e062fa75e6"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="builder_8h.html#a102a4cc7ecf139e10b4077e062fa75e6">__builderAddContentType</a>) (<a class="el" href="structAlooBuilder.html">AlooBuilder</a> *build, const char *content, gssize length, GError **err)</td></tr>
-<tr class="separator:a102a4cc7ecf139e10b4077e062fa75e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fc1d84ef30667a5ee42581a66896c50"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="builder_8h.html#a8fc1d84ef30667a5ee42581a66896c50">__builderAddResourceType</a>) (<a class="el" href="structAlooBuilder.html">AlooBuilder</a> *build, const char *resource_path, GError **err)</td></tr>
-<tr class="separator:a8fc1d84ef30667a5ee42581a66896c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6bb8611e2c60c6b189ad1d700b68c3c"><td class="memItemLeft" align="right" valign="top">typedef GObject *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="builder_8h.html#aa6bb8611e2c60c6b189ad1d700b68c3c">__alooGetBuilderObjectType</a>) (<a class="el" href="structAlooBuilder.html">AlooBuilder</a> *builder, const char *name)</td></tr>
-<tr class="separator:aa6bb8611e2c60c6b189ad1d700b68c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a250cc87a97f7eb4fdff9e07434a7a565"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structalooWidget.html">alooWidget</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="builder_8h.html#a250cc87a97f7eb4fdff9e07434a7a565">__alooWidgetFromBuilderType</a>) (<a class="el" href="structAlooBuilder.html">AlooBuilder</a> *builder, const char *name)</td></tr>
-<tr class="separator:a250cc87a97f7eb4fdff9e07434a7a565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__AlooBuilder.html">_AlooBuilder</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -145,112 +132,13 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a2b1d855975b698ca37554d3e4841fa04"><td class="memItemLeft" align="right" valign="top">struct _AlooBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="builder_8h.html#a2b1d855975b698ca37554d3e4841fa04">Builder</a></td></tr>
+<tr class="memitem:a2b1d855975b698ca37554d3e4841fa04"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct__AlooBuilder.html">_AlooBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="builder_8h.html#a2b1d855975b698ca37554d3e4841fa04">Builder</a></td></tr>
 <tr class="separator:a2b1d855975b698ca37554d3e4841fa04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains UI Builder related functions. </p>
 <dl class="section author"><dt>Author</dt><dd>Jaipal001 </dd></dl>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="aa6bb8611e2c60c6b189ad1d700b68c3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6bb8611e2c60c6b189ad1d700b68c3c">&#9670;&nbsp;</a></span>__alooGetBuilderObjectType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef GObject*(* __alooGetBuilderObjectType) (<a class="el" href="structAlooBuilder.html">AlooBuilder</a> *builder, const char *name)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a250cc87a97f7eb4fdff9e07434a7a565"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a250cc87a97f7eb4fdff9e07434a7a565">&#9670;&nbsp;</a></span>__alooWidgetFromBuilderType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="structalooWidget.html">alooWidget</a>*(* __alooWidgetFromBuilderType) (<a class="el" href="structAlooBuilder.html">AlooBuilder</a> *builder, const char *name)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a102a4cc7ecf139e10b4077e062fa75e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a102a4cc7ecf139e10b4077e062fa75e6">&#9670;&nbsp;</a></span>__builderAddContentType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef int(* __builderAddContentType) (<a class="el" href="structAlooBuilder.html">AlooBuilder</a> *build, const char *content, gssize length, GError **err)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6abf1c95f46c23b366142547e03ab720"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6abf1c95f46c23b366142547e03ab720">&#9670;&nbsp;</a></span>__builderAddFileType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef int(* __builderAddFileType) (<a class="el" href="structAlooBuilder.html">AlooBuilder</a> *build, const char *filename, GError **err)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8fc1d84ef30667a5ee42581a66896c50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fc1d84ef30667a5ee42581a66896c50">&#9670;&nbsp;</a></span>__builderAddResourceType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef int(* __builderAddResourceType) (<a class="el" href="structAlooBuilder.html">AlooBuilder</a> *build, const char *resource_path, GError **err)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac1f8811e29e91ac91928f564335bc34d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1f8811e29e91ac91928f564335bc34d">&#9670;&nbsp;</a></span>__createBuilderType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="structAlooBuilder.html">AlooBuilder</a>*(* __createBuilderType) ()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aed886ff43cad9234d0ba1884e40b1f04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed886ff43cad9234d0ba1884e40b1f04">&#9670;&nbsp;</a></span>__unrefBuilderType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef void(* __unrefBuilderType) (<a class="el" href="structAlooBuilder.html">AlooBuilder</a> *data)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a860c750ea04f2234cba20c76f10b82b4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a860c750ea04f2234cba20c76f10b82b4">&#9670;&nbsp;</a></span>__alooGetBuilderObject()</h2>
 
@@ -501,7 +389,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">struct _AlooBuilder Builder</td>
+          <td class="memname">struct <a class="el" href="struct__AlooBuilder.html">_AlooBuilder</a> Builder</td>
         </tr>
       </table>
   </td>

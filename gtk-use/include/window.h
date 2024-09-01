@@ -53,64 +53,45 @@ void __showWindow(alooWidget *window);
 
 /******************** Private Types ********************/
 
-typedef alooWidget *(*__alooSetWindowChild_Type)(alooWidget *window,
-												 alooWidget *child);
-
-typedef alooWidget *(*__alooPresentWindow_Type)(alooWidget *window);
-
-typedef alooWidget *(*__alooApplicationNewWindow_Type)(AlooApplication *app);
-
-typedef alooWidget *(*__alooSetWindowTitle_Type)(alooWidget *window,
-												 const char *title);
-
-typedef alooWidget *(*__setWindowSize_Type)(alooWidget *window, int width,
-											int height);
-
-typedef alooWidget *(*__setWindowApplication_Type)(alooWidget *window,
-												   AlooApplication *app);
-typedef alooWidget *(*__app_add_window_Type)(AlooApplication *app,
-											 alooWidget *window);
-typedef void (*__showWindow_Type)(alooWidget *window);
-
 struct _alooWindow {
 	/// @brief Create a GtkWindow
 	/// @param app AlooApplication*
 	/// @return alooWidget*
-	__alooApplicationNewWindow_Type new;
+	alooWidget *(*new)(AlooApplication *app);
 	/// @brief Presents GtkWindow
 	/// @param window alooWidget*
 	/// @return alooWidget*
-	__alooPresentWindow_Type present;
+	alooWidget *(*present)(alooWidget *window);
 	/// @brief Sets Window child
 	/// @param window alooWidget *
 	/// @param child alooWidget *
 	/// @return
-	__alooSetWindowChild_Type setChild;
+	alooWidget *(*setChild)(alooWidget *window, alooWidget *child);
 	/// @brief Sets GtkWindow title
 	/// @param window alooWidget *
 	/// @param title const char*
 	/// @return alooWidget *
-	__alooSetWindowTitle_Type setTitle;
+	alooWidget *(*setTitle)(alooWidget *window, const char *title);
 	/// @brief Sets aloo Window size
 	/// @param window alooWidget *
 	/// @param width int
 	/// @param height int
 	/// @return alooWidget*
-	__setWindowSize_Type setSize;
+	alooWidget *(*setSize)(alooWidget *window, int width, int height);
 	/// @brief Set the Window for Application
 	/// @param window alooWidget*
 	/// @param app AlooApplication*
 	/// @return alooWidget*
-	__setWindowApplication_Type set_app_window;
+	alooWidget *(*set_app_window)(alooWidget *window, AlooApplication *app);
 	/// @brief Adds Window to Application
 	/// @param app AlooApplication*
 	/// @param window alooWidget*
 	/// @return aloowidget*
-	__app_add_window_Type app_add_window;
+	alooWidget *(*app_add_window)(AlooApplication *app, alooWidget *window);
 	/// @brief Shows Window
 	/// @param window alooWidget*
 	/// @return void
-	__showWindow_Type show;
+	void (*show)(alooWidget *window);
 };
 
 /******************** Public ********************/

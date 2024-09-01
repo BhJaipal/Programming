@@ -119,16 +119,6 @@ Classes</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:a278b2f05488d5268c31ce89bbd7b1592"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structAlooApplication.html">AlooApplication</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a278b2f05488d5268c31ce89bbd7b1592">AlooApplication</a></td></tr>
 <tr class="separator:a278b2f05488d5268c31ce89bbd7b1592"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95133c0df92796e7b4df688293eedd7e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structAlooApplication.html">AlooApplication</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a95133c0df92796e7b4df688293eedd7e">__CreateApp_Type</a>) (const char *app_id, struct <a class="el" href="structalooAppOptions.html">alooAppOptions</a> gAppOptions)</td></tr>
-<tr class="separator:a95133c0df92796e7b4df688293eedd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bba07399d9aa1e6b87f19598bd8a60d"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a9bba07399d9aa1e6b87f19598bd8a60d">__RunApp_Type</a>) (<a class="el" href="structAlooApplication.html">AlooApplication</a> *application)</td></tr>
-<tr class="separator:a9bba07399d9aa1e6b87f19598bd8a60d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9acebd98f9bfa6671da49f4186d713f3"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a9acebd98f9bfa6671da49f4186d713f3">__RunAppAndUnrefIt_Type</a>) (<a class="el" href="structAlooApplication.html">AlooApplication</a> *application)</td></tr>
-<tr class="separator:a9acebd98f9bfa6671da49f4186d713f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a87839afe5792be6e14631e4a9d611a"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a4a87839afe5792be6e14631e4a9d611a">__unrefApp_Type</a>) (<a class="el" href="structAlooApplication.html">AlooApplication</a> *application)</td></tr>
-<tr class="separator:a4a87839afe5792be6e14631e4a9d611a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f490aa55bfa20ab8b3274621cc3baa2"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app_8h.html#a5f490aa55bfa20ab8b3274621cc3baa2">__AppAddEvents_Type</a>) (<a class="el" href="structAlooApplication.html">AlooApplication</a> *app, const char *event, void callbackFn())</td></tr>
-<tr class="separator:a5f490aa55bfa20ab8b3274621cc3baa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -166,76 +156,6 @@ Variables</h2></td></tr>
 <div class="textblock"><p>Aloo Application related functions. </p>
 <dl class="section author"><dt>Author</dt><dd>Jaipal001 </dd></dl>
 </div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="a5f490aa55bfa20ab8b3274621cc3baa2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f490aa55bfa20ab8b3274621cc3baa2">&#9670;&nbsp;</a></span>__AppAddEvents_Type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef void(* __AppAddEvents_Type) (<a class="el" href="structAlooApplication.html">AlooApplication</a> *app, const char *event, void callbackFn())</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a95133c0df92796e7b4df688293eedd7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95133c0df92796e7b4df688293eedd7e">&#9670;&nbsp;</a></span>__CreateApp_Type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="structAlooApplication.html">AlooApplication</a>*(* __CreateApp_Type) (const char *app_id, struct <a class="el" href="structalooAppOptions.html">alooAppOptions</a> gAppOptions)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9bba07399d9aa1e6b87f19598bd8a60d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bba07399d9aa1e6b87f19598bd8a60d">&#9670;&nbsp;</a></span>__RunApp_Type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef int(* __RunApp_Type) (<a class="el" href="structAlooApplication.html">AlooApplication</a> *application)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9acebd98f9bfa6671da49f4186d713f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9acebd98f9bfa6671da49f4186d713f3">&#9670;&nbsp;</a></span>__RunAppAndUnrefIt_Type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef int(* __RunAppAndUnrefIt_Type) (<a class="el" href="structAlooApplication.html">AlooApplication</a> *application)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4a87839afe5792be6e14631e4a9d611a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a87839afe5792be6e14631e4a9d611a">&#9670;&nbsp;</a></span>__unrefApp_Type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef void(* __unrefApp_Type) (<a class="el" href="structAlooApplication.html">AlooApplication</a> *application)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a278b2f05488d5268c31ce89bbd7b1592"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a278b2f05488d5268c31ce89bbd7b1592">&#9670;&nbsp;</a></span>AlooApplication</h2>
 

@@ -34,138 +34,6 @@
       </node>
     </invincdepgraph>
     <innerclass refid="struct__alooCSS" prot="public">_alooCSS</innerclass>
-      <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="style_8h_1ae0f34a36ac9b2990d10a3b48dc718371" prot="public" static="no">
-        <type>void(*</type>
-        <definition>typedef void(* __importCssFromPath_Type) (const char *name)</definition>
-        <argsstring>)(const char *name)</argsstring>
-        <name>__importCssFromPath_Type</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/style.h" line="61" column="9" bodyfile="include/style.h" bodystart="61" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="style_8h_1aae8bb2f31f06f33a889658817b1aca46" prot="public" static="no">
-        <type>void(*</type>
-        <definition>typedef void(* __importCssFromData_Type) (const char *content, gssize length)</definition>
-        <argsstring>)(const char *content, gssize length)</argsstring>
-        <name>__importCssFromData_Type</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/style.h" line="62" column="9" bodyfile="include/style.h" bodystart="62" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="style_8h_1a3eee583412a2fa9b9825f1245e59ba45" prot="public" static="no">
-        <type>void(*</type>
-        <definition>typedef void(* __importCssFromFile_Type) (GFile *file)</definition>
-        <argsstring>)(GFile *file)</argsstring>
-        <name>__importCssFromFile_Type</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/style.h" line="63" column="9" bodyfile="include/style.h" bodystart="63" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="style_8h_1a55176b74c240ff89d096c4fd69536493" prot="public" static="no">
-        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
-        <definition>typedef alooWidget*(* __setWidth_Type) (alooWidget *wid, int width)</definition>
-        <argsstring>)(alooWidget *wid, int width)</argsstring>
-        <name>__setWidth_Type</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/style.h" line="65" column="9" bodyfile="include/style.h" bodystart="65" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="style_8h_1ab3d6ef4fff6f333abbed9644ef7e80aa" prot="public" static="no">
-        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
-        <definition>typedef alooWidget*(* __setHeight_Type) (alooWidget *wid, int height)</definition>
-        <argsstring>)(alooWidget *wid, int height)</argsstring>
-        <name>__setHeight_Type</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/style.h" line="66" column="9" bodyfile="include/style.h" bodystart="66" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="style_8h_1ad74daa30ede1124a5975116c700b60f0" prot="public" static="no">
-        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
-        <definition>typedef alooWidget*(* __setSize_Type) (alooWidget *wid, int width, int height)</definition>
-        <argsstring>)(alooWidget *wid, int width, int height)</argsstring>
-        <name>__setSize_Type</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/style.h" line="67" column="9" bodyfile="include/style.h" bodystart="67" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="style_8h_1a40fd06d9575ce9bf52bfdc0bfae4a88f" prot="public" static="no">
-        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
-        <definition>typedef alooWidget*(* __widgetAddClass_Type) (alooWidget *widget, char *class)</definition>
-        <argsstring>)(alooWidget *widget, char *class)</argsstring>
-        <name>__widgetAddClass_Type</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/style.h" line="69" column="9" bodyfile="include/style.h" bodystart="69" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="style_8h_1a90674b098469b5346a96a8293ea3919b" prot="public" static="no">
-        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
-        <definition>typedef alooWidget*(* __widgetRemoveClass_Type) (alooWidget *widget, char *class)</definition>
-        <argsstring>)(alooWidget *widget, char *class)</argsstring>
-        <name>__widgetRemoveClass_Type</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/style.h" line="70" column="9" bodyfile="include/style.h" bodystart="70" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="style_8h_1a29c846126936a01de97a4665202f5783" prot="public" static="no">
-        <type>char **(*</type>
-        <definition>typedef char**(* __getWidgetClasses_Type) (alooWidget *widget)</definition>
-        <argsstring>)(alooWidget *widget)</argsstring>
-        <name>__getWidgetClasses_Type</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/style.h" line="72" column="9" bodyfile="include/style.h" bodystart="72" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="style_8h_1a8a998832f6237937f050ea99ad061530" prot="public" static="no">
-        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
-        <definition>typedef alooWidget*(* __setWidgetClasses_Type) (alooWidget *widget, char **classes)</definition>
-        <argsstring>)(alooWidget *widget, char **classes)</argsstring>
-        <name>__setWidgetClasses_Type</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/style.h" line="73" column="9" bodyfile="include/style.h" bodystart="73" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
       <sectiondef kind="var">
       <memberdef kind="variable" id="style_8h_1ab32dc148da211184345f7603553c51fe" prot="public" static="no" mutable="no">
         <type>struct <ref refid="struct__alooCSS" kindref="compound">_alooCSS</ref></type>
@@ -178,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="73" column="9" declfile="include/style.h" declline="73" declcolumn="9"/>
+        <location file="include/style.h" line="37" column="12" declfile="include/style.h" declline="37" declcolumn="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -208,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="16" column="6" declfile="include/style.h" declline="16" declcolumn="6"/>
+        <location file="include/style.h" line="14" column="6" declfile="include/style.h" declline="14" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1a7b594a9b97e83d0d8ed2a1fbf55da7a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -248,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="22" column="6" declfile="include/style.h" declline="22" declcolumn="6"/>
+        <location file="include/style.h" line="18" column="6" declfile="include/style.h" declline="18" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1a0cb67567c32c0f7786d7994d614ae3f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -276,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="27" column="6" declfile="include/style.h" declline="27" declcolumn="6"/>
+        <location file="include/style.h" line="21" column="6" declfile="include/style.h" declline="21" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1a44c182f098a121a4ada8b0e068d7b9db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -298,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="32" column="12" declfile="include/style.h" declline="32" declcolumn="12"/>
+        <location file="include/style.h" line="24" column="12" declfile="include/style.h" declline="24" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1a626b036d97f444dec12ecd71d51f6d22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -320,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="36" column="12" declfile="include/style.h" declline="36" declcolumn="12"/>
+        <location file="include/style.h" line="26" column="12" declfile="include/style.h" declline="26" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1a6d4fc8b02c0cfbc8ca98cee3f2e0cfca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -346,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="40" column="12" declfile="include/style.h" declline="40" declcolumn="12"/>
+        <location file="include/style.h" line="28" column="12" declfile="include/style.h" declline="28" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1af67678d0e16814a1e026db754eedc951" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -368,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="45" column="12" declfile="include/style.h" declline="45" declcolumn="12"/>
+        <location file="include/style.h" line="31" column="12" declfile="include/style.h" declline="31" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1a7750134159467d6562f541a4052ca594" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -390,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="49" column="12" declfile="include/style.h" declline="49" declcolumn="12"/>
+        <location file="include/style.h" line="33" column="12" declfile="include/style.h" declline="33" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1a8a5d2f2215bf8069abae3701fbdaba77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char **</type>
@@ -408,7 +276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="53" column="6" declfile="include/style.h" declline="53" declcolumn="6"/>
+        <location file="include/style.h" line="35" column="6" declfile="include/style.h" declline="35" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1aee0ff6bbf54da4dbff94487f8586833f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -430,7 +298,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="57" column="12" declfile="include/style.h" declline="57" declcolumn="12"/>
+        <location file="include/style.h" line="37" column="12" declfile="include/style.h" declline="37" declcolumn="12"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -449,54 +317,39 @@
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Private<sp/>Funcs<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="style_8h_1a3f276834db3dffa368448132a19c85ed" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="style_8h_1a3f276834db3dffa368448132a19c85ed" kindref="member">__importCssFromPath</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
-<codeline lineno="22" refid="style_8h_1a7b594a9b97e83d0d8ed2a1fbf55da7a3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="style_8h_1a7b594a9b97e83d0d8ed2a1fbf55da7a3" kindref="member">__importCssFromData</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*content,<sp/>gssize<sp/>length);</highlight></codeline>
-<codeline lineno="27" refid="style_8h_1a0cb67567c32c0f7786d7994d614ae3f6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="style_8h_1a0cb67567c32c0f7786d7994d614ae3f6" kindref="member">__importCssFromFile</ref>(GFile<sp/>*file);</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="style_8h_1a44c182f098a121a4ada8b0e068d7b9db" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="style_8h_1a44c182f098a121a4ada8b0e068d7b9db" kindref="member">__setWidth</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*wid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width);</highlight></codeline>
-<codeline lineno="36" refid="style_8h_1a626b036d97f444dec12ecd71d51f6d22" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="style_8h_1a626b036d97f444dec12ecd71d51f6d22" kindref="member">__setHeight</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*wid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
-<codeline lineno="40" refid="style_8h_1a6d4fc8b02c0cfbc8ca98cee3f2e0cfca" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="style_8h_1a6d4fc8b02c0cfbc8ca98cee3f2e0cfca" kindref="member">__setSize</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*wid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45" refid="style_8h_1af67678d0e16814a1e026db754eedc951" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="style_8h_1af67678d0e16814a1e026db754eedc951" kindref="member">__widgetAddClass</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">class</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="49" refid="style_8h_1a7750134159467d6562f541a4052ca594" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="style_8h_1a7750134159467d6562f541a4052ca594" kindref="member">__widgetRemoveClass</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">class</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="53" refid="style_8h_1a8a5d2f2215bf8069abae3701fbdaba77" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="style_8h_1a8a5d2f2215bf8069abae3701fbdaba77" kindref="member">g__etWidgetClasses</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget);</highlight></codeline>
-<codeline lineno="57" refid="style_8h_1aee0ff6bbf54da4dbff94487f8586833f" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="style_8h_1aee0ff6bbf54da4dbff94487f8586833f" kindref="member">__setWidgetClasses</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**classes);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Private<sp/>Types<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61" refid="style_8h_1ae0f34a36ac9b2990d10a3b48dc718371" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="style_8h_1ae0f34a36ac9b2990d10a3b48dc718371" kindref="member">__importCssFromPath_Type</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
-<codeline lineno="62" refid="style_8h_1aae8bb2f31f06f33a889658817b1aca46" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="style_8h_1aae8bb2f31f06f33a889658817b1aca46" kindref="member">__importCssFromData_Type</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*content,<sp/>gssize<sp/>length);</highlight></codeline>
-<codeline lineno="63" refid="style_8h_1a3eee583412a2fa9b9825f1245e59ba45" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="style_8h_1a3eee583412a2fa9b9825f1245e59ba45" kindref="member">__importCssFromFile_Type</ref>)(GFile<sp/>*file);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65" refid="style_8h_1a55176b74c240ff89d096c4fd69536493" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__setWidth_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*wid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width);</highlight></codeline>
-<codeline lineno="66" refid="style_8h_1ab3d6ef4fff6f333abbed9644ef7e80aa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__setHeight_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*wid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
-<codeline lineno="67" refid="style_8h_1ad74daa30ede1124a5975116c700b60f0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__setSize_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*wid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69" refid="style_8h_1a40fd06d9575ce9bf52bfdc0bfae4a88f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__widgetAddClass_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">class</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="70" refid="style_8h_1a90674b098469b5346a96a8293ea3919b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__widgetRemoveClass_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">class</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="72" refid="style_8h_1a29c846126936a01de97a4665202f5783" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**(*__getWidgetClasses_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget);</highlight></codeline>
-<codeline lineno="73" refid="style_8h_1a8a998832f6237937f050ea99ad061530" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__setWidgetClasses_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**classes);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76" refid="struct__alooCSS" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__alooCSS" kindref="compound">_alooCSS</ref><sp/>{</highlight></codeline>
-<codeline lineno="77" refid="struct__alooCSS_1a6ee605988bc52a3f4c50317c95c66a43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="style_8h_1ae0f34a36ac9b2990d10a3b48dc718371" kindref="member">__importCssFromPath_Type</ref><sp/><ref refid="struct__alooCSS_1a6ee605988bc52a3f4c50317c95c66a43" kindref="member">importPath</ref>;</highlight></codeline>
-<codeline lineno="78" refid="struct__alooCSS_1a8358c12411cdcd727f894445c47935ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="style_8h_1aae8bb2f31f06f33a889658817b1aca46" kindref="member">__importCssFromData_Type</ref><sp/><ref refid="struct__alooCSS_1a8358c12411cdcd727f894445c47935ee" kindref="member">importData</ref>;</highlight></codeline>
-<codeline lineno="79" refid="struct__alooCSS_1a8b3cb3329326ba47b6d2793b8128e2b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="style_8h_1a3eee583412a2fa9b9825f1245e59ba45" kindref="member">__importCssFromFile_Type</ref><sp/><ref refid="struct__alooCSS_1a8b3cb3329326ba47b6d2793b8128e2b3" kindref="member">importFile</ref>;</highlight></codeline>
-<codeline lineno="80" refid="struct__alooCSS_1a61a633fe25ff8bec5fa1107210a39247" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="style_8h_1a55176b74c240ff89d096c4fd69536493" kindref="member">__setWidth_Type</ref><sp/><ref refid="struct__alooCSS_1a61a633fe25ff8bec5fa1107210a39247" kindref="member">setWidth</ref>;</highlight></codeline>
-<codeline lineno="81" refid="struct__alooCSS_1ac1aab2722d77ae170217197e8d85c7d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="style_8h_1ab3d6ef4fff6f333abbed9644ef7e80aa" kindref="member">__setHeight_Type</ref><sp/><ref refid="struct__alooCSS_1ac1aab2722d77ae170217197e8d85c7d6" kindref="member">setHeight</ref>;</highlight></codeline>
-<codeline lineno="82" refid="struct__alooCSS_1ac5a09a64d4cbdb3386512875fe0501a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="style_8h_1ad74daa30ede1124a5975116c700b60f0" kindref="member">__setSize_Type</ref><sp/><ref refid="struct__alooCSS_1ac5a09a64d4cbdb3386512875fe0501a6" kindref="member">setSize</ref>;</highlight></codeline>
-<codeline lineno="83" refid="struct__alooCSS_1adf287aa708114930c77b146133e58f87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="style_8h_1a40fd06d9575ce9bf52bfdc0bfae4a88f" kindref="member">__widgetAddClass_Type</ref><sp/><ref refid="struct__alooCSS_1adf287aa708114930c77b146133e58f87" kindref="member">addClass</ref>;</highlight></codeline>
-<codeline lineno="84" refid="struct__alooCSS_1a971def5117780de234b63544892882f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="style_8h_1a90674b098469b5346a96a8293ea3919b" kindref="member">__widgetRemoveClass_Type</ref><sp/><ref refid="struct__alooCSS_1a971def5117780de234b63544892882f4" kindref="member">removeClass</ref>;</highlight></codeline>
-<codeline lineno="85" refid="struct__alooCSS_1a6bf3be66b2e8bdda4f5b046d456d6e96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="style_8h_1a29c846126936a01de97a4665202f5783" kindref="member">__getWidgetClasses_Type</ref><sp/><ref refid="struct__alooCSS_1a6bf3be66b2e8bdda4f5b046d456d6e96" kindref="member">getClasses</ref>;</highlight></codeline>
-<codeline lineno="86" refid="struct__alooCSS_1ab422451b3dacc2057561d8ac51209c7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="style_8h_1a8a998832f6237937f050ea99ad061530" kindref="member">__setWidgetClasses_Type</ref><sp/><ref refid="struct__alooCSS_1ab422451b3dacc2057561d8ac51209c7e" kindref="member">setClasses</ref>;</highlight></codeline>
-<codeline lineno="87"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Public<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__alooCSS" kindref="compound">_alooCSS</ref><sp/><ref refid="style_8h_1ab32dc148da211184345f7603553c51fe" kindref="member">CSS</ref>;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_STYLE_H</highlight></codeline>
+<codeline lineno="14" refid="style_8h_1a3f276834db3dffa368448132a19c85ed" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="style_8h_1a3f276834db3dffa368448132a19c85ed" kindref="member">__importCssFromPath</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="18" refid="style_8h_1a7b594a9b97e83d0d8ed2a1fbf55da7a3" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="style_8h_1a7b594a9b97e83d0d8ed2a1fbf55da7a3" kindref="member">__importCssFromData</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*content,<sp/>gssize<sp/>length);</highlight></codeline>
+<codeline lineno="21" refid="style_8h_1a0cb67567c32c0f7786d7994d614ae3f6" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="style_8h_1a0cb67567c32c0f7786d7994d614ae3f6" kindref="member">__importCssFromFile</ref>(GFile<sp/>*file);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="style_8h_1a44c182f098a121a4ada8b0e068d7b9db" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="style_8h_1a44c182f098a121a4ada8b0e068d7b9db" kindref="member">__setWidth</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*wid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width);</highlight></codeline>
+<codeline lineno="26" refid="style_8h_1a626b036d97f444dec12ecd71d51f6d22" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="style_8h_1a626b036d97f444dec12ecd71d51f6d22" kindref="member">__setHeight</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*wid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="28" refid="style_8h_1a6d4fc8b02c0cfbc8ca98cee3f2e0cfca" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="style_8h_1a6d4fc8b02c0cfbc8ca98cee3f2e0cfca" kindref="member">__setSize</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*wid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="style_8h_1af67678d0e16814a1e026db754eedc951" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="style_8h_1af67678d0e16814a1e026db754eedc951" kindref="member">__widgetAddClass</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">class</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33" refid="style_8h_1a7750134159467d6562f541a4052ca594" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="style_8h_1a7750134159467d6562f541a4052ca594" kindref="member">__widgetRemoveClass</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">class</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35" refid="style_8h_1a8a5d2f2215bf8069abae3701fbdaba77" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="style_8h_1a8a5d2f2215bf8069abae3701fbdaba77" kindref="member">g__etWidgetClasses</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget);</highlight></codeline>
+<codeline lineno="37" refid="style_8h_1aee0ff6bbf54da4dbff94487f8586833f" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="style_8h_1aee0ff6bbf54da4dbff94487f8586833f" kindref="member">__setWidgetClasses</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**classes);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Private<sp/>Types<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="struct__alooCSS" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__alooCSS" kindref="compound">_alooCSS</ref><sp/>{</highlight></codeline>
+<codeline lineno="44" refid="struct__alooCSS_1a7ecf5733e77f656ce271511463559636" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="struct__alooCSS_1a7ecf5733e77f656ce271511463559636" kindref="member">importPath</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="48" refid="struct__alooCSS_1a96b9c02727a5207e4500d477058d9539" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="struct__alooCSS_1a96b9c02727a5207e4500d477058d9539" kindref="member">importData</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*content,<sp/>gssize<sp/>length);</highlight></codeline>
+<codeline lineno="51" refid="struct__alooCSS_1a85d85917cfb004497f642fd5b82ad996" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="struct__alooCSS_1a85d85917cfb004497f642fd5b82ad996" kindref="member">importFile</ref>)(GFile<sp/>*file);</highlight></codeline>
+<codeline lineno="53" refid="struct__alooCSS_1a70dab3304af5a4d743a501afac64c471" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*setWidth)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*wid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width);</highlight></codeline>
+<codeline lineno="55" refid="struct__alooCSS_1a1991160a4b6c11ed6673826cb3add5fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*setHeight)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*wid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="57" refid="struct__alooCSS_1aea265c46559d1ef2994f3b09b294a10d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*setSize)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*wid,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="59" refid="struct__alooCSS_1a24fd938ee282fe315bd97b355cd598b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*addClass)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">class</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61" refid="struct__alooCSS_1abc01c166ed5a2eabde408f4405bdd40d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*removeClass)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">class</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63" refid="struct__alooCSS_1ad1f623aea153448d39ac6e09510efc62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**(*getClasses)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget);</highlight></codeline>
+<codeline lineno="65" refid="struct__alooCSS_1a1b66d52043761c243521650d3a4cfc57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*setClasses)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*widget,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**classes);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Public<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__alooCSS" kindref="compound">_alooCSS</ref><sp/><ref refid="style_8h_1ab32dc148da211184345f7603553c51fe" kindref="member">CSS</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_STYLE_H</highlight></codeline>
     </programlisting>
     <location file="include/style.h"/>
   </compounddef>

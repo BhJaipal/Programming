@@ -1,4 +1,4 @@
-.TH "_alooWindow" 3 "Sun Sep 1 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "_alooWindow" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,41 +12,41 @@ _alooWindow
 
 .in +1c
 .ti -1c
-.RI "\fB__alooApplicationNewWindow_Type\fP \fBnew\fP"
+.RI "\fBalooWidget\fP *(* \fBnew\fP )(\fBAlooApplication\fP *app)"
 .br
 .RI "Create a GtkWindow\&. "
 .ti -1c
-.RI "\fB__alooPresentWindow_Type\fP \fBpresent\fP"
+.RI "\fBalooWidget\fP *(* \fBpresent\fP )(\fBalooWidget\fP *window)"
 .br
 .RI "Presents GtkWindow\&. "
 .ti -1c
-.RI "\fB__alooSetWindowChild_Type\fP \fBsetChild\fP"
+.RI "\fBalooWidget\fP *(* \fBsetChild\fP )(\fBalooWidget\fP *window, \fBalooWidget\fP *child)"
 .br
 .RI "Sets Window child\&. "
 .ti -1c
-.RI "\fB__alooSetWindowTitle_Type\fP \fBsetTitle\fP"
+.RI "\fBalooWidget\fP *(* \fBsetTitle\fP )(\fBalooWidget\fP *window, const char *title)"
 .br
 .RI "Sets GtkWindow title\&. "
 .ti -1c
-.RI "\fB__setWindowSize_Type\fP \fBsetSize\fP"
+.RI "\fBalooWidget\fP *(* \fBsetSize\fP )(\fBalooWidget\fP *window, int width, int height)"
 .br
 .RI "Sets aloo Window size\&. "
 .ti -1c
-.RI "\fB__setWindowApplication_Type\fP \fBset_app_window\fP"
+.RI "\fBalooWidget\fP *(* \fBset_app_window\fP )(\fBalooWidget\fP *window, \fBAlooApplication\fP *app)"
 .br
 .RI "Set the Window for Application\&. "
 .ti -1c
-.RI "\fB__app_add_window_Type\fP \fBapp_add_window\fP"
+.RI "\fBalooWidget\fP *(* \fBapp_add_window\fP )(\fBAlooApplication\fP *app, \fBalooWidget\fP *window)"
 .br
 .RI "Adds Window to Application\&. "
 .ti -1c
-.RI "\fB__showWindow_Type\fP \fBshow\fP"
+.RI "void(* \fBshow\fP )(\fBalooWidget\fP *window)"
 .br
 .RI "Shows Window\&. "
 .in -1c
 .SH "Member Data Documentation"
 .PP 
-.SS "\fB__app_add_window_Type\fP _alooWindow::app_add_window"
+.SS "\fBalooWidget\fP*(* _alooWindow::app_add_window) (\fBAlooApplication\fP *app, \fBalooWidget\fP *window)"
 
 .PP
 Adds Window to Application\&. 
@@ -64,7 +64,7 @@ aloowidget*
 .RE
 .PP
 
-.SS "\fB__alooApplicationNewWindow_Type\fP _alooWindow::new"
+.SS "\fBalooWidget\fP*(* _alooWindow::new) (\fBAlooApplication\fP *app)"
 
 .PP
 Create a GtkWindow\&. 
@@ -80,7 +80,7 @@ alooWidget*
 .RE
 .PP
 
-.SS "\fB__alooPresentWindow_Type\fP _alooWindow::present"
+.SS "\fBalooWidget\fP*(* _alooWindow::present) (\fBalooWidget\fP *window)"
 
 .PP
 Presents GtkWindow\&. 
@@ -96,7 +96,7 @@ alooWidget*
 .RE
 .PP
 
-.SS "\fB__setWindowApplication_Type\fP _alooWindow::set_app_window"
+.SS "\fBalooWidget\fP*(* _alooWindow::set_app_window) (\fBalooWidget\fP *window, \fBAlooApplication\fP *app)"
 
 .PP
 Set the Window for Application\&. 
@@ -114,7 +114,7 @@ alooWidget*
 .RE
 .PP
 
-.SS "\fB__alooSetWindowChild_Type\fP _alooWindow::setChild"
+.SS "\fBalooWidget\fP*(* _alooWindow::setChild) (\fBalooWidget\fP *window, \fBalooWidget\fP *child)"
 
 .PP
 Sets Window child\&. 
@@ -131,7 +131,7 @@ Sets Window child\&.
 .RE
 .PP
 
-.SS "\fB__setWindowSize_Type\fP _alooWindow::setSize"
+.SS "\fBalooWidget\fP*(* _alooWindow::setSize) (\fBalooWidget\fP *window, int width, int height)"
 
 .PP
 Sets aloo Window size\&. 
@@ -151,7 +151,7 @@ alooWidget*
 .RE
 .PP
 
-.SS "\fB__alooSetWindowTitle_Type\fP _alooWindow::setTitle"
+.SS "\fBalooWidget\fP*(* _alooWindow::setTitle) (\fBalooWidget\fP *window, const char *title)"
 
 .PP
 Sets GtkWindow title\&. 
@@ -169,7 +169,7 @@ Sets GtkWindow title\&.
 .RE
 .PP
 
-.SS "\fB__showWindow_Type\fP _alooWindow::show"
+.SS "void(* _alooWindow::show) (\fBalooWidget\fP *window)"
 
 .PP
 Shows Window\&. 

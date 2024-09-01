@@ -1,17 +1,9 @@
 var searchData=
 [
-  ['set_5fapp_5fwindow_453',['set_app_window',['../struct__alooWindow.html#a4dd10bb0a31c1d5d24962027429a7ce7',1,'_alooWindow']]],
-  ['setbaselineposition_454',['setBaselinePosition',['../struct__alooBox.html#a3b08340b22d12886052177879f078cfd',1,'_alooBox']]],
-  ['setchild_455',['setChild',['../struct__alooWindow.html#a76819237feac7bff766987104b51aeab',1,'_alooWindow']]],
-  ['setclasses_456',['setClasses',['../struct__alooCSS.html#ab422451b3dacc2057561d8ac51209c7e',1,'_alooCSS']]],
-  ['setheight_457',['setHeight',['../struct__alooCSS.html#ac1aab2722d77ae170217197e8d85c7d6',1,'_alooCSS']]],
-  ['sethomogeneous_458',['setHomogeneous',['../struct__alooBox.html#a8d94ab5ed824f17d5502054942637820',1,'_alooBox']]],
-  ['setname_459',['setName',['../struct__aloo__widget.html#afae9f81bcf3de82b1dfc7fc90cb2f83d',1,'_aloo_widget']]],
-  ['setorientation_460',['setOrientation',['../struct__alooBox.html#ac3851caa5ff1bed13ca8ad1e0c1e811e',1,'_alooBox::setOrientation()'],['../struct__aloo__widget.html#a667170ce6aabc213da3c861838dc62a3',1,'_aloo_widget::setOrientation()']]],
-  ['setsize_461',['setSize',['../struct__alooCSS.html#ac5a09a64d4cbdb3386512875fe0501a6',1,'_alooCSS::setSize()'],['../struct__alooWindow.html#af380e7305b03ac7d9bd88f424d771acb',1,'_alooWindow::setSize()']]],
-  ['setspacing_462',['setSpacing',['../struct__alooBox.html#ab7a99a8f5041f30006cefab2b85d9d33',1,'_alooBox']]],
-  ['settitle_463',['setTitle',['../struct__alooWindow.html#a958c501818bddcf9399bd3c2a731f3a5',1,'_alooWindow']]],
-  ['setwidth_464',['setWidth',['../struct__alooCSS.html#a61a633fe25ff8bec5fa1107210a39247',1,'_alooCSS']]],
-  ['show_465',['show',['../struct__alooWindow.html#a2c45374a9db8020ae326a897010e53a0',1,'_alooWindow']]],
-  ['status_466',['status',['../structAlooApplication.html#a1b52847b827b37c8eb858307f691f0a4',1,'AlooApplication']]]
+  ['remove_385',['remove',['../struct__alooBox.html#a20a66763213260f2f123a31f30946392',1,'_alooBox::remove()'],['../struct__alooGrid.html#a9652fa95089272d5ebba008766a0ad27',1,'_alooGrid::remove()']]],
+  ['removeclass_386',['removeClass',['../struct__alooCSS.html#abc01c166ed5a2eabde408f4405bdd40d',1,'_alooCSS']]],
+  ['removegtk_387',['removeGtk',['../struct__alooBox.html#a17e985fe95b664a758fdff6f02b3e47b',1,'_alooBox::removeGtk()'],['../struct__alooGrid.html#a6f485d7498535c6e0acc4d6cb9e128cb',1,'_alooGrid::removeGtk()']]],
+  ['row_5fspacing_388',['row_spacing',['../struct__alooGrid.html#a2befbe1c7ff4a61d1589bc5badc11f83',1,'_alooGrid']]],
+  ['run_389',['run',['../struct__alooApp.html#a60d7d98d81be672199917d8c4842fe22',1,'_alooApp']]],
+  ['run_5fand_5funref_390',['run_and_unref',['../struct__alooApp.html#a2b85a408d85e8af751f2756f5c253291',1,'_alooApp']]]
 ];

@@ -34,21 +34,6 @@
       </node>
     </invincdepgraph>
     <innerclass refid="struct____alooLabel" prot="public">__alooLabel</innerclass>
-      <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="label_8h_1a213636152f4dc1ee94cd8e02c9e31b28" prot="public" static="no">
-        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
-        <definition>typedef alooWidget*(* _newLabelType) (const char *val)</definition>
-        <argsstring>)(const char *val)</argsstring>
-        <name>_newLabelType</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/label.h" line="16" column="9" bodyfile="include/label.h" bodystart="16" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
       <sectiondef kind="var">
       <memberdef kind="variable" id="label_8h_1a7bf2150721f7576df4178adce8b5885f" prot="public" static="no" mutable="no">
         <type>struct <ref refid="struct____alooLabel" kindref="compound">__alooLabel</ref></type>
@@ -61,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/label.h" line="16" column="9" declfile="include/label.h" declline="16" declcolumn="9"/>
+        <location file="include/label.h" line="12" column="12" declfile="include/label.h" declline="12" declcolumn="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -103,17 +88,16 @@
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Private<sp/>Types<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="label_8h_1a213636152f4dc1ee94cd8e02c9e31b28" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*_newLabelType)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*val);</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18" refid="struct____alooLabel" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____alooLabel" kindref="compound">__alooLabel</ref><sp/>{</highlight></codeline>
-<codeline lineno="19" refid="struct____alooLabel_1aadc8450b0dded9eade27d3355e864f07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="label_8h_1a213636152f4dc1ee94cd8e02c9e31b28" kindref="member">_newLabelType</ref><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Public<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____alooLabel" kindref="compound">__alooLabel</ref><sp/><ref refid="label_8h_1a7bf2150721f7576df4178adce8b5885f" kindref="member">Label</ref>;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_LABEL_H</highlight></codeline>
+<codeline lineno="16" refid="struct____alooLabel" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____alooLabel" kindref="compound">__alooLabel</ref><sp/>{</highlight></codeline>
+<codeline lineno="20" refid="struct____alooLabel_1adf6d0ff07874ae1917e0665efb600042" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*new)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*val);</highlight></codeline>
+<codeline lineno="22" refid="struct____alooLabel_1ad5fb05f426389c800a67a2440d76ea27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GtkLabel<sp/>*(*toGtk)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*wid);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Public<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct____alooLabel" kindref="compound">__alooLabel</ref><sp/><ref refid="label_8h_1a7bf2150721f7576df4178adce8b5885f" kindref="member">Label</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_LABEL_H</highlight></codeline>
     </programlisting>
     <location file="include/label.h"/>
   </compounddef>

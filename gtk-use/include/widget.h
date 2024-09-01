@@ -75,75 +75,46 @@ GtkWidget *__WidtoGtk(alooWidget *wid);
 
 /******************** Private Types ********************/
 
-typedef alooWidget *(*GTK_TO_ALOO_Type)(GtkWidget *widget);
-
-typedef alooWidget *(*OBJECT_TO_ALOO_Type)(GObject *obj);
-
-typedef alooWidget *(*alooSetOrientation_Type)(alooWidget *widget,
-											   GtkOrientation orien);
-
-typedef alooWidget *(*NewWidget_Type)(WidgetType type, GtkWidget *child);
-
-typedef alooWidget *(*setWidgetName_Type)(alooWidget *widget, const char *name);
-
-typedef GtkWidget *(*__OBJECT_TO_GTK_WIDGET_Type)(AlooBuilder *builder,
-												  const char *name);
-
-typedef alooWidget *(*__alooVerticalAlign_Type)(alooWidget *widget,
-												GtkAlign alignment);
-typedef alooWidget *(*__alooHorizontalAlign_Type)(alooWidget *widget,
-												  GtkAlign alignment);
-
-typedef alooWidget *(*__alooAddEventListener_Type)(alooWidget *widget_instance,
-												   char *event_name,
-												   GCallback CallbackFn,
-												   gpointer data);
-
-typedef int (*__isBox_Type)(alooWidget *wid);
-typedef int (*__isButton_Type)(alooWidget *wid);
-typedef int (*__isGrid_Type)(alooWidget *wid);
-typedef int (*__isLabel_Type)(alooWidget *wid);
-typedef int (*__isWindow_Type)(alooWidget *wid);
-typedef GtkWidget *(*__WidtoGtk_Type)(alooWidget *wid);
-
-/******************** Public ********************/
-
 struct _aloo_widget {
 	/// @brief Creates GtkWidget from builder
-	__OBJECT_TO_GTK_WIDGET_Type obj_to_gtk;
+	GtkWidget *(*obj_to_gtk)(AlooBuilder *builder, const char *name);
 	/// @brief Create alooWidget from GObject
-	OBJECT_TO_ALOO_Type obj_to_aloo;
+	alooWidget *(*obj_to_aloo)(GObject *obj);
 	/// @brief Creates alooWidget from GtkWidget
-	GTK_TO_ALOO_Type gtk_to_aloo;
+	alooWidget *(*gtk_to_aloo)(GtkWidget *widget);
 	/// @brief Sets orientation of alooWidget
-	alooSetOrientation_Type setOrientation;
+	alooWidget *(*setOrientation)(alooWidget *widget, GtkOrientation orien);
 	/// @brief Create a widget
 	/// @param type type of widget
 	/// @param child actual GtkWidget
 	/// @return alooWidget*
-	NewWidget_Type new;
+	alooWidget *(*new)(WidgetType type, GtkWidget *child);
 	/// @brief Set the Name of widget
 	/// @param widget alooWidget
 	/// @param name string for name of widget
 	/// @return returns the widget
-	setWidgetName_Type setName;
+	alooWidget *(*setName)(alooWidget *widget, const char *name);
 	/// @brief Sets horizontal alignment of alooWidget
-	__alooHorizontalAlign_Type horizontalAlign;
+	alooWidget *(*horizontalAlign)(alooWidget *widget, GtkAlign alignment);
 	/// @brief Sets vertical alignment of alooWidget
-	__alooVerticalAlign_Type verticalAlign;
+	alooWidget *(*verticalAlign)(alooWidget *widget, GtkAlign alignment);
 	/// @brief Adds event listener to a widget
 	/// @param widget_instance
 	/// @param data parameters for event listener
-	__alooAddEventListener_Type addEventListener;
+	alooWidget *(*addEventListener)(alooWidget *widget_instance,
+									char *event_name, GCallback CallbackFn,
+									gpointer data);
 	struct {
-		__isBox_Type isBox;
-		__isButton_Type isButton;
-		__isGrid_Type isGrid;
-		__isLabel_Type isLabel;
-		__isWindow_Type isWindow;
+		int (*isBox)(alooWidget *wid);
+		int (*isButton)(alooWidget *wid);
+		int (*isGrid)(alooWidget *wid);
+		int (*isLabel)(alooWidget *wid);
+		int (*isWindow)(alooWidget *wid);
 	} check;
-	__WidtoGtk_Type to_gtk;
+	GtkWidget *(*to_gtk)(alooWidget *wid);
 };
+
+/******************** Public ********************/
 
 extern struct _aloo_widget Widget;
 

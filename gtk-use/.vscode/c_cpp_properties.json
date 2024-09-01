@@ -1,0 +1,37 @@
+{
+	"configurations": [
+		{
+			"name": "Linux",
+			"includePath": [
+				"${workspaceFolder}/**",
+				"/usr/include",
+				"/usr/include/graphene-1.0",
+				"/usr/include/x86_64-linux-gnu",
+				"/usr/lib/x86_64-linux-gnu/graphene-1.0/include",
+				"/usr/include/linux",
+				"/usr/include/c++/11",
+				"/usr/include/c++/11/tr1",
+				"/usr/include/c++/11/parallel",
+				"/usr/include/x86_64-linux-gnu/c++/11",
+				"/usr/include/x86_64-linux-gnu/bits",
+				"/usr/include/gtk-4.0/gtk",
+				"/usr/include/gtk-4.0/gsk",
+				"/usr/include/glib-2.0",
+				"/usr/include/gdk-pixbuf-2.0",
+				"/usr/lib/x86_64-linux-gnu/glib-2.0/include",
+				"/usr/include/gtk-4.0/gdk",
+				"/usr/include/gtk-4.0",
+				"/usr/include/cairo",
+				"/usr/include/pango-1.0",
+				"/usr/include/harfbuzz",
+				"/usr/include/fontconfig"
+			],
+			"defines": [],
+			"compilerPath": "/usr/bin/gcc",
+			"cStandard": "gnu11",
+			"cppStandard": "gnu++11",
+			"intelliSenseMode": "linux-gcc-x86"
+		}
+	],
+	"version": 4
+}

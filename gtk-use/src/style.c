@@ -51,15 +51,18 @@ char **__getWidgetClasses(alooWidget *widget) {
 }
 alooWidget *__setWidgetClasses(alooWidget *widget, char **classes) {
 	gtk_widget_set_css_classes(Widget.to_gtk(widget), (const char **)classes);
+	return widget;
 }
 
-struct _alooCSS CSS = {.importData = __importCssFromData,
-					   .importFile = __importCssFromFile,
-					   .importPath = __importCssFromPath,
-					   .addClass = __widgetAddClass,
-					   .removeClass = __widgetRemoveClass,
-					   .setClasses = __setWidgetClasses,
-					   .getClasses = __getWidgetClasses,
-					   .setSize = __setSize,
-					   .setHeight = __setHeight,
-					   .setWidth = __setWidth};
+struct _alooCSS CSS = {
+	.importData = __importCssFromData,
+	.importFile = __importCssFromFile,
+	.importPath = __importCssFromPath,
+	.addClass = __widgetAddClass,
+	.removeClass = __widgetRemoveClass,
+	.setClasses = __setWidgetClasses,
+	.getClasses = __getWidgetClasses,
+	.setSize = __setSize,
+	.setHeight = __setHeight,
+	.setWidth = __setWidth,
+};

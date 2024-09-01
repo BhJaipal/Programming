@@ -34,99 +34,6 @@
       </node>
     </invincdepgraph>
     <innerclass refid="struct__alooButton" prot="public">_alooButton</innerclass>
-      <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="button_8h_1acfdf6bd8e4ada55520daa9148135f344" prot="public" static="no">
-        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
-        <definition>typedef alooWidget*(* __newButton_Type) ()</definition>
-        <argsstring>)()</argsstring>
-        <name>__newButton_Type</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/button.h" line="23" column="9" bodyfile="include/button.h" bodystart="23" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="button_8h_1a9e055ce7442347717e5d577ea1b46edf" prot="public" static="no">
-        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
-        <definition>typedef alooWidget*(* __newButtonWithLabel_Type) (const char *label)</definition>
-        <argsstring>)(const char *label)</argsstring>
-        <name>__newButtonWithLabel_Type</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/button.h" line="24" column="9" bodyfile="include/button.h" bodystart="24" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="button_8h_1a8ca713c33a2e217e22431d13f176b6a9" prot="public" static="no">
-        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
-        <definition>typedef alooWidget*(* __setLabel_Type) (alooWidget *btn, char const *name)</definition>
-        <argsstring>)(alooWidget *btn, char const *name)</argsstring>
-        <name>__setLabel_Type</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/button.h" line="25" column="9" bodyfile="include/button.h" bodystart="25" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="button_8h_1a438e9e37d7641106a3ad85147136fb2e" prot="public" static="no">
-        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
-        <definition>typedef alooWidget*(* __setChild_Type) (alooWidget *btn, alooWidget *child)</definition>
-        <argsstring>)(alooWidget *btn, alooWidget *child)</argsstring>
-        <name>__setChild_Type</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/button.h" line="26" column="9" bodyfile="include/button.h" bodystart="26" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="button_8h_1a9060c0869560c143155a9d8cfed0f7f9" prot="public" static="no">
-        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
-        <definition>typedef alooWidget*(* __setIcon_Type) (alooWidget *btn, const char *child)</definition>
-        <argsstring>)(alooWidget *btn, const char *child)</argsstring>
-        <name>__setIcon_Type</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/button.h" line="27" column="9" bodyfile="include/button.h" bodystart="27" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="button_8h_1acfac04019cd2983c4d4ee3d3c508985a" prot="public" static="no">
-        <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
-        <definition>typedef alooWidget*(* __setUseUnderline_Type) (alooWidget *btn, gboolean yes)</definition>
-        <argsstring>)(alooWidget *btn, gboolean yes)</argsstring>
-        <name>__setUseUnderline_Type</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/button.h" line="28" column="9" bodyfile="include/button.h" bodystart="28" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="button_8h_1a47f4855be60787dfcba9fe7a3bb5f2c1" prot="public" static="no">
-        <type>GtkButton *(*</type>
-        <definition>typedef GtkButton*(* __toButtonGtk_Type) (alooWidget *wid)</definition>
-        <argsstring>)(alooWidget *wid)</argsstring>
-        <name>__toButtonGtk_Type</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/button.h" line="29" column="9" bodyfile="include/button.h" bodystart="29" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
       <sectiondef kind="var">
       <memberdef kind="variable" id="button_8h_1ac477dbe4d2e006ce73a75f77b0bc0969" prot="public" static="no" mutable="no">
         <type>struct <ref refid="struct__alooButton" kindref="compound">_alooButton</ref></type>
@@ -139,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/button.h" line="29" column="9" declfile="include/button.h" declline="29" declcolumn="9"/>
+        <location file="include/button.h" line="18" column="11" declfile="include/button.h" declline="18" declcolumn="11"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -272,7 +179,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/button.h" line="19" column="11" declfile="include/button.h" declline="19" declcolumn="11"/>
+        <location file="include/button.h" line="18" column="11" declfile="include/button.h" declline="18" declcolumn="11"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -297,34 +204,25 @@
 <codeline lineno="15" refid="button_8h_1a79aae593c92df050425534da8f9b675f" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="button_8h_1a79aae593c92df050425534da8f9b675f" kindref="member">__setChild</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*btn,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*child);</highlight></codeline>
 <codeline lineno="16" refid="button_8h_1a18cac438421a426c943b78f43dbe1a34" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="button_8h_1a18cac438421a426c943b78f43dbe1a34" kindref="member">__setIcon</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*btn,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*child);</highlight></codeline>
 <codeline lineno="17" refid="button_8h_1ae0e287be4a5a4798295be92d74b9fcb2" refkind="member"><highlight class="normal"><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="button_8h_1ae0e287be4a5a4798295be92d74b9fcb2" kindref="member">__setUseUnderline</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*btn,<sp/>gboolean<sp/>yes);</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19" refid="button_8h_1a75d4f12a992b283f21da6888ed3e9883" refkind="member"><highlight class="normal">GtkButton<sp/>*<ref refid="button_8h_1a75d4f12a992b283f21da6888ed3e9883" kindref="member">__toButtonGtk</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*wid);</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Private<sp/>Types<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23" refid="button_8h_1acfdf6bd8e4ada55520daa9148135f344" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__newButton_Type)();</highlight></codeline>
-<codeline lineno="24" refid="button_8h_1a9e055ce7442347717e5d577ea1b46edf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__newButtonWithLabel_Type)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*label);</highlight></codeline>
-<codeline lineno="25" refid="button_8h_1a8ca713c33a2e217e22431d13f176b6a9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__setLabel_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*btn,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
-<codeline lineno="26" refid="button_8h_1a438e9e37d7641106a3ad85147136fb2e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__setChild_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*btn,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*child);</highlight></codeline>
-<codeline lineno="27" refid="button_8h_1a9060c0869560c143155a9d8cfed0f7f9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__setIcon_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*btn,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*child);</highlight></codeline>
-<codeline lineno="28" refid="button_8h_1acfac04019cd2983c4d4ee3d3c508985a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*__setUseUnderline_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*btn,<sp/>gboolean<sp/>yes);</highlight></codeline>
-<codeline lineno="29" refid="button_8h_1a47f4855be60787dfcba9fe7a3bb5f2c1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>GtkButton<sp/>*(*__toButtonGtk_Type)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*wid);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Public<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33" refid="struct__alooButton" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__alooButton" kindref="compound">_alooButton</ref><sp/>{</highlight></codeline>
-<codeline lineno="35" refid="struct__alooButton_1a6ad6efc8a7f49e54483628fe69d48f14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="button_8h_1acfdf6bd8e4ada55520daa9148135f344" kindref="member">__newButton_Type</ref><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="37" refid="struct__alooButton_1aa64a21c82cc3f7c0b60b5453abdf23b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="button_8h_1a9e055ce7442347717e5d577ea1b46edf" kindref="member">__newButtonWithLabel_Type</ref><sp/><ref refid="struct__alooButton_1aa64a21c82cc3f7c0b60b5453abdf23b6" kindref="member">newWithLabel</ref>;</highlight></codeline>
-<codeline lineno="39" refid="struct__alooButton_1a83a26e78342fe8a2d2aea57eca142a30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="button_8h_1a8ca713c33a2e217e22431d13f176b6a9" kindref="member">__setLabel_Type</ref><sp/><ref refid="struct__alooButton_1a83a26e78342fe8a2d2aea57eca142a30" kindref="member">label</ref>;</highlight></codeline>
-<codeline lineno="41" refid="struct__alooButton_1af86a181ac928520c0abefbe725e982e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="button_8h_1a438e9e37d7641106a3ad85147136fb2e" kindref="member">__setChild_Type</ref><sp/><ref refid="struct__alooButton_1af86a181ac928520c0abefbe725e982e6" kindref="member">child</ref>;</highlight></codeline>
-<codeline lineno="43" refid="struct__alooButton_1a1e2800c05e965873d176ab5b6e16f74c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="button_8h_1a9060c0869560c143155a9d8cfed0f7f9" kindref="member">__setIcon_Type</ref><sp/><ref refid="struct__alooButton_1a1e2800c05e965873d176ab5b6e16f74c" kindref="member">icon</ref>;</highlight></codeline>
-<codeline lineno="45" refid="struct__alooButton_1a83dec1a0bd4b85ae790c715c4e03d1a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="button_8h_1acfac04019cd2983c4d4ee3d3c508985a" kindref="member">__setUseUnderline_Type</ref><sp/><ref refid="struct__alooButton_1a83dec1a0bd4b85ae790c715c4e03d1a1" kindref="member">useUnderline</ref>;</highlight></codeline>
-<codeline lineno="47" refid="struct__alooButton_1a830f742d2051e365f854a5788fd12ea5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="button_8h_1a47f4855be60787dfcba9fe7a3bb5f2c1" kindref="member">__toButtonGtk_Type</ref><sp/><ref refid="struct__alooButton_1a830f742d2051e365f854a5788fd12ea5" kindref="member">toGtk</ref>;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__alooButton" kindref="compound">_alooButton</ref><sp/><ref refid="button_8h_1ac477dbe4d2e006ce73a75f77b0bc0969" kindref="member">Button</ref>;</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_BUTTON_H</highlight></codeline>
+<codeline lineno="18" refid="button_8h_1a75d4f12a992b283f21da6888ed3e9883" refkind="member"><highlight class="normal">GtkButton<sp/>*<ref refid="button_8h_1a75d4f12a992b283f21da6888ed3e9883" kindref="member">__toButtonGtk</ref>(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*wid);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Private<sp/>Types<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="struct__alooButton" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__alooButton" kindref="compound">_alooButton</ref><sp/>{</highlight></codeline>
+<codeline lineno="24" refid="struct__alooButton_1a26f4b40e9af86452d56fac768710c07e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*new)();</highlight></codeline>
+<codeline lineno="26" refid="struct__alooButton_1a1078f7ba42c97c41778891dd8eff95f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*newWithLabel)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="struct__alooButton_1aac2af111a621aa828b927dd1679a0189" kindref="member">label</ref>);</highlight></codeline>
+<codeline lineno="28" refid="struct__alooButton_1aac2af111a621aa828b927dd1679a0189" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*label)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*btn,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="30" refid="struct__alooButton_1a0736e3f769e5331cd449ab742d7dd642" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*child)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*btn,<sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*<ref refid="struct__alooButton_1a0736e3f769e5331cd449ab742d7dd642" kindref="member">child</ref>);</highlight></codeline>
+<codeline lineno="32" refid="struct__alooButton_1ac1f2e7587e09b5aa3bba9eabc710f353" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*icon)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*btn,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="struct__alooButton_1a0736e3f769e5331cd449ab742d7dd642" kindref="member">child</ref>);</highlight></codeline>
+<codeline lineno="34" refid="struct__alooButton_1a2088327840112ab3687d5cc4ada8e239" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*(*useUnderline)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*btn,<sp/>gboolean<sp/>yes);</highlight></codeline>
+<codeline lineno="36" refid="struct__alooButton_1ae2f828579d8d4a89c5c4ed6fdabde2d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GtkButton<sp/>*(*toGtk)(<ref refid="structalooWidget" kindref="compound">alooWidget</ref><sp/>*wid);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/********************<sp/>Public<sp/>********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__alooButton" kindref="compound">_alooButton</ref><sp/><ref refid="button_8h_1ac477dbe4d2e006ce73a75f77b0bc0969" kindref="member">Button</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_BUTTON_H</highlight></codeline>
     </programlisting>
     <location file="include/button.h"/>
   </compounddef>

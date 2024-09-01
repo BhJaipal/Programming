@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['g_5f_5fetwidgetclasses_207',['g__etWidgetClasses',['../style_8h.html#a8a5d2f2215bf8069abae3701fbdaba77',1,'style.h']]],
-  ['getbaselineposition_208',['getBaselinePosition',['../struct__alooBox.html#a05c97deb37fc8146e6ba01e70a406eb4',1,'_alooBox']]],
-  ['getclasses_209',['getClasses',['../struct__alooCSS.html#a6bf3be66b2e8bdda4f5b046d456d6e96',1,'_alooCSS']]],
-  ['gethomogeneous_210',['getHomogeneous',['../struct__alooBox.html#aa6e28da46e7b9f3e7cdb9dd709c65363',1,'_alooBox']]],
-  ['getorientation_211',['getOrientation',['../struct__alooBox.html#a4593845b8c4b1d13aee6b7135de8a28a',1,'_alooBox']]],
-  ['getspacing_212',['getSpacing',['../struct__alooBox.html#aa0f256878ef3e65e7a8927488fc44570',1,'_alooBox']]],
-  ['grid_213',['Grid',['../grid_8h.html#aba04f3722c5bd2bb653281967a04555b',1,'grid.h']]],
-  ['grid_2eh_214',['grid.h',['../grid_8h.html',1,'']]],
-  ['gtk_5fto_5faloo_215',['gtk_to_aloo',['../struct__aloo__widget.html#ac0d8de1bfe827e06d7272d45e3259584',1,'_aloo_widget']]],
-  ['gtk_5fto_5faloo_5ftype_216',['GTK_TO_ALOO_Type',['../widget_8h.html#ab3fcd2a829accf7c2d1f00c982c005b1',1,'widget.h']]]
+  ['g_5f_5fetwidgetclasses_140',['g__etWidgetClasses',['../style_8h.html#a8a5d2f2215bf8069abae3701fbdaba77',1,'style.h']]],
+  ['getbaselineposition_141',['getBaselinePosition',['../struct__alooBox.html#aa937c3df70a2a2c3f96acf66239fa5a7',1,'_alooBox']]],
+  ['getbuilderobject_142',['getBuilderObject',['../struct__AlooBuilder.html#a8e14c8d9c86b5c55ceae67ebba4180d8',1,'_AlooBuilder']]],
+  ['getclasses_143',['getClasses',['../struct__alooCSS.html#ad1f623aea153448d39ac6e09510efc62',1,'_alooCSS']]],
+  ['gethomogeneous_144',['getHomogeneous',['../struct__alooBox.html#ae2630f6d6c9d41ec92e714ac97354e9d',1,'_alooBox']]],
+  ['getorientation_145',['getOrientation',['../struct__alooBox.html#a58bbac0215bc20556f63187710bd4d8a',1,'_alooBox']]],
+  ['getspacing_146',['getSpacing',['../struct__alooBox.html#a335c20039a226d4406116a139b618e79',1,'_alooBox']]],
+  ['grid_147',['Grid',['../grid_8h.html#aba04f3722c5bd2bb653281967a04555b',1,'grid.h']]],
+  ['grid_2eh_148',['grid.h',['../grid_8h.html',1,'']]],
+  ['gtk_5fto_5faloo_149',['gtk_to_aloo',['../struct__aloo__widget.html#abdec12adebb7e37c406c628d47a84e66',1,'_aloo_widget']]]
 ];

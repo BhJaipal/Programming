@@ -6,7 +6,8 @@
 
 
 
-Collaboration diagram for \+\_\+aloo\+Window\+:\nopagebreak
+Collaboration diagram for \+\_\+aloo\+Window\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,30 +17,30 @@ Collaboration diagram for \+\_\+aloo\+Window\+:\nopagebreak
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{window_8h_abec0f2604c9a30b72c72f3dbf6220cd2}{\+\_\+\+\_\+aloo\+Application\+New\+Window\+\_\+\+Type}} \mbox{\hyperlink{struct__alooWindow_a58b6fe2c1669b0a3115814742c34b967}{new}}
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{struct__alooWindow_a78bd31852545559e9fe4c3c033027a03}{new}} )(\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$app)
 \begin{DoxyCompactList}\small\item\em Create a Gtk\+Window. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{window_8h_ab9fe52d585200e1af4b62247763983ee}{\+\_\+\+\_\+aloo\+Present\+Window\+\_\+\+Type}} \mbox{\hyperlink{struct__alooWindow_a69eb586c39bd205c3090052062603800}{present}}
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{struct__alooWindow_ae0ac2345055d140263283193d63e12b9}{present}} )(\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window)
 \begin{DoxyCompactList}\small\item\em Presents Gtk\+Window. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{window_8h_a838ef9ee7d949d041286b909899ef5dd}{\+\_\+\+\_\+aloo\+Set\+Window\+Child\+\_\+\+Type}} \mbox{\hyperlink{struct__alooWindow_a76819237feac7bff766987104b51aeab}{set\+Child}}
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{struct__alooWindow_a89ae4f7b03da6d8b702cfed1878a9885}{set\+Child}} )(\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window, \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$child)
 \begin{DoxyCompactList}\small\item\em Sets Window child. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{window_8h_a11a9f67b03d63f28252d4d55ab3f689a}{\+\_\+\+\_\+aloo\+Set\+Window\+Title\+\_\+\+Type}} \mbox{\hyperlink{struct__alooWindow_a958c501818bddcf9399bd3c2a731f3a5}{set\+Title}}
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{struct__alooWindow_afa4cabcec46bc162b3248c585a485d24}{set\+Title}} )(\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window, const char $\ast$title)
 \begin{DoxyCompactList}\small\item\em Sets Gtk\+Window title. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{window_8h_a79726c65ac6d0739867a2c9bc3d2624b}{\+\_\+\+\_\+set\+Window\+Size\+\_\+\+Type}} \mbox{\hyperlink{struct__alooWindow_af380e7305b03ac7d9bd88f424d771acb}{set\+Size}}
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{struct__alooWindow_aeccc58102d537099a2148c1441cb121e}{set\+Size}} )(\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window, int width, int height)
 \begin{DoxyCompactList}\small\item\em Sets aloo Window size. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{window_8h_a8fe109a7ae19d254c7ca918354d15dde}{\+\_\+\+\_\+set\+Window\+Application\+\_\+\+Type}} \mbox{\hyperlink{struct__alooWindow_a4dd10bb0a31c1d5d24962027429a7ce7}{set\+\_\+app\+\_\+window}}
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{struct__alooWindow_a85e3f943840da73ad0f523afe111fea5}{set\+\_\+app\+\_\+window}} )(\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window, \mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$app)
 \begin{DoxyCompactList}\small\item\em Set the Window for Application. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{window_8h_a2761337c8c639f7e4ba12fc0ea361471}{\+\_\+\+\_\+app\+\_\+add\+\_\+window\+\_\+\+Type}} \mbox{\hyperlink{struct__alooWindow_ab21c30a752473650b70b0ec15b69dfa2}{app\+\_\+add\+\_\+window}}
+\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{struct__alooWindow_afbb1b375b7b468e59c82c5ae5e95a794}{app\+\_\+add\+\_\+window}} )(\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$app, \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window)
 \begin{DoxyCompactList}\small\item\em Adds Window to Application. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{window_8h_a3c98359a51199241964e2fde72071e05}{\+\_\+\+\_\+show\+Window\+\_\+\+Type}} \mbox{\hyperlink{struct__alooWindow_a2c45374a9db8020ae326a897010e53a0}{show}}
+void($\ast$ \mbox{\hyperlink{struct__alooWindow_aed2ce94649355d0dafe31fe876cd1e36}{show}} )(\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window)
 \begin{DoxyCompactList}\small\item\em Shows Window. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{struct__alooWindow_ab21c30a752473650b70b0ec15b69dfa2}\label{struct__alooWindow_ab21c30a752473650b70b0ec15b69dfa2}} 
+\mbox{\Hypertarget{struct__alooWindow_afbb1b375b7b468e59c82c5ae5e95a794}\label{struct__alooWindow_afbb1b375b7b468e59c82c5ae5e95a794}} 
 \index{\_alooWindow@{\_alooWindow}!app\_add\_window@{app\_add\_window}}
 \index{app\_add\_window@{app\_add\_window}!\_alooWindow@{\_alooWindow}}
 \doxysubsubsection{\texorpdfstring{app\_add\_window}{app\_add\_window}}
-{\footnotesize\ttfamily \mbox{\hyperlink{window_8h_a2761337c8c639f7e4ba12fc0ea361471}{\+\_\+\+\_\+app\+\_\+add\+\_\+window\+\_\+\+Type}} \+\_\+aloo\+Window\+::app\+\_\+add\+\_\+window}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+aloo\+Window\+::app\+\_\+add\+\_\+window) (\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$app, \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window)}
 
 
 
@@ -55,11 +56,11 @@ Adds Window to Application.
 \begin{DoxyReturn}{Returns}
 aloowidget$\ast$ 
 \end{DoxyReturn}
-\mbox{\Hypertarget{struct__alooWindow_a58b6fe2c1669b0a3115814742c34b967}\label{struct__alooWindow_a58b6fe2c1669b0a3115814742c34b967}} 
+\mbox{\Hypertarget{struct__alooWindow_a78bd31852545559e9fe4c3c033027a03}\label{struct__alooWindow_a78bd31852545559e9fe4c3c033027a03}} 
 \index{\_alooWindow@{\_alooWindow}!new@{new}}
 \index{new@{new}!\_alooWindow@{\_alooWindow}}
 \doxysubsubsection{\texorpdfstring{new}{new}}
-{\footnotesize\ttfamily \mbox{\hyperlink{window_8h_abec0f2604c9a30b72c72f3dbf6220cd2}{\+\_\+\+\_\+aloo\+Application\+New\+Window\+\_\+\+Type}} \+\_\+aloo\+Window\+::new}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+aloo\+Window\+::new) (\mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$app)}
 
 
 
@@ -73,11 +74,11 @@ Create a Gtk\+Window.
 \begin{DoxyReturn}{Returns}
 aloo\+Widget$\ast$ 
 \end{DoxyReturn}
-\mbox{\Hypertarget{struct__alooWindow_a69eb586c39bd205c3090052062603800}\label{struct__alooWindow_a69eb586c39bd205c3090052062603800}} 
+\mbox{\Hypertarget{struct__alooWindow_ae0ac2345055d140263283193d63e12b9}\label{struct__alooWindow_ae0ac2345055d140263283193d63e12b9}} 
 \index{\_alooWindow@{\_alooWindow}!present@{present}}
 \index{present@{present}!\_alooWindow@{\_alooWindow}}
 \doxysubsubsection{\texorpdfstring{present}{present}}
-{\footnotesize\ttfamily \mbox{\hyperlink{window_8h_ab9fe52d585200e1af4b62247763983ee}{\+\_\+\+\_\+aloo\+Present\+Window\+\_\+\+Type}} \+\_\+aloo\+Window\+::present}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+aloo\+Window\+::present) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window)}
 
 
 
@@ -91,11 +92,11 @@ Presents Gtk\+Window.
 \begin{DoxyReturn}{Returns}
 aloo\+Widget$\ast$ 
 \end{DoxyReturn}
-\mbox{\Hypertarget{struct__alooWindow_a4dd10bb0a31c1d5d24962027429a7ce7}\label{struct__alooWindow_a4dd10bb0a31c1d5d24962027429a7ce7}} 
+\mbox{\Hypertarget{struct__alooWindow_a85e3f943840da73ad0f523afe111fea5}\label{struct__alooWindow_a85e3f943840da73ad0f523afe111fea5}} 
 \index{\_alooWindow@{\_alooWindow}!set\_app\_window@{set\_app\_window}}
 \index{set\_app\_window@{set\_app\_window}!\_alooWindow@{\_alooWindow}}
 \doxysubsubsection{\texorpdfstring{set\_app\_window}{set\_app\_window}}
-{\footnotesize\ttfamily \mbox{\hyperlink{window_8h_a8fe109a7ae19d254c7ca918354d15dde}{\+\_\+\+\_\+set\+Window\+Application\+\_\+\+Type}} \+\_\+aloo\+Window\+::set\+\_\+app\+\_\+window}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+aloo\+Window\+::set\+\_\+app\+\_\+window) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window, \mbox{\hyperlink{structAlooApplication}{Aloo\+Application}} $\ast$app)}
 
 
 
@@ -111,11 +112,11 @@ Set the Window for Application.
 \begin{DoxyReturn}{Returns}
 aloo\+Widget$\ast$ 
 \end{DoxyReturn}
-\mbox{\Hypertarget{struct__alooWindow_a76819237feac7bff766987104b51aeab}\label{struct__alooWindow_a76819237feac7bff766987104b51aeab}} 
+\mbox{\Hypertarget{struct__alooWindow_a89ae4f7b03da6d8b702cfed1878a9885}\label{struct__alooWindow_a89ae4f7b03da6d8b702cfed1878a9885}} 
 \index{\_alooWindow@{\_alooWindow}!setChild@{setChild}}
 \index{setChild@{setChild}!\_alooWindow@{\_alooWindow}}
 \doxysubsubsection{\texorpdfstring{setChild}{setChild}}
-{\footnotesize\ttfamily \mbox{\hyperlink{window_8h_a838ef9ee7d949d041286b909899ef5dd}{\+\_\+\+\_\+aloo\+Set\+Window\+Child\+\_\+\+Type}} \+\_\+aloo\+Window\+::set\+Child}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+aloo\+Window\+::set\+Child) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window, \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$child)}
 
 
 
@@ -131,11 +132,11 @@ Sets Window child.
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
-\mbox{\Hypertarget{struct__alooWindow_af380e7305b03ac7d9bd88f424d771acb}\label{struct__alooWindow_af380e7305b03ac7d9bd88f424d771acb}} 
+\mbox{\Hypertarget{struct__alooWindow_aeccc58102d537099a2148c1441cb121e}\label{struct__alooWindow_aeccc58102d537099a2148c1441cb121e}} 
 \index{\_alooWindow@{\_alooWindow}!setSize@{setSize}}
 \index{setSize@{setSize}!\_alooWindow@{\_alooWindow}}
 \doxysubsubsection{\texorpdfstring{setSize}{setSize}}
-{\footnotesize\ttfamily \mbox{\hyperlink{window_8h_a79726c65ac6d0739867a2c9bc3d2624b}{\+\_\+\+\_\+set\+Window\+Size\+\_\+\+Type}} \+\_\+aloo\+Window\+::set\+Size}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+aloo\+Window\+::set\+Size) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window, int width, int height)}
 
 
 
@@ -153,11 +154,11 @@ Sets aloo Window size.
 \begin{DoxyReturn}{Returns}
 aloo\+Widget$\ast$ 
 \end{DoxyReturn}
-\mbox{\Hypertarget{struct__alooWindow_a958c501818bddcf9399bd3c2a731f3a5}\label{struct__alooWindow_a958c501818bddcf9399bd3c2a731f3a5}} 
+\mbox{\Hypertarget{struct__alooWindow_afa4cabcec46bc162b3248c585a485d24}\label{struct__alooWindow_afa4cabcec46bc162b3248c585a485d24}} 
 \index{\_alooWindow@{\_alooWindow}!setTitle@{setTitle}}
 \index{setTitle@{setTitle}!\_alooWindow@{\_alooWindow}}
 \doxysubsubsection{\texorpdfstring{setTitle}{setTitle}}
-{\footnotesize\ttfamily \mbox{\hyperlink{window_8h_a11a9f67b03d63f28252d4d55ab3f689a}{\+\_\+\+\_\+aloo\+Set\+Window\+Title\+\_\+\+Type}} \+\_\+aloo\+Window\+::set\+Title}
+{\footnotesize\ttfamily \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+aloo\+Window\+::set\+Title) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window, const char $\ast$title)}
 
 
 
@@ -173,11 +174,11 @@ Sets Gtk\+Window title.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ 
 \end{DoxyReturn}
-\mbox{\Hypertarget{struct__alooWindow_a2c45374a9db8020ae326a897010e53a0}\label{struct__alooWindow_a2c45374a9db8020ae326a897010e53a0}} 
+\mbox{\Hypertarget{struct__alooWindow_aed2ce94649355d0dafe31fe876cd1e36}\label{struct__alooWindow_aed2ce94649355d0dafe31fe876cd1e36}} 
 \index{\_alooWindow@{\_alooWindow}!show@{show}}
 \index{show@{show}!\_alooWindow@{\_alooWindow}}
 \doxysubsubsection{\texorpdfstring{show}{show}}
-{\footnotesize\ttfamily \mbox{\hyperlink{window_8h_a3c98359a51199241964e2fde72071e05}{\+\_\+\+\_\+show\+Window\+\_\+\+Type}} \+\_\+aloo\+Window\+::show}
+{\footnotesize\ttfamily void($\ast$ \+\_\+aloo\+Window\+::show) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$window)}
 
 
 

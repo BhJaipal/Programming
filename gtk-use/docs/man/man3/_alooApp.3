@@ -1,4 +1,4 @@
-.TH "_alooApp" 3 "Sun Sep 1 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "_alooApp" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,29 +12,29 @@ _alooApp
 
 .in +1c
 .ti -1c
-.RI "\fB__CreateApp_Type\fP \fBcreate\fP"
+.RI "\fBAlooApplication\fP *(* \fBcreate\fP )(const char *app_id, struct \fBalooAppOptions\fP gAppOptions)"
 .br
 .RI "Create a App object\&. "
 .ti -1c
-.RI "\fB__RunApp_Type\fP \fBrun\fP"
+.RI "int(* \fBrun\fP )(\fBAlooApplication\fP *application)"
 .br
 .RI "Runs aloo App\&. "
 .ti -1c
-.RI "\fB__RunAppAndUnrefIt_Type\fP \fBrun_and_unref\fP"
+.RI "int(* \fBrun_and_unref\fP )(\fBAlooApplication\fP *application)"
 .br
 .RI "Runs aloo App and unrefs after exiting it\&. "
 .ti -1c
-.RI "\fB__unrefApp_Type\fP \fBunref\fP"
+.RI "void(* \fBunref\fP )(\fBAlooApplication\fP *application)"
 .br
 .RI "unrefs aloo App "
 .ti -1c
-.RI "\fB__AppAddEvents_Type\fP \fBadd_event_listener\fP"
+.RI "void(* \fBadd_event_listener\fP )(\fBAlooApplication\fP *app, const char *event, void callbackFn())"
 .br
 .RI "Adds Event Listener to Aloo App\&. "
 .in -1c
 .SH "Member Data Documentation"
 .PP 
-.SS "\fB__AppAddEvents_Type\fP _alooApp::add_event_listener"
+.SS "void(* _alooApp::add_event_listener) (\fBAlooApplication\fP *app, const char *event, void callbackFn())"
 
 .PP
 Adds Event Listener to Aloo App\&. 
@@ -49,7 +49,7 @@ Adds Event Listener to Aloo App\&.
 .RE
 .PP
 
-.SS "\fB__CreateApp_Type\fP _alooApp::create"
+.SS "\fBAlooApplication\fP*(* _alooApp::create) (const char *app_id, struct \fBalooAppOptions\fP gAppOptions)"
 
 .PP
 Create a App object\&. 
@@ -67,7 +67,7 @@ It returns Aloo Application
 .RE
 .PP
 
-.SS "\fB__RunApp_Type\fP _alooApp::run"
+.SS "int(* _alooApp::run) (\fBAlooApplication\fP *application)"
 
 .PP
 Runs aloo App\&. 
@@ -78,7 +78,7 @@ status on exiting app
 .RE
 .PP
 
-.SS "\fB__RunAppAndUnrefIt_Type\fP _alooApp::run_and_unref"
+.SS "int(* _alooApp::run_and_unref) (\fBAlooApplication\fP *application)"
 
 .PP
 Runs aloo App and unrefs after exiting it\&. 
@@ -89,7 +89,7 @@ status on exiting app
 .RE
 .PP
 
-.SS "\fB__unrefApp_Type\fP _alooApp::unref"
+.SS "void(* _alooApp::unref) (\fBAlooApplication\fP *application)"
 
 .PP
 unrefs aloo App 

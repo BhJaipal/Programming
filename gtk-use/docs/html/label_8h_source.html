@@ -82,21 +82,19 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/******************** Private Types ********************/</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="label_8h.html#a213636152f4dc1ee94cd8e02c9e31b28">   16</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="structalooWidget.html">alooWidget</a> *(*_newLabelType)(<span class="keyword">const</span> <span class="keywordtype">char</span> *val);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct____alooLabel.html">   18</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct____alooLabel.html">__alooLabel</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="struct____alooLabel.html#aadc8450b0dded9eade27d3355e864f07">   19</a></span>&#160;    <a class="code" href="label_8h.html#a213636152f4dc1ee94cd8e02c9e31b28">_newLabelType</a> <span class="keyword">new</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/******************** Public ********************/</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">extern</span> <span class="keyword">struct </span><a class="code" href="struct____alooLabel.html">__alooLabel</a> <a class="code" href="label_8h.html#a7bf2150721f7576df4178adce8b5885f">Label</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ALOO_LABEL_H</span></div>
-<div class="ttc" id="alabel_8h_html_a213636152f4dc1ee94cd8e02c9e31b28"><div class="ttname"><a href="label_8h.html#a213636152f4dc1ee94cd8e02c9e31b28">_newLabelType</a></div><div class="ttdeci">alooWidget *(* _newLabelType)(const char *val)</div><div class="ttdef"><b>Definition:</b> label.h:16</div></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="struct____alooLabel.html">   16</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct____alooLabel.html">__alooLabel</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="struct____alooLabel.html#adf6d0ff07874ae1917e0665efb600042">   20</a></span>&#160;    <a class="code" href="structalooWidget.html">alooWidget</a> *(*new)(<span class="keyword">const</span> <span class="keywordtype">char</span> *val);</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="struct____alooLabel.html#ad5fb05f426389c800a67a2440d76ea27">   22</a></span>&#160;    GtkLabel *(*toGtk)(<a class="code" href="structalooWidget.html">alooWidget</a> *wid);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/******************** Public ********************/</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">extern</span> <span class="keyword">struct </span><a class="code" href="struct____alooLabel.html">__alooLabel</a> <a class="code" href="label_8h.html#a7bf2150721f7576df4178adce8b5885f">Label</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ALOO_LABEL_H</span></div>
 <div class="ttc" id="alabel_8h_html_a2efdaa462af392ed6c6f7cae989f673f"><div class="ttname"><a href="label_8h.html#a2efdaa462af392ed6c6f7cae989f673f">__newLabel</a></div><div class="ttdeci">alooWidget * __newLabel(const char *val)</div></div>
 <div class="ttc" id="alabel_8h_html_a7bf2150721f7576df4178adce8b5885f"><div class="ttname"><a href="label_8h.html#a7bf2150721f7576df4178adce8b5885f">Label</a></div><div class="ttdeci">struct __alooLabel Label</div></div>
-<div class="ttc" id="astruct____alooLabel_html"><div class="ttname"><a href="struct____alooLabel.html">__alooLabel</a></div><div class="ttdef"><b>Definition:</b> label.h:18</div></div>
+<div class="ttc" id="astruct____alooLabel_html"><div class="ttname"><a href="struct____alooLabel.html">__alooLabel</a></div><div class="ttdef"><b>Definition:</b> label.h:16</div></div>
 <div class="ttc" id="astructalooWidget_html"><div class="ttname"><a href="structalooWidget.html">alooWidget</a></div><div class="ttdoc">widget for my aloo library</div><div class="ttdef"><b>Definition:</b> types.h:51</div></div>
 <div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div><div class="ttdoc">Aloo Project Types related functions.</div></div>
 </div><!-- fragment --></div><!-- contents -->

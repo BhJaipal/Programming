@@ -1,4 +1,4 @@
-.TH "include/button.h" 3 "Sun Sep 1 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "include/button.h" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,31 +15,6 @@ include/button.h \- Aloo Button related functions\&.
 .in +1c
 .ti -1c
 .RI "struct \fB_alooButton\fP"
-.br
-.in -1c
-.SS "Typedefs"
-
-.in +1c
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__newButton_Type\fP) ()"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__newButtonWithLabel_Type\fP) (const char *label)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__setLabel_Type\fP) (\fBalooWidget\fP *btn, char const *name)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__setChild_Type\fP) (\fBalooWidget\fP *btn, \fBalooWidget\fP *child)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__setIcon_Type\fP) (\fBalooWidget\fP *btn, const char *child)"
-.br
-.ti -1c
-.RI "typedef \fBalooWidget\fP *(* \fB__setUseUnderline_Type\fP) (\fBalooWidget\fP *btn, gboolean yes)"
-.br
-.ti -1c
-.RI "typedef GtkButton *(* \fB__toButtonGtk_Type\fP) (\fBalooWidget\fP *wid)"
 .br
 .in -1c
 .SS "Functions"
@@ -85,22 +60,6 @@ Aloo Button related functions\&.
 Jaipal001 
 .RE
 .PP
-
-.SH "Typedef Documentation"
-.PP 
-.SS "typedef \fBalooWidget\fP*(* __newButton_Type) ()"
-
-.SS "typedef \fBalooWidget\fP*(* __newButtonWithLabel_Type) (const char *label)"
-
-.SS "typedef \fBalooWidget\fP*(* __setChild_Type) (\fBalooWidget\fP *btn, \fBalooWidget\fP *child)"
-
-.SS "typedef \fBalooWidget\fP*(* __setIcon_Type) (\fBalooWidget\fP *btn, const char *child)"
-
-.SS "typedef \fBalooWidget\fP*(* __setLabel_Type) (\fBalooWidget\fP *btn, char const *name)"
-
-.SS "typedef \fBalooWidget\fP*(* __setUseUnderline_Type) (\fBalooWidget\fP *btn, gboolean yes)"
-
-.SS "typedef GtkButton*(* __toButtonGtk_Type) (\fBalooWidget\fP *wid)"
 
 .SH "Function Documentation"
 .PP 
