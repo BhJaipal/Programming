@@ -1,4 +1,5 @@
 #include "../include/aloo.h"
+#include <fontconfig/fontconfig.h>
 #include <gtk/gtk.h>
 
 alooWidget *labelGrid;
@@ -17,9 +18,8 @@ struct _labelList {
 static void toggleNav() {
 	char **classes = CSS.getClasses(navbar);
 	for (int i = 0; i < sizeof(classes) / sizeof(classes[0]); i++) {
-		Logger.log(lg, classes[i]);
+		lg->log(lg, classes[i]);
 	}
-	g_print("\n");
 
 	if (!strcmp(classes[0], "vertical")) {
 		CSS.removeClass(navMenu, "nav-menu-show");
@@ -101,6 +101,13 @@ static void activate() {
 	Widget.setOrientation(boxBody, GTK_ORIENTATION_HORIZONTAL);
 	CSS.setSize(buttonWidget, 100, 50);
 	CSS.setSize(rmLabelWidget, 125, 50);
+
+	GtkIconTheme *iconTheme = gtk_icon_theme_new();
+	gtk_icon_theme_add_resource_path(
+		iconTheme, "/home/jaipal001/.icons/Colorful-Dark-Icons/index.theme");
+
+	Button.icon(buttonWidget, "add");
+	Button.icon(rmLabelWidget, "remove");
 
 	// gtk_widget_set_visible(GTK_WINDOW(window), TRUE);
 	// gtk_window_fullscreen(GTK_WINDOW(window));

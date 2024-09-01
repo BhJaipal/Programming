@@ -6,8 +6,9 @@ void __aloo_log(struct _logger *self, const char *message);
 
 struct _logger {
 	int logCount;
+	void (*err)(struct _logger *self, const char *message);
 	void (*log)(struct _logger *self, const char *message);
+	void (*warn)(struct _logger *self, const char *message);
+	void (*info)(struct _logger *self, const char *message);
 };
-extern struct _logger Logger;
-
 #endif // ALOO_LOGGER_H

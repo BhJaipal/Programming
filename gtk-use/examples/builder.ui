@@ -59,8 +59,6 @@
 										<child>
 											<object id="add" class="GtkButton">
 												<property name="name">add</property>
-												<property name="label"
-												>Add Label</property>
 												<layout>
 													<property name="column-span"
 													>2</property>
@@ -72,8 +70,6 @@
 										<child>
 											<object id="remove" class="GtkButton">
 												<property name="name">remove</property>
-												<property name="label"
-												>Remove Label</property>
 												<layout>
 													<property name="column-span"
 													>2</property>
