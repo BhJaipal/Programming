@@ -14,45 +14,176 @@ _alooWindow
 .ti -1c
 .RI "\fB__alooApplicationNewWindow_Type\fP \fBnew\fP"
 .br
+.RI "Create a GtkWindow\&. "
 .ti -1c
 .RI "\fB__alooPresentWindow_Type\fP \fBpresent\fP"
 .br
+.RI "Presents GtkWindow\&. "
 .ti -1c
 .RI "\fB__alooSetWindowChild_Type\fP \fBsetChild\fP"
 .br
+.RI "Sets Window child\&. "
 .ti -1c
 .RI "\fB__alooSetWindowTitle_Type\fP \fBsetTitle\fP"
 .br
+.RI "Sets GtkWindow title\&. "
 .ti -1c
 .RI "\fB__setWindowSize_Type\fP \fBsetSize\fP"
 .br
+.RI "Sets aloo Window size\&. "
 .ti -1c
 .RI "\fB__setWindowApplication_Type\fP \fBset_app_window\fP"
 .br
+.RI "Set the Window for Application\&. "
 .ti -1c
 .RI "\fB__app_add_window_Type\fP \fBapp_add_window\fP"
 .br
+.RI "Adds Window to Application\&. "
 .ti -1c
 .RI "\fB__showWindow_Type\fP \fBshow\fP"
 .br
+.RI "Shows Window\&. "
 .in -1c
 .SH "Member Data Documentation"
 .PP 
 .SS "\fB__app_add_window_Type\fP _alooWindow::app_add_window"
 
+.PP
+Adds Window to Application\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIapp\fP AlooApplication* 
+.br
+\fIwindow\fP alooWidget* 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+aloowidget* 
+.RE
+.PP
+
 .SS "\fB__alooApplicationNewWindow_Type\fP _alooWindow::new"
+
+.PP
+Create a GtkWindow\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIapp\fP AlooApplication* 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+alooWidget* 
+.RE
+.PP
 
 .SS "\fB__alooPresentWindow_Type\fP _alooWindow::present"
 
+.PP
+Presents GtkWindow\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP alooWidget* 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+alooWidget* 
+.RE
+.PP
+
 .SS "\fB__setWindowApplication_Type\fP _alooWindow::set_app_window"
+
+.PP
+Set the Window for Application\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP alooWidget* 
+.br
+\fIapp\fP AlooApplication* 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+alooWidget* 
+.RE
+.PP
 
 .SS "\fB__alooSetWindowChild_Type\fP _alooWindow::setChild"
 
+.PP
+Sets Window child\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP \fBalooWidget\fP * 
+.br
+\fIchild\fP \fBalooWidget\fP * 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
 .SS "\fB__setWindowSize_Type\fP _alooWindow::setSize"
+
+.PP
+Sets aloo Window size\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP \fBalooWidget\fP * 
+.br
+\fIwidth\fP int 
+.br
+\fIheight\fP int 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+alooWidget* 
+.RE
+.PP
 
 .SS "\fB__alooSetWindowTitle_Type\fP _alooWindow::setTitle"
 
+.PP
+Sets GtkWindow title\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP \fBalooWidget\fP * 
+.br
+\fItitle\fP const char* 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBalooWidget\fP * 
+.RE
+.PP
+
 .SS "\fB__showWindow_Type\fP _alooWindow::show"
+
+.PP
+Shows Window\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP alooWidget* 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
 
 
 .SH "Author"

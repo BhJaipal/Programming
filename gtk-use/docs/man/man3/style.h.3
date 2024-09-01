@@ -10,49 +10,97 @@ include/style.h \- Aloo CSS related functions\&.
 \fC#include 'types\&.h'\fP
 .br
 
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_alooCSS\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef void(* \fB__importCssFromPath_Type\fP) (const char *name)"
+.br
+.ti -1c
+.RI "typedef void(* \fB__importCssFromData_Type\fP) (const char *content, gssize length)"
+.br
+.ti -1c
+.RI "typedef void(* \fB__importCssFromFile_Type\fP) (GFile *file)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__setWidth_Type\fP) (\fBalooWidget\fP *wid, int width)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__setHeight_Type\fP) (\fBalooWidget\fP *wid, int height)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__setSize_Type\fP) (\fBalooWidget\fP *wid, int width, int height)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__widgetAddClass_Type\fP) (\fBalooWidget\fP *widget, char *class)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__widgetRemoveClass_Type\fP) (\fBalooWidget\fP *widget, char *class)"
+.br
+.ti -1c
+.RI "typedef char **(* \fB__getWidgetClasses_Type\fP) (\fBalooWidget\fP *widget)"
+.br
+.ti -1c
+.RI "typedef \fBalooWidget\fP *(* \fB__setWidgetClasses_Type\fP) (\fBalooWidget\fP *widget, char **classes)"
+.br
+.in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "void \fBimportCssFromPath\fP (const char *name)"
+.RI "void \fB__importCssFromPath\fP (const char *name)"
 .br
 .RI "Import CSS file from path\&. "
 .ti -1c
-.RI "void \fBimportCssFromData\fP (const char *content, gssize length)"
+.RI "void \fB__importCssFromData\fP (const char *content, gssize length)"
 .br
 .RI "Import CSS file from content\&. "
 .ti -1c
-.RI "void \fBimportCssFromFile\fP (GFile *file)"
+.RI "void \fB__importCssFromFile\fP (GFile *file)"
 .br
 .RI "Import CSS file from content\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBsetWidth\fP (\fBalooWidget\fP *wid, int width)"
+.RI "\fBalooWidget\fP * \fB__setWidth\fP (\fBalooWidget\fP *wid, int width)"
 .br
 .RI "Set the Width of widget\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBsetHeight\fP (\fBalooWidget\fP *wid, int height)"
+.RI "\fBalooWidget\fP * \fB__setHeight\fP (\fBalooWidget\fP *wid, int height)"
 .br
 .RI "Set the Height of widget\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBsetSize\fP (\fBalooWidget\fP *wid, int width, int height)"
+.RI "\fBalooWidget\fP * \fB__setSize\fP (\fBalooWidget\fP *wid, int width, int height)"
 .br
 .RI "Set the Width and Height of widget\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBwidgetAddClass\fP (\fBalooWidget\fP *widget, char *class)"
+.RI "\fBalooWidget\fP * \fB__widgetAddClass\fP (\fBalooWidget\fP *widget, char *class)"
 .br
 .RI "Adds class to widget\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBwidgetRemoveClass\fP (\fBalooWidget\fP *widget, char *class)"
+.RI "\fBalooWidget\fP * \fB__widgetRemoveClass\fP (\fBalooWidget\fP *widget, char *class)"
 .br
 .RI "Removes class from widget\&. "
 .ti -1c
-.RI "char ** \fBgetWidgetClasses\fP (\fBalooWidget\fP *widget)"
+.RI "char ** \fBg__etWidgetClasses\fP (\fBalooWidget\fP *widget)"
 .br
 .RI "Gets classes of widget\&. "
 .ti -1c
-.RI "\fBalooWidget\fP * \fBsetWidgetClasses\fP (\fBalooWidget\fP *widget, char **classes)"
+.RI "\fBalooWidget\fP * \fB__setWidgetClasses\fP (\fBalooWidget\fP *widget, char **classes)"
 .br
 .RI "Sets classes of widget\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_alooCSS\fP \fBCSS\fP"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -66,13 +114,31 @@ Jaipal001
 .RE
 .PP
 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef char**(* __getWidgetClasses_Type) (\fBalooWidget\fP *widget)"
+
+.SS "typedef void(* __importCssFromData_Type) (const char *content, gssize length)"
+
+.SS "typedef void(* __importCssFromFile_Type) (GFile *file)"
+
+.SS "typedef void(* __importCssFromPath_Type) (const char *name)"
+
+.SS "typedef \fBalooWidget\fP*(* __setHeight_Type) (\fBalooWidget\fP *wid, int height)"
+
+.SS "typedef \fBalooWidget\fP*(* __setSize_Type) (\fBalooWidget\fP *wid, int width, int height)"
+
+.SS "typedef \fBalooWidget\fP*(* __setWidgetClasses_Type) (\fBalooWidget\fP *widget, char **classes)"
+
+.SS "typedef \fBalooWidget\fP*(* __setWidth_Type) (\fBalooWidget\fP *wid, int width)"
+
+.SS "typedef \fBalooWidget\fP*(* __widgetAddClass_Type) (\fBalooWidget\fP *widget, char *class)"
+
+.SS "typedef \fBalooWidget\fP*(* __widgetRemoveClass_Type) (\fBalooWidget\fP *widget, char *class)"
+
 .SH "Function Documentation"
 .PP 
-.SS "char** getWidgetClasses (\fBalooWidget\fP * widget)"
-
-.PP
-Gets classes of widget\&. 
-.SS "void importCssFromData (const char * content, gssize length)"
+.SS "void __importCssFromData (const char * content, gssize length)"
 
 .PP
 Import CSS file from content\&. 
@@ -85,7 +151,7 @@ Import CSS file from content\&.
 .RE
 .PP
 
-.SS "void importCssFromFile (GFile * file)"
+.SS "void __importCssFromFile (GFile * file)"
 
 .PP
 Import CSS file from content\&. 
@@ -96,7 +162,7 @@ Import CSS file from content\&.
 .RE
 .PP
 
-.SS "void importCssFromPath (const char * name)"
+.SS "void __importCssFromPath (const char * name)"
 
 .PP
 Import CSS file from path\&. 
@@ -107,30 +173,38 @@ Import CSS file from path\&.
 .RE
 .PP
 
-.SS "\fBalooWidget\fP* setHeight (\fBalooWidget\fP * wid, int height)"
+.SS "\fBalooWidget\fP* __setHeight (\fBalooWidget\fP * wid, int height)"
 
 .PP
 Set the Height of widget\&. 
-.SS "\fBalooWidget\fP* setSize (\fBalooWidget\fP * wid, int width, int height)"
+.SS "\fBalooWidget\fP* __setSize (\fBalooWidget\fP * wid, int width, int height)"
 
 .PP
 Set the Width and Height of widget\&. 
-.SS "\fBalooWidget\fP* setWidgetClasses (\fBalooWidget\fP * widget, char ** classes)"
+.SS "\fBalooWidget\fP* __setWidgetClasses (\fBalooWidget\fP * widget, char ** classes)"
 
 .PP
 Sets classes of widget\&. 
-.SS "\fBalooWidget\fP* setWidth (\fBalooWidget\fP * wid, int width)"
+.SS "\fBalooWidget\fP* __setWidth (\fBalooWidget\fP * wid, int width)"
 
 .PP
 Set the Width of widget\&. 
-.SS "\fBalooWidget\fP* widgetAddClass (\fBalooWidget\fP * widget, char * class)"
+.SS "\fBalooWidget\fP* __widgetAddClass (\fBalooWidget\fP * widget, char * class)"
 
 .PP
 Adds class to widget\&. 
-.SS "\fBalooWidget\fP* widgetRemoveClass (\fBalooWidget\fP * widget, char * class)"
+.SS "\fBalooWidget\fP* __widgetRemoveClass (\fBalooWidget\fP * widget, char * class)"
 
 .PP
 Removes class from widget\&. 
+.SS "char** g__etWidgetClasses (\fBalooWidget\fP * widget)"
+
+.PP
+Gets classes of widget\&. 
+.SH "Variable Documentation"
+.PP 
+.SS "struct \fB_alooCSS\fP CSS\fC [extern]\fP"
+
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Aloo from the source code\&.

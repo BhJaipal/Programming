@@ -56,6 +56,18 @@
     <member refid="struct__alooButton_1a1e2800c05e965873d176ab5b6e16f74c" kind="variable"><name>icon</name></member>
     <member refid="struct__alooButton_1a83dec1a0bd4b85ae790c715c4e03d1a1" kind="variable"><name>useUnderline</name></member>
   </compound>
+  <compound refid="struct__alooCSS" kind="struct"><name>_alooCSS</name>
+    <member refid="struct__alooCSS_1a6ee605988bc52a3f4c50317c95c66a43" kind="variable"><name>importPath</name></member>
+    <member refid="struct__alooCSS_1a8358c12411cdcd727f894445c47935ee" kind="variable"><name>importData</name></member>
+    <member refid="struct__alooCSS_1a8b3cb3329326ba47b6d2793b8128e2b3" kind="variable"><name>importFile</name></member>
+    <member refid="struct__alooCSS_1a61a633fe25ff8bec5fa1107210a39247" kind="variable"><name>setWidth</name></member>
+    <member refid="struct__alooCSS_1ac1aab2722d77ae170217197e8d85c7d6" kind="variable"><name>setHeight</name></member>
+    <member refid="struct__alooCSS_1ac5a09a64d4cbdb3386512875fe0501a6" kind="variable"><name>setSize</name></member>
+    <member refid="struct__alooCSS_1adf287aa708114930c77b146133e58f87" kind="variable"><name>addClass</name></member>
+    <member refid="struct__alooCSS_1a971def5117780de234b63544892882f4" kind="variable"><name>removeClass</name></member>
+    <member refid="struct__alooCSS_1a6bf3be66b2e8bdda4f5b046d456d6e96" kind="variable"><name>getClasses</name></member>
+    <member refid="struct__alooCSS_1ab422451b3dacc2057561d8ac51209c7e" kind="variable"><name>setClasses</name></member>
+  </compound>
   <compound refid="struct__alooGrid" kind="struct"><name>_alooGrid</name>
     <member refid="struct__alooGrid_1a4ee419cf14790436508dfbbfa3a9581d" kind="variable"><name>attach</name></member>
     <member refid="struct__alooGrid_1af0ae3ab940a7de9181a62a7d353569b7" kind="variable"><name>attachGtk</name></member>
@@ -215,16 +227,27 @@
     <member refid="macros_8h_1a8a6129175fffef1805056b1ab25526ab" kind="function"><name>ALOO_IS_BOX</name></member>
   </compound>
   <compound refid="style_8h" kind="file"><name>style.h</name>
-    <member refid="style_8h_1a0bcc85b2cb03ec6bee88142e29c42e57" kind="function"><name>importCssFromPath</name></member>
-    <member refid="style_8h_1af5b4d6f7ea6b8b061193544aaf8f9be2" kind="function"><name>importCssFromData</name></member>
-    <member refid="style_8h_1a2021fd798c801903539ed696efa2b8cf" kind="function"><name>importCssFromFile</name></member>
-    <member refid="style_8h_1a63eb6e780503e6108a3311a57bf4738a" kind="function"><name>setWidth</name></member>
-    <member refid="style_8h_1a7c770a3c3f4921eaae08fa6e12c4a8aa" kind="function"><name>setHeight</name></member>
-    <member refid="style_8h_1ab40dc82bdb6610257e6f29fcb843cab3" kind="function"><name>setSize</name></member>
-    <member refid="style_8h_1a1ba8e82f22d5fc764577a1eb3e45d547" kind="function"><name>widgetAddClass</name></member>
-    <member refid="style_8h_1a54fb31e872e05fe9f0fce0f8a627c849" kind="function"><name>widgetRemoveClass</name></member>
-    <member refid="style_8h_1a9e0a300474506487a3ff0b9449ec2018" kind="function"><name>getWidgetClasses</name></member>
-    <member refid="style_8h_1aacd84293dbcb41d87b2e865e13fbe6da" kind="function"><name>setWidgetClasses</name></member>
+    <member refid="style_8h_1ae0f34a36ac9b2990d10a3b48dc718371" kind="typedef"><name>__importCssFromPath_Type</name></member>
+    <member refid="style_8h_1aae8bb2f31f06f33a889658817b1aca46" kind="typedef"><name>__importCssFromData_Type</name></member>
+    <member refid="style_8h_1a3eee583412a2fa9b9825f1245e59ba45" kind="typedef"><name>__importCssFromFile_Type</name></member>
+    <member refid="style_8h_1a55176b74c240ff89d096c4fd69536493" kind="typedef"><name>__setWidth_Type</name></member>
+    <member refid="style_8h_1ab3d6ef4fff6f333abbed9644ef7e80aa" kind="typedef"><name>__setHeight_Type</name></member>
+    <member refid="style_8h_1ad74daa30ede1124a5975116c700b60f0" kind="typedef"><name>__setSize_Type</name></member>
+    <member refid="style_8h_1a40fd06d9575ce9bf52bfdc0bfae4a88f" kind="typedef"><name>__widgetAddClass_Type</name></member>
+    <member refid="style_8h_1a90674b098469b5346a96a8293ea3919b" kind="typedef"><name>__widgetRemoveClass_Type</name></member>
+    <member refid="style_8h_1a29c846126936a01de97a4665202f5783" kind="typedef"><name>__getWidgetClasses_Type</name></member>
+    <member refid="style_8h_1a8a998832f6237937f050ea99ad061530" kind="typedef"><name>__setWidgetClasses_Type</name></member>
+    <member refid="style_8h_1ab32dc148da211184345f7603553c51fe" kind="variable"><name>CSS</name></member>
+    <member refid="style_8h_1a3f276834db3dffa368448132a19c85ed" kind="function"><name>__importCssFromPath</name></member>
+    <member refid="style_8h_1a7b594a9b97e83d0d8ed2a1fbf55da7a3" kind="function"><name>__importCssFromData</name></member>
+    <member refid="style_8h_1a0cb67567c32c0f7786d7994d614ae3f6" kind="function"><name>__importCssFromFile</name></member>
+    <member refid="style_8h_1a44c182f098a121a4ada8b0e068d7b9db" kind="function"><name>__setWidth</name></member>
+    <member refid="style_8h_1a626b036d97f444dec12ecd71d51f6d22" kind="function"><name>__setHeight</name></member>
+    <member refid="style_8h_1a6d4fc8b02c0cfbc8ca98cee3f2e0cfca" kind="function"><name>__setSize</name></member>
+    <member refid="style_8h_1af67678d0e16814a1e026db754eedc951" kind="function"><name>__widgetAddClass</name></member>
+    <member refid="style_8h_1a7750134159467d6562f541a4052ca594" kind="function"><name>__widgetRemoveClass</name></member>
+    <member refid="style_8h_1a8a5d2f2215bf8069abae3701fbdaba77" kind="function"><name>g__etWidgetClasses</name></member>
+    <member refid="style_8h_1aee0ff6bbf54da4dbff94487f8586833f" kind="function"><name>__setWidgetClasses</name></member>
   </compound>
   <compound refid="types_8h" kind="file"><name>types.h</name>
     <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452" kind="enum"><name>WidgetType</name></member>

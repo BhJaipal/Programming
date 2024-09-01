@@ -14,18 +14,22 @@ struct _labelList {
 } labelList;
 
 static void toggleNav() {
-	char **classes = getWidgetClasses(navbar);
+	char **classes = CSS.getClasses(navbar);
+	for (int i = 0; i < sizeof(classes) / sizeof(classes[0]); i++) {
+		g_print("%s  %d\n", classes[i], strcmp(classes[i], "vertical"));
+	}
+	g_print("\n");
 
 	if (!strcmp(classes[0], "vertical")) {
-		widgetRemoveClass(navMenu, "nav-menu-show");
-		widgetAddClass(navMenu, "nav-menu-hidden");
+		CSS.removeClass(navMenu, "nav-menu-show");
+		CSS.addClass(navMenu, "nav-menu-hidden");
 		classes[0] = "horizontal";
 	} else {
-		widgetRemoveClass(navMenu, "nav-menu-hidden");
-		widgetAddClass(navMenu, "nav-menu-show");
+		CSS.removeClass(navMenu, "nav-menu-hidden");
+		CSS.addClass(navMenu, "nav-menu-show");
 		classes[0] = "vertical";
 	}
-	setWidgetClasses(navbar, classes);
+	CSS.setClasses(navbar, classes);
 }
 
 void nothingHappened(alooWidget *data);
@@ -76,7 +80,7 @@ void nothingHappened(alooWidget *data) {
 	}
 }
 
-static void activate(AlooApplication *app) {
+static void activate() {
 	labelList.len = 0;
 	AlooBuilder *builder = Builder.create();
 	Builder.addFile(builder, "builder.ui", NULL);
@@ -94,12 +98,12 @@ static void activate(AlooApplication *app) {
 	Widget.setOrientation(navbar, GTK_ORIENTATION_VERTICAL);
 	Widget.setOrientation(appBody, GTK_ORIENTATION_VERTICAL);
 	Widget.setOrientation(boxBody, GTK_ORIENTATION_HORIZONTAL);
-	setSize(buttonWidget, 100, 50);
-	setSize(rmLabelWidget, 125, 50);
+	CSS.setSize(buttonWidget, 100, 50);
+	CSS.setSize(rmLabelWidget, 125, 50);
 
 	// gtk_widget_set_visible(GTK_WINDOW(window), TRUE);
 	// gtk_window_fullscreen(GTK_WINDOW(window));
-	Window.setSize(window, 1200, 600);
+	Window.setSize(window, 1904, 992);
 	Window.set_app_window(window, app);
 	Widget.addEventListener(buttonWidget, "clicked", print_hello, NULL);
 	Widget.addEventListener(rmLabelWidget, "clicked", removeLabel, NULL);
@@ -115,7 +119,7 @@ static void activate(AlooApplication *app) {
 	Widget.horizontalAlign(Widget.verticalAlign(grid, GTK_ALIGN_CENTER),
 						   GTK_ALIGN_CENTER);
 
-	importCssFromPath("style.css");
+	CSS.importPath("style.css");
 
 	Grid.column_spacing(grid, 20);
 	Grid.row_spacing(labelGrid, 5);
@@ -129,14 +133,14 @@ static void activate(AlooApplication *app) {
 	for (int i = 0; i < 3; i++) {
 		alooWidget *label = Button.newWithLabel(menus[i]);
 		Widget.setName(label, "menu-opt");
-		setSize(label, 100, 20);
+		CSS.setSize(label, 100, 20);
 		Grid.attach(navMenu, label, 0, i, 1, 1);
 	}
-	setSize(box, 1100, 600);
-	setSize(navMenu, 100, 600);
-	widgetAddClass(navMenu, "nav-menu-show");
-	setSize(Builder.alooFromBuilder(builder, "nav-show"), 1200, 70);
-	char **classes = getWidgetClasses(navMenu);
+	CSS.setSize(box, 1804, 992);
+	CSS.setSize(navMenu, 100, 992);
+	CSS.addClass(navMenu, "nav-menu-show");
+	CSS.setSize(Builder.alooFromBuilder(builder, "nav-show"), 1904, 70);
+	char **classes = CSS.getClasses(navMenu);
 	for (int i = 0; i < sizeof(classes) / sizeof(classes[0]); i++) {
 		printf("%s\n", classes[i]);
 	}

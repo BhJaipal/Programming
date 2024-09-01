@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct__alooCSS" kind="struct" language="C++" prot="public">
+    <compoundname>_alooCSS</compoundname>
+    <includes refid="style_8h" local="no">style.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__alooCSS_1a6ee605988bc52a3f4c50317c95c66a43" prot="public" static="no" mutable="no">
+        <type><ref refid="style_8h_1ae0f34a36ac9b2990d10a3b48dc718371" kindref="member">__importCssFromPath_Type</ref></type>
+        <definition>__importCssFromPath_Type _alooCSS::importPath</definition>
+        <argsstring></argsstring>
+        <name>importPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/style.h" line="77" column="26" bodyfile="include/style.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooCSS_1a8358c12411cdcd727f894445c47935ee" prot="public" static="no" mutable="no">
+        <type><ref refid="style_8h_1aae8bb2f31f06f33a889658817b1aca46" kindref="member">__importCssFromData_Type</ref></type>
+        <definition>__importCssFromData_Type _alooCSS::importData</definition>
+        <argsstring></argsstring>
+        <name>importData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/style.h" line="78" column="26" bodyfile="include/style.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooCSS_1a8b3cb3329326ba47b6d2793b8128e2b3" prot="public" static="no" mutable="no">
+        <type><ref refid="style_8h_1a3eee583412a2fa9b9825f1245e59ba45" kindref="member">__importCssFromFile_Type</ref></type>
+        <definition>__importCssFromFile_Type _alooCSS::importFile</definition>
+        <argsstring></argsstring>
+        <name>importFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/style.h" line="79" column="26" bodyfile="include/style.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooCSS_1a61a633fe25ff8bec5fa1107210a39247" prot="public" static="no" mutable="no">
+        <type><ref refid="style_8h_1a55176b74c240ff89d096c4fd69536493" kindref="member">__setWidth_Type</ref></type>
+        <definition>__setWidth_Type _alooCSS::setWidth</definition>
+        <argsstring></argsstring>
+        <name>setWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/style.h" line="80" column="17" bodyfile="include/style.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooCSS_1ac1aab2722d77ae170217197e8d85c7d6" prot="public" static="no" mutable="no">
+        <type><ref refid="style_8h_1ab3d6ef4fff6f333abbed9644ef7e80aa" kindref="member">__setHeight_Type</ref></type>
+        <definition>__setHeight_Type _alooCSS::setHeight</definition>
+        <argsstring></argsstring>
+        <name>setHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/style.h" line="81" column="18" bodyfile="include/style.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooCSS_1ac5a09a64d4cbdb3386512875fe0501a6" prot="public" static="no" mutable="no">
+        <type><ref refid="style_8h_1ad74daa30ede1124a5975116c700b60f0" kindref="member">__setSize_Type</ref></type>
+        <definition>__setSize_Type _alooCSS::setSize</definition>
+        <argsstring></argsstring>
+        <name>setSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/style.h" line="82" column="16" bodyfile="include/style.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooCSS_1adf287aa708114930c77b146133e58f87" prot="public" static="no" mutable="no">
+        <type><ref refid="style_8h_1a40fd06d9575ce9bf52bfdc0bfae4a88f" kindref="member">__widgetAddClass_Type</ref></type>
+        <definition>__widgetAddClass_Type _alooCSS::addClass</definition>
+        <argsstring></argsstring>
+        <name>addClass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/style.h" line="83" column="23" bodyfile="include/style.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooCSS_1a971def5117780de234b63544892882f4" prot="public" static="no" mutable="no">
+        <type><ref refid="style_8h_1a90674b098469b5346a96a8293ea3919b" kindref="member">__widgetRemoveClass_Type</ref></type>
+        <definition>__widgetRemoveClass_Type _alooCSS::removeClass</definition>
+        <argsstring></argsstring>
+        <name>removeClass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/style.h" line="84" column="26" bodyfile="include/style.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooCSS_1a6bf3be66b2e8bdda4f5b046d456d6e96" prot="public" static="no" mutable="no">
+        <type><ref refid="style_8h_1a29c846126936a01de97a4665202f5783" kindref="member">__getWidgetClasses_Type</ref></type>
+        <definition>__getWidgetClasses_Type _alooCSS::getClasses</definition>
+        <argsstring></argsstring>
+        <name>getClasses</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/style.h" line="85" column="25" bodyfile="include/style.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooCSS_1ab422451b3dacc2057561d8ac51209c7e" prot="public" static="no" mutable="no">
+        <type><ref refid="style_8h_1a8a998832f6237937f050ea99ad061530" kindref="member">__setWidgetClasses_Type</ref></type>
+        <definition>__setWidgetClasses_Type _alooCSS::setClasses</definition>
+        <argsstring></argsstring>
+        <name>setClasses</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/style.h" line="86" column="25" bodyfile="include/style.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>alooWidget</label>
+        <link refid="structalooWidget"/>
+      </node>
+      <node id="1">
+        <label>_alooCSS</label>
+        <link refid="struct__alooCSS"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>addClass</edgelabel>
+          <edgelabel>getClasses</edgelabel>
+          <edgelabel>removeClass</edgelabel>
+          <edgelabel>setClasses</edgelabel>
+          <edgelabel>setHeight</edgelabel>
+          <edgelabel>setSize</edgelabel>
+          <edgelabel>setWidth</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/style.h" line="76" column="1" bodyfile="include/style.h" bodystart="76" bodyend="87"/>
+    <listofallmembers>
+      <member refid="struct__alooCSS_1adf287aa708114930c77b146133e58f87" prot="public" virt="non-virtual"><scope>_alooCSS</scope><name>addClass</name></member>
+      <member refid="struct__alooCSS_1a6bf3be66b2e8bdda4f5b046d456d6e96" prot="public" virt="non-virtual"><scope>_alooCSS</scope><name>getClasses</name></member>
+      <member refid="struct__alooCSS_1a8358c12411cdcd727f894445c47935ee" prot="public" virt="non-virtual"><scope>_alooCSS</scope><name>importData</name></member>
+      <member refid="struct__alooCSS_1a8b3cb3329326ba47b6d2793b8128e2b3" prot="public" virt="non-virtual"><scope>_alooCSS</scope><name>importFile</name></member>
+      <member refid="struct__alooCSS_1a6ee605988bc52a3f4c50317c95c66a43" prot="public" virt="non-virtual"><scope>_alooCSS</scope><name>importPath</name></member>
+      <member refid="struct__alooCSS_1a971def5117780de234b63544892882f4" prot="public" virt="non-virtual"><scope>_alooCSS</scope><name>removeClass</name></member>
+      <member refid="struct__alooCSS_1ab422451b3dacc2057561d8ac51209c7e" prot="public" virt="non-virtual"><scope>_alooCSS</scope><name>setClasses</name></member>
+      <member refid="struct__alooCSS_1ac1aab2722d77ae170217197e8d85c7d6" prot="public" virt="non-virtual"><scope>_alooCSS</scope><name>setHeight</name></member>
+      <member refid="struct__alooCSS_1ac5a09a64d4cbdb3386512875fe0501a6" prot="public" virt="non-virtual"><scope>_alooCSS</scope><name>setSize</name></member>
+      <member refid="struct__alooCSS_1a61a633fe25ff8bec5fa1107210a39247" prot="public" virt="non-virtual"><scope>_alooCSS</scope><name>setWidth</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

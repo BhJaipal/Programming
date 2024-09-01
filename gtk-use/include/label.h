@@ -7,11 +7,11 @@
 #define ALOO_LABEL_H
 #include "types.h"
 
-/******************** Private ********************/
+/******************** Private Funcs ********************/
 
 alooWidget *__newLabel(const char *val);
 
-/******************** Types ********************/
+/******************** Private Types ********************/
 
 typedef alooWidget *(*_newLabelType)(const char *val);
 

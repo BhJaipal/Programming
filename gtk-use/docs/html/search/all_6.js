@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['icon_178',['icon',['../struct__alooButton.html#a1e2800c05e965873d176ab5b6e16f74c',1,'_alooButton']]],
-  ['importcssfromdata_179',['importCssFromData',['../style_8h.html#af5b4d6f7ea6b8b061193544aaf8f9be2',1,'style.h']]],
-  ['importcssfromfile_180',['importCssFromFile',['../style_8h.html#a2021fd798c801903539ed696efa2b8cf',1,'style.h']]],
-  ['importcssfrompath_181',['importCssFromPath',['../style_8h.html#a0bcc85b2cb03ec6bee88142e29c42e57',1,'style.h']]],
-  ['insertchildafter_182',['insertChildAfter',['../struct__alooBox.html#a162db740f9055818baa7917b8524e1d2',1,'_alooBox']]]
+  ['icon_201',['icon',['../struct__alooButton.html#a1e2800c05e965873d176ab5b6e16f74c',1,'_alooButton']]],
+  ['importdata_202',['importData',['../struct__alooCSS.html#a8358c12411cdcd727f894445c47935ee',1,'_alooCSS']]],
+  ['importfile_203',['importFile',['../struct__alooCSS.html#a8b3cb3329326ba47b6d2793b8128e2b3',1,'_alooCSS']]],
+  ['importpath_204',['importPath',['../struct__alooCSS.html#a6ee605988bc52a3f4c50317c95c66a43',1,'_alooCSS']]],
+  ['insertchildafter_205',['insertChildAfter',['../struct__alooBox.html#a162db740f9055818baa7917b8524e1d2',1,'_alooBox']]]
 ];

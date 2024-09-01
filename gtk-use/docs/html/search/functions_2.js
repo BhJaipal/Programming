@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getwidgetclasses_316',['getWidgetClasses',['../style_8h.html#a9e0a300474506487a3ff0b9449ec2018',1,'style.h']]]
+  ['g_5f_5fetwidgetclasses_348',['g__etWidgetClasses',['../style_8h.html#a8a5d2f2215bf8069abae3701fbdaba77',1,'style.h']]]
 ];
