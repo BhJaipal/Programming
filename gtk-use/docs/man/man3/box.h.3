@@ -70,6 +70,9 @@ include/box.h \- Aloo Box functions\&.
 .ti -1c
 .RI "typedef \fBalooWidget\fP *(* \fB__setBoxBaselinePosition_Type\fP) (\fBalooWidget\fP *box, GtkBaselinePosition position)"
 .br
+.ti -1c
+.RI "typedef GtkBox *(* \fB__toGtk_Type\fP) (\fBalooWidget\fP *widget)"
+.br
 .in -1c
 .SS "Functions"
 
@@ -138,6 +141,9 @@ include/box.h \- Aloo Box functions\&.
 .RI "\fBalooWidget\fP * \fB__setBoxBaselinePosition\fP (\fBalooWidget\fP *box, GtkBaselinePosition position)"
 .br
 .RI "Sets Box baseline position\&. "
+.ti -1c
+.RI "GtkBox * \fB__toGtk\fP (\fBalooWidget\fP *widget)"
+.br
 .in -1c
 .SS "Variables"
 
@@ -191,6 +197,8 @@ Jaipal001
 .SS "typedef \fBalooWidget\fP*(* __setBoxOrientation_Type) (\fBalooWidget\fP *box, GtkOrientation orientation)"
 
 .SS "typedef \fBalooWidget\fP*(* __setBoxSpacing_Type) (\fBalooWidget\fP *box, int spacing)"
+
+.SS "typedef GtkBox*(* __toGtk_Type) (\fBalooWidget\fP *widget)"
 
 .SH "Function Documentation"
 .PP 
@@ -274,6 +282,8 @@ Sets Box Orientation\&.
 
 .PP
 Set Box Spacing\&. 
+.SS "GtkBox* __toGtk (\fBalooWidget\fP * widget)"
+
 .SH "Variable Documentation"
 .PP 
 .SS "struct \fB_alooBox\fP Box\fC [extern]\fP"

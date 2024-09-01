@@ -38,6 +38,9 @@ include/button.h \- Aloo Button related functions\&.
 .ti -1c
 .RI "typedef \fBalooWidget\fP *(* \fB__setUseUnderline_Type\fP) (\fBalooWidget\fP *btn, gboolean yes)"
 .br
+.ti -1c
+.RI "typedef GtkButton *(* \fB__toButtonGtk_Type\fP) (\fBalooWidget\fP *wid)"
+.br
 .in -1c
 .SS "Functions"
 
@@ -59,6 +62,9 @@ include/button.h \- Aloo Button related functions\&.
 .br
 .ti -1c
 .RI "\fBalooWidget\fP * \fB__setUseUnderline\fP (\fBalooWidget\fP *btn, gboolean yes)"
+.br
+.ti -1c
+.RI "GtkButton * \fB__toButtonGtk\fP (\fBalooWidget\fP *wid)"
 .br
 .in -1c
 .SS "Variables"
@@ -94,6 +100,8 @@ Jaipal001
 
 .SS "typedef \fBalooWidget\fP*(* __setUseUnderline_Type) (\fBalooWidget\fP *btn, gboolean yes)"
 
+.SS "typedef GtkButton*(* __toButtonGtk_Type) (\fBalooWidget\fP *wid)"
+
 .SH "Function Documentation"
 .PP 
 .SS "\fBalooWidget\fP* __newButton ()"
@@ -107,6 +115,8 @@ Jaipal001
 .SS "\fBalooWidget\fP* __setLabel (\fBalooWidget\fP * btn, char const * name)"
 
 .SS "\fBalooWidget\fP* __setUseUnderline (\fBalooWidget\fP * btn, gboolean yes)"
+
+.SS "GtkButton* __toButtonGtk (\fBalooWidget\fP * wid)"
 
 .SH "Variable Documentation"
 .PP 

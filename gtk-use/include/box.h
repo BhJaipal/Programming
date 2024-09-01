@@ -82,6 +82,8 @@ GtkBaselinePosition __getBoxBaselinePosition(alooWidget *box);
 alooWidget *__setBoxBaselinePosition(alooWidget *box,
 									 GtkBaselinePosition position);
 
+GtkBox *__toGtk(alooWidget *widget);
+
 /******************** Private Types ********************/
 
 typedef alooWidget *(*__new_alooBox_Type)(GtkOrientation orientation,
@@ -108,6 +110,8 @@ typedef GtkBaselinePosition (*__getBoxBaselinePosition_Type)(alooWidget *box);
 typedef alooWidget *(*__setBoxBaselinePosition_Type)(
 	alooWidget *box, GtkBaselinePosition position);
 
+typedef GtkBox *(*__toGtk_Type)(alooWidget *widget);
+
 /******************** Public ********************/
 
 struct _alooBox {
@@ -127,6 +131,7 @@ struct _alooBox {
 	__setBoxHomogeneous_Type setHomogeneous;
 	__getBoxBaselinePosition_Type getBaselinePosition;
 	__setBoxBaselinePosition_Type setBaselinePosition;
+	__toGtk_Type toGtk;
 };
 
 extern struct _alooBox Box;

@@ -1,5 +1,20 @@
 var searchData=
 [
-  ['type_244',['type',['../structalooWidget.html#a6db0456b6604492033507fcaeda3fe46',1,'alooWidget']]],
-  ['types_2eh_245',['types.h',['../types_8h.html',1,'']]]
+  ['service_5fflags_5foptions_255',['SERVICE_FLAGS_OPTIONS',['../macros_8h.html#a6008f3d8d9740cf975902f6e7cbc2afc',1,'macros.h']]],
+  ['set_5fapp_5fwindow_256',['set_app_window',['../struct__alooWindow.html#a4dd10bb0a31c1d5d24962027429a7ce7',1,'_alooWindow']]],
+  ['setbaselineposition_257',['setBaselinePosition',['../struct__alooBox.html#a3b08340b22d12886052177879f078cfd',1,'_alooBox']]],
+  ['setchild_258',['setChild',['../struct__alooWindow.html#a76819237feac7bff766987104b51aeab',1,'_alooWindow']]],
+  ['setclasses_259',['setClasses',['../struct__alooCSS.html#ab422451b3dacc2057561d8ac51209c7e',1,'_alooCSS']]],
+  ['setheight_260',['setHeight',['../struct__alooCSS.html#ac1aab2722d77ae170217197e8d85c7d6',1,'_alooCSS']]],
+  ['sethomogeneous_261',['setHomogeneous',['../struct__alooBox.html#a8d94ab5ed824f17d5502054942637820',1,'_alooBox']]],
+  ['setname_262',['setName',['../struct__aloo__widget.html#afae9f81bcf3de82b1dfc7fc90cb2f83d',1,'_aloo_widget']]],
+  ['setorientation_263',['setOrientation',['../struct__aloo__widget.html#a667170ce6aabc213da3c861838dc62a3',1,'_aloo_widget::setOrientation()'],['../struct__alooBox.html#ac3851caa5ff1bed13ca8ad1e0c1e811e',1,'_alooBox::setOrientation()']]],
+  ['setsize_264',['setSize',['../struct__alooCSS.html#ac5a09a64d4cbdb3386512875fe0501a6',1,'_alooCSS::setSize()'],['../struct__alooWindow.html#af380e7305b03ac7d9bd88f424d771acb',1,'_alooWindow::setSize()']]],
+  ['setspacing_265',['setSpacing',['../struct__alooBox.html#ab7a99a8f5041f30006cefab2b85d9d33',1,'_alooBox']]],
+  ['settitle_266',['setTitle',['../struct__alooWindow.html#a958c501818bddcf9399bd3c2a731f3a5',1,'_alooWindow']]],
+  ['setwidgetname_5ftype_267',['setWidgetName_Type',['../widget_8h.html#a1430a1a0897570a0423713394faf07b9',1,'widget.h']]],
+  ['setwidth_268',['setWidth',['../struct__alooCSS.html#a61a633fe25ff8bec5fa1107210a39247',1,'_alooCSS']]],
+  ['show_269',['show',['../struct__alooWindow.html#a2c45374a9db8020ae326a897010e53a0',1,'_alooWindow']]],
+  ['status_270',['status',['../structAlooApplication.html#a1b52847b827b37c8eb858307f691f0a4',1,'AlooApplication']]],
+  ['style_2eh_271',['style.h',['../style_8h.html',1,'']]]
 ];

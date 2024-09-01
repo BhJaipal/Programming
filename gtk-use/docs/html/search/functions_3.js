@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['importcssfromdata_317',['importCssFromData',['../style_8h.html#af5b4d6f7ea6b8b061193544aaf8f9be2',1,'style.h']]],
-  ['importcssfromfile_318',['importCssFromFile',['../style_8h.html#a2021fd798c801903539ed696efa2b8cf',1,'style.h']]],
-  ['importcssfrompath_319',['importCssFromPath',['../style_8h.html#a0bcc85b2cb03ec6bee88142e29c42e57',1,'style.h']]]
+  ['is_5fwidget_5fof_5ftype_392',['is_widget_of_type',['../widget_8h.html#a3d1153ced7b9d4a37a9233094ae3faba',1,'widget.h']]]
 ];

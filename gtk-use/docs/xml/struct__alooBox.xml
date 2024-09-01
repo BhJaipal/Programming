@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="114" column="20" bodyfile="include/box.h" bodystart="114" bodyend="-1"/>
+        <location file="include/box.h" line="118" column="20" bodyfile="include/box.h" bodystart="118" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooBox_1ac3851caa5ff1bed13ca8ad1e0c1e811e" prot="public" static="no" mutable="no">
         <type><ref refid="box_8h_1a375e194da5961d07e659b31d596d3254" kindref="member">__setBoxOrientation_Type</ref></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="115" column="26" bodyfile="include/box.h" bodystart="115" bodyend="-1"/>
+        <location file="include/box.h" line="119" column="26" bodyfile="include/box.h" bodystart="119" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooBox_1a4593845b8c4b1d13aee6b7135de8a28a" prot="public" static="no" mutable="no">
         <type><ref refid="box_8h_1a9eacf50fda9d1689ffe2c6d7e5d9ee88" kindref="member">__getBoxOrientation_Type</ref></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="116" column="26" bodyfile="include/box.h" bodystart="116" bodyend="-1"/>
+        <location file="include/box.h" line="120" column="26" bodyfile="include/box.h" bodystart="120" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooBox_1a0d03f00f033a1b437bc7317328910ee1" prot="public" static="no" mutable="no">
         <type><ref refid="box_8h_1a1ef179d86c3b9ba81d2564e9a14e23fc" kindref="member">__boxAppendGtk_Type</ref></type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="117" column="21" bodyfile="include/box.h" bodystart="117" bodyend="-1"/>
+        <location file="include/box.h" line="121" column="21" bodyfile="include/box.h" bodystart="121" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooBox_1a4143ca76ee88077134ea8dd31cf82205" prot="public" static="no" mutable="no">
         <type><ref refid="box_8h_1a62c964b5e1942f3ceaee4675a77f24fc" kindref="member">__boxPrependGtk_Type</ref></type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="118" column="22" bodyfile="include/box.h" bodystart="118" bodyend="-1"/>
+        <location file="include/box.h" line="122" column="22" bodyfile="include/box.h" bodystart="122" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooBox_1ad3913cdb51d5ff5c25ee09ad61becc57" prot="public" static="no" mutable="no">
         <type><ref refid="box_8h_1a25216f6f5b7151db8ece75666051e524" kindref="member">__boxRemoveGtk_Type</ref></type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="119" column="21" bodyfile="include/box.h" bodystart="119" bodyend="-1"/>
+        <location file="include/box.h" line="123" column="21" bodyfile="include/box.h" bodystart="123" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooBox_1aa5b0cececd1a41b048d3b29f915c88b5" prot="public" static="no" mutable="no">
         <type><ref refid="box_8h_1a6cdd971a2258525cb630d1cb1f18c904" kindref="member">__boxAppend_Type</ref></type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="120" column="18" bodyfile="include/box.h" bodystart="120" bodyend="-1"/>
+        <location file="include/box.h" line="124" column="18" bodyfile="include/box.h" bodystart="124" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooBox_1a0ead5685ee758f5a350b94aecaa377f0" prot="public" static="no" mutable="no">
         <type><ref refid="box_8h_1a13e17b3f8a66d906424560c91f8e1b2b" kindref="member">__boxPrepend_Type</ref></type>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="121" column="19" bodyfile="include/box.h" bodystart="121" bodyend="-1"/>
+        <location file="include/box.h" line="125" column="19" bodyfile="include/box.h" bodystart="125" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooBox_1a5e123a4420ead70a617b2a8dc4334c81" prot="public" static="no" mutable="no">
         <type><ref refid="box_8h_1a84c2207a9e9e061cf3cf2e20f33141ef" kindref="member">__boxRemove_Type</ref></type>
@@ -119,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="122" column="18" bodyfile="include/box.h" bodystart="122" bodyend="-1"/>
+        <location file="include/box.h" line="126" column="18" bodyfile="include/box.h" bodystart="126" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooBox_1a162db740f9055818baa7917b8524e1d2" prot="public" static="no" mutable="no">
         <type><ref refid="box_8h_1a486f6f5ad9d191317c37a2404fb88b0f" kindref="member">__boxInsertChildAfter_Type</ref></type>
@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="123" column="28" bodyfile="include/box.h" bodystart="123" bodyend="-1"/>
+        <location file="include/box.h" line="127" column="28" bodyfile="include/box.h" bodystart="127" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooBox_1ab7a99a8f5041f30006cefab2b85d9d33" prot="public" static="no" mutable="no">
         <type><ref refid="box_8h_1afe2e6d8f44fd904811995c26c6508e23" kindref="member">__setBoxSpacing_Type</ref></type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="124" column="22" bodyfile="include/box.h" bodystart="124" bodyend="-1"/>
+        <location file="include/box.h" line="128" column="22" bodyfile="include/box.h" bodystart="128" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooBox_1aa0f256878ef3e65e7a8927488fc44570" prot="public" static="no" mutable="no">
         <type><ref refid="box_8h_1a8212b8c9244f75af63296d9995a4ba12" kindref="member">__getBoxSpacing_Type</ref></type>
@@ -158,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="125" column="22" bodyfile="include/box.h" bodystart="125" bodyend="-1"/>
+        <location file="include/box.h" line="129" column="22" bodyfile="include/box.h" bodystart="129" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooBox_1aa6e28da46e7b9f3e7cdb9dd709c65363" prot="public" static="no" mutable="no">
         <type><ref refid="box_8h_1a02305e8045b4df28eb49b0f46076110e" kindref="member">__getBoxHomogeneous_Type</ref></type>
@@ -171,7 +171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="126" column="26" bodyfile="include/box.h" bodystart="126" bodyend="-1"/>
+        <location file="include/box.h" line="130" column="26" bodyfile="include/box.h" bodystart="130" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooBox_1a8d94ab5ed824f17d5502054942637820" prot="public" static="no" mutable="no">
         <type><ref refid="box_8h_1ac8eedc9450c37cc7277deccb6f5a6428" kindref="member">__setBoxHomogeneous_Type</ref></type>
@@ -184,7 +184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="127" column="26" bodyfile="include/box.h" bodystart="127" bodyend="-1"/>
+        <location file="include/box.h" line="131" column="26" bodyfile="include/box.h" bodystart="131" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooBox_1a05c97deb37fc8146e6ba01e70a406eb4" prot="public" static="no" mutable="no">
         <type><ref refid="box_8h_1a0120cf6c35b9e14907e558c6ba0d9c3d" kindref="member">__getBoxBaselinePosition_Type</ref></type>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="128" column="31" bodyfile="include/box.h" bodystart="128" bodyend="-1"/>
+        <location file="include/box.h" line="132" column="31" bodyfile="include/box.h" bodystart="132" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooBox_1a3b08340b22d12886052177879f078cfd" prot="public" static="no" mutable="no">
         <type><ref refid="box_8h_1a2808ef9c82512f47c93a3c5573bdbd78" kindref="member">__setBoxBaselinePosition_Type</ref></type>
@@ -210,7 +210,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="129" column="31" bodyfile="include/box.h" bodystart="129" bodyend="-1"/>
+        <location file="include/box.h" line="133" column="31" bodyfile="include/box.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__alooBox_1a472ae3b3c7e5b554f292363c8cab6bd2" prot="public" static="no" mutable="no">
+        <type><ref refid="box_8h_1a2c6b3fd666311c91119825574992b8d3" kindref="member">__toGtk_Type</ref></type>
+        <definition>__toGtk_Type _alooBox::toGtk</definition>
+        <argsstring></argsstring>
+        <name>toGtk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/box.h" line="134" column="14" bodyfile="include/box.h" bodystart="134" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -240,7 +253,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/box.h" line="113" column="1" bodyfile="include/box.h" bodystart="113" bodyend="130"/>
+    <location file="include/box.h" line="117" column="1" bodyfile="include/box.h" bodystart="117" bodyend="135"/>
     <listofallmembers>
       <member refid="struct__alooBox_1aa5b0cececd1a41b048d3b29f915c88b5" prot="public" virt="non-virtual"><scope>_alooBox</scope><name>append</name></member>
       <member refid="struct__alooBox_1a0d03f00f033a1b437bc7317328910ee1" prot="public" virt="non-virtual"><scope>_alooBox</scope><name>appendGtk</name></member>
@@ -258,6 +271,7 @@
       <member refid="struct__alooBox_1a8d94ab5ed824f17d5502054942637820" prot="public" virt="non-virtual"><scope>_alooBox</scope><name>setHomogeneous</name></member>
       <member refid="struct__alooBox_1ac3851caa5ff1bed13ca8ad1e0c1e811e" prot="public" virt="non-virtual"><scope>_alooBox</scope><name>setOrientation</name></member>
       <member refid="struct__alooBox_1ab7a99a8f5041f30006cefab2b85d9d33" prot="public" virt="non-virtual"><scope>_alooBox</scope><name>setSpacing</name></member>
+      <member refid="struct__alooBox_1a472ae3b3c7e5b554f292363c8cab6bd2" prot="public" virt="non-virtual"><scope>_alooBox</scope><name>toGtk</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

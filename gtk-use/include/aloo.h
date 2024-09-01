@@ -12,5 +12,7 @@
 #include "label.h"
 #include "macros.h"
 #include "style.h"
+#include "utils/error.h"
+#include "utils/logger.h"
 #include "widget.h"
 #include "window.h"

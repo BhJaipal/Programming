@@ -46,6 +46,18 @@ typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\h
 typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{widget_8h_a20b21653e7905d3077558c8780b8cf2b}{\+\_\+\+\_\+aloo\+Horizontal\+Align\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, Gtk\+Align alignment)
 \item 
 typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$($\ast$ \mbox{\hyperlink{widget_8h_ad74f1c9fcd1452513f60a4dd08afaf45}{\+\_\+\+\_\+aloo\+Add\+Event\+Listener\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget\+\_\+instance, char $\ast$event\+\_\+name, GCallback Callback\+Fn, gpointer data)
+\item 
+typedef int($\ast$ \mbox{\hyperlink{widget_8h_aa741fecaa968e4cf026634edf42b8d64}{\+\_\+\+\_\+is\+Box\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)
+\item 
+typedef int($\ast$ \mbox{\hyperlink{widget_8h_a76c530809998f27096d882821da7b172}{\+\_\+\+\_\+is\+Button\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)
+\item 
+typedef int($\ast$ \mbox{\hyperlink{widget_8h_a620f73685d724a96e50544f3f5fa5a10}{\+\_\+\+\_\+is\+Grid\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)
+\item 
+typedef int($\ast$ \mbox{\hyperlink{widget_8h_a1fdafd442513452abcdbeb236c44fc7e}{\+\_\+\+\_\+is\+Label\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)
+\item 
+typedef int($\ast$ \mbox{\hyperlink{widget_8h_a7e72936a1a3676f305efa1fe0a9d223e}{\+\_\+\+\_\+is\+Window\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)
+\item 
+typedef Gtk\+Widget $\ast$($\ast$ \mbox{\hyperlink{widget_8h_af4943728c6617cd0a48e0209a19db95e}{\+\_\+\+\_\+\+Widto\+Gtk\+\_\+\+Type}}) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -67,7 +79,21 @@ Gtk\+Widget $\ast$ \mbox{\hyperlink{widget_8h_abb126fbe246404cc032f3bc2cabb6c3a}
 \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{widget_8h_a5949823315aa75ff5c04f791f75d301c}{\+\_\+\+\_\+aloo\+Vertical\+Align}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, Gtk\+Align alignment)
 \begin{DoxyCompactList}\small\item\em Sets vertical alignment of \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$ \mbox{\hyperlink{widget_8h_a0cf5af29b9d23e3e483d0870f0a52ff2}{\+\_\+\+\_\+aloo\+Add\+Event\+Listener}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget\+\_\+instance, char $\ast$event\+\_\+name, GCallback Callback\+Fn, gpointer data)
-\begin{DoxyCompactList}\small\item\em Adds event listener to a widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Adds event listener to a widget. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{widget_8h_aefd2c675e62d675fea71d7fe3377e329}{\+\_\+\+\_\+is\+Box}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)
+\item 
+int \mbox{\hyperlink{widget_8h_a2370993e28ad0a0571dd215450f91447}{\+\_\+\+\_\+is\+Button}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)
+\item 
+int \mbox{\hyperlink{widget_8h_a1b60c2311265dfd1f35f84e14b66d570}{\+\_\+\+\_\+is\+Grid}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)
+\item 
+int \mbox{\hyperlink{widget_8h_ac0e01093b107d56fbaf04118d11b0284}{\+\_\+\+\_\+is\+Label}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)
+\item 
+int \mbox{\hyperlink{widget_8h_a495bcb3c1f5193850e9cd6ebdcfc53a2}{\+\_\+\+\_\+is\+Window}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)
+\item 
+Gtk\+Widget $\ast$ \mbox{\hyperlink{widget_8h_a3d34f13e18fcebf661e0d7509dafd815}{\+\_\+\+\_\+\+Widto\+Gtk}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)
+\item 
+int \mbox{\hyperlink{widget_8h_a3d1153ced7b9d4a37a9233094ae3faba}{is\+\_\+widget\+\_\+of\+\_\+type}} (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, enum \mbox{\hyperlink{types_8h_a7b98518122eb2e94554d2b99d29d1452}{Widget\+Type}} type)
+\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -102,11 +128,47 @@ Jaipal001
 \doxysubsubsection{\texorpdfstring{\_\_alooVerticalAlign\_Type}{\_\_alooVerticalAlign\_Type}}
 {\footnotesize\ttfamily typedef \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}$\ast$($\ast$ \+\_\+\+\_\+aloo\+Vertical\+Align\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$widget, Gtk\+Align alignment)}
 
+\mbox{\Hypertarget{widget_8h_aa741fecaa968e4cf026634edf42b8d64}\label{widget_8h_aa741fecaa968e4cf026634edf42b8d64}} 
+\index{widget.h@{widget.h}!\_\_isBox\_Type@{\_\_isBox\_Type}}
+\index{\_\_isBox\_Type@{\_\_isBox\_Type}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_isBox\_Type}{\_\_isBox\_Type}}
+{\footnotesize\ttfamily typedef int($\ast$ \+\_\+\+\_\+is\+Box\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)}
+
+\mbox{\Hypertarget{widget_8h_a76c530809998f27096d882821da7b172}\label{widget_8h_a76c530809998f27096d882821da7b172}} 
+\index{widget.h@{widget.h}!\_\_isButton\_Type@{\_\_isButton\_Type}}
+\index{\_\_isButton\_Type@{\_\_isButton\_Type}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_isButton\_Type}{\_\_isButton\_Type}}
+{\footnotesize\ttfamily typedef int($\ast$ \+\_\+\+\_\+is\+Button\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)}
+
+\mbox{\Hypertarget{widget_8h_a620f73685d724a96e50544f3f5fa5a10}\label{widget_8h_a620f73685d724a96e50544f3f5fa5a10}} 
+\index{widget.h@{widget.h}!\_\_isGrid\_Type@{\_\_isGrid\_Type}}
+\index{\_\_isGrid\_Type@{\_\_isGrid\_Type}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_isGrid\_Type}{\_\_isGrid\_Type}}
+{\footnotesize\ttfamily typedef int($\ast$ \+\_\+\+\_\+is\+Grid\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)}
+
+\mbox{\Hypertarget{widget_8h_a1fdafd442513452abcdbeb236c44fc7e}\label{widget_8h_a1fdafd442513452abcdbeb236c44fc7e}} 
+\index{widget.h@{widget.h}!\_\_isLabel\_Type@{\_\_isLabel\_Type}}
+\index{\_\_isLabel\_Type@{\_\_isLabel\_Type}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_isLabel\_Type}{\_\_isLabel\_Type}}
+{\footnotesize\ttfamily typedef int($\ast$ \+\_\+\+\_\+is\+Label\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)}
+
+\mbox{\Hypertarget{widget_8h_a7e72936a1a3676f305efa1fe0a9d223e}\label{widget_8h_a7e72936a1a3676f305efa1fe0a9d223e}} 
+\index{widget.h@{widget.h}!\_\_isWindow\_Type@{\_\_isWindow\_Type}}
+\index{\_\_isWindow\_Type@{\_\_isWindow\_Type}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_isWindow\_Type}{\_\_isWindow\_Type}}
+{\footnotesize\ttfamily typedef int($\ast$ \+\_\+\+\_\+is\+Window\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)}
+
 \mbox{\Hypertarget{widget_8h_a98348bd3f871c91b864e4b21dc5006f0}\label{widget_8h_a98348bd3f871c91b864e4b21dc5006f0}} 
 \index{widget.h@{widget.h}!\_\_OBJECT\_TO\_GTK\_WIDGET\_Type@{\_\_OBJECT\_TO\_GTK\_WIDGET\_Type}}
 \index{\_\_OBJECT\_TO\_GTK\_WIDGET\_Type@{\_\_OBJECT\_TO\_GTK\_WIDGET\_Type}!widget.h@{widget.h}}
 \doxysubsubsection{\texorpdfstring{\_\_OBJECT\_TO\_GTK\_WIDGET\_Type}{\_\_OBJECT\_TO\_GTK\_WIDGET\_Type}}
 {\footnotesize\ttfamily typedef Gtk\+Widget$\ast$($\ast$ \+\_\+\+\_\+\+OBJECT\+\_\+\+TO\+\_\+\+GTK\+\_\+\+WIDGET\+\_\+\+Type) (\mbox{\hyperlink{structAlooBuilder}{Aloo\+Builder}} $\ast$builder, const char $\ast$name)}
+
+\mbox{\Hypertarget{widget_8h_af4943728c6617cd0a48e0209a19db95e}\label{widget_8h_af4943728c6617cd0a48e0209a19db95e}} 
+\index{widget.h@{widget.h}!\_\_WidtoGtk\_Type@{\_\_WidtoGtk\_Type}}
+\index{\_\_WidtoGtk\_Type@{\_\_WidtoGtk\_Type}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_WidtoGtk\_Type}{\_\_WidtoGtk\_Type}}
+{\footnotesize\ttfamily typedef Gtk\+Widget$\ast$($\ast$ \+\_\+\+\_\+\+Widto\+Gtk\+\_\+\+Type) (\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$wid)}
 
 \mbox{\Hypertarget{widget_8h_a05bed2b8e3cd6198c19410b686470a48}\label{widget_8h_a05bed2b8e3cd6198c19410b686470a48}} 
 \index{widget.h@{widget.h}!alooSetOrientation\_Type@{alooSetOrientation\_Type}}
@@ -202,6 +264,36 @@ Sets vertical alignment of \mbox{\hyperlink{structalooWidget}{aloo\+Widget}}.
 
 Creates \mbox{\hyperlink{structalooWidget}{aloo\+Widget}} from Gtk\+Widget. 
 
+\mbox{\Hypertarget{widget_8h_aefd2c675e62d675fea71d7fe3377e329}\label{widget_8h_aefd2c675e62d675fea71d7fe3377e329}} 
+\index{widget.h@{widget.h}!\_\_isBox@{\_\_isBox}}
+\index{\_\_isBox@{\_\_isBox}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_isBox()}{\_\_isBox()}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+is\+Box (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{wid }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{widget_8h_a2370993e28ad0a0571dd215450f91447}\label{widget_8h_a2370993e28ad0a0571dd215450f91447}} 
+\index{widget.h@{widget.h}!\_\_isButton@{\_\_isButton}}
+\index{\_\_isButton@{\_\_isButton}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_isButton()}{\_\_isButton()}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+is\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{wid }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{widget_8h_a1b60c2311265dfd1f35f84e14b66d570}\label{widget_8h_a1b60c2311265dfd1f35f84e14b66d570}} 
+\index{widget.h@{widget.h}!\_\_isGrid@{\_\_isGrid}}
+\index{\_\_isGrid@{\_\_isGrid}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_isGrid()}{\_\_isGrid()}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+is\+Grid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{wid }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{widget_8h_ac0e01093b107d56fbaf04118d11b0284}\label{widget_8h_ac0e01093b107d56fbaf04118d11b0284}} 
+\index{widget.h@{widget.h}!\_\_isLabel@{\_\_isLabel}}
+\index{\_\_isLabel@{\_\_isLabel}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_isLabel()}{\_\_isLabel()}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+is\+Label (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{wid }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{widget_8h_a495bcb3c1f5193850e9cd6ebdcfc53a2}\label{widget_8h_a495bcb3c1f5193850e9cd6ebdcfc53a2}} 
+\index{widget.h@{widget.h}!\_\_isWindow@{\_\_isWindow}}
+\index{\_\_isWindow@{\_\_isWindow}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_isWindow()}{\_\_isWindow()}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+is\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{wid }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{widget_8h_ace7e17033235b5a9fec8ceee1068fc4b}\label{widget_8h_ace7e17033235b5a9fec8ceee1068fc4b}} 
 \index{widget.h@{widget.h}!\_\_NewWidget@{\_\_NewWidget}}
 \index{\_\_NewWidget@{\_\_NewWidget}!widget.h@{widget.h}}
@@ -262,6 +354,18 @@ Set the Name of widget.
 \begin{DoxyReturn}{Returns}
 returns the widget 
 \end{DoxyReturn}
+\mbox{\Hypertarget{widget_8h_a3d34f13e18fcebf661e0d7509dafd815}\label{widget_8h_a3d34f13e18fcebf661e0d7509dafd815}} 
+\index{widget.h@{widget.h}!\_\_WidtoGtk@{\_\_WidtoGtk}}
+\index{\_\_WidtoGtk@{\_\_WidtoGtk}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{\_\_WidtoGtk()}{\_\_WidtoGtk()}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ \+\_\+\+\_\+\+Widto\+Gtk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{wid }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{widget_8h_a3d1153ced7b9d4a37a9233094ae3faba}\label{widget_8h_a3d1153ced7b9d4a37a9233094ae3faba}} 
+\index{widget.h@{widget.h}!is\_widget\_of\_type@{is\_widget\_of\_type}}
+\index{is\_widget\_of\_type@{is\_widget\_of\_type}!widget.h@{widget.h}}
+\doxysubsubsection{\texorpdfstring{is\_widget\_of\_type()}{is\_widget\_of\_type()}}
+{\footnotesize\ttfamily int is\+\_\+widget\+\_\+of\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structalooWidget}{aloo\+Widget}} $\ast$}]{widget,  }\item[{enum \mbox{\hyperlink{types_8h_a7b98518122eb2e94554d2b99d29d1452}{Widget\+Type}}}]{type }\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Variable Documentation}

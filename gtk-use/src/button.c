@@ -1,5 +1,5 @@
 #include "button.h"
-#include "macros.h"
+#include "utils/error.h"
 #include "widget.h"
 
 alooWidget *__newButton() {
@@ -8,26 +8,33 @@ alooWidget *__newButton() {
 }
 alooWidget *__newButtonWithLabel(const char *label) {
 	alooWidget *btn = Widget.new(ALOO_BUTTON, gtk_button_new());
-	gtk_button_set_label(ALOO_BTN_TO_GTK(btn), label);
+	gtk_button_set_label(Button.toGtk(btn), label);
 	return btn;
 }
 alooWidget *__setLabel(alooWidget *btn, char const *name) {
-	gtk_button_set_label(ALOO_BTN_TO_GTK(btn), name);
+	gtk_button_set_label(Button.toGtk(btn), name);
 	return btn;
 }
 alooWidget *__setChild(alooWidget *btn, alooWidget *child) {
-	gtk_button_set_child(ALOO_BTN_TO_GTK(btn), ALOO_WIDGET_TO_GTK(child));
+	gtk_button_set_child(Button.toGtk(btn), Widget.to_gtk(child));
 	return btn;
 }
 alooWidget *__setIcon(alooWidget *btn, const char *icon) {
-	gtk_button_set_icon_name(ALOO_BTN_TO_GTK(btn), icon);
+	gtk_button_set_icon_name(Button.toGtk(btn), icon);
 	return btn;
 }
 alooWidget *__setUseUnderline(alooWidget *btn, gboolean yes) {
-	gtk_button_set_use_underline(ALOO_BTN_TO_GTK(btn), yes);
+	gtk_button_set_use_underline(Button.toGtk(btn), yes);
 	return btn;
 }
 
-struct _alooButton Button = {__newButton, __newButtonWithLabel,
-							 __setLabel,  __setChild,
-							 __setIcon,	  __setUseUnderline};
+GtkButton *__toButtonGtk(alooWidget *wid) {
+	if (Widget.check.isButton(wid)) return GTK_BUTTON(wid->child);
+	throw_error("Invalid button");
+	return GTK_BUTTON(Button.new()->child);
+}
+
+struct _alooButton Button = {
+	__newButton, __newButtonWithLabel, __setLabel,	  __setChild,
+	__setIcon,	 __setUseUnderline,	   __toButtonGtk,
+};

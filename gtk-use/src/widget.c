@@ -1,5 +1,8 @@
 #include "widget.h"
 #include "macros.h"
+#include <gtk/gtk.h>
+
+GtkWidget *__WidtoGtk(alooWidget *wid) { return wid->child; }
 
 alooWidget *__NewWidget(WidgetType type, GtkWidget *child) {
 	alooWidget *widget = malloc(sizeof(alooWidget));
@@ -66,7 +69,7 @@ alooWidget *__alooSetOrientation(alooWidget *widget, GtkOrientation orien) {
 }
 
 alooWidget *__setWidgetName(alooWidget *widget, const char *name) {
-	gtk_widget_set_name(ALOO_WIDGET_TO_GTK(widget), name);
+	gtk_widget_set_name(Widget.to_gtk(widget), name);
 	return widget;
 }
 
@@ -78,12 +81,47 @@ alooWidget *__alooAddEventListener(alooWidget *widget_instance,
 	return widget_instance;
 }
 
-struct _aloo_widget Widget = {.new = __NewWidget,
-							  .gtk_to_aloo = __GTK_TO_ALOO,
-							  .obj_to_aloo = __OBJECT_TO_ALOO,
-							  .setName = __setWidgetName,
-							  .setOrientation = __alooSetOrientation,
-							  .obj_to_gtk = __OBJECT_TO_GTK_WIDGET,
-							  .verticalAlign = __alooVerticalAlign,
-							  .horizontalAlign = __alooHorizontalAlign,
-							  .addEventListener = __alooAddEventListener};
+int is_widget_of_type(alooWidget *widget, enum WidgetType type) {
+
+	GType checker;
+	if (type == ALOO_BOX) {
+		checker = GTK_TYPE_BOX;
+	} else if (type == ALOO_BUTTON) {
+		checker = GTK_TYPE_BUTTON;
+	} else if (type == ALOO_GRID) {
+		checker = GTK_TYPE_GRID;
+	} else if (type == ALOO_LABEL) {
+		checker = GTK_TYPE_LABEL;
+	} else {
+		checker = GTK_TYPE_WINDOW;
+	}
+	return ((widget->type == type || widget->type == ALOO_NEW_WIDGET) &&
+			G_TYPE_CHECK_INSTANCE_TYPE((widget->child), checker));
+}
+
+int __isBox(alooWidget *wid) { return is_widget_of_type(wid, ALOO_BOX); }
+int __isButton(alooWidget *wid) { return is_widget_of_type(wid, ALOO_BUTTON); }
+int __isGrid(alooWidget *wid) { return is_widget_of_type(wid, ALOO_GRID); }
+int __isLabel(alooWidget *wid) { return is_widget_of_type(wid, ALOO_LABEL); }
+int __isWindow(alooWidget *wid) { return is_widget_of_type(wid, ALOO_WINDOW); }
+
+struct _aloo_widget Widget = {
+	.new = __NewWidget,
+	.gtk_to_aloo = __GTK_TO_ALOO,
+	.obj_to_aloo = __OBJECT_TO_ALOO,
+	.setName = __setWidgetName,
+	.setOrientation = __alooSetOrientation,
+	.obj_to_gtk = __OBJECT_TO_GTK_WIDGET,
+	.verticalAlign = __alooVerticalAlign,
+	.horizontalAlign = __alooHorizontalAlign,
+	.addEventListener = __alooAddEventListener,
+	.check =
+		{
+			.isBox = __isBox,
+			.isButton = __isButton,
+			.isGrid = __isGrid,
+			.isLabel = __isLabel,
+			.isWindow = __isWindow,
+		},
+	.to_gtk = __WidtoGtk,
+};

@@ -7,9 +7,6 @@
 #define ALOO_MACROS_H
 #include "types.h"
 
-#define ALOO_BTN_TO_GTK(x) GTK_BUTTON(x->child)
-#define ALOO_WIDGET_TO_GTK(x) x->child
-
 /**
  * @brief Returns GTK_GRID of alooWidget
  * @param x alooWidget with ALOO_GRID type
@@ -34,7 +31,5 @@ gboolean ALOO_IS_BOX(alooWidget *x);
  */
 #define SERVICE_FLAGS_OPTIONS(argc, argv)                                      \
 	{ APP_FLAGS_IS_SERVICE, argc, argv }
-
-#define ALOO_IS_WINDOW(X) GTK_IS_WINDOW(X->child)
 
 #endif // ALOO_MACROS_H

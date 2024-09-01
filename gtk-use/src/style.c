@@ -1,5 +1,6 @@
 #include "style.h"
 #include "macros.h"
+#include "widget.h"
 
 void __importCssFromPath(const char *path) {
 	GtkCssProvider *cssProvider = gtk_css_provider_new();
@@ -37,20 +38,19 @@ alooWidget *__setSize(alooWidget *wid, int width, int height) {
 }
 
 alooWidget *__widgetAddClass(alooWidget *widget, char *class) {
-	gtk_widget_add_css_class(ALOO_WIDGET_TO_GTK(widget), class);
+	gtk_widget_add_css_class(Widget.to_gtk(widget), class);
 	return widget;
 }
 
 alooWidget *__widgetRemoveClass(alooWidget *widget, char *class) {
-	gtk_widget_remove_css_class(ALOO_WIDGET_TO_GTK(widget), class);
+	gtk_widget_remove_css_class(Widget.to_gtk(widget), class);
 	return widget;
 }
 char **__getWidgetClasses(alooWidget *widget) {
-	return gtk_widget_get_css_classes(ALOO_WIDGET_TO_GTK(widget));
+	return gtk_widget_get_css_classes(Widget.to_gtk(widget));
 }
 alooWidget *__setWidgetClasses(alooWidget *widget, char **classes) {
-	gtk_widget_set_css_classes(ALOO_WIDGET_TO_GTK(widget),
-							   (const char **)classes);
+	gtk_widget_set_css_classes(Widget.to_gtk(widget), (const char **)classes);
 }
 
 struct _alooCSS CSS = {.importData = __importCssFromData,

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['verticalalign_248',['verticalAlign',['../struct__aloo__widget.html#adb6a4410b3917570c96ddb62fcc71997',1,'_aloo_widget']]]
+  ['unref_277',['unref',['../struct__alooApp.html#ad06aa81f5d44a39efeedf4651cd327ef',1,'_alooApp']]],
+  ['useunderline_278',['useUnderline',['../struct__alooButton.html#a83dec1a0bd4b85ae790c715c4e03d1a1',1,'_alooButton']]]
 ];

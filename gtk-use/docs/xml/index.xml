@@ -13,6 +13,13 @@
     <member refid="struct__aloo__widget_1a7a382505c7088c8a451a08ee066a10a9" kind="variable"><name>horizontalAlign</name></member>
     <member refid="struct__aloo__widget_1adb6a4410b3917570c96ddb62fcc71997" kind="variable"><name>verticalAlign</name></member>
     <member refid="struct__aloo__widget_1aca8d808db94a88af459a03c58d908b0f" kind="variable"><name>addEventListener</name></member>
+    <member refid="struct__aloo__widget_1a5d9e6ca395da94932c519f4843bea62e" kind="variable"><name>isBox</name></member>
+    <member refid="struct__aloo__widget_1ac4307b6e5a35eb0d95dd623cb5909fe6" kind="variable"><name>isButton</name></member>
+    <member refid="struct__aloo__widget_1afba0d352e0490149071ede4d1103dbb5" kind="variable"><name>isGrid</name></member>
+    <member refid="struct__aloo__widget_1a6955ffc5d4ba0947b473e621214bbd12" kind="variable"><name>isLabel</name></member>
+    <member refid="struct__aloo__widget_1ae3c0e711d51dad834c5114ada4abc90e" kind="variable"><name>isWindow</name></member>
+    <member refid="struct__aloo__widget_1adb23175b6b6b65674c3e45fc14d2ab8c" kind="variable"><name>check</name></member>
+    <member refid="struct__aloo__widget_1a52de8de53b5f6062bc765c67972bbf92" kind="variable"><name>to_gtk</name></member>
   </compound>
   <compound refid="struct__alooApp" kind="struct"><name>_alooApp</name>
     <member refid="struct__alooApp_1a56deab4d12053731d9996b32c90d8136" kind="variable"><name>create</name></member>
@@ -38,6 +45,7 @@
     <member refid="struct__alooBox_1a8d94ab5ed824f17d5502054942637820" kind="variable"><name>setHomogeneous</name></member>
     <member refid="struct__alooBox_1a05c97deb37fc8146e6ba01e70a406eb4" kind="variable"><name>getBaselinePosition</name></member>
     <member refid="struct__alooBox_1a3b08340b22d12886052177879f078cfd" kind="variable"><name>setBaselinePosition</name></member>
+    <member refid="struct__alooBox_1a472ae3b3c7e5b554f292363c8cab6bd2" kind="variable"><name>toGtk</name></member>
   </compound>
   <compound refid="struct__AlooBuilder" kind="struct"><name>_AlooBuilder</name>
     <member refid="struct__AlooBuilder_1a50a2cf042c5528bed8131896dbd1240e" kind="variable"><name>unref</name></member>
@@ -55,6 +63,7 @@
     <member refid="struct__alooButton_1af86a181ac928520c0abefbe725e982e6" kind="variable"><name>child</name></member>
     <member refid="struct__alooButton_1a1e2800c05e965873d176ab5b6e16f74c" kind="variable"><name>icon</name></member>
     <member refid="struct__alooButton_1a83dec1a0bd4b85ae790c715c4e03d1a1" kind="variable"><name>useUnderline</name></member>
+    <member refid="struct__alooButton_1a830f742d2051e365f854a5788fd12ea5" kind="variable"><name>toGtk</name></member>
   </compound>
   <compound refid="struct__alooCSS" kind="struct"><name>_alooCSS</name>
     <member refid="struct__alooCSS_1a6ee605988bc52a3f4c50317c95c66a43" kind="variable"><name>importPath</name></member>
@@ -86,6 +95,10 @@
     <member refid="struct__alooWindow_1a4dd10bb0a31c1d5d24962027429a7ce7" kind="variable"><name>set_app_window</name></member>
     <member refid="struct__alooWindow_1ab21c30a752473650b70b0ec15b69dfa2" kind="variable"><name>app_add_window</name></member>
     <member refid="struct__alooWindow_1a2c45374a9db8020ae326a897010e53a0" kind="variable"><name>show</name></member>
+  </compound>
+  <compound refid="struct__logger" kind="struct"><name>_logger</name>
+    <member refid="struct__logger_1a28552845e9628e91b094c550f95b623e" kind="variable"><name>logCount</name></member>
+    <member refid="struct__logger_1a4c34f8e06f85db9bf491f25d28b80b02" kind="variable"><name>log</name></member>
   </compound>
   <compound refid="structAlooApplication" kind="struct"><name>AlooApplication</name>
     <member refid="structAlooApplication_1ad98c802d8afeed723df8dbcf93fdf1e2" kind="variable"><name>app</name></member>
@@ -142,6 +155,7 @@
     <member refid="box_8h_1ac8eedc9450c37cc7277deccb6f5a6428" kind="typedef"><name>__setBoxHomogeneous_Type</name></member>
     <member refid="box_8h_1a0120cf6c35b9e14907e558c6ba0d9c3d" kind="typedef"><name>__getBoxBaselinePosition_Type</name></member>
     <member refid="box_8h_1a2808ef9c82512f47c93a3c5573bdbd78" kind="typedef"><name>__setBoxBaselinePosition_Type</name></member>
+    <member refid="box_8h_1a2c6b3fd666311c91119825574992b8d3" kind="typedef"><name>__toGtk_Type</name></member>
     <member refid="box_8h_1ab67c7a9a4623c54b09d1e7f51019f0cf" kind="variable"><name>Box</name></member>
     <member refid="box_8h_1a143cb5bf4ea32883d936fa9c74ddc7d9" kind="function"><name>__new_alooBox</name></member>
     <member refid="box_8h_1a613e1ac9436955c897d60bd459a312f0" kind="function"><name>__setBoxOrientation</name></member>
@@ -159,6 +173,7 @@
     <member refid="box_8h_1adbce718d97313ac4e88a0f05aea0198f" kind="function"><name>__setBoxHomogeneous</name></member>
     <member refid="box_8h_1a4b1e5354961907597591c79e65fa20f5" kind="function"><name>__getBoxBaselinePosition</name></member>
     <member refid="box_8h_1a3cbc9a9ce0474d8607139ac6140e7ede" kind="function"><name>__setBoxBaselinePosition</name></member>
+    <member refid="box_8h_1af5ff0d02f496559530858d4810e05912" kind="function"><name>__toGtk</name></member>
   </compound>
   <compound refid="builder_8h" kind="file"><name>builder.h</name>
     <member refid="builder_8h_1aed886ff43cad9234d0ba1884e40b1f04" kind="typedef"><name>__unrefBuilderType</name></member>
@@ -184,6 +199,7 @@
     <member refid="button_8h_1a438e9e37d7641106a3ad85147136fb2e" kind="typedef"><name>__setChild_Type</name></member>
     <member refid="button_8h_1a9060c0869560c143155a9d8cfed0f7f9" kind="typedef"><name>__setIcon_Type</name></member>
     <member refid="button_8h_1acfac04019cd2983c4d4ee3d3c508985a" kind="typedef"><name>__setUseUnderline_Type</name></member>
+    <member refid="button_8h_1a47f4855be60787dfcba9fe7a3bb5f2c1" kind="typedef"><name>__toButtonGtk_Type</name></member>
     <member refid="button_8h_1ac477dbe4d2e006ce73a75f77b0bc0969" kind="variable"><name>Button</name></member>
     <member refid="button_8h_1a3b7bc981310d883887cdd9fca23f50f7" kind="function"><name>__newButton</name></member>
     <member refid="button_8h_1a53ad740c5cad0891b6b9de27eda8ca55" kind="function"><name>__newButtonWithLabel</name></member>
@@ -191,6 +207,7 @@
     <member refid="button_8h_1a79aae593c92df050425534da8f9b675f" kind="function"><name>__setChild</name></member>
     <member refid="button_8h_1a18cac438421a426c943b78f43dbe1a34" kind="function"><name>__setIcon</name></member>
     <member refid="button_8h_1ae0e287be4a5a4798295be92d74b9fcb2" kind="function"><name>__setUseUnderline</name></member>
+    <member refid="button_8h_1a75d4f12a992b283f21da6888ed3e9883" kind="function"><name>__toButtonGtk</name></member>
   </compound>
   <compound refid="grid_8h" kind="file"><name>grid.h</name>
     <member refid="grid_8h_1a11b864d7aab2a361292985c490ddd57e" kind="typedef"><name>__gridAttach_Type</name></member>
@@ -215,14 +232,11 @@
     <member refid="label_8h_1a2efdaa462af392ed6c6f7cae989f673f" kind="function"><name>__newLabel</name></member>
   </compound>
   <compound refid="macros_8h" kind="file"><name>macros.h</name>
-    <member refid="macros_8h_1a81e0597f581204647048e24bf92da4bf" kind="define"><name>ALOO_BTN_TO_GTK</name></member>
-    <member refid="macros_8h_1a67f574a286eb62d2279853cb32e61d02" kind="define"><name>ALOO_WIDGET_TO_GTK</name></member>
     <member refid="macros_8h_1abf08dd722dd5d05a2513522a8c1d9800" kind="define"><name>ALOO_GRID_TO_GTK</name></member>
     <member refid="macros_8h_1a49c4948751bb9e2dd96cfa505b4b568c" kind="define"><name>ALOO_BOX_TO_GTK_BOX</name></member>
     <member refid="macros_8h_1ac9137a5bae01fa8f8d81942f8ea98c93" kind="define"><name>NONE_FLAGS_OPTIONS</name></member>
     <member refid="macros_8h_1a7e8face0ef0eb9ad79f944cadb88b9a9" kind="define"><name>LAUNCHER_FLAGS_OPTIONS</name></member>
     <member refid="macros_8h_1a6008f3d8d9740cf975902f6e7cbc2afc" kind="define"><name>SERVICE_FLAGS_OPTIONS</name></member>
-    <member refid="macros_8h_1af8678607ed9bc1b700af2948ecc54eab" kind="define"><name>ALOO_IS_WINDOW</name></member>
     <member refid="macros_8h_1a4a34a65a129d5c53b914ac34c3057d12" kind="function"><name>ALOO_BOX_WIDGET</name></member>
     <member refid="macros_8h_1a8a6129175fffef1805056b1ab25526ab" kind="function"><name>ALOO_IS_BOX</name></member>
   </compound>
@@ -262,6 +276,14 @@
     <member refid="types_8h_1a00a0e3c1177c07bd0a01d42dfc37ed86" kind="typedef"><name>WidgetType</name></member>
     <member refid="types_8h_1a740317088cd233e81015b298babff7be" kind="typedef"><name>alooWidget</name></member>
   </compound>
+  <compound refid="error_8h" kind="file"><name>error.h</name>
+    <member refid="error_8h_1a31f07c06769ff35959ac6176f357b75f" kind="function"><name>throw_error</name></member>
+  </compound>
+  <compound refid="logger_8h" kind="file"><name>logger.h</name>
+    <member refid="logger_8h_1ae6eb4b8ce3e18440e403ef28f93dbb9a" kind="variable"><name>Logger</name></member>
+    <member refid="logger_8h_1a1f9e3a48de6334909c55631267802824" kind="function"><name>newLogger</name></member>
+    <member refid="logger_8h_1a639f04f96874bca1121f4059febb3832" kind="function"><name>__aloo_log</name></member>
+  </compound>
   <compound refid="widget_8h" kind="file"><name>widget.h</name>
     <member refid="widget_8h_1ab3fcd2a829accf7c2d1f00c982c005b1" kind="typedef"><name>GTK_TO_ALOO_Type</name></member>
     <member refid="widget_8h_1a0c54804ca5131c7ed63911e0585108a1" kind="typedef"><name>OBJECT_TO_ALOO_Type</name></member>
@@ -272,6 +294,12 @@
     <member refid="widget_8h_1ab36e712123f8c845e940d19707948667" kind="typedef"><name>__alooVerticalAlign_Type</name></member>
     <member refid="widget_8h_1a20b21653e7905d3077558c8780b8cf2b" kind="typedef"><name>__alooHorizontalAlign_Type</name></member>
     <member refid="widget_8h_1ad74f1c9fcd1452513f60a4dd08afaf45" kind="typedef"><name>__alooAddEventListener_Type</name></member>
+    <member refid="widget_8h_1aa741fecaa968e4cf026634edf42b8d64" kind="typedef"><name>__isBox_Type</name></member>
+    <member refid="widget_8h_1a76c530809998f27096d882821da7b172" kind="typedef"><name>__isButton_Type</name></member>
+    <member refid="widget_8h_1a620f73685d724a96e50544f3f5fa5a10" kind="typedef"><name>__isGrid_Type</name></member>
+    <member refid="widget_8h_1a1fdafd442513452abcdbeb236c44fc7e" kind="typedef"><name>__isLabel_Type</name></member>
+    <member refid="widget_8h_1a7e72936a1a3676f305efa1fe0a9d223e" kind="typedef"><name>__isWindow_Type</name></member>
+    <member refid="widget_8h_1af4943728c6617cd0a48e0209a19db95e" kind="typedef"><name>__WidtoGtk_Type</name></member>
     <member refid="widget_8h_1a4f8497ae7e1b8daedfcdfa72d643a125" kind="variable"><name>Widget</name></member>
     <member refid="widget_8h_1a890a69c8a7ff1134e5e7811e7ff2183c" kind="function"><name>__GTK_TO_ALOO</name></member>
     <member refid="widget_8h_1a9080baf6af2398b65aa4a7280eb80c05" kind="function"><name>__OBJECT_TO_ALOO</name></member>
@@ -282,6 +310,13 @@
     <member refid="widget_8h_1a723480206252f9c49a96016e525c80bb" kind="function"><name>__alooHorizontalAlign</name></member>
     <member refid="widget_8h_1a5949823315aa75ff5c04f791f75d301c" kind="function"><name>__alooVerticalAlign</name></member>
     <member refid="widget_8h_1a0cf5af29b9d23e3e483d0870f0a52ff2" kind="function"><name>__alooAddEventListener</name></member>
+    <member refid="widget_8h_1aefd2c675e62d675fea71d7fe3377e329" kind="function"><name>__isBox</name></member>
+    <member refid="widget_8h_1a2370993e28ad0a0571dd215450f91447" kind="function"><name>__isButton</name></member>
+    <member refid="widget_8h_1a1b60c2311265dfd1f35f84e14b66d570" kind="function"><name>__isGrid</name></member>
+    <member refid="widget_8h_1ac0e01093b107d56fbaf04118d11b0284" kind="function"><name>__isLabel</name></member>
+    <member refid="widget_8h_1a495bcb3c1f5193850e9cd6ebdcfc53a2" kind="function"><name>__isWindow</name></member>
+    <member refid="widget_8h_1a3d34f13e18fcebf661e0d7509dafd815" kind="function"><name>__WidtoGtk</name></member>
+    <member refid="widget_8h_1a3d1153ced7b9d4a37a9233094ae3faba" kind="function"><name>is_widget_of_type</name></member>
   </compound>
   <compound refid="window_8h" kind="file"><name>window.h</name>
     <member refid="window_8h_1a838ef9ee7d949d041286b909899ef5dd" kind="typedef"><name>__alooSetWindowChild_Type</name></member>
@@ -303,5 +338,7 @@
     <member refid="window_8h_1a39fd2992cacd3b32562cf06fd1ce6053" kind="function"><name>__showWindow</name></member>
   </compound>
   <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_821002d4f10779a80d4fb17bc32f21f1" kind="dir"><name>include/utils</name>
   </compound>
 </doxygenindex>

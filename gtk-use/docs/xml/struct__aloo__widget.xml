@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="99" column="29" bodyfile="include/widget.h" bodystart="99" bodyend="-1"/>
+        <location file="include/widget.h" line="113" column="29" bodyfile="include/widget.h" bodystart="113" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1a0140f49eba0a1aaf4b69b0409559e186" prot="public" static="no" mutable="no">
         <type><ref refid="widget_8h_1a0c54804ca5131c7ed63911e0585108a1" kindref="member">OBJECT_TO_ALOO_Type</ref></type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="101" column="21" bodyfile="include/widget.h" bodystart="101" bodyend="-1"/>
+        <location file="include/widget.h" line="115" column="21" bodyfile="include/widget.h" bodystart="115" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1ac0d8de1bfe827e06d7272d45e3259584" prot="public" static="no" mutable="no">
         <type><ref refid="widget_8h_1ab3fcd2a829accf7c2d1f00c982c005b1" kindref="member">GTK_TO_ALOO_Type</ref></type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="103" column="18" bodyfile="include/widget.h" bodystart="103" bodyend="-1"/>
+        <location file="include/widget.h" line="117" column="18" bodyfile="include/widget.h" bodystart="117" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1a667170ce6aabc213da3c861838dc62a3" prot="public" static="no" mutable="no">
         <type><ref refid="widget_8h_1a05bed2b8e3cd6198c19410b686470a48" kindref="member">alooSetOrientation_Type</ref></type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="105" column="25" bodyfile="include/widget.h" bodystart="105" bodyend="-1"/>
+        <location file="include/widget.h" line="119" column="25" bodyfile="include/widget.h" bodystart="119" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1a423702ebc0b53b5d91489295420fe2dd" prot="public" static="no" mutable="no">
         <type><ref refid="widget_8h_1a64fc216b85a2827f1ac602a67b7b9a2e" kindref="member">NewWidget_Type</ref></type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="110" column="16" bodyfile="include/widget.h" bodystart="110" bodyend="-1"/>
+        <location file="include/widget.h" line="124" column="16" bodyfile="include/widget.h" bodystart="124" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1afae9f81bcf3de82b1dfc7fc90cb2f83d" prot="public" static="no" mutable="no">
         <type><ref refid="widget_8h_1a1430a1a0897570a0423713394faf07b9" kindref="member">setWidgetName_Type</ref></type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="115" column="20" bodyfile="include/widget.h" bodystart="115" bodyend="-1"/>
+        <location file="include/widget.h" line="129" column="20" bodyfile="include/widget.h" bodystart="129" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1a7a382505c7088c8a451a08ee066a10a9" prot="public" static="no" mutable="no">
         <type><ref refid="widget_8h_1a20b21653e7905d3077558c8780b8cf2b" kindref="member">__alooHorizontalAlign_Type</ref></type>
@@ -140,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="117" column="28" bodyfile="include/widget.h" bodystart="117" bodyend="-1"/>
+        <location file="include/widget.h" line="131" column="28" bodyfile="include/widget.h" bodystart="131" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1adb6a4410b3917570c96ddb62fcc71997" prot="public" static="no" mutable="no">
         <type><ref refid="widget_8h_1ab36e712123f8c845e940d19707948667" kindref="member">__alooVerticalAlign_Type</ref></type>
@@ -154,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="119" column="26" bodyfile="include/widget.h" bodystart="119" bodyend="-1"/>
+        <location file="include/widget.h" line="133" column="26" bodyfile="include/widget.h" bodystart="133" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1aca8d808db94a88af459a03c58d908b0f" prot="public" static="no" mutable="no">
         <type><ref refid="widget_8h_1ad74f1c9fcd1452513f60a4dd08afaf45" kindref="member">__alooAddEventListener_Type</ref></type>
@@ -186,7 +186,98 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="123" column="29" bodyfile="include/widget.h" bodystart="123" bodyend="-1"/>
+        <location file="include/widget.h" line="137" column="29" bodyfile="include/widget.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__aloo__widget_1a5d9e6ca395da94932c519f4843bea62e" prot="public" static="no" mutable="no">
+        <type><ref refid="widget_8h_1aa741fecaa968e4cf026634edf42b8d64" kindref="member">__isBox_Type</ref></type>
+        <definition>__isBox_Type _aloo_widget::isBox</definition>
+        <argsstring></argsstring>
+        <name>isBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/widget.h" line="139" column="14" bodyfile="include/widget.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__aloo__widget_1ac4307b6e5a35eb0d95dd623cb5909fe6" prot="public" static="no" mutable="no">
+        <type><ref refid="widget_8h_1a76c530809998f27096d882821da7b172" kindref="member">__isButton_Type</ref></type>
+        <definition>__isButton_Type _aloo_widget::isButton</definition>
+        <argsstring></argsstring>
+        <name>isButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/widget.h" line="140" column="17" bodyfile="include/widget.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__aloo__widget_1afba0d352e0490149071ede4d1103dbb5" prot="public" static="no" mutable="no">
+        <type><ref refid="widget_8h_1a620f73685d724a96e50544f3f5fa5a10" kindref="member">__isGrid_Type</ref></type>
+        <definition>__isGrid_Type _aloo_widget::isGrid</definition>
+        <argsstring></argsstring>
+        <name>isGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/widget.h" line="141" column="15" bodyfile="include/widget.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__aloo__widget_1a6955ffc5d4ba0947b473e621214bbd12" prot="public" static="no" mutable="no">
+        <type><ref refid="widget_8h_1a1fdafd442513452abcdbeb236c44fc7e" kindref="member">__isLabel_Type</ref></type>
+        <definition>__isLabel_Type _aloo_widget::isLabel</definition>
+        <argsstring></argsstring>
+        <name>isLabel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/widget.h" line="142" column="16" bodyfile="include/widget.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__aloo__widget_1ae3c0e711d51dad834c5114ada4abc90e" prot="public" static="no" mutable="no">
+        <type><ref refid="widget_8h_1a7e72936a1a3676f305efa1fe0a9d223e" kindref="member">__isWindow_Type</ref></type>
+        <definition>__isWindow_Type _aloo_widget::isWindow</definition>
+        <argsstring></argsstring>
+        <name>isWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/widget.h" line="143" column="17" bodyfile="include/widget.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__aloo__widget_1adb23175b6b6b65674c3e45fc14d2ab8c" prot="public" static="no" mutable="no">
+        <type>struct _aloo_widget::@0</type>
+        <definition>struct _aloo_widget::@0 _aloo_widget::check</definition>
+        <argsstring></argsstring>
+        <name>check</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/widget.h" line="144" column="7"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__aloo__widget_1a52de8de53b5f6062bc765c67972bbf92" prot="public" static="no" mutable="no">
+        <type><ref refid="widget_8h_1af4943728c6617cd0a48e0209a19db95e" kindref="member">__WidtoGtk_Type</ref></type>
+        <definition>__WidtoGtk_Type _aloo_widget::to_gtk</definition>
+        <argsstring></argsstring>
+        <name>to_gtk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/widget.h" line="145" column="17" bodyfile="include/widget.h" bodystart="145" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -212,24 +303,34 @@
           <edgelabel>addEventListener</edgelabel>
           <edgelabel>gtk_to_aloo</edgelabel>
           <edgelabel>horizontalAlign</edgelabel>
+          <edgelabel>isBox</edgelabel>
+          <edgelabel>isButton</edgelabel>
+          <edgelabel>isGrid</edgelabel>
+          <edgelabel>isLabel</edgelabel>
+          <edgelabel>isWindow</edgelabel>
           <edgelabel>new</edgelabel>
           <edgelabel>obj_to_aloo</edgelabel>
-          <edgelabel>setName</edgelabel>
-          <edgelabel>setOrientation</edgelabel>
-          <edgelabel>verticalAlign</edgelabel>
+          <edgelabel>...</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/widget.h" line="97" column="1" bodyfile="include/widget.h" bodystart="97" bodyend="124"/>
+    <location file="include/widget.h" line="111" column="1" bodyfile="include/widget.h" bodystart="111" bodyend="146"/>
     <listofallmembers>
       <member refid="struct__aloo__widget_1aca8d808db94a88af459a03c58d908b0f" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>addEventListener</name></member>
+      <member refid="struct__aloo__widget_1adb23175b6b6b65674c3e45fc14d2ab8c" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>check</name></member>
       <member refid="struct__aloo__widget_1ac0d8de1bfe827e06d7272d45e3259584" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>gtk_to_aloo</name></member>
       <member refid="struct__aloo__widget_1a7a382505c7088c8a451a08ee066a10a9" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>horizontalAlign</name></member>
+      <member refid="struct__aloo__widget_1a5d9e6ca395da94932c519f4843bea62e" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>isBox</name></member>
+      <member refid="struct__aloo__widget_1ac4307b6e5a35eb0d95dd623cb5909fe6" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>isButton</name></member>
+      <member refid="struct__aloo__widget_1afba0d352e0490149071ede4d1103dbb5" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>isGrid</name></member>
+      <member refid="struct__aloo__widget_1a6955ffc5d4ba0947b473e621214bbd12" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>isLabel</name></member>
+      <member refid="struct__aloo__widget_1ae3c0e711d51dad834c5114ada4abc90e" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>isWindow</name></member>
       <member refid="struct__aloo__widget_1a423702ebc0b53b5d91489295420fe2dd" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>new</name></member>
       <member refid="struct__aloo__widget_1a0140f49eba0a1aaf4b69b0409559e186" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>obj_to_aloo</name></member>
       <member refid="struct__aloo__widget_1ab8d991aec12ae9b25d4b1b0620b85d5e" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>obj_to_gtk</name></member>
       <member refid="struct__aloo__widget_1afae9f81bcf3de82b1dfc7fc90cb2f83d" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>setName</name></member>
       <member refid="struct__aloo__widget_1a667170ce6aabc213da3c861838dc62a3" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>setOrientation</name></member>
+      <member refid="struct__aloo__widget_1a52de8de53b5f6062bc765c67972bbf92" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>to_gtk</name></member>
       <member refid="struct__aloo__widget_1adb6a4410b3917570c96ddb62fcc71997" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>verticalAlign</name></member>
     </listofallmembers>
   </compounddef>

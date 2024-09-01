@@ -4,8 +4,8 @@
 
 alooWidget *__gridAttach(alooWidget *grid, alooWidget *child, int column,
 						 int row, int width, int height) {
-	gtk_grid_attach(ALOO_GRID_TO_GTK(grid), ALOO_WIDGET_TO_GTK(child), column,
-					row, width, height);
+	gtk_grid_attach(ALOO_GRID_TO_GTK(grid), Widget.to_gtk(child), column, row,
+					width, height);
 	return grid;
 }
 alooWidget *__gridAttachGtk(alooWidget *grid, GtkWidget *child, int column,
@@ -15,7 +15,7 @@ alooWidget *__gridAttachGtk(alooWidget *grid, GtkWidget *child, int column,
 }
 
 alooWidget *__gridRemove(alooWidget *grid, alooWidget *child) {
-	gtk_grid_remove(ALOO_GRID_TO_GTK(grid), ALOO_WIDGET_TO_GTK(child));
+	gtk_grid_remove(ALOO_GRID_TO_GTK(grid), Widget.to_gtk(child));
 	return grid;
 }
 alooWidget *__gridRemoveGtk(alooWidget *grid, GtkWidget *child) {

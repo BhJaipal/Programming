@@ -66,6 +66,13 @@ alooWidget *__alooAddEventListener(alooWidget *widget_instance,
 								   char *event_name, GCallback CallbackFn,
 								   gpointer data);
 
+int __isBox(alooWidget *wid);
+int __isButton(alooWidget *wid);
+int __isGrid(alooWidget *wid);
+int __isLabel(alooWidget *wid);
+int __isWindow(alooWidget *wid);
+GtkWidget *__WidtoGtk(alooWidget *wid);
+
 /******************** Private Types ********************/
 
 typedef alooWidget *(*GTK_TO_ALOO_Type)(GtkWidget *widget);
@@ -91,6 +98,13 @@ typedef alooWidget *(*__alooAddEventListener_Type)(alooWidget *widget_instance,
 												   char *event_name,
 												   GCallback CallbackFn,
 												   gpointer data);
+
+typedef int (*__isBox_Type)(alooWidget *wid);
+typedef int (*__isButton_Type)(alooWidget *wid);
+typedef int (*__isGrid_Type)(alooWidget *wid);
+typedef int (*__isLabel_Type)(alooWidget *wid);
+typedef int (*__isWindow_Type)(alooWidget *wid);
+typedef GtkWidget *(*__WidtoGtk_Type)(alooWidget *wid);
 
 /******************** Public ********************/
 
@@ -121,8 +135,18 @@ struct _aloo_widget {
 	/// @param widget_instance
 	/// @param data parameters for event listener
 	__alooAddEventListener_Type addEventListener;
+	struct {
+		__isBox_Type isBox;
+		__isButton_Type isButton;
+		__isGrid_Type isGrid;
+		__isLabel_Type isLabel;
+		__isWindow_Type isWindow;
+	} check;
+	__WidtoGtk_Type to_gtk;
 };
 
 extern struct _aloo_widget Widget;
+
+int is_widget_of_type(alooWidget *widget, enum WidgetType type);
 
 #endif // ALOO_WIDGET_H

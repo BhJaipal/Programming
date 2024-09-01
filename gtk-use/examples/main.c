@@ -6,6 +6,7 @@ alooWidget *navbar;
 alooWidget *navMenu;
 alooWidget *nothingLabel = 0;
 AlooApplication *app;
+struct _logger *lg;
 int isNothing = 1;
 
 struct _labelList {
@@ -16,7 +17,7 @@ struct _labelList {
 static void toggleNav() {
 	char **classes = CSS.getClasses(navbar);
 	for (int i = 0; i < sizeof(classes) / sizeof(classes[0]); i++) {
-		g_print("%s  %d\n", classes[i], strcmp(classes[i], "vertical"));
+		Logger.log(lg, classes[i]);
 	}
 	g_print("\n");
 
@@ -152,6 +153,7 @@ static void activate() {
 }
 
 int main(int argc, char **argv) {
+	lg = newLogger();
 	struct alooAppOptions opts = NONE_FLAGS_OPTIONS(argc, argv);
 	app = Application.create("com.test.hello", opts);
 	Application.add_event_listener(app, "activate", activate);

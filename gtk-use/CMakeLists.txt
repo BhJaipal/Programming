@@ -3,7 +3,7 @@ project(Aloo)
 
 include_directories(include)
 
-add_library(aloo "src/app.c" "src/box.c" "src/builder.c" "src/button.c" "src/grid.c" "src/label.c" "src/style.c" "src/widget.c" "src/window.c")
+add_library(aloo "src/app.c" "src/box.c" "src/builder.c" "src/button.c" "src/grid.c" "src/label.c" "src/style.c" "src/widget.c" "src/window.c" "src/utils/error.c" "src/utils/logger.c")
 set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/lib/)
 
 include_directories(

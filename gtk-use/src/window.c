@@ -28,7 +28,7 @@ alooWidget *__setWindowApplication(alooWidget *window, AlooApplication *app) {
 }
 
 void __showWindow(alooWidget *window) {
-	if (!ALOO_IS_WINDOW(window)) {
+	if (!Widget.check.isWindow(window)) {
 		fprintf(stderr, "Widget is not a window\n");
 	} else {
 		gtk_widget_show(window->child);
@@ -39,11 +39,13 @@ alooWidget *__app_add_window(AlooApplication *app, alooWidget *window) {
 	gtk_application_add_window(app->app, GTK_WINDOW(window->child));
 }
 
-struct _alooWindow Window = {.new = __alooApplicationNewWindow,
-							 .present = __alooPresentWindow,
-							 .show = __showWindow,
-							 .setChild = __alooSetWindowChild,
-							 .setTitle = __alooSetWindowTitle,
-							 .setSize = __setWindowSize,
-							 .app_add_window = __app_add_window,
-							 .set_app_window = __setWindowApplication};
+struct _alooWindow Window = {
+	.new = __alooApplicationNewWindow,
+	.present = __alooPresentWindow,
+	.show = __showWindow,
+	.setChild = __alooSetWindowChild,
+	.setTitle = __alooSetWindowTitle,
+	.setSize = __setWindowSize,
+	.app_add_window = __app_add_window,
+	.set_app_window = __setWindowApplication,
+};

@@ -49,6 +49,24 @@ include/widget.h \- Aloo Widget related functions\&.
 .ti -1c
 .RI "typedef \fBalooWidget\fP *(* \fB__alooAddEventListener_Type\fP) (\fBalooWidget\fP *widget_instance, char *event_name, GCallback CallbackFn, gpointer data)"
 .br
+.ti -1c
+.RI "typedef int(* \fB__isBox_Type\fP) (\fBalooWidget\fP *wid)"
+.br
+.ti -1c
+.RI "typedef int(* \fB__isButton_Type\fP) (\fBalooWidget\fP *wid)"
+.br
+.ti -1c
+.RI "typedef int(* \fB__isGrid_Type\fP) (\fBalooWidget\fP *wid)"
+.br
+.ti -1c
+.RI "typedef int(* \fB__isLabel_Type\fP) (\fBalooWidget\fP *wid)"
+.br
+.ti -1c
+.RI "typedef int(* \fB__isWindow_Type\fP) (\fBalooWidget\fP *wid)"
+.br
+.ti -1c
+.RI "typedef GtkWidget *(* \fB__WidtoGtk_Type\fP) (\fBalooWidget\fP *wid)"
+.br
 .in -1c
 .SS "Functions"
 
@@ -89,6 +107,27 @@ include/widget.h \- Aloo Widget related functions\&.
 .RI "\fBalooWidget\fP * \fB__alooAddEventListener\fP (\fBalooWidget\fP *widget_instance, char *event_name, GCallback CallbackFn, gpointer data)"
 .br
 .RI "Adds event listener to a widget\&. "
+.ti -1c
+.RI "int \fB__isBox\fP (\fBalooWidget\fP *wid)"
+.br
+.ti -1c
+.RI "int \fB__isButton\fP (\fBalooWidget\fP *wid)"
+.br
+.ti -1c
+.RI "int \fB__isGrid\fP (\fBalooWidget\fP *wid)"
+.br
+.ti -1c
+.RI "int \fB__isLabel\fP (\fBalooWidget\fP *wid)"
+.br
+.ti -1c
+.RI "int \fB__isWindow\fP (\fBalooWidget\fP *wid)"
+.br
+.ti -1c
+.RI "GtkWidget * \fB__WidtoGtk\fP (\fBalooWidget\fP *wid)"
+.br
+.ti -1c
+.RI "int \fBis_widget_of_type\fP (\fBalooWidget\fP *widget, enum \fBWidgetType\fP type)"
+.br
 .in -1c
 .SS "Variables"
 
@@ -117,7 +156,19 @@ Jaipal001
 
 .SS "typedef \fBalooWidget\fP*(* __alooVerticalAlign_Type) (\fBalooWidget\fP *widget, GtkAlign alignment)"
 
+.SS "typedef int(* __isBox_Type) (\fBalooWidget\fP *wid)"
+
+.SS "typedef int(* __isButton_Type) (\fBalooWidget\fP *wid)"
+
+.SS "typedef int(* __isGrid_Type) (\fBalooWidget\fP *wid)"
+
+.SS "typedef int(* __isLabel_Type) (\fBalooWidget\fP *wid)"
+
+.SS "typedef int(* __isWindow_Type) (\fBalooWidget\fP *wid)"
+
 .SS "typedef GtkWidget*(* __OBJECT_TO_GTK_WIDGET_Type) (\fBAlooBuilder\fP *builder, const char *name)"
+
+.SS "typedef GtkWidget*(* __WidtoGtk_Type) (\fBalooWidget\fP *wid)"
 
 .SS "typedef \fBalooWidget\fP*(* alooSetOrientation_Type) (\fBalooWidget\fP *widget, GtkOrientation orien)"
 
@@ -164,6 +215,16 @@ Sets vertical alignment of \fBalooWidget\fP\&.
 
 .PP
 Creates \fBalooWidget\fP from GtkWidget\&. 
+.SS "int __isBox (\fBalooWidget\fP * wid)"
+
+.SS "int __isButton (\fBalooWidget\fP * wid)"
+
+.SS "int __isGrid (\fBalooWidget\fP * wid)"
+
+.SS "int __isLabel (\fBalooWidget\fP * wid)"
+
+.SS "int __isWindow (\fBalooWidget\fP * wid)"
+
 .SS "\fBalooWidget\fP* __NewWidget (\fBWidgetType\fP type, GtkWidget * child)"
 
 .PP
@@ -207,6 +268,10 @@ Set the Name of widget\&.
 returns the widget 
 .RE
 .PP
+
+.SS "GtkWidget* __WidtoGtk (\fBalooWidget\fP * wid)"
+
+.SS "int is_widget_of_type (\fBalooWidget\fP * widget, enum \fBWidgetType\fP type)"
 
 .SH "Variable Documentation"
 .PP 

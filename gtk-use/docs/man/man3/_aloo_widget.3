@@ -47,6 +47,30 @@ _aloo_widget
 .RI "\fB__alooAddEventListener_Type\fP \fBaddEventListener\fP"
 .br
 .RI "Adds event listener to a widget\&. "
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   \fB__isBox_Type\fP \fBisBox\fP"
+.br
+.ti -1c
+.RI "   \fB__isButton_Type\fP \fBisButton\fP"
+.br
+.ti -1c
+.RI "   \fB__isGrid_Type\fP \fBisGrid\fP"
+.br
+.ti -1c
+.RI "   \fB__isLabel_Type\fP \fBisLabel\fP"
+.br
+.ti -1c
+.RI "   \fB__isWindow_Type\fP \fBisWindow\fP"
+.br
+.ti -1c
+.RI "} \fBcheck\fP"
+.br
+.ti -1c
+.RI "\fB__WidtoGtk_Type\fP \fBto_gtk\fP"
+.br
 .in -1c
 .SH "Member Data Documentation"
 .PP 
@@ -63,6 +87,8 @@ Adds event listener to a widget\&.
 .RE
 .PP
 
+.SS "struct { \&.\&.\&. }  _aloo_widget::check"
+
 .SS "\fBGTK_TO_ALOO_Type\fP _aloo_widget::gtk_to_aloo"
 
 .PP
@@ -71,6 +97,16 @@ Creates \fBalooWidget\fP from GtkWidget\&.
 
 .PP
 Sets horizontal alignment of \fBalooWidget\fP\&. 
+.SS "\fB__isBox_Type\fP _aloo_widget::isBox"
+
+.SS "\fB__isButton_Type\fP _aloo_widget::isButton"
+
+.SS "\fB__isGrid_Type\fP _aloo_widget::isGrid"
+
+.SS "\fB__isLabel_Type\fP _aloo_widget::isLabel"
+
+.SS "\fB__isWindow_Type\fP _aloo_widget::isWindow"
+
 .SS "\fBNewWidget_Type\fP _aloo_widget::new"
 
 .PP
@@ -119,6 +155,8 @@ returns the widget
 
 .PP
 Sets orientation of \fBalooWidget\fP\&. 
+.SS "\fB__WidtoGtk_Type\fP _aloo_widget::to_gtk"
+
 .SS "\fB__alooVerticalAlign_Type\fP _aloo_widget::verticalAlign"
 
 .PP

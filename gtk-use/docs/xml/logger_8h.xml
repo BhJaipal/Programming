@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="logger_8h" kind="file" language="C++">
+    <compoundname>logger.h</compoundname>
+    <includedby refid="aloo_8h" local="yes">include/aloo.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/aloo.h</label>
+        <link refid="aloo_8h"/>
+      </node>
+      <node id="1">
+        <label>include/utils/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct__logger" prot="public">_logger</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="logger_8h_1ae6eb4b8ce3e18440e403ef28f93dbb9a" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct__logger" kindref="compound">_logger</ref></type>
+        <definition>struct _logger Logger</definition>
+        <argsstring></argsstring>
+        <name>Logger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/logger.h" line="5" column="6" declfile="include/utils/logger.h" declline="5" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="logger_8h_1a1f9e3a48de6334909c55631267802824" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="struct__logger" kindref="compound">_logger</ref> *</type>
+        <definition>struct _logger* newLogger</definition>
+        <argsstring>()</argsstring>
+        <name>newLogger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/logger.h" line="4" column="14" declfile="include/utils/logger.h" declline="4" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="logger_8h_1a639f04f96874bca1121f4059febb3832" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void __aloo_log</definition>
+        <argsstring>(struct _logger *self, const char *message)</argsstring>
+        <name>__aloo_log</name>
+        <param>
+          <type>struct <ref refid="struct__logger" kindref="compound">_logger</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/logger.h" line="5" column="6" declfile="include/utils/logger.h" declline="5" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ALOO_LOGGER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOO_LOGGER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="logger_8h_1a1f9e3a48de6334909c55631267802824" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__logger" kindref="compound">_logger</ref><sp/>*<ref refid="logger_8h_1a1f9e3a48de6334909c55631267802824" kindref="member">newLogger</ref>();</highlight></codeline>
+<codeline lineno="5" refid="logger_8h_1a639f04f96874bca1121f4059febb3832" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="logger_8h_1a639f04f96874bca1121f4059febb3832" kindref="member">__aloo_log</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="struct__logger" kindref="compound">_logger</ref><sp/>*</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*message);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="struct__logger" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__logger" kindref="compound">_logger</ref><sp/>{</highlight></codeline>
+<codeline lineno="8" refid="struct__logger_1a28552845e9628e91b094c550f95b623e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct__logger_1a28552845e9628e91b094c550f95b623e" kindref="member">logCount</ref>;</highlight></codeline>
+<codeline lineno="9" refid="struct__logger_1a4c34f8e06f85db9bf491f25d28b80b02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="struct__logger_1a4c34f8e06f85db9bf491f25d28b80b02" kindref="member">log</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__logger" kindref="compound">_logger</ref><sp/>*</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*message);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__logger" kindref="compound">_logger</ref><sp/><ref refid="logger_8h_1ae6eb4b8ce3e18440e403ef28f93dbb9a" kindref="member">Logger</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_LOGGER_H</highlight></codeline>
+    </programlisting>
+    <location file="include/utils/logger.h"/>
+  </compounddef>
+</doxygen>
