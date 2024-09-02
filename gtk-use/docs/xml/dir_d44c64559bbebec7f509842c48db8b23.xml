@@ -2,19 +2,10 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
     <compoundname>include</compoundname>
+    <innerdir refid="dir_c10003263d955484aa2f09dad14a1556">include/builtin</innerdir>
+    <innerdir refid="dir_69f6b0b437b9d7106ae46b3b241ba72b">include/test</innerdir>
     <innerdir refid="dir_821002d4f10779a80d4fb17bc32f21f1">include/utils</innerdir>
     <innerfile refid="aloo_8h">aloo.h</innerfile>
-    <innerfile refid="app_8h">app.h</innerfile>
-    <innerfile refid="box_8h">box.h</innerfile>
-    <innerfile refid="builder_8h">builder.h</innerfile>
-    <innerfile refid="button_8h">button.h</innerfile>
-    <innerfile refid="grid_8h">grid.h</innerfile>
-    <innerfile refid="label_8h">label.h</innerfile>
-    <innerfile refid="macros_8h">macros.h</innerfile>
-    <innerfile refid="style_8h">style.h</innerfile>
-    <innerfile refid="types_8h">types.h</innerfile>
-    <innerfile refid="widget_8h">widget.h</innerfile>
-    <innerfile refid="window_8h">window.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

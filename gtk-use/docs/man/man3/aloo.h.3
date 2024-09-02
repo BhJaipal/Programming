@@ -1,48 +1,67 @@
-.TH "include/aloo.h" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "include/test/aloo.h" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-include/aloo.h \- Aloo Project Main file It conatins all the header files\&.  
-
+include/test/aloo.h
 .SH SYNOPSIS
 .br
 .PP
-\fC#include 'app\&.h'\fP
-.br
-\fC#include 'box\&.h'\fP
-.br
-\fC#include 'builder\&.h'\fP
-.br
-\fC#include 'button\&.h'\fP
-.br
-\fC#include 'grid\&.h'\fP
-.br
-\fC#include 'label\&.h'\fP
-.br
-\fC#include 'macros\&.h'\fP
-.br
-\fC#include 'style\&.h'\fP
-.br
-\fC#include 'utils/error\&.h'\fP
-.br
-\fC#include 'utils/logger\&.h'\fP
-.br
-\fC#include 'widget\&.h'\fP
-.br
-\fC#include 'window\&.h'\fP
+\fC#include '\&.\&./builtin/widget\&.h'\fP
 .br
 
-.SH "Detailed Description"
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_Test\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fB_Test\fP \fBTest\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fB__expectInt\fP (int expected, int actual)"
+.br
+.ti -1c
+.RI "int \fB__expectWidget\fP (\fBalooWidget\fP *expected, \fBalooWidget\fP *actual)"
+.br
+.ti -1c
+.RI "int \fB__expectGtkWidget\fP (GtkWidget *expected, \fBalooWidget\fP *actual)"
+.br
+.ti -1c
+.RI "void \fB__addTest\fP (const char *test_name, struct \fB_Test\fP *test, int test_res)"
+.br
+.ti -1c
+.RI "void \fB__testRes\fP (struct \fB_Test\fP *t)"
+.br
+.ti -1c
+.RI "\fBTest\fP * \fBcreateTest\fP (const char *name)"
+.br
+.in -1c
+.SH "Typedef Documentation"
 .PP 
-Aloo Project Main file It conatins all the header files\&. 
+.SS "typedef struct \fB_Test\fP \fBTest\fP"
 
+.SH "Function Documentation"
+.PP 
+.SS "void __addTest (const char * test_name, struct \fB_Test\fP * test, int test_res)"
 
-.PP
-\fBAuthor\fP
-.RS 4
-Jaipal001 
-.RE
-.PP
+.SS "int __expectGtkWidget (GtkWidget * expected, \fBalooWidget\fP * actual)"
+
+.SS "int __expectInt (int expected, int actual)"
+
+.SS "int __expectWidget (\fBalooWidget\fP * expected, \fBalooWidget\fP * actual)"
+
+.SS "void __testRes (struct \fB_Test\fP * t)"
+
+.SS "\fBTest\fP* createTest (const char * name)"
 
 .SH "Author"
 .PP 

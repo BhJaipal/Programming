@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/builder.h" line="64" column="1" bodyfile="include/builder.h" bodystart="64" bodyend="-1"/>
+        <location file="include/builtin/builder.h" line="64" column="1" bodyfile="include/builtin/builder.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__AlooBuilder_1a8821ccb608f6302de02cbb6f5cc45ed3" prot="public" static="no" mutable="no">
         <type><ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref> *(*</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/builder.h" line="67" column="1" bodyfile="include/builder.h" bodystart="67" bodyend="-1"/>
+        <location file="include/builtin/builder.h" line="67" column="1" bodyfile="include/builtin/builder.h" bodystart="67" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__AlooBuilder_1a71f69168acaab34068aae62aafcb40e9" prot="public" static="no" mutable="no">
         <type>int(*</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/builder.h" line="73" column="1" bodyfile="include/builder.h" bodystart="73" bodyend="-1"/>
+        <location file="include/builtin/builder.h" line="73" column="1" bodyfile="include/builtin/builder.h" bodystart="73" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__AlooBuilder_1ab581c993f97fc95bab250316287ae131" prot="public" static="no" mutable="no">
         <type>int(*</type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/builder.h" line="80" column="1" bodyfile="include/builder.h" bodystart="80" bodyend="-1"/>
+        <location file="include/builtin/builder.h" line="80" column="1" bodyfile="include/builtin/builder.h" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__AlooBuilder_1a632cabfaa8d945640ef9cff49d18fdca" prot="public" static="no" mutable="no">
         <type>int(*</type>
@@ -161,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/builder.h" line="86" column="1" bodyfile="include/builder.h" bodystart="86" bodyend="-1"/>
+        <location file="include/builtin/builder.h" line="86" column="1" bodyfile="include/builtin/builder.h" bodystart="86" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__AlooBuilder_1a8e14c8d9c86b5c55ceae67ebba4180d8" prot="public" static="no" mutable="no">
         <type>GObject *(*</type>
@@ -175,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/builder.h" line="89" column="1" bodyfile="include/builder.h" bodystart="89" bodyend="-1"/>
+        <location file="include/builtin/builder.h" line="89" column="1" bodyfile="include/builtin/builder.h" bodystart="89" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__AlooBuilder_1af5deedc9690eb132f1ca091140beab7c" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -189,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/builder.h" line="91" column="1" bodyfile="include/builder.h" bodystart="91" bodyend="-1"/>
+        <location file="include/builtin/builder.h" line="91" column="1" bodyfile="include/builtin/builder.h" bodystart="91" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -216,7 +216,7 @@
         <link refid="structalooWidget"/>
       </node>
     </collaborationgraph>
-    <location file="include/builder.h" line="62" column="1" bodyfile="include/builder.h" bodystart="62" bodyend="92"/>
+    <location file="include/builtin/builder.h" line="62" column="1" bodyfile="include/builtin/builder.h" bodystart="62" bodyend="92"/>
     <listofallmembers>
       <member refid="struct__AlooBuilder_1ab581c993f97fc95bab250316287ae131" prot="public" virt="non-virtual"><scope>_AlooBuilder</scope><name>addContent</name></member>
       <member refid="struct__AlooBuilder_1a71f69168acaab34068aae62aafcb40e9" prot="public" virt="non-virtual"><scope>_AlooBuilder</scope><name>addFile</name></member>

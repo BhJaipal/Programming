@@ -1,8 +1,8 @@
-.TH "include/types.h" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.TH "include/builtin/types.h" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-include/types.h \- Aloo Project Types related functions\&.  
+include/builtin/types.h \- Aloo Project Types related functions\&.  
 
 .SH SYNOPSIS
 .br
@@ -37,7 +37,7 @@ include/types.h \- Aloo Project Types related functions\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBWidgetType\fP { \fBALOO_BOX\fP, \fBALOO_GRID\fP, \fBALOO_ROW\fP, \fBALOO_COLUMN\fP, \fBALOO_BUTTON\fP, \fBALOO_LABEL\fP, \fBALOO_WINDOW\fP, \fBALOO_NEW_WIDGET\fP }"
+.RI "enum \fBWidgetType\fP { \fBALOO_BOX\fP, \fBALOO_GRID\fP, \fBALOO_BUTTON\fP, \fBALOO_LABEL\fP, \fBALOO_WINDOW\fP, \fBALOO_NEW_WIDGET\fP }"
 .br
 .RI "Type of \fBalooWidget\fP\&. "
 .in -1c
@@ -78,12 +78,6 @@ Used for Gtk Box\&.
 .TP
 \fB\fIALOO_GRID \fP\fP
 Used for Gtk Grid\&. 
-.TP
-\fB\fIALOO_ROW \fP\fP
-Used for Gtk Row\&. 
-.TP
-\fB\fIALOO_COLUMN \fP\fP
-Used for Gtk Column\&. 
 .TP
 \fB\fIALOO_BUTTON \fP\fP
 Used for Gtk Button\&. 

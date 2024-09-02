@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/label.h" line="20" column="1" bodyfile="include/label.h" bodystart="20" bodyend="-1"/>
+        <location file="include/builtin/label.h" line="20" column="1" bodyfile="include/builtin/label.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct____alooLabel_1ad5fb05f426389c800a67a2440d76ea27" prot="public" static="no" mutable="no">
         <type>GtkLabel *(*</type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/label.h" line="22" column="1" bodyfile="include/label.h" bodystart="22" bodyend="-1"/>
+        <location file="include/builtin/label.h" line="22" column="1" bodyfile="include/builtin/label.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -62,7 +62,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/label.h" line="16" column="1" bodyfile="include/label.h" bodystart="16" bodyend="23"/>
+    <location file="include/builtin/label.h" line="16" column="1" bodyfile="include/builtin/label.h" bodystart="16" bodyend="23"/>
     <listofallmembers>
       <member refid="struct____alooLabel_1adf6d0ff07874ae1917e0665efb600042" prot="public" virt="non-virtual"><scope>__alooLabel</scope><name>new</name></member>
       <member refid="struct____alooLabel_1ad5fb05f426389c800a67a2440d76ea27" prot="public" virt="non-virtual"><scope>__alooLabel</scope><name>toGtk</name></member>

@@ -1,5 +1,5 @@
-<map id="include/box.h" name="include/box.h">
-<area shape="rect" id="node1" title="Aloo Box functions." alt="" coords="22,5,131,32"/>
-<area shape="rect" id="node2" href="$types_8h.html" title="Aloo Project Types related functions." alt="" coords="5,80,76,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="37,155,117,181"/>
+<map id="include/builtin/box.h" name="include/builtin/box.h">
+<area shape="rect" id="node1" title="Aloo Box functions." alt="" coords="5,5,160,32"/>
+<area shape="rect" id="node2" href="$types_8h.html" title="Aloo Project Types related functions." alt="" coords="11,80,82,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="43,155,123,181"/>
 </map>

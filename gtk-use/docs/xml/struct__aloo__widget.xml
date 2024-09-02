@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="80" column="1" bodyfile="include/widget.h" bodystart="80" bodyend="-1"/>
+        <location file="include/builtin/widget.h" line="80" column="1" bodyfile="include/builtin/widget.h" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1aa66c3a240c3bee4bd8f5226dcca5e4af" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="82" column="1" bodyfile="include/widget.h" bodystart="82" bodyend="-1"/>
+        <location file="include/builtin/widget.h" line="82" column="1" bodyfile="include/builtin/widget.h" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1abdec12adebb7e37c406c628d47a84e66" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="84" column="1" bodyfile="include/widget.h" bodystart="84" bodyend="-1"/>
+        <location file="include/builtin/widget.h" line="84" column="1" bodyfile="include/builtin/widget.h" bodystart="84" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1a9d40a37f38c89555c5135f9bd59aa340" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="86" column="1" bodyfile="include/widget.h" bodystart="86" bodyend="-1"/>
+        <location file="include/builtin/widget.h" line="86" column="1" bodyfile="include/builtin/widget.h" bodystart="86" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1a24781862adde361327794b8d11e570f8" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="91" column="1" bodyfile="include/widget.h" bodystart="91" bodyend="-1"/>
+        <location file="include/builtin/widget.h" line="91" column="1" bodyfile="include/builtin/widget.h" bodystart="91" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1aa45e9615b6d01b0fd6f1e6d71713a8af" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="96" column="1" bodyfile="include/widget.h" bodystart="96" bodyend="-1"/>
+        <location file="include/builtin/widget.h" line="96" column="1" bodyfile="include/builtin/widget.h" bodystart="96" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1ae72b7d3069862567fdf07b90a0a82739" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -140,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="98" column="1" bodyfile="include/widget.h" bodystart="98" bodyend="-1"/>
+        <location file="include/builtin/widget.h" line="98" column="1" bodyfile="include/builtin/widget.h" bodystart="98" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1a935300c8261668e23eecf782b1ae1d30" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -154,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="100" column="1" bodyfile="include/widget.h" bodystart="100" bodyend="-1"/>
+        <location file="include/builtin/widget.h" line="100" column="1" bodyfile="include/builtin/widget.h" bodystart="100" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1a2f9698b741379e5353c93e4ce1bf39ac" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -186,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="104" column="1" bodyfile="include/widget.h" bodystart="104" bodyend="-1"/>
+        <location file="include/builtin/widget.h" line="104" column="1" bodyfile="include/builtin/widget.h" bodystart="104" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1afe1ac20463d7aeb13e86329f21fd1692" prot="public" static="no" mutable="no">
         <type>int(*</type>
@@ -199,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="108" column="1" bodyfile="include/widget.h" bodystart="108" bodyend="-1"/>
+        <location file="include/builtin/widget.h" line="108" column="1" bodyfile="include/builtin/widget.h" bodystart="108" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1aaca79d879242002145c567d23dde5f00" prot="public" static="no" mutable="no">
         <type>int(*</type>
@@ -212,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="109" column="1" bodyfile="include/widget.h" bodystart="109" bodyend="-1"/>
+        <location file="include/builtin/widget.h" line="109" column="1" bodyfile="include/builtin/widget.h" bodystart="109" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1a947245df7a382e70a17743d7e66c7dd1" prot="public" static="no" mutable="no">
         <type>int(*</type>
@@ -225,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="110" column="1" bodyfile="include/widget.h" bodystart="110" bodyend="-1"/>
+        <location file="include/builtin/widget.h" line="110" column="1" bodyfile="include/builtin/widget.h" bodystart="110" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1a8d4622a7361aee09f8a134cc06bdbce5" prot="public" static="no" mutable="no">
         <type>int(*</type>
@@ -238,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="111" column="1" bodyfile="include/widget.h" bodystart="111" bodyend="-1"/>
+        <location file="include/builtin/widget.h" line="111" column="1" bodyfile="include/builtin/widget.h" bodystart="111" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1aac40ca7229de169c3bb4ba63ca64eb9d" prot="public" static="no" mutable="no">
         <type>int(*</type>
@@ -251,7 +251,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="112" column="1" bodyfile="include/widget.h" bodystart="112" bodyend="-1"/>
+        <location file="include/builtin/widget.h" line="112" column="1" bodyfile="include/builtin/widget.h" bodystart="112" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1adb23175b6b6b65674c3e45fc14d2ab8c" prot="public" static="no" mutable="no">
         <type>struct _aloo_widget::@0</type>
@@ -264,7 +264,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="113" column="7"/>
+        <location file="include/builtin/widget.h" line="113" column="7"/>
       </memberdef>
       <memberdef kind="variable" id="struct__aloo__widget_1ae9f51cf09ee1c5352c4ed61d811b8e1c" prot="public" static="no" mutable="no">
         <type>GtkWidget *(*</type>
@@ -277,7 +277,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="114" column="1" bodyfile="include/widget.h" bodystart="114" bodyend="-1"/>
+        <location file="include/builtin/widget.h" line="114" column="1" bodyfile="include/builtin/widget.h" bodystart="114" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -304,7 +304,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/widget.h" line="78" column="1" bodyfile="include/widget.h" bodystart="78" bodyend="115"/>
+    <location file="include/builtin/widget.h" line="78" column="1" bodyfile="include/builtin/widget.h" bodystart="78" bodyend="115"/>
     <listofallmembers>
       <member refid="struct__aloo__widget_1a2f9698b741379e5353c93e4ce1bf39ac" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>addEventListener</name></member>
       <member refid="struct__aloo__widget_1adb23175b6b6b65674c3e45fc14d2ab8c" prot="public" virt="non-virtual"><scope>_aloo_widget</scope><name>check</name></member>

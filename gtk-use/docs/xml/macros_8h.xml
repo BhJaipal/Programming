@@ -5,32 +5,32 @@
     <includes refid="types_8h" local="yes">types.h</includes>
     <includedby refid="aloo_8h" local="yes">include/aloo.h</includedby>
     <incdepgraph>
-      <node id="3">
-        <label>gtk/gtk.h</label>
-      </node>
-      <node id="1">
-        <label>include/macros.h</label>
-        <link refid="macros_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
         <label>types.h</label>
         <link refid="types_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="2">
-        <label>include/aloo.h</label>
-        <link refid="aloo_8h"/>
-      </node>
       <node id="1">
-        <label>include/macros.h</label>
+        <label>include/builtin/macros.h</label>
         <link refid="macros_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+      </node>
+      <node id="3">
+        <label>gtk/gtk.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/builtin/macros.h</label>
+        <link refid="macros_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/aloo.h</label>
+        <link refid="aloo_8h"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="define">
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/macros.h" line="14" column="9" bodyfile="include/macros.h" bodystart="14" bodyend="-1"/>
+        <location file="include/builtin/macros.h" line="14" column="9" bodyfile="include/builtin/macros.h" bodystart="14" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="macros_8h_1a49c4948751bb9e2dd96cfa505b4b568c" prot="public" static="no">
         <name>ALOO_BOX_TO_GTK_BOX</name>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/macros.h" line="16" column="9" bodyfile="include/macros.h" bodystart="16" bodyend="-1"/>
+        <location file="include/builtin/macros.h" line="16" column="9" bodyfile="include/builtin/macros.h" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="macros_8h_1ac9137a5bae01fa8f8d81942f8ea98c93" prot="public" static="no">
         <name>NONE_FLAGS_OPTIONS</name>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/macros.h" line="22" column="9" bodyfile="include/macros.h" bodystart="22" bodyend="-1"/>
+        <location file="include/builtin/macros.h" line="22" column="9" bodyfile="include/builtin/macros.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="macros_8h_1a7e8face0ef0eb9ad79f944cadb88b9a9" prot="public" static="no">
         <name>LAUNCHER_FLAGS_OPTIONS</name>
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/macros.h" line="27" column="9" bodyfile="include/macros.h" bodystart="27" bodyend="-1"/>
+        <location file="include/builtin/macros.h" line="27" column="9" bodyfile="include/builtin/macros.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="macros_8h_1a6008f3d8d9740cf975902f6e7cbc2afc" prot="public" static="no">
         <name>SERVICE_FLAGS_OPTIONS</name>
@@ -109,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/macros.h" line="32" column="9" bodyfile="include/macros.h" bodystart="32" bodyend="-1"/>
+        <location file="include/builtin/macros.h" line="32" column="9" bodyfile="include/builtin/macros.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/macros.h" line="15" column="11" declfile="include/macros.h" declline="15" declcolumn="11"/>
+        <location file="include/builtin/macros.h" line="15" column="11" declfile="include/builtin/macros.h" declline="15" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="macros_8h_1a8a6129175fffef1805056b1ab25526ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>gboolean</type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/macros.h" line="17" column="10" declfile="include/macros.h" declline="17" declcolumn="10"/>
+        <location file="include/builtin/macros.h" line="17" column="10" declfile="include/builtin/macros.h" declline="17" declcolumn="10"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -176,6 +176,6 @@
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_MACROS_H</highlight></codeline>
     </programlisting>
-    <location file="include/macros.h"/>
+    <location file="include/builtin/macros.h"/>
   </compounddef>
 </doxygen>

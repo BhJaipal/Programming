@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/button.h" line="24" column="1" bodyfile="include/button.h" bodystart="24" bodyend="-1"/>
+        <location file="include/builtin/button.h" line="24" column="1" bodyfile="include/builtin/button.h" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooButton_1a1078f7ba42c97c41778891dd8eff95f5" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/button.h" line="26" column="1" bodyfile="include/button.h" bodystart="26" bodyend="-1"/>
+        <location file="include/builtin/button.h" line="26" column="1" bodyfile="include/builtin/button.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooButton_1aac2af111a621aa828b927dd1679a0189" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/button.h" line="28" column="1" bodyfile="include/button.h" bodystart="28" bodyend="-1"/>
+        <location file="include/builtin/button.h" line="28" column="1" bodyfile="include/builtin/button.h" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooButton_1a0736e3f769e5331cd449ab742d7dd642" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/button.h" line="30" column="1" bodyfile="include/button.h" bodystart="30" bodyend="-1"/>
+        <location file="include/builtin/button.h" line="30" column="1" bodyfile="include/builtin/button.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooButton_1ac1f2e7587e09b5aa3bba9eabc710f353" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/button.h" line="32" column="1" bodyfile="include/button.h" bodystart="32" bodyend="-1"/>
+        <location file="include/builtin/button.h" line="32" column="1" bodyfile="include/builtin/button.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooButton_1a2088327840112ab3687d5cc4ada8e239" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/button.h" line="34" column="1" bodyfile="include/button.h" bodystart="34" bodyend="-1"/>
+        <location file="include/builtin/button.h" line="34" column="1" bodyfile="include/builtin/button.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooButton_1ae2f828579d8d4a89c5c4ed6fdabde2d0" prot="public" static="no" mutable="no">
         <type>GtkButton *(*</type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/button.h" line="36" column="1" bodyfile="include/button.h" bodystart="36" bodyend="-1"/>
+        <location file="include/builtin/button.h" line="36" column="1" bodyfile="include/builtin/button.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -125,7 +125,7 @@
         <link refid="structalooWidget"/>
       </node>
     </collaborationgraph>
-    <location file="include/button.h" line="22" column="1" bodyfile="include/button.h" bodystart="22" bodyend="37"/>
+    <location file="include/builtin/button.h" line="22" column="1" bodyfile="include/builtin/button.h" bodystart="22" bodyend="37"/>
     <listofallmembers>
       <member refid="struct__alooButton_1a0736e3f769e5331cd449ab742d7dd642" prot="public" virt="non-virtual"><scope>_alooButton</scope><name>child</name></member>
       <member refid="struct__alooButton_1ac1f2e7587e09b5aa3bba9eabc710f353" prot="public" virt="non-virtual"><scope>_alooButton</scope><name>icon</name></member>

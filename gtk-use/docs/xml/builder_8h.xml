@@ -5,19 +5,19 @@
     <includes refid="types_8h" local="yes">types.h</includes>
     <includedby refid="aloo_8h" local="yes">include/aloo.h</includedby>
     <incdepgraph>
-      <node id="3">
-        <label>gtk/gtk.h</label>
-      </node>
-      <node id="1">
-        <label>include/builder.h</label>
-        <link refid="builder_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
         <label>types.h</label>
         <link refid="types_8h"/>
         <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gtk/gtk.h</label>
+      </node>
+      <node id="1">
+        <label>include/builtin/builder.h</label>
+        <link refid="builder_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -27,7 +27,7 @@
         <link refid="aloo_8h"/>
       </node>
       <node id="1">
-        <label>include/builder.h</label>
+        <label>include/builtin/builder.h</label>
         <link refid="builder_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/builder.h" line="58" column="12" declfile="include/builder.h" declline="58" declcolumn="12"/>
+        <location file="include/builtin/builder.h" line="58" column="12" declfile="include/builtin/builder.h" declline="58" declcolumn="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/builder.h" line="15" column="6" declfile="include/builder.h" declline="15" declcolumn="6"/>
+        <location file="include/builtin/builder.h" line="15" column="6" declfile="include/builtin/builder.h" declline="15" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="builder_8h_1a9e4eb9134fe6167a6f76c3fd41095459" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structAlooBuilder" kindref="compound">AlooBuilder</ref> *</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/builder.h" line="21" column="13" declfile="include/builder.h" declline="21" declcolumn="13"/>
+        <location file="include/builtin/builder.h" line="21" column="13" declfile="include/builtin/builder.h" declline="21" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="builder_8h_1a2f5c812b7da58820e99a4549fba53296" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -135,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/builder.h" line="29" column="5" declfile="include/builder.h" declline="29" declcolumn="5"/>
+        <location file="include/builtin/builder.h" line="29" column="5" declfile="include/builtin/builder.h" declline="29" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="builder_8h_1ae5c9024bca28d756ab013d76a5e81f08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -199,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/builder.h" line="38" column="5" declfile="include/builder.h" declline="38" declcolumn="5"/>
+        <location file="include/builtin/builder.h" line="38" column="5" declfile="include/builtin/builder.h" declline="38" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="builder_8h_1a59d165494af974bce30ca8626e78112e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -251,7 +251,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/builder.h" line="47" column="5" declfile="include/builder.h" declline="47" declcolumn="5"/>
+        <location file="include/builtin/builder.h" line="47" column="5" declfile="include/builtin/builder.h" declline="47" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="builder_8h_1a860c750ea04f2234cba20c76f10b82b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>GObject *</type>
@@ -273,7 +273,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/builder.h" line="53" column="9" declfile="include/builder.h" declline="53" declcolumn="9"/>
+        <location file="include/builtin/builder.h" line="53" column="9" declfile="include/builtin/builder.h" declline="53" declcolumn="9"/>
       </memberdef>
       <memberdef kind="function" id="builder_8h_1acfc6a0451bdac59f29ebc6334d41188c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -295,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/builder.h" line="58" column="12" declfile="include/builder.h" declline="58" declcolumn="12"/>
+        <location file="include/builtin/builder.h" line="58" column="12" declfile="include/builtin/builder.h" declline="58" declcolumn="12"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -350,6 +350,6 @@
 <codeline lineno="98"><highlight class="normal"></highlight></codeline>
 <codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_BUILDER_H</highlight></codeline>
     </programlisting>
-    <location file="include/builder.h"/>
+    <location file="include/builtin/builder.h"/>
   </compounddef>
 </doxygen>

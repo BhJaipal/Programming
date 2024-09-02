@@ -5,18 +5,19 @@
     <includes refid="types_8h" local="yes">types.h</includes>
     <includes local="no">gtk/gtk.h</includes>
     <includedby refid="aloo_8h" local="yes">include/aloo.h</includedby>
+    <includedby refid="test_2aloo_8h" local="yes">include/test/aloo.h</includedby>
     <incdepgraph>
-      <node id="3">
-        <label>gtk/gtk.h</label>
-      </node>
       <node id="2">
         <label>types.h</label>
         <link refid="types_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+      <node id="3">
+        <label>gtk/gtk.h</label>
+      </node>
       <node id="1">
-        <label>include/widget.h</label>
+        <label>include/builtin/widget.h</label>
         <link refid="widget_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -25,14 +26,22 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="3">
+        <label>include/test/aloo.h</label>
+        <link refid="test_2aloo_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="2">
         <label>include/aloo.h</label>
         <link refid="aloo_8h"/>
       </node>
       <node id="1">
-        <label>include/widget.h</label>
+        <label>include/builtin/widget.h</label>
         <link refid="widget_8h"/>
         <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -49,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="74" column="11" declfile="include/widget.h" declline="74" declcolumn="11"/>
+        <location file="include/builtin/widget.h" line="74" column="11" declfile="include/builtin/widget.h" declline="74" declcolumn="11"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -69,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="16" column="12" declfile="include/widget.h" declline="16" declcolumn="12"/>
+        <location file="include/builtin/widget.h" line="16" column="12" declfile="include/builtin/widget.h" declline="16" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="widget_8h_1a9080baf6af2398b65aa4a7280eb80c05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -87,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="21" column="12" declfile="include/widget.h" declline="21" declcolumn="12"/>
+        <location file="include/builtin/widget.h" line="21" column="12" declfile="include/builtin/widget.h" declline="21" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="widget_8h_1adea5eac957f93ec801152cfa8868978a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -109,7 +118,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="26" column="12" declfile="include/widget.h" declline="26" declcolumn="12"/>
+        <location file="include/builtin/widget.h" line="26" column="12" declfile="include/builtin/widget.h" declline="26" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="widget_8h_1ace7e17033235b5a9fec8ceee1068fc4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -151,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="34" column="12" declfile="include/widget.h" declline="34" declcolumn="12"/>
+        <location file="include/builtin/widget.h" line="34" column="12" declfile="include/builtin/widget.h" declline="34" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="widget_8h_1aa9e589aef695d4d9c061c02cfbb47bb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -193,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="42" column="12" declfile="include/widget.h" declline="42" declcolumn="12"/>
+        <location file="include/builtin/widget.h" line="42" column="12" declfile="include/builtin/widget.h" declline="42" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="widget_8h_1abb126fbe246404cc032f3bc2cabb6c3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>GtkWidget *</type>
@@ -215,7 +224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="47" column="11" declfile="include/widget.h" declline="47" declcolumn="11"/>
+        <location file="include/builtin/widget.h" line="47" column="11" declfile="include/builtin/widget.h" declline="47" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="widget_8h_1a723480206252f9c49a96016e525c80bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -237,7 +246,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="52" column="12" declfile="include/widget.h" declline="52" declcolumn="12"/>
+        <location file="include/builtin/widget.h" line="52" column="12" declfile="include/builtin/widget.h" declline="52" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="widget_8h_1a5949823315aa75ff5c04f791f75d301c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -259,7 +268,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="56" column="12" declfile="include/widget.h" declline="56" declcolumn="12"/>
+        <location file="include/builtin/widget.h" line="56" column="12" declfile="include/builtin/widget.h" declline="56" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="widget_8h_1a0cf5af29b9d23e3e483d0870f0a52ff2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -323,7 +332,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="65" column="12" declfile="include/widget.h" declline="65" declcolumn="12"/>
+        <location file="include/builtin/widget.h" line="65" column="12" declfile="include/builtin/widget.h" declline="65" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="widget_8h_1aefd2c675e62d675fea71d7fe3377e329" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -340,7 +349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="69" column="5" declfile="include/widget.h" declline="69" declcolumn="5"/>
+        <location file="include/builtin/widget.h" line="69" column="5" declfile="include/builtin/widget.h" declline="69" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="widget_8h_1a2370993e28ad0a0571dd215450f91447" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -357,7 +366,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="70" column="5" declfile="include/widget.h" declline="70" declcolumn="5"/>
+        <location file="include/builtin/widget.h" line="70" column="5" declfile="include/builtin/widget.h" declline="70" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="widget_8h_1a1b60c2311265dfd1f35f84e14b66d570" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -374,7 +383,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="71" column="5" declfile="include/widget.h" declline="71" declcolumn="5"/>
+        <location file="include/builtin/widget.h" line="71" column="5" declfile="include/builtin/widget.h" declline="71" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="widget_8h_1ac0e01093b107d56fbaf04118d11b0284" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -391,7 +400,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="72" column="5" declfile="include/widget.h" declline="72" declcolumn="5"/>
+        <location file="include/builtin/widget.h" line="72" column="5" declfile="include/builtin/widget.h" declline="72" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="widget_8h_1a495bcb3c1f5193850e9cd6ebdcfc53a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -408,7 +417,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="73" column="5" declfile="include/widget.h" declline="73" declcolumn="5"/>
+        <location file="include/builtin/widget.h" line="73" column="5" declfile="include/builtin/widget.h" declline="73" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="widget_8h_1a3d34f13e18fcebf661e0d7509dafd815" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>GtkWidget *</type>
@@ -425,7 +434,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="74" column="11" declfile="include/widget.h" declline="74" declcolumn="11"/>
+        <location file="include/builtin/widget.h" line="74" column="11" declfile="include/builtin/widget.h" declline="74" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="widget_8h_1a3d1153ced7b9d4a37a9233094ae3faba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -446,7 +455,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/widget.h" line="121" column="5" declfile="include/widget.h" declline="121" declcolumn="5"/>
+        <location file="include/builtin/widget.h" line="121" column="5" declfile="include/builtin/widget.h" declline="121" declcolumn="5"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -524,6 +533,6 @@
 <codeline lineno="122"><highlight class="normal"></highlight></codeline>
 <codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_WIDGET_H</highlight></codeline>
     </programlisting>
-    <location file="include/widget.h"/>
+    <location file="include/builtin/widget.h"/>
   </compounddef>
 </doxygen>

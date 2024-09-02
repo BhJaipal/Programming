@@ -5,32 +5,32 @@
     <includes refid="types_8h" local="yes">types.h</includes>
     <includedby refid="aloo_8h" local="yes">include/aloo.h</includedby>
     <incdepgraph>
-      <node id="1">
-        <label>include/style.h</label>
-        <link refid="style_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>gtk/gtk.h</label>
-      </node>
       <node id="2">
         <label>types.h</label>
         <link refid="types_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-    </incdepgraph>
-    <invincdepgraph>
+      <node id="3">
+        <label>gtk/gtk.h</label>
+      </node>
       <node id="1">
-        <label>include/style.h</label>
+        <label>include/builtin/style.h</label>
         <link refid="style_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
+    </incdepgraph>
+    <invincdepgraph>
       <node id="2">
         <label>include/aloo.h</label>
         <link refid="aloo_8h"/>
+      </node>
+      <node id="1">
+        <label>include/builtin/style.h</label>
+        <link refid="style_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="struct__alooCSS" prot="public">_alooCSS</innerclass>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="37" column="12" declfile="include/style.h" declline="37" declcolumn="12"/>
+        <location file="include/builtin/style.h" line="37" column="12" declfile="include/builtin/style.h" declline="37" declcolumn="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="14" column="6" declfile="include/style.h" declline="14" declcolumn="6"/>
+        <location file="include/builtin/style.h" line="14" column="6" declfile="include/builtin/style.h" declline="14" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1a7b594a9b97e83d0d8ed2a1fbf55da7a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -116,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="18" column="6" declfile="include/style.h" declline="18" declcolumn="6"/>
+        <location file="include/builtin/style.h" line="18" column="6" declfile="include/builtin/style.h" declline="18" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1a0cb67567c32c0f7786d7994d614ae3f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -144,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="21" column="6" declfile="include/style.h" declline="21" declcolumn="6"/>
+        <location file="include/builtin/style.h" line="21" column="6" declfile="include/builtin/style.h" declline="21" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1a44c182f098a121a4ada8b0e068d7b9db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -166,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="24" column="12" declfile="include/style.h" declline="24" declcolumn="12"/>
+        <location file="include/builtin/style.h" line="24" column="12" declfile="include/builtin/style.h" declline="24" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1a626b036d97f444dec12ecd71d51f6d22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="26" column="12" declfile="include/style.h" declline="26" declcolumn="12"/>
+        <location file="include/builtin/style.h" line="26" column="12" declfile="include/builtin/style.h" declline="26" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1a6d4fc8b02c0cfbc8ca98cee3f2e0cfca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -214,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="28" column="12" declfile="include/style.h" declline="28" declcolumn="12"/>
+        <location file="include/builtin/style.h" line="28" column="12" declfile="include/builtin/style.h" declline="28" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1af67678d0e16814a1e026db754eedc951" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -236,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="31" column="12" declfile="include/style.h" declline="31" declcolumn="12"/>
+        <location file="include/builtin/style.h" line="31" column="12" declfile="include/builtin/style.h" declline="31" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1a7750134159467d6562f541a4052ca594" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="33" column="12" declfile="include/style.h" declline="33" declcolumn="12"/>
+        <location file="include/builtin/style.h" line="33" column="12" declfile="include/builtin/style.h" declline="33" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1a8a5d2f2215bf8069abae3701fbdaba77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char **</type>
@@ -276,7 +276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="35" column="6" declfile="include/style.h" declline="35" declcolumn="6"/>
+        <location file="include/builtin/style.h" line="35" column="6" declfile="include/builtin/style.h" declline="35" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="style_8h_1aee0ff6bbf54da4dbff94487f8586833f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -298,7 +298,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="37" column="12" declfile="include/style.h" declline="37" declcolumn="12"/>
+        <location file="include/builtin/style.h" line="37" column="12" declfile="include/builtin/style.h" declline="37" declcolumn="12"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -351,6 +351,6 @@
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_STYLE_H</highlight></codeline>
     </programlisting>
-    <location file="include/style.h"/>
+    <location file="include/builtin/style.h"/>
   </compounddef>
 </doxygen>

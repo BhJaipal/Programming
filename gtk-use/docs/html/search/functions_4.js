@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['newlogger_325',['newLogger',['../logger_8h.html#a1f9e3a48de6334909c55631267802824',1,'logger.h']]]
+  ['is_5fwidget_5fof_5ftype_345',['is_widget_of_type',['../widget_8h.html#a3d1153ced7b9d4a37a9233094ae3faba',1,'widget.h']]]
 ];

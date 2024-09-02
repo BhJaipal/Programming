@@ -5,32 +5,32 @@
     <includes refid="types_8h" local="yes">types.h</includes>
     <includedby refid="aloo_8h" local="yes">include/aloo.h</includedby>
     <incdepgraph>
-      <node id="3">
-        <label>gtk/gtk.h</label>
-      </node>
-      <node id="1">
-        <label>include/button.h</label>
-        <link refid="button_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
         <label>types.h</label>
         <link refid="types_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-    </incdepgraph>
-    <invincdepgraph>
+      <node id="3">
+        <label>gtk/gtk.h</label>
+      </node>
       <node id="1">
-        <label>include/button.h</label>
+        <label>include/builtin/button.h</label>
         <link refid="button_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
+    </incdepgraph>
+    <invincdepgraph>
       <node id="2">
         <label>include/aloo.h</label>
         <link refid="aloo_8h"/>
+      </node>
+      <node id="1">
+        <label>include/builtin/button.h</label>
+        <link refid="button_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="struct__alooButton" prot="public">_alooButton</innerclass>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/button.h" line="18" column="11" declfile="include/button.h" declline="18" declcolumn="11"/>
+        <location file="include/builtin/button.h" line="18" column="11" declfile="include/builtin/button.h" declline="18" declcolumn="11"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/button.h" line="12" column="12" declfile="include/button.h" declline="12" declcolumn="12"/>
+        <location file="include/builtin/button.h" line="12" column="12" declfile="include/builtin/button.h" declline="12" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="button_8h_1a53ad740c5cad0891b6b9de27eda8ca55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/button.h" line="13" column="12" declfile="include/button.h" declline="13" declcolumn="12"/>
+        <location file="include/builtin/button.h" line="13" column="12" declfile="include/builtin/button.h" declline="13" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="button_8h_1ae6add9e60841eb97c7a53c54dff5332c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/button.h" line="14" column="12" declfile="include/button.h" declline="14" declcolumn="12"/>
+        <location file="include/builtin/button.h" line="14" column="12" declfile="include/builtin/button.h" declline="14" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="button_8h_1a79aae593c92df050425534da8f9b675f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -120,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/button.h" line="15" column="12" declfile="include/button.h" declline="15" declcolumn="12"/>
+        <location file="include/builtin/button.h" line="15" column="12" declfile="include/builtin/button.h" declline="15" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="button_8h_1a18cac438421a426c943b78f43dbe1a34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/button.h" line="16" column="12" declfile="include/button.h" declline="16" declcolumn="12"/>
+        <location file="include/builtin/button.h" line="16" column="12" declfile="include/builtin/button.h" declline="16" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="button_8h_1ae0e287be4a5a4798295be92d74b9fcb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -162,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/button.h" line="17" column="12" declfile="include/button.h" declline="17" declcolumn="12"/>
+        <location file="include/builtin/button.h" line="17" column="12" declfile="include/builtin/button.h" declline="17" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="button_8h_1a75d4f12a992b283f21da6888ed3e9883" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>GtkButton *</type>
@@ -179,7 +179,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/button.h" line="18" column="11" declfile="include/button.h" declline="18" declcolumn="11"/>
+        <location file="include/builtin/button.h" line="18" column="11" declfile="include/builtin/button.h" declline="18" declcolumn="11"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -224,6 +224,6 @@
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_BUTTON_H</highlight></codeline>
     </programlisting>
-    <location file="include/button.h"/>
+    <location file="include/builtin/button.h"/>
   </compounddef>
 </doxygen>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['throw_5ferror_326',['throw_error',['../error_8h.html#a31f07c06769ff35959ac6176f357b75f',1,'error.h']]]
+  ['newlogger_346',['newLogger',['../logger_8h.html#a1f9e3a48de6334909c55631267802824',1,'logger.h']]]
 ];

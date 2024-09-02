@@ -5,19 +5,19 @@
     <includes refid="types_8h" local="yes">types.h</includes>
     <includedby refid="aloo_8h" local="yes">include/aloo.h</includedby>
     <incdepgraph>
-      <node id="3">
-        <label>gtk/gtk.h</label>
-      </node>
-      <node id="1">
-        <label>include/label.h</label>
-        <link refid="label_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
         <label>types.h</label>
         <link refid="types_8h"/>
         <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gtk/gtk.h</label>
+      </node>
+      <node id="1">
+        <label>include/builtin/label.h</label>
+        <link refid="label_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -27,7 +27,7 @@
         <link refid="aloo_8h"/>
       </node>
       <node id="1">
-        <label>include/label.h</label>
+        <label>include/builtin/label.h</label>
         <link refid="label_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/label.h" line="12" column="12" declfile="include/label.h" declline="12" declcolumn="12"/>
+        <location file="include/builtin/label.h" line="12" column="12" declfile="include/builtin/label.h" declline="12" declcolumn="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/label.h" line="12" column="12" declfile="include/label.h" declline="12" declcolumn="12"/>
+        <location file="include/builtin/label.h" line="12" column="12" declfile="include/builtin/label.h" declline="12" declcolumn="12"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -99,6 +99,6 @@
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_LABEL_H</highlight></codeline>
     </programlisting>
-    <location file="include/label.h"/>
+    <location file="include/builtin/label.h"/>
   </compounddef>
 </doxygen>

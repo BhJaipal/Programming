@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="44" column="1" bodyfile="include/style.h" bodystart="44" bodyend="-1"/>
+        <location file="include/builtin/style.h" line="44" column="1" bodyfile="include/builtin/style.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooCSS_1a96b9c02727a5207e4500d477058d9539" prot="public" static="no" mutable="no">
         <type>void(*</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="48" column="1" bodyfile="include/style.h" bodystart="48" bodyend="-1"/>
+        <location file="include/builtin/style.h" line="48" column="1" bodyfile="include/builtin/style.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooCSS_1a85d85917cfb004497f642fd5b82ad996" prot="public" static="no" mutable="no">
         <type>void(*</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="51" column="1" bodyfile="include/style.h" bodystart="51" bodyend="-1"/>
+        <location file="include/builtin/style.h" line="51" column="1" bodyfile="include/builtin/style.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooCSS_1a70dab3304af5a4d743a501afac64c471" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="53" column="1" bodyfile="include/style.h" bodystart="53" bodyend="-1"/>
+        <location file="include/builtin/style.h" line="53" column="1" bodyfile="include/builtin/style.h" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooCSS_1a1991160a4b6c11ed6673826cb3add5fe" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="55" column="1" bodyfile="include/style.h" bodystart="55" bodyend="-1"/>
+        <location file="include/builtin/style.h" line="55" column="1" bodyfile="include/builtin/style.h" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooCSS_1aea265c46559d1ef2994f3b09b294a10d" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="57" column="1" bodyfile="include/style.h" bodystart="57" bodyend="-1"/>
+        <location file="include/builtin/style.h" line="57" column="1" bodyfile="include/builtin/style.h" bodystart="57" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooCSS_1a24fd938ee282fe315bd97b355cd598b7" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -138,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="59" column="1" bodyfile="include/style.h" bodystart="59" bodyend="-1"/>
+        <location file="include/builtin/style.h" line="59" column="1" bodyfile="include/builtin/style.h" bodystart="59" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooCSS_1abc01c166ed5a2eabde408f4405bdd40d" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -152,7 +152,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="61" column="1" bodyfile="include/style.h" bodystart="61" bodyend="-1"/>
+        <location file="include/builtin/style.h" line="61" column="1" bodyfile="include/builtin/style.h" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooCSS_1ad1f623aea153448d39ac6e09510efc62" prot="public" static="no" mutable="no">
         <type>char **(*</type>
@@ -166,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="63" column="1" bodyfile="include/style.h" bodystart="63" bodyend="-1"/>
+        <location file="include/builtin/style.h" line="63" column="1" bodyfile="include/builtin/style.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooCSS_1a1b66d52043761c243521650d3a4cfc57" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/style.h" line="65" column="1" bodyfile="include/style.h" bodystart="65" bodyend="-1"/>
+        <location file="include/builtin/style.h" line="65" column="1" bodyfile="include/builtin/style.h" bodystart="65" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -205,7 +205,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/style.h" line="41" column="1" bodyfile="include/style.h" bodystart="41" bodyend="66"/>
+    <location file="include/builtin/style.h" line="41" column="1" bodyfile="include/builtin/style.h" bodystart="41" bodyend="66"/>
     <listofallmembers>
       <member refid="struct__alooCSS_1a24fd938ee282fe315bd97b355cd598b7" prot="public" virt="non-virtual"><scope>_alooCSS</scope><name>addClass</name></member>
       <member refid="struct__alooCSS_1ad1f623aea153448d39ac6e09510efc62" prot="public" virt="non-virtual"><scope>_alooCSS</scope><name>getClasses</name></member>

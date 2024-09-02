@@ -105,6 +105,17 @@
     <member refid="struct__logger_1a584fcf64548f3b986ac55d7a69c3dad6" kind="variable"><name>warn</name></member>
     <member refid="struct__logger_1ae2b060f696159cc33423ea24d6d7fba3" kind="variable"><name>info</name></member>
   </compound>
+  <compound refid="struct__Test" kind="struct"><name>_Test</name>
+    <member refid="struct__Test_1a169317fcfd89e5ef103f393c8f6efeff" kind="variable"><name>expectInt</name></member>
+    <member refid="struct__Test_1a682ccf17d21a59da2fba0661901a98e9" kind="variable"><name>expectWidget</name></member>
+    <member refid="struct__Test_1a6dbdf1c670902b0a4631d11990bdf542" kind="variable"><name>expectGtkWidget</name></member>
+    <member refid="struct__Test_1aff6a8aaf2eee041aacf9845520ebdfec" kind="variable"><name>addTest</name></member>
+    <member refid="struct__Test_1a236a60726357110b4f875a298c9298d6" kind="variable"><name>result</name></member>
+    <member refid="struct__Test_1ad00a8e81fdf1a4fef80a806356636fa4" kind="variable"><name>testCount</name></member>
+    <member refid="struct__Test_1a3516562310dcde3f955996f7216078f2" kind="variable"><name>testPassed</name></member>
+    <member refid="struct__Test_1a9dd30642d8c30ed2da31846d7dbe0abc" kind="variable"><name>testFailed</name></member>
+    <member refid="struct__Test_1a0bd92050f994bb94748e1e95e92449ce" kind="variable"><name>label</name></member>
+  </compound>
   <compound refid="structAlooApplication" kind="struct"><name>AlooApplication</name>
     <member refid="structAlooApplication_1ad98c802d8afeed723df8dbcf93fdf1e2" kind="variable"><name>app</name></member>
     <member refid="structAlooApplication_1a1b52847b827b37c8eb858307f691f0a4" kind="variable"><name>status</name></member>
@@ -124,6 +135,15 @@
     <member refid="structalooWidget_1a6db0456b6604492033507fcaeda3fe46" kind="variable"><name>type</name></member>
   </compound>
   <compound refid="aloo_8h" kind="file"><name>aloo.h</name>
+  </compound>
+  <compound refid="test_2aloo_8h" kind="file"><name>aloo.h</name>
+    <member refid="test_2aloo_8h_1ad7be07ac2f3d38ab7f62698d48cb490f" kind="typedef"><name>Test</name></member>
+    <member refid="test_2aloo_8h_1aa45ff8e3a0ccc789beb77e681aeee2b4" kind="function"><name>__expectInt</name></member>
+    <member refid="test_2aloo_8h_1a8e5848ae1bc39b21068ac4aef6ed0447" kind="function"><name>__expectWidget</name></member>
+    <member refid="test_2aloo_8h_1ab72e20be23f0ba6ed8064ab14caa04f7" kind="function"><name>__expectGtkWidget</name></member>
+    <member refid="test_2aloo_8h_1a871aa8baeec0ffa5cbaeeae1da0ea82d" kind="function"><name>__addTest</name></member>
+    <member refid="test_2aloo_8h_1a708c47507415a81003d70d56f191b5bf" kind="function"><name>__testRes</name></member>
+    <member refid="test_2aloo_8h_1a9c95e48af7915714c15c20a7d42d47db" kind="function"><name>createTest</name></member>
   </compound>
   <compound refid="app_8h" kind="file"><name>app.h</name>
     <member refid="app_8h_1a3c3f24e41c05c726eae5ba69a4c0974c" kind="enum"><name>alooAppFlags</name></member>
@@ -218,21 +238,12 @@
     <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452" kind="enum"><name>WidgetType</name></member>
     <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a004cba47f0945b28929e400153b253eb" kind="enumvalue"><name>ALOO_BOX</name></member>
     <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452ad02eeb4ba7544b107bd085fa1eb480db" kind="enumvalue"><name>ALOO_GRID</name></member>
-    <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a3b0443429d57df8ac67888b5e0f1a363" kind="enumvalue"><name>ALOO_ROW</name></member>
-    <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a50f04c4702e68dab2bdac551b419ddeb" kind="enumvalue"><name>ALOO_COLUMN</name></member>
     <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a00f836e2487ce6577a4d6aea17d76fcf" kind="enumvalue"><name>ALOO_BUTTON</name></member>
     <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a57d5914b4968e9bd7705c58fddbb868e" kind="enumvalue"><name>ALOO_LABEL</name></member>
     <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a073cfecf1444e58b49fdee71aa787e1c" kind="enumvalue"><name>ALOO_WINDOW</name></member>
     <member refid="types_8h_1a7b98518122eb2e94554d2b99d29d1452a6efdb808d59913a49baf1bed971ff1a0" kind="enumvalue"><name>ALOO_NEW_WIDGET</name></member>
     <member refid="types_8h_1a00a0e3c1177c07bd0a01d42dfc37ed86" kind="typedef"><name>WidgetType</name></member>
     <member refid="types_8h_1a740317088cd233e81015b298babff7be" kind="typedef"><name>alooWidget</name></member>
-  </compound>
-  <compound refid="error_8h" kind="file"><name>error.h</name>
-    <member refid="error_8h_1a31f07c06769ff35959ac6176f357b75f" kind="function"><name>throw_error</name></member>
-  </compound>
-  <compound refid="logger_8h" kind="file"><name>logger.h</name>
-    <member refid="logger_8h_1a1f9e3a48de6334909c55631267802824" kind="function"><name>newLogger</name></member>
-    <member refid="logger_8h_1a639f04f96874bca1121f4059febb3832" kind="function"><name>__aloo_log</name></member>
   </compound>
   <compound refid="widget_8h" kind="file"><name>widget.h</name>
     <member refid="widget_8h_1a4f8497ae7e1b8daedfcdfa72d643a125" kind="variable"><name>Widget</name></member>
@@ -264,7 +275,18 @@
     <member refid="window_8h_1ab502a5b1d6124e5e111fe70586041aab" kind="function"><name>__app_add_window</name></member>
     <member refid="window_8h_1a39fd2992cacd3b32562cf06fd1ce6053" kind="function"><name>__showWindow</name></member>
   </compound>
+  <compound refid="error_8h" kind="file"><name>error.h</name>
+    <member refid="error_8h_1a31f07c06769ff35959ac6176f357b75f" kind="function"><name>throw_error</name></member>
+  </compound>
+  <compound refid="logger_8h" kind="file"><name>logger.h</name>
+    <member refid="logger_8h_1a1f9e3a48de6334909c55631267802824" kind="function"><name>newLogger</name></member>
+    <member refid="logger_8h_1a639f04f96874bca1121f4059febb3832" kind="function"><name>__aloo_log</name></member>
+  </compound>
+  <compound refid="dir_c10003263d955484aa2f09dad14a1556" kind="dir"><name>include/builtin</name>
+  </compound>
   <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_69f6b0b437b9d7106ae46b3b241ba72b" kind="dir"><name>include/test</name>
   </compound>
   <compound refid="dir_821002d4f10779a80d4fb17bc32f21f1" kind="dir"><name>include/utils</name>
   </compound>

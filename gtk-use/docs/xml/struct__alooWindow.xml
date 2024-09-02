@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/window.h" line="60" column="1" bodyfile="include/window.h" bodystart="60" bodyend="-1"/>
+        <location file="include/builtin/window.h" line="60" column="1" bodyfile="include/builtin/window.h" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooWindow_1ae0ac2345055d140263283193d63e12b9" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/window.h" line="64" column="1" bodyfile="include/window.h" bodystart="64" bodyend="-1"/>
+        <location file="include/builtin/window.h" line="64" column="1" bodyfile="include/builtin/window.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooWindow_1a89ae4f7b03da6d8b702cfed1878a9885" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/window.h" line="69" column="1" bodyfile="include/window.h" bodystart="69" bodyend="-1"/>
+        <location file="include/builtin/window.h" line="69" column="1" bodyfile="include/builtin/window.h" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooWindow_1afa4cabcec46bc162b3248c585a485d24" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/window.h" line="74" column="1" bodyfile="include/window.h" bodystart="74" bodyend="-1"/>
+        <location file="include/builtin/window.h" line="74" column="1" bodyfile="include/builtin/window.h" bodystart="74" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooWindow_1aeccc58102d537099a2148c1441cb121e" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -164,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/window.h" line="80" column="1" bodyfile="include/window.h" bodystart="80" bodyend="-1"/>
+        <location file="include/builtin/window.h" line="80" column="1" bodyfile="include/builtin/window.h" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooWindow_1a85e3f943840da73ad0f523afe111fea5" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -198,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/window.h" line="85" column="1" bodyfile="include/window.h" bodystart="85" bodyend="-1"/>
+        <location file="include/builtin/window.h" line="85" column="1" bodyfile="include/builtin/window.h" bodystart="85" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooWindow_1afbb1b375b7b468e59c82c5ae5e95a794" prot="public" static="no" mutable="no">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *(*</type>
@@ -232,7 +232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/window.h" line="90" column="1" bodyfile="include/window.h" bodystart="90" bodyend="-1"/>
+        <location file="include/builtin/window.h" line="90" column="1" bodyfile="include/builtin/window.h" bodystart="90" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct__alooWindow_1aed2ce94649355d0dafe31fe876cd1e36" prot="public" static="no" mutable="no">
         <type>void(*</type>
@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/window.h" line="94" column="1" bodyfile="include/window.h" bodystart="94" bodyend="-1"/>
+        <location file="include/builtin/window.h" line="94" column="1" bodyfile="include/builtin/window.h" bodystart="94" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -284,7 +284,7 @@
         <link refid="structalooWidget"/>
       </node>
     </collaborationgraph>
-    <location file="include/window.h" line="56" column="1" bodyfile="include/window.h" bodystart="56" bodyend="95"/>
+    <location file="include/builtin/window.h" line="56" column="1" bodyfile="include/builtin/window.h" bodystart="56" bodyend="95"/>
     <listofallmembers>
       <member refid="struct__alooWindow_1afbb1b375b7b468e59c82c5ae5e95a794" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>app_add_window</name></member>
       <member refid="struct__alooWindow_1a78bd31852545559e9fe4c3c033027a03" prot="public" virt="non-virtual"><scope>_alooWindow</scope><name>new</name></member>

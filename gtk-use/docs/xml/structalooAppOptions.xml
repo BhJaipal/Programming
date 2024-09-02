@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/app.h" line="33" column="6" bodyfile="include/app.h" bodystart="40" bodyend="-1"/>
+        <location file="include/builtin/app.h" line="33" column="6" bodyfile="include/builtin/app.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structalooAppOptions_1a94687eee81ac104698db994c2d9245ba" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/app.h" line="41" column="5" bodyfile="include/app.h" bodystart="41" bodyend="-1"/>
+        <location file="include/builtin/app.h" line="41" column="5" bodyfile="include/builtin/app.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structalooAppOptions_1afbca287e969fd39e0227550171ee427d" prot="public" static="no" mutable="no">
         <type>char **</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/app.h" line="42" column="6" bodyfile="include/app.h" bodystart="42" bodyend="-1"/>
+        <location file="include/builtin/app.h" line="42" column="6" bodyfile="include/builtin/app.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -49,7 +49,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/app.h" line="39" column="1" bodyfile="include/app.h" bodystart="39" bodyend="43"/>
+    <location file="include/builtin/app.h" line="39" column="1" bodyfile="include/builtin/app.h" bodystart="39" bodyend="43"/>
     <listofallmembers>
       <member refid="structalooAppOptions_1aec4e5d6b42a4aabe6bfaff78f201c724" prot="public" virt="non-virtual"><scope>alooAppOptions</scope><name>appFlags</name></member>
       <member refid="structalooAppOptions_1a94687eee81ac104698db994c2d9245ba" prot="public" virt="non-virtual"><scope>alooAppOptions</scope><name>argc</name></member>

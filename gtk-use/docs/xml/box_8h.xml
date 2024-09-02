@@ -6,9 +6,6 @@
     <includes local="no">gtk/gtk.h</includes>
     <includedby refid="aloo_8h" local="yes">include/aloo.h</includedby>
     <incdepgraph>
-      <node id="3">
-        <label>gtk/gtk.h</label>
-      </node>
       <node id="2">
         <label>types.h</label>
         <link refid="types_8h"/>
@@ -16,24 +13,27 @@
         </childnode>
       </node>
       <node id="1">
-        <label>include/box.h</label>
+        <label>include/builtin/box.h</label>
         <link refid="box_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+      <node id="3">
+        <label>gtk/gtk.h</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2">
-        <label>include/aloo.h</label>
-        <link refid="aloo_8h"/>
-      </node>
       <node id="1">
-        <label>include/box.h</label>
+        <label>include/builtin/box.h</label>
         <link refid="box_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+      </node>
+      <node id="2">
+        <label>include/aloo.h</label>
+        <link refid="aloo_8h"/>
       </node>
     </invincdepgraph>
     <innerclass refid="struct__alooBox" prot="public">_alooBox</innerclass>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="86" column="8" declfile="include/box.h" declline="86" declcolumn="8"/>
+        <location file="include/builtin/box.h" line="86" column="8" declfile="include/builtin/box.h" declline="86" declcolumn="8"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="18" column="12" declfile="include/box.h" declline="18" declcolumn="12"/>
+        <location file="include/builtin/box.h" line="18" column="12" declfile="include/builtin/box.h" declline="18" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="box_8h_1a613e1ac9436955c897d60bd459a312f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="22" column="12" declfile="include/box.h" declline="22" declcolumn="12"/>
+        <location file="include/builtin/box.h" line="22" column="12" declfile="include/builtin/box.h" declline="22" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="box_8h_1a6bef14af50ba6028d72d5268b3d61eb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>GtkOrientation</type>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="26" column="16" declfile="include/box.h" declline="26" declcolumn="16"/>
+        <location file="include/builtin/box.h" line="26" column="16" declfile="include/builtin/box.h" declline="26" declcolumn="16"/>
       </memberdef>
       <memberdef kind="function" id="box_8h_1a888ab6e6f143fc388b9db6c613c9f2f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="30" column="12" declfile="include/box.h" declline="30" declcolumn="12"/>
+        <location file="include/builtin/box.h" line="30" column="12" declfile="include/builtin/box.h" declline="30" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="box_8h_1a879c8cd2a74d46b9c0cad1e7420f6389" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -175,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="34" column="12" declfile="include/box.h" declline="34" declcolumn="12"/>
+        <location file="include/builtin/box.h" line="34" column="12" declfile="include/builtin/box.h" declline="34" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="box_8h_1a2e67e88bd569899d3aad45d287a8bb59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="38" column="12" declfile="include/box.h" declline="38" declcolumn="12"/>
+        <location file="include/builtin/box.h" line="38" column="12" declfile="include/builtin/box.h" declline="38" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="box_8h_1a4814e467fbb36dc572364823a2d0baf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -219,7 +219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="42" column="12" declfile="include/box.h" declline="42" declcolumn="12"/>
+        <location file="include/builtin/box.h" line="42" column="12" declfile="include/builtin/box.h" declline="42" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="box_8h_1a919fdabdbaf227881c3762fc774dafbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -241,7 +241,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="46" column="12" declfile="include/box.h" declline="46" declcolumn="12"/>
+        <location file="include/builtin/box.h" line="46" column="12" declfile="include/builtin/box.h" declline="46" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="box_8h_1afc8a53121c8422f11be3924de0d31787" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -263,7 +263,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="50" column="12" declfile="include/box.h" declline="50" declcolumn="12"/>
+        <location file="include/builtin/box.h" line="50" column="12" declfile="include/builtin/box.h" declline="50" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="box_8h_1ac17cec66e29ef4f0b1b03b4dbde4669f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -292,7 +292,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="55" column="12" declfile="include/box.h" declline="55" declcolumn="12"/>
+        <location file="include/builtin/box.h" line="55" column="12" declfile="include/builtin/box.h" declline="55" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="box_8h_1a6e4f0796c133add66628b3b79beaf8e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -314,7 +314,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="60" column="12" declfile="include/box.h" declline="60" declcolumn="12"/>
+        <location file="include/builtin/box.h" line="60" column="12" declfile="include/builtin/box.h" declline="60" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="box_8h_1a066622a364e492d922147b61b670e7df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -332,7 +332,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="64" column="5" declfile="include/box.h" declline="64" declcolumn="5"/>
+        <location file="include/builtin/box.h" line="64" column="5" declfile="include/builtin/box.h" declline="64" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="box_8h_1a13c1f3befb022ba8dde39c5b4228f3bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>gboolean</type>
@@ -350,7 +350,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="68" column="10" declfile="include/box.h" declline="68" declcolumn="10"/>
+        <location file="include/builtin/box.h" line="68" column="10" declfile="include/builtin/box.h" declline="68" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="box_8h_1adbce718d97313ac4e88a0f05aea0198f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -372,7 +372,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="72" column="12" declfile="include/box.h" declline="72" declcolumn="12"/>
+        <location file="include/builtin/box.h" line="72" column="12" declfile="include/builtin/box.h" declline="72" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="box_8h_1a4b1e5354961907597591c79e65fa20f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>GtkBaselinePosition</type>
@@ -390,7 +390,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="77" column="21" declfile="include/box.h" declline="77" declcolumn="21"/>
+        <location file="include/builtin/box.h" line="77" column="21" declfile="include/builtin/box.h" declline="77" declcolumn="21"/>
       </memberdef>
       <memberdef kind="function" id="box_8h_1a3cbc9a9ce0474d8607139ac6140e7ede" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structalooWidget" kindref="compound">alooWidget</ref> *</type>
@@ -412,7 +412,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="81" column="12" declfile="include/box.h" declline="81" declcolumn="12"/>
+        <location file="include/builtin/box.h" line="81" column="12" declfile="include/builtin/box.h" declline="81" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="box_8h_1af5ff0d02f496559530858d4810e05912" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>GtkBox *</type>
@@ -430,7 +430,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/box.h" line="86" column="8" declfile="include/box.h" declline="86" declcolumn="8"/>
+        <location file="include/builtin/box.h" line="86" column="8" declfile="include/builtin/box.h" declline="86" declcolumn="8"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -501,6 +501,6 @@
 <codeline lineno="133"><highlight class="normal"></highlight></codeline>
 <codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ALOO_BOX_H</highlight></codeline>
     </programlisting>
-    <location file="include/box.h"/>
+    <location file="include/builtin/box.h"/>
   </compounddef>
 </doxygen>

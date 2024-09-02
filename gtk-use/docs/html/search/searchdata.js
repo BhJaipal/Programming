@@ -3,9 +3,9 @@ var indexSectionsWithContent =
   0: "_abceghilmnoprstuvw",
   1: "_a",
   2: "abeglmstw",
-  3: "_agint",
+  3: "_acgint",
   4: "abceghilnoprstuvw",
-  5: "aw",
+  5: "atw",
   6: "aw",
   7: "a",
   8: "alns"
