@@ -3,10 +3,11 @@
 /// <reference types="node" />
 
 import { exec } from "child_process";
+import { createModel } from "./model";
 import { existsSync, mkdirSync, readFileSync } from "fs";
 
 let { writeFileSync } = require("fs");
-let { argv } = require("process");
+let { argv }: { argv: string[] } = require("process");
 
 function createGtkApp(project?: string | null) {
 	if (!project) {
@@ -85,9 +86,26 @@ function help() {
 	);
 }
 
+function findAlooJson(path: string) {
+	if (path == "/" || path == "/home") {
+		return null;
+	}
+	if (!existsSync(path + "/aloo.json")) {
+		if (path.match(/\/home\/(\.|\w|\d|_|\s)+/g)) {
+			return null;
+		}
+		return findAlooJson(path.split("/").slice(0, -1).join("/"));
+	}
+	return path;
+}
+
+let project = findAlooJson(process.cwd());
+if (argv[2] != "create-app" && project == null) {
+	throw "aloo.json not found";
+}
+
 if (argv.length > 2) {
 	let command = argv[2];
-
 	switch (command) {
 		case "create-app":
 			createGtkApp(argv[3]);
@@ -123,6 +141,9 @@ if (argv.length > 2) {
 					console.log(`success: ${stdout}`);
 				}
 			);
+			break;
+		case "model":
+			createModel(argv.slice(3));
 			break;
 		default:
 			help();
