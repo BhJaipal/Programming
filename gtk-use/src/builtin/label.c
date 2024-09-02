@@ -1,6 +1,6 @@
-#include "label.h"
+#include "builtin/label.h"
+#include "builtin/widget.h"
 #include "utils/error.h"
-#include "widget.h"
 
 alooWidget *__newLabel(const char *val) {
 	return Widget.new(ALOO_LABEL, gtk_label_new(val));

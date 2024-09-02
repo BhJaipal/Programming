@@ -1,7 +1,7 @@
-#include "grid.h"
-#include "macros.h"
+#include "builtin/grid.h"
+#include "builtin/macros.h"
+#include "builtin/widget.h"
 #include "utils/error.h"
-#include "widget.h"
 
 alooWidget *__gridAttach(alooWidget *grid, alooWidget *child, int column,
 						 int row, int width, int height) {

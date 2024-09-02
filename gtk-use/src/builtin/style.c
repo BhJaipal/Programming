@@ -1,6 +1,6 @@
-#include "style.h"
-#include "macros.h"
-#include "widget.h"
+#include "builtin/style.h"
+#include "builtin/macros.h"
+#include "builtin/widget.h"
 
 void __importCssFromPath(const char *path) {
 	GtkCssProvider *cssProvider = gtk_css_provider_new();

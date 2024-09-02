@@ -1,6 +1,6 @@
-#include "window.h"
-#include "macros.h"
-#include "widget.h"
+#include "builtin/window.h"
+#include "builtin/macros.h"
+#include "builtin/widget.h"
 
 alooWidget *__alooSetWindowChild(alooWidget *window, alooWidget *child) {
 	gtk_window_set_child(GTK_WINDOW(window->child), child->child);

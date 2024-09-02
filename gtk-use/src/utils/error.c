@@ -10,5 +10,4 @@ void throw_error(const char *fmt, ...) {
 	vsnprintf(buffer, sizeof(buffer), fmt, args);
 	va_end(args);
 	fprintf(stderr, "\033[1;31mError:\033[0m %s\n", buffer);
-	exit(1);
 }

@@ -1,0 +1,20 @@
+{
+	"type": "object",
+	"properties": {
+		"project": {
+			"type": "string",
+			"default": "aloo-project",
+			"description": "Name of the project and project dir"
+		},
+		"app": {
+			"type": "string",
+			"default": "Example App",
+			"description": "Name and window title of the app"
+		},
+		"description": {
+			"type": "string",
+			"default": "An default template for aloo App",
+			"description": "Description of the app"
+		}
+	}
+}

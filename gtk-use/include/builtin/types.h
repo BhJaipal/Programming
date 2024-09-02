@@ -20,14 +20,6 @@ typedef enum WidgetType {
 	 */
 	ALOO_GRID,
 	/**
-	 * @brief Used for Gtk Row
-	 */
-	ALOO_ROW,
-	/**
-	 * @brief Used for Gtk Column
-	 */
-	ALOO_COLUMN,
-	/**
 	 * @brief Used for Gtk Button
 	 */
 	ALOO_BUTTON,

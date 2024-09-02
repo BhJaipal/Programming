@@ -1,5 +1,5 @@
-#include "widget.h"
-#include "macros.h"
+#include "builtin/widget.h"
+#include "builtin/macros.h"
 #include <gtk/gtk.h>
 
 GtkWidget *__WidtoGtk(alooWidget *wid) { return wid->child; }
