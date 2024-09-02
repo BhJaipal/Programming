@@ -1,4 +1,4 @@
-#!/home/jaipal001/.bun/bin/bun
+#!/home/linuxbrew/.linuxbrew/node
 "use strict";
 /// <reference types="node" />
 Object.defineProperty(exports, "__esModule", { value: true });

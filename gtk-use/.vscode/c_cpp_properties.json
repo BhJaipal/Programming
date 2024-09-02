@@ -24,6 +24,7 @@
 				"/usr/include/cairo",
 				"/usr/include/pango-1.0",
 				"/usr/include/harfbuzz",
+				"/usr/include/tirpc",
 				"/usr/include/fontconfig"
 			],
 			"defines": [],

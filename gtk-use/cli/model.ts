@@ -48,11 +48,12 @@ export function createModel(argv: string[]) {
 
 	let typeSwitch = {
 		string: "char *",
-		bool: "boolean",
+		bool: "_Bool",
 		int: "int",
 		float: "float",
 	};
 	let content = `#include "aloo.h"
+#include <stdbool.h>
 
 typedef struct _${modelName} {
 	${modelProps

@@ -1,0 +1,99 @@
+.TH "_alooApp" 3 "Mon Sep 2 2024" "Version 1.0" "Aloo" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+_alooApp
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <app\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBAlooApplication\fP *(* \fBcreate\fP )(const char *app_id, struct \fBalooAppOptions\fP gAppOptions)"
+.br
+.RI "Create a App object\&. "
+.ti -1c
+.RI "int(* \fBrun\fP )(\fBAlooApplication\fP *application)"
+.br
+.RI "Runs aloo App\&. "
+.ti -1c
+.RI "int(* \fBrun_and_unref\fP )(\fBAlooApplication\fP *application)"
+.br
+.RI "Runs aloo App and unrefs after exiting it\&. "
+.ti -1c
+.RI "void(* \fBunref\fP )(\fBAlooApplication\fP *application)"
+.br
+.RI "unrefs aloo App "
+.ti -1c
+.RI "void(* \fBadd_event_listener\fP )(\fBAlooApplication\fP *app, const char *event, void callbackFn())"
+.br
+.RI "Adds Event Listener to Aloo App\&. "
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "void(* _alooApp::add_event_listener) (\fBAlooApplication\fP *app, const char *event, void callbackFn())"
+
+.PP
+Adds Event Listener to Aloo App\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIapp\fP Aloo Application 
+.br
+\fIevent\fP Event name 
+.br
+\fIcallbackFn\fP static void function which will be called when app is started 
+.RE
+.PP
+
+.SS "\fBAlooApplication\fP*(* _alooApp::create) (const char *app_id, struct \fBalooAppOptions\fP gAppOptions)"
+
+.PP
+Create a App object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIapp_id\fP App Id are like com\&.google\&.Chrome, dev\&.zed\&.Zed 
+.br
+\fIgAppOptions\fP It takes GApplicationFlags, argc and argv 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+It returns Aloo Application 
+.RE
+.PP
+
+.SS "int(* _alooApp::run) (\fBAlooApplication\fP *application)"
+
+.PP
+Runs aloo App\&. 
+.PP
+\fBReturns\fP
+.RS 4
+status on exiting app 
+.RE
+.PP
+
+.SS "int(* _alooApp::run_and_unref) (\fBAlooApplication\fP *application)"
+
+.PP
+Runs aloo App and unrefs after exiting it\&. 
+.PP
+\fBReturns\fP
+.RS 4
+status on exiting app 
+.RE
+.PP
+
+.SS "void(* _alooApp::unref) (\fBAlooApplication\fP *application)"
+
+.PP
+unrefs aloo App 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Aloo from the source code\&.

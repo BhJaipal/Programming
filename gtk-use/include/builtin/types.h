@@ -56,5 +56,4 @@ typedef struct {
 	GtkBuilder *builder;
 } AlooBuilder;
 
-typedef enum _boolean { false = 0, true = 1 } boolean;
 #endif // ALOO_TYPES_H

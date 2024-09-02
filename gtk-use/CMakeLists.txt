@@ -16,6 +16,7 @@ add_library(aloo
 	"src/utils/error.c"
 	"src/utils/logger.c"
 	"src/test/aloo.c"
+	"src/db/sqlite.c"
 )
 set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/lib/)
 
@@ -31,5 +32,6 @@ include_directories(
 	"/usr/include/pango-1.0"
 	"/usr/include/graphene-1.0"
 	"/usr/include/harfbuzz"
+	"/usr/include/tirpc"
 	)
 target_link_libraries(aloo "/lib/x86_64-linux-gnu/libgtk-4.so.1" "/lib/x86_64-linux-gnu/libglib-2.0.so.0")

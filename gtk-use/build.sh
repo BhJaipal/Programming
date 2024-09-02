@@ -1,5 +1,5 @@
-if [ ! -d "out/" ]; then
-	mkdir out
+if [ ! -d "build/" ]; then
+	mkdir build
 fi
 
-cd out && cmake .. && make all
+cd build && cmake .. && make all

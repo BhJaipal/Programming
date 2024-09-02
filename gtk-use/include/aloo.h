@@ -14,6 +14,7 @@
 #include "builtin/style.h"
 #include "builtin/widget.h"
 #include "builtin/window.h"
+#include "db/sqlite.h"
 #include "test/aloo.h"
 #include "utils/error.h"
 #include "utils/logger.h"

@@ -3,6 +3,9 @@
 		"*.embeddedhtml": "html",
 		"*.vue": "vue",
 		"*.td": "cpp",
+		"*.ui": "xml",
+		"*.3": "manpage",
+		"*.sh": "shellscript",
 		"*.h": "c",
 		"*.tcc": "cpp",
 		"string": "cpp",
@@ -63,11 +66,12 @@
 		"thread": "cpp",
 		"cinttypes": "cpp",
 		"fstream": "cpp",
-		"sstream": "cpp"
+		"sstream": "cpp",
+		"cstdbool": "c"
 	},
-	"cmake.sourceDirectory": "/home/jaipal001/Desktop/files/c-use/Programming/bf-compiler",
+	"cmake.sourceDirectory": "/home/jaipal001/Desktop/files/c-use/Programming/gtk-use",
+	"cmake.buildDirectory": "${workspaceFolder}/build",
 	"cmake.configureOnOpen": true,
 	"cmake.cmakePath": "/home/linuxbrew/.linuxbrew/bin/cmake",
-	"C_Cpp.default.configurationProvider": "mesonbuild.mesonbuild",
-	"C_Cpp.default.compileCommands": "/home/jaipal001/Desktop/files/c-use/Programming/gtk-use/examples/builddir/compile_commands.json"
+	"C_Cpp.default.configurationProvider": "mesonbuild.mesonbuild"
 }
