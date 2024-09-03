@@ -15,9 +15,8 @@ int main() {
 	char *query = "SELECT * FROM Human;";
 	char *err;
 	sqlite3_exec(db, query, callback, 0, &err);
-	printf("\nMy:\n");
 	char *cols[] = {"name", "age"};
-	SQLite.select(db, "Human", 2, cols, "", callback, &err);
+	SQLite.select(db, "Human", 2, cols, "", callback, err);
 	// SQLite.delete(db, "Human", (void *)0, "name ='Hakuna'", (void *)0, &err);
 	// char *data[] = {"'Hakari'", "35", "1"};
 	// SQLite.insert(db, "Human", 3, (void *)0, data, &err);

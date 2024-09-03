@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['new_403',['new',['../struct__alooBox.html#a0f82e2a09cc3488093b056821ed5f7a6',1,'_alooBox::new()'],['../struct__alooButton.html#a26f4b40e9af86452d56fac768710c07e',1,'_alooButton::new()'],['../struct__alooGrid.html#a5ddaecaba56d30befbb66f7b46473bf5',1,'_alooGrid::new()'],['../struct____alooLabel.html#adf6d0ff07874ae1917e0665efb600042',1,'__alooLabel::new()'],['../struct__aloo__widget.html#a24781862adde361327794b8d11e570f8',1,'_aloo_widget::new()'],['../struct__alooWindow.html#a78bd31852545559e9fe4c3c033027a03',1,'_alooWindow::new()']]],
-  ['newwithlabel_404',['newWithLabel',['../struct__alooButton.html#a1078f7ba42c97c41778891dd8eff95f5',1,'_alooButton']]]
+  ['label_430',['label',['../struct__alooButton.html#aac2af111a621aa828b927dd1679a0189',1,'_alooButton::label()'],['../struct__Test.html#a0bd92050f994bb94748e1e95e92449ce',1,'_Test::label()']]],
+  ['label_431',['Label',['../label_8h.html#a7bf2150721f7576df4178adce8b5885f',1,'label.h']]],
+  ['log_432',['log',['../struct__logger.html#a4c34f8e06f85db9bf491f25d28b80b02',1,'_logger']]],
+  ['logcount_433',['logCount',['../struct__logger.html#a28552845e9628e91b094c550f95b623e',1,'_logger']]]
 ];

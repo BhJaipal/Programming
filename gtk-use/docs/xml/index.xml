@@ -105,6 +105,14 @@
     <member refid="struct__logger_1a584fcf64548f3b986ac55d7a69c3dad6" kind="variable"><name>warn</name></member>
     <member refid="struct__logger_1ae2b060f696159cc33423ea24d6d7fba3" kind="variable"><name>info</name></member>
   </compound>
+  <compound refid="struct__sqlite" kind="struct"><name>_sqlite</name>
+    <member refid="struct__sqlite_1afe6dbd7c67fc275704f5f16e9ae0e932" kind="variable"><name>open</name></member>
+    <member refid="struct__sqlite_1a771053bdda4b0afa0938af49d649cd74" kind="variable"><name>close</name></member>
+    <member refid="struct__sqlite_1a3ed8874eade23e07b457f59061dc8ad1" kind="variable"><name>insert</name></member>
+    <member refid="struct__sqlite_1a101481685cf303f78cef4b2a3b947e5e" kind="variable"><name>select</name></member>
+    <member refid="struct__sqlite_1a1d16da2c3b72510a16a5433f3d4a8351" kind="variable"><name>delete</name></member>
+    <member refid="struct__sqlite_1af80b621843d2153d49346df2a3deecd0" kind="variable"><name>createTable</name></member>
+  </compound>
   <compound refid="struct__Test" kind="struct"><name>_Test</name>
     <member refid="struct__Test_1a169317fcfd89e5ef103f393c8f6efeff" kind="variable"><name>expectInt</name></member>
     <member refid="struct__Test_1a682ccf17d21a59da2fba0661901a98e9" kind="variable"><name>expectWidget</name></member>
@@ -275,6 +283,17 @@
     <member refid="window_8h_1ab502a5b1d6124e5e111fe70586041aab" kind="function"><name>__app_add_window</name></member>
     <member refid="window_8h_1a39fd2992cacd3b32562cf06fd1ce6053" kind="function"><name>__showWindow</name></member>
   </compound>
+  <compound refid="sqlite_8h" kind="file"><name>sqlite.h</name>
+    <member refid="sqlite_8h_1ad3883d9882cc125fcfd6aad9ef4ee2a0" kind="variable"><name>SQLite</name></member>
+    <member refid="sqlite_8h_1a5172b6fcaabbbfb527e2c4916525e033" kind="function"><name>__open</name></member>
+    <member refid="sqlite_8h_1ab9e82c17fce4e8c2640c8ee1bc0efe34" kind="function"><name>__close</name></member>
+    <member refid="sqlite_8h_1a4da98c6c9b00ad7fa2801f1a31fafe86" kind="function"><name>__createTable</name></member>
+    <member refid="sqlite_8h_1a7d2ca210fe3d981e9d050eb2c262311b" kind="function"><name>__insert</name></member>
+    <member refid="sqlite_8h_1a340e95e03d31b54bb55ce97f4f645f73" kind="function"><name>__select</name></member>
+    <member refid="sqlite_8h_1a5976f0bc78641c0bfe585132294b0546" kind="function"><name>__delete</name></member>
+    <member refid="sqlite_8h_1a814146dbcfbb8bb2a0ea91c27b4cd398" kind="function"><name>nothing</name></member>
+    <member refid="sqlite_8h_1a2098cef738d866a9aef381f883952450" kind="function"><name>isString</name></member>
+  </compound>
   <compound refid="error_8h" kind="file"><name>error.h</name>
     <member refid="error_8h_1a31f07c06769ff35959ac6176f357b75f" kind="function"><name>throw_error</name></member>
   </compound>
@@ -283,6 +302,8 @@
     <member refid="logger_8h_1a639f04f96874bca1121f4059febb3832" kind="function"><name>__aloo_log</name></member>
   </compound>
   <compound refid="dir_c10003263d955484aa2f09dad14a1556" kind="dir"><name>include/builtin</name>
+  </compound>
+  <compound refid="dir_b9635e7b6d5f225ac0f930b21f213d87" kind="dir"><name>include/db</name>
   </compound>
   <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
   </compound>

@@ -33,5 +33,10 @@ include_directories(
 	"/usr/include/graphene-1.0"
 	"/usr/include/harfbuzz"
 	"/usr/include/tirpc"
-	)
-target_link_libraries(aloo "/lib/x86_64-linux-gnu/libgtk-4.so.1" "/lib/x86_64-linux-gnu/libglib-2.0.so.0")
+)
+target_link_libraries(aloo
+	"/lib/x86_64-linux-gnu/libgtk-4.so.1"
+	"/lib/x86_64-linux-gnu/libglib-2.0.so.0"
+	"/lib/x86_64-linux-gnu/libsqlite3.so"
+	"/lib/x86_64-linux-gnu/libsqlite3.so.0"
+)

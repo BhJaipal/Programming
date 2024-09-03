@@ -3,7 +3,7 @@
 
 typedef struct _Human {
 	int id;
-	char *name;
+	char * name;
 	int age;
 	_Bool isMale;
 } Human;

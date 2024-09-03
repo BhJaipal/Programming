@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['getbaselineposition_379',['getBaselinePosition',['../struct__alooBox.html#aa937c3df70a2a2c3f96acf66239fa5a7',1,'_alooBox']]],
-  ['getbuilderobject_380',['getBuilderObject',['../struct__AlooBuilder.html#a8e14c8d9c86b5c55ceae67ebba4180d8',1,'_AlooBuilder']]],
-  ['getclasses_381',['getClasses',['../struct__alooCSS.html#ad1f623aea153448d39ac6e09510efc62',1,'_alooCSS']]],
-  ['gethomogeneous_382',['getHomogeneous',['../struct__alooBox.html#ae2630f6d6c9d41ec92e714ac97354e9d',1,'_alooBox']]],
-  ['getorientation_383',['getOrientation',['../struct__alooBox.html#a58bbac0215bc20556f63187710bd4d8a',1,'_alooBox']]],
-  ['getspacing_384',['getSpacing',['../struct__alooBox.html#a335c20039a226d4406116a139b618e79',1,'_alooBox']]],
-  ['grid_385',['Grid',['../grid_8h.html#aba04f3722c5bd2bb653281967a04555b',1,'grid.h']]],
-  ['gtk_5fto_5faloo_386',['gtk_to_aloo',['../struct__aloo__widget.html#abdec12adebb7e37c406c628d47a84e66',1,'_aloo_widget']]]
+  ['err_405',['err',['../struct__logger.html#a56c53126d4c6eb3c00b0bd2557c82079',1,'_logger']]],
+  ['expectgtkwidget_406',['expectGtkWidget',['../struct__Test.html#a6dbdf1c670902b0a4631d11990bdf542',1,'_Test']]],
+  ['expectint_407',['expectInt',['../struct__Test.html#a169317fcfd89e5ef103f393c8f6efeff',1,'_Test']]],
+  ['expectwidget_408',['expectWidget',['../struct__Test.html#a682ccf17d21a59da2fba0661901a98e9',1,'_Test']]]
 ];

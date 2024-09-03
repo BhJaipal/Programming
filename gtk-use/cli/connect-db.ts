@@ -25,7 +25,7 @@ export function connectDbWithModel(argv: string[]) {
 
 	let modelName: string = "";
 	let matchModel: string[] | null = null;
-	if (args.length == 1) {
+	if (args.length == 1 && args[0].match(/--model=\w+/)) {
 		matchModel = args[0].match(/--model=\w+/);
 		if (matchModel != null && typeof matchModel[0] == "string") {
 			modelName = matchModel[0].split("--match=")[1];
@@ -55,26 +55,61 @@ export function connectDbWithModel(argv: string[]) {
 		if (!existsSync(process.cwd() + "/server")) {
 			mkdirSync(process.cwd() + "/server");
 		}
+		let serverSampleHeader = readFileSync(
+			`${alooCli.split("/bin/aloo")[0]}/cli/sample/main.server.h`
+		).toString();
+		while (serverSampleHeader.includes("$modelName"))
+			serverSampleHeader = serverSampleHeader.replace(
+				"$modelName",
+				modelName
+			);
+		writeFileSync(
+			`${process.cwd()}/server/${modelName}.h`,
+			serverSampleHeader
+		);
+
 		let serverSample = readFileSync(
-			`${argv[1].split("/bin/aloo")[0]}/cli/sample/main.server.c`
+			`${alooCli.split("/bin/aloo")[0]}/cli/sample/main.server.c`
 		).toString();
 		while (serverSample.includes("$modelName"))
 			serverSample = serverSample.replace("$modelName", modelName);
-		console.log();
 
 		let model = alooJson["models"].find(
 			(model) => model["modelName"] == modelName
 		);
 		if (model == undefined || model == null) return;
-		serverSample = serverSample.replace("$body", sqlBody(model.members));
-
 		serverSample = serverSample.replace(
 			"$cols",
-			model.members.map((member) => `"${member.member}"`).join(", ")
+			model.members?.map((el) => el.member).join(", ")
 		);
-		// console.log(serverSample);
+		serverSample = serverSample.replace("$body", sqlBody(model.members));
 
-		writeFileSync(`${process.cwd()}/server/${modelName}.c`, serverSample);
+		let typeConvert = {
+			string: ["", ""],
+			int: ["str_to_int(", ")"],
+			float: ["strtod(", ")"],
+			bool: ["str_to_int(", ")"],
+		};
+		(serverSample = serverSample.replace(
+			"val.$member = values[i++];",
+			model.members
+				.map(
+					(member) =>
+						"val." +
+						member.member +
+						" = " +
+						typeConvert[member.type][0] +
+						"values[i++]" +
+						typeConvert[member.type][1] +
+						";\n"
+				)
+				.join("\t")
+		)),
+			// console.log(serverSample);
+			writeFileSync(
+				`${process.cwd()}/server/${modelName}.c`,
+				serverSample
+			);
 	}
 }
 

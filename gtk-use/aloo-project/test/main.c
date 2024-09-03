@@ -1,3 +1,4 @@
+#include "../server/Human.h"
 #include "aloo.h"
 #include <stdio.h>
 AlooApplication *app;
@@ -26,6 +27,13 @@ int main(int argc, char **argv) {
 	struct alooAppOptions opts = NONE_FLAGS_OPTIONS(argc, argv);
 	app = Application.create("com.example.hello", opts);
 	Application.add_event_listener(app, "activate", activate);
+
+	// sqlite3 *db;
+	// SQLite.open("db.sqlite", &db);
+	// char *vals[3] = {"Hema", "21", "0"};
+	// char *err;
+	// insertHuman(db, vals, &err);
+	// SQLite.close(db);
 
 	int status = Application.run(app);
 	Application.unref(app);

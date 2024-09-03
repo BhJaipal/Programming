@@ -1,12 +1,22 @@
 var searchData=
 [
-  ['test_212',['Test',['../test_2aloo_8h.html#ad7be07ac2f3d38ab7f62698d48cb490f',1,'aloo.h']]],
-  ['testcount_213',['testCount',['../struct__Test.html#ad00a8e81fdf1a4fef80a806356636fa4',1,'_Test']]],
-  ['testfailed_214',['testFailed',['../struct__Test.html#a9dd30642d8c30ed2da31846d7dbe0abc',1,'_Test']]],
-  ['testpassed_215',['testPassed',['../struct__Test.html#a3516562310dcde3f955996f7216078f2',1,'_Test']]],
-  ['throw_5ferror_216',['throw_error',['../error_8h.html#a31f07c06769ff35959ac6176f357b75f',1,'error.h']]],
-  ['to_5fgtk_217',['to_gtk',['../struct__aloo__widget.html#ae9f51cf09ee1c5352c4ed61d811b8e1c',1,'_aloo_widget']]],
-  ['togtk_218',['toGtk',['../struct__alooBox.html#a10aed6fb942400c82efdc07545754ca6',1,'_alooBox::toGtk()'],['../struct__alooButton.html#ae2f828579d8d4a89c5c4ed6fdabde2d0',1,'_alooButton::toGtk()'],['../struct__alooGrid.html#af937d1f40a682a4901170fcb376bb959',1,'_alooGrid::toGtk()'],['../struct____alooLabel.html#ad5fb05f426389c800a67a2440d76ea27',1,'__alooLabel::toGtk()']]],
-  ['type_219',['type',['../structalooWidget.html#a6db0456b6604492033507fcaeda3fe46',1,'alooWidget']]],
-  ['types_2eh_220',['types.h',['../types_8h.html',1,'']]]
+  ['select_210',['select',['../struct__sqlite.html#a101481685cf303f78cef4b2a3b947e5e',1,'_sqlite']]],
+  ['service_5fflags_5foptions_211',['SERVICE_FLAGS_OPTIONS',['../macros_8h.html#a6008f3d8d9740cf975902f6e7cbc2afc',1,'macros.h']]],
+  ['set_5fapp_5fwindow_212',['set_app_window',['../struct__alooWindow.html#a85e3f943840da73ad0f523afe111fea5',1,'_alooWindow']]],
+  ['setbaselineposition_213',['setBaselinePosition',['../struct__alooBox.html#a571a44554f9bfde87c5ea8b8d6dbd42a',1,'_alooBox']]],
+  ['setchild_214',['setChild',['../struct__alooWindow.html#a89ae4f7b03da6d8b702cfed1878a9885',1,'_alooWindow']]],
+  ['setclasses_215',['setClasses',['../struct__alooCSS.html#a1b66d52043761c243521650d3a4cfc57',1,'_alooCSS']]],
+  ['setheight_216',['setHeight',['../struct__alooCSS.html#a1991160a4b6c11ed6673826cb3add5fe',1,'_alooCSS']]],
+  ['sethomogeneous_217',['setHomogeneous',['../struct__alooBox.html#a9741ad2eee8709f50bb74062be8f6e99',1,'_alooBox']]],
+  ['setname_218',['setName',['../struct__aloo__widget.html#aa45e9615b6d01b0fd6f1e6d71713a8af',1,'_aloo_widget']]],
+  ['setorientation_219',['setOrientation',['../struct__alooBox.html#a6197500c5e05f484b6f7d37979b54ae6',1,'_alooBox::setOrientation()'],['../struct__aloo__widget.html#a9d40a37f38c89555c5135f9bd59aa340',1,'_aloo_widget::setOrientation()']]],
+  ['setsize_220',['setSize',['../struct__alooCSS.html#aea265c46559d1ef2994f3b09b294a10d',1,'_alooCSS::setSize()'],['../struct__alooWindow.html#aeccc58102d537099a2148c1441cb121e',1,'_alooWindow::setSize()']]],
+  ['setspacing_221',['setSpacing',['../struct__alooBox.html#aaa07bdda18dba4d92605b10bea13110f',1,'_alooBox']]],
+  ['settitle_222',['setTitle',['../struct__alooWindow.html#afa4cabcec46bc162b3248c585a485d24',1,'_alooWindow']]],
+  ['setwidth_223',['setWidth',['../struct__alooCSS.html#a70dab3304af5a4d743a501afac64c471',1,'_alooCSS']]],
+  ['show_224',['show',['../struct__alooWindow.html#aed2ce94649355d0dafe31fe876cd1e36',1,'_alooWindow']]],
+  ['sqlite_225',['SQLite',['../sqlite_8h.html#ad3883d9882cc125fcfd6aad9ef4ee2a0',1,'sqlite.h']]],
+  ['sqlite_2eh_226',['sqlite.h',['../sqlite_8h.html',1,'']]],
+  ['status_227',['status',['../structAlooApplication.html#a1b52847b827b37c8eb858307f691f0a4',1,'AlooApplication']]],
+  ['style_2eh_228',['style.h',['../style_8h.html',1,'']]]
 ];

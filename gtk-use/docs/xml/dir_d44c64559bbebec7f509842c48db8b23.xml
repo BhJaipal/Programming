@@ -3,6 +3,7 @@
   <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
     <compoundname>include</compoundname>
     <innerdir refid="dir_c10003263d955484aa2f09dad14a1556">include/builtin</innerdir>
+    <innerdir refid="dir_b9635e7b6d5f225ac0f930b21f213d87">include/db</innerdir>
     <innerdir refid="dir_69f6b0b437b9d7106ae46b3b241ba72b">include/test</innerdir>
     <innerdir refid="dir_821002d4f10779a80d4fb17bc32f21f1">include/utils</innerdir>
     <innerfile refid="aloo_8h">aloo.h</innerfile>

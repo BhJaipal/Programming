@@ -12,6 +12,7 @@
     <includes refid="style_8h" local="yes">builtin/style.h</includes>
     <includes refid="widget_8h" local="yes">builtin/widget.h</includes>
     <includes refid="window_8h" local="yes">builtin/window.h</includes>
+    <includes refid="sqlite_8h" local="yes">db/sqlite.h</includes>
     <includes refid="test_2aloo_8h" local="yes">test/aloo.h</includes>
     <includes refid="error_8h" local="yes">utils/error.h</includes>
     <includes refid="logger_8h" local="yes">utils/logger.h</includes>
@@ -36,7 +37,7 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="14">
+      <node id="16">
         <label>test/aloo.h</label>
         <link refid="test_2aloo_8h"/>
         <childnode refid="12" relation="include">
@@ -60,6 +61,9 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+      </node>
+      <node id="15">
+        <label>sqlite3.h</label>
       </node>
       <node id="1">
         <label>include/aloo.h</label>
@@ -86,12 +90,14 @@
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
         <childnode refid="16" relation="include">
         </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
       </node>
-      <node id="15">
+      <node id="17">
         <label>utils/error.h</label>
         <link refid="error_8h"/>
       </node>
@@ -109,9 +115,15 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="16">
+      <node id="18">
         <label>utils/logger.h</label>
         <link refid="logger_8h"/>
+      </node>
+      <node id="14">
+        <label>db/sqlite.h</label>
+        <link refid="sqlite_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
       </node>
       <node id="12">
         <label>builtin/widget.h</label>
@@ -160,9 +172,10 @@
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="style_8h" kindref="compound">builtin/style.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="widget_8h" kindref="compound">builtin/widget.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="window_8h" kindref="compound">builtin/window.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="test_2aloo_8h" kindref="compound">test/aloo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="error_8h" kindref="compound">utils/error.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="logger_8h" kindref="compound">utils/logger.h</ref>&quot;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sqlite_8h" kindref="compound">db/sqlite.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="test_2aloo_8h" kindref="compound">test/aloo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="error_8h" kindref="compound">utils/error.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="logger_8h" kindref="compound">utils/logger.h</ref>&quot;</highlight></codeline>
     </programlisting>
     <location file="include/aloo.h"/>
   </compounddef>

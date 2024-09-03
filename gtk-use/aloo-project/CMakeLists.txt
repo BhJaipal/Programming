@@ -32,4 +32,6 @@ target_link_libraries(run.exe
 	"/lib/x86_64-linux-gnu/libgobject-2.0.so"
 	"/lib/x86_64-linux-gnu/libgio-2.0.so"
 	"/lib/x86_64-linux-gnu/libgio-2.0.so.0"
+	"/lib/x86_64-linux-gnu/libsqlite3.so"
+	"/lib/x86_64-linux-gnu/libsqlite3.so.0"
 )

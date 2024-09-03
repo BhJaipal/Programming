@@ -1,10 +1,17 @@
 var searchData=
 [
-  ['label_172',['label',['../struct__alooButton.html#aac2af111a621aa828b927dd1679a0189',1,'_alooButton::label()'],['../struct__Test.html#a0bd92050f994bb94748e1e95e92449ce',1,'_Test::label()']]],
-  ['label_173',['Label',['../label_8h.html#a7bf2150721f7576df4178adce8b5885f',1,'label.h']]],
-  ['label_2eh_174',['label.h',['../label_8h.html',1,'']]],
-  ['launcher_5fflags_5foptions_175',['LAUNCHER_FLAGS_OPTIONS',['../macros_8h.html#a7e8face0ef0eb9ad79f944cadb88b9a9',1,'macros.h']]],
-  ['log_176',['log',['../struct__logger.html#a4c34f8e06f85db9bf491f25d28b80b02',1,'_logger']]],
-  ['logcount_177',['logCount',['../struct__logger.html#a28552845e9628e91b094c550f95b623e',1,'_logger']]],
-  ['logger_2eh_178',['logger.h',['../logger_8h.html',1,'']]]
+  ['icon_170',['icon',['../struct__alooButton.html#ac1f2e7587e09b5aa3bba9eabc710f353',1,'_alooButton']]],
+  ['importdata_171',['importData',['../struct__alooCSS.html#a96b9c02727a5207e4500d477058d9539',1,'_alooCSS']]],
+  ['importfile_172',['importFile',['../struct__alooCSS.html#a85d85917cfb004497f642fd5b82ad996',1,'_alooCSS']]],
+  ['importpath_173',['importPath',['../struct__alooCSS.html#a7ecf5733e77f656ce271511463559636',1,'_alooCSS']]],
+  ['info_174',['info',['../struct__logger.html#ae2b060f696159cc33423ea24d6d7fba3',1,'_logger']]],
+  ['insert_175',['insert',['../struct__sqlite.html#a3ed8874eade23e07b457f59061dc8ad1',1,'_sqlite']]],
+  ['insertchildafter_176',['insertChildAfter',['../struct__alooBox.html#af73633e9cac8f4e36a983b884a0c8d04',1,'_alooBox']]],
+  ['is_5fwidget_5fof_5ftype_177',['is_widget_of_type',['../widget_8h.html#a3d1153ced7b9d4a37a9233094ae3faba',1,'widget.h']]],
+  ['isbox_178',['isBox',['../struct__aloo__widget.html#afe1ac20463d7aeb13e86329f21fd1692',1,'_aloo_widget']]],
+  ['isbutton_179',['isButton',['../struct__aloo__widget.html#aaca79d879242002145c567d23dde5f00',1,'_aloo_widget']]],
+  ['isgrid_180',['isGrid',['../struct__aloo__widget.html#a947245df7a382e70a17743d7e66c7dd1',1,'_aloo_widget']]],
+  ['islabel_181',['isLabel',['../struct__aloo__widget.html#a8d4622a7361aee09f8a134cc06bdbce5',1,'_aloo_widget']]],
+  ['isstring_182',['isString',['../sqlite_8h.html#a2098cef738d866a9aef381f883952450',1,'sqlite.h']]],
+  ['iswindow_183',['isWindow',['../struct__aloo__widget.html#aac40ca7229de169c3bb4ba63ca64eb9d',1,'_aloo_widget']]]
 ];

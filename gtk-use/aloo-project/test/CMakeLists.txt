@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.30)
 
 project(aloo-project)
 
-add_executable(test-run.exe main.c)
+add_executable(test-run.exe main.c "../server/Human.c")
 set(CMAKE_BINARY_DIR build/)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/../bin/)
 
@@ -32,4 +32,6 @@ target_link_libraries(test-run.exe
 	"/lib/x86_64-linux-gnu/libgobject-2.0.so"
 	"/lib/x86_64-linux-gnu/libgio-2.0.so"
 	"/lib/x86_64-linux-gnu/libgio-2.0.so.0"
+	"/lib/x86_64-linux-gnu/libsqlite3.so"
+	"/lib/x86_64-linux-gnu/libsqlite3.so.0"
 )

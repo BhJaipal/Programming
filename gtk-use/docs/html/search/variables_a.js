@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['prepend_407',['prepend',['../struct__alooBox.html#a71774ec2379dd3450c332238474fd160',1,'_alooBox']]],
-  ['prependgtk_408',['prependGtk',['../struct__alooBox.html#a14faa9e89158b71e5dfd28eb93177479',1,'_alooBox']]],
-  ['present_409',['present',['../struct__alooWindow.html#ae0ac2345055d140263283193d63e12b9',1,'_alooWindow']]]
+  ['obj_5fto_5faloo_436',['obj_to_aloo',['../struct__aloo__widget.html#aa66c3a240c3bee4bd8f5226dcca5e4af',1,'_aloo_widget']]],
+  ['obj_5fto_5fgtk_437',['obj_to_gtk',['../struct__aloo__widget.html#ab8a4d5b85e91e9ee34490fa1321b3aad',1,'_aloo_widget']]],
+  ['open_438',['open',['../struct__sqlite.html#afe6dbd7c67fc275704f5f16e9ae0e932',1,'_sqlite']]]
 ];

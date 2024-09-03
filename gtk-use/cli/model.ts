@@ -66,8 +66,8 @@ typedef struct _${modelName} {
 	if (!existsSync(process.cwd() + "/models"))
 		mkdirSync(process.cwd() + "/models");
 
-	if (!existsSync(process.cwd() + "/models/" + argv[0] + ".c")) {
-		writeFileSync(process.cwd() + "/models/" + argv[0] + ".c", content);
+	if (!existsSync(process.cwd() + "/models/" + argv[0] + ".h")) {
+		writeFileSync(process.cwd() + "/models/" + argv[0] + ".h", content);
 		let alooJson = readFileSync(`${process.cwd()}/aloo.json`).toString();
 		let aloo = JSON.parse(alooJson);
 		if (aloo["models"])
