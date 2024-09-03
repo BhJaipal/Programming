@@ -75,6 +75,11 @@ int __delete(sqlite3 *db, char *table_name, char **column_names,
 	}
 	return 0;
 }
+int __createTable(sqlite3 *db, char *table_name, char *body, char **errmsg) {
+	char query[1024];
+	sprintf(query, "CREATE TABLE IF NOT EXISTS %s(%s);", table_name, body);
+	return sqlite3_exec(db, query, NULL, NULL, errmsg);
+}
 
 struct _sqlite SQLite = {
 	.close = __close,
@@ -82,4 +87,5 @@ struct _sqlite SQLite = {
 	.insert = __insert,
 	.open = __open,
 	.select = __select,
+	.createTable = __createTable,
 };

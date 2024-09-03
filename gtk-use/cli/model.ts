@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, writeFileSync } from "fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 
 export function createModel(argv: string[]) {
 	if (!argv.length) throw "No name is provided";
@@ -56,10 +56,11 @@ export function createModel(argv: string[]) {
 #include <stdbool.h>
 
 typedef struct _${modelName} {
+	int id;
 	${modelProps
 		.map((props) => `${typeSwitch[props.type]} ${props.key};`)
 		.join("\n\t")}
-};
+} ${modelName};
 `;
 
 	if (!existsSync(process.cwd() + "/models"))
@@ -67,6 +68,35 @@ typedef struct _${modelName} {
 
 	if (!existsSync(process.cwd() + "/models/" + argv[0] + ".c")) {
 		writeFileSync(process.cwd() + "/models/" + argv[0] + ".c", content);
+		let alooJson = readFileSync(`${process.cwd()}/aloo.json`).toString();
+		let aloo = JSON.parse(alooJson);
+		if (aloo["models"])
+			aloo["models"] = [
+				...aloo["models"],
+				{
+					modelName,
+					members: modelProps.map(({ key, type }) => {
+						return {
+							member: key,
+							type,
+						};
+					}),
+				},
+			];
+		else
+			aloo["models"] = [
+				{
+					modelName,
+					members: modelProps.map(({ key, type }) => {
+						return {
+							member: key,
+							type,
+						};
+					}),
+				},
+			];
+		alooJson = JSON.stringify(aloo);
+		writeFileSync(`${process.cwd()}/aloo.json`, alooJson);
 	} else {
 		throw "Model '" + modelName + "' already exists";
 	}

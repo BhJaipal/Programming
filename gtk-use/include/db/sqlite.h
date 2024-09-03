@@ -6,6 +6,7 @@
 
 int __open(const char *filename, sqlite3 **db);
 void __close(sqlite3 *db);
+int __createTable(sqlite3 *db, char *table_name, char *body, char **errmsg);
 int __insert(sqlite3 *db, char *table_name, int column_count,
 			 char **column_names, char **values, char **errmsg);
 int __select(sqlite3 *db, char *table_name, int column_count,
@@ -36,6 +37,8 @@ struct _sqlite {
 				  int (*callback)(void *data, int rows_count, char **values,
 								  char **column_names),
 				  char **errmsg);
+	int (*createTable)(sqlite3 *db, char *table_name, char *body,
+					   char **errmsg);
 };
 extern struct _sqlite SQLite;
 

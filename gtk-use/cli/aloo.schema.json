@@ -15,6 +15,37 @@
 			"type": "string",
 			"default": "An default template for aloo App",
 			"description": "Description of the app"
+		},
+		"models": {
+			"type": "array",
+			"description": "List of models",
+			"items": {
+				"type": "object",
+				"properties": {
+					"modelName": {
+						"type": "string",
+						"description": "Name of the model"
+					},
+					"members": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"member": {
+									"type": "string",
+									"description": "Name of the model member"
+								},
+								"type": {
+									"type": "string",
+									"enum": ["int", "float", "string", "bool"],
+									"description": "Data type of the model member"
+								}
+							}
+						},
+						"description": "Data types of the model members"
+					}
+				}
+			}
 		}
 	}
 }
