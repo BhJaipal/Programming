@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.30)
 
-project(${project})
+project("${appName}")
 
 add_executable(run.exe src/main.c)
 set(CMAKE_BINARY_DIR build/)

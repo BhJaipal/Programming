@@ -1,3 +1,6 @@
+clear
+echo "$1  $2"
+sleep 1
 if [ $2 = "app" ]; then
 	if [ -f bin/run.exe ]; then
 		$1/bin/run.exe

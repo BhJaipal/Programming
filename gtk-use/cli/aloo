@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+help() {
+	echo -e "\t\t\t\t\t\t\t\t\t\033[1mALOO CLI\033[0m"
+	echo -e "\033[32mCommands\033[0m"
+	echo -e "\t\t\033[1maloo create-app <name>\033[0m\t\t\t\t\t\tCreates C Aloo app template\n"
+	echo -e "\t\t\033[1maloo run [ app | test ]\033[0m\t\t\t\t\t\tRuns Aloo app/ test build\n"
+	echo -e "\t\t\033[1maloo build [app | test ]\033[0m\t\t\t\t\t\tBuilds Aloo app/ tests\n"
+	echo -e "\t\t\033[1maloo clean [app | test ]\033[0m\t\t\t\t\t\tRemoves previous build data and executables\n"
+	echo -e "\033[32mUtilities\033[0m"
+	echo -e "\t\t\033[1maloo model\033[0m\t\t\t\t\t\t\t\tCreates model\n"
+	echo -e "\t\t\033[1maloo connect-db [ sqlite3 | mongo ]\033[0m\t\t\tConnect to database\n"
+}
+
+if [[ $1 = "create-app" ]]; then
+	if [ $2 ]; then
+		$pwd$/cli/aloo.ts create-app $2
+	else
+		$pwd$/cli/aloo.ts create-app
+	fi
+elif [[ $1 = "model" ]]; then
+	if [ $2 ]; then
+		$pwd$/cli/aloo.ts model $2
+	else
+		$pwd$/cli/aloo.ts model
+	fi
+elif [[ $1 = "connect-db" ]]; then
+	if [ $2 ]; then
+		$pwd$/cli/aloo.ts connect-db $2
+	else
+		$pwd$/cli/aloo.ts connect-db
+	fi
+elif [[ $1 = "build" ]]; then
+	if [ $2 ]; then
+		$pwd$/cli/build.sh $1 $2
+	else
+		echo -e "\033[1;31mError:\033[0m No argument found.\n\tPlease provide either 'app' or 'test' as an argument."
+	fi
+elif [[ $1 = "run" ]]; then
+	if [ $2 ]; then
+		$pwd$/cli/run.sh $1 $2
+	else
+		echo -e "\033[1;31mError:\033[0m No argument found.\n\tPlease provide either 'app' or 'test' as an argument."
+	fi
+elif [[ $1 = "clean" ]]; then
+	if [ $2 ]; then
+		$pwd$/cli/clean.sh $1 $2
+	else
+		echo -e "\033[1;31mError:\033[0m No argument found.\n\tPlease provide either 'app' or 'test' as an argument."
+	fi
+else
+	help
+fi

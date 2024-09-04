@@ -32,39 +32,45 @@ cd examples
 
 A CLI for creating aloo app is out but it works only with bun or compile it
 
+### Create CLI with
+
+```bash
+python3 setup.py
+```
+
 ### Create App
 
 ```bash
 # create app without project name on arguments
-$ path/aloo create-app
+$ [path to this dir]/bin/aloo create-app
 Enter Project Name:  [aloo-project] aloo-app
 Enter App Name:  [Example App] Hello World
 
 # create app with project name on arguments
-$ path/aloo create-app aloo-project
+$ [path to this dir]/bin/aloo create-app aloo-project
 Enter App Name:  [Example App]
 ```
 
 ### Run app
 
 ```bash
-path/aloo run
+[path to this dir]/bin/aloo run
 ```
 
 ### Run test
 
 ```bash
-path/aloo test
+[path to this dir]/bin/aloo test
 ```
 
 ### Create Model
 
 ```bash
-path/aloo model <name> <property-name>:[int| string | bool | float]
+[path to this dir]/bin/aloo model <name> <property-name>:[int| string | bool | float]
 ```
 
 ### Connect DB to a model
 
 ```bash
-path/aloo connect-db [sqlite3 | mongo]
+[path to this dir]/bin/aloo connect-db [sqlite3 | mongo]
 ```

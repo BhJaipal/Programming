@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.30)
 
-project(aloo-project)
+project("Example App")
 
 add_executable(run.exe app/main.c)
 set(CMAKE_BINARY_DIR build/)
