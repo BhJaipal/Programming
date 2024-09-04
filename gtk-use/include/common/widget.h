@@ -70,6 +70,7 @@ int __isBox(alooWidget *wid);
 int __isButton(alooWidget *wid);
 int __isGrid(alooWidget *wid);
 int __isLabel(alooWidget *wid);
+int __isInput(alooWidget *wid);
 int __isWindow(alooWidget *wid);
 GtkWidget *__WidtoGtk(alooWidget *wid);
 
@@ -109,6 +110,7 @@ struct _aloo_widget {
 		int (*isButton)(alooWidget *wid);
 		int (*isGrid)(alooWidget *wid);
 		int (*isLabel)(alooWidget *wid);
+		int (*isInput)(alooWidget *wid);
 		int (*isWindow)(alooWidget *wid);
 	} check;
 	GtkWidget *(*to_gtk)(alooWidget *wid);

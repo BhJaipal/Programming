@@ -37,7 +37,7 @@ struct _sqlite {
 	int (*insert)(sqlite3 *, char *table_name, int column_count,
 				  char *column_names, char **values, char **errmsg);
 	int (*select)(sqlite3 *, char *table_name, int column_count,
-				  char **column_names, char *where_clause,
+				  char *column_names[], char *where_clause,
 				  int (*callback)(void *data, int rows_count, char **values,
 								  char **column_names),
 				  char *errmsg);

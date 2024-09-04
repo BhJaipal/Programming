@@ -1,5 +1,8 @@
+#!/bin/bash
 if [ ! -d "build/" ]; then
 	mkdir build
 fi
 
-cd build && cmake .. && make
+cmake -S . -B build
+cd build
+make

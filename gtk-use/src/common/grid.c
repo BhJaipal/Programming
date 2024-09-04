@@ -1,6 +1,6 @@
-#include "builtin/grid.h"
-#include "builtin/macros.h"
-#include "builtin/widget.h"
+#include "common/grid.h"
+#include "common/macros.h"
+#include "common/widget.h"
 #include "utils/error.h"
 
 alooWidget *__gridAttach(alooWidget *grid, alooWidget *child, int column,

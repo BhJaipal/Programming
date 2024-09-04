@@ -31,8 +31,9 @@ $modelName *select$modelName(sqlite3 *db, int col_count, char **cols,
 							 char *where) {
 	out = malloc(sizeof($modelName) * 0);
 	char errmsg[1024];
+	char cols = {"ID", $cols$};
 	int result =
-		__select(db, "Human", col_count, cols, where, callback, &errmsg);
+		__select(db, "Human", $col_count, cols, where, callback, &errmsg);
 	if (result != SQLITE_OK) {
 		fprintf(stderr, "Error: %s\n", errmsg);
 		return NULL;

@@ -1,5 +1,5 @@
-#include "builtin/button.h"
-#include "builtin/widget.h"
+#include "common/button.h"
+#include "common/widget.h"
 #include "utils/error.h"
 
 alooWidget *__newButton() {

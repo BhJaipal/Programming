@@ -31,6 +31,8 @@ typedef enum WidgetType {
 	 * @brief Used for Gtk Window
 	 */
 	ALOO_WINDOW,
+	/// @brief Used for Gtk Input
+	ALOO_INPUT,
 	/**
 	 * @brief Can be used to create new custom widget and used with all
 	 */

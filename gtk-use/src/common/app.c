@@ -1,5 +1,5 @@
-#include "builtin/app.h"
-#include "builtin/macros.h"
+#include "common/app.h"
+#include "common/macros.h"
 
 struct AlooApplication *__CreateApp(const char *appName,
 									struct alooAppOptions gAppOptions) {

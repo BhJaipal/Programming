@@ -23,29 +23,29 @@ int str_to_int(char *str) {
 
 void createHumanTable(sqlite3 *db) {
 	char *err;
-	SQLite.createTable(db, "Human",
-					   "ID INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age "
-					   "INTEGER, isMale INTEGER",
-					   &err);
+	SQLite.createTable(db, "Human", "ID INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age INTEGER, isMale INTEGER", &err);
 	if (err) printf("%s\n", err);
 }
 
-Human *selectHuman(sqlite3 *db, int col_count, char **cols, char *where) {
+Human *selectHuman(sqlite3 *db, int col_count, char **cols,
+							 char *where) {
 	out = malloc(sizeof(Human) * 0);
 	char errmsg[1024];
+	char cols = {"ID", "name", "age", "isMale"};
 	int result =
-		SQLite.select(db, "Human", col_count, cols, where, callback, errmsg);
+		__select(db, "Human", 3, cols, where, callback, &errmsg);
 	if (result != SQLITE_OK) {
 		fprintf(stderr, "Error: %s\n", errmsg);
 		return NULL;
 	}
 	return out;
 }
-void insertHuman(sqlite3 *db, char **values, char **errmsg) {
-	SQLite.insert(db, "Human", 3, "name, age, isMale", values, errmsg);
+void insertHuman(sqlite3 *db, int column_count, char **values,
+					  char **errmsg) {
+	SQLite.insert(db, "Human", column_count, "name, age, isMale", values, errmsg);
 }
 
-int callback(void *data, int col_count, char **values, char **column_names) {
+int *callback(void *data, int col_count, char **values, char **column_names) {
 	Human val;
 	int i = 0;
 	val.name = values[i++];

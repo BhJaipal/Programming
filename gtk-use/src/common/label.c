@@ -1,5 +1,5 @@
-#include "builtin/label.h"
-#include "builtin/widget.h"
+#include "common/label.h"
+#include "common/widget.h"
 #include "utils/error.h"
 
 alooWidget *__newLabel(const char *val) {

@@ -1,5 +1,5 @@
-#include "builtin/box.h"
-#include "builtin/widget.h"
+#include "common/box.h"
+#include "common/widget.h"
 #include "utils/error.h"
 #include <gtk/gtk.h>
 

@@ -1,6 +1,6 @@
-#include "builtin/builder.h"
-#include "builtin/macros.h"
-#include "builtin/widget.h"
+#include "common/builder.h"
+#include "common/macros.h"
+#include "common/widget.h"
 
 void __unrefBuilder(AlooBuilder *data) { g_object_unref(data->builder); }
 

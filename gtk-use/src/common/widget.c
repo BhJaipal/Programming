@@ -1,5 +1,5 @@
-#include "builtin/widget.h"
-#include "builtin/macros.h"
+#include "common/widget.h"
+#include "common/macros.h"
 #include <gtk/gtk.h>
 
 GtkWidget *__WidtoGtk(alooWidget *wid) { return wid->child; }
@@ -22,6 +22,8 @@ alooWidget *__OBJECT_TO_ALOO(GObject *obj) {
 		type = ALOO_BUTTON;
 	} else if (GTK_IS_LABEL(widget)) {
 		type = ALOO_LABEL;
+	} else if (GTK_IS_EDITABLE(widget)) {
+		type = ALOO_INPUT;
 	} else if (GTK_IS_WINDOW(widget)) {
 		type = ALOO_WINDOW;
 	} else {
@@ -84,16 +86,13 @@ alooWidget *__alooAddEventListener(alooWidget *widget_instance,
 int is_widget_of_type(alooWidget *widget, enum WidgetType type) {
 
 	GType checker;
-	if (type == ALOO_BOX) {
-		checker = GTK_TYPE_BOX;
-	} else if (type == ALOO_BUTTON) {
-		checker = GTK_TYPE_BUTTON;
-	} else if (type == ALOO_GRID) {
-		checker = GTK_TYPE_GRID;
-	} else if (type == ALOO_LABEL) {
-		checker = GTK_TYPE_LABEL;
-	} else {
-		checker = GTK_TYPE_WINDOW;
+	switch (type) {
+	case ALOO_BOX: checker = GTK_TYPE_BOX; break;
+	case ALOO_BUTTON: checker = GTK_TYPE_BUTTON; break;
+	case ALOO_GRID: checker = GTK_TYPE_GRID; break;
+	case ALOO_LABEL: checker = GTK_TYPE_LABEL; break;
+	case ALOO_INPUT: checker = GTK_TYPE_EDITABLE; break;
+	default: checker = GTK_TYPE_WINDOW; break;
 	}
 	return ((widget->type == type || widget->type == ALOO_NEW_WIDGET) &&
 			G_TYPE_CHECK_INSTANCE_TYPE((widget->child), checker));
@@ -104,6 +103,7 @@ int __isButton(alooWidget *wid) { return is_widget_of_type(wid, ALOO_BUTTON); }
 int __isGrid(alooWidget *wid) { return is_widget_of_type(wid, ALOO_GRID); }
 int __isLabel(alooWidget *wid) { return is_widget_of_type(wid, ALOO_LABEL); }
 int __isWindow(alooWidget *wid) { return is_widget_of_type(wid, ALOO_WINDOW); }
+int __isInput(alooWidget *wid) { return is_widget_of_type(wid, ALOO_INPUT); }
 
 struct _aloo_widget Widget = {
 	.new = __NewWidget,
@@ -121,6 +121,7 @@ struct _aloo_widget Widget = {
 			.isButton = __isButton,
 			.isGrid = __isGrid,
 			.isLabel = __isLabel,
+			.isInput = __isInput,
 			.isWindow = __isWindow,
 		},
 	.to_gtk = __WidtoGtk,

@@ -56,7 +56,7 @@ export function connectDbWithModel(argv: string[]) {
 			mkdirSync(process.cwd() + "/server");
 		}
 		let serverSampleHeader = readFileSync(
-			`${alooCli.split("/bin/aloo")[0]}/cli/sample/main.server.h`
+			`${alooCli.split("/aloo")[0]}/sample/main.server.h`
 		).toString();
 		while (serverSampleHeader.includes("$modelName"))
 			serverSampleHeader = serverSampleHeader.replace(
@@ -69,7 +69,7 @@ export function connectDbWithModel(argv: string[]) {
 		);
 
 		let serverSample = readFileSync(
-			`${alooCli.split("/bin/aloo")[0]}/cli/sample/main.server.c`
+			`${alooCli.split("/aloo")[0]}/sample/main.server.c`
 		).toString();
 		while (serverSample.includes("$modelName"))
 			serverSample = serverSample.replace("$modelName", modelName);
@@ -78,10 +78,6 @@ export function connectDbWithModel(argv: string[]) {
 			(model) => model["modelName"] == modelName
 		);
 		if (model == undefined || model == null) return;
-		serverSample = serverSample.replace(
-			"$cols",
-			model.members?.map((el) => el.member).join(", ")
-		);
 		serverSample = serverSample.replace("$body", sqlBody(model.members));
 
 		let typeConvert = {
@@ -90,7 +86,7 @@ export function connectDbWithModel(argv: string[]) {
 			float: ["strtod(", ")"],
 			bool: ["str_to_int(", ")"],
 		};
-		(serverSample = serverSample.replace(
+		serverSample = serverSample.replace(
 			"val.$member = values[i++];",
 			model.members
 				.map(
@@ -104,12 +100,21 @@ export function connectDbWithModel(argv: string[]) {
 						";\n"
 				)
 				.join("\t")
-		)),
-			// console.log(serverSample);
-			writeFileSync(
-				`${process.cwd()}/server/${modelName}.c`,
-				serverSample
-			);
+		);
+		serverSample = serverSample.replace(
+			"$col_count",
+			model.members.length.toString()
+		);
+		serverSample = serverSample.replace(
+			"$cols$",
+			model.members.map((el) => `"${el.member}"`).join(", ")
+		);
+		serverSample = serverSample.replace(
+			"$cols",
+			model.members?.map((el) => el.member).join(", ")
+		);
+		// console.log(serverSample);
+		writeFileSync(`${process.cwd()}/server/${modelName}.c`, serverSample);
 	}
 }
 
