@@ -1,0 +1,152 @@
+#add {
+	color: rgb(8, 248, 8);
+	padding: 10px;
+	border: 0px;
+	background: rgb(27, 27, 27);
+}
+#add:hover {
+	font-weight: bold;
+}
+#remove {
+	color: rgb(3, 250, 3);
+	padding: 10px;
+	border: 0px;
+	background: rgb(27, 27, 27);
+}
+#box-body {
+	background-color: rgb(53, 53, 53);
+}
+#remove:hover {
+	font-weight: bold;
+}
+#button-grid {
+	padding-top: 50px;
+}
+#label-grid {
+	margin-top: 50px;
+}
+#label {
+	color: lightseagreen;
+	font-weight: bold;
+	font-size: 12px;
+	border-radius: 8px;
+	padding: 10px;
+	background: rgb(202, 228, 250);
+	border: 2px solid rgb(187, 223, 252);
+}
+#no-label {
+	background-color: rgb(252, 190, 190);
+	color: red;
+	font-weight: bold;
+	font-size: 12px;
+	border-radius: 8px;
+	padding: 10px;
+}
+#app {
+	background-color: whitesmoke;
+}
+
+#menu-label {
+	margin-left: 20px;
+	font-size: 30px;
+	color: white;
+	font-weight: bold;
+}
+#nav-show {
+	background-color: rgb(27, 27, 27);
+}
+#menu-bar {
+	margin: 10px;
+	margin-left: 20px;
+	color: white;
+	border: 0px;
+	background: rgb(7, 72, 248);
+	font-weight: bold;
+	font-size: 35px;
+	animation: hoverOutTransition 0.5s;
+}
+@keyframes hoverInTransition {
+	from {
+		background-color: transparent;
+		background-image: radial-gradient(
+			circle at center,
+			rgb(48, 103, 252) 0%,
+			rgb(7, 72, 248) 100%
+		);
+	}
+	to {
+		background-color: transparent;
+		background-image: radial-gradient(
+			circle at center,
+			rgb(48, 103, 252) 100%,
+			rgb(7, 72, 248) 0%
+		);
+	}
+}
+@keyframes hoverOutTransition {
+	from {
+		background-color: transparent;
+		background-image: radial-gradient(
+			circle at center,
+			rgb(7, 72, 248) 0%,
+			rgb(48, 103, 252) 100%
+		);
+	}
+	to {
+		background-color: transparent;
+		background-image: radial-gradient(
+			circle at center,
+			rgb(7, 72, 248) 100%,
+			rgb(48, 103, 252) 0%
+		);
+	}
+}
+#menu-bar:hover {
+	animation: hoverInTransition 0.5s;
+	background: rgb(48, 103, 252);
+}
+#menu-opt {
+	border: 1px solid rgb(50, 193, 250);
+	border-radius: 15px;
+	background: rgb(50, 193, 250);
+	color: white;
+	font-weight: bold;
+	padding: 10px;
+	transition: transform 0.5s ease-in-out;
+	font-size: large;
+}
+#menu-opt:hover {
+	background: rgb(84, 203, 250);
+}
+#nav-menu {
+	transition: transform 0.5s ease-in-out;
+	background-color: rgb(29, 167, 253);
+	border: 0px;
+}
+
+.nav-menu-hidden #menu-opt {
+	transform: scaleX(0);
+}
+.nav-menu-show #menu-opt {
+	transform: scaleX(1);
+}
+.nav-menu-hidden {
+	transform: translateX(-100px);
+}
+.nav-menu-show {
+	transform: translateX(0);
+}
+#box-button {
+	border: 0px solid white;
+	outline: 0px;
+	background-color: white;
+}
+#box-button:hover {
+	border: 0px solid white;
+	outline: 0px;
+	background-color: white;
+}
+#box {
+	margin-top: 30px;
+	margin-right: 200px;
+}
