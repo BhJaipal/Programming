@@ -1,10 +1,11 @@
-#include "../include/aloo.h"
+#include "../../include/aloo.h"
 #include <fontconfig/fontconfig.h>
 
 alooWidget *labelGrid;
 alooWidget *navbar;
 alooWidget *navMenu;
 alooWidget *nothingLabel = 0;
+alooWidget *input;
 AlooApplication *app;
 struct _logger *lg;
 int isNothing = 1;
@@ -16,7 +17,7 @@ struct _labelList {
 
 static void toggleNav() {
 	char **classes = CSS.getClasses(navbar);
-	lg->log(lg, "Toggled Nav");
+	lg->log(lg, "Toggled Nav, %s", classes[0]);
 
 	if (!strcmp(classes[0], "vertical")) {
 		CSS.removeClass(navMenu, "nav-menu-show");
@@ -41,8 +42,9 @@ void print_hello() {
 		return;
 	}
 
+	if (strlen(Input.getValue(input)) == 0) return;
 	if (isNothing && nothingLabel != 0) nothingHappened(labelGrid);
-	alooWidget *label = Label.new("Hello World");
+	alooWidget *label = Label.new(Input.getValue(input));
 	Widget.setName(label, "label");
 	Grid.attach(labelGrid, label, (labelList.len / 3) + 1,
 				(labelList.len % 3) + 1, 1, 1);
@@ -89,6 +91,7 @@ static void activate() {
 	alooWidget *rmLabelWidget = Builder.alooFromBuilder(builder, "remove");
 	alooWidget *grid = Builder.alooFromBuilder(builder, "button-grid");
 	navbar = Builder.alooFromBuilder(builder, "navbar");
+	input = Builder.alooFromBuilder(builder, "file-content");
 	alooWidget *menuBar = Builder.alooFromBuilder(builder, "menu-bar");
 	alooWidget *boxBody = Builder.alooFromBuilder(builder, "box-body");
 
@@ -102,8 +105,18 @@ static void activate() {
 	Button.label(buttonWidget, "add");
 	Button.label(rmLabelWidget, "remove");
 
-	// gtk_widget_set_visible(GTK_WINDOW(window), TRUE);
-	// gtk_window_fullscreen(GTK_WINDOW(window));
+	GError *e = NULL;
+	GdkTexture *cursor = gdk_texture_new_from_filename("cursor.png", &e);
+	if (e != NULL) {
+		lg->err(lg, "Error %d: %s\n", e->code, e->message);
+		g_error_free(e);
+	} else {
+		lg->info(lg, "Cursor width: %d", gdk_texture_get_width(cursor));
+		lg->info(lg, "Cursor height: %d", gdk_texture_get_height(cursor));
+		gdk_cursor_new_from_texture(cursor, gdk_texture_get_width(cursor) - 1,
+									gdk_texture_get_height(cursor) - 1, NULL);
+	}
+
 	Window.setSize(window, 1904, 992);
 	Window.set_app_window(window, app);
 	Widget.addEventListener(buttonWidget, "clicked", print_hello, NULL);
@@ -127,6 +140,11 @@ static void activate() {
 	Grid.column_spacing(labelGrid, 5);
 
 	Widget.addEventListener(menuBar, "clicked", toggleNav, NULL);
+
+	gtk_widget_set_focusable(window->child, 1);
+
+	GtkEventController *key = gtk_event_controller_key_new();
+	gtk_widget_add_controller(window->child, key);
 
 	navMenu = Grid.new();
 	Widget.setName(navMenu, "nav-menu");

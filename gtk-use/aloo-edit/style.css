@@ -2,7 +2,7 @@
 	color: rgb(8, 248, 8);
 	padding: 10px;
 	border: 0px;
-	background: rgb(27, 27, 27);
+	background: rgb(20, 20, 20);
 }
 #add:hover {
 	font-weight: bold;
@@ -11,7 +11,7 @@
 	color: rgb(3, 250, 3);
 	padding: 10px;
 	border: 0px;
-	background: rgb(27, 27, 27);
+	background: rgb(20, 20, 20);
 }
 #box-body {
 	background-color: rgb(53, 53, 53);
@@ -53,33 +53,34 @@
 	font-weight: bold;
 }
 #nav-show {
-	background-color: rgb(27, 27, 27);
+	background-color: rgb(20, 20, 20);
 }
 #menu-bar {
 	margin: 10px;
 	margin-left: 20px;
 	color: white;
 	border: 0px;
-	background: rgb(7, 72, 248);
+	border-radius: 10px;
+	background: rgb(20, 20, 20);
 	font-weight: bold;
 	font-size: 35px;
-	animation: hoverOutTransition 0.5s;
+	animation: hoverOutTransition 0.1s;
 }
 @keyframes hoverInTransition {
 	from {
 		background-color: transparent;
 		background-image: radial-gradient(
 			circle at center,
-			rgb(48, 103, 252) 0%,
-			rgb(7, 72, 248) 100%
+			rgb(34, 34, 34) 0%,
+			rgb(20, 20, 20) 100%
 		);
 	}
 	to {
 		background-color: transparent;
 		background-image: radial-gradient(
 			circle at center,
-			rgb(48, 103, 252) 100%,
-			rgb(7, 72, 248) 0%
+			rgb(34, 44, 34) 100%,
+			rgb(20, 20, 20) 0%
 		);
 	}
 }
@@ -88,27 +89,28 @@
 		background-color: transparent;
 		background-image: radial-gradient(
 			circle at center,
-			rgb(7, 72, 248) 0%,
-			rgb(48, 103, 252) 100%
+			rgb(34, 44, 34) 100%,
+			rgb(20, 20, 20) 0%
 		);
 	}
 	to {
 		background-color: transparent;
 		background-image: radial-gradient(
 			circle at center,
-			rgb(7, 72, 248) 100%,
-			rgb(48, 103, 252) 0%
+			rgb(34, 34, 34) 0%,
+			rgb(20, 20, 20) 100%
 		);
 	}
 }
 #menu-bar:hover {
-	animation: hoverInTransition 0.5s;
-	background: rgb(48, 103, 252);
+	animation: hoverInTransition 0.1s;
+	background: rgb(34, 34, 34);
 }
 #menu-opt {
-	border: 1px solid rgb(50, 193, 250);
-	border-radius: 15px;
-	background: rgb(50, 193, 250);
+	border: 0px transparent;
+	margin: 10px;
+	margin-bottom: 0px;
+	background: rgb(34, 34, 34);
 	color: white;
 	font-weight: bold;
 	padding: 10px;
@@ -116,11 +118,11 @@
 	font-size: large;
 }
 #menu-opt:hover {
-	background: rgb(84, 203, 250);
+	background: rgb(50, 50, 50);
 }
 #nav-menu {
 	transition: transform 0.5s ease-in-out;
-	background-color: rgb(29, 167, 253);
+	background-color: rgb(34, 34, 34);
 	border: 0px;
 }
 
@@ -149,4 +151,12 @@
 #box {
 	margin-top: 30px;
 	margin-right: 200px;
+}
+
+#file-content {
+	background-color: rgb(22, 22, 22);
+	margin-left: 100px;
+	margin-right: 100px;
+	color: white;
+	font-size: 20px;
 }

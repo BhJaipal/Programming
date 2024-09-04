@@ -54,6 +54,13 @@
 							<object id="box" class="GtkBox">
 								<property name="name">box</property>
 								<child>
+									<object id="file-content" class="GtkEntry">
+										<property name="name">file-content</property>
+										<attributes>
+										</attributes>
+									</object>
+								</child>
+								<child>
 									<object id="button-grid" class="GtkGrid">
 										<property name="name">button-grid</property>
 										<child>
