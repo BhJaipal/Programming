@@ -11,7 +11,7 @@ std::map<std::string, std::string> fileIcons{
 	{"py", "\033[33m\033[0m"},
 	{"ipynb", ""},
 	{"cpp", "\033[1;36m\033[0m"},
-	{"c", "\033[1;34m\033[0m"},
+	{"c", "\033[1;35m\033[0m"},
 	{"h", "\033[1;34m\033[0m"},
 	{"d", "\033[1;34m\033[0m"},
 	{"cs", ""},
@@ -125,8 +125,14 @@ std::map<std::string, std::string> noExt{
 };
 std::map<std::string, std::string> defaultFile{
 	{"folder", "\033[1;36m🖿\033[0m"},
-	{"file", "\033[1;30;47m 🗅 \033[0m"},
+	{"file", "\033[1;37m🗅 \033[0m"},
 };
+
+std::map<int, std::string> permsMap{
+	{0, "---"}, {1, "--x"}, {2, "-w-"}, {3, "-wx"},
+	{4, "r--"}, {5, "r-x"}, {6, "rw-"}, {7, "rwx"},
+};
+namespace fs = std::filesystem;
 
 bool ends_with(std::string const &fullString, std::string const &ending) {
 	if (fullString.length() >= ending.length()) {
@@ -154,27 +160,60 @@ std::vector<std::string> split(const std::string &str,
 }
 
 int main(int argc, char const *argv[]) {
-	std::filesystem::path cwd = std::filesystem::current_path();
+	fs::path cwd = fs::current_path();
 	int is_all = 0;
+	int is_full = 0;
 	for (int i = 0; i < argc; i++) {
 		std::string all = argv[i];
-		if (all == "-a" || all == "--all") {
-			is_all = 1;
-			break;
-		}
+		if (all == "-a" || all == "--all") { is_all = 1; }
+		if (all == "-l") { is_full = 1; }
 	}
 
-	for (auto &p : std::filesystem::directory_iterator(cwd)) {
+	if (is_full) { std::cout << "\033[1;34mRoot\tGroup\tUser\tDir \t \033[0m"; }
+	std::cout << "\033[1;34mName\033[0m\n";
+	for (auto &p : fs::directory_iterator(cwd)) {
 		std::vector<std::string> fileName = split(p.path().string(), "/");
 		if (!is_all && fileName[fileName.size() - 1][0] == '.') continue;
 		std::string icon =
 			noExt[fileName[fileName.size() - 1]].size() > 0
 				? noExt[fileName[fileName.size() - 1]]
 				: (p.path().extension().string().size() > 0
-					   ? fileIcons[p.path().extension().string().substr(1)]
+					   ? (fileIcons[p.path().extension().string().substr(1)]
+									  .size() > 0
+							  ? fileIcons[p.path().extension().string().substr(
+									1)]
+							  : defaultFile["file"])
 					   : (p.is_directory() ? defaultFile["folder"]
 										   : defaultFile["file"]));
-		std::cout << icon << "  " << fileName[fileName.size() - 1] << "\n";
+		fs::perms permissions = fs::status(p.path()).permissions();
+		int permInt = int(permissions);
+		int perm;
+		int permArr[3];
+		for (int i = 0; i < 3; i++) {
+			perm = permInt % 8;
+			permArr[i] = perm;
+			permInt /= 8;
+		}
+		int root = permArr[2];
+		int group = permArr[1];
+		int others = permArr[0];
+		if (is_full) {
+			std::cout << permsMap[root] << " \t" << permsMap[group] << " \t"
+					  << permsMap[others] << " \t"
+					  << (p.is_directory() ? "\033[1;32myes" : "\033[1;31mno ")
+					  << " \033[0m\t";
+		}
+		int isExecuable =
+			others == 1 || others == 3 || others == 5 || others == 7;
+		std::cout << icon << "  "
+				  << (p.is_directory() ? "\033[1;36m"
+					  : isExecuable	   ? "\033[1;35m"
+									   : "")
+				  << fileName[fileName.size() - 1]
+				  << (p.is_directory() ? "/\033[0m"
+					  : isExecuable	   ? "\033[0m"
+									   : "")
+				  << "\n";
 	}
 	return 0;
 }
