@@ -125,7 +125,7 @@ std::map<std::string, std::string> noExt{
 };
 std::map<std::string, std::string> defaultFile{
 	{"folder", "\033[1;36m🖿\033[0m"},
-	{"file", "\033[1;37m🗅 \033[0m"},
+	{"file", "\033[1;37m🗅\033[0m"},
 };
 
 std::map<int, std::string> permsMap{
@@ -182,9 +182,9 @@ int main(int argc, char const *argv[]) {
 									  .size() > 0
 							  ? fileIcons[p.path().extension().string().substr(
 									1)]
-							  : defaultFile["file"])
+							  : defaultFile["file"]) + " "
 					   : (p.is_directory() ? defaultFile["folder"]
-										   : defaultFile["file"]));
+										   : defaultFile["file"] + " "));
 		fs::perms permissions = fs::status(p.path()).permissions();
 		int permInt = int(permissions);
 		int perm;
