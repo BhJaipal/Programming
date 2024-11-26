@@ -21,22 +21,27 @@ int main(int argc, char *argv[]) {
                 float sA = sin(A);
                 float circleY = sin(theta);
                 float cA = cos(A);
+
 				// (cos(θ) + 2)
                 float circleX = cos(theta) + 2;
-                float D = 1 / (sP * circleX * sA + circleY * cA + 5);
+
+				// D = R1 / Nz
+                float D = 1 / (sP * circleX * cA + circleY * sA + 5);
+
                 float cP = cos(phi);
                 float cB = cos(B);
                 float sB = sin(B);
 
-                float YsA_sPXcA =  circleY * sA - sP * circleX * cA;
+                float YsA_sPXcA =  circleY * cA - sP * circleX * sA;
 
-				// x = 40 * 30 * (
+				// x = 40 + 30 * (
 				//      cos(φ) * circleX * cos(B)
 				//      + (
 				//          sin(φ) * circleX * cos(A)
 				//          - sin(θ) * sin(A)
 				//      ) * sin(B)
 				//  ) / (sin(φ) * circleX * sin(A) * sin(θ) * cos(A) + 5)
+				//  x = 40 + 30 * Nx / Nz
                 int x = 40 + 30 * D * (cP * circleX * cB - YsA_sPXcA * sB);
 
 				// y = 12 + 15 * (
@@ -46,10 +51,14 @@ int main(int argc, char *argv[]) {
 				//          - sin(φ) * circleX * cos(A)
 				//      ) * cos(B)
 				//  ) / (sin(φ) * circleX * sin(A) * sin(θ) * cos(A) + 5)
+				//  y = 12 + 15 * Ny / Nz
                 int y = 12 + 15 * D * (cP * circleX * sB + YsA_sPXcA * cB);
+
+				// o = (40 + 30 * Nx / Nz) + 80 * (12 + 15 * Ny / Nz)
+				// o = 10 * ((4 + 3 * Nx) + (96 + 120 * Ny)) / Nz
                 int o = x + 80 * y;
 
-                int N = 8 * ((circleY * sA - sP * cT * cA) * cB - sP * cT * sA - circleY * cA - cP * cT * sB);
+                int N = 8 * ((circleY * cA - sP * cT * sA) * cB - sP * cT * cA - circleY * sA - cP * cT * sB);
 
 				if (screen_height > y && y > 0 && x > 0 && screen_width > x && D > zBuffer[o]) {
                     zBuffer[o] = D;
@@ -63,7 +72,7 @@ int main(int argc, char *argv[]) {
 			A += 0.00004;
             B += 0.00002;
 		}
-		usleep(10000);
+		usleep(20000);
 	}
 	return 0;
 }

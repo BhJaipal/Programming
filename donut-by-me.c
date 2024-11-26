@@ -22,20 +22,20 @@ singleRow multiply(singleRow m1, Matrix m2) {
 int main() {
 	printf("\x1b[2J");
 	float A = 0, B = 0;
-	int R2 = 2, R1 = 1, K2 = 8;
+	int R2 = 2, R1 = 1;
 	int screen_height = 22, screen_width = 80;
 	float zBuffer[1760];
 	char buffer[1760];
 	char background = ' ';
 
+	printf("\x1b[2J");
 	while (1) {
-		int ind= 0;
 		memset(zBuffer, 0, 7040);
 		// 32 = space ' '
 		memset(buffer, 32, 1760);
 
-		for (int theta = 0; theta < 6.28; theta += 0.07) {
-			for (int phi = 0; phi < 6.28; phi++) {
+		for (float theta = 0; theta < 6.283058; theta += 0.07) {
+			for (float phi = 0; phi < 6.28; phi += 0.02) {
 				float circleX = R2 + R1 * cos(theta),
 					circleY = R1 * sin(theta);
 				singleRow circle = {circleX, circleY, 0};
@@ -49,13 +49,19 @@ int main() {
 				Matrix Rz = {{cos(B), sin(B), 0}, {-sin(B), cos(B), 0}, {0, 0, 1}};
 				singleRow donut = multiply(donut2, Rz);
 
-				donut.a1 += 40;
-				donut.a2 += 11;
-				int o = donut.a1 + screen_width * donut.a2;
+				donut.a3+= 5;
+				float reciNz = 1 / (donut.a3);
+
+				float x = 40 + 30 * donut.a1 * reciNz;
+				float y = 12 + 15 * donut.a2 * reciNz;
+				int o = x + screen_width * y;
 				
-				int L = 8 * (donut.a2 - donut.a3);
+				int L = 8 * (donut.a2 - donut.a3 + 2 * ((cos(B) * cos(A) * circleY) - cos(theta) * (cos(B) * cos(A) * sin(phi) + sin(B) * cos(phi))));
 				char charOpts[] = ".,-~:;=!*#$@";
-				buffer[0] = charOpts[L > 0 ? L : 0];
+				if (x > 0 && x < screen_width && y < 0 && y < screen_height && zBuffer[o] < reciNz) {
+					buffer[o] = charOpts[L > 0 ? L : 0];
+					zBuffer[o] = reciNz;
+				}
 			}
 		}
 
@@ -65,7 +71,7 @@ int main() {
 			A += 0.00004;
             B += 0.00002;
 		}
-		usleep(10000);
+		usleep(100000);
 	}
 	return 0;
 }
