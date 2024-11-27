@@ -20,7 +20,6 @@ singleRow multiply(singleRow m1, Matrix m2) {
 }
 
 int main() {
-	printf("\x1b[2J");
 	float A = 0, B = 0;
 	int R2 = 2, R1 = 1;
 	int screen_height = 22, screen_width = 80;
@@ -34,7 +33,7 @@ int main() {
 		// 32 = space ' '
 		memset(buffer, 32, 1760);
 
-		for (float theta = 0; theta < 6.283058; theta += 0.07) {
+		for (float theta = 0; theta < 6.28; theta += 0.07) {
 			for (float phi = 0; phi < 6.28; phi += 0.02) {
 				float circleX = R2 + R1 * cos(theta),
 					circleY = R1 * sin(theta);
@@ -47,18 +46,42 @@ int main() {
 				singleRow donut2 = multiply(donut1, Rx);
 
 				Matrix Rz = {{cos(B), sin(B), 0}, {-sin(B), cos(B), 0}, {0, 0, 1}};
+				// final result of spinning donut
 				singleRow donut = multiply(donut2, Rz);
 
-				donut.a3+= 5;
-				float reciNz = 1 / (donut.a3);
+				// R1 / (Nz + 5)
+				// 5 is distance or so IDK correctly
+				float reciNz = R1 / (donut.a3 + 5);
 
-				float x = 40 + 30 * donut.a1 * reciNz;
-				float y = 12 + 15 * donut.a2 * reciNz;
+				// x position
+				int x = 40 + 30 * donut.a1 * reciNz;
+				// y position
+				int y = 12 + 15 * donut.a2 * reciNz;
+				// current buffer index where current char has to be set
 				int o = x + screen_width * y;
-				
-				int L = 8 * (donut.a2 - donut.a3 + 2 * ((cos(B) * cos(A) * circleY) - cos(theta) * (cos(B) * cos(A) * sin(phi) + sin(B) * cos(phi))));
+
+				// L = 8 * (
+				//		(circleY * cosA * cosB - sinϕ * cosB * cosθ * sinA)
+				//		- (circleY * sinA)
+				//		- (sinϕ * cosθ * cosA)
+				//		- (cosϕ * cosθ * sinB)
+				//  )
+
+				//  L = Ny - Nz
+				//  	- 2 sinB cosϕ cosθ
+				//  	- 2 sinB cosϕ
+				//  	+ 2 cosB sinA sinϕ
+				//  	+ 2 cosA sinϕ
+				int L = 8 * (donut.a2 - donut.a3
+					+ 2 * cos(B) * sin(A) * sin(phi)
+					- 2 * cos(phi) * cos(theta) * sin(B)
+					- 2 * cos(phi) * sin(B)
+					+ 2 * cos(A) * sin(phi)
+				);
+
 				char charOpts[] = ".,-~:;=!*#$@";
-				if (x > 0 && x < screen_width && y < 0 && y < screen_height && zBuffer[o] < reciNz) {
+				if (zBuffer[o] < reciNz && y < screen_height && x < screen_width) {
+					// printf("%d ", L);
 					buffer[o] = charOpts[L > 0 ? L : 0];
 					zBuffer[o] = reciNz;
 				}
@@ -67,11 +90,12 @@ int main() {
 
 		printf("\x1b[H");
 		for (int i = 0; i < 1761; i++) {
+			// printf("%d ", buffer[i]);
 			putchar(i%80 ? buffer[i]: 10);
 			A += 0.00004;
             B += 0.00002;
 		}
-		usleep(100000);
+		usleep(20000);
 	}
 	return 0;
 }

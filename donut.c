@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 				// (cos(θ) + 2)
                 float circleX = cos(theta) + 2;
 
-				// D = R1 / Nz
+				// D = R1 / (Nz + 5)
                 float D = 1 / (sP * circleX * cA + circleY * sA + 5);
 
                 float cP = cos(phi);
@@ -58,7 +58,15 @@ int main(int argc, char *argv[]) {
 				// o = 10 * ((4 + 3 * Nx) + (96 + 120 * Ny)) / Nz
                 int o = x + 80 * y;
 
-                int N = 8 * ((circleY * cA - sP * cT * sA) * cB - sP * cT * cA - circleY * sA - cP * cT * sB);
+				//  N = Ny - Nz
+				//  	- 2 sinB cosϕ cosθ
+				//  	- 2 sinB cosϕ
+				//  	+ 2 cosB sinA sinϕ
+				//  	+ 2 cosA sinϕ
+                int N = 8 * ((circleY * cA * cB) - (sP * cT * sA * cB) - sP * cT * cA - circleY * sA - cP * cT * sB);
+				if (N > 0) {
+					printf("%d", N);
+					return 0;}
 
 				if (screen_height > y && y > 0 && x > 0 && screen_width > x && D > zBuffer[o]) {
                     zBuffer[o] = D;

@@ -1,48 +1,47 @@
 Make:
-	L = sinθ cosA cosB 
-		- cosθ cosϕ sinB
+	L = sinθ cosB cosA
 		- sinϕ sinA cosθ cosB 
-		- cosA cosθ sinϕ - sinθ sinA
-
-	L = cosB cosA sinθ 
-		- cosϕ cosθ sinB 
-		− cosB cosθ sinA sinϕ
-		− cosA cosθ sinϕ − sinA sinθ 
+		- cosA cosθ sinϕ 
+		- sinθ sinA
+		- cosθ cosϕ sinB
 
 Nx:
 cosB cosϕ cosθ
 	+ 2 cosB cosϕ
 - sinB cosA sinθ
-	+ sinB sinA sinϕ cosθ	// 4.2
+	+ sinB sinA sinϕ cosθ
 	+ 2 sinB sinA sinϕ
 	
 Ny:
-sinB cosϕ cosθ				// 1
+sinB cosϕ cosθ				// 5
 	+ 2 sinB cosϕ
-- cosB cosA sinθ			// 4.1
-	+ cosB sinA sinϕ cosθ	// 4.2
-	+ 2 cosB sinA sinϕ
++ cosB cosA sinθ			// 1
+	- cosB sinA sinϕ cosθ	// 2
+	- 2 cosB sinA sinϕ
 	
 Nz:
-sinA sinθ   				// 3
-	+ cosA sinϕ cosθ		// 2
+sinA sinθ   				// 4
+	+ cosA sinϕ cosθ		// 3
 	+ 2 cosA sinϕ
 
 
 Ny - Nz:
-- cosB cosA sinθ			// 4.1
-	+ sinB cosϕ cosθ		// 1
-	- cosA sinϕ cosθ		// 2
-	- sinA sinθ				// 3
-	+ cosB sinA sinϕ cosθ	// 4.2
-
+	+ cosB cosA sinθ		// 1
+	- cosB sinA sinϕ cosθ	// 2
+	- cosA sinϕ cosθ		// 3
+	- sinA sinθ   			// 4
+	+ sinB cosϕ cosθ		// 5 * -1
 	+ 2 sinB cosϕ
-	+ 2 cosB sinA sinϕ
+	- 2 cosB sinA sinϕ
 	- 2 cosA sinϕ
 	
 rotational matrix of torus = (Nx, Ny, Nz)
 
-L = Ny - Nz + 2(cosB cosA sinθ - cosB sinA sinϕ cosθ - sinB.cosϕ.cosθ)
+L = Ny - Nz 
+	- 2 sinB cosϕ cosθ
+	- 2 sinB cosϕ
+	+ 2 cosB sinA sinϕ
+	+ 2 cosA sinϕ
 
 l_index = L * 8
 buffer[o] = ".,-~:;=!*#$@"[l_index]
