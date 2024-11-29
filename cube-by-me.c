@@ -25,28 +25,30 @@ int main() {
 	int screen_height = 22, screen_width = 80;
 	float zBuffer[1760];
 	char buffer[1760];
+	char background = ' ';
 
 	printf("\x1b[2J");
 	while (1) {
 		memset(zBuffer, 0, 7040);
 		// 32 = space ' '
 		memset(buffer, 32, 1760);
+		float theta2 = 6.28;
 
 		for (float theta = 0; theta < 6.28; theta += 0.07) {
 			for (float phi = 0; phi < 6.28; phi += 0.02) {
 				float circleX = R2 + R1 * cos(theta),
 					circleY = R1 * sin(theta);
-				singleRow circle = {circleX, circleY, 0};
+				singleRow square = {sin(theta), cos(theta), cos(theta)};
 
 				Matrix Ry = {{cos(phi), 0, sin(phi)}, {0, 1, 0}, {-sin(phi), 0, cos(phi)}};
-				singleRow donut1 = multiply(circle, Ry);
+				singleRow cube2 = multiply(square, Ry);
 
 				Matrix Rx = {{1, 0, 0}, {0, cos(A), sin(A)}, {0, -sin(A), cos(A)}};
-				singleRow donut2 = multiply(donut1, Rx);
-
+				singleRow cube1 = multiply(cube2, Rx);
+				
 				Matrix Rz = {{cos(B), sin(B), 0}, {-sin(B), cos(B), 0}, {0, 0, 1}};
-				// final result of spinning donut
-				singleRow donut = multiply(donut2, Rz);
+				// final result of spinning cube
+				singleRow donut = multiply(cube1, Rz);
 
 				// R1 / (Nz + 5)
 				// 5 is distance or so IDK correctly
@@ -85,6 +87,7 @@ int main() {
 					zBuffer[o] = reciNz;
 				}
 			}
+			theta2 -= 0.07;
 		}
 
 		printf("\x1b[H");
