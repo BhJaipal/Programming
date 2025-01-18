@@ -1,12 +1,16 @@
 {
 	"files.associations": {
-		"*.embeddedhtml": "html",
 		"*.vue": "vue",
 		"*.td": "cpp",
 		"*.ui": "xml",
 		"*.3": "manpage",
 		"*.sh": "shellscript",
 		"*.rbs": "ruby",
+		"*.def": "c",
+		"*.conf": "properties",
+		"*.spec": "shellscript",
+		"*.bpl": "blueprint-gtk",
+		"*.embeddedhtml": "html",
 		"string": "cpp",
 		"iostream": "cpp",
 		"ostream": "cpp",
@@ -64,7 +68,8 @@
 		"streambuf": "cpp",
 		"thread": "cpp",
 		"cinttypes": "cpp",
-		"typeinfo": "cpp"
+		"typeinfo": "cpp",
+		"colors.h": "c"
 	},
 	"C_Cpp.default.cppStandard": "c++17"
 }
