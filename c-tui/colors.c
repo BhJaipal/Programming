@@ -1,6 +1,7 @@
 #include "colors.h"
 #include <ctype.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 char *strlower(char *str) {
@@ -30,21 +31,52 @@ Color24BitFlag get_color_flag(char *colorName) {
 }
 
 char *get_24_bit_color_escape_from_color(Color24Bit color) {
-	char *esc;
+	char *esc = malloc(sizeof(char) * 9);
 	sprintf(esc, "\x1b[%dm", color.colorFlag);
 	return esc;
 }
 
 char *get_24_bit_color_escape_from_name(char *colorName) {
-	char *esc;
+	char *esc = malloc(sizeof(char) * 9);
 	sprintf(esc, "\x1b[%dm", get_color_flag(colorName));
 	return esc;
 }
 
 char *get_24_bit_color_escape_from_flag(Color24BitFlag flag) {
-	char *esc;
+	char *esc = malloc(sizeof(char) * 9);;
 	sprintf(esc, "\x1b[%dm", flag);
 	return esc;
+}
+
+const char *get_256_bit_color_escape(uint8_t colorCode) {
+	char *out = malloc(sizeof(char) * 9);
+	sprintf(out, "\x1b[48;5;%dm", colorCode);
+	return out;
+}
+
+const char *get_escape_from_from_ti_color(TiColor ti_color) {
+	switch (ti_color.is_24_256_reset_bit) {
+		case 1:
+			return get_24_bit_color_escape_from_color(ti_color.col24);
+		case 0:
+			return get_256_bit_color_escape(ti_color.col256);
+		default:
+			return "\x1b[0m";
+	}
+	return "\x1b[0m";
+}
+
+TiColor ti_color_new(Color24Bit color24, uint8_t color256, uint8_t is_24_256_reset_bit) {
+	TiColor col = {color24, color256, is_24_256_reset_bit};
+	return col;
+}
+
+Color24Bit get_24_bit_color_from_flag(Color24BitFlag flag) {
+	for (int i = 0; i < 24; i++) {
+		if (flag == colors24Bit[i].colorFlag)
+			return colors24Bit[i];
+	}
+	return colors24Bit[0];
 }
 
 Color24Bit colors24Bit[40] = {

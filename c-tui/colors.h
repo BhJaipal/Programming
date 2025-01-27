@@ -1,3 +1,4 @@
+#include <stdint.h>
 #ifndef TI_COLOR_H
 #define TI_COLOR_H 1
 
@@ -51,10 +52,28 @@ typedef enum {
 
 typedef struct {
 	Color24BitFlag colorFlag;
-	const char colorLabel[20];
+	char colorLabel[20];
 } Color24Bit;
 
 extern Color24Bit colors24Bit[40];
+
+typedef struct {
+	Color24Bit col24;
+	uint8_t col256;
+	/**
+	 * If 24 bit, 1
+	 * If 256 bit, 0
+	 * else reset, -1
+	 */
+	uint8_t is_24_256_reset_bit;
+} TiColor;
+
+Color24Bit get_24_bit_color_from_flag(Color24BitFlag flag);
+TiColor ti_color_new(Color24Bit color24, uint8_t color256, uint8_t is_24_256_reset_bit);
+
+const char *get_escape_from_from_ti_color(TiColor ti_color);
+
+const char *get_256_bit_color_escape(uint8_t colorCode);
 
 const char *get_color_name(Color24BitFlag flag);
 Color24BitFlag get_color_flag(char *colorName);
