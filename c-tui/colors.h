@@ -68,10 +68,14 @@ typedef struct {
 	uint8_t is_24_256_reset_bit;
 } TiColor;
 
+extern TiColor resetColor;
+
+extern TiColor ti_default_colors[40];
+
 Color24Bit get_24_bit_color_from_flag(Color24BitFlag flag);
 TiColor ti_color_new(Color24Bit color24, uint8_t color256, uint8_t is_24_256_reset_bit);
 
-const char *get_escape_from_from_ti_color(TiColor ti_color);
+const char *get_escape_from_ti_color(TiColor ti_color);
 
 const char *get_256_bit_color_escape(uint8_t colorCode);
 

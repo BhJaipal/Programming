@@ -54,7 +54,7 @@ const char *get_256_bit_color_escape(uint8_t colorCode) {
 	return out;
 }
 
-const char *get_escape_from_from_ti_color(TiColor ti_color) {
+const char *get_escape_from_ti_color(TiColor ti_color) {
 	switch (ti_color.is_24_256_reset_bit) {
 		case 1:
 			return get_24_bit_color_escape_from_color(ti_color.col24);
@@ -78,6 +78,8 @@ Color24Bit get_24_bit_color_from_flag(Color24BitFlag flag) {
 	}
 	return colors24Bit[0];
 }
+
+TiColor resetColor = {{COLOR24_NONE, "none"}, 0, 1};
 
 Color24Bit colors24Bit[40] = {
 	{COLOR24_NONE, "none"},
@@ -122,4 +124,49 @@ Color24Bit colors24Bit[40] = {
 	{COLOR24_LIGHT_MAGENTA_BG, "lightmagenta"},
 	{COLOR24_LIGHT_TEAL_BG, "lightteal"},
 	{COLOR24_WHITE_2_BG, "white"},
+};
+
+TiColor ti_default_colors[40] = {
+	{{COLOR24_NONE, "none"}, 0, 1},
+	{{COLOR24_BOLD, "bold"}, 0, 1},
+	{{COLOR24_DARK, "dark"}, 0, 1},
+	{{COLOR24_ITALIC, "italic"}, 0, 1},
+	{{COLOR24_UNDERLINE, "underline"}, 0, 1},
+	{{COLOR24_BLINK, "blink"}, 0, 1},
+	{{COLOR24_UNKNOWN, "unknown"}, 0, 1},
+	{{COLOR24_REVERSE_VIDEO, "reverse-video"}, 0, 1},
+
+	{{COLOR24_BLACK, "black"}, 0, 1},
+	{{COLOR24_RED, "red"}, 0, 1},
+	{{COLOR24_GREEN, "green"}, 0, 1},
+	{{COLOR24_YELLOW, "yellow"}, 0, 1},
+	{{COLOR24_BLUE, "blue"}, 0, 1},
+	{{COLOR24_MAGENTA, "magenta"}, 0, 1},
+	{{COLOR24_TEAL, "teal"}, 0, 1},
+	{{COLOR24_WHITE, "white"}, 0, 1},
+	{{COLOR24_GREY, "grey"}, 0, 1},
+	{{COLOR24_LIGHT_RED, "lightred"}, 0, 1},
+	{{COLOR24_LIGHT_GREEN, "lightgreen"}, 0, 1},
+	{{COLOR24_LIGHT_YELLOW, "lightyellow"}, 0, 1},
+	{{COLOR24_LIGHT_BLUE, "lightblue"}, 0, 1},
+	{{COLOR24_LIGHT_MAGENTA, "lightmagenta"}, 0, 1},
+	{{COLOR24_LIGHT_TEAL, "lightteal"}, 0, 1},
+	{{COLOR24_WHITE_2, "white"}, 0, 1},
+
+	{{COLOR24_BLACK_BG, "black"}, 0, 1},
+	{{COLOR24_RED_BG, "red"}, 0, 1},
+	{{COLOR24_GREEN_BG, "green"}, 0, 1},
+	{{COLOR24_YELLOW_BG, "yellow"}, 0, 1},
+	{{COLOR24_BLUE_BG, "blue"}, 0, 1},
+	{{COLOR24_MAGENTA_BG, "magenta"}, 0, 1},
+	{{COLOR24_TEAL_BG, "teal"}, 0, 1},
+	{{COLOR24_WHITE_BG, "white"}, 0, 1},
+	{{COLOR24_GREY_BG, "grey"}, 0, 1},
+	{{COLOR24_LIGHT_RED_BG, "lightred"}, 0, 1},
+	{{COLOR24_LIGHT_GREEN_BG, "lightgreen"}, 0, 1},
+	{{COLOR24_LIGHT_YELLOW_BG, "lightyellow"}, 0, 1},
+	{{COLOR24_LIGHT_BLUE_BG, "lightblue"}, 0, 1},
+	{{COLOR24_LIGHT_MAGENTA_BG, "lightmagenta"}, 0, 1},
+	{{COLOR24_LIGHT_TEAL_BG, "lightteal"}, 0, 1},
+	{{COLOR24_WHITE_2_BG, "white"}, 0, 1},
 };
