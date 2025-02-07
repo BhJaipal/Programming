@@ -30,32 +30,12 @@ typedef enum {
 	COLOR24_LIGHT_MAGENTA = 95,
 	COLOR24_LIGHT_TEAL = 96,
 	COLOR24_WHITE_2 = 97,
-
-	/* Background Colors */
-	COLOR24_BLACK_BG = 40,
-	COLOR24_RED_BG = 41,
-	COLOR24_GREEN_BG = 42,
-	COLOR24_YELLOW_BG = 43,
-	COLOR24_BLUE_BG = 44,
-	COLOR24_MAGENTA_BG = 45,
-	COLOR24_TEAL_BG = 46,
-	COLOR24_WHITE_BG = 47,
-	COLOR24_GREY_BG = 100,
-	COLOR24_LIGHT_RED_BG = 101,
-	COLOR24_LIGHT_GREEN_BG = 102,
-	COLOR24_LIGHT_YELLOW_BG = 103,
-	COLOR24_LIGHT_BLUE_BG = 104,
-	COLOR24_LIGHT_MAGENTA_BG = 105,
-	COLOR24_LIGHT_TEAL_BG = 106,
-	COLOR24_WHITE_2_BG = 107,
 } Color24BitFlag;
 
 typedef struct {
 	Color24BitFlag colorFlag;
 	char colorLabel[20];
 } Color24Bit;
-
-extern Color24Bit colors24Bit[40];
 
 typedef struct {
 	Color24Bit col24;
@@ -69,8 +49,9 @@ typedef struct {
 } TiColor;
 
 extern TiColor resetColor;
+extern Color24Bit reset24Bit;
 
-extern TiColor ti_default_colors[40];
+extern TiColor ti_default_colors[24];
 
 Color24Bit get_24_bit_color_from_flag(Color24BitFlag flag);
 TiColor ti_color_new(Color24Bit color24, uint8_t color256, uint8_t is_24_256_reset_bit);
