@@ -3,18 +3,19 @@
 #include <string.h>
 #include <unistd.h>
 #include "array.h"
+#include "types.h"
 
 #define string_len 10
 
-ArrayElemTypes input_type(char el[string_len]) {
-	int isFloat = 0;
+ObjectType input_type(char el[string_len]) {
+	int isFLOAT = 0;
 	unsigned int slen = strlen(el);
 	for (size_t i = 0; i < slen; i++) {
-		if (el[i] == '.' && isFloat) return String;
-		else if (el[i] == '.') isFloat = 1;
-		else if (el[i] < '0' || el[i] > '9') return String;
+		if (el[i] == '.' && isFLOAT) return STRING;
+		else if (el[i] == '.') isFLOAT = 1;
+		else if (el[i] < '0' || el[i] > '9') return STRING;
 	}
-	return (isFloat) ? Float : Int;
+	return (isFLOAT) ? FLOAT : INT;
 }
 
 int main() {
@@ -39,13 +40,13 @@ int main() {
 				break;
 			}
 		}
-		ArrayElemTypes elType = input_type(input);
+		ObjectType elType = input_type(input);
 		void *data;
 		switch (elType) {
-			case String:
+			case STRING:
 				data = string_el_new(input);
 				break;
-			case Float:
+			case FLOAT:
 				data = float_el_new(atof(input));
 				break;
 			default:
@@ -58,27 +59,28 @@ int main() {
 	}
 	printf("Elements: [\n");
 	for (unsigned char i = 0; i < len; i++) {
+		printf("\t");
 		switch (arr->elements_[i].type) {
-			case String:
-				printf("\t%s => ", string_el_get_value(arr->elements_[i].data));
+			case STRING:
+				string_print(arr->elements_[i].data);
 				break;
-			case Float:
-				printf("\t%f => ", float_el_get_value(arr->elements_[i].data));
+			case FLOAT:
+				float_print(arr->elements_[i].data);
 				break;
 			default:
-				printf("\t%d => ", int_el_get_value(arr->elements_[i].data));
+				int_print(arr->elements_[i].data);
 				break;
 		}
-		printf("\x1b[38;5;69m");
+		printf(" => \x1b[38;5;69m");
 		switch (arr->elements_[i].type) {
-			case String:
-				printf("String");
+			case STRING:
+				printf("STRING");
 				break;
-			case Float:
-				printf("Float");
+			case FLOAT:
+				printf("FLOAT");
 				break;
 			default:
-				printf("Int");
+				printf("INT");
 				break;
 		}
 		printf("\x1b[0m\n");
