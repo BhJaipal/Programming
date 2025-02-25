@@ -5,13 +5,9 @@
 This folder contains:
 
 - OOP pillers
--
 - Swapping values
--
 - About Pointers
--
 - Struct and union
--
 - About loops
 
-> [!NOTE] Please try running these files
+[!NOTE] Please try running these files
