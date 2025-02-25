@@ -30,7 +30,7 @@ typedef struct {
 		int value;
 	} IntEl;
 
-	IntEl *int_el_new(EL_TYPE data);
+	IntEl *int_el_new(int data);
 	int int_el_get_value(void *elem);
 	int int_el_unref(void *elem);
  */
@@ -42,8 +42,8 @@ DYNAMIC_ELEM_TYPE(Int, int, int);
 	} StringEl;
 
 	StringEl *string_el_new(char * data);
-	char * int_el_get_value(void *elem);
-	char * int_el_unref(void *elem);
+	char * string_el_get_value(void *elem);
+	char * string_el_unref(void *elem);
  */
 DYNAMIC_ELEM_TYPE(String, string, char *);
 
@@ -52,9 +52,9 @@ DYNAMIC_ELEM_TYPE(String, string, char *);
 		float value;
 	} FLoatEl;
 
-	FLoatEl *int_el_new(FloatEl data);
-	float int_el_get_value(void *elem);
-	float int_el_unref(void *elem);
+	FLoatEl *float_el_new(float data);
+	float float_el_get_value(void *elem);
+	float float_el_unref(void *elem);
  */
 DYNAMIC_ELEM_TYPE(Float, float, float);
 

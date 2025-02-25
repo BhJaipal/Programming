@@ -26,7 +26,7 @@
 
 /**
  * Generated Output for int:
-	IntEl *int_el_new(EL_TYPE data) {
+	IntEl *int_el_new(int data) {
 		IntEl *el = malloc(sizeof(IntEl));
 		el->value = data;
 		;
@@ -52,7 +52,7 @@ void int_print(void *elem) {
 	StringEl *string_el_new(char * data) {
 		StringEl *el = malloc(sizeof(StringEl));
 		el->value = data;
-		//! Next 2 lines are by ASSIGNED parameter in DYNAMIC_TYPEEM_TYPE
+		//! Next 2 lines are by ASSIGNED parameter in DYNAMIC_TYPE_FN
 		el->value = malloc(sizeof(char[strlen(data)]));
 		strcpy(el->value, data);;
 		return el;
