@@ -24,7 +24,6 @@ typedef struct {
 DYNAMIC_ELEM_TYPE(int, int);
 
 char *string_new(char *data);
-
 char *string_get_value(Object elem);
 void string_unref(Object elem);
 Object string_to_object(char *value);
