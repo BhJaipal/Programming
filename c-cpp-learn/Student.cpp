@@ -1,10 +1,11 @@
 #include <iostream>
 #include <string>
+using namespace std;
 
 class Person
 {
 protected:
-    std::string _name;
+    string _name;
     int _age;
     bool _isAlive;
 
@@ -14,17 +15,17 @@ public:
      *
      * @param name Name of person
      * @param age Age of person
-     * @throw std::string Cannot create an object of abstract class
+     * @throw string Cannot create an object of abstract class
      */
-    Person(std::string name, int age)
+    Person(string name, int age)
     {
-        this->_name = name;
-        this->_age = age;
-        this->_isAlive = true;
+        _name = name;
+        _age = age;
+        _isAlive = true;
     }
     virtual void eat() = 0;
-    bool getLife() { return this->_isAlive; }
-    void setLife(bool status) { this->_isAlive = status; }
+    bool getLife() { return isAlive; }
+    void setLife(bool status) { isAlive = status; }
 };
 
 #if false
@@ -39,7 +40,7 @@ Person person("Jaipal", 18);
 class Student : public Person
 {
 private:
-    std::string dept;
+    string dept;
     int rollNo;
 
 public:
@@ -50,26 +51,26 @@ public:
      * @param dept Department of student
      * @param rollNo Roll number of student
      */
-    Student(std::string name, int age, std::string dept, int rollNo) : Person(name, age)
+    Student(string name, int age, string dept, int rollNo) : Person(name, age)
     {
         this->dept = dept;
         this->rollNo = rollNo;
     }
     ~Student()
     {
-        this->setLife(false);
-        std::cout << "Student died" << std::endl;
+        setLife(false);
+        cout << "Student died" << endl;
     }
     void display()
     {
-        std::cout << "Name: " << this->_name << std::endl;
-        std::cout << "Age: " << this->_age << std::endl;
-        std::cout << "Department: " << this->dept << std::endl;
-        std::cout << "Roll No: " << this->rollNo << std::endl;
+        cout << "Name: " << _name << endl;
+        cout << "Age: " << _age << endl;
+        cout << "Department: " << dept << endl;
+        cout << "Roll No: " << rollNo << endl;
     }
     void eat()
     {
-        std::cout << "Student is eating" << std::endl;
+        cout << "Student is eating" << endl;
     }
 };
 

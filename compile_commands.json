@@ -1,8 +1,0 @@
-[
-    {
-        "directory": ".",
-        "command": "g++",
-        "file": "my-ls.cpp",
-        "arguments": ["-std=c++11", "-Wall", "-g", "-c", "my-ls.cpp"]
-    }
-]

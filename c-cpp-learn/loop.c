@@ -71,7 +71,7 @@ int main() {
   do {
     printf("%d  ", num2);
     num2--;
-  } while (num2 > 0)
+  } while (num2 > 0);
   /*
     output:
     10  9  8  7  6  5  4  3  2  1
