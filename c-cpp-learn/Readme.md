@@ -10,5 +10,5 @@ This folder contains:
 - Struct and union
 - About loops
 
-> !NOTE
+> [!NOTE]
 > Please try running these files
