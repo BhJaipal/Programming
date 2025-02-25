@@ -3,6 +3,7 @@
 #include "types.h"
 #include <malloc.h>
 #include <stdio.h>
+#include <string.h>
 
 Dict *dict_new() {
 	Dict *d = malloc(sizeof(Dict));
@@ -22,24 +23,38 @@ void dict_add_element(Dict *dict, Object key, Object value) {
 	dict->arr[dict->len - 1] = pair;
 }
 
+Object dict_pop_pair(Dict *dict, Object key, Object defaultValue) {
+	for (unsigned i = 0; i < dict->len; i++) {
+		Object el = dict->arr[i].key;
+		if (key.type != el.type)
+			continue;
+		if (key.type == STRING) {
+			if (!strcmp(string_get_value(key), string_get_value(el))) {
+				return dict->arr[i].value;
+			}
+		}
+	}
+	return defaultValue;
+}
+
 void dict_print(Dict *dict) {
 	printf("{ ");
 	for (unsigned i = 0; i < dict->len; i++) {
 		switch (dict->arr[i].key.type) {
 			case STRING:
-				string_print(dict->arr[i].key.data);
+				string_print(dict->arr[i].key);
 				break;
 			default:
-				int_print(dict->arr[i].key.data);
+				int_print(dict->arr[i].key);
 				break;
 		}
 		printf(" => ");
 		switch (dict->arr[i].value.type) {
 			case STRING:
-				string_print(dict->arr[i].value.data);
+				string_print(dict->arr[i].value);
 				break;
 			case FLOAT:
-				float_print(dict->arr[i].value.data);
+				float_print(dict->arr[i].value);
 				break;
 			case DICT:
 				dict_print(dict->arr[i].value.data);
@@ -48,7 +63,7 @@ void dict_print(Dict *dict) {
 				array_print((Array *)dict->arr[i].value.data);
 				break;
 			default:
-				int_print(dict->arr[i].value.data);
+				int_print(dict->arr[i].value);
 				break;
 		}
 		if (i != dict->len - 1)
@@ -63,19 +78,19 @@ void dict_print_all(Dict *dict) {
 		printf("\n\t");
 		switch (dict->arr[i].key.type) {
 			case STRING:
-				string_print(dict->arr[i].key.data);
+				string_print(dict->arr[i].key);
 				break;
 			default:
-				int_print(dict->arr[i].key.data);
+				int_print(dict->arr[i].key);
 				break;
 		}
 		printf(" => ");
 		switch (dict->arr[i].value.type) {
 			case STRING:
-				string_print(dict->arr[i].value.data);
+				string_print(dict->arr[i].value);
 				break;
 			case FLOAT:
-				float_print(dict->arr[i].value.data);
+				float_print(dict->arr[i].value);
 				break;
 			case DICT:
 				dict_print(dict->arr[i].value.data);
@@ -84,7 +99,7 @@ void dict_print_all(Dict *dict) {
 				array_print((Array *)dict->arr[i].value.data);
 				break;
 			default:
-				int_print(dict->arr[i].value.data);
+				int_print(dict->arr[i].value);
 				break;
 		}
 		if (i != dict->len - 1)
@@ -93,15 +108,17 @@ void dict_print_all(Dict *dict) {
 	printf("\n}\nLength: %u\n", dict->len);
 }
 
+Object dict_to_object(Dict *dict) {
+	Object obj = {dict, DICT};
+	return obj;
+}
+
 void dict_free(Dict *dict) {
 	for (int i = 0; i < dict->len; i++) {
 		// Key is either String or Int/FLoat
 		switch (dict->arr[i].key.type) {
 			case STRING:
-				{
-					char *out = string_el_unref(dict->arr[i].key.data);
-					free(out);
-				}
+				string_unref(dict->arr[i].key);
 				break;
 			default:
 				free(dict->arr[i].key.data);
@@ -110,10 +127,7 @@ void dict_free(Dict *dict) {
 
 		switch (dict->arr[i].value.type) {
 			case STRING:
-				{
-					char *out = string_el_unref(dict->arr[i].value.data);
-					free(out);
-				}
+				string_unref(dict->arr[i].value);
 				break;
 			case ARRAY:
 				array_free(dict->arr[i].value.data);

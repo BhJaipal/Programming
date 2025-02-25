@@ -1,100 +1,54 @@
 #include "types.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include <malloc.h>
 #include <string.h>
 
-#define DYNAMIC_TYPE_FN(EL_NAME, el_name, EL_TYPE, ASSIGNED, ENUM_TYPE) \
-	EL_NAME##El *el_name##_el_new(EL_TYPE data) {		\
-		EL_NAME##El *el = malloc(sizeof(EL_NAME##El));  \
-		el->value = data;								\
-		ASSIGNED;										\
+#define DYNAMIC_TYPE_FN(el_name, EL_TYPE, ENUM_TYPE)	\
+	EL_TYPE *el_name##_new(EL_TYPE data) {				\
+		EL_TYPE *el = malloc(sizeof(EL_TYPE));			\
+		*el = data;										\
 		return el;										\
 	}													\
-	EL_TYPE el_name##_el_get_value(void *elem) {		\
-		return ((EL_NAME##El *)elem)->value;			\
+	EL_TYPE el_name##_get_value(Object elem) {			\
+		return *(EL_TYPE *)elem.data;					\
 	}													\
-	EL_TYPE el_name##_el_unref(void *elem) {			\
-		EL_TYPE value = ((EL_NAME##El *)elem)->value;   \
-		free (elem);									\
-		return value;									\
+	void el_name##_unref (Object elem) {				\
+		free(elem.data);								\
 	}													\
 	Object el_name##_to_object (EL_TYPE value) {		\
-		Object objt = {el_name##_el_new(value), ENUM_TYPE}; \
-		return objt;										\
+		Object objt = {el_name##_new(value), ENUM_TYPE};\
+		return objt;									\
 	}
-	
 
-/**
- * Generated Output for int:
-	IntEl *int_el_new(int data) {
-		IntEl *el = malloc(sizeof(IntEl));
-		el->value = data;
-		;
-		return el;
-	}
-	int int_el_get_value(void *elem) {
-		return ((IntEl *)elem)->value;
-	}
-	int int_el_unref(void *elem) {
-		int value = ((IntEl *)elem)->value;
-		free (elem);
-		return value;
-	}
-*/
-DYNAMIC_TYPE_FN(Int, int, int,,INT);
-void int_print(void *elem) {
+DYNAMIC_TYPE_FN(int, int,INT);
+void int_print(Object elem) {
 	printf("\x1b[38;5;156m%d\x1b[0m",
-		((IntEl *)elem)->value);
+		int_get_value(elem));
 }
 
-/**
- * Generated Output for string:
-	StringEl *string_el_new(char * data) {
-		StringEl *el = malloc(sizeof(StringEl));
-		el->value = data;
-		//! Next 2 lines are by ASSIGNED parameter in DYNAMIC_TYPE_FN
-		el->value = malloc(sizeof(char[strlen(data)]));
-		strcpy(el->value, data);;
-		return el;
-	}
-	char * int_el_get_value(void *elem) {
-		return ((StringEl *)elem)->value;
-	}
-	char * int_el_unref(void *elem) {
-		char * value = ((StringEl *)elem)->value;
-		free (elem);
-		return value;
-	}
-*/
-DYNAMIC_TYPE_FN(String, string, char *,
-		el->value = malloc(sizeof(char[strlen(data)]));
-		strcpy(el->value, data);,
-	STRING
-);
-void string_print(void *elem) {					\
-	printf("\x1b[38;5;173m\"%s\"\x1b[0m",		\
-		((StringEl *)elem)->value);				\
+char *string_new(char *data) {
+	char *el = malloc(sizeof(char[strlen(data)]));
+	strcpy(el, data);
+	return el;
+}
+char *string_get_value(Object elem) {
+	return (elem.data);
+}
+void string_unref(Object elem) {
+	free(elem.data);
+}
+Object string_to_object(char *value) {
+	Object objt = {string_new(value), STRING};
+	return objt;
 }
 
-/**
- * Generated Output for float:
-	FLoatEl *int_el_new(FloatEl data) {
-		FloatEl *el = malloc(sizeof(FloatEl));
-		el->value = data;
-		;
-		return el;
-	}
-	float int_el_get_value(void *elem) {
-		return ((FloatEl *)elem)->value;
-	}
-	float int_el_unref(void *elem) {
-		float value = ((FloatEl *)elem)->value;
-		free (elem);
-		return value;
-	}
-*/
-DYNAMIC_TYPE_FN(Float, float, float,,FLOAT);
-void float_print(void *elem) {
+void string_print(Object elem) {
+	printf("\x1b[38;5;173m\"%s\"\x1b[0m",
+		((char *)elem.data));
+}
+
+DYNAMIC_TYPE_FN(float, float,FLOAT);
+void float_print(Object elem) {
 	printf("\x1b[38;5;156m%f\x1b[0m",
-		((FloatEl *)elem)->value);
+		float_get_value(elem));
 }

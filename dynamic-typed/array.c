@@ -14,25 +14,38 @@ Array *array_new() {
 
 void array_free(Array *arr) {
 	for (int i = 0; i < arr->len_; i++) {
-		if (arr->elements_[i].type == STRING) {
-			free(((StringEl *)arr->elements_[i].data)->value);
+		switch (arr->elements_[i].type) {
+			case STRING:
+				string_unref(arr->elements_[i]);
+				break;
+			case ARRAY:
+				array_free(arr->elements_[i].data);
+				break;
+			case DICT:
+				dict_free(arr->elements_[i].data);
+				break;
+			case FLOAT:
+				float_unref(arr->elements_[i]);
+				break;
+			default:
+				int_unref(arr->elements_[i]);
+				break;
 		}
-		free(arr->elements_[i].data);
 	}
 	free(arr->elements_);
 	arr->len_ = 0;
 	free(arr);
 }
 
-void array_insert_at_index(Array *arr, void *data, ObjectType type, unsigned index) {
+void array_insert_at_index(Array *arr, Object data, unsigned index) {
 	if (index < 0) index = -index - 1;
 	if (index >= arr->len_) {
 		printf("\x1b[1;33mWarning: \x1b[0mIt will push elements to end of array\n");
-		array_push(arr, data, type);
+		array_push(arr, data);
 		return;
 	}
 	else if (index == arr->len_ - 1) {
-		array_push(arr, data, type);
+		array_push(arr, data);
 		return;
 	}
 	arr->len_++;
@@ -40,20 +53,12 @@ void array_insert_at_index(Array *arr, void *data, ObjectType type, unsigned ind
 	for (unsigned i = index; i < arr->len_ - 1; i++) {
 		arr->elements_[i + 1] = arr->elements_[i];
 	}
-	Object el = {data, type};
-	arr->elements_[index] = el;
+	arr->elements_[index] = data;
 }
 
-void array_push_object(Array *arr, Object obj) {
+void array_push(Array *arr, Object obj) {
 	arr->elements_ = realloc(arr->elements_, sizeof(Object[arr->len_ + 1]));
 	arr->elements_[arr->len_] = obj;
-	arr->len_++;
-}
-
-void array_push(Array *arr, void *data, ObjectType type) {
-	arr->elements_ = realloc(arr->elements_, sizeof(Object[arr->len_ + 1]));
-	Object el = {data, type};
-	arr->elements_[arr->len_] = el;
 	arr->len_++;
 }
 
@@ -99,10 +104,10 @@ void array_print(Array *arr) {
 	for (unsigned i = 0; i < arr->len_; i++) {
 		switch (arr->elements_[i].type) {
 			case STRING:
-				string_print(arr->elements_[i].data);
+				string_print(arr->elements_[i]);
 				break;
 			case FLOAT:
-				float_print(arr->elements_[i].data);
+				float_print(arr->elements_[i]);
 				break;
 			case ARRAY:
 				array_print((Array *)arr->elements_[i].data);
@@ -111,7 +116,7 @@ void array_print(Array *arr) {
 				dict_print((Dict *)arr->elements_[i].data);
 				break;
 			default:
-				int_print(arr->elements_[i].data);
+				int_print(arr->elements_[i]);
 				break;
 		}
 		if (i != arr->len_ - 1) printf(", ");

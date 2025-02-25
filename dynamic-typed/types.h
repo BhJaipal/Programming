@@ -1,16 +1,12 @@
 #ifndef DYNAMIC_TYPES_H
 #define DYNAMIC_TYPES_H
 
-#define DYNAMIC_ELEM_TYPE(EL_NAME, el_name, EL_TYPE)	\
-	typedef struct {									\
-		EL_TYPE value;									\
-	} EL_NAME##El;										\
-														\
-	EL_NAME##El *el_name##_el_new(EL_TYPE data);		\
-	EL_TYPE el_name##_el_get_value (void *elem);		\
-	EL_TYPE el_name##_el_unref (void *elem);			\
-	void el_name##_print(void *elem);					\
-	Object el_name##_to_object(EL_TYPE value);
+#define DYNAMIC_ELEM_TYPE(el_name, EL_TYPE)	\
+	EL_TYPE *el_name##_new(EL_TYPE data);			\
+	EL_TYPE el_name##_get_value(Object elem);		\
+	void el_name##_unref(Object elem);				\
+	Object el_name##_to_object(EL_TYPE value);			\
+	void el_name##_print(Object elem);
 
 typedef enum {
 	STRING,
@@ -25,37 +21,15 @@ typedef struct {
 	ObjectType type;
 } Object;
 
-/** This will generate
-	typedef struct {
-		int value;
-	} IntEl;
+DYNAMIC_ELEM_TYPE(int, int);
 
-	IntEl *int_el_new(int data);
-	int int_el_get_value(void *elem);
-	int int_el_unref(void *elem);
- */
-DYNAMIC_ELEM_TYPE(Int, int, int);
+char *string_new(char *data);
 
-/** This will generate
-	typedef struct {
-		char * value;
-	} StringEl;
+char *string_get_value(Object elem);
+void string_unref(Object elem);
+Object string_to_object(char *value);
+void string_print(Object elem);
 
-	StringEl *string_el_new(char * data);
-	char * string_el_get_value(void *elem);
-	char * string_el_unref(void *elem);
- */
-DYNAMIC_ELEM_TYPE(String, string, char *);
-
-/** This will generate
-	typedef struct {
-		float value;
-	} FLoatEl;
-
-	FLoatEl *float_el_new(float data);
-	float float_el_get_value(void *elem);
-	float float_el_unref(void *elem);
- */
-DYNAMIC_ELEM_TYPE(Float, float, float);
+DYNAMIC_ELEM_TYPE(float, float);
 
 #endif
