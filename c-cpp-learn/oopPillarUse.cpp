@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+using namespace std;
 
 /**
  * * This is Abstraction
@@ -23,14 +24,14 @@ class Person {
    * a private member of class until end of class
    *
    * ```cpp
-   * std::cout << person1.name << std::endl;
+   * cout << person1.name << endl;
    * person1.age= 19;
    * ```
    * both throws error as private members of class are cannot be accessed
    * outside class directly use getters and setters instead
    */
 private:
-  std::string name;
+  string name;
   float age;
   bool isAlive;
   bool isHungry;
@@ -40,38 +41,38 @@ public:
    * @param name Name of person
    * @param age Age of person
    */
-  Person(std::string name, float age) {
+  Person(string name, float age) {
     this->name = name;
     this->age = age;
     this->isAlive = true;
     this->isHungry = true;
   }
   bool getIsHungry() { return this->isHungry; }
-  std::string eat() {
+  string eat() {
     this->isHungry = false;
     return this->name + " has eaten food";
   }
   void setIsHungry() { this->isHungry = true; }
-  void setName(std::string newName) {
+  void setName(string newName) {
     char confirm;
-    std::cout << "Are you sure you want to change your name [Yn]: ";
-    std::cin >> confirm;
+    cout << "Are you sure you want to change your name [Yn]: ";
+    cin >> confirm;
     if (confirm == 'y' || confirm == 'Y') {
       if (this->name == newName) {
-        std::cout << "Cannot change name, please chose a new name" << std::endl;
+        cout << "Cannot change name, please chose a new name" << endl;
       } else {
         this->name = newName;
       }
     } else {
     }
   }
-  std::string getName() { return this->name; }
+  string getName() { return this->name; }
   float getAge() { return this->age; }
   void setAge(float newAge) { this->age = newAge; }
   bool getIsAlive() { return this->isAlive; }
   void setIsAlive(bool aliveStatus) {
     if (aliveStatus == false) {
-      std::std::cout << this->name << " is dead" << std::std::endl;
+      cout << this->name << " is dead" << std::endl;
     } else {
     }
     this->isAlive = aliveStatus;
@@ -103,7 +104,7 @@ private:
   int salary;
 
 public:
-  Programmer(std::string name, float age, int salary1) : Person(name, age) {
+  Programmer(string name, float age, int salary1) : Person(name, age) {
     this->salary = salary1;
   }
   int getSalary() { return this->salary; }
@@ -115,7 +116,7 @@ private:
   int salary;
 
 public:
-  Manager(std::string name, float age, int salary1) : Person(name, age) {
+  Manager(string name, float age, int salary1) : Person(name, age) {
     this->salary = salary1;
   }
   int getSalary() { return this->salary; }
@@ -138,21 +139,21 @@ public:
  * I will use another method of polymorphism in below method
  */
 void OOPPillarUse() {
-  std::string name;
-  std::cout << "Hello, enter your name: ";
-  std::cin >> name;
+  string name;
+  cout << "Hello, enter your name: ";
+  cin >> name;
 
   float age;
-  std::cout << "Enter your age: ";
-  std::cin >> age;
+  cout << "Enter your age: ";
+  cin >> age;
 
   int salary;
-  std::cout << "Enter salary: ";
-  std::cin >> salary;
+  cout << "Enter salary: ";
+  cin >> salary;
 
   int choice1;
-  std::cout << "Choose one: \n1. Programmer\n2. Manager\n3. Enter value: ";
-  std::cin >> choice1;
+  cout << "Choose one: \n1. Programmer\n2. Manager\n3. Enter value: ";
+  cin >> choice1;
   if (choice1 == 1 || choice1 == 2) {
     Person *person;
     if (choice1 == 1) {
@@ -160,75 +161,75 @@ void OOPPillarUse() {
     } else {
       person = new Manager(name, age, salary);
     }
-    std::cout << "" << std::endl;
-    std::cout << "Current data" << std::endl;
-    std::cout << "Name: " << person->getName() << std::endl;
-    std::cout << "Age: " << person->getAge() << std::endl;
-    std::cout << "Is Person alive?: " << person->getIsAlive() << std::endl;
-    std::cout << "Is person hungry: " << person->getIsHungry() << std::endl
-              << std::endl;
+    cout << "" << endl;
+    cout << "Current data" << endl;
+    cout << "Name: " << person->getName() << endl;
+    cout << "Age: " << person->getAge() << endl;
+    cout << "Is Person alive?: " << person->getIsAlive() << endl;
+    cout << "Is person hungry: " << person->getIsHungry() << endl
+              << endl;
 
     while (true) {
-      std::cout << "Options: " << std::endl;
-      std::cout << "1. Change name" << std::endl;
-      std::cout << "2. Change age" << std::endl;
-      std::cout << "3. Get hungry" << std::endl;
-      std::cout << "4. Eat food" << std::endl;
-      std::cout << "5. Get current data" << std::endl;
-      std::cout << "6. Die and exit" << std::endl;
-      std::cout << "7. Exit or quit" << std::endl;
-      std::cout << "Enter your choice: ";
+      cout << "Options: " << endl;
+      cout << "1. Change name" << endl;
+      cout << "2. Change age" << endl;
+      cout << "3. Get hungry" << endl;
+      cout << "4. Eat food" << endl;
+      cout << "5. Get current data" << endl;
+      cout << "6. Die and exit" << endl;
+      cout << "7. Exit or quit" << endl;
+      cout << "Enter your choice: ";
       int choice;
-      std::cin >> choice;
-      std::cout << "" << std::endl;
+      cin >> choice;
+      cout << "" << endl;
       if (choice == 1) {
-        std::string newName;
-        std::cout << "Enter your new name: ";
-        std::cin >> newName;
+        string newName;
+        cout << "Enter your new name: ";
+        cin >> newName;
         person->setName(newName);
       } else if (choice == 2) {
         float newAge;
-        std::cout << "Enter new age: ";
-        std::cin >> newAge;
+        cout << "Enter new age: ";
+        cin >> newAge;
         person->setAge(newAge);
       } else if (choice == 3) {
         person->setIsHungry();
         if (person->getIsHungry()) {
-          std::cout << person->getName() << " is hungry" << std::endl;
+          cout << person->getName() << " is hungry" << endl;
         } else {
-          std::cout << person->getName() << " is not hungry" << std::endl;
+          cout << person->getName() << " is not hungry" << endl;
         }
       } else if (choice == 4) {
-        std::cout << person->eat() << std::endl;
+        cout << person->eat() << endl;
       } else if (choice == 5) {
-        std::cout << "Current data: " << std::endl;
-        std::cout << "Name: " << person->getName() << std::endl;
-        std::cout << "Age: " << person->getAge() << std::endl;
+        cout << "Current data: " << endl;
+        cout << "Name: " << person->getName() << endl;
+        cout << "Age: " << person->getAge() << endl;
         if (person->getIsHungry()) {
-          std::cout << person->getName() << " is hungry" << std::endl;
+          cout << person->getName() << " is hungry" << endl;
         } else {
-          std::cout << person->getName() << " is not hungry" << std::endl;
+          cout << person->getName() << " is not hungry" << endl;
         }
         if (person->getIsAlive()) {
-          std::cout << person->getName() << " is alive" << std::endl;
+          cout << person->getName() << " is alive" << endl;
         } else {
-          std::cout << person->getName() << " is dead" << std::endl;
+          cout << person->getName() << " is dead" << endl;
         }
       } else if (choice == 6) {
         person->setIsAlive(false);
-        std::cout << "Quiting process" << std::endl;
+        cout << "Quiting process" << endl;
         free(person);
         break;
       } else if (choice == 7) {
-        std::cout << "Quiting process" << std::endl;
+        cout << "Quiting process" << endl;
         free(person);
         break;
       } else {
       }
-      std::cout << "" << std::endl;
+      cout << "" << endl;
     }
   } else {
-    std::cout << "Invalid input, please do it again" << std::endl << std::endl;
+    cout << "Invalid input, please do it again" << endl << endl;
     OOPPillarUse();
     /* Use recursion on wrong input
      * Polymorphism on 1 or 2
