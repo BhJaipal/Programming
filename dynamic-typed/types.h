@@ -1,12 +1,12 @@
 #ifndef DYNAMIC_TYPES_H
 #define DYNAMIC_TYPES_H
 
-#define DYNAMIC_ELEM_TYPE(el_name, EL_TYPE)	\
-	EL_TYPE *el_name##_new(EL_TYPE data);			\
-	EL_TYPE el_name##_get_value(Object elem);		\
-	void el_name##_unref(Object elem);				\
-	Object el_name##_to_object(EL_TYPE value);			\
-	void el_name##_print(Object elem);
+#define DYNAMIC_ELEM_TYPE(EL_TYPE)		\
+	EL_TYPE *EL_TYPE##_new(EL_TYPE data);		\
+	EL_TYPE EL_TYPE##_get_value(Object elem);	\
+	void EL_TYPE##_unref(Object elem);			\
+	Object EL_TYPE##_to_object(EL_TYPE value);	\
+	void EL_TYPE##_print(Object elem);
 
 typedef enum {
 	STRING,
@@ -21,7 +21,7 @@ typedef struct {
 	ObjectType type;
 } Object;
 
-DYNAMIC_ELEM_TYPE(int, int);
+DYNAMIC_ELEM_TYPE(int);
 
 char *string_new(char *data);
 char *string_get_value(Object elem);
@@ -29,6 +29,6 @@ void string_unref(Object elem);
 Object string_to_object(char *value);
 void string_print(Object elem);
 
-DYNAMIC_ELEM_TYPE(float, float);
+DYNAMIC_ELEM_TYPE(float);
 
 #endif

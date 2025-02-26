@@ -14,9 +14,31 @@ typedef struct {
 
 Dict *dict_new();
 
+/**
+ * key has to be either int or string
+ * if not, pair won't be added to dictionary and gives warning about key not being int/string
+ */
 void dict_add_element(Dict *dict, Object key, Object value);
 
-Object dict_pop_pair(Dict *dict, Object key, Object defaultValue);
+/**
+ * @returns either pops the value or default value
+ */
+Object dict_pop_pair_else_default(Dict *dict, Object key, Object defaultValue);
+
+/**
+ * @returns either pops the value or gives you a default value {.data = NULL, .type = INT}
+ */
+Object dict_pop_pair(Dict *dict, Object key);
+
+/**
+ * @returns either getss the value or default value
+ */
+Object dict_get_value_else_default(Dict *dict, Object key, Object defaultValue);
+
+/**
+ * @returns either gets a value or default value {.data = NULL, .type = INT}
+ */
+Object dict_get_value(Dict *dict, Object key);
 
 /**
  * Prints in:

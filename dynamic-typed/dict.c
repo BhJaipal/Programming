@@ -23,15 +23,93 @@ void dict_add_element(Dict *dict, Object key, Object value) {
 	dict->arr[dict->len - 1] = pair;
 }
 
-Object dict_pop_pair(Dict *dict, Object key, Object defaultValue) {
+Object dict_pop_pair_else_default(Dict *dict, Object key, Object defaultValue) {
+	unsigned foundI = -1;
 	for (unsigned i = 0; i < dict->len; i++) {
 		Object el = dict->arr[i].key;
 		if (key.type != el.type)
 			continue;
 		if (key.type == STRING) {
 			if (!strcmp(string_get_value(key), string_get_value(el))) {
-				return dict->arr[i].value;
+				defaultValue = dict->arr[i].value;
+				foundI = i;
+				break;
 			}
+		} else if (int_get_value(dict->arr[i].key) == int_get_value(dict->arr[i].key)) {
+			defaultValue = dict->arr[i].value;
+			foundI = i;
+			break;
+		}
+	}
+	if (foundI != -1) {
+		for (unsigned i = foundI; i < dict->len - 2; i++) {
+			dict[i] = dict[i + 1];
+		}
+		dict->arr = realloc(dict->arr, sizeof(DictElement[--dict->len]));
+	}
+	return defaultValue;
+}
+
+Object dict_pop_pair(Dict *dict, Object key) {
+	Object defaultValue = {NULL, INT};
+	unsigned foundI = -1;
+	for (unsigned i = 0; i < dict->len; i++) {
+		Object el = dict->arr[i].key;
+		if (key.type != el.type)
+			continue;
+		if (key.type == STRING) {
+			if (!strcmp(string_get_value(key), string_get_value(el))) {
+				defaultValue = dict->arr[i].value;
+				foundI = i;
+				break;
+			}
+		} else if (int_get_value(dict->arr[i].key) == int_get_value(dict->arr[i].key)) {
+			defaultValue = dict->arr[i].value;
+			foundI = i;
+			break;
+		}
+	}
+	if (defaultValue.data != NULL) {
+		for (unsigned i = foundI; i < dict->len - 2; i++) {
+			dict[i] = dict[i + 1];
+		}
+		dict->arr = realloc(dict->arr, sizeof(DictElement[--dict->len]));
+	}
+	return defaultValue;
+}
+
+Object dict_get_value_else_default(Dict *dict, Object key, Object defaultValue) {
+	for (unsigned i = 0; i < dict->len; i++) {
+		Object el = dict->arr[i].key;
+		if (key.type != el.type)
+			continue;
+		if (key.type == STRING) {
+			if (!strcmp(string_get_value(key), string_get_value(el))) {
+				defaultValue = dict->arr[i].value;
+				break;
+			}
+		} else if (int_get_value(dict->arr[i].key) == int_get_value(dict->arr[i].key)) {
+			defaultValue = dict->arr[i].value;
+			break;
+		}
+	}
+	return defaultValue;
+}
+
+Object dict_get_value(Dict *dict, Object key) {
+	Object defaultValue = {NULL, INT};
+	for (unsigned i = 0; i < dict->len; i++) {
+		Object el = dict->arr[i].key;
+		if (key.type != el.type)
+			continue;
+		if (key.type == STRING) {
+			if (!strcmp(string_get_value(key), string_get_value(el))) {
+				defaultValue = dict->arr[i].value;
+				break;
+			}
+		} else if (int_get_value(dict->arr[i].key) == int_get_value(dict->arr[i].key)) {
+			defaultValue = dict->arr[i].value;
+			break;
 		}
 	}
 	return defaultValue;

@@ -3,24 +3,24 @@
 #include <malloc.h>
 #include <string.h>
 
-#define DYNAMIC_TYPE_FN(el_name, EL_TYPE, ENUM_TYPE)	\
-	EL_TYPE *el_name##_new(EL_TYPE data) {				\
+#define DYNAMIC_TYPE_FN(EL_TYPE, ENUM_TYPE)	\
+	EL_TYPE *EL_TYPE##_new(EL_TYPE data) {				\
 		EL_TYPE *el = malloc(sizeof(EL_TYPE));			\
 		*el = data;										\
 		return el;										\
 	}													\
-	EL_TYPE el_name##_get_value(Object elem) {			\
+	EL_TYPE EL_TYPE##_get_value(Object elem) {			\
 		return *(EL_TYPE *)elem.data;					\
 	}													\
-	void el_name##_unref (Object elem) {				\
+	void EL_TYPE##_unref (Object elem) {				\
 		free(elem.data);								\
 	}													\
-	Object el_name##_to_object (EL_TYPE value) {		\
-		Object objt = {el_name##_new(value), ENUM_TYPE};\
+	Object EL_TYPE##_to_object (EL_TYPE value) {		\
+		Object objt = {EL_TYPE##_new(value), ENUM_TYPE};\
 		return objt;									\
 	}
 
-DYNAMIC_TYPE_FN(int, int,INT);
+DYNAMIC_TYPE_FN(int, INT);
 void int_print(Object elem) {
 	printf("\x1b[38;5;156m%d\x1b[0m",
 		int_get_value(elem));
@@ -47,7 +47,7 @@ void string_print(Object elem) {
 		((char *)elem.data));
 }
 
-DYNAMIC_TYPE_FN(float, float,FLOAT);
+DYNAMIC_TYPE_FN(float, FLOAT);
 void float_print(Object elem) {
 	printf("\x1b[38;5;156m%f\x1b[0m",
 		float_get_value(elem));

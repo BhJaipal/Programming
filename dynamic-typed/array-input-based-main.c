@@ -41,20 +41,20 @@ int main() {
 			}
 		}
 		ObjectType elType = input_type(input);
-		void *data;
+		Object data;
 		switch (elType) {
 			case STRING:
-				data = string_el_new(input);
+				data = string_to_object(input);
 				break;
 			case FLOAT:
-				data = float_el_new(atof(input));
+				data = float_to_object(atof(input));
 				break;
 			default:
-				data = int_el_new(atoi(input));
+				data = int_to_object(atoi(input));
 				break;
 		}
 
-		array_push(arr, data, elType);
+		array_push(arr, data);
 		strcpy(input, "");
 	}
 	printf("Elements: [\n");
@@ -62,13 +62,13 @@ int main() {
 		printf("\t");
 		switch (arr->elements_[i].type) {
 			case STRING:
-				string_print(arr->elements_[i].data);
+				string_print(arr->elements_[i]);
 				break;
 			case FLOAT:
-				float_print(arr->elements_[i].data);
+				float_print(arr->elements_[i]);
 				break;
 			default:
-				int_print(arr->elements_[i].data);
+				int_print(arr->elements_[i]);
 				break;
 		}
 		printf(" => \x1b[38;5;69m");

@@ -1,7 +1,5 @@
 #ifndef DYNAMIC_ARRAY_H
 #define DYNAMIC_ARRAY_H
-#include <malloc.h>
-#include <strings.h>
 #include "types.h"
 
 typedef struct {
@@ -13,12 +11,23 @@ Array *array_new();
 
 void array_free(Array *arr);
 
+/**
+ * if index >= arr->len_, it pushes obj to end and gives you warning about it too
+ * else inserts it to that index
+ */
 void array_insert_at_index(Array *arr, Object obj, unsigned index);
 
 void array_push(Array *arr, Object obj);
 
+/**
+ * Gives error if index >= arr->len_ (also if array is empty)
+ * else pops elem
+ */
 Object array_pop_at_index(Array *arr, unsigned index);
 
+/**
+ * Gives error if array is empty
+ */
 Object array_pop_last(Array *arr);
 
 void array_print(Array *arr);
