@@ -40,7 +40,7 @@ void array_free(Array *arr) {
 void array_insert_at_index(Array *arr, Object data, unsigned index) {
 	if (index < 0) index = -index - 1;
 	if (index >= arr->len_) {
-		printf("\x1b[1;33mWarning: \x1b[0mIt will push elements to end of array\n");
+		warn("It will push elements to end of array\n");
 		array_push(arr, data);
 		return;
 	}
@@ -65,14 +65,12 @@ void array_push(Array *arr, Object obj) {
 Object array_pop_at_index(Array *arr, unsigned index) {
 	if (index < 0) index = -index - 1;
 	if (index >= arr->len_) {
-		printf("\x1b[1;31mError: \x1b[0mIndex out of range\n");
 		array_free(arr);
-		exit(1);
+		error("Index out of range\n");
 	}
 	if (arr->len_ == 0) {
-		printf("\x1b[1;31mError: \x1b[0mArray is empty\n");
 		array_free(arr);
-		exit(1);
+		error("Array is empty\n");
 	}
 	if (index == arr->len_ - 1)
 		return array_pop_last(arr);

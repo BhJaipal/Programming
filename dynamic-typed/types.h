@@ -31,4 +31,8 @@ void string_print(Object elem);
 
 DYNAMIC_ELEM_TYPE(float);
 
+void warn(char *message, ...);
+
+void error(char *message, ...);
+
 #endif

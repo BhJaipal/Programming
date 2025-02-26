@@ -1,6 +1,8 @@
 #include "types.h"
+#include <stdarg.h>
 #include <stdio.h>
 #include <malloc.h>
+#include <stdlib.h>
 #include <string.h>
 
 #define DYNAMIC_TYPE_FN(EL_TYPE, ENUM_TYPE)	\
@@ -51,4 +53,21 @@ DYNAMIC_TYPE_FN(float, FLOAT);
 void float_print(Object elem) {
 	printf("\x1b[38;5;156m%f\x1b[0m",
 		float_get_value(elem));
+}
+
+void warn(char *message, ...) {
+	printf("\x1b[93m[Warning]: \x1b[0m");
+	va_list arg;
+	va_start(arg, message);
+	vprintf(message, arg);
+	va_end(arg);
+}
+
+void error(char *message, ...) {
+	printf("\x1b[91m[Error]: \x1b[0m");
+	va_list arg;
+	va_start(arg, message);
+	vprintf(message, arg);
+	va_end(arg);
+	exit(1);
 }
