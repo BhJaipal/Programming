@@ -35,4 +35,26 @@ void warn(char *message, ...);
 
 void error(char *message, ...);
 
+/** params: Object, StrFn, FloatFn, DictFn, ArrayFn, DefFn */
+#define SWITCH_ON_OBJ(OBJ, STR_FN, FLOAT_FN, DICT_FN, ARR_FN, DEFAULT_INT_FN) { \
+	Object obj = (Object)OBJ;												\
+	switch (obj.type){														\
+		case STRING:														\
+			STR_FN(obj);													\
+			break;															\
+		case FLOAT:															\
+			FLOAT_FN(obj);													\
+			break;															\
+		case DICT:															\
+			DICT_FN(obj.data);												\
+			break;															\
+		case ARRAY:															\
+			ARR_FN(obj.data);												\
+			break;															\
+		default:															\
+			DEFAULT_INT_FN(obj);											\
+			break;															\
+	}																		\
+}
+
 #endif

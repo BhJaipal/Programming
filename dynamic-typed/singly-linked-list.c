@@ -3,7 +3,6 @@
 #include <malloc.h>
 #include <stddef.h>
 #include <stdio.h>
-#include <strings.h>
 
 SingleLinkedList *linked_list_new(Object first) {
 	SingleLinkedList *ll = malloc(sizeof(SingleLinkedList));
@@ -48,21 +47,28 @@ void linked_list_insert_at_index(SingleLinkedList *ll, Object value, int index) 
 	ll->len++;
 }
 
+Object linked_list_pop_last(SingleLinkedList *ll) {
+	SingleNode *curr = ll->first,
+		*prev = NULL;
+	while (curr->next != NULL) {
+		prev = curr;
+		curr = curr->next;
+	}
+	if (prev == NULL) {
+		linked_list_free(ll);
+		error("Linked list has only one node\n");
+	}
+	Object value = curr->value;
+	prev->next = curr->next;
+	free(curr);
+	return value;
+}
+
 void linked_list_free(SingleLinkedList *ll) {
 	SingleNode *curr = ll->first,
 		*prev = NULL;
 	for (unsigned int i = 0; i < ll->len; i++) {
-		switch (curr->value.type) {
-			case STRING:
-				string_unref(curr->value);
-				break;
-			case FLOAT:
-				float_unref(curr->value);
-				break;
-			default:
-				int_unref(curr->value);
-				break;
-		}
+		SWITCH_ON_OBJ(curr->value, string_unref, float_unref, , , int_unref);
 		prev = curr;
 		curr = curr->next;
 		free(prev);
@@ -72,31 +78,11 @@ void linked_list_free(SingleLinkedList *ll) {
 
 void linked_list_print(SingleLinkedList *ll) {
 	SingleNode *curr = ll->first;
-	switch (curr->value.type) {
-		case STRING:
-			string_print(curr->value);
-			break;
-		case FLOAT:
-			float_print(curr->value);
-			break;
-		default:
-			int_print(curr->value);
-			break;
-	}
+	SWITCH_ON_OBJ(curr->value, string_print, float_print, , , int_print);
 	printf(" -> ");
 	while (curr->next != NULL) {
 		curr = curr->next;
-		switch (curr->value.type) {
-			case STRING:
-				string_print(curr->value);
-				break;
-			case FLOAT:
-				float_print(curr->value);
-				break;
-			default:
-				int_print(curr->value);
-				break;
-		}
+		SWITCH_ON_OBJ(curr->value, string_print, float_print, , , int_print);
 		printf(" -> ");
 	}
 	printf("\x1b[38;5;178mNULL\x1b[0m\n");

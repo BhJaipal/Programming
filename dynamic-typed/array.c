@@ -14,23 +14,7 @@ Array *array_new() {
 
 void array_free(Array *arr) {
 	for (int i = 0; i < arr->len_; i++) {
-		switch (arr->elements_[i].type) {
-			case STRING:
-				string_unref(arr->elements_[i]);
-				break;
-			case ARRAY:
-				array_free(arr->elements_[i].data);
-				break;
-			case DICT:
-				dict_free(arr->elements_[i].data);
-				break;
-			case FLOAT:
-				float_unref(arr->elements_[i]);
-				break;
-			default:
-				int_unref(arr->elements_[i]);
-				break;
-		}
+		SWITCH_ON_OBJ(arr->elements_[i], string_unref, float_unref, dict_free, array_free, int_unref);
 	}
 	free(arr->elements_);
 	arr->len_ = 0;
@@ -100,23 +84,7 @@ Object array_pop_last(Array *arr) {
 void array_print(Array *arr) {
 	printf("[ ");
 	for (unsigned i = 0; i < arr->len_; i++) {
-		switch (arr->elements_[i].type) {
-			case STRING:
-				string_print(arr->elements_[i]);
-				break;
-			case FLOAT:
-				float_print(arr->elements_[i]);
-				break;
-			case ARRAY:
-				array_print((Array *)arr->elements_[i].data);
-				break;
-			case DICT:
-				dict_print((Dict *)arr->elements_[i].data);
-				break;
-			default:
-				int_print(arr->elements_[i]);
-				break;
-		}
+		SWITCH_ON_OBJ(arr->elements_[i], string_print, float_print, dict_print, array_print, int_print);
 		if (i != arr->len_ - 1) printf(", ");
 	}
 	printf(" ]");

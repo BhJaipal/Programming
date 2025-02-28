@@ -14,7 +14,7 @@ Dict *dict_new() {
 
 void dict_add_element(Dict *dict, Object key, Object value) {
 	if (!(key.type == INT || key.type == STRING)) {
-		printf("\x1b[33mWarning: \x1b[0mKey should be either Integer or String\nPair not added\n");
+		warn("Key should be either Integer or String\nPair not added\n");
 		return;
 	}
 	DictElement pair = {key, value};
@@ -127,23 +127,7 @@ void dict_print(Dict *dict) {
 				break;
 		}
 		printf(" => ");
-		switch (dict->arr[i].value.type) {
-			case STRING:
-				string_print(dict->arr[i].value);
-				break;
-			case FLOAT:
-				float_print(dict->arr[i].value);
-				break;
-			case DICT:
-				dict_print(dict->arr[i].value.data);
-				break;
-			case ARRAY:
-				array_print((Array *)dict->arr[i].value.data);
-				break;
-			default:
-				int_print(dict->arr[i].value);
-				break;
-		}
+		SWITCH_ON_OBJ(dict->arr[i].value, string_print, float_print, dict_print, array_print, int_print);
 		if (i != dict->len - 1)
 			printf(", ");
 	}
@@ -163,23 +147,7 @@ void dict_print_all(Dict *dict) {
 				break;
 		}
 		printf(" => ");
-		switch (dict->arr[i].value.type) {
-			case STRING:
-				string_print(dict->arr[i].value);
-				break;
-			case FLOAT:
-				float_print(dict->arr[i].value);
-				break;
-			case DICT:
-				dict_print(dict->arr[i].value.data);
-				break;
-			case ARRAY:
-				array_print((Array *)dict->arr[i].value.data);
-				break;
-			default:
-				int_print(dict->arr[i].value);
-				break;
-		}
+		SWITCH_ON_OBJ(dict->arr[i].value, string_print, float_print, dict_print, array_print, int_print);
 		if (i != dict->len - 1)
 			printf(",");
 	}
@@ -203,20 +171,7 @@ void dict_free(Dict *dict) {
 				break;
 		}
 
-		switch (dict->arr[i].value.type) {
-			case STRING:
-				string_unref(dict->arr[i].value);
-				break;
-			case ARRAY:
-				array_free(dict->arr[i].value.data);
-				break;
-			case DICT:
-				dict_free(dict->arr[i].value.data);
-				break;
-			default:
-				free(dict->arr[i].value.data);
-		break;
-		}
+		SWITCH_ON_OBJ(dict->arr[i].value, string_unref, float_unref, dict_free, array_free, int_unref);
 	}
 	free(dict->arr);
 	free(dict);
