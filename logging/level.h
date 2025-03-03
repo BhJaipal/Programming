@@ -5,7 +5,7 @@ typedef enum {
 	LOG_DEBUG,
 	LOG_ERROR,
 	LOG_WARNING,
-	LOG_INFO
+	LOG_SUCCESS
 } LogLevel;
 
 char *level_to_string(LogLevel level);

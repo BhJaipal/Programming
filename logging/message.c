@@ -20,7 +20,7 @@ LogMessage __log_warn(char *message) {
 	return log_message_new(message, LOG_WARNING);
 }
 LogMessage __log_info(char *message) {
-	return log_message_new(message, LOG_INFO);
+	return log_message_new(message, LOG_SUCCESS);
 }
 LogMessage __log_error(char *message) {
 	return log_message_new(message, LOG_ERROR);

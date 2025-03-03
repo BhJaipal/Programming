@@ -5,8 +5,7 @@
 #include <time.h>
 
 void __log_message(LogMessage msg) {
-	printf("\x1b[2m%d-%d-%d %d:%d:%d\x1b[0m ", msg.timestamp->tm_year, msg.timestamp->tm_mon, msg.timestamp->tm_mday,
-		msg.timestamp->tm_hour, msg.timestamp->tm_min, msg.timestamp->tm_sec);
+	printf("[");
 	switch (msg.level) {
 		case LOG_ERROR:
 			printf("\x1b[31m");
@@ -17,11 +16,14 @@ void __log_message(LogMessage msg) {
 		case LOG_DEBUG:
 			printf("\x1b[94m");
 			break;
-		case LOG_INFO:
+		case LOG_SUCCESS:
 			printf("\x1b[32m");
 			break;
 	}
-	printf("[%s  ]\x1b[0m ", level_to_string(msg.level));
+	printf("  %s  \x1b[0m] ", level_to_string(msg.level));
+	printf("\x1b[2m%d-%d-%d %d:%d:%d\x1b[0m ",
+		msg.timestamp->tm_year, msg.timestamp->tm_mon, msg.timestamp->tm_mday,
+		msg.timestamp->tm_hour, msg.timestamp->tm_min, msg.timestamp->tm_sec);
 	printf("%s\n", msg.message);
 }
 
