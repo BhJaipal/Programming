@@ -44,10 +44,10 @@ void table_attr_print(TableAttr attr) {
 void table_attr_free(TableAttr attr) {
 	free(attr.name);
 }
-TYPED_ARRAY_NEW(TableAttr, table_attr);
+TYPED_ARRAY_NEW(TableAttr, table_attr, TableAttr);
 
 TYPED_ARRAY_FREE(TableAttr, table_attr);
 
-TYPED_ARRAY_ADD(TableAttr, table_attr);
+TYPED_ARRAY_ADD(TableAttr, table_attr, TableAttr);
 
-TYPED_ARRAY_REMOVE(TableAttr, table_attr);
+TYPED_ARRAY_REMOVE(TableAttr, table_attr, TableAttr);

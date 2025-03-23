@@ -98,7 +98,7 @@ int main() {
 
 				// donut luminicity will be seen by these characters
 				// these 12
-				char charOut[] = ".,-~:;=!*#$@";
+				char charOut[] = " .,-~:;=!*#$@";
 
 				if (x < screen_width && y < height && zBuffer[o] < reciNz) {
 					zBuffer[o] = reciNz;

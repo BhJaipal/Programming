@@ -1,4 +1,5 @@
 #include "table-attr.h"
+#include "table-data.h"
 #include "table.h"
 #include <stdio.h>
 
@@ -10,6 +11,14 @@ int main() {
 
 	printf("by describe_table() => \n");
 	describe_table(table);
+	printf("\nBy table_data_select_all():\n");
+
+	TableData *data = table_data_new(table);
+	Array *arr = array_new();
+	array_push(arr, string_to_object("Jaipal"));
+	array_push(arr, int_to_object(21));
+	table_data_add_row(data, arr);
+	table_data_select_all(data);
 	table_free(table);
 	return 0;
 }
