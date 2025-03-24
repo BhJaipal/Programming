@@ -30,12 +30,12 @@ Object dict_pop_pair_else_default(Dict *dict, Object key, Object defaultValue) {
 		if (key.type != el.type)
 			continue;
 		if (key.type == STRING) {
-			if (!strcmp(string_get_value(key), string_get_value(el))) {
+			if (!strcmp(String.get_value(key), String.get_value(el))) {
 				defaultValue = dict->arr[i].value;
 				foundI = i;
 				break;
 			}
-		} else if (int_get_value(dict->arr[i].key) == int_get_value(dict->arr[i].key)) {
+		} else if (Int.get_value(dict->arr[i].key) == Int.get_value(dict->arr[i].key)) {
 			defaultValue = dict->arr[i].value;
 			foundI = i;
 			break;
@@ -58,12 +58,12 @@ Object dict_pop_pair(Dict *dict, Object key) {
 		if (key.type != el.type)
 			continue;
 		if (key.type == STRING) {
-			if (!strcmp(string_get_value(key), string_get_value(el))) {
+			if (!strcmp(String.get_value(key), String.get_value(el))) {
 				defaultValue = dict->arr[i].value;
 				foundI = i;
 				break;
 			}
-		} else if (int_get_value(dict->arr[i].key) == int_get_value(dict->arr[i].key)) {
+		} else if (Int.get_value(dict->arr[i].key) == Int.get_value(dict->arr[i].key)) {
 			defaultValue = dict->arr[i].value;
 			foundI = i;
 			break;
@@ -84,11 +84,11 @@ Object dict_get_value_else_default(Dict *dict, Object key, Object defaultValue) 
 		if (key.type != el.type)
 			continue;
 		if (key.type == STRING) {
-			if (!strcmp(string_get_value(key), string_get_value(el))) {
+			if (!strcmp(String.get_value(key), String.get_value(el))) {
 				defaultValue = dict->arr[i].value;
 				break;
 			}
-		} else if (int_get_value(dict->arr[i].key) == int_get_value(dict->arr[i].key)) {
+		} else if (Int.get_value(dict->arr[i].key) == Int.get_value(dict->arr[i].key)) {
 			defaultValue = dict->arr[i].value;
 			break;
 		}
@@ -103,11 +103,11 @@ Object dict_get_value(Dict *dict, Object key) {
 		if (key.type != el.type)
 			continue;
 		if (key.type == STRING) {
-			if (!strcmp(string_get_value(key), string_get_value(el))) {
+			if (!strcmp(String.get_value(key), String.get_value(el))) {
 				defaultValue = dict->arr[i].value;
 				break;
 			}
-		} else if (int_get_value(dict->arr[i].key) == int_get_value(dict->arr[i].key)) {
+		} else if (Int.get_value(dict->arr[i].key) == Int.get_value(dict->arr[i].key)) {
 			defaultValue = dict->arr[i].value;
 			break;
 		}
@@ -120,14 +120,14 @@ void dict_print(Dict *dict) {
 	for (unsigned i = 0; i < dict->len; i++) {
 		switch (dict->arr[i].key.type) {
 			case STRING:
-				string_print(dict->arr[i].key);
+				String.print(dict->arr[i].key);
 				break;
 			default:
-				int_print(dict->arr[i].key);
+				Int.print(dict->arr[i].key);
 				break;
 		}
 		printf(" => ");
-		SWITCH_ON_OBJ(dict->arr[i].value, string_print, float_print, dict_print, array_print, int_print);
+		SWITCH_ON_OBJ(dict->arr[i].value, String.print, Float.print, dict_print, array_print, Int.print);
 		if (i != dict->len - 1)
 			printf(", ");
 	}
@@ -140,14 +140,14 @@ void dict_print_all(Dict *dict) {
 		printf("\n\t");
 		switch (dict->arr[i].key.type) {
 			case STRING:
-				string_print(dict->arr[i].key);
+				String.print(dict->arr[i].key);
 				break;
 			default:
-				int_print(dict->arr[i].key);
+				Int.print(dict->arr[i].key);
 				break;
 		}
 		printf(" => ");
-		SWITCH_ON_OBJ(dict->arr[i].value, string_print, float_print, dict_print, array_print, int_print);
+		SWITCH_ON_OBJ(dict->arr[i].value, String.print, Float.print, dict_print, array_print, Int.print);
 		if (i != dict->len - 1)
 			printf(",");
 	}
@@ -164,14 +164,14 @@ void dict_free(Dict *dict) {
 		// Key is either String or Int/FLoat
 		switch (dict->arr[i].key.type) {
 			case STRING:
-				string_unref(dict->arr[i].key);
+				String.unref(dict->arr[i].key);
 				break;
 			default:
 				free(dict->arr[i].key.data);
 				break;
 		}
 
-		SWITCH_ON_OBJ(dict->arr[i].value, string_unref, float_unref, dict_free, array_free, int_unref);
+		SWITCH_ON_OBJ(dict->arr[i].value, String.unref, Float.unref, dict_free, array_free, Int.unref);
 	}
 	free(dict->arr);
 	free(dict);

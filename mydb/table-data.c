@@ -38,35 +38,21 @@ void table_data_select_all(TableData *data) {
 				case STRING:
 					{
 						char out[10];
-						strcpy(out, string_get_value(arr.elements_[j]));
-						printf("%*s%*s", lim+(int)strlen(out)/2, out, lim-(int)strlen(out), "");
-					}
-					break;
-				case DICT:
-					{
-						char out[10];
-						sprintf(out, "%p", arr.elements_[j].data);
-						printf("%*s%*s", lim+(int)strlen(out)/2, out, lim-(int)strlen(out), "");
-					}
-					break;
-				case ARRAY:
-					{
-						char out[10];
-						sprintf(out, "%p", arr.elements_[j].data);
+						strcpy(out, String.get_value(arr.elements_[j]));
 						printf("%*s%*s", lim+(int)strlen(out)/2, out, lim-(int)strlen(out), "");
 					}
 					break;
 				case FLOAT:
 					{
 						char out[10];
-						sprintf(out, "%f", float_get_value(arr.elements_[j]));
+						sprintf(out, "%f", Float.get_value(arr.elements_[j]));
 						printf("%*s%*s", lim+(int)strlen(out)/2, out, lim-(int)strlen(out), "");
 					}
 					break;
 				default:
 					{
 						char out[5];
-						sprintf(out, "%d", int_get_value(arr.elements_[j]));
+						sprintf(out, "%d", Int.get_value(arr.elements_[j]));
 						printf("%*s%*s", lim+(int)strlen(out)/2, out, lim-(int)strlen(out), "");
 					}
 					break;

@@ -1,8 +1,10 @@
 ---
-BasedOnStyle: LLVM
 UseTab: Always
 TabWidth: 4
 IndentWidth: 4
+AlwaysBreakTemplateDeclarations: true
+IndentCaseLabels: true
+AccessModifierOffset: -4
 AlignAfterOpenBracket: Align
 AllowShortBlocksOnASingleLine: Always
 AllowShortCaseLabelsOnASingleLine: true
@@ -23,3 +25,5 @@ BraceWrapping:
     AfterUnion: false
     AfterExternBlock: false
     BeforeCatch: false
+AlignConsecutiveShortCaseStatements:
+    Enabled: true

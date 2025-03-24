@@ -15,8 +15,8 @@ int main() {
 
 	TableData *data = table_data_new(table);
 	Array *arr = array_new();
-	array_push(arr, string_to_object("Jaipal"));
-	array_push(arr, int_to_object(21));
+	array_push(arr, String.to_object("Jaipal"));
+	array_push(arr, Int.to_object(21));
 	table_data_add_row(data, arr);
 	table_data_select_all(data);
 	table_free(table);

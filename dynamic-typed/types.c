@@ -71,3 +71,7 @@ void error(char *message, ...) {
 	va_end(arg);
 	exit(1);
 }
+
+DYNAMIC_ELEM_INIT(Int, int);
+DYNAMIC_ELEM_INIT(Float, float);
+DYNAMIC_ELEM_INIT(String, string);

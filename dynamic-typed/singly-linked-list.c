@@ -68,7 +68,7 @@ void linked_list_free(SingleLinkedList *ll) {
 	SingleNode *curr = ll->first,
 		*prev = NULL;
 	for (unsigned int i = 0; i < ll->len; i++) {
-		SWITCH_ON_OBJ(curr->value, string_unref, float_unref, , , int_unref);
+		SWITCH_ON_OBJ(curr->value, String.unref, Float.unref, , , Int.unref);
 		prev = curr;
 		curr = curr->next;
 		free(prev);
@@ -78,11 +78,11 @@ void linked_list_free(SingleLinkedList *ll) {
 
 void linked_list_print(SingleLinkedList *ll) {
 	SingleNode *curr = ll->first;
-	SWITCH_ON_OBJ(curr->value, string_print, float_print, , , int_print);
+	SWITCH_ON_OBJ(curr->value, String.print, Float.print, , , Int.print);
 	printf(" -> ");
 	while (curr->next != NULL) {
 		curr = curr->next;
-		SWITCH_ON_OBJ(curr->value, string_print, float_print, , , int_print);
+		SWITCH_ON_OBJ(curr->value, String.print, Float.print, , , Int.print);
 		printf(" -> ");
 	}
 	printf("\x1b[38;5;178mNULL\x1b[0m\n");

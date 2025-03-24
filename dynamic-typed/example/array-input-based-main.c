@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include "array.h"
-#include "types.h"
+#include "../array.h"
+#include "../types.h"
 
 #define string_len 10
 
@@ -44,13 +44,13 @@ int main() {
 		Object data;
 		switch (elType) {
 			case STRING:
-				data = string_to_object(input);
+				data = String.to_object(input);
 				break;
 			case FLOAT:
-				data = float_to_object(atof(input));
+				data = Float.to_object(atof(input));
 				break;
 			default:
-				data = int_to_object(atoi(input));
+				data = Int.to_object(atoi(input));
 				break;
 		}
 
@@ -62,13 +62,13 @@ int main() {
 		printf("\t");
 		switch (arr->elements_[i].type) {
 			case STRING:
-				string_print(arr->elements_[i]);
+				String.print(arr->elements_[i]);
 				break;
 			case FLOAT:
-				float_print(arr->elements_[i]);
+				Float.print(arr->elements_[i]);
 				break;
 			default:
-				int_print(arr->elements_[i]);
+				Int.print(arr->elements_[i]);
 				break;
 		}
 		printf(" => \x1b[38;5;69m");

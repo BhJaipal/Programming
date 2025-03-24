@@ -14,7 +14,7 @@ Array *array_new() {
 
 void array_free(Array *arr) {
 	for (int i = 0; i < arr->len_; i++) {
-		SWITCH_ON_OBJ(arr->elements_[i], string_unref, float_unref, dict_free, array_free, int_unref);
+		SWITCH_ON_OBJ(arr->elements_[i], String.unref, Float.unref, dict_free, array_free, Int.unref);
 	}
 	free(arr->elements_);
 	arr->len_ = 0;
@@ -84,7 +84,7 @@ Object array_pop_last(Array *arr) {
 void array_print(Array *arr) {
 	printf("[ ");
 	for (unsigned i = 0; i < arr->len_; i++) {
-		SWITCH_ON_OBJ(arr->elements_[i], string_print, float_print, dict_print, array_print, int_print);
+		SWITCH_ON_OBJ(arr->elements_[i], String.print, Float.print, dict_print, array_print, Int.print);
 		if (i != arr->len_ - 1) printf(", ");
 	}
 	printf(" ]");
