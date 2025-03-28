@@ -8,3 +8,9 @@
 
 > [!NOTE]
 > You can use my [dynamic-typed folder](../dynamic-typed) for dynamic typing in C & C++
+
+Add this line to your C/C++ file and start using dynamic typing
+
+```c
+#include "dynamic-typed/dynamic-typed.h"
+```

@@ -1,23 +1,62 @@
 #pragma once
 #include <iostream>
-#include <map>
 #include <string>
 #include <unistd.h>
 #include <vector>
+
 typedef unsigned char *ptr_t;
 typedef double f32;
 typedef std::string str;
 class Object;
 typedef std::vector<Object> arr;
-typedef std::map<Object, Object> dict_t;
 
 enum class ObjectType { INT, FLOAT, STR, ARRAY, DICT };
+
+template <class T>
+class _Dict {
+	struct Pair {
+		T key;
+		T value;
+		Pair(T k, T v) : key(k), value(v) {}
+	};
+	int len_;
+	std::vector<Pair> pairs;
+
+public:
+	_Dict(T k, T v) : len_(1) { pairs.push_back(Pair(k, v)); }
+	_Dict() : len_(0) {}
+	int len() { return len_; }
+
+	void push(T k, T v) {
+		pairs.push_back(Pair(k, v));
+		len_++;
+	}
+	Pair pop() {
+		Pair last = pairs[--len_];
+		pairs.pop_back();
+		return last;
+	}
+	Pair operator[](int i) { return pairs[i]; }
+
+	void print() {
+		std::cout << "{ ";
+		int i = 0;
+		for (int i = 0; i < len(); i++) {
+			auto pair = pairs[i];
+			std::cout << pair.key << " => " << pair.value;
+			i++;
+			if (i == len() - 1) { std::cout << ", "; }
+		}
+		std::cout << " }";
+	}
+};
 
 class Object {
 	ptr_t value_;
 	ObjectType type;
 	Object(ptr_t value, ObjectType t) : value_(value), type(t) {}
 	Object() = default;
+	typedef _Dict<Object> Dict;
 
 	template <class T>
 	static Object from(T val, ObjectType t) {
@@ -46,27 +85,43 @@ public:
 	static Object from(f32 value) { return from(value, ObjectType::FLOAT); }
 	static Object from(str value) { return from(value, ObjectType::STR); }
 	static Object from(arr value) { return from(value, ObjectType::ARRAY); }
-	static Object from(dict_t value) { return from(value, ObjectType::DICT); }
+	static Object from(Object value...) {
+		return from(value, ObjectType::ARRAY);
+	}
+	static Object from(Dict value) { return from(value, ObjectType::DICT); }
 
 	int to_int() { return to<int>(ObjectType::INT); }
 	f32 to_float() { return to<f32>(ObjectType::FLOAT); }
 	str to_str() { return to<str>(ObjectType::STR); }
 	arr to_arr() { return to<arr>(ObjectType::ARRAY); }
-	dict_t to_dict() { return to<dict_t>(ObjectType::DICT); }
+	Dict to_dict() { return to<Dict>(ObjectType::DICT); }
 
 	void unref() { delete value_; }
 
 	friend std::ostream &operator<<(std::ostream &cout, Object o);
 };
 
+std::ostream &print(std::ostream &out, arr o) {
+	out << "[ ";
+	for (int i = 0; i < o.size(); i++) {
+		out << o[i];
+		if (i != o.size() - 1) out << ", ";
+	}
+	out << " ]";
+	return out;
+}
 std::ostream &operator<<(std::ostream &out, Object o) {
 	switch (o.type) {
-		case ObjectType::FLOAT: out << o.to_float(); break;
-		case ObjectType::STR:	out << o.to_str(); break;
-		case ObjectType::ARRAY:
-			for (auto i : o.to_arr()) out << i;
+		case ObjectType::FLOAT:
+			out << "\e[38;5;156m" << o.to_float() << "\e[0m";
 			break;
-		default: out << o.to_int(); break;
+		case ObjectType::STR:
+			out << "\x1b[38;5;173m\"" << o.to_str() << "\"\e[0m";
+			break;
+		case ObjectType::DICT:	o.to_dict().print(); break;
+		case ObjectType::ARRAY: print(out, o.to_arr()); break;
+		default:				out << "\e[38;5;156m" << o.to_int() << "\e[0m"; break;
 	}
 	return out;
 }
+typedef _Dict<Object> Dict;
