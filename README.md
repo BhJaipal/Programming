@@ -19,33 +19,13 @@
    <img src="https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white&style=plastic">
 </p>
 
-## Learning C++
-
-### Syntax
-
-```cpp
-#include <iostream>
-#include <string>
-
-/**
- * @param name your name
- * @example
- */
-void function_name(std::string name) {
-    // code here like
-    std::cout << "Hello World" << std::endl << "I am " << name << std::endl;
-}
-int main() {
-    function_name();
-}
-```
-
 ### CMake Use
 
 ```cmake
 cmake_minimum_required(VERSION 3.28.3)
 project(CMakeLearning)
 add_executable(${PROJECT_NAME} Student.cpp)
+set_compiler("clang-18")
 ```
 
 ```bash
@@ -53,7 +33,3 @@ cmake CMakesLists.txt
 make all
 ./CMakeLearning
 ```
-
-Hello World
-
-I am Jaipal
