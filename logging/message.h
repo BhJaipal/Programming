@@ -10,12 +10,12 @@ typedef struct {
 } LogMessage;
 
 extern struct LogMessageGen {
-	LogMessage (*new)(char *message, LogLevel level),
-			   (*debug)(char *message),
-			   (*warn)(char *message),
-			   (*error)(char *message),
-			   (*info)(char *message);
+	LogMessage (*new)(LogLevel level, char *message, ...),
+			   (*debug)(char *message, ...),
+			   (*warn)(char *message, ...),
+			   (*error)(char *message, ...),
+			   (*info)(char *message, ...);
 } GenerateLog;
-LogMessage log_message_new(char *message, LogLevel level);
+LogMessage log_message_new(LogLevel level, char *message, ...);
 
 #endif // LOGGING_MESSAGE_H

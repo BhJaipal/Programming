@@ -1,4 +1,5 @@
 #include <iostream>
+#include <malloc.h>
 #include <string>
 #include <vector>
 using std::cout;
@@ -20,7 +21,7 @@ class Object {
 
 	template <typename T = i32>
 	static Object from(T value, ObjectType type) {
-		T *ptr = new T;
+		T *ptr = (T *)malloc(sizeof(T));
 		*ptr = value;
 		return Object((ptr_t *)ptr, type);
 	}
@@ -36,13 +37,6 @@ public:
 	}
 
 	friend std::ostream &operator<<(std::ostream &out, Object obj);
-	~Object() {
-		switch (type_) {
-			case ObjectType::I16: delete (i16 *)value_; break;
-			case ObjectType::F32: delete (f32 *)value_; break;
-			default:			  delete (i32 *)value_; break;
-		}
-	}
 };
 
 std::ostream &operator<<(std::ostream &out, Object obj) {
@@ -57,11 +51,14 @@ std::ostream &operator<<(std::ostream &out, Object obj) {
 int main() {
 	std::vector<Object> objs{};
 	objs.push_back(Object::from_i16(5));
-	cout << "Step 1 done\n";
-	objs.push_back(Object::from_f32((f32)7.9));
-	cout << "Step 2 done\n";
-	objs.push_back(Object::from(86237));
-	cout << "Step 3 done\n";
+	objs.push_back(Object::from_f32(7.9));
+	objs.push_back(Object::from_i32(52277));
 	for (auto &&i : objs) { cout << i << '\n'; }
+	int i = objs.size() - 1;
+	while (objs.size() != 0) {
+		Object &obj = objs[i];
+		i--;
+		objs.pop_back();
+	}
 	return 0;
 }

@@ -18,7 +18,7 @@
 		free(elem.data);								\
 	}													\
 	Object EL_TYPE##_to_object (EL_TYPE value) {		\
-		Object objt = {EL_TYPE##_new(value), ENUM_TYPE};\
+		Object objt = {EL_TYPE##_new(value), ENUM_TYPE, 0};\
 		return objt;									\
 	}
 
@@ -40,7 +40,7 @@ void string_unref(Object elem) {
 	free(elem.data);
 }
 Object string_to_object(char *value) {
-	Object objt = {string_new(value), STRING};
+	Object objt = {string_new(value), STRING, 0};
 	return objt;
 }
 

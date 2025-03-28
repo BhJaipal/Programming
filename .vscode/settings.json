@@ -10,6 +10,7 @@
 		"*.conf": "properties",
 		"*.spec": "shellscript",
 		"*.bpl": "blueprint-gtk",
+		"*.build": "python",
 		"*.embeddedhtml": "html",
 		"string": "cpp",
 		"iostream": "cpp",
@@ -69,7 +70,9 @@
 		"thread": "cpp",
 		"cinttypes": "cpp",
 		"typeinfo": "cpp",
-		"colors.h": "c"
+		"colors.h": "c",
+		"variant": "cpp",
+		"dynamic-typed.h": "c"
 	},
 	"C_Cpp.default.cppStandard": "c++17"
 }

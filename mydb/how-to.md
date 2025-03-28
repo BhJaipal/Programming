@@ -7,4 +7,4 @@
 5. `TableAttr` cannot have array or dictionary as values
 
 > [!NOTE]
-> You can use my [dynamic-typed folder](../dynamic-typed) for dynamic typing in C
+> You can use my [dynamic-typed folder](../dynamic-typed) for dynamic typing in C & C++

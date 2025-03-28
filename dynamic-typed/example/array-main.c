@@ -1,5 +1,4 @@
-#include "../array.h"
-#include "../dict.h"
+#include "../dynamic-typed.h"
 
 int main() {
 	Array *arr = array_new();

@@ -34,11 +34,11 @@ int main() {
 		memset(buffer, 32, 1760);
 		float theta2 = 6.28;
 
-		for (float theta = 0; theta < 6.28; theta += 0.07) {
-			for (float phi = 0; phi < 6.28; phi += 0.02) {
-				float circleX = R2 + R1 * cos(theta),
+		for (float theta = 0.01; theta < 6.28; theta += 0.07) {
+			for (float phi = 0; phi < 6.28; phi += 1.57) {
+				float circleX = R2 + R1 * sin(theta),
 					circleY = R1 * sin(theta);
-				singleRow square = {sin(theta), cos(theta), cos(theta)};
+				singleRow square = {circleY, circleY, 0};
 
 				Matrix Ry = {{cos(phi), 0, sin(phi)}, {0, 1, 0}, {-sin(phi), 0, cos(phi)}};
 				singleRow cube2 = multiply(square, Ry);

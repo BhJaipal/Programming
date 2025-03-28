@@ -31,6 +31,7 @@ typedef enum {
 typedef struct {
 	void *data;
 	ObjectType type;
+	char isNull;
 } Object;
 
 DYNAMIC_ELEM_TYPE(Int, int);
@@ -44,8 +45,9 @@ typedef struct {
 } _String_s;
 extern _String_s String;
 
-
 DYNAMIC_ELEM_TYPE(Float, float);
+
+#define NullObject (Object){Int.new(0), INT, 1}
 
 void warn(char *message, ...);
 

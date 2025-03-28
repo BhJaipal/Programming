@@ -1,4 +1,5 @@
 ---
+Language: Cpp
 UseTab: Always
 TabWidth: 4
 IndentWidth: 4
@@ -15,15 +16,15 @@ AllowShortLambdasOnASingleLine: All
 AllowShortLoopsOnASingleLine: true
 BreakBeforeBraces: Custom
 BraceWrapping:
-    AfterClass: false
-    AfterCaseLabel: false
-    AfterControlStatement: Never
-    AfterEnum: false
-    AfterFunction: false
-    AfterNamespace: false
-    AfterStruct: false
-    AfterUnion: false
-    AfterExternBlock: false
-    BeforeCatch: false
+        AfterClass: false
+        AfterCaseLabel: false
+        AfterControlStatement: Never
+        AfterEnum: false
+        AfterFunction: false
+        AfterNamespace: false
+        AfterStruct: false
+        AfterUnion: false
+        AfterExternBlock: false
+        BeforeCatch: false
 AlignConsecutiveShortCaseStatements:
-    Enabled: true
+        Enabled: true

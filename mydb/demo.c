@@ -1,12 +1,10 @@
-#include "table-attr.h"
-#include "table-data.h"
-#include "table.h"
+#include "mydb.h"
 #include <stdio.h>
 
 int main() {
 	TableAttrArray *tattArr = table_attr_array_new();
 	table_attr_array_push(tattArr, table_attr_new("name", STRING, 0));
-	table_attr_array_push(tattArr, table_attr_new("age", INT, 1));
+	table_attr_array_push(tattArr, table_attr_new("age", INT, 0));
 	Table *table = table_new("Human", tattArr);
 
 	printf("by describe_table() => \n");
@@ -14,11 +12,15 @@ int main() {
 	printf("\nBy table_data_select_all():\n");
 
 	TableData *data = table_data_new(table);
-	Array *arr = array_new();
-	array_push(arr, String.to_object("Jaipal"));
-	array_push(arr, Int.to_object(21));
+	Dict *arr = dict_new();
+	dict_add_element(arr, String.to_object("age"), Int.to_object(21));
+	dict_add_element(arr, String.to_object("name"), String.to_object("Jaipal"));
 	table_data_add_row(data, arr);
+	Dict *arr2 = dict_new();
+	dict_add_element(arr2, String.to_object("age"), NullObject);
+	dict_add_element(arr2, String.to_object("name"), String.to_object("Jaipal"));
+	table_data_add_row(data, arr2);
 	table_data_select_all(data);
-	table_free(table);
+	table_data_free(data);
 	return 0;
 }

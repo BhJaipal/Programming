@@ -1,5 +1,6 @@
 #include "table-attr.h"
-#include "typed-array.c"
+#include "typed-array.h"
+#include "logging/console-appender.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -48,32 +49,44 @@ TYPED_ARRAY_NEW(TableAttr, table_attr, TableAttr);
 
 TYPED_ARRAY_FREE(TableAttr, table_attr);
 
-void table_attr_array_insert_at_index(TableAttrArray *arr, TableAttr data, unsigned index) {
-	if (data.type == ARRAY) error("Attribute cannot contain an array\n");
-	if (data.type == DICT) error("Attribute cannot contain an dict\n");
-	if (index < 0) index = -index - 1;					\
-	if (index >= arr->len_) {							\
-		warn("It will push elements to end of array\n");\
-		table_attr_array_push(arr, data);		\
-		return;								\
-	}										\
-	else if (index == arr->len_ - 1) {		\
-		table_attr_array_push(arr, data);		\
-		return;								\
-	}										\
-	arr->len_++;							\
-	arr->arr = realloc(arr->arr, sizeof(TableAttr[arr->len_]));	\
-	for (unsigned i = index; i < arr->len_ - 1; i++) {		\
-		arr->arr[i + 1] = arr->arr[i];						\
-	}														\
-	arr->arr[index] = data;									\
-}															\
-															\
-void table_attr_array_push(TableAttrArray *arr, TableAttr obj) {\
-	arr->arr = realloc(arr->arr,							\
-		sizeof(TableAttr[arr->len_ + 1]));					\
-	arr->arr[arr->len_] = obj;								\
-	arr->len_++;											\
+void table_attr_array_insert_at_index(TableAttrArray *arr, TableAttr data, int index) {
+	if (data.type == ARRAY) {
+		ConsoleAppender.log(GenerateLog.error("Attribute cannot contain an array\n"));
+		table_attr_free(data);
+		table_attr_array_free(arr);
+		exit(1);
+	}
+	if (data.type == DICT) {
+		ConsoleAppender.log(GenerateLog.error("Attribute cannot contain an dict\n"));
+		table_attr_free(data);
+		table_attr_array_free(arr);
+		exit(1);
+	}
+	if (index < 0) index = -index - 1;
+	if ((unsigned)index >= arr->len_) {
+		warn("It will push elements to end of array\n");
+		table_attr_array_push(arr, data);
+		return;
+	}
+	else if ((unsigned)index == arr->len_ - 1) {
+		table_attr_array_push(arr, data);
+		return;
+	}
+	arr->len_++;
+	arr->arr = realloc(arr->arr, sizeof(TableAttr[arr->len_]));
+	for (unsigned i = index; i < arr->len_ - 1; i++) {
+		arr->arr[i + 1] = arr->arr[i];
+	}
+	arr->arr[index] = data;
+}
+
+void table_attr_array_push(TableAttrArray *arr, TableAttr obj) {
+	if (obj.type == ARRAY) error("Attribute cannot contain an array\n");
+	if (obj.type == DICT) error("Attribute cannot contain an dict\n");
+	arr->arr = realloc(arr->arr,
+		sizeof(TableAttr[arr->len_ + 1]));
+	arr->arr[arr->len_] = obj;
+	arr->len_++;
 }
 
 TYPED_ARRAY_REMOVE(TableAttr, table_attr, TableAttr);
