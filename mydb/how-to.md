@@ -7,10 +7,26 @@
 5. `TableAttr` cannot have array or dictionary as values
 
 > [!NOTE]
-> You can use my [dynamic-typed folder](../dynamic-typed) for dynamic typing in C & C++
+> You can use my [dynamic-typed folder](dynamic-typed) for dynamic typing in C & C++
 
 Add this line to your C/C++ file and start using dynamic typing
 
 ```c
 #include "dynamic-typed/dynamic-typed.h"
+```
+
+> Before running, run `make` to compile the both C and C++ to compile this library
+>
+> Then while running your code
+
+**For C:**
+
+```bash
+gcc file.c dynamic-typed/libdynamic.so
+```
+
+**And for C:**
+
+```bash
+gcc file.cpp dynamic-typed/libdynamic++.so
 ```

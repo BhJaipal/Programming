@@ -1,8 +1,8 @@
 #ifndef TABLE_DATA_H
 #define TABLE_DATA_H
-#include "table.h"
+#include "dynamic-typed/dynamic-typed.h"
 #include "table-rows.h"
-#include "dynamic-typed/dict.h"
+#include "table.h"
 
 typedef struct {
 	Table *table;

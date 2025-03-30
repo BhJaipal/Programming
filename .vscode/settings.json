@@ -72,7 +72,8 @@
 		"typeinfo": "cpp",
 		"colors.h": "c",
 		"variant": "cpp",
-		"dynamic-typed.h": "c"
+		"dynamic-typed.h": "c",
+		"dict.h": "c"
 	},
 	"C_Cpp.default.cStandard": "c23",
 	"C_Cpp.default.cppStandard": "c++23",

@@ -1,8 +1,8 @@
-#include "table-data.h"
-#include "table-attr.h"
-#include "table-rows.h"
-#include "dynamic-typed/dict.h"
+#include "dynamic-typed/dynamic-typed.h"
 #include "logging/console-appender.h"
+#include "table-attr.h"
+#include "table-data.h"
+#include "table-rows.h"
 #include "table.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -23,12 +23,14 @@ void table_data_add_row(TableData *table, Dict *new_row) {
 			DictElement obj = new_row->arr[j];
 			if (!strcmp(attr.name, String.get_value(obj.key))) {
 				if (obj.value.isNull) {
-					if (attr.nullable)
-						array_push(result, obj.value);
+					if (attr.nullable) array_push(result, obj.value);
 					else {
 						array_free(result);
 						table_data_free(table);
-						ConsoleAppender.log(GenerateLog.error("%s is not nullable", (char *)(obj.key.data)), 1);
+						ConsoleAppender.log(
+							GenerateLog.error("%s is not nullable",
+											  (char *)(obj.key.data)),
+							1);
 						exit(1);
 					}
 					continue;
@@ -38,8 +40,10 @@ void table_data_add_row(TableData *table, Dict *new_row) {
 					table_data_free(table);
 					ConsoleAppender.log(
 						GenerateLog.error(
-							"%s.%s and Object.%s has different types\n", table->table->name, attr.name, String.get_value(obj.key)
-						), 1);
+							"%s.%s and Object.%s has different types\n",
+							table->table->name, attr.name,
+							String.get_value(obj.key)),
+						1);
 					exit(1);
 				} else {
 					array_push(result, obj.value);
@@ -52,42 +56,40 @@ void table_data_add_row(TableData *table, Dict *new_row) {
 
 void table_data_select_all(TableData *data) {
 	printf("+-------------------+-------------------+\n");
-	for (unsigned i =0; i < data->table->Attributes->len_; i++) {
+	for (unsigned i = 0; i < data->table->Attributes->len_; i++) {
 		TableAttr attr = data->table->Attributes->arr[i];
-		printf("|%*s%*s ", 10 + (int)strlen(attr.name)/2, attr.name, 10 - (int)strlen(attr.name), "");
+		printf("|%*s%*s ", 10 + (int)strlen(attr.name) / 2, attr.name,
+			   10 - (int)strlen(attr.name), "");
 	}
 	printf("|\n+-------------------+-------------------+\n");
 	for (unsigned i = 0; i < data->rows->len; i++) {
 		Array *arr = data->rows->rows[i];
 		printf("|  ");
-		for (unsigned j =0; j < arr->len_; j++) {
+		for (unsigned j = 0; j < arr->len_; j++) {
 			int lim = 9;
 			switch (arr->elements_[j].type) {
-				case STRING:
-					{
-						char out[10];
-						strcpy(out, String.get_value(arr->elements_[j]));
-						printf("%*s%*s", lim+(int)strlen(out)/2-1, out, lim-(int)strlen(out)+1, "");
+				case STRING: {
+					char out[10];
+					strcpy(out, String.get_value(arr->elements_[j]));
+					printf("%*s%*s", lim + (int)strlen(out) / 2 - 1, out,
+						   lim - (int)strlen(out) + 1, "");
+				} break;
+				case FLOAT: {
+					char out[10];
+					sprintf(out, "%f", Float.get_value(arr->elements_[j]));
+					printf("%*s%*s", lim + (int)strlen(out) / 2, out,
+						   lim - (int)strlen(out), "");
+				} break;
+				default: {
+					char out[10];
+					if (arr->elements_[j].isNull)
+						printf("%*s%*s", 11, "NULL", 6, "");
+					else {
+						sprintf(out, "%d", Int.get_value(arr->elements_[j]));
+						printf("%*s%*s", lim + (int)strlen(out) / 2, out,
+							   lim - (int)strlen(out), "");
 					}
-					break;
-				case FLOAT:
-					{
-						char out[10];
-						sprintf(out, "%f", Float.get_value(arr->elements_[j]));
-						printf("%*s%*s", lim+(int)strlen(out)/2, out, lim-(int)strlen(out), "");
-					}
-					break;
-				default:
-					{
-						char out[10];
-						if (arr->elements_[j].isNull)
-							printf("%*s%*s", 11, "NULL", 6, "");
-						else {
-							sprintf(out, "%d", Int.get_value(arr->elements_[j]));
-							printf("%*s%*s", lim+(int)strlen(out)/2, out, lim-(int)strlen(out), "");
-						}
-					}
-					break;
+				} break;
 			}
 			printf("  |");
 		}

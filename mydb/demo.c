@@ -16,10 +16,6 @@ int main() {
 	dict_add_element(arr, String.to_object("age"), Int.to_object(21));
 	dict_add_element(arr, String.to_object("name"), String.to_object("Jaipal"));
 	table_data_add_row(data, arr);
-	Dict *arr2 = dict_new();
-	dict_add_element(arr2, String.to_object("age"), NullObject);
-	dict_add_element(arr2, String.to_object("name"), String.to_object("Jaipal"));
-	table_data_add_row(data, arr2);
 	table_data_select_all(data);
 	table_data_free(data);
 	return 0;

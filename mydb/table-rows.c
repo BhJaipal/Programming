@@ -1,5 +1,6 @@
-#include "table-rows.h"
+#include "dynamic-typed/dynamic-typed.h"
 #include "logging/console-appender.h"
+#include "table-rows.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -11,9 +12,7 @@ TableRows *table_row_new() {
 }
 
 void table_row_free(TableRows *arr) {
-	for (unsigned i = 0; i < arr->len; i++) {
-		array_free(arr->rows[i]);
-	}
+	for (unsigned i = 0; i < arr->len; i++) { array_free(arr->rows[i]); }
 	free(arr);
 }
 
@@ -23,8 +22,7 @@ void table_row_insert_at_index(TableRows *arr, Array *obj, int index) {
 		warn("It will push elements to end of array\n");
 		table_row_push(arr, obj);
 		return;
-	}
-	else if ((unsigned)index == arr->len - 1) {
+	} else if ((unsigned)index == arr->len - 1) {
 		table_row_push(arr, obj);
 		return;
 	}
@@ -56,8 +54,7 @@ Array *table_row_pop_at_index(TableRows *arr, int index) {
 		table_row_free(arr);
 		ConsoleAppender.log(GenerateLog.error("Array is empty\n"), 1);
 	}
-	if ((unsigned)index == arr->len - 1)
-		return table_row_pop_last(arr);
+	if ((unsigned)index == arr->len - 1) return table_row_pop_last(arr);
 	// 0 <= index <= arr->len_ - 2
 	Array *elemAtI = arr->rows[index];
 	for (unsigned i = index; i < arr->len - 1; i++) {
