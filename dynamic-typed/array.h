@@ -15,7 +15,7 @@ void array_free(Array *arr);
  * if index >= arr->len_, it pushes obj to end and gives you warning about it too
  * else inserts it to that index
  */
-void array_insert_at_index(Array *arr, Object obj, unsigned index);
+void array_insert_at_index(Array *arr, Object obj, int index);
 
 void array_push(Array *arr, Object obj);
 
@@ -23,7 +23,7 @@ void array_push(Array *arr, Object obj);
  * Gives error if index >= arr->len_ (also if array is empty)
  * else pops elem
  */
-Object array_pop_at_index(Array *arr, unsigned index);
+Object array_pop_at_index(Array *arr, int index);
 
 /**
  * Gives error if array is empty

@@ -4,7 +4,7 @@
 #include "message.h"
 
 extern struct _FileAppender {
-	void (*log)(char *file_name, LogMessage msg);
+	void (*log)(char *file_name, LogMessage msg, char unref);
 } FileAppender;
 
 #endif // LOGGING_FILE_APPENDER_H

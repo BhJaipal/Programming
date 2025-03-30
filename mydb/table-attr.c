@@ -51,13 +51,13 @@ TYPED_ARRAY_FREE(TableAttr, table_attr);
 
 void table_attr_array_insert_at_index(TableAttrArray *arr, TableAttr data, int index) {
 	if (data.type == ARRAY) {
-		ConsoleAppender.log(GenerateLog.error("Attribute cannot contain an array\n"));
+		ConsoleAppender.log(GenerateLog.error("Attribute cannot contain an array\n"), 1);
 		table_attr_free(data);
 		table_attr_array_free(arr);
 		exit(1);
 	}
 	if (data.type == DICT) {
-		ConsoleAppender.log(GenerateLog.error("Attribute cannot contain an dict\n"));
+		ConsoleAppender.log(GenerateLog.error("Attribute cannot contain an dict\n"), 1);
 		table_attr_free(data);
 		table_attr_array_free(arr);
 		exit(1);

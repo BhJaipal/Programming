@@ -41,7 +41,7 @@ Object dict_pop_pair_else_default(Dict *dict, Object key, Object defaultValue) {
 			break;
 		}
 	}
-	if (foundI != -1) {
+	if (foundI != (unsigned)(-1)) {
 		for (unsigned i = foundI; i < dict->len - 2; i++) {
 			dict[i] = dict[i + 1];
 		}
@@ -51,7 +51,7 @@ Object dict_pop_pair_else_default(Dict *dict, Object key, Object defaultValue) {
 }
 
 Object dict_pop_pair(Dict *dict, Object key) {
-	Object defaultValue = {NULL, INT};
+	Object defaultValue = NullObject;
 	unsigned foundI = -1;
 	for (unsigned i = 0; i < dict->len; i++) {
 		Object el = dict->arr[i].key;
@@ -97,7 +97,7 @@ Object dict_get_value_else_default(Dict *dict, Object key, Object defaultValue) 
 }
 
 Object dict_get_value(Dict *dict, Object key) {
-	Object defaultValue = {NULL, INT};
+	Object defaultValue = NullObject;
 	for (unsigned i = 0; i < dict->len; i++) {
 		Object el = dict->arr[i].key;
 		if (key.type != el.type)
@@ -155,12 +155,12 @@ void dict_print_all(Dict *dict) {
 }
 
 Object dict_to_object(Dict *dict) {
-	Object obj = {dict, DICT};
+	Object obj = {dict, DICT, 0};
 	return obj;
 }
 
 void dict_free(Dict *dict) {
-	for (int i = 0; i < dict->len; i++) {
+	for (unsigned int i = 0; i < dict->len; i++) {
 		// Key is either String or Int/FLoat
 		switch (dict->arr[i].key.type) {
 			case STRING:

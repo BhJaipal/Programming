@@ -7,13 +7,13 @@ int main() {
 	msg2 = GenerateLog.warn("Please allocate memory carefully"),
 	msg3 = GenerateLog.error("Unexpected token: %s", "Hello");
 
-	ConsoleAppender.log(msg1);
-	ConsoleAppender.log(msg2);
-	ConsoleAppender.log(msg3);
+	ConsoleAppender.log(msg1, 0);
+	ConsoleAppender.log(msg2, 0);
+	ConsoleAppender.log(msg3, 0);
 
 	printf("\n");
-	FileAppender.log("out.log", msg1);
-	FileAppender.log("out.log", msg2);
-	FileAppender.log("out.log", msg3);
+	FileAppender.log("out.log", msg1, 1);
+	FileAppender.log("out.log", msg2, 1);
+	FileAppender.log("out.log", msg3, 1);
 	return 0;
 }

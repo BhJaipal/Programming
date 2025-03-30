@@ -2,9 +2,10 @@
 #include "level.h"
 #include "message.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
-void __log_message(LogMessage msg) {
+void __log_message(LogMessage msg, char unref) {
 	printf("[");
 	switch (msg.level) {
 		case LOG_ERROR:
@@ -25,6 +26,9 @@ void __log_message(LogMessage msg) {
 		msg.timestamp->tm_year, msg.timestamp->tm_mon, msg.timestamp->tm_mday,
 		msg.timestamp->tm_hour, msg.timestamp->tm_min, msg.timestamp->tm_sec);
 	printf("%s\n", msg.message);
+	if (unref) {
+		free(msg.message);
+	}
 }
 
 struct _ConsoleAppender ConsoleAppender = { __log_message };

@@ -50,11 +50,11 @@ Array *table_row_pop_at_index(TableRows *arr, int index) {
 	if (index < 0) index = -index - 1;
 	if ((unsigned)index >= arr->len) {
 		table_row_free(arr);
-		ConsoleAppender.log(GenerateLog.error("Index out of range\n"));
+		ConsoleAppender.log(GenerateLog.error("Index out of range\n"), 1);
 	}
 	if (arr->len == 0) {
 		table_row_free(arr);
-		ConsoleAppender.log(GenerateLog.error("Array is empty\n"));
+		ConsoleAppender.log(GenerateLog.error("Array is empty\n"), 1);
 	}
 	if ((unsigned)index == arr->len - 1)
 		return table_row_pop_last(arr);

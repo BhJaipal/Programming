@@ -13,7 +13,7 @@ Array *array_new() {
 }
 
 void array_free(Array *arr) {
-	for (int i = 0; i < arr->len_; i++) {
+	for (unsigned i = 0; i < arr->len_; i++) {
 		SWITCH_ON_OBJ(arr->elements_[i], String.unref, Float.unref, dict_free, array_free, Int.unref);
 	}
 	free(arr->elements_);
@@ -21,14 +21,14 @@ void array_free(Array *arr) {
 	free(arr);
 }
 
-void array_insert_at_index(Array *arr, Object data, unsigned index) {
+void array_insert_at_index(Array *arr, Object data, int index) {
 	if (index < 0) index = -index - 1;
-	if (index >= arr->len_) {
+	if ((unsigned)index >= arr->len_) {
 		warn("It will push elements to end of array\n");
 		array_push(arr, data);
 		return;
 	}
-	else if (index == arr->len_ - 1) {
+	else if ((unsigned)index == arr->len_ - 1) {
 		array_push(arr, data);
 		return;
 	}
@@ -46,9 +46,9 @@ void array_push(Array *arr, Object obj) {
 	arr->len_++;
 }
 
-Object array_pop_at_index(Array *arr, unsigned index) {
+Object array_pop_at_index(Array *arr, int index) {
 	if (index < 0) index = -index - 1;
-	if (index >= arr->len_) {
+	if ((unsigned)index >= arr->len_) {
 		array_free(arr);
 		error("Index out of range\n");
 	}
@@ -56,11 +56,11 @@ Object array_pop_at_index(Array *arr, unsigned index) {
 		array_free(arr);
 		error("Array is empty\n");
 	}
-	if (index == arr->len_ - 1)
+	if ((unsigned)index == arr->len_ - 1)
 		return array_pop_last(arr);
 	// 0 <= index <= arr->len_ - 2
 	Object elemAtI = arr->elements_[index];
-	for (int i = index; i < arr->len_ - 1; i++) {
+	for (unsigned i = index; i < arr->len_ - 1; i++) {
 		arr->elements_[i] = arr->elements_[i + 1];
 	}
 	arr->elements_[arr->len_ - 1].data = NULL;
@@ -96,6 +96,6 @@ void array_print_all(Array *arr) {
 }
 
 Object array_to_object(Array *arr) {
-	Object obj = {arr, ARRAY};
+	Object obj = {arr, ARRAY, 0};
 	return obj;
 }

@@ -1,5 +1,7 @@
 #include "singly-linked-list.h"
 #include "types.h"
+#include "array.h"
+#include "dict.h"
 #include <malloc.h>
 #include <stddef.h>
 #include <stdio.h>
@@ -26,17 +28,17 @@ void linked_list_push(SingleLinkedList *ll, Object value) {
 }
 
 void linked_list_insert_at_index(SingleLinkedList *ll, Object value, int index) {
-	if (index >= ll->len) {
+	if ((unsigned)index >= ll->len) {
 		warn("index is more than length so push node to end\n");
 		linked_list_push(ll, value);
 		return;
-	} else if (index == ll->len - 1) {
+	} else if ((unsigned)index == ll->len - 1) {
 		linked_list_push(ll, value);
 		return;
 	}
 	SingleNode *curr = ll->first;
 	unsigned int i = 0;
-	while (i != index - 1) {
+	while (i != (unsigned)index - 1) {
 		curr = curr->next;
 		i++;
 	}
@@ -68,7 +70,7 @@ void linked_list_free(SingleLinkedList *ll) {
 	SingleNode *curr = ll->first,
 		*prev = NULL;
 	for (unsigned int i = 0; i < ll->len; i++) {
-		SWITCH_ON_OBJ(curr->value, String.unref, Float.unref, , , Int.unref);
+		SWITCH_ON_OBJ(curr->value, String.unref, Float.unref, dict_free, array_free, Int.unref);
 		prev = curr;
 		curr = curr->next;
 		free(prev);
@@ -78,11 +80,11 @@ void linked_list_free(SingleLinkedList *ll) {
 
 void linked_list_print(SingleLinkedList *ll) {
 	SingleNode *curr = ll->first;
-	SWITCH_ON_OBJ(curr->value, String.print, Float.print, , , Int.print);
+	SWITCH_ON_OBJ(curr->value, String.print, Float.print, dict_print, array_print, Int.print);
 	printf(" -> ");
 	while (curr->next != NULL) {
 		curr = curr->next;
-		SWITCH_ON_OBJ(curr->value, String.print, Float.print, , , Int.print);
+		SWITCH_ON_OBJ(curr->value, String.print, Float.print, dict_print, array_print, Int.print);
 		printf(" -> ");
 	}
 	printf("\x1b[38;5;178mNULL\x1b[0m\n");

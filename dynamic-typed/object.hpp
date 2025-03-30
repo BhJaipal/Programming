@@ -38,25 +38,38 @@ public:
 	}
 	Pair operator[](int i) { return pairs[i]; }
 
-	void print() {
-		std::cout << "{ ";
-		int i = 0;
-		for (int i = 0; i < len(); i++) {
-			auto pair = pairs[i];
-			std::cout << pair.key << " => " << pair.value;
-			i++;
-			if (i == len() - 1) { std::cout << ", "; }
+	void unref() {
+		for (int i = 0; i < len_; i++) {
+			pairs[i].key.unref();
+			pairs[i].value.unref();
 		}
-		std::cout << " }";
 	}
+
+	template <class U>
+	friend std::ostream &operator<<(std::ostream &out, _Dict<U> dict);
 };
+
+/// @brief  Prints the dictionary
+/// @param out `std::cout`
+/// @param dict Self/ `Dict` object
+template <class T = Object>
+std::ostream &operator<<(std::ostream &out, _Dict<T> dict) {
+	std::cout << "{ ";
+	for (int i = 0; i < dict.len(); i++) {
+		auto pair = dict.pairs[i];
+		std::cout << pair.key << " => " << pair.value;
+		if (i != dict.len() - 1) { std::cout << ", "; }
+	}
+	std::cout << " }";
+	return out;
+}
+typedef _Dict<Object> Dict;
 
 class Object {
 	ptr_t value_;
 	ObjectType type;
 	Object(ptr_t value, ObjectType t) : value_(value), type(t) {}
 	Object() = default;
-	typedef _Dict<Object> Dict;
 
 	template <class T>
 	static Object from(T val, ObjectType t) {
@@ -65,7 +78,7 @@ class Object {
 	}
 
 	template <class T>
-	T to(ObjectType t) {
+	T &to(ObjectType t) {
 		if (t != type) {
 			std::cout << "Object is not ";
 			switch (t) {
@@ -90,14 +103,19 @@ public:
 	}
 	static Object from(Dict value) { return from(value, ObjectType::DICT); }
 
-	int to_int() { return to<int>(ObjectType::INT); }
-	f32 to_float() { return to<f32>(ObjectType::FLOAT); }
-	str to_str() { return to<str>(ObjectType::STR); }
-	arr to_arr() { return to<arr>(ObjectType::ARRAY); }
-	Dict to_dict() { return to<Dict>(ObjectType::DICT); }
+	int &to_int() { return to<int>(ObjectType::INT); }
+	f32 &to_float() { return to<f32>(ObjectType::FLOAT); }
+	str &to_str() { return to<str>(ObjectType::STR); }
+	arr &to_arr() { return to<arr>(ObjectType::ARRAY); }
+	Dict &to_dict() { return to<Dict>(ObjectType::DICT); }
 
-	void unref() { delete value_; }
-
+	void unref() {
+		if (type == ObjectType::DICT) to_dict().unref();
+		else if (type == ObjectType::ARRAY) {
+			for (auto el : to_arr()) { el.unref(); }
+		}
+		delete value_;
+	}
 	friend std::ostream &operator<<(std::ostream &cout, Object o);
 };
 
@@ -118,10 +136,9 @@ std::ostream &operator<<(std::ostream &out, Object o) {
 		case ObjectType::STR:
 			out << "\x1b[38;5;173m\"" << o.to_str() << "\"\e[0m";
 			break;
-		case ObjectType::DICT:	o.to_dict().print(); break;
+		case ObjectType::DICT:	out << o.to_dict(); break;
 		case ObjectType::ARRAY: print(out, o.to_arr()); break;
 		default:				out << "\e[38;5;156m" << o.to_int() << "\e[0m"; break;
 	}
 	return out;
 }
-typedef _Dict<Object> Dict;

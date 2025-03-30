@@ -28,7 +28,7 @@ void table_data_add_row(TableData *table, Dict *new_row) {
 					else {
 						array_free(result);
 						table_data_free(table);
-						ConsoleAppender.log(GenerateLog.error("%s is not nullable", (char *)(obj.key.data)));
+						ConsoleAppender.log(GenerateLog.error("%s is not nullable", (char *)(obj.key.data)), 1);
 						exit(1);
 					}
 					continue;
@@ -36,7 +36,10 @@ void table_data_add_row(TableData *table, Dict *new_row) {
 				if (attr.type != obj.value.type) {
 					array_free(result);
 					table_data_free(table);
-					ConsoleAppender.log(GenerateLog.error("%s.%s and Object.%s has different types\n", table->table->name, attr.name, String.get_value(obj.key)));
+					ConsoleAppender.log(
+						GenerateLog.error(
+							"%s.%s and Object.%s has different types\n", table->table->name, attr.name, String.get_value(obj.key)
+						), 1);
 					exit(1);
 				} else {
 					array_push(result, obj.value);
