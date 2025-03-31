@@ -1,3 +1,4 @@
+#include <boost/filesystem.hpp>
 #include <filesystem>
 #include <iostream>
 #include <map>
@@ -118,7 +119,7 @@ std::map<std::string, std::string> noExt{
 	{"jquery.d.ts", "\033[1;36m\033[0m"},
 	{"jquery-ui.d.ts", "\033[1;33m\033[0m"},
 	{"package.json", "\033[1;32m\033[0m"},
-	{"package-lock.json", "\033[1;31m\033[0m"},
+	{"package-lock.json", "\033[1;31m\033[0m "},
 	{".nuxt", "\033[1;32m\033[0m"},
 	{"Dockerfile", "\033[1;36m\033[0m"},
 	{"Doxyfile", "\033[1;34m\033[0m"},
@@ -133,6 +134,28 @@ std::map<int, std::string> permsMap{
 	{4, "r--"}, {5, "r-x"}, {6, "rw-"}, {7, "rwx"},
 };
 namespace fs = std::filesystem;
+
+class FileSize {
+	uintmax_t size;
+	std::string unit;
+
+public:
+	FileSize(uintmax_t s) : size(s) {
+		if (size < 1024) {
+			unit = "B";
+		} else if (size < 1024 * 1024) {
+			unit = "KB";
+			size /= 1024;
+		} else if (size < 1024 * 1024 * 1024) {
+			unit = "MB";
+			size /= 1024 * 1024;
+		} else {
+			unit = "GB";
+			size /= 1024 * 1024 * 1024;
+		}
+	}
+	std::string toString() const { return std::to_string(size) + " " + unit; }
+};
 
 bool ends_with(std::string const &fullString, std::string const &ending) {
 	if (fullString.length() >= ending.length()) {
@@ -169,7 +192,9 @@ int main(int argc, char const *argv[]) {
 		if (all == "-l") { is_full = 1; }
 	}
 
-	if (is_full) { std::cout << "\033[1;34mRoot\tGroup\tUser\tDir \t \033[0m"; }
+	if (is_full) {
+		std::cout << "\033[1;34mRoot\t  Group\tUser\t  Dir \tSize  \t";
+	} else std::cout << "   ";
 	std::cout << "\033[1;34mName\033[0m\n";
 	for (auto &p : fs::directory_iterator(cwd)) {
 		std::vector<std::string> fileName = split(p.path().string(), "/");
@@ -182,38 +207,51 @@ int main(int argc, char const *argv[]) {
 									  .size() > 0
 							  ? fileIcons[p.path().extension().string().substr(
 									1)]
-							  : defaultFile["file"]) + " "
+							  : defaultFile["file"]) +
+							 " "
 					   : (p.is_directory() ? defaultFile["folder"]
 										   : defaultFile["file"] + " "));
 		fs::perms permissions = fs::status(p.path()).permissions();
 		int permInt = int(permissions);
 		int perm;
 		int permArr[3];
-		for (int i = 0; i < 3; i++) {
-			perm = permInt % 8;
-			permArr[i] = perm;
-			permInt /= 8;
-		}
-		int root = permArr[2];
-		int group = permArr[1];
-		int others = permArr[0];
+		// for (int i = 0; i < 3; i++) {
+		// 	perm = permInt % 8;
+		// 	permArr[i] = perm;
+		// 	permInt /= 8;
+		// }
+		// int root = permArr[2];
+		// int group = permArr[1];
+		// int others = permArr[0];
+
+		int others = (permInt % 8);
+		int group = (permInt % 0100) / 8;
+		int root = (permInt / 0100) % 8;
 		if (is_full) {
-			std::cout << permsMap[root] << " \t" << permsMap[group] << " \t"
-					  << permsMap[others] << " \t"
-					  << (p.is_directory() ? "\033[1;32myes" : "\033[1;31mno ")
+			std::cout << permsMap[root] << "\t   " << permsMap[group] << " \t"
+					  << permsMap[others] << " \t  "
+					  << (p.is_directory() ? "\033[1;32m ✔ " : "\033[1;31m ✘ ")
 					  << " \033[0m\t";
+			fs::path path = p.path();
+			uintmax_t size;
+			if (p.is_directory()) {
+				namespace bf = boost::filesystem;
+				size = 0;
+				for (fs::directory_entry const &entry :
+					 fs::directory_iterator(path))
+					if (entry.is_regular_file()) size += entry.file_size();
+			} else size = fs::file_size(path);
+			std::cout << FileSize(size).toString() << " \t";
 		}
 		int isExecuable =
 			others == 1 || others == 3 || others == 5 || others == 7;
-		std::cout << icon << "  "
-				  << (p.is_directory() ? "\033[1;36m"
-					  : isExecuable	   ? "\033[1;35m"
-									   : "")
-				  << fileName[fileName.size() - 1]
-				  << (p.is_directory() ? "/\033[0m"
-					  : isExecuable	   ? "\033[0m"
-									   : "")
-				  << "\n";
+		if (!p.is_directory() && isExecuable) std::cout << "\033[1;32m";
+		if ((icon == defaultFile["file"] + " ") && isExecuable) {
+			std::cout << "\033[1;32m\033[0m ";
+		} else std::cout << icon << " ";
+		if (p.is_directory()) std::cout << "\033[1;36m ";
+		else if (isExecuable) std::cout << "\033[1;32m";
+		std::cout << fileName[fileName.size() - 1] << "\033[0m\n";
 	}
 	return 0;
 }
