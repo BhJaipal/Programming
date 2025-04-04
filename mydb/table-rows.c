@@ -1,5 +1,5 @@
-#include "dynamic-typed/dynamic-typed.h"
-#include "logging/console-appender.h"
+#include "dynamic-typed.h"
+#include "console-appender.h"
 #include "table-rows.h"
 #include <stdio.h>
 #include <stdlib.h>

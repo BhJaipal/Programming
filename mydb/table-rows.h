@@ -1,6 +1,6 @@
 #ifndef TABLE_ROWS_H
 #define TABLE_ROWS_H
-#include "dynamic-typed/array.h"
+#include "array.h"
 
 typedef struct {
 	Array **rows;

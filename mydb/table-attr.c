@@ -1,6 +1,6 @@
 #include "table-attr.h"
 #include "typed-array.h"
-#include "logging/console-appender.h"
+#include "console-appender.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

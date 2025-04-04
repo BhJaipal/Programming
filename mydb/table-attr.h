@@ -1,7 +1,7 @@
 #ifndef TABLE_ATTR_H
 #define TABLE_ATTR_H
 #include "typed-array.h"
-#include "dynamic-typed/types.h"
+#include "types.h"
 
 typedef struct {
 	char *name;

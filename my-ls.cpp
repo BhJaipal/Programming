@@ -11,6 +11,7 @@ std::map<std::string, std::string> fileIcons{
 	{"js", "\033[33m\033[0m"},
 	{"py", "\033[33m\033[0m"},
 	{"ipynb", ""},
+	{"hpp", "\033[1;36m\033[0m"},
 	{"cpp", "\033[1;36m\033[0m"},
 	{"c", "\033[1;35m\033[0m"},
 	{"h", "\033[1;34m\033[0m"},
@@ -35,6 +36,7 @@ std::map<std::string, std::string> fileIcons{
 	{"zip", ""},
 	{"gz", ""},
 	{"tar", ""},
+	{"a", ""},
 	{"xz", ""},
 	{"iso", ""},
 	{"pdf", ""},
@@ -64,7 +66,7 @@ std::map<std::string, std::string> fileIcons{
 	{"graphql", ""},
 	{"svelte", "\033[31m\033[0m"},
 	{"ts", "\033[34m\033[0m"},
-	{"ts", "\033[36m\033[0m"},
+	{"lua", "\033[36m\033[0m"},
 	{"tsx", ""},
 	{"json", ""},
 	{"db", "\ue706"},
@@ -80,6 +82,8 @@ std::map<std::string, std::string> fileIcons{
 	{"nim", ""},
 	{"php", ""},
 	{"jl", ""},
+	{"so", ""},
+	{"dll", ""},
 	{"cbl", ""},
 	{"ttf", ""},
 	{"ex", ""},
@@ -109,6 +113,7 @@ std::map<std::string, std::string> noExt{
 	{".git", "\033[1;31m\033[0m"},
 	{".gitignore", "\033[1;31m\033[0m"},
 	{".github", ""},
+	{"Makefile", "%"},
 	{".gitlab", "\033[1;31m\033[0m"},
 	{"test", "\033[1;31m󰏪\033[0m"},
 	{".vscode", "\033[1;36m\033[0m"},
@@ -192,8 +197,10 @@ int main(int argc, char const *argv[]) {
 		if (all == "-l") { is_full = 1; }
 	}
 
+	uintmax_t totalSize = 0;
+
 	if (is_full) {
-		std::cout << "\033[1;34mRoot\t  Group\tUser\t  Dir \tSize  \t";
+		std::cout << "\033[1;34mRoot   Group    User   Dir \tSize  \t";
 	} else std::cout << "   ";
 	std::cout << "\033[1;34mName\033[0m\n";
 	for (auto &p : fs::directory_iterator(cwd)) {
@@ -215,43 +222,47 @@ int main(int argc, char const *argv[]) {
 		int permInt = int(permissions);
 		int perm;
 		int permArr[3];
-		// for (int i = 0; i < 3; i++) {
-		// 	perm = permInt % 8;
-		// 	permArr[i] = perm;
-		// 	permInt /= 8;
-		// }
-		// int root = permArr[2];
-		// int group = permArr[1];
-		// int others = permArr[0];
 
 		int others = (permInt % 8);
 		int group = (permInt % 0100) / 8;
 		int root = (permInt / 0100) % 8;
 		if (is_full) {
-			std::cout << permsMap[root] << "\t   " << permsMap[group] << " \t"
-					  << permsMap[others] << " \t  "
-					  << (p.is_directory() ? "\033[1;32m ✔ " : "\033[1;31m ✘ ")
+			std::cout << permsMap[root] << "     ";
+			std::cout << permsMap[group] << "     ";
+			std::cout << permsMap[others] << "    ";
+			std::cout << (p.is_directory() ? "\033[1;32m ✔ " : "\033[1;31m ✘ ")
 					  << " \033[0m\t";
 			fs::path path = p.path();
 			uintmax_t size;
 			if (p.is_directory()) {
 				namespace bf = boost::filesystem;
-				size = 0;
 				for (fs::directory_entry const &entry :
-					 fs::directory_iterator(path))
+					 fs::directory_iterator(path)) {
 					if (entry.is_regular_file()) size += entry.file_size();
+				}
 			} else size = fs::file_size(path);
+			if (!p.is_symlink()) totalSize += size;
 			std::cout << FileSize(size).toString() << " \t";
 		}
 		int isExecuable =
 			others == 1 || others == 3 || others == 5 || others == 7;
 		if (!p.is_directory() && isExecuable) std::cout << "\033[1;32m";
 		if ((icon == defaultFile["file"] + " ") && isExecuable) {
-			std::cout << "\033[1;32m\033[0m ";
+			std::cout << "\033[1;32m\033[0m  ";
 		} else std::cout << icon << " ";
-		if (p.is_directory()) std::cout << "\033[1;36m ";
+		if (p.is_symlink()) std::cout << "\033[1;35m ";
+		else if (p.is_directory()) std::cout << "\033[1;36m ";
 		else if (isExecuable) std::cout << "\033[1;32m";
-		std::cout << fileName[fileName.size() - 1] << "\033[0m\n";
+		std::cout << fileName[fileName.size() - 1] << "\033[0m";
+		if (p.is_symlink() && is_full) {
+			std::cout << "\033[1;35m -> ";
+			std::cout << fs::read_symlink(p.path()).string() << "\033[0m";
+		}
+		std::cout << "\n";
+	}
+	if (is_full) {
+		std::cout << "Total Size: \033[92m" << FileSize(totalSize).toString()
+				  << "\033[0m\n";
 	}
 	return 0;
 }

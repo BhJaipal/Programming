@@ -1,5 +1,5 @@
-#include "dynamic-typed/dynamic-typed.h"
-#include "logging/console-appender.h"
+#include "dynamic-typed.h"
+#include "console-appender.h"
 #include "table-attr.h"
 #include "table-data.h"
 #include "table-rows.h"
@@ -15,21 +15,21 @@ TableData *table_data_new(Table *table) {
 	return table_data;
 }
 
-void table_data_add_row(TableData *table, Dict *new_row) {
+void table_data_add_row(TableData *table, DataDict *new_row) {
 	Array *result = array_new();
 	for (unsigned i = 0; i < table->table->Attributes->len_; i++) {
 		TableAttr attr = table->table->Attributes->arr[i];
-		for (unsigned j = 0; j < new_row->len; j++) {
-			DictElement obj = new_row->arr[j];
-			if (!strcmp(attr.name, String.get_value(obj.key))) {
+		for (unsigned j = 0; j < new_row->len_; j++) {
+			DataPair obj = new_row->arr[j];
+			if (!strcmp(attr.name, (obj.name))) {
 				if (obj.value.isNull) {
 					if (attr.nullable) array_push(result, obj.value);
 					else {
 						array_free(result);
+						data_dict_free(new_row);
 						table_data_free(table);
 						ConsoleAppender.log(
-							GenerateLog.error("%s is not nullable",
-											  (char *)(obj.key.data)),
+							GenerateLog.error("%s is not nullable", obj.name),
 							1);
 						exit(1);
 					}
@@ -37,12 +37,12 @@ void table_data_add_row(TableData *table, Dict *new_row) {
 				}
 				if (attr.type != obj.value.type) {
 					array_free(result);
+					data_dict_free(new_row);
 					table_data_free(table);
 					ConsoleAppender.log(
 						GenerateLog.error(
 							"%s.%s and Object.%s has different types\n",
-							table->table->name, attr.name,
-							String.get_value(obj.key)),
+							table->table->name, attr.name, obj.name),
 						1);
 					exit(1);
 				} else {
@@ -51,6 +51,7 @@ void table_data_add_row(TableData *table, Dict *new_row) {
 			}
 		}
 	}
+	data_dict_free(new_row);
 	table_row_push(table->rows, result);
 }
 
