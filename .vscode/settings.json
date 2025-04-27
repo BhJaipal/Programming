@@ -77,5 +77,6 @@
 	},
 	"C_Cpp.default.cStandard": "c23",
 	"C_Cpp.default.cppStandard": "c++23",
-	"cmake.ignoreCMakeListsMissing": true
+	"cmake.ignoreCMakeListsMissing": true,
+	"mesonbuild.selectRootDir": false
 }

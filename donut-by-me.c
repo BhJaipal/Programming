@@ -11,6 +11,25 @@ typedef struct {
 	singleRow a1, a2, a3;
 } Matrix;
 
+struct Color {
+	char ch;
+	char color[12];
+};
+struct Color colors[] = {
+	{'@', "\x1b[38;5;092m"},
+	{'$', "\x1b[38;5;093m"},
+	{'#', "\x1b[38;5;098m"},
+	{'*', "\x1b[38;5;099m"},
+	{'!', "\x1b[38;5;063m"},
+	{'=', "\x1b[38;5;067m"},
+	{';', "\x1b[38;5;068m"},
+	{':', "\x1b[38;5;069m"},
+	{'~', "\x1b[38;5;074m"},
+	{'-', "\x1b[38;5;075m"},
+	{',', "\x1b[38;5;080m"},
+	{'.', "\x1b[38;5;081m"},
+};
+
 singleRow multiply(singleRow m1, Matrix m2) {
 	singleRow res;
 	res.a1 = (m1.a1 * m2.a1.a1) + (m1.a2 * m2.a2.a1) + (m1.a3 * m2.a3.a1);
@@ -90,7 +109,14 @@ int main() {
 		printf("\x1b[H");
 		for (int i = 0; i < 1761; i++) {
 			// printf("%d ", buffer[i]);
+			if (i%80) {
+				for (int j = 0; j < 12; j++) {
+					if (colors[j].ch == buffer[i])
+						printf("%s", colors[j].color);
+				}
+			}
 			putchar(i%80 ? buffer[i]: 10);
+			if (i%80) printf("\e[0m");
 			A += 0.00004;
             B += 0.00002;
 		}
