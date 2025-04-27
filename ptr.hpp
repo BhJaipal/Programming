@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <stdlib.h>
-#define DEBUG 0
+#define DEBUG 1
 
 template <typename T>
 using print_fn_T = void (*)(T);
