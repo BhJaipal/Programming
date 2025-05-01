@@ -113,6 +113,11 @@ if __name__ == "__main__":
         for i in range(0, len(buffer) + 1):
             if i % 80 == 0:
                 print()
+            elif buffer[i] == " ":
+                print(
+                    buffer[i] + "\x1b[0m",
+                    end="",
+                )
             else:
                 print(
                     colors[buffer[i]] + buffer[i] + "\x1b[0m",
