@@ -7,20 +7,20 @@ protected:
 	T rows[row][col];
 };
 
-#define MatrixBuilder(rows_c, cols_c)                                          \
+#define MatrixBuilder(Name, rows_c, cols_c)                                    \
 	template <typename T>                                                      \
-	class Mat##rows_c##x##cols_c {                                             \
+	class Name {                                                               \
 		T rows[rows_c][cols_c];                                                \
                                                                                \
 	public:                                                                    \
-		Mat##rows_c##x##cols_c(std::initializer_list<T> init) {                \
+		Name(std::initializer_list<T> init) {                                  \
 			std::size_t i = 0;                                                 \
 			for (auto &&el : init) {                                           \
 				rows[i / cols_c][i % cols_c] = el;                             \
 				i++;                                                           \
 			}                                                                  \
 		}                                                                      \
-		Mat##rows_c##x##cols_c(T init[rows_c][cols_c]) {                       \
+		Name(T init[rows_c][cols_c]) {                                         \
 			for (int i = 0; i < rows_c; i++) {                                 \
 				for (std::size_t j = 0; j < cols_c; j++) {                     \
 					rows[i][j] = init[i][j];                                   \
@@ -29,23 +29,19 @@ protected:
 		}                                                                      \
 		T *operator[](std::size_t i) { return rows[i]; }                       \
 		template <typename U>                                                  \
-		friend std::ostream &operator<<(std::ostream &out,                     \
-										Mat##rows_c##x##cols_c<U> mat);
+		friend std::ostream &operator<<(std::ostream &out, Name<U> mat);
 
 #define EndMatrix }
 
-#define MatrixOutput(rows_c, cols_c)                                           \
+#define MatrixOutput(Name, rows_c, cols_c)                                     \
 	template <typename T>                                                      \
-	std::ostream &operator<<(std::ostream &out,                                \
-							 Mat##rows_c##x##cols_c<T> mat) {                  \
-		out << "[";                                                            \
+	std::ostream &operator<<(std::ostream &out, Name<T> mat) {                 \
 		for (int i = 0; i < rows_c; i++) {                                     \
 			out << "[ ";                                                       \
 			for (size_t j = 0; j < cols_c; j++) {                              \
-				out << mat[i][j] << (j == cols_c - 1 ? "" : ", ");             \
+				out << mat[i][j] << (j == cols_c - 1 ? " " : ", ");            \
 			}                                                                  \
-			out << (i == rows_c - 1 ? "]" : "], ");                            \
+			out << (i == rows_c - 1 ? "]\n" : "]\n");                          \
 		}                                                                      \
-		out << "]\n";                                                          \
 		return out;                                                            \
 	}
