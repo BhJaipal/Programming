@@ -1,11 +1,3 @@
-.data
-char:
-	.byte
-str:
-	.string ""
-num:
-	.long 0
-
 	.text
 	.globl putchar
 	.type putchar, @function
@@ -16,14 +8,6 @@ num:
 	.globl exit
 	.type exit, @function
 
-putchar:
-	mov %rax, char(%rip)
-	mov $char, %rsi
-	mov $1, %rdi
-	mov $1, %rax
-	mov $1, %rdx
-	syscall
-	ret
 write:
 	movq %rsi, %rdx
 	movq %rdi, %rsi
