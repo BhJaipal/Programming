@@ -1,10 +1,10 @@
 #include "c-impl.h"
 
 int _start() {
-	// write("Enter 3 numbers: ");
-	int a = 43;
-	int b = 34;
-	int c = 73;
+	write("Enter 3 numbers: ", 18);
+	int a = read_uint();
+	int b = read_uint();
+	int c = read_uint();
 	int g;
 	if (a > b) {
 		if (a > c) g = a;
@@ -13,7 +13,7 @@ int _start() {
 		if (b > c) g = b;
 		else g = c;
 	}
-	printd(g);
+	write_uint(g);
 	write(" is greatest\n", 14);
 	exit(0);
 }

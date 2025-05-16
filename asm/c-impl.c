@@ -12,7 +12,7 @@ int pow(int b, int e) {
 	return b;
 }
 
-void printd(unsigned int x) {
+void write_uint(unsigned int x) {
 	if (x < 10) {
 		putchar(x + 0x30);
 		return;
@@ -26,4 +26,25 @@ void printd(unsigned int x) {
 		val /= pow(10, i);
 		putchar(val + 0x30);
 	}
+}
+
+unsigned int read_uint() {
+	unsigned int x = 0;
+	char num[11];
+	for (int i = 0 ;i < 11;i++) {
+		read(num + i, 1);
+		if (num[i] == 0 || num[i] == ' ' || num[i] == '\n')
+			break;
+		if (num[i] <= '0' || num[i] >= '9') {
+			write("Only integers allowed\n", 23);
+			exit(1);
+		}
+	}
+	for (int i = 0; i < 11; i++) {
+		if (num[i] == 0 || num[i] == ' ' || num[i] == '\n')
+			break;
+		x *= 10;
+		x += num[i] - 0x30;
+	}
+	return x;
 }
