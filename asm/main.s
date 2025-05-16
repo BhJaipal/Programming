@@ -16,11 +16,9 @@ _start:
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
 	subq	$16, %rsp
-	movl	$5, -8(%rbp)
-	movl	$7, -12(%rbp)
-	movl	$9, -16(%rbp)
-	movl	$15, %edi
-	call	printd@PLT
+	movl	$43, -8(%rbp)
+	movl	$34, -12(%rbp)
+	movl	$73, -16(%rbp)
 	movl	-8(%rbp), %eax
 	cmpl	-12(%rbp), %eax
 	jle	.L2
@@ -45,8 +43,6 @@ _start:
 	movl	-16(%rbp), %eax
 	movl	%eax, -4(%rbp)
 .L4:
-	movl	$10, %edi
-	call	putchar@PLT
 	movl	-4(%rbp), %eax
 	movl	%eax, %edi
 	call	printd@PLT

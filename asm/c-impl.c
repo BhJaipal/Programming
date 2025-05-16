@@ -14,9 +14,6 @@ int pow(int b, int e) {
 
 void printd(unsigned int x) {
 	if (x < 10) {
-		// __asm__("movl -20(%rbp), %eax");
-		// __asm__("addl $0x30, %eax");
-		// __asm__("movl %eax, -4(%rbp)");
 		putchar(x + 0x30);
 		return;
 	}

@@ -83,6 +83,7 @@ printd:
 	cmpl	$9, -20(%rbp)
 	ja	.L9
 	movl	-20(%rbp), %eax
+	addl	$48, %eax
 	movsbl	%al, %eax
 	movl	%eax, %edi
 	call	putchar
@@ -100,10 +101,12 @@ printd:
 	cmpl	%eax, -20(%rbp)
 	jnb	.L12
 	movl	-4(%rbp), %eax
+	subl	$1, %eax
 	movl	%eax, -8(%rbp)
 	jmp	.L13
 .L14:
 	movl	-8(%rbp), %eax
+	addl	$1, %eax
 	movl	%eax, %esi
 	movl	$10, %edi
 	call	pow
@@ -111,19 +114,19 @@ printd:
 	movl	-20(%rbp), %eax
 	movl	$0, %edx
 	divl	%ecx
+	movl	%edx, %eax
 	movl	%eax, -12(%rbp)
-#APP
-# 29 "./c-impl.c" 1
-	movl -12(%rbp), %eax
-# 0 "" 2
-# 30 "./c-impl.c" 1
-	addl $0x30, %eax
-# 0 "" 2
-# 31 "./c-impl.c" 1
-	movl %eax, -4(%rbp)
-# 0 "" 2
-#NO_APP
+	movl	-8(%rbp), %eax
+	movl	%eax, %esi
+	movl	$10, %edi
+	call	pow
+	movl	%eax, %ecx
 	movl	-12(%rbp), %eax
+	cltd
+	idivl	%ecx
+	movl	%eax, -12(%rbp)
+	movl	-12(%rbp), %eax
+	addl	$48, %eax
 	movsbl	%al, %eax
 	movl	%eax, %edi
 	call	putchar
