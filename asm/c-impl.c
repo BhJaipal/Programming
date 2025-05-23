@@ -36,6 +36,7 @@ unsigned int read_uint() {
 		if (num[i] == 0 || num[i] == ' ' || num[i] == '\n')
 			break;
 		if (num[i] <= '0' || num[i] >= '9') {
+			write("\e[91mERROR: \e[0m", 17);
 			write("Only integers allowed\n", 23);
 			exit(1);
 		}
@@ -81,7 +82,8 @@ int read_int() {
 			break;
 		else if (i == 0 && num[i] == '-')
 			continue;
-		else if (num[i] <= '0' && num[i] >= '9') {
+		else if (num[i] <= '0' || num[i] >= '9') {
+			write("\e[91mERROR: \e[0m", 17);
 			write("Only integers allowed\n", 23);
 			exit(1);
 		}
