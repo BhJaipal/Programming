@@ -1,22 +1,22 @@
 FLAGS = -nostdlib -nostdinc -Wno-builtin-declaration-mismatch
-SRC = ./asm-impl.s ./c-impl.c ./main.c
-
+SRC = ./asm-impl.s ./c-impl.c
+MAIN ?= ./main.c
 build:
-	gcc $(FLAGS) $(SRC)
+	gcc $(FLAGS) $(SRC) $(MAIN)
 
 asm:
+	if [ ! -d build ]; then mkdir build; fi
 	gcc $(FLAGS) $(SRC) -S
-	mv ./main.s asm-out
-	mv ./c-impl.s asm-out
+	gcc $(FLAGS) $(MAIN) -S -o build/main.s 
+	mv c-impl.s build
 
 asm-std:
-	as ./asm-impl.s -o asm-std.o
+	as asm-impl.s -o build/asm-std.o
 
-build-asm: asm asm-std
-	as ./c-impl.s ./main.s -o main.o
-	ld main.o asm-std.o
+build-asm:
+	as build/c-impl.s build/main.s -o build/main.o
+	ld build/main.o build/asm-std.o
 
 clean:
-	rm asm-out/c-impl.s
-	rm asm-out/main.s
+	rm -r build
 	rm a.out

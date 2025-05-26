@@ -10,3 +10,11 @@ extern void write_uint(unsigned int x);
 extern unsigned int read_uint();
 extern void write_int(int x);
 extern int read_int();
+
+extern unsigned strlen(const char *str);
+
+extern void print(const char *str);
+
+extern void println(const char *str);
+
+#define main() void _start()

@@ -1,5 +1,5 @@
 #include "c-impl.h"
-void putchar(char c) {
+inline void putchar(char c) {
 	write(&c, 1);
 }
 
@@ -99,4 +99,21 @@ int read_int() {
 	if (num[0] == '-')
 		x = -x;
 	return x;
+}
+
+
+unsigned strlen(const char *str) {
+	unsigned i = 0;
+	while (str[i]) { i++; }
+	return i;
+}
+
+void print(const char *str) {
+	unsigned i = strlen(str);
+	write(str, i);
+}
+
+void println(const char *str) {
+	write(str, strlen(str));
+	putchar(10);
 }

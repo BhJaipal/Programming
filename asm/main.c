@@ -1,7 +1,7 @@
 #include "c-impl.h"
 
-int _start() {
-	write("Enter 3 numbers: ", 18);
+main() {
+	print("Enter 3 numbers: ");
 	int a = read_int();
 	int b = read_int();
 	int c = read_int();
@@ -14,6 +14,6 @@ int _start() {
 		else g = c;
 	}
 	write_int(g);
-	write(" is greatest\n", 14);
+	println(" is greatest");
 	exit(0);
 }
