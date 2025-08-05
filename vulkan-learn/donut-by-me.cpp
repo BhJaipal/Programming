@@ -1,15 +1,11 @@
+#include <glm/ext/matrix_float3x3.hpp>
+#include <glm/ext/vector_float3.hpp>
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
-
-typedef struct {
-	double a1, a2, a3;
-} singleRow;
-
-typedef struct {
-	singleRow a1, a2, a3;
-} Matrix;
+#include <glm/vec3.hpp>
+#include <glm/mat3x3.hpp>
 
 struct Color {
 	char ch;
@@ -30,14 +26,6 @@ struct Color colors[] = {
 	{'.', "\x1b[38;5;081m"},
 };
 
-singleRow multiply(singleRow m1, Matrix m2) {
-	singleRow res;
-	res.a1 = (m1.a1 * m2.a1.a1) + (m1.a2 * m2.a2.a1) + (m1.a3 * m2.a3.a1);
-	res.a2 = (m1.a1 * m2.a1.a2) + (m1.a2 * m2.a2.a2) + (m1.a3 * m2.a3.a2);
-	res.a3 = (m1.a1 * m2.a1.a3) + (m1.a2 * m2.a2.a3) + (m1.a3 * m2.a3.a3);
-	return res;
-}
-
 int main() {
 	float A = 0, B = 0;
 	int R2 = 2, R1 = 1;
@@ -55,26 +43,26 @@ int main() {
 			for (float phi = 0; phi < 6.28; phi += 0.02) {
 				float circleX = R2 + R1 * cos(theta),
 					circleY = R1 * sin(theta);
-				singleRow circle = {circleX, circleY, 0};
+				glm::vec3 circle = {circleX, circleY, 0};
 
-				Matrix Ry = {{cos(phi), 0, sin(phi)}, {0, 1, 0}, {-sin(phi), 0, cos(phi)}};
-				singleRow donut1 = multiply(circle, Ry);
+				glm::mat3x3 Ry = {{cos(phi), 0, sin(phi)}, {0, 1, 0}, {-sin(phi), 0, cos(phi)}};
+				glm::vec3 donut1 = Ry * circle;
 
-				Matrix Rx = {{1, 0, 0}, {0, cos(A), sin(A)}, {0, -sin(A), cos(A)}};
-				singleRow donut2 = multiply(donut1, Rx);
+				glm::mat3x3 Rx = {{1, 0, 0}, {0, cos(A), sin(A)}, {0, -sin(A), cos(A)}};
+				glm::vec3 donut2 = Rx * donut1;
 
-				Matrix Rz = {{cos(B), sin(B), 0}, {-sin(B), cos(B), 0}, {0, 0, 1}};
+				glm::mat3x3 Rz = {{cos(B), sin(B), 0}, {-sin(B), cos(B), 0}, {0, 0, 1}};
 				// final result of spinning donut
-				singleRow donut = multiply(donut2, Rz);
+				glm::vec3 donut = Rz * donut2;
 
 				// R1 / (Nz + 5)
 				// 5 is distance or so IDK correctly
-				float reciNz = R1 / (donut.a3 + 5);
+				float reciNz = R1 / (donut[2] + 5);
 
 				// x position
-				int x = 40 + 30 * donut.a1 * reciNz;
+				int x = 40 + 30 * donut[0] * reciNz;
 				// y position
-				int y = 12 + 15 * donut.a2 * reciNz;
+				int y = 12 + 15 * donut[1] * reciNz;
 				// current buffer index where current char has to be set
 				int o = x + screen_width * y;
 
@@ -90,7 +78,7 @@ int main() {
 				//  	- 2 sinB cosϕ
 				//  	+ 2 cosB sinA sinϕ
 				//  	+ 2 cosA sinϕ
-				int L = 8 * (donut.a2 - donut.a3
+				int L = 8 * (donut[1] - donut[2]
 					+ 2 * cos(B) * sin(A) * sin(phi)
 					- 2 * cos(phi) * cos(theta) * sin(B)
 					- 2 * cos(phi) * sin(B)

@@ -2,6 +2,8 @@
 extern void read(char *msg, int len);
 extern void write(const char *msg, int len);
 extern void exit(int status);
+extern void* mmap();
+extern void munmap(void *ptr);
 
 /* C implementation */
 extern void putchar(char c);
@@ -17,4 +19,7 @@ extern void print(const char *str);
 
 extern void println(const char *str);
 
-#define main() void _start()
+extern void *malloc(long unsigned size, unsigned pos);
+
+#define main void _start()
+#define null (void *)0

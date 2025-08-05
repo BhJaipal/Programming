@@ -4,12 +4,11 @@ inline void putchar(char c) {
 }
 
 int pow(int b, int e) {
-	if (e == 0) return 1;
-	if (e == 1) return b;
-	for (int i= 1; i < e; i++) {
-		b *= b;
+	int out = 1;
+	for (unsigned i = 0; i < e; i++) {
+		out *= b;
 	}
-	return b;
+	return out;
 }
 
 void write_uint(unsigned int x) {

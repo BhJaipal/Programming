@@ -4,7 +4,6 @@ project('dynamic-typed', 'c')
 # add_languages('cpp')
 # dynamic = static_library('dynamic', ['./object.cpp'])
 
-# remove next line for C++
 dynamic = static_library('dynamic', ['./dict.c', './types.c', './array.c'])
 
 dynamic_dep = declare_dependency(link_whole: [dynamic], include_directories: include_directories('.'))

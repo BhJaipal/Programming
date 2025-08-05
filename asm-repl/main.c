@@ -6,6 +6,7 @@
 
 Dict *variables;
 
+enum movables { NUMBERS, REGISTER, VARIABLE, STACK };
 unsigned var_exists(char *str) {
 	if (variables->len == 0) return -1;
 	for (unsigned i = 0;i < variables->len; i++) {
@@ -151,6 +152,26 @@ int main() {
 				else
 					String.print(variables->arr[exist].value);
 				printf(" }\n");
+			}
+		} else if (start_with(input, "mov ")) {
+			char reg1[10];
+			input += 4;
+			enum movables is_movable;
+			if (input[0] == '%') {
+				is_movable = REGISTER;
+				input++;
+			} else {
+				if (start_with(input, "$0x"))
+					input += 3;
+				else if (start_with(input, "0x"))
+					input += 2;
+				else if (start_with(input, "$"))
+					input += 1;
+				is_movable = VARIABLE | NUMBERS;
+			}
+			char i = 0;
+			while (input[i] != ',' && input[i]) {
+				reg1[i] = input[i];
 			}
 		}
 		else {

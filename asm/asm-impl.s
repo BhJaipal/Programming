@@ -8,6 +8,12 @@
 	.globl exit
 	.type exit, @function
 
+	.globl mmap
+	.type mmap, @function
+
+	.globl munmap
+	.type munmap, @function
+
 read:
 	movq %rsi, %rdx
 	movq %rdi, %rsi
@@ -15,6 +21,7 @@ read:
 	mov  $0, %rdi
 	syscall
 	ret
+
 write:
 	movq %rsi, %rdx
 	movq %rdi, %rsi
@@ -24,6 +31,24 @@ write:
 	ret
 
 exit:
-	mov  $60, %rax
+	mov $60, %rax
+	syscall
+	ret
+
+mmap:
+	# edi has alloc size
+	# esi has memory location
+	# mov memory location to %rdi
+	# mov size to %rsi
+	mov $9, %rax # mmap for memory alloc
+	mov $3, %rdx # read & write memory
+	mov $0x22, %r10
+	mov $0, %r8
+	mov $0, %rbp
+	syscall
+	ret
+
+munmap:
+	mov $0xb, %rax # #munmap for memory free
 	syscall
 	ret

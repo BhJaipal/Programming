@@ -17,7 +17,7 @@ AdderResult halfAdder(uint8_t x, uint8_t y) {
 
 AdderResult fullAdder(uint8_t x, uint8_t y, uint8_t carry) {
 	AdderResult r;
-	r.carry = (x || y) && carry;
+	r.carry = ((x || y) && carry) || ((x || carry) && y);
 	r.out = xor(xor(x, y), carry);
 	return r;
 }
@@ -46,8 +46,8 @@ uint8_t add(uint8_t x, uint8_t y) {
 }
 
 int main(int argc, char *argv[]) {
-	uint8_t adderUse = add(32, 16);
-	printf("32 + 16 = %d\n", adderUse);
+	uint8_t adderUse = add(0xa, 6);
+	printf("10 + 6 = %d %b\n", adderUse, adderUse);
 	return 0;
 }
 

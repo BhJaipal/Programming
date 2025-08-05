@@ -1,6 +1,6 @@
 #include "c-impl.h"
 
-main() {
+main {
 	print("Enter 3 numbers: ");
 	int a = read_int();
 	int b = read_int();
