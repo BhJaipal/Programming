@@ -42,9 +42,9 @@ mmap:
 	# mov size to %rsi
 	mov $9, %rax # mmap for memory alloc
 	mov $3, %rdx # read & write memory
-	mov $0x22, %r10
-	mov $0, %r8
-	mov $0, %rbp
+	mov $0x22, %rcx
+	mov $0, %r9d
+	mov $0, %r8d
 	syscall
 	ret
 

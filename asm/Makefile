@@ -5,14 +5,20 @@ MAIN ?= main.c
 all:
 	gcc $(FLAGS) $(SRC) $(MAIN)
 
+c-impl:
+	gcc $(FLAGS) c-impl.c -S -o build/c-impl.s
+
 asm:
 	if [ ! -d build ]; then mkdir build; fi
 	gcc $(FLAGS) $(MAIN) -S -o build/main.s 
 
-half-asm:
-	gcc $(FLAGS) ./c-asm-half.c -S
+asm-main: asm-std
+	as $(AMAIN) -o build/elf.o
+	ld build/elf.o build/asm-std.o
+	./a.out
 
 asm-std:
+	if [ ! -d build ]; then mkdir build; fi
 	as asm-impl.s -o build/asm-std.o
 
 build-asm:

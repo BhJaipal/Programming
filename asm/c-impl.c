@@ -116,3 +116,9 @@ void println(const char *str) {
 	write(str, strlen(str));
 	putchar(10);
 }
+
+void free(void *ptr) {
+	asm("mov %0, %%rdi" :: "r"(ptr));
+	munmap();
+}
+// void *malloc() {}
