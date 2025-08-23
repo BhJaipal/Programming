@@ -1,8 +1,9 @@
-#include "array.hpp"
 #include "lib.hpp"
+#include "string.hpp"
 #include <iostream>
 
 int main() {
+	/*
 	Array<int> a;
 	a.append(5);
 	a.append(9);
@@ -17,5 +18,11 @@ int main() {
 	a.pop_last();
 	if (a.pop_last().is_none()) {
 		std::cout << "Empty array\n";
-	};
+	};*/
+	String str = "Jaipal";
+	str += " Hema";
+	std::cout << str << " " << str.len() << "\n";
+	std::cout << "Reversed: " << str.reverse();
+	std::cout << ", Original: " << str << "\n";
+	std::cout << str.substr(3, 8).unwrap() << "\n";
 }

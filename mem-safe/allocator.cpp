@@ -16,7 +16,7 @@ const T Allocator<T>::read() {
 template <typename T>
 void Allocator<T>::free() {
 	if (status == AllocatorStatus::Unallocated) return;
-	delete data;
+	if (data != NULL) delete data;
 	data = NULL;
 	value_size = 0;
 	status = AllocatorStatus::Unallocated;
