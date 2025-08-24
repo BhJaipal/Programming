@@ -24,5 +24,7 @@ int main() {
 	std::cout << str << " " << str.len() << "\n";
 	std::cout << "Reversed: " << str.reverse();
 	std::cout << ", Original: " << str << "\n";
-	std::cout << str.substr(3, 8).unwrap() << "\n";
+	std::cout << str.substr(3, 8) << "\n";
+	str.mut_at(0).unwrap() = 'A';
+	std::cout << str << "\n";
 }

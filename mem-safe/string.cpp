@@ -26,11 +26,11 @@ void String::append(char *str) {
 	_len += slen;
 	data.mut_offset(_len) = 0;
 }
-Option<String> String::substr(size_t start, size_t end) {
+String String::substr(size_t start, size_t end) {
 	String res;
 	String a = clone();
 	if (start >= _len) {
-		return Option<String>::None();
+		return res;
 	}
 	if (end >= _len) {
 		end = _len;
@@ -38,7 +38,7 @@ Option<String> String::substr(size_t start, size_t end) {
 	for (size_t i = start; i < end; i++) {
 		res += a[i].unwrap();
 	}
-	return Option<String>::Some(res);
+	return res;
 }
 
 std::ostream& operator<<(std::ostream &os, String &str) {

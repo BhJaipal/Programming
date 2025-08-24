@@ -58,8 +58,16 @@ public:
 		if (index >= _len) {
 			return Option<char>::None();
 		}
-		return Option<char>::Some(data[index].unwrap());
+		return data[index];
 	}
-	Option<String> substr(size_t start, size_t end);
+
+	OptionRef<char> mut_at(size_t index) {
+		if (index >= _len) {
+			return OptionRef<char>::None();
+		}
+		return OptionRef<char>::Some(data.mut_offset(index));
+	}
+	String substr(size_t start, size_t end);
+	bool is_empty() { return _len == 0; }
 };
 std::ostream& operator<<(std::ostream &os, String &str);
