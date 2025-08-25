@@ -9,7 +9,7 @@ extern void munmap();
 extern void putchar(char c);
 extern int pow(int b, int e);
 extern void write_uint(unsigned int x);
-extern unsigned int read_uint();
+extern unsigned read_uint();
 extern void write_int(int x);
 extern int read_int();
 
