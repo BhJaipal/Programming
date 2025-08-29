@@ -148,6 +148,50 @@ ret:
 	return res;
 }
 
+int dump_pixel_to_png(uint32_t *pixels, size_t width, size_t height, char *file_path) {
+	FILE *f = fopen(file_path, "wb");
+	int res = 0;
+	if (!f) defer_ret(-1);
+	fprintf(f, "\x89PNG\r\n\x1A\n");
+	uint32_t header_size = 13;
+	fwrite(&header_size, 4, 1, f);
+	fprintf(f, "IHDR");
+	fwrite(&width, 4, 1, f);
+	fwrite(&height, 4, 1, f);
+	uint32_t remaining_headers = 0x0806;
+	fwrite(&remaining_headers, 2, 1, f);
+	uint32_t null_byte = 0;
+	fwrite(&null_byte, 1, 1, f);
+	fwrite(&null_byte, 1, 1, f);
+	fwrite(&null_byte, 1, 1, f);
+
+	// sBIT
+	header_size = 4;
+	fwrite(&header_size, 4, 1, f);
+	fprintf(f, "sBIT");
+	header_size = 0x08080808;
+	fwrite(&header_size, 4, 1, f);
+	header_size = 0x7C086488;
+	fwrite(&header_size, 4, 1, f);
+
+	for (size_t i = 0; i < width * height; i++) {
+		uint8_t pixel[] = {
+			(pixels[i] >> 16) & 0xff,
+			(pixels[i] >> 8) & 0xff,
+			pixels[i] & 0xff,
+		};
+		fwrite(pixel, sizeof(pixel), 1, f);
+		if (ferror(f)) defer_ret(errno);
+	}
+	fprintf(f, "\xAB\xE4\x68\xB2");
+	fwrite(&null_byte, 4, 1, f);
+	fprintf(f, "IEND\xAE\x42\x60\x82");
+
+ret:
+	if (f) fclose(f);
+	return res;
+}
+
 int main() {
 	fill_color_all(pixels, WIDTH, HEIGHT, 0xFFFFFFFF);
 	fill_circle(pixels, WIDTH, HEIGHT, 150, 150, 20, 0xFF3F3F7F);
