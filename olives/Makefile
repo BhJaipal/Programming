@@ -7,7 +7,7 @@ endef
 OPTS = -g ./olive.c
 
 wl-client:
-	gcc $@.c $(OPTS) $(call Pkg, $(WL_CLIENT_DEPS))
+	gcc $@.c ./xdg-shell-protocol.c $(OPTS) $(call Pkg, $(WL_CLIENT_DEPS))
 
 x11-main:
 	gcc $(OPTS) $@.c -lX11
