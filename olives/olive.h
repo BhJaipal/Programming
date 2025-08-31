@@ -4,12 +4,13 @@
  * Recommended to watch
  * https://youtube.com/@tsoding
  */
-#include <X11/X.h>
 #include <errno.h>
 #include <stddef.h>
 #include <stdint.h>
 #include <stdio.h>
-#include <X11/Xlib.h>
+
+#define X11_CLIENT 1
+#define WAY_CLIENT 2
 
 void merge_color(uint32_t *pixel_loc, size_t color);
 void fill_oval(uint32_t *pixels, size_t width, size_t height, size_t cx, size_t cy, size_t a, size_t b, uint32_t color);
@@ -25,9 +26,12 @@ __attribute__((warning("Not sure if your OS supports PPM image files, if it does
 #endif
 int dump_pixel_to_ppm(uint32_t *pixels, size_t width, size_t height, char *file_path);
 
+#if DISPLAY & X11_CLIENT
+# include <X11/Xlib.h>
 typedef struct X11Data {
 	Display *display;
 	Window window;
 } X11Data;
 X11Data create_x11_window();
-void render_to_x11(uint32_t *pixels, size_t width, size_t height, X11Data *display, XEvent *e);
+void render_to_x11(uint32_t *pixels, size_t width, size_t height, X11Data *data);
+#endif

@@ -1,4 +1,3 @@
-#include <X11/Xlib.h>
 #include <stddef.h>
 #include "olive.h"
 
@@ -8,8 +7,6 @@ uint32_t pixels[HEIGHT * WIDTH];
 
 int main() {
 	X11Data data = create_x11_window();
-
-	XEvent e;
 	XSelectInput(data.display, data.window, ExposureMask | KeyPressMask);
 	XMapWindow(data.display, data.window);
 
@@ -21,7 +18,7 @@ int main() {
 	empty_rect(pixels, WIDTH, HEIGHT, 200, 100, 60, 60, 0xFFFF9000);
 	empty_circle(pixels, WIDTH, HEIGHT, 150, 50, 20, 0xFF3F3F7F);
 
-	render_to_x11(pixels, WIDTH, HEIGHT, &data, &e);
+	render_to_x11(pixels, WIDTH, HEIGHT, &data);
 
 	XCloseDisplay(data.display);
 }
