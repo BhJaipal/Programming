@@ -1,4 +1,7 @@
 #include "olive.h"
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
 
 void merge_color(uint32_t *pixel_loc, size_t color) {
 	if (color >> 8*3 == 0xFF) {
@@ -132,6 +135,9 @@ int dump_pixel_to_ppm(uint32_t *pixels, size_t width, size_t height, char *file_
 
 ret:
 	if (f) fclose(f);
+	if (!res) {
+		printf("%s/%s generated successfully\n", getcwd(file_path, strlen(file_path)), file_path);
+	}
 	return res;
 }
 

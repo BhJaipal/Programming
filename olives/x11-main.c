@@ -1,4 +1,5 @@
 #include <stddef.h>
+#define DISPLAY 1
 #include "olive.h"
 
 #define HEIGHT 200

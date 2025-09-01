@@ -1,4 +1,8 @@
-#define _POSIX_C_SOURCE 200112L
+#include <linux/input-event-codes.h>
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <wayland-client-protocol.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <limits.h>
@@ -7,17 +11,14 @@
 #include <sys/mman.h>
 #include <time.h>
 #include <unistd.h>
+#include <linux/input.h>
 #include <wayland-client.h>
-#define DISPLAY WAY_CLIENT
-#include "olive.h"
 #include "xdg-shell-client-protocol.h"
-#define HEIGHT 200
-#define WIDTH 300
+#include "wl-client.h"
 
 /* Shared memory support code */
 static void
-randname(char *buf)
-{
+randname(char *buf) {
     struct timespec ts;
     clock_gettime(CLOCK_REALTIME, &ts);
     long r = ts.tv_nsec;
@@ -28,8 +29,7 @@ randname(char *buf)
 }
 
 static int
-create_shm_file(void)
-{
+create_shm_file(void) {
     int retries = 100;
     do {
         char name[] = "/wl_shm-XXXXXX";
@@ -45,8 +45,7 @@ create_shm_file(void)
 }
 
 static int
-allocate_shm_file(size_t size)
-{
+allocate_shm_file(size_t size) {
     int fd = create_shm_file();
     if (fd < 0)
         return -1;
@@ -61,23 +60,8 @@ allocate_shm_file(size_t size)
     return fd;
 }
 
-/* Wayland code */
-struct client_state {
-    /* Globals */
-    struct wl_display *wl_display;
-    struct wl_registry *wl_registry;
-    struct wl_shm *wl_shm;
-    struct wl_compositor *wl_compositor;
-    struct xdg_wm_base *xdg_wm_base;
-    /* Objects */
-    struct wl_surface *wl_surface;
-    struct xdg_surface *xdg_surface;
-    struct xdg_toplevel *xdg_toplevel;
-};
-
 static void
-wl_buffer_release(void *data, struct wl_buffer *wl_buffer)
-{
+wl_buffer_release(void *data, struct wl_buffer *wl_buffer) {
     /* Sent by the compositor when it's no longer using this buffer */
     wl_buffer_destroy(wl_buffer);
 }
@@ -87,49 +71,31 @@ static const struct wl_buffer_listener wl_buffer_listener = {
 };
 
 static struct wl_buffer *
-draw_frame(struct client_state *state)
-{
-    int stride = WIDTH * 4;
-    int size = stride * HEIGHT;
-
-    int fd = allocate_shm_file(size);
-    if (fd == -1) {
-        return NULL;
-    }
-    uint32_t *pixels = mmap(NULL, size,
-            PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
-	fill_color_all(pixels, WIDTH, HEIGHT, 0xFFFFFFFF);
-	fill_circle(pixels, WIDTH, HEIGHT, 150, 120, 20, 0xFF3F3F7F);
-	fill_oval(pixels, WIDTH, HEIGHT, 50, 70, 20, 40, 0xFF00FF90);
-	empty_oval(pixels, WIDTH, HEIGHT, 230, 50, 40, 20, 0xFF00FF90);
-	fill_rect(pixels, WIDTH, HEIGHT, 50, 70, 60, 60, 0x20FF9000);
-	empty_rect(pixels, WIDTH, HEIGHT, 200, 100, 60, 60, 0xFFFF9000);
-	empty_circle(pixels, WIDTH, HEIGHT, 150, 50, 20, 0xFF3F3F7F);
-
-    if (pixels == MAP_FAILED) {
-        close(fd);
-        return NULL;
-    }
-
-    struct wl_shm_pool *pool = wl_shm_create_pool(state->wl_shm, fd, size);
+draw_frame(int fd, struct client_state *state) {
+    struct wl_shm_pool *pool = wl_shm_create_pool(state->wl_shm, fd, state->width * 4 * state->height);
     struct wl_buffer *buffer = wl_shm_pool_create_buffer(pool, 0,
-            WIDTH, HEIGHT, stride, WL_SHM_FORMAT_XRGB8888);
+            state->width, state->height, state->width * 4, WL_SHM_FORMAT_XRGB8888);
     wl_shm_pool_destroy(pool);
     close(fd);
 
-    munmap(pixels, size);
     wl_buffer_add_listener(buffer, &wl_buffer_listener, NULL);
     return buffer;
 }
 
 static void
 xdg_surface_configure(void *data,
-        struct xdg_surface *xdg_surface, uint32_t serial)
-{
-    struct client_state *state = data;
+        struct xdg_surface *xdg_surface, uint32_t serial) {
+    client_state *state = data;
     xdg_surface_ack_configure(xdg_surface, serial);
 
-    struct wl_buffer *buffer = draw_frame(state);
+    int fd = allocate_shm_file(state->width * 4 * state->height);
+    if (fd == -1) {
+		return;
+    }
+	void *pixels = state->draw(fd);
+
+    struct wl_buffer *buffer = draw_frame(fd, state);
+	munmap(pixels, state->width * 4 * state->height);
     wl_surface_attach(state->wl_surface, buffer, 0, 0);
     wl_surface_commit(state->wl_surface);
 }
@@ -139,8 +105,7 @@ static const struct xdg_surface_listener xdg_surface_listener = {
 };
 
 static void
-xdg_wm_base_ping(void *data, struct xdg_wm_base *xdg_wm_base, uint32_t serial)
-{
+xdg_wm_base_ping(void *data, struct xdg_wm_base *xdg_wm_base, uint32_t serial) {
     xdg_wm_base_pong(xdg_wm_base, serial);
 }
 
@@ -162,8 +127,57 @@ static void registry_global(void *data, struct wl_registry *wl_registry,
                 wl_registry, name, &xdg_wm_base_interface, 1);
         xdg_wm_base_add_listener(state->xdg_wm_base,
                 &xdg_wm_base_listener, state);
-    }
+    } else if (strcmp(interface, wl_seat_interface.name) == 0) {
+		state->seat = wl_registry_bind(wl_registry, name, &wl_seat_interface, 1);
+	}
 }
+static void kbd_key(void *data,
+		    struct wl_keyboard *wl_keyboard,
+		    uint32_t serial,
+		    uint32_t time,
+		    uint32_t key,
+		    uint32_t state) {
+	client_state *client = data;
+	if (client->keypress)
+		client->keypress(client, wl_keyboard, serial, time, key, state);
+
+	if ((key == KEY_LEFTMETA && key != KEY_LEFTALT)
+		|| (key == KEY_RIGHTMETA && key != KEY_RIGHTALT)
+	)
+		client->super_on = 1;
+	else if (key == KEY_Q)
+		client->q_on = 1;
+	else {
+		client->super_on = 0;
+		client->q_on = 0;
+	}
+	if (client->q_on && client->super_on) exit(0);
+}
+void kbd_keymap(void *data,
+		       struct wl_keyboard *wl_keyboard,
+		       uint32_t format,
+		       int32_t fd,
+		       uint32_t size) {}
+void kbd_enter(void *data,
+		      struct wl_keyboard *wl_keyboard,
+		      uint32_t serial,
+		      struct wl_surface *surface,
+		      struct wl_array *keys) {
+}
+void kbd_leave(void *data,
+		      struct wl_keyboard *wl_keyboard,
+		      uint32_t serial,
+		      struct wl_surface *surface) {
+
+}
+void kbd_modifier(void *data,
+			  struct wl_keyboard *wl_keyboard,
+			  uint32_t serial,
+			  uint32_t mods_depressed,
+			  uint32_t mods_latched,
+			  uint32_t mods_locked,
+			  uint32_t group) {}
+struct wl_keyboard_listener keyboard_listener = {kbd_keymap, kbd_enter, kbd_leave, kbd_key, kbd_modifier, NULL};
 
 static void registry_global_remove(void *data,
         struct wl_registry *wl_registry, uint32_t name) {}
@@ -172,25 +186,27 @@ static const struct wl_registry_listener wl_registry_listener = {
     .global = registry_global,
     .global_remove = registry_global_remove,
 };
-
-int main(int argc, char *argv[]) {
-    struct client_state state = { 0 };
+client_state create_state() {
+    client_state state = { 0 };
     state.wl_display = wl_display_connect(NULL);
     state.wl_registry = wl_display_get_registry(state.wl_display);
-    wl_registry_add_listener(state.wl_registry, &wl_registry_listener, &state);
-    wl_display_roundtrip(state.wl_display);
+	return state;
+}
 
-    state.wl_surface = wl_compositor_create_surface(state.wl_compositor);
-    state.xdg_surface = xdg_wm_base_get_xdg_surface(
-            state.xdg_wm_base, state.wl_surface);
-    xdg_surface_add_listener(state.xdg_surface, &xdg_surface_listener, &state);
-    state.xdg_toplevel = xdg_surface_get_toplevel(state.xdg_surface);
-    xdg_toplevel_set_title(state.xdg_toplevel, "Example client");
-    wl_surface_commit(state.wl_surface);
+void get_registry(client_state *state, char *title) {
+    wl_registry_add_listener(state->wl_registry, &wl_registry_listener, state);
+    wl_display_roundtrip(state->wl_display);
+	state->keyboard = wl_seat_get_keyboard(state->seat);
+	state->q_on = 0;
+	state->super_on = 0;
+	state->keypress = NULL;
 
-    while (wl_display_dispatch(state.wl_display)) {
-        /* This space deliberately left blank */
-    }
-
-    return 0;
+    state->wl_surface = wl_compositor_create_surface(state->wl_compositor);
+    state->xdg_surface = xdg_wm_base_get_xdg_surface(
+            state->xdg_wm_base, state->wl_surface);
+    xdg_surface_add_listener(state->xdg_surface, &xdg_surface_listener, state);
+    state->xdg_toplevel = xdg_surface_get_toplevel(state->xdg_surface);
+    xdg_toplevel_set_title(state->xdg_toplevel, title);
+    wl_surface_commit(state->wl_surface);
+	wl_keyboard_add_listener(state->keyboard, &keyboard_listener, state);
 }

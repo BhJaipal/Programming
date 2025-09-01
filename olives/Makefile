@@ -6,8 +6,9 @@ endef
 
 OPTS = -g ./olive.c
 
+.PHONY: wl-client
 wl-client:
-	gcc $@.c ./xdg-shell-protocol.c $(OPTS) $(call Pkg, $(WL_CLIENT_DEPS))
+	gcc $@.c $S ./xdg-shell-protocol.c $(OPTS) $(call Pkg, $(WL_CLIENT_DEPS))
 
 x11-main:
-	gcc $(OPTS) $@.c -lX11
+	gcc $(OPTS) ./x11-render.c $@.c -lX11

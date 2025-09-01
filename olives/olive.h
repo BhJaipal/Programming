@@ -21,11 +21,12 @@ void fill_rect(uint32_t *pixels, size_t width, size_t height, size_t x, size_t y
 void empty_rect(uint32_t *pixels, size_t width, size_t height, size_t x, size_t y, size_t w, size_t h, uint32_t color);
 void fill_color_all(uint32_t *pixels, size_t width, size_t height, uint32_t color);
 
-#if defined(MSDOS) || defined(OS2) || defined(WIN32) || defined(__CYGWIN__)
+#if defined(MSDOS) || defined(WIN32)
 __attribute__((warning("Not sure if your OS supports PPM image files, if it doesn't, I missed the part where that's my problem")))
 #endif
 int dump_pixel_to_ppm(uint32_t *pixels, size_t width, size_t height, char *file_path);
 
+#ifdef linux
 #if DISPLAY & X11_CLIENT
 # include <X11/Xlib.h>
 typedef struct X11Data {
@@ -34,4 +35,8 @@ typedef struct X11Data {
 } X11Data;
 X11Data create_x11_window();
 void render_to_x11(uint32_t *pixels, size_t width, size_t height, X11Data *data);
+#endif
+#if DISPLAY & WAY_CLIENT
+# include "wl-client.h"
+#endif // DISPLAY & WAY_CLIENT
 #endif
