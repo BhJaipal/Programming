@@ -116,6 +116,7 @@ static const struct xdg_wm_base_listener xdg_wm_base_listener = {
 static void registry_global(void *data, struct wl_registry *wl_registry,
         uint32_t name, const char *interface, uint32_t version) {
     struct client_state *state = data;
+	printf("%s %d\n", interface, name);
     if (strcmp(interface, wl_shm_interface.name) == 0) {
         state->wl_shm = wl_registry_bind(
                 wl_registry, name, &wl_shm_interface, 1);

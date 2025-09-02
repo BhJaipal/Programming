@@ -1,4 +1,4 @@
-WL_CLIENT_DEPS := wayland-client wayland-egl gl egl
+WL_CLIENT_DEPS := wayland-client
 
 define Pkg
 	$$(pkg-config --libs $1)
