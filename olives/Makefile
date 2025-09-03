@@ -4,11 +4,19 @@ define Pkg
 	$$(pkg-config --libs $1)
 endef
 
+define RenderEx
+	$(filter-out $1,$(MAKECMDGOALS) $1-render.c)
+endef
+
 OPTS = -g ./olive.c
 
-.PHONY: wl-client
-wl-client:
-	gcc $@.c $S ./xdg-shell-protocol.c $(OPTS) $(call Pkg, $(WL_CLIENT_DEPS))
+gl:
+	gcc $(call RenderEx, $@) $(OPTS) $(call Pkg, gl glfw3)
+gtk:
+	gcc $(call RenderEx, $@) $(OPTS) $(call Pkg, --cflags gtk4)
 
-x11-main:
-	gcc $(OPTS) ./x11-render.c $@.c -lX11
+wl:
+	gcc $(call RenderEx, $@) ./xdg-shell-protocol.c $(OPTS) $(call Pkg, $(WL_CLIENT_DEPS))
+
+x11:
+	gcc $(OPTS) $(call RenderEx, $@) $(SRC) -lX11

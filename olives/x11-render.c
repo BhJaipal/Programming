@@ -1,4 +1,4 @@
-#define DISPLAY 1
+#define X11
 #include "olive.h"
 #include <X11/Xlib.h>
 

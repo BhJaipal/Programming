@@ -1,3 +1,5 @@
+#ifndef OLIVES_H
+#define OLIVES_H
 /*
  * This is inspired from https://github.com/tsoding/olive.c, A recreational programmer
  * Who makes awesome C, rust content
@@ -8,9 +10,6 @@
 #include <stddef.h>
 #include <stdint.h>
 #include <stdio.h>
-
-#define X11_CLIENT 1
-#define WAY_CLIENT 2
 
 void merge_color(uint32_t *pixel_loc, size_t color);
 void fill_oval(uint32_t *pixels, size_t width, size_t height, size_t cx, size_t cy, size_t a, size_t b, uint32_t color);
@@ -27,7 +26,7 @@ __attribute__((warning("Not sure if your OS supports PPM image files, if it does
 int dump_pixel_to_ppm(uint32_t *pixels, size_t width, size_t height, char *file_path);
 
 #ifdef linux
-#if DISPLAY & X11_CLIENT
+#ifdef X11
 # include <X11/Xlib.h>
 typedef struct X11Data {
 	Display *display;
@@ -36,7 +35,30 @@ typedef struct X11Data {
 X11Data create_x11_window();
 void render_to_x11(uint32_t *pixels, size_t width, size_t height, X11Data *data);
 #endif
-#if DISPLAY & WAY_CLIENT
-# include "wl-client.h"
+#ifdef WAYLAND
+# include "wl-render.h"
 #endif // DISPLAY & WAY_CLIENT
 #endif
+
+#ifdef USE_GTK
+#include <stddef.h>
+#include <gtk/gtk.h>
+#include <stdint.h>
+
+typedef struct _GtkData {
+	char *title;
+	size_t width;
+	size_t height;
+	GtkApplication *app;
+	uint32_t *pixels;
+} *GtkData;
+
+GtkData gtk_data_new(char *title, size_t width, size_t height, uint32_t *pixels);
+int gtk_app_run(GtkData data, int argc, char **argv);
+#endif
+
+#ifdef USE_GL
+int gl_render(uint32_t *pixels, size_t width, size_t height, char *title);
+#endif // USE_GL
+
+#endif // !OLIVES_H

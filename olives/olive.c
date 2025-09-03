@@ -136,7 +136,7 @@ int dump_pixel_to_ppm(uint32_t *pixels, size_t width, size_t height, char *file_
 ret:
 	if (f) fclose(f);
 	if (!res) {
-		printf("%s/%s generated successfully\n", getcwd(file_path, strlen(file_path)), file_path);
+		printf("%s generated successfully\n", file_path);
 	}
 	return res;
 }
