@@ -10,6 +10,8 @@ endef
 
 OPTS = -g ./olive.c
 
+none:
+	gcc $(filter-out $@,$(MAKECMDGOALS)) $(OPTS)
 gl:
 	gcc $(call RenderEx, $@) $(OPTS) $(call Pkg, gl glfw3)
 gtk:
@@ -19,4 +21,6 @@ wl:
 	gcc $(call RenderEx, $@) ./xdg-shell-protocol.c $(OPTS) $(call Pkg, $(WL_CLIENT_DEPS))
 
 x11:
-	gcc $(OPTS) $(call RenderEx, $@) $(SRC) -lX11
+	gcc $(OPTS) $(call RenderEx, $@) -lX11
+win:
+	gcc $(OPTS) $(call RenderEx, $@) -lgdi

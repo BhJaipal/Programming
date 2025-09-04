@@ -20,7 +20,7 @@ void fill_rect(uint32_t *pixels, size_t width, size_t height, size_t x, size_t y
 void empty_rect(uint32_t *pixels, size_t width, size_t height, size_t x, size_t y, size_t w, size_t h, uint32_t color);
 void fill_color_all(uint32_t *pixels, size_t width, size_t height, uint32_t color);
 
-#if defined(MSDOS) || defined(WIN32)
+#if defined(MSDOS) || defined(WIN32) || defined(__WIN32)
 __attribute__((warning("Not sure if your OS supports PPM image files, if it doesn't, I missed the part where that's my problem")))
 #endif
 int dump_pixel_to_ppm(uint32_t *pixels, size_t width, size_t height, char *file_path);
@@ -60,5 +60,17 @@ int gtk_app_run(GtkData data, int argc, char **argv);
 #ifdef USE_GL
 int gl_render(uint32_t *pixels, size_t width, size_t height, char *title);
 #endif // USE_GL
+
+
+#if defined(MSDOS) || defined(WIN32) || defined(__WIN32)
+typedef struct {
+	size_t *pixels;
+	size_t width;
+	size_t height;
+} WinData;
+// Call set_global before this inside void Main(), not main
+void create_window(char *title);
+void set_global(WinData data);
+#endif
 
 #endif // !OLIVES_H
