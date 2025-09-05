@@ -16,7 +16,8 @@ gl:
 	gcc $(call RenderEx, $@) $(OPTS) $(call Pkg, gl glfw3)
 gtk:
 	gcc $(call RenderEx, $@) $(OPTS) $(call Pkg, --cflags gtk4)
-
+gtkmm:
+	g++ $(call RenderEx, $@)pp $(OPTS) $(call Pkg, --cflags gtkmm-3.0)
 wl:
 	gcc $(call RenderEx, $@) ./xdg-shell-protocol.c $(OPTS) $(call Pkg, $(WL_CLIENT_DEPS))
 

@@ -26,24 +26,46 @@ __attribute__((warning("Not sure if your OS supports PPM image files, if it does
 int dump_pixel_to_ppm(uint32_t *pixels, size_t width, size_t height, char *file_path);
 
 #ifdef linux
-#ifdef X11
-# include <X11/Xlib.h>
+# ifdef X11
+#  include <X11/Xlib.h>
 typedef struct X11Data {
 	Display *display;
 	Window window;
 } X11Data;
 X11Data create_x11_window();
 void render_to_x11(uint32_t *pixels, size_t width, size_t height, X11Data *data);
-#endif
-#ifdef WAYLAND
-# include "wl-render.h"
-#endif // DISPLAY & WAY_CLIENT
+# endif
+# ifdef WAYLAND
+#  include "wl-render.h"
+# endif // DISPLAY & WAY_CLIENT
 #endif
 
 #ifdef USE_GTK
-#include <stddef.h>
-#include <gtk/gtk.h>
-#include <stdint.h>
+# if __cplusplus
+#  include <string>
+#  include <glibmm/refptr.h>
+#  include <gtkmm/application.h>
+struct Data {
+	uint32_t *pixels;
+	size_t width, height;
+};
+struct GtkData {
+	std::string title;
+	Data _data;
+	Glib::RefPtr<Gtk::Application> app;
+
+	GtkData(std::string name = "", size_t w = 0, size_t h = 0, uint32_t *pixels = nullptr): title(name)  {
+		_data.pixels = pixels;
+		_data.height = h;
+		_data.width = w;
+		app = Gtk::Application::create("gtkmm.render", Gio::APPLICATION_FLAGS_NONE);
+	}
+	int run();
+};
+# else
+#  include <stddef.h>
+#  include <gtk/gtk.h>
+#  include <stdint.h>
 
 typedef struct _GtkData {
 	char *title;
@@ -55,6 +77,7 @@ typedef struct _GtkData {
 
 GtkData gtk_data_new(char *title, size_t width, size_t height, uint32_t *pixels);
 int gtk_app_run(GtkData data, int argc, char **argv);
+# endif
 #endif
 
 #ifdef USE_GL
