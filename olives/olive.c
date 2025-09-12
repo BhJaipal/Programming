@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <errno.h>
 
 void merge_color(uint32_t *pixel_loc, size_t color) {
 	if (color >> 8*3 == 0xFF) {

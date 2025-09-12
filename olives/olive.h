@@ -6,14 +6,10 @@
  * Recommended to watch
  * https://youtube.com/@tsoding
  */
-#include <errno.h>
 #include <stddef.h>
 #include <stdint.h>
 #include <stdio.h>
 
-#define X11 0
-#define WAYLAND 2
-#define WINDOWS 1
 #include "olive-platform.h"
 
 void merge_color(uint32_t *pixel_loc, size_t color);
@@ -31,7 +27,7 @@ __attribute__((warning("Not sure if your OS supports PPM image files, if it does
 #endif
 int dump_pixel_to_ppm(uint32_t *pixels, size_t width, size_t height, char *file_path);
 
-#if defined DISPLAY && DISPLAY == X11
+#ifdef X11
 # include <X11/Xlib.h>
 typedef struct X11Data {
 	Display *display;
@@ -40,10 +36,9 @@ typedef struct X11Data {
 } X11Data;
 X11Data create_x11_window();
 void x11_render(size_t width, size_t height, X11Data *data);
-#endif
-#if DISPLAY == WAYLAND
+#elif defined WAYLAND
 # include "wl-render.h"
-#elif DISPLAY == WINDOWS
+#elif WINDOWS
 typedef struct {
 	uint32_t *pixels;
 	size_t width;
@@ -52,9 +47,7 @@ typedef struct {
 // Call set_global before this inside void Main(), not main
 void create_window(char *title);
 void set_global(WinData data);
-#endif
-
-#ifdef USE_GTK
+#elif defined USE_GTK
 # if __cplusplus
 #  include <string>
 #  include <glibmm/refptr.h>
@@ -92,9 +85,7 @@ typedef struct _GtkData {
 GtkData gtk_data_new(char *title, size_t width, size_t height, uint32_t *pixels);
 int gtk_app_run(GtkData data, int argc, char **argv);
 # endif
-#endif
-
-#ifdef USE_GL
+#elif defined USE_GL
 int gl_render(uint32_t *pixels, size_t width, size_t height, char *title);
 #endif // USE_GL
 

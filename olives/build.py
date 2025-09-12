@@ -11,7 +11,7 @@ class Server(Make):
         display = ""
         if platform in windows:
             with open("./olive-platform.h", "w") as f:
-                f.write("#define DISPLAY WINDOWS")
+                f.write("#define WINDOWS")
                 display = "windows"
         else:
             with open("./olive-platform.h", "w") as f:
@@ -21,10 +21,16 @@ class Server(Make):
                     if display is None:
                         display = "X11"
                 elif args[0] == "x11":
-                    f.write("#define DISPLAY X11")
+                    f.write("#define X11")
                     display = "X11"
+                elif args[0] == "gl":
+                    f.write("#define USE_GL")
+                    display = "GLFW"
+                elif args[0] == "gtk":
+                    f.write("#define USE_GTK")
+                    display = "gtk"
                 else:
-                    f.write("#define DISPLAY WAYLAND")
+                    f.write("#define WAYLAND")
                     display = "wayland"
         return "echo \"\x1b[92m'olive-platform.h' successfully created for " + display + "\x1b[0m\""
 
@@ -37,8 +43,14 @@ class Server(Make):
         system(self.platform(["x11"]))
         return "gcc " + self.flags + f" {args[0]} ./x11-render.c -lX11"
     def gl(self, args: list[str]):
-        system(self.platform(["x11"]))
+        system(self.platform(["gl"]))
         return "gcc " + self.flags + " ./gl-render.c " + args[0] + pkg_config("gl", "glfw3")
+    def gtk(self, args: list[str]):
+        system(self.platform(["gtkmm"]))
+        return "gcc " + self.flags + " ./gtk-render.c " + args[0] + pkg_config("gtk4")
+    def gtkmm(self, args: list[str]):
+        system(self.platform(["gtk"]))
+        return "gcc " + self.flags + " ./gtkmm-render.cpp " + args[0] + pkg_config("gtkmm-3.0")
     def win(self, args: list[str]):
         if "olive-platform.h" not in listdir():
             system(self.platform([]))

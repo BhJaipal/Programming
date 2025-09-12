@@ -4,12 +4,12 @@
 
 typedef struct App App;
 struct App {
-#if DISPLAY == X11
+#if defined X11
 	size_t width, height;
 	X11Data* data;
-#elif DISPLAY == WAYLAND
+#elif defined WAYLAND
 	client_state* data;
-#elif DISPLAY == WINDOWS
+#elif defined WINDOWS
 	WinData data;
 	void (*draw)(uint32_t *pixels);
 #endif
