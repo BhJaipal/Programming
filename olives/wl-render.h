@@ -1,4 +1,4 @@
-#define WAYLAND
+#include <stdint.h>
 #include "xdg-shell-client-protocol.h"
 #include <stddef.h>
 
@@ -20,7 +20,7 @@ typedef struct client_state {
 	char q_on;
 
 	/* User defined area */
-	void *(*draw)(int fd);
+	void (*draw)(uint32_t *pixels);
 	void *(*keypress)(
 		struct client_state *self,
 		struct wl_keyboard *wl_keyboard,

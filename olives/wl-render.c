@@ -90,7 +90,12 @@ xdg_surface_configure(void *data,
     if (fd == -1) {
 		return;
     }
-	void *pixels = state->draw(fd);
+	void *pixels = mmap(NULL, state->height * state->width * 4, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+	state->draw(pixels);
+
+    if (pixels == MAP_FAILED) {
+        close(fd);
+    }
 
     struct wl_buffer *buffer = draw_frame(fd, state);
 	munmap(pixels, state->width * 4 * state->height);

@@ -1,18 +1,9 @@
-#define WAYLAND
 #include "demo-data.h"
 #include <sys/mman.h>
 #include <unistd.h>
 
-void *draw(int fd) {
-    uint32_t *pixels = mmap(NULL, WIDTH * HEIGHT * 4,
-            PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+void draw(uint32_t *pixels) {
 	setup();
-
-    if (pixels == MAP_FAILED) {
-        close(fd);
-		return NULL;
-    }
-	return pixels;
 }
 
 int main() {

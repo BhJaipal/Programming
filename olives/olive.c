@@ -1,4 +1,6 @@
 #include "olive.h"
+#include <stddef.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -108,6 +110,57 @@ void empty_rect(uint32_t *pixels, size_t width, size_t height, size_t x, size_t 
 			pixels[(width * (i + y)) + j + x] = color;
 		else if ((j == 0 || j == w - 1) && (i >= 0 && i <= h - 1))
 			pixels[(width * (i + y)) + x + j] = color;
+	}
+}
+#define MAX(a, b) (a > b ? a : b)
+#define MIN(a, b) (a < b ? a : b)
+
+void draw_line(uint32_t *pixels, size_t width, size_t height, uint32_t point1[2], uint32_t point2[2], uint32_t color, int line_width) {
+	uint32_t max = MAX(point1[0] + point1[1] * width, point2[0] + point2[1] * width);
+	uint32_t min = MIN(point1[0] + point1[1] * width, point2[0] + point2[1] * width);
+
+	size_t slopeY = (max - min) / width;
+	size_t slopeX = (max - min) % width;
+
+	for (size_t d = min; d < max + 1; d++) {
+		size_t y_diff = (d - min) / width;
+		size_t x_diff = (d - min) % width;
+		if (slopeX != 0) {
+			if ((int)((float)y_diff / x_diff * 100) == (int)(((float)slopeY / slopeX * 100))) {
+				for (int i = 0; i < line_width; i++) {
+					if (color >> 24 != 0xFF) merge_color(pixels + d + i, color);
+					else pixels[d + i] = color;
+				}
+			}
+		} else
+			if ((int)((float)x_diff / y_diff * 100) == (int)(((float)slopeX / slopeY * 100))) {
+				for (int i = 0; i < line_width; i++) {
+					if (color >> 24 != 0xFF) merge_color(pixels + d + i, color);
+					else pixels[d + i] = color;
+				}
+			}
+	}
+}
+void draw_triangle(uint32_t *pixels, size_t width, size_t height, uint32_t point1[2], uint32_t point2[2], uint32_t color) {
+	uint32_t max = MAX(point1[0] + point1[1] * width, point2[0] + point2[1] * width);
+	uint32_t min = MIN(point1[0] + point1[1] * width, point2[0] + point2[1] * width);
+
+	size_t slopeY = (max - min) / width;
+	size_t slopeX = (max - min) % width;
+
+	for (size_t d = min; d < max + 1; d++) {
+		size_t y_diff = (d - min) / width;
+		size_t x_diff = (d - min) % width;
+		if (slopeX != 0) {
+			if ((int)((float)y_diff / x_diff * 100) == (int)(((float)slopeY / slopeX * 100))) {
+				if (color >> 24 != 0xFF) merge_color(pixels + d, color);
+				else pixels[d] = color;
+			}
+		} else
+			if ((int)((float)x_diff / y_diff * 100) == (int)(((float)slopeX / slopeY * 100))) {
+				if (color >> 24 != 0xFF) merge_color(pixels + d, color);
+				else pixels[d] = color;
+			}
 	}
 }
 

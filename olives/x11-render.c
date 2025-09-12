@@ -1,20 +1,24 @@
-#define X11
+#include <stdint.h>
+#include <malloc.h>
 #include "olive.h"
 #include <X11/Xlib.h>
+#include <unistd.h>
 
-void render_to_x11(uint32_t *pixels, size_t width, size_t height, X11Data *display) {
+void x11_render(size_t width, size_t height, X11Data *data) {
+	uint32_t *pixels = malloc(width * height * 4);
+	data->draw(pixels);
 	XEvent e;
 	XGCValues vals[] = {
 		(XGCValues){GXcopy, 1, 0, 1, 2, LineSolid, CapButt, JoinMiter, FillSolid, EvenOddRule, ArcPieSlice, 0, 0, 0, 0, 1, ClipByChildren, 1, 0, 0, None, 0, 4}
 	};
-	GC gc = XCreateGC(display->display, display->window, 16, vals);
+	GC gc = XCreateGC(data->display, data->window, 16, vals);
 	while (1) {
-		XNextEvent(display->display, &e);
+		XNextEvent(data->display, &e);
 		if (e.type == Expose) {
 			for (size_t i = 0; i < width * height; i++) {
 				if (pixels[i] != 0xFFFFFFFF) {
-					XSetForeground(display->display, gc, pixels[i]);
-					XDrawPoint(display->display, display->window, gc, i % width, i / width);
+					XSetForeground(data->display, gc, pixels[i]);
+					XDrawPoint(data->display, data->window, gc, i % width, i / width);
 				}
 			}
 		}

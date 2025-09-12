@@ -1,4 +1,5 @@
-WL_CLIENT_DEPS := wayland-client
+WL_CLIENT := wayland-client
+OPTS = -g ./olive.c
 
 define Pkg
 	$$(pkg-config --libs $1)
@@ -8,8 +9,13 @@ define RenderEx
 	$(filter-out $1,$(MAKECMDGOALS) $1-render.c)
 endef
 
-OPTS = -g ./olive.c
+$%:
+	echo $@
 
+cross:
+	if [[ $(DISPLAY) == x11 ]]; then \
+		make x11 $(filter-out cross,$(MAKECMDGOALS)) ./$@.c;\
+	fi
 none:
 	gcc $(filter-out $@,$(MAKECMDGOALS)) $(OPTS)
 gl:
@@ -19,7 +25,7 @@ gtk:
 gtkmm:
 	g++ $(call RenderEx, $@)pp $(OPTS) $(call Pkg, --cflags gtkmm-3.0)
 wl:
-	gcc $(call RenderEx, $@) ./xdg-shell-protocol.c $(OPTS) $(call Pkg, $(WL_CLIENT_DEPS))
+	gcc $(call RenderEx, $@) ./xdg-shell-protocol.c $(OPTS) -l$(WL_CLIENT)
 
 x11:
 	gcc $(OPTS) $(call RenderEx, $@) -lX11
