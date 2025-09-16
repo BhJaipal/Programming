@@ -9,10 +9,21 @@ define RenderEx
 	$(filter-out $1,$(MAKECMDGOALS) $1-render.c)
 endef
 
+DISPLAY =
+ifeq ($(OS), Windows_NT)
+	DISPLAY = win
+else
+	DISPLAY = linux
+endif
+
 cross:
-	if [[ $(DISPLAY) == x11 ]]; then \
-		make x11 $(filter-out cross,$(MAKECMDGOALS)) ./$@.c;\
-	fi
+	echo $(DISPLAY)
+	echo "if [[ $(DISPLAY) == win ]]; then\n\tmake win $(filter-out cross,$(MAKECMDGOALS)) ./$@.c\n" > /tmp/cross.sh
+	echo "else\n\tif [[ $$XDG_SESSION_TYPE == wayland ]]; " >> /tmp/cross.sh
+	echo "then make wl $(filter-out cross,$(MAKECMDGOALS)) ./$@.c;" >> /tmp/cross.sh
+	echo "\n\telse make x11 $(filter-out cross,$(MAKECMDGOALS)) ./$@.c; fi\nfi" >> /tmp/cross.sh
+	bash /tmp/cross.sh
+	rm /tmp/cross.sh
 none:
 	touch ./olive-platform.h
 	gcc $(filter-out $@,$(MAKECMDGOALS)) $(OPTS)

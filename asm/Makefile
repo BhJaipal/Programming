@@ -6,14 +6,14 @@ define MAIN
 endef
 
 all:
-	gcc $(FLAGS) $(SRC) $(call MAIN, $@) ./tinyalloc.c
+	gcc $(FLAGS) $(SRC) $(call MAIN, $@)
 
 shared:
 	gcc $(FLAGS) $(SRC) -shared ./tinyalloc.c -o libasm.so
 
 asm:
 	if [ ! -d build ]; then mkdir build; fi
-	gcc $(FLAGS) $(call MAIN, $@) -S -o build/main.s 
+	gcc $(FLAGS) c-impl.c -S -o build/c-impl.s 
 
 asm-std:
 	if [ ! -d build ]; then mkdir build; fi
