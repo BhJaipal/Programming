@@ -1,8 +1,8 @@
 FLAGS = -nostdlib -nostdinc -Wno-builtin-declaration-mismatch -g
-SRC = asm-impl.s c-impl.c
+SRC = syscall.c c-impl.c asm-impl.s
 
 define MAIN
-	$(filter-out $1,$(MAKECMDGOALS))
+$(filter-out $1,$(MAKECMDGOALS))
 endef
 
 all:

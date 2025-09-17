@@ -1,7 +1,7 @@
 #include "c-impl.h"
 #define ST (size_t)
 inline void putchar(char c) {
-	write(&c, 1);
+	write(1, &c, 1);
 }
 
 int pow(int b, int e) {
@@ -32,12 +32,12 @@ unsigned int read_uint() {
 	unsigned int x = 0;
 	char num[11];
 	for (int i = 0; i < 11;i++) {
-		read(num + i, 1);
+		read(1, num + i, 1);
 		if (num[i] == 0 || num[i] == ' ' || num[i] == '\n')
 			break;
 		if (num[i] <= '0' || num[i] >= '9') {
-			write("\e[91mERROR: \e[0m", 17);
-			write("Only integers allowed\n", 23);
+			write(1, "\e[91mERROR: \e[0m", 17);
+			write(1, "Only integers allowed\n", 23);
 			exit(1);
 		}
 	}
@@ -77,14 +77,14 @@ int read_int() {
 	int x = 0;
 	char num[11];
 	for (int i = 0; i < 11; i++) {
-		read(num + i, 1);
+		read(1, num + i, 1);
 		if (num[i] == 0 || num[i] == ' ' || num[i] == '\n')
 			break;
 		else if (i == 0 && num[i] == '-')
 			continue;
 		else if (num[i] <= '0' || num[i] >= '9') {
-			write("\e[91mERROR: \e[0m", 17);
-			write("Only integers allowed\n", 23);
+			write(1, "\e[91mERROR: \e[0m", 17);
+			write(1, "Only integers allowed\n", 23);
 			exit(1);
 		}
 	}
@@ -110,35 +110,12 @@ unsigned strlen(const char *str) {
 
 void print(const char *str) {
 	unsigned i = strlen(str);
-	write(str, i);
+	write(1, str, i);
 }
 
 void println(const char *str) {
-	write(str, strlen(str));
+	write(1, str, strlen(str));
 	putchar(10);
-}
-void *mmap (void *__addr, size_t __len, PageProtection __prot,
-		   MapProps __flags, int __fd, long __offset) {
-	void *ptr;
-	size_t a = __fd;
-	asm("mov %0, %%r8\n" ::"r"(a));
-	a = __flags;
-	asm("mov %0, %%r10\n" ::"r"(a));
-	a = __prot;
-	asm("mov %0, %%rdx\n" ::"r"(a));
-
-	asm("mov %0, %%rsi\n" ::"r"(__len));
-	asm("mov %0, %%rdi\n" ::"r"(__addr));
-	asm("mov %0, %%r9\n" ::"r"(__offset));
-	asm("mov $9, %rax\n");
-	asm("syscall\n");
-	asm("mov %%rax, %0\n": "=r"(ptr));
-	return ST ptr == -1 ? null : ptr;
-}
-void munmap(void *ptr, size_t size) {
-	asm("mov $11, %rax\n");
-	asm("mov %0, %%rsi\n" ::"r"(size));
-	asm("mov %0, %%rdi\n" ::"r"(ptr));
 }
 
 typedef struct Ptr Ptr;
@@ -240,12 +217,17 @@ void free(void *ptr) {
 	heap_update(heap, HeapDealloc, ptr, 0);
 }
 
-extern int main();
+extern int main(int argc, char **argv);
 
-void _start() {
+void _libc_main() {
+	long argc;
+	char **argv;
+	asm("mov %%rsi, %0\n":"=r"(argc));
+	asm("mov %%rdx, %0\n":"=r"(argv));
 	heap = heap_init(1096);
-	exit(main());
+	int status = main(argc, argv);
 	heap_destroy(heap);
+	exit(status);
 }
 void* heap_new(PageProtection prot, MapProps flags, int fd, size_t total_size) {
 	Heap *heap = heap_init(total_size);

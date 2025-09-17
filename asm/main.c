@@ -1,6 +1,17 @@
 #include "c-impl.h"
 
-int main() {
+int main(int argc, char **argv) {
+	print("[");
+	for (int  i = 0; i < argc; i++) {
+		print("'");
+		print(argv[i]);
+		print("'");
+		if (i != argc-1) {
+			print(", ");
+		}
+	}
+	println("]");
+
 	print("Enter 3 numbers: ");
 	int a = read_int();
 	int b = read_int();
