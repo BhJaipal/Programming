@@ -39,25 +39,7 @@ extern void print(const char *str);
 
 extern void println(const char *str);
 
-typedef struct Node Node;
-struct Node {
-	Node *next;
-	size_t value;
-};
-
-typedef struct {
-	size_t node_size;
-	Node *head;
-} LinkedList;
-
-LinkedList* ll_new(size_t node_size);
-void ll_add_node(LinkedList *ll, size_t val);
-void ll_delete_node(LinkedList *ll, size_t val);
-void ll_destroy(LinkedList *ll);
-
 extern void* malloc(size_t size);
 extern void free(void *ptr);
 
-#define main void _start()
-#define end exit(0); }
 #define null (void *)0

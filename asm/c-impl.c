@@ -140,46 +140,106 @@ void munmap(void *ptr, size_t size) {
 	asm("mov %0, %%rsi\n" ::"r"(size));
 	asm("mov %0, %%rdi\n" ::"r"(ptr));
 }
-LinkedList* ll_new(size_t node_size) {
-	LinkedList* ll = mmap(null, sizeof(LinkedList), PROT_READ | PROT_WRITE, MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
-	ll->head = null;
-	ll->node_size = node_size;
-	return ll;
-}
-void ll_add_node(LinkedList *ll, size_t val) {
+
+typedef struct Ptr Ptr;
+struct Ptr {
+	Ptr *next;
+	void *ptr;
+	size_t size;
+};
+typedef struct {
+	Ptr *head;
+	size_t node_size;
+	size_t total_size;
+} Heap;
+
+void heap_add_node(Heap *ll, void *ptr, size_t size) {
 	if (!ll->head) {
-		ll->head = mmap(null, sizeof(ll->node_size), PROT_READ | PROT_WRITE, MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
-		ll->head->value = val;
+		ll->head = mmap(null, ll->node_size, PROT_READ | PROT_WRITE, MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
+		ll->head->ptr = ptr;
+		ll->head->size = size;
 		ll->head->next = null;
 		return;
 	}
-	Node *head = ll->head;
+	Ptr *head = ll->head;
 	while (head->next) {
 		head = head->next;
 	}
-	head->next = mmap(null, sizeof(ll->node_size), PROT_READ | PROT_WRITE, MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
-	head->next->value = val;
+	head->next = mmap(null, ll->node_size, PROT_READ | PROT_WRITE, MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
+	head->next->ptr = ptr;
+	head->next->size = size;
 	head->next->next = null;
 }
-void ll_delete_node(LinkedList *ll, size_t val) {
-	Node *head = ll->head;
+void heap_delete_node(Heap *ll, void *val) {
+	Ptr *head = ll->head;
 	if (!head) return;
-	Node *prev = null;
+	Ptr *prev = null;
 
-	while (head && head->value != val) {
+	while (head && head->ptr != val) {
 		prev = head;
 		head = head->next;
 	}
-	prev->next = head->next;
+	if (prev)
+		prev->next = head->next;
+	munmap(head->ptr, head->size);
 	munmap(head, ll->node_size);
 }
-void ll_destroy(LinkedList *ll) {
-	Node *head = ll->head;
-	Node *prev = null;
+Heap* heap_init(size_t heap_size) {
+	Heap *heap = mmap(null, sizeof(Heap), PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
+	heap->head = null;
+	heap->total_size = heap_size;
+	heap->node_size = sizeof(Ptr);
+	return heap;
+}
+void heap_destroy(Heap *heap) {
+	Ptr *head = heap->head;
+	Ptr *prev = null;
 
 	while (head) {
 		prev = head;
 		head = head->next;
-		munmap(prev, ll->node_size);
+		munmap(prev->ptr, prev->size);
+		munmap(prev, heap->node_size);
 	}
+	munmap(heap, sizeof(Heap));
+}
+
+typedef enum {
+	HeapAlloc,
+	HeapDealloc,
+} HeapEvent;
+
+Heap* heap = null;
+
+void heap_update(HeapEvent event, void *ptr, size_t len) {
+	switch (event) {
+		case HeapAlloc:
+			heap_add_node(heap, ptr, len);
+			break;
+		case HeapDealloc:
+			heap_delete_node(heap, ptr);
+			break;
+		default:
+			println("Calling 'heap_update' with other parameters is invalid");
+			break;
+	}
+}
+
+void* malloc(size_t size) {
+	void *ptr = mmap(0, size, PROT_READ | PROT_WRITE,
+				  MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
+	heap_update(HeapAlloc, ptr, size);
+	return ptr;
+}
+
+void free(void *ptr) {
+	heap_update(HeapDealloc, ptr, 0);
+}
+
+extern int main();
+
+void _start() {
+	heap = heap_init(1096);
+	exit(main());
+	heap_destroy(heap);
 }

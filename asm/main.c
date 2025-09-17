@@ -1,6 +1,6 @@
 #include "c-impl.h"
 
-main {
+int main() {
 	print("Enter 3 numbers: ");
 	int a = read_int();
 	int b = read_int();
@@ -15,5 +15,5 @@ main {
 	}
 	write_int(g);
 	println(" is greatest");
-	exit(0);
+	exit(1);
 }
