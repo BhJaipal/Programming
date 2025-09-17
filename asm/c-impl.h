@@ -7,7 +7,7 @@ typedef enum {
 	PROT_NONE = 0x0,		/* Page can not be accessed.  */
 	PROT_GROWSDOWN =	0x01000000, /* Extend change to start of growsdown vma (mprotect only).  */
 	PROT_GROWSUP	=	0x02000000, /* Extend change to start of growsup vma (mprotect only).  */
-} MemPermission;
+} PageProtection;
 
 /* Sharing types (must choose one and only one of these).  */
 typedef enum {
@@ -21,7 +21,7 @@ typedef enum {
 extern void read(char *msg, int len);
 extern void write(const char *msg, int len);
 extern void exit(int status);
-extern void *mmap (void *__addr, size_t __len, MemPermission __prot,
+extern void *mmap (void *__addr, size_t __len, PageProtection __prot,
 		   MapProps __flags, int __fd, long __offset);
 extern void munmap(void *ptr, size_t size);
 
@@ -41,5 +41,14 @@ extern void println(const char *str);
 
 extern void* malloc(size_t size);
 extern void free(void *ptr);
+
+/*  @brief Use this if you want to create your own heap allocator */
+extern void* heap_new(PageProtection prot, MapProps flags, int fd, size_t total_size);
+/* @brief malloc that can be used with your custom heap */
+extern void* heap_malloc(void *heap, size_t size);
+/* @brief free that can be used with your custom heap */
+extern void heap_free(void *heap, void *ptr);
+/* @brief Destroy the heap */
+extern void heap_destroy(void* heap);
 
 #define null (void *)0

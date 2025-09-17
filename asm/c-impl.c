@@ -117,7 +117,7 @@ void println(const char *str) {
 	write(str, strlen(str));
 	putchar(10);
 }
-void *mmap (void *__addr, size_t __len, MemPermission __prot,
+void *mmap (void *__addr, size_t __len, PageProtection __prot,
 		   MapProps __flags, int __fd, long __offset) {
 	void *ptr;
 	size_t a = __fd;
@@ -151,6 +151,9 @@ typedef struct {
 	Ptr *head;
 	size_t node_size;
 	size_t total_size;
+	PageProtection prot;
+	MapProps flags;
+	int fd;
 } Heap;
 
 void heap_add_node(Heap *ll, void *ptr, size_t size) {
@@ -191,7 +194,8 @@ Heap* heap_init(size_t heap_size) {
 	heap->node_size = sizeof(Ptr);
 	return heap;
 }
-void heap_destroy(Heap *heap) {
+void heap_destroy(void *_heap) {
+	Heap *heap = _heap;
 	Ptr *head = heap->head;
 	Ptr *prev = null;
 
@@ -211,7 +215,7 @@ typedef enum {
 
 Heap* heap = null;
 
-void heap_update(HeapEvent event, void *ptr, size_t len) {
+void heap_update(Heap *heap, HeapEvent event, void *ptr, size_t len) {
 	switch (event) {
 		case HeapAlloc:
 			heap_add_node(heap, ptr, len);
@@ -228,12 +232,12 @@ void heap_update(HeapEvent event, void *ptr, size_t len) {
 void* malloc(size_t size) {
 	void *ptr = mmap(0, size, PROT_READ | PROT_WRITE,
 				  MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
-	heap_update(HeapAlloc, ptr, size);
+	heap_update(heap, HeapAlloc, ptr, size);
 	return ptr;
 }
 
 void free(void *ptr) {
-	heap_update(HeapDealloc, ptr, 0);
+	heap_update(heap, HeapDealloc, ptr, 0);
 }
 
 extern int main();
@@ -242,4 +246,21 @@ void _start() {
 	heap = heap_init(1096);
 	exit(main());
 	heap_destroy(heap);
+}
+void* heap_new(PageProtection prot, MapProps flags, int fd, size_t total_size) {
+	Heap *heap = heap_init(total_size);
+	heap->fd = fd;
+	heap->prot = prot;
+	heap->flags = flags;
+	return heap;
+}
+
+void* heap_malloc(void *heap, size_t size) {
+	void *ptr = mmap(0, size, ((Heap*)heap)->prot,
+				  ((Heap*)heap)->flags, ((Heap*)heap)->fd, 0);
+	heap_update(heap, HeapAlloc, ptr, size);
+	return ptr;
+}
+void heap_free(void *heap, void *ptr) {
+	heap_update(heap, HeapDealloc, ptr, 0);
 }
