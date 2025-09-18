@@ -1,4 +1,5 @@
 #include "c-impl.h"
+#include "types.h"
 #define ST (size_t)
 inline void putchar(char c) {
 	write(1, &c, 1);
@@ -13,18 +14,15 @@ int pow(int b, int e) {
 }
 
 void write_uint(unsigned int x) {
+	x = rev_u(x);
 	if (x < 10) {
 		putchar(x + 0x30);
 		return;
 	}
-	int exp = 1;
-	while (x/pow(10, exp))
-		exp++;
 
-	for (int i = exp - 1; i >= 0; i--) {
-		int val = x % pow(10, i + 1);
-		val /= pow(10, i);
-		putchar(val + 0x30);
+	while (x / 10) {
+		putchar(x % 10 + 0x30);
+		x /= 10;
 	}
 }
 
@@ -50,6 +48,7 @@ unsigned int read_uint() {
 	return x;
 }
 void write_int(int x) {
+	x = rev_u(x);
 	if (x < 0) {
 		putchar('-');
 		x = -x;
@@ -59,17 +58,9 @@ void write_int(int x) {
 		return;
 	}
 
-	int exp = 1;
-	if (x < 0) {
-		putchar('-');
-		x = -x;
-	}
-	while (x / pow(10, exp))
-		exp++;
-	for (int i = exp - 1; i >= 0; i--) {
-		int val = x % pow(10, i + 1);
-		val /= pow(10, i);
-		putchar(val + 0x30);
+	while (x / 10) {
+		putchar(x % 10 + 0x30);
+		x /= 10;
 	}
 }
 
@@ -118,131 +109,31 @@ void println(const char *str) {
 	putchar(10);
 }
 
-typedef struct Ptr Ptr;
-struct Ptr {
-	Ptr *next;
-	void *ptr;
-	size_t size;
-};
-typedef struct {
-	Ptr *head;
-	size_t node_size;
-	size_t total_size;
-	PageProtection prot;
-	MapProps flags;
-	int fd;
-} Heap;
-
-void heap_add_node(Heap *ll, void *ptr, size_t size) {
-	if (!ll->head) {
-		ll->head = mmap(null, ll->node_size, PROT_READ | PROT_WRITE, MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
-		ll->head->ptr = ptr;
-		ll->head->size = size;
-		ll->head->next = null;
-		return;
+int rev_d(int x) {
+	if (x < 10 && x > -10) return x;
+	char neg=0;
+	if (x<0) {
+		neg=1;
+		x = -x;
 	}
-	Ptr *head = ll->head;
-	while (head->next) {
-		head = head->next;
+	int a = 0;
+	int ex = 0;
+	while (x / 10) {
+		a *= 10;
+		a += x % 10;
+		x /= 10;
 	}
-	head->next = mmap(null, ll->node_size, PROT_READ | PROT_WRITE, MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
-	head->next->ptr = ptr;
-	head->next->size = size;
-	head->next->next = null;
+	return neg ? -a : a;
 }
-void heap_delete_node(Heap *ll, void *val) {
-	Ptr *head = ll->head;
-	if (!head) return;
-	Ptr *prev = null;
-
-	while (head && head->ptr != val) {
-		prev = head;
-		head = head->next;
+uint32 rev_u(uint32 x) {
+	if (x < 10) return x;
+	int a = 0;
+	int ex = 0;
+	while (x / 10) {
+		a *= 10;
+		a += x % 10;
+		x /= 10;
 	}
-	if (prev)
-		prev->next = head->next;
-	munmap(head->ptr, head->size);
-	munmap(head, ll->node_size);
-}
-Heap* heap_init(size_t heap_size) {
-	Heap *heap = mmap(null, sizeof(Heap), PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
-	heap->head = null;
-	heap->total_size = heap_size;
-	heap->node_size = sizeof(Ptr);
-	return heap;
-}
-void heap_destroy(void *_heap) {
-	Heap *heap = _heap;
-	Ptr *head = heap->head;
-	Ptr *prev = null;
-
-	while (head) {
-		prev = head;
-		head = head->next;
-		munmap(prev->ptr, prev->size);
-		munmap(prev, heap->node_size);
-	}
-	munmap(heap, sizeof(Heap));
+	return a;
 }
 
-typedef enum {
-	HeapAlloc,
-	HeapDealloc,
-} HeapEvent;
-
-Heap* heap = null;
-
-void heap_update(Heap *heap, HeapEvent event, void *ptr, size_t len) {
-	switch (event) {
-		case HeapAlloc:
-			heap_add_node(heap, ptr, len);
-			break;
-		case HeapDealloc:
-			heap_delete_node(heap, ptr);
-			break;
-		default:
-			println("Calling 'heap_update' with other parameters is invalid");
-			break;
-	}
-}
-
-void* malloc(size_t size) {
-	void *ptr = mmap(0, size, PROT_READ | PROT_WRITE,
-				  MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
-	heap_update(heap, HeapAlloc, ptr, size);
-	return ptr;
-}
-
-void free(void *ptr) {
-	heap_update(heap, HeapDealloc, ptr, 0);
-}
-
-extern int main(int argc, char **argv);
-
-void _libc_main() {
-	long argc;
-	char **argv;
-	asm("mov %%rsi, %0\n":"=r"(argc));
-	asm("mov %%rdx, %0\n":"=r"(argv));
-	heap = heap_init(1096);
-	int status = main(argc, argv);
-	heap_destroy(heap);
-	exit(status);
-}
-void* heap_new(PageProtection prot, MapProps flags, int fd, size_t total_size) {
-	Heap *heap = heap_init(total_size);
-	heap->fd = fd;
-	heap->prot = prot;
-	heap->flags = flags;
-	return heap;
-}
-
-void* heap_malloc(void *heap, size_t size) {
-	void *ptr = mmap(0, size, ((Heap*)heap)->prot,
-				  ((Heap*)heap)->flags, ((Heap*)heap)->fd, 0);
-	heap_update(heap, HeapAlloc, ptr, size);
-	return ptr;
-}
-void heap_free(void *heap, void *ptr) {
-	heap_update(heap, HeapDealloc, ptr, 0);
-}

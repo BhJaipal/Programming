@@ -1,4 +1,8 @@
 #include "syscall.h"
+#include "types.h"
+
+int rev_d(int x);
+uint32 rev_u(uint32 x);
 
 /* C implementation */
 extern void putchar(char c);

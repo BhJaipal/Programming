@@ -46,24 +46,24 @@ typedef enum {
 } FileOpenFlags;
 
 typedef struct {
-	int st_dev; // Device
-	int st_ino; // File serial number
-    int st_nlink;		/* Link count.  */
-    int st_mode;		/* File mode.  */
-    int st_uid;		/* User ID of the file's owner.	*/
-    int st_gid;		/* Group ID of the file's group.*/
-    int __pad0;
-    int st_rdev;		/* Device number, if device.  */
-    int st_size;			/* Size of file, in bytes.  */
-    int st_blksize;	/* Optimal block size for I/O.  */
-    int st_blocks;		/* Number 512-byte blocks allocated. */
-    int st_atime;			/* Time of last access.  */
-    int st_atimensec;	/* Nscecs of last access.  */
-    int st_mtime;			/* Time of last modification.  */
-    int st_mtimensec;	/* Nsecs of last modification.  */
-    int st_ctime;			/* Time of last status change.  */
-    int st_ctimensec;	/* Nsecs of last status change.  */
-    int __glibc_reserved[3];
+	uint64 st_dev; /* Device */
+	uint64 st_ino; /* File serial number */
+
+    uint64 st_mode;		/* File mode.  */
+    uint64 st_nlink;		/* Link count.  */
+
+    uint64 st_uid; 	/* User ID of the file's owner.	*/
+    uint64 st_gid; 	/* Group ID of the file's group.*/
+
+    uint64 st_rdev;		/* Device number, if device.  */
+    int64 st_size;			/* Size of file, in bytes.  */
+
+    int64 st_blksize;	/* Optimal block size for I/O.  */
+    int64 st_blocks;		/* Number 512-byte blocks allocated. */
+
+    struct timespec st_atim;			/* Time of last access.  */
+    struct timespec st_ctim;			/* Time of last status change.  */
+    struct timespec st_mtim;			/* Time of last modification.  */
 } Stat;
 
 extern void read(int fd, char *msg, int len);

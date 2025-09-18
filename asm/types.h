@@ -12,4 +12,9 @@ INT_TYPE(long, 64);
 
 typedef unsigned long size_t;
 
+struct timespec {
+  long tv_sec;		/* Seconds.  */
+  long tv_nsec;	/* Nanoseconds.  */
+};
+
 #endif // !TYPES_H

@@ -1,4 +1,4 @@
-#include "c-impl.h"
+#include "../c-impl.h"
 
 int main() {
 	char *name = malloc(5);

@@ -1,4 +1,4 @@
-#include "c-impl.h"
+#include "../c-impl.h"
 
 typedef struct Node Node;
 struct Node {

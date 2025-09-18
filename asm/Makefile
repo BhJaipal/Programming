@@ -1,5 +1,5 @@
 FLAGS = -nostdlib -nostdinc -Wno-builtin-declaration-mismatch -g
-SRC = syscall.c c-impl.c asm-impl.s
+SRC = syscall.c c-impl.c malloc.c libc-start.c asm-impl.s
 
 define MAIN
 $(filter-out $1,$(MAKECMDGOALS))
