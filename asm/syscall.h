@@ -1,5 +1,5 @@
-#ifndef SYSCALL_H
-#define SYSCALL_H
+#ifndef MY_SYSCALL_H
+#define MY_SYSCALL_H
 #include "types.h"
 
 typedef enum {
@@ -77,4 +77,4 @@ extern void *mmap (void *__addr, size_t __len, PageProtection __prot,
 extern void munmap(void *ptr, size_t size);
 extern void exit(int status);
 
-#endif // !SYSCALL_H
+#endif // !MY_SYSCALL_H

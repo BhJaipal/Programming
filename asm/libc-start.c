@@ -1,5 +1,4 @@
-#include "c-impl.h"
-
+#include "syscall.h"
 
 void* heap_init(size_t heap_size);
 

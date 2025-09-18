@@ -20,14 +20,14 @@ void write_uint(unsigned int x) {
 		return;
 	}
 
-	while (x / 10) {
+	while (x) {
 		putchar(x % 10 + 0x30);
 		x /= 10;
 	}
 }
 
-unsigned int read_uint() {
-	unsigned int x = 0;
+uint32 read_uint() {
+	uint32 x = 0;
 	char num[11];
 	for (int i = 0; i < 11;i++) {
 		read(1, num + i, 1);
@@ -58,7 +58,7 @@ void write_int(int x) {
 		return;
 	}
 
-	while (x / 10) {
+	while (x) {
 		putchar(x % 10 + 0x30);
 		x /= 10;
 	}
@@ -92,13 +92,6 @@ int read_int() {
 	return x;
 }
 
-
-unsigned strlen(const char *str) {
-	unsigned i = 0;
-	while (str[i]) { i++; }
-	return i;
-}
-
 void print(const char *str) {
 	unsigned i = strlen(str);
 	write(1, str, i);
@@ -118,7 +111,7 @@ int rev_d(int x) {
 	}
 	int a = 0;
 	int ex = 0;
-	while (x / 10) {
+	while (x) {
 		a *= 10;
 		a += x % 10;
 		x /= 10;
@@ -129,7 +122,7 @@ uint32 rev_u(uint32 x) {
 	if (x < 10) return x;
 	int a = 0;
 	int ex = 0;
-	while (x / 10) {
+	while (x) {
 		a *= 10;
 		a += x % 10;
 		x /= 10;

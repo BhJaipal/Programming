@@ -1,3 +1,4 @@
+#include "malloc.h"
 #include "c-impl.h"
 
 typedef enum {
