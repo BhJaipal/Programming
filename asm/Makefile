@@ -1,7 +1,10 @@
+SHELL = /bin/bash
 FLAGS = -nostdlib -nostdinc -Wno-builtin-declaration-mismatch -g -fPIC
 SRC := syscall.c c-impl.c malloc.c libc-start.c string.c
 ASM := ./asm-impl.s
 LIB = ./mylibc.so
+
+TESTS := $(foreach test,$(wildcard tests/*.c), $(subst .c,,$(subst tests/,,$(test))))
 
 define MAIN_FN
 $(filter-out $1,$(MAKECMDGOALS))
@@ -16,9 +19,22 @@ endef
 
 OBJ := $(foreach src, $(SRC), $(call TO_OBJ, $(src)))
 
+.ONESHELL:
+test-all:
+	failed=;
+	for item in $(TESTS); do
+		make test TEST=$$item;
+		if [[ $$? == 2 ]]; then failed=1; fi;
+	done;
+	
+	if [[ $$failed ]]; then
+		echo -e "\e[91mTest failed\e[0m";
+	fi
+
+.ONESHELL:
 test:
-	gcc $(FLAGS) ./tests/test.c tests/$(TEST).c $(LIB) $(ASM) -o $(TEST)-test.exe
-	./$(TEST)-test.exe $(TEST)
+	gcc $(FLAGS) test.c tests/$(TEST).c $(LIB) $(ASM) -o $(TEST)-test.exe
+	./$(TEST)-test.exe $(TEST);
 
 all:
 	gcc $(FLAGS) $(call MAIN_FN, $@) $(LIB) $(ASM)
@@ -32,10 +48,6 @@ shared:
 asm:
 	if [ ! -d build ]; then mkdir build; fi
 	gcc $(FLAGS) c-impl.c -S -o build/c-impl.s 
-
-asm-std:
-	if [ ! -d build ]; then mkdir build; fi
-	as asm-impl.s -o build/asm-std.o
 
 clean:
 	rm -r build

@@ -34,14 +34,14 @@ int main() {
 }
 
 LinkedList* ll_new(size_t node_size) {
-	LinkedList* ll = mmap(null, sizeof(LinkedList), PROT_READ | PROT_WRITE, MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
+	LinkedList* ll = malloc(sizeof(LinkedList));
 	ll->head = null;
 	ll->node_size = node_size;
 	return ll;
 }
 void ll_add_node(LinkedList *ll, size_t val) {
 	if (!ll->head) {
-		ll->head = mmap(null, sizeof(ll->node_size), PROT_READ | PROT_WRITE, MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
+		ll->head = malloc(ll->node_size);
 		ll->head->value = val;
 		ll->head->next = null;
 		return;

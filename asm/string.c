@@ -24,14 +24,14 @@ size_t strnlen(const char *str, size_t n) {
 void strcpy(char *dest, const char *src) {
 	size_t src_len = strlen(src);
 
-	for (size_t i = 0; i < src_len; i++) {
+	for (size_t i = 0; i <= src_len; i++) {
 		dest[i] = src[i];
 	}
 }
 void strncpy(char *dest, const char *src, size_t n) {
 	size_t src_len = strlen(src);
 
-	for (size_t i = 0; i < (n > src_len ? src_len : n); i++) {
+	for (size_t i = 0; i <= (n > src_len ? src_len : n); i++) {
 		dest[i] = src[i];
 	}
 }
@@ -39,7 +39,7 @@ char* strcat(char* dest, const char* src) {
 	size_t dest_len = strlen(dest);
 	size_t src_len = strlen(src);
 
-	for (size_t i = 0; i < src_len; i++) {
+	for (size_t i = 0; i <= src_len; i++) {
 		dest[dest_len + i] = src[i];
 	}
 	return dest;
@@ -49,7 +49,7 @@ char* strncat(char* dest, const char* src, size_t n) {
 	size_t dest_len = strlen(dest);
 	size_t src_len = strlen(src);
 
-	for (size_t i = 0; i < (n > src_len ? src_len : n); i++) {
+	for (size_t i = 0; i <= (n > src_len ? src_len : n); i++) {
 		dest[dest_len + i] = src[i];
 	}
 	return dest;

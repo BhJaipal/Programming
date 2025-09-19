@@ -1,4 +1,4 @@
-#include "../c-impl.h"
+#include "c-impl.h"
 int do_test(int argc, char **argv);
 
 int main(int argc, char *argv[]) {
@@ -16,5 +16,5 @@ int main(int argc, char *argv[]) {
 		print(argv[1]);
 		println(" Passed\e[0m");
 	}
-	return 0;
+	return test_result;
 }
