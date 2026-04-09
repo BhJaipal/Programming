@@ -1,4 +1,3 @@
-#include <boost/filesystem.hpp>
 #include <filesystem>
 #include <iostream>
 #include <map>
@@ -235,7 +234,6 @@ int main(int argc, char const *argv[]) {
 			fs::path path = p.path();
 			uintmax_t size;
 			if (p.is_directory()) {
-				namespace bf = boost::filesystem;
 				for (fs::directory_entry const &entry :
 					 fs::directory_iterator(path)) {
 					if (entry.is_regular_file()) size += entry.file_size();

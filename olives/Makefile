@@ -35,7 +35,7 @@ gtk:
 	gcc $(call RenderEx, $@) $(OPTS) $(call Pkg, --cflags gtk4)
 gtkmm:
 	echo "#define USE_GTK" > ./olive-platform.h
-	g++ $(call RenderEx, $@)pp $(OPTS) $(call Pkg, --cflags gtkmm-3.0)
+	g++ $(call RenderEx, $@)pp $(OPTS) $(call Pkg, --cflags gtkmm-4.0)
 wl:
 	echo "#define WAYLAND" > ./olive-platform.h
 	gcc $(call RenderEx, $@) ./xdg-shell-protocol.c $(OPTS) -l$(WL_CLIENT)

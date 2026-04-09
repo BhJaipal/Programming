@@ -1,5 +1,7 @@
 # Programming
 
+## Moving to codeberg [BhJaipal/programming](https://codeberg.org/BhJaipal/programming.git)
+
 <p align="center">
     <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=BhJaipal&layout=compact&langs_count=16&background=black&theme=dark" style="margin-left:10px" alt=" " />
 </p>

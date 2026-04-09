@@ -31,7 +31,9 @@ typedef struct client_state {
 	);
 	size_t width;
 	size_t height;
+	size_t x;
+	size_t y;
 } client_state;
 
-client_state create_state();
+client_state create_state(void (*draw)(uint32_t *), size_t width, size_t height, size_t x, size_t y);
 void get_registry(client_state *state, char *title);

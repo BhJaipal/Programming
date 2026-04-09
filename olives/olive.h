@@ -32,10 +32,15 @@ int dump_pixel_to_ppm(uint32_t *pixels, size_t width, size_t height, char *file_
 typedef struct X11Data {
 	Display *display;
 	Window window;
+	size_t width;
+	size_t height;
+	size_t x;
+	size_t y;
 	void (*draw)(uint32_t *pixels);
 } X11Data;
-X11Data create_x11_window();
-void x11_render(size_t width, size_t height, X11Data *data);
+X11Data create_x11_window(size_t x, size_t y, size_t width, size_t height);
+// if given draw is null, it will use X11Data draw
+void x11_render(X11Data *data, void (*draw)(uint32_t *pixels));
 #elif defined WAYLAND
 # include "wl-render.h"
 #elif WINDOWS
@@ -65,9 +70,9 @@ struct GtkData {
 		_data.pixels = pixels;
 		_data.height = h;
 		_data.width = w;
-		app = Gtk::Application::create("gtkmm.render", Gio::APPLICATION_FLAGS_NONE);
+		app = Gtk::Application::create("gtkmm.render", Gio::Application::Flags::DEFAULT_FLAGS);
 	}
-	int run();
+	int run(int c, char **v);
 };
 # else
 #  include <stddef.h>

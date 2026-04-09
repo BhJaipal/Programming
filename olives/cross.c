@@ -7,17 +7,12 @@
 App* create_app(size_t width, size_t height, void (*draw)(uint32_t *pixels)) {
 	App* app = malloc(sizeof(App));
 #if defined X11
-	app->width = width;
-	app->height = height;
 	X11Data* data = malloc(sizeof(X11Data));
-	*data = create_x11_window();
+	*data = create_x11_window(0, 0, width, height);
 	data->draw = draw;
 #elif defined WAYLAND
 	client_state *data = malloc(sizeof(client_state));
-	*data = create_state();
-	data->width = width;
-	data->height = height;
-	data->draw = draw;
+	*data = create_state(draw, width, height, 0, 0);
 #elif defined WINDOWS
 	WinData data = {NULL, width, height};
 	app->draw = draw;
@@ -30,7 +25,7 @@ void run_app(App *app, char *title) {
 #if defined X11
 	XSelectInput(app->data->display, app->data->window, ExposureMask | KeyPressMask);
 	XMapWindow(app->data->display, app->data->window);
-	x11_render(app->width, app->height, app->data);
+	x11_render(app->data, NULL);
 
 	XCloseDisplay(app->data->display);
 #elif defined WAYLAND

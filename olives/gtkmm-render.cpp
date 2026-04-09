@@ -1,21 +1,19 @@
-#define USE_GTK
-#include "olive.h"
 #include "gdkmm/general.h"
-#include "glibmm/refptr.h"
 #include "gtkmm/drawingarea.h"
 #include "gtkmm/window.h"
+#include "olive.h"
+#include "sigc++/functors/mem_fun.h"
 #include <cstddef>
-#include <cstdint>
-#include <string>
 
+GtkData global_data;
 
 class MyDrawing : public Gtk::DrawingArea {
-	Data data;
 public:
-	MyDrawing(Data data) {
-		this->data = data;
+	MyDrawing() {
+		set_draw_func(sigc::mem_fun(*this, &MyDrawing::on_draw));
 	}
-	bool on_draw(const Cairo::RefPtr<Cairo::Context>& cr) {
+	void on_draw(const Cairo::RefPtr<Cairo::Context>& cr, int width, int height) {
+		Data data = global_data._data;
 		for (size_t i = 0; i < data.width * data.height; i++) {
 			Gdk::RGBA color;
 			color.set_rgba(
@@ -28,14 +26,19 @@ public:
 			cr->rectangle(i % data.width, (size_t)((float)i / data.width), 1.5, 1.5);
 			cr->fill();
 		}
-		return 1;
 	}
 };
-int GtkData::run() {
-	Gtk::Window window;
-	window.set_title(title);
-	MyDrawing area(_data);
-	window.add(area);
-	window.show_all();
-	return app->run(window);
+
+class MyWindow: public Gtk::Window {
+	MyDrawing m_area;
+public:
+	MyWindow() {
+		set_title(global_data.title);
+		set_child(m_area);
+	}
+};
+
+int GtkData::run(int c, char **v) {
+	global_data = *this;
+	return app->make_window_and_run<MyWindow>(c, v);
 }

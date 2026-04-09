@@ -7,12 +7,11 @@ void draw(uint32_t *pixels) {
 }
 
 int main() {
-	X11Data data = create_x11_window();
+	X11Data data = create_x11_window(800, 500, WIDTH, HEIGHT);
 	XSelectInput(data.display, data.window, ExposureMask | KeyPressMask);
 	XMapWindow(data.display, data.window);
 
-	data.draw = draw;
-	x11_render(WIDTH, HEIGHT, &data);
+	x11_render(&data, draw);
 
 	XCloseDisplay(data.display);
 }

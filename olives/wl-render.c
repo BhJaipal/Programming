@@ -15,8 +15,7 @@
 #include "wl-render.h"
 
 /* Shared memory support code */
-static void
-randname(char *buf) {
+static void randname(char *buf) {
     struct timespec ts;
     clock_gettime(CLOCK_REALTIME, &ts);
     long r = ts.tv_nsec;
@@ -26,8 +25,7 @@ randname(char *buf) {
     }
 }
 
-static int
-create_shm_file(void) {
+static int create_shm_file(void) {
     int retries = 100;
     do {
         char name[] = "/wl_shm-XXXXXX";
@@ -42,8 +40,7 @@ create_shm_file(void) {
     return -1;
 }
 
-static int
-allocate_shm_file(size_t size) {
+static int allocate_shm_file(size_t size) {
     int fd = create_shm_file();
     if (fd < 0)
         return -1;
@@ -58,8 +55,7 @@ allocate_shm_file(size_t size) {
     return fd;
 }
 
-static void
-wl_buffer_release(void *data, struct wl_buffer *wl_buffer) {
+static void wl_buffer_release(void *data, struct wl_buffer *wl_buffer) {
     /* Sent by the compositor when it's no longer using this buffer */
     wl_buffer_destroy(wl_buffer);
 }
@@ -80,8 +76,7 @@ draw_frame(int fd, struct client_state *state) {
     return buffer;
 }
 
-static void
-xdg_surface_configure(void *data,
+static void xdg_surface_configure(void *data,
         struct xdg_surface *xdg_surface, uint32_t serial) {
     client_state *state = data;
     xdg_surface_ack_configure(xdg_surface, serial);
@@ -99,7 +94,7 @@ xdg_surface_configure(void *data,
 
     struct wl_buffer *buffer = draw_frame(fd, state);
 	munmap(pixels, state->width * 4 * state->height);
-    wl_surface_attach(state->wl_surface, buffer, 0, 0);
+    wl_surface_attach(state->wl_surface, buffer, state->x, state->y);
     wl_surface_commit(state->wl_surface);
 }
 
@@ -119,6 +114,7 @@ static const struct xdg_wm_base_listener xdg_wm_base_listener = {
 static void registry_global(void *data, struct wl_registry *wl_registry,
         uint32_t name, const char *interface, uint32_t version) {
     struct client_state *state = data;
+	printf("%d %s %d\n", name, interface, version);
     if (strcmp(interface, wl_shm_interface.name) == 0) {
         state->wl_shm = wl_registry_bind(
                 wl_registry, name, &wl_shm_interface, 1);
@@ -154,6 +150,7 @@ static void kbd_key(void *data,
 		client->super_on = 0;
 		client->q_on = 0;
 	}
+	printf("%d %d\n", client->super_on, client->q_on);
 	if (client->q_on && client->super_on) exit(0);
 }
 void kbd_keymap(void *data,
@@ -189,8 +186,13 @@ static const struct wl_registry_listener wl_registry_listener = {
     .global = registry_global,
     .global_remove = registry_global_remove,
 };
-client_state create_state() {
+client_state create_state(void (*draw)(uint32_t *), size_t width, size_t height, size_t x, size_t y) {
     client_state state = { 0 };
+	state.draw = draw;
+	state.height = height;
+	state.width = width;
+	state.x = x;
+	state.y = y;
     state.wl_display = wl_display_connect(NULL);
     state.wl_registry = wl_display_get_registry(state.wl_display);
 	return state;

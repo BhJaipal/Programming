@@ -5,7 +5,6 @@
 typedef struct App App;
 struct App {
 #if defined X11
-	size_t width, height;
 	X11Data* data;
 #elif defined WAYLAND
 	client_state* data;

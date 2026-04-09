@@ -6,7 +6,7 @@
 void activate(GtkApplication *app, gpointer data);
 GtkData gtk_data_new(char *title, size_t width, size_t height, uint32_t *pixels) {
 	GtkData data = malloc(sizeof(struct _GtkData));
-	GtkApplication *app = gtk_application_new("cairo.draw", G_APPLICATION_FLAGS_NONE);
+	GtkApplication *app = gtk_application_new("cairo.draw", G_APPLICATION_DEFAULT_FLAGS);
 
 	data->app = app;
 	data->title = malloc(sizeof(title));
@@ -36,7 +36,6 @@ void activate(GtkApplication *app, gpointer data) {
 	gtk_drawing_area_set_draw_func(GTK_DRAWING_AREA(drawing_area), draw, app_data, NULL);
 
 	gtk_window_set_child(GTK_WINDOW(window), drawing_area);
-	gtk_widget_show(window);
 	gtk_window_present(GTK_WINDOW(window));
 }
 void draw(GtkDrawingArea *drawing_area,

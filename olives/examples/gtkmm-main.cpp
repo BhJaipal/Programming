@@ -16,5 +16,5 @@ uint32_t pixels[HEIGHT * WIDTH];
 int main(int c, char **v) {
 	setup();
 	GtkData data("Cairo renderer", WIDTH, HEIGHT, pixels);
-	return data.run();
+	return data.run(c, v);
 }
