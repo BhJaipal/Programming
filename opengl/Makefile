@@ -1,6 +1,9 @@
-DEPS = $$(pkg-config --libs glfw3 opengl glew)
+DEPS = $$(pkg-config --libs glfw3 gl)
 CC = g++
 MAIN ?= ./basic.cpp
 
-all:
-	$(CC) $(MAIN) $(DEPS) -fPIE
+a.out: $(MAIN)
+	g++ $< $(DEPS) -fPIE ../glad/gl.c
+
+test: a.out
+	@./$<
