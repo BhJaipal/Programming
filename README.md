@@ -2,36 +2,49 @@
 
 ## Moving to codeberg [BhJaipal/programming](https://codeberg.org/BhJaipal/programming.git)
 
-<p align="center">
-    <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=BhJaipal&layout=compact&langs_count=16&background=black&theme=dark" style="margin-left:10px" alt=" " />
-</p>
+## [donuts](./donuts)
 
-[![Visual Studio Code](https://img.shields.io/badge/VS_Code-007ACC?logo=visual%20studio%20code&logoColor=3f3f8f)](https://code.visualstudio.com)
-[![C++](https://img.shields.io/badge/C++-ff9?logo=cplusplus&logoColor=05f)](https://cplusplus.com/)
-![C](https://img.shields.io/badge/C-ff9?logo=c&logoColor=05f)
-[![GitHub](https://badgen.net/badge/icon/github?icon=github&label&color=black)](https://github.com)
-[![GitHub stars](https://img.shields.io/github/stars/BhJaipal/Programming.svg?style=plastic&label=Star&maxAge=2592000)](https://github.com/BhJaipal/Programming)
-[![Jupyter](https://img.shields.io/badge/Jupyter-fff?logo=jupyter)](https://cplusplus.com/)
+Terminal spinning donut
 
-<p align="center">
-    <img src="https://img.shields.io/github/last-commit/BhJaipal/Programming?color=purple&style=plastic">
-    <img src="https://img.shields.io/github/contributors/BhJaipal/Programming?color=blue&style=plastic">
-    <img src="https://img.shields.io/badge/Made%20with-C++-1f425f.svg">
-    <img src="https://img.shields.io/badge/C++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white&style=plastic">
-   <img src="https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white&style=plastic">
-</p>
+Rotational matrix solved in [donuts/rotational-matrix-calc.txt](./donuts/rotational-matrix-calc.txt)
 
-### CMake Use
+## Sorting visualize in terminal
 
-```cmake
-cmake_minimum_required(VERSION 3.28.3)
-project(CMakeLearning)
-add_executable(${PROJECT_NAME} Student.cpp)
-set_compiler("clang-18")
+visualize sorting algorithms in terminal
+
+main: [visual_sort.c](./visual_sort.c)
+
+```sh
+gcc visual_sort.c ./sort_algo.c -lm
 ```
 
-```bash
-cmake CMakesLists.txt
-make all
-./CMakeLearning
-```
+<div style="display: flex; gap: 8px; flex-wrap: wrap;width: 100%">
+  <img src="./assets/sort/sort-vert-col.png" width="40%">
+  <img src="./assets/sort/sort-hori-col.png" width="40%">
+  <img src="./assets/sort/sort-vert.png" width="40%">
+  <img src="./assets/sort/sort-hori.png" width="40%">
+</div>
+<div style="display: flex; gap: 8px; flex-wrap: wrap;width: 100%">
+  <img src="./assets/sort/sort-no-num-col-unsorted.png" width="40%">
+  <img src="./assets/sort/sort-no-num-col.png" width="40%">
+  <img src="./assets/sort/sort-no-num-unsorted.png" width="40%">
+  <img src="./assets/sort/sort-no-num.png" width="40%">
+</div>
+
+## Pyramid spinning
+
+- 3D spinning pyramid
+
+- src [triangle/](https://codeberg.org/BhJaipal/programming/src/branch/main/triangle)
+
+<video alt="assets/pyramid.mp4" src="https://codeberg.org/BhJaipal/programming/raw/branch/main/assets/pyramid.mp4" style="width: 100%" controls>
+</video>
+
+## Donut in OpenGL
+
+- 3D spinning donut in OpenGL and donut calculated by OpenCL
+
+- src [donut-gl/](https://codeberg.org/BhJaipal/programming/src/branch/main/donut-gl)
+
+<video alt="assets/donut.mp4" src="https://codeberg.org/BhJaipal/programming/raw/branch/main/assets/donut.mp4" style="width: 100%" controls>
+</video>
