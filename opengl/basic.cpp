@@ -1,210 +1,224 @@
-#include <GL/glew.h>
-#include <GL/gl.h>
-#include <fstream>
+#include "../renderer.hpp"
+#include <cmath>
+#include <glm/ext/matrix_float3x3.hpp>
+#include <glm/ext/matrix_transform.hpp>
 #include <glm/ext/matrix_clip_space.hpp>
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtx/transform.hpp>
-#include <GLFW/glfw3.h>
-#include <iostream>
-#include <sstream>
-#include <vector>
+#include <unistd.h>
 
-static void glfw_error_callback(int error, const char *description) {
-	std::cerr << "Glfw Error " << error << description << "\n";
-}
-GLuint LoadShaders(const char * vertex_file_path,const char * fragment_file_path);
+int main()
+{
+    Renderer render("Pyramids", 900, 800);
+    render.load_shaders("vertex.glsl", "fragment.glsl");
 
-int main() {
-	glewExperimental = true;
-	glfwSetErrorCallback(glfw_error_callback);
-	if (!glfwInit())
-		return 1;
+    // blue background
+    render.clear_color(0.7f, 0.4f, 1.f, 0.0f);
 
-	glfwWindowHint(GLFW_SAMPLES, 4);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    // Projection matrix: 45° Field of View, 4:3 ratio, display range: 0.1 unit <-> 100 units
+    glm::mat4 Projection = glm::perspective(glm::radians(45.0f),
+        (float)3 / (float)4, // width / height
+        .1f, 100.0f);
 
-	GLFWwindow *window = glfwCreateWindow(950, 1000, "New Opengl", NULL, NULL);
-	if (window == NULL)
-		return 1;
-
-
-	glfwMakeContextCurrent(window);
-	if (glewInit() != GLEW_OK) {
-		fprintf(stderr, "Failed to initialize GLEW\n");
-		return -1;
-	}
-	// Enable vsync
-	glfwSwapInterval(1);
-
-	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
-
-
-	GLuint VertexArrayID;
-	glGenVertexArrays(1, &VertexArrayID);
-	glBindVertexArray(VertexArrayID);
-
-	static const GLfloat g_vertex_buffer_data[] = {
-		-1.f, -1.0f, 0.0f,
-		1.0f, -1.0f, 0.0f,
-		0.0f,  1.0f, 0.0f,
-	};
-	// This will identify our vertex buffer
-	GLuint vertexbuffer;
-	// Generate 1 buffer, put the resulting identifier in vertexbuffer
-	glGenBuffers(1, &vertexbuffer);
-	// The following commands will talk about our 'vertexbuffer' buffer
-	glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
-	// Give our vertices to OpenGL.
-	glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
-
-	GLuint programID = LoadShaders( "./vertex.glsl", "./fragment.glsl" );
-
-	glm::mat4 myMatrix{
-		6.f, 7, 2, 8,
-		2, 8, 4, 3,
-		5, 1, 9, 8,
-		2, 4, 3, 6};
-	glm::vec4 myVector{6, 9, 4, 3};
-	// fill myMatrix and myVector somehow
-	glm::vec4 transformedVector = myMatrix * myVector;
-	
-	// Projection matrix: 45° Field of View, 4:3 ratio, display range: 0.1 unit <-> 100 units
-	glm::mat4 Projection = glm::perspective(
-			glm::radians(45.0f),
-			(float) 400 / (float) 600, // width / height
-			.1f, 100.0f);
-
-	// Camera matrix
-	glm::mat4 View = glm::lookAt(
-		glm::vec3(4,1,3), // Camera is at (2,1,3), in World Space
-		glm::vec3(0,0,0), // and looks at the origin
-		glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
+    // Camera matrix
+    glm::mat4 View = glm::lookAt(
+        glm::vec3(2, 1, 7), // Camera is at (2,1,6), in World Space
+        glm::vec3(0, 0, 0), // and looks at the origin
+        glm::vec3(0, 1, 0)
+        // Head is up (set to 0,-1,0 to look upside-down)
     );
-	// Model matrix: an identity matrix (model will be at the origin)
-	glm::mat4 Model = glm::mat4(1.0f);
-	// Our ModelViewProjection: multiplication of our 3 matrices
-	glm::mat4 mvp = Projection * View * Model; // Remember, matrix multiplication is the other way around
+    // Model matrix: an identity matrix (model will be at the origin)
+    glm::mat4 Model = glm::mat4(1.0f);
+    // Our ModelViewProjection: multiplication of our 3 matrices
+    glm::mat4 mvp = Projection * View * Model;
+    GLuint MatrixID = glGetUniformLocation(render.program_id, "MVP");
+    glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &mvp[0][0]);
 
-	// blue background
-	glClearColor(0.7f, 0.4f, 1.f, 0.0f);
+    const float rad_90_deg = 3.14 / 2;
+    float theta = 0;
+    float phi = 0;
+    float delta = 0;
 
-	while (!glfwWindowShouldClose(window)) {
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    GLfloat vertices[][6] = {
+        // triangle 1
+        { -1, 0.25, 0, 0, 1, 0 }, // green left
+        { 0, 1.25, 0, 1, 1, 1 }, // white middle
+        { 0, 2.5, 0, 0, 0, 1 }, // blue top
 
-		glUseProgram(programID);
-		GLuint MatrixID = glGetUniformLocation(programID, "MVP");
-		glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &mvp[0][0]);
+        { 0, 2.5, 0, 0, 0, 1 }, // blue top
+        { 0, 1.25, 0, 1, 1, 1 }, // white middle
+        { 1, 0.25, 0, 1, 0, 0 }, // red right
 
-		glEnableVertexAttribArray(0);
-		glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
-		glVertexAttribPointer(
-			0,                  // attribute 0. No particular reason for 0, but must match the layout in the shader.
-			3,                  // size
-			GL_FLOAT,           // type
-			GL_FALSE,           // normalized?
-			0,                  // stride
-			(void*)0            // array buffer offset
-		);
-		glDrawArrays(GL_TRIANGLES, 0, 3); // Starting from vertex 0; 3 vertices total -> 1 triangle
-		glDisableVertexAttribArray(0);
+        { 1, 0.25, 0, 1, 0, 0 }, // red right
+        { 0, 1.25, 0, 1, 1, 1 }, // white middle
+        { -1, 0.25, 0, 0, 1, 0 }, // green left
 
+        // triangle 2
+        { -1, 0.25, 0, 0, 1, 0 }, // green left
+        { 0, 1.25, 0, 1, 1, 1 }, // white middle
+        { 0, 2.5, 0, 0, 0, 1 }, // blue top
 
-        glfwSwapBuffers(window);
-		glfwPollEvents();
-	}
-	glfwDestroyWindow(window);
-	glfwTerminate();
-	return 0;
-}
+        { 0, 2.5, 0, 0, 0, 1 }, // blue top
+        { 0, 1.25, 0, 1, 1, 1 }, // white middle
+        { 1, 0.25, 0, 1, 0, 0 }, // red right
 
-GLuint LoadShaders(const char * vertex_file_path,const char * fragment_file_path){
+        { 1, 0.25, 0, 1, 0, 0 }, // red right
+        { 0, 1.25, 0, 1, 1, 1 }, // white middle
+        { -1, 0.25, 0, 0, 1, 0 }, // green left
+    };
 
-	// Create the shaders
-	GLuint VertexShaderID = glCreateShader(GL_VERTEX_SHADER);
-	GLuint FragmentShaderID = glCreateShader(GL_FRAGMENT_SHADER);
+    GLfloat pyramid_tri[][6] = {
+        { -1.25, -0.1, 0, 1, 1, 1 }, //
+        { -1, -2, -1, 0, 1, 0 }, //
+        { 1, -2, -1, 1, 0, 0 }, //
 
-	// Read the Vertex Shader code from the file
-	std::string VertexShaderCode;
-	std::ifstream VertexShaderStream(vertex_file_path, std::ios::in);
-	if(VertexShaderStream.is_open()){
-		std::stringstream sstr;
-		sstr << VertexShaderStream.rdbuf();
-		VertexShaderCode = sstr.str();
-		VertexShaderStream.close();
-	} else {
-		printf("Impossible to open %s. Are you in the right directory ? Don't forget to read the FAQ !\n", vertex_file_path);
-		getchar();
-		return 0;
-	}
+        { -1.25, -0.1, 0, 1, 1, 1 }, //
+        { 1, -2, -1, 1, 0, 0 }, //
+        { 0, -2, 1, 0, 0, 1 }, //
 
-	// Read the Fragment Shader code from the file
-	std::string FragmentShaderCode;
-	std::ifstream FragmentShaderStream(fragment_file_path, std::ios::in);
-	if(FragmentShaderStream.is_open()){
-		std::stringstream sstr;
-		sstr << FragmentShaderStream.rdbuf();
-		FragmentShaderCode = sstr.str();
-		FragmentShaderStream.close();
-	}
+        { -1.25, -0.1, 0, 1, 1, 1 }, //
+        { 0, -2, 1, 0, 0, 1 }, //
+        { -1, -2, -1, 0, 1, 0 }, //
 
-	GLint Result = GL_FALSE;
-	int InfoLogLength;
+    };
 
-	// Compile Vertex Shader
-	printf("Compiling shader  %s\n", vertex_file_path);
-	char const * VertexSourcePointer = VertexShaderCode.c_str();
-	glShaderSource(VertexShaderID, 1, &VertexSourcePointer , NULL);
-	glCompileShader(VertexShaderID);
+    GLfloat pyramid[][6] = {
+        { 1, -0.1, 0, 1, 1, 1 }, //
+        { -1, -2, -1, 0, 1, 0 }, //
+        { 1, -2, -1, 1, 1, 0 }, //
 
-	// Check Vertex Shader
-	glGetShaderiv(VertexShaderID, GL_COMPILE_STATUS, &Result);
-	glGetShaderiv(VertexShaderID, GL_INFO_LOG_LENGTH, &InfoLogLength);
-	if ( InfoLogLength > 0 ){
-		std::vector<char> VertexShaderErrorMessage(InfoLogLength+1);
-		glGetShaderInfoLog(VertexShaderID, InfoLogLength, NULL, &VertexShaderErrorMessage[0]);
-		printf("%s\n", &VertexShaderErrorMessage[0]);
-	}
+        { 1, -0.1, 0, 1, 1, 1 }, //
+        { 1, -2, -1, 1, 1, 0 }, //
+        { 1, -2, 1, 1, 0, 0 }, //
 
-	// Compile Fragment Shader
-	printf("Compiling shader: %s\n", fragment_file_path);
-	char const * FragmentSourcePointer = FragmentShaderCode.c_str();
-	glShaderSource(FragmentShaderID, 1, &FragmentSourcePointer , NULL);
-	glCompileShader(FragmentShaderID);
+        { 1, -0.1, 0, 1, 1, 1 }, //
+        { 1, -2, 1, 1, 0, 0 }, //
+        { -1, -2, 1, 0, 0, 1 }, //
 
-	// Check Fragment Shader
-	glGetShaderiv(FragmentShaderID, GL_COMPILE_STATUS, &Result);
-	glGetShaderiv(FragmentShaderID, GL_INFO_LOG_LENGTH, &InfoLogLength);
-	if ( InfoLogLength > 0 ){
-		std::vector<char> FragmentShaderErrorMessage(InfoLogLength+1);
-		glGetShaderInfoLog(FragmentShaderID, InfoLogLength, NULL, &FragmentShaderErrorMessage[0]);
-		printf("%s\n", &FragmentShaderErrorMessage[0]);
-	}
+        { 1, -0.1, 0, 1, 1, 1 }, //
+        { -1, -2, 1, 0, 0, 1 }, //
+        { -1, -2, -1, 0, 1, 0 }, //
 
-	// Link the program
-	printf("Linking program\n");
-	GLuint ProgramID = glCreateProgram();
-	glAttachShader(ProgramID, VertexShaderID);
-	glAttachShader(ProgramID, FragmentShaderID);
-	glLinkProgram(ProgramID);
+    };
 
-	// Check the program
-	glGetProgramiv(ProgramID, GL_LINK_STATUS, &Result);
-	glGetProgramiv(ProgramID, GL_INFO_LOG_LENGTH, &InfoLogLength);
-	if ( InfoLogLength > 0 ){
-		std::vector<char> ProgramErrorMessage(InfoLogLength+1);
-		glGetProgramInfoLog(ProgramID, InfoLogLength, NULL, &ProgramErrorMessage[0]);
-		printf("%s\n", &ProgramErrorMessage[0]);
-	}
-	
-	glDetachShader(ProgramID, VertexShaderID);
-	glDetachShader(ProgramID, FragmentShaderID);
-	
-	glDeleteShader(VertexShaderID);
-	glDeleteShader(FragmentShaderID);
+    GLuint vertex_buffer;
+    glGenBuffers(1, &vertex_buffer);
 
-	return ProgramID;
+    GLuint vertex_array_id;
+    glGenVertexArrays(1, &vertex_array_id);
+
+    const float rad_120_deg = 120.0 / 180 * 3.14;
+
+    render.register_vertex_info(vertex_array_id, vertex_buffer);
+    render.render_loop(
+        [&vertices, &pyramid_tri, &pyramid, rad_120_deg, rad_90_deg](
+            Renderer &render, auto &theta, auto &phi, auto &delta) {
+            {
+                // triangle 1
+                vertices[5][0] = cos(theta); //  red
+                vertices[5][2] = sin(theta);
+
+                vertices[6][0] = cos(theta); //  red
+                vertices[6][2] = sin(theta);
+
+                vertices[0][0] = -cos(theta); //  green
+                vertices[0][2] = -sin(theta);
+
+                vertices[8][0] = -cos(theta); // green
+                vertices[8][2] = -sin(theta);
+
+                // triangle 2
+                vertices[9 + 5][0] = cos(theta + 1.57); //  red
+                vertices[9 + 5][2] = sin(theta + 1.57);
+
+                vertices[9 + 6][0] = cos(theta + 1.57); //  red
+                vertices[9 + 6][2] = sin(theta + 1.57);
+
+                vertices[9 + 0][0] = -cos(theta + 1.57); //  green
+                vertices[9 + 0][2] = -sin(theta + 1.57);
+
+                vertices[9 + 8][0] = -cos(theta + 1.57); // green
+                vertices[9 + 8][2] = -sin(theta + 1.57);
+            }
+
+            {
+                pyramid_tri[1][0] = -sin(phi + rad_120_deg) - 1.25;
+                pyramid_tri[1][2] = -cos(phi + rad_120_deg);
+                pyramid_tri[2][0] = -sin(phi + rad_120_deg * 2) - 1.25;
+                pyramid_tri[2][2] = -cos(phi + rad_120_deg * 2);
+
+                pyramid_tri[4][0] = -sin(phi + rad_120_deg * 2) - 1.25;
+                pyramid_tri[4][2] = -cos(phi + rad_120_deg * 2);
+                pyramid_tri[5][0] = -sin(phi) - 1.25;
+                pyramid_tri[5][2] = -cos(phi);
+
+                pyramid_tri[7][0] = -sin(phi) - 1.25;
+                pyramid_tri[7][2] = -cos(phi);
+                pyramid_tri[8][0] = -sin(phi + rad_120_deg) - 1.25;
+                pyramid_tri[8][2] = -cos(phi + rad_120_deg);
+            }
+
+            {
+                pyramid[1][0] = sin(delta + rad_90_deg * 2) + 1;
+                pyramid[1][2] = -cos(delta + rad_90_deg * 2);
+                pyramid[2][0] = sin(delta + rad_90_deg * 3) + 1;
+                pyramid[2][2] = -cos(delta + rad_90_deg * 3);
+
+                pyramid[4][0] = sin(delta + rad_90_deg * 3) + 1;
+                pyramid[4][2] = -cos(delta + rad_90_deg * 3);
+                pyramid[5][0] = sin(delta) + 1;
+                pyramid[5][2] = -cos(delta);
+
+                pyramid[7][0] = sin(delta) + 1;
+                pyramid[7][2] = -cos(delta);
+                pyramid[8][0] = sin(delta + rad_90_deg) + 1;
+                pyramid[8][2] = -cos(delta + rad_90_deg);
+
+                pyramid[10][0] = sin(delta + rad_90_deg) + 1;
+                pyramid[10][2] = -cos(delta + rad_90_deg);
+                pyramid[11][0] = sin(delta + rad_90_deg * 2) + 1;
+                pyramid[11][2] = -cos(delta + rad_90_deg * 2);
+            }
+
+            render.draw([vertices, pyramid_tri, pyramid]() {
+                glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices,
+                    GL_DYNAMIC_DRAW);
+                glEnableVertexAttribArray(0);
+                glVertexAttribPointer(
+                    0, 3, GL_FLOAT, GL_FALSE, sizeof(float) * 6, NULL);
+                glEnableVertexAttribArray(1);
+                glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE,
+                    sizeof(float) * 6, (void *)(3 * sizeof(float)));
+                glDrawArrays(GL_TRIANGLES, 0, 12 * 9);
+
+                //
+
+                glBufferData(GL_ARRAY_BUFFER, sizeof(pyramid_tri), pyramid_tri,
+                    GL_DYNAMIC_DRAW);
+                glEnableVertexAttribArray(0);
+                glVertexAttribPointer(
+                    0, 3, GL_FLOAT, GL_FALSE, sizeof(float) * 6, NULL);
+                glEnableVertexAttribArray(1);
+                glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE,
+                    sizeof(float) * 6, (void *)(3 * sizeof(float)));
+                glDrawArrays(GL_TRIANGLES, 0, 9);
+
+                //
+
+                glBufferData(
+                    GL_ARRAY_BUFFER, sizeof(pyramid), pyramid, GL_DYNAMIC_DRAW);
+                glEnableVertexAttribArray(0);
+                glVertexAttribPointer(
+                    0, 3, GL_FLOAT, GL_FALSE, sizeof(float) * 6, NULL);
+                glEnableVertexAttribArray(1);
+                glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE,
+                    sizeof(float) * 6, (void *)(3 * sizeof(float)));
+                glDrawArrays(GL_TRIANGLES, 0, 12);
+            });
+            usleep(20000);
+            theta += 0.04;
+            phi += 0.04;
+            delta += 0.04;
+
+            return 0;
+        },
+        theta, phi, delta);
 }
