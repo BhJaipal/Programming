@@ -1,7 +1,0 @@
-CompileFlags:
-  Compiler: g++
-  BuiltinHeaders: QueryDriver
-  Add:
-    - -std=gnu++26
-Index:
-  StandardLibrary: true
